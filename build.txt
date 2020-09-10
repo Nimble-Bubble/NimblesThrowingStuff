@@ -1,0 +1,3 @@
+displayName = Magnumiactus
+author = Nimble-Bubble's Team
+version = 0.1
