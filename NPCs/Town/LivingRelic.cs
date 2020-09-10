@@ -257,6 +257,8 @@ namespace NimblesThrowingStuff.NPCs.Town
             {
             shop.item[nextSlot].SetDefaults(ItemID.Bone);
 			nextSlot++;
+            shop.item[nextSlot].SetDefaults(mod.ItemType("SpikeKnife"));
+			nextSlot++;
             }
         }
 
