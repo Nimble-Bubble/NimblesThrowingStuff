@@ -4,41 +4,38 @@ using Terraria.ModLoader;
 
 namespace NimblesThrowingStuff.Items.Weapons.Throwing
 {
-	public class StingerDagger : ModItem
+	public class AccursedFlask : ModItem
 	{
-        public override void SetStaticDefaults()
-        {
-         Tooltip.SetDefault("Has a chance to poison enemies");   
-        }
 
 		public override void SetDefaults() 
 		{
-			item.damage = 18;
+			item.damage = 40;
 			item.thrown = true;
 			item.width = 24;
 			item.height = 24;
 			item.useTime = 15;
 			item.useAnimation = 15;
 			item.useStyle = 1;
-			item.knockBack = 4f;
+			item.knockBack = 5f;
             item.noMelee = true;
             item.noUseGraphic = true;
-			item.value = Item.buyPrice(0, 2, 70, 0);
-			item.rare = 2;
+			item.value = Item.buyPrice(0, 0, 5, 0);
+			item.rare = 4;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
-			item.shoot = mod.ProjectileType("StingerDaggerProj");
-			item.shootSpeed = 12f;
-            item.mana = 10;
+			item.shoot = mod.ProjectileType("AccursedFlaskProj");
+			item.shootSpeed = 13.5f;
+            item.consumable = true;
+            item.maxStack = 999;
 		}
 
 		public override void AddRecipes() 
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(331, 12);
-            recipe.AddIngredient(209, 12);
-			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this);
+			recipe.AddIngredient(522, 1);
+            recipe.AddIngredient(mod.ItemType("EmptyFlask"), 50);
+			recipe.AddTile(TileID.MythrilAnvil);
+			recipe.SetResult(this, 50);
 			recipe.AddRecipe();
 		}
 	}

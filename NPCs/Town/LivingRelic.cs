@@ -260,6 +260,16 @@ namespace NimblesThrowingStuff.NPCs.Town
             shop.item[nextSlot].SetDefaults(mod.ItemType("SpikeKnife"));
 			nextSlot++;
             }
+            if (Main.hardMode)
+            {
+            shop.item[nextSlot].SetDefaults(mod.ItemType("EmptyFlask"));
+			nextSlot++;
+            }
+            if (NPC.downedPlantBoss)
+            {
+            shop.item[nextSlot].SetDefaults(mod.ItemType("LihzahrdSpikeKnife"));
+			nextSlot++;
+            }
         }
 
 		public override void NPCLoot()
