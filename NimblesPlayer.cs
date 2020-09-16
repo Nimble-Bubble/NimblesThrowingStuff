@@ -15,10 +15,14 @@ namespace NimblesThrowingStuff
 {
     public class NimblesPlayer : ModPlayer
     {
+        public float rangedSpeed = 1f;
+        public float magicSpeed = 1f;
         public float thrownSpeed = 1f;
         
         public override void ResetEffects()
         {
+         rangedSpeed = 1f;
+         magicSpeed = 1f;
          thrownSpeed = 1f;
         }
         
@@ -30,6 +34,14 @@ namespace NimblesThrowingStuff
             {
                 speed *= thrownSpeed;
             }
+            if (item.ranged)
+            {
+                speed *= rangedSpeed;
+            }
+            if (item.magic || item.summon)
+            {
+                speed *= magicSpeed;
+            }
 
             return speed;
         }
@@ -40,6 +52,14 @@ namespace NimblesThrowingStuff
             if (item.thrown)
             {
                 speed *= thrownSpeed;
+            }
+            if (item.ranged)
+            {
+                speed *= rangedSpeed;
+            }
+            if (item.magic || item.summon)
+            {
+                speed *= magicSpeed;
             }
 
             return speed;
