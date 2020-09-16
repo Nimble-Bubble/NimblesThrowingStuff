@@ -12,7 +12,7 @@ namespace NimblesThrowingStuff.NPCs
 
 		public override void NPCLoot(NPC npc)
 		{
-            if (npc.type == NPCID.WallofFlesh && Main.rand.NextBool(7))
+            if (npc.type == NPCID.WallofFlesh && Main.rand.NextBool(7) && !Main.expertMode)
 			{
 				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<ThrowerEmblem>(), 1);
 			}
