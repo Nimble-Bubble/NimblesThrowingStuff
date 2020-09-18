@@ -14,8 +14,8 @@ namespace NimblesThrowingStuff.Items.Accessories
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Thrown critical strikes cause holy stars to fall down" +
-                              "/n25% increased throwing velocity");
+            Tooltip.SetDefault("Thrown critical strikes cause holy stars to fall down"
+                              +"\n25% increased throwing velocity");
         }
         public override void SetDefaults()
         {
