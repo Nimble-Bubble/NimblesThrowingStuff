@@ -33,7 +33,7 @@ namespace NimblesThrowingStuff.Items.Armor
         }
         public override void UpdateArmorSet(Player player)
         {
-            player.setBonus = "Throwing speed increased by 12%";
+            player.setBonus = "Throwing speed increased by 15%";
             var modPlayer = player.GetModPlayer<NimblesPlayer>();
             modPlayer.thrownSpeed += 0.15f;
         }

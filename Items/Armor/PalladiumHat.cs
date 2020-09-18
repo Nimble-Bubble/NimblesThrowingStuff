@@ -34,8 +34,6 @@ namespace NimblesThrowingStuff.Items.Armor
         public override void UpdateArmorSet(Player player)
         {
             player.setBonus = "Increased life regeneration";
-            var modPlayer = player.GetModPlayer<NimblesPlayer>();
-            modPlayer.thrownSpeed += 0.1f;
             player.palladiumRegen = true;
         }
         public override void UpdateEquip(Player player)

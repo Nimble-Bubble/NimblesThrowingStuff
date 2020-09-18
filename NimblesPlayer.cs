@@ -18,12 +18,14 @@ namespace NimblesThrowingStuff
         public float rangedSpeed = 1f;
         public float magicSpeed = 1f;
         public float thrownSpeed = 1f;
+        public bool sacredWrist;
         
         public override void ResetEffects()
         {
          rangedSpeed = 1f;
          magicSpeed = 1f;
          thrownSpeed = 1f;
+         sacredWrist = false;
         }
         
         public override float UseTimeMultiplier(Item item)

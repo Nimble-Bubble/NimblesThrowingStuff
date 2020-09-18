@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Items.Armor
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Titanium Hat");
-                Tooltip.SetDefault("Increases thrown damage by 21% and thrown critical strike chance by 8%");
+                Tooltip.SetDefault("Increases thrown damage by 21% and thrown critical strike chance by 12%");
         }
 
         public override void SetDefaults()
@@ -39,9 +39,7 @@ namespace NimblesThrowingStuff.Items.Armor
         public override void UpdateEquip(Player player)
         {
             player.thrownDamage += 0.21f;
-            player.thrownCrit += 8;
-            var modPlayer = player.GetModPlayer<NimblesPlayer>();
-            modPlayer.thrownSpeed += 0.1f;
+            player.thrownCrit += 12;
         }
 
 

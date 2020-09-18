@@ -18,7 +18,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
             projectile.usesLocalNPCImmunity = true;
             projectile.localNPCHitCooldown = 10;
             projectile.tileCollide = true;
-            projectile.maxPenetrate = 1;
+            projectile.maxPenetrate = 3;
             projectile.friendly = true;
             projectile.thrown = true;
             projectile.aiStyle = 2;

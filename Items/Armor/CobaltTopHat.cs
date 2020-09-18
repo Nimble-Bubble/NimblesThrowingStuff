@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Items.Armor
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Cobalt Top Hat");
-                Tooltip.SetDefault("Increases thrown critical strike chance and damage by 10%");
+                Tooltip.SetDefault("Increases thrown critical strike chance by 10%");
         }
 
         public override void SetDefaults()
@@ -40,7 +40,6 @@ namespace NimblesThrowingStuff.Items.Armor
         public override void UpdateEquip(Player player)
         {
             player.thrownCrit += 10;
-            player.thrownDamage += 0.1f;
         }
 
 

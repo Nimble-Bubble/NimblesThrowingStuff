@@ -15,6 +15,8 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
         public override void SetDefaults()
         {
             projectile.CloneDefaults(511);
+            projectile.magic = false;
+            projectile.thrown = true;
             aiType = 511;
             projectile.usesLocalNPCImmunity = true;
             projectile.localNPCHitCooldown = 60;
