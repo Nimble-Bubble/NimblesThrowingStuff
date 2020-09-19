@@ -1,5 +1,6 @@
 using NimblesThrowingStuff.Items.Accessories;
 using NimblesThrowingStuff.Items.Materials;
+using NimblesThrowingStuff.Items.Weapons.Throwing;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
@@ -16,6 +17,10 @@ namespace NimblesThrowingStuff.NPCs
             if (npc.type == NPCID.WallofFlesh && Main.rand.NextBool(7) && !Main.expertMode)
 			{
 				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<ThrowerEmblem>(), 1);
+			}
+            if (npc.type == NPCID.DukeFishron && Main.rand.NextBool(5) && !Main.expertMode)
+			{
+				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<PoseironTrident>(), 1);
 			}
             if (npc.type == NPCID.BigMimicHallow && Main.rand.NextBool(4))
 			{

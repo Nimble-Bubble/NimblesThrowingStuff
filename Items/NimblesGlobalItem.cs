@@ -1,4 +1,5 @@
 using NimblesThrowingStuff.Items.Accessories;
+using NimblesThrowingStuff.Items.Weapons.Throwing;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
@@ -26,11 +27,15 @@ namespace NimblesThrowingStuff.Items
 		}
         public override void OpenVanillaBag(string context, Player player, int arg)
         {
-            if (context == "bossBag" && arg == ItemID.WallOfFleshBossBag)
+            if (context == "bossBag") 
             {
-                if (Main.rand.NextBool(6))
+                if (arg == ItemID.WallOfFleshBossBag && Main.rand.NextBool(6))
                 {
                 player.QuickSpawnItem(ItemType<ThrowerEmblem>());
+                }
+            if (arg == ItemID.FishronBossBag && Main.rand.NextBool(4))
+                {
+                player.QuickSpawnItem(ItemType<PoseironTrident>());
                 }
             }
         }
