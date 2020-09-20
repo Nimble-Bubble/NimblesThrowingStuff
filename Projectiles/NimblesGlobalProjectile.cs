@@ -26,6 +26,11 @@ namespace NimblesThrowingStuff.Items
                 Main.projectile[star].thrown = true;
                 Main.projectile[star].ranged = false;
             }
+            if (player.GetModPlayer<NimblesPlayer>().chloroThrow == true && projectile.thrown == true)
+            {
+                target.AddBuff(70, 300);
+                target.AddBuff(20, 300);
+            }
         }
     }
 }

@@ -6,6 +6,10 @@ namespace NimblesThrowingStuff.Items.Materials
 {
 	public class FestiveCloth : ModItem
 	{
+        public override void SetStaticDefaults()
+        {
+            Tooltip.SetDefault("A magical fabric taken from the jolly invaders");
+        }
 		public override void SetDefaults()
         {
 			item.width = 14;

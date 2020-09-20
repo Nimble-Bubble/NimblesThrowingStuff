@@ -19,6 +19,7 @@ namespace NimblesThrowingStuff
         public float magicSpeed = 1f;
         public float thrownSpeed = 1f;
         public bool sacredWrist;
+        public bool chloroThrow;
         
         public override void ResetEffects()
         {
@@ -26,6 +27,7 @@ namespace NimblesThrowingStuff
          magicSpeed = 1f;
          thrownSpeed = 1f;
          sacredWrist = false;
+        chloroThrow = false;
         }
         
         public override float UseTimeMultiplier(Item item)
