@@ -36,7 +36,7 @@ namespace NimblesThrowingStuff.Items.Accessories
             recipe.AddIngredient(547, 5);
 			recipe.AddIngredient(548, 5);
             recipe.AddIngredient(549, 5);
-			recipe.AddTile(TileID.Anvils);
+			recipe.AddTile(114);
 			recipe.SetResult(935, 1);
 			recipe.AddRecipe();
 		}

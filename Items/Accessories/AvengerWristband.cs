@@ -33,5 +33,14 @@ namespace NimblesThrowingStuff.Items.Accessories
             player.thrownVelocity += 0.25f;
             player.thrownDamage += 0.15f;
         }
+        public override void AddRecipes()
+		{
+			ModRecipe recipe = new ModRecipe(mod);
+			recipe.AddIngredient(mod.ItemType("SacredWristband")); //modded materials
+            recipe.AddIngredient(935, 1);
+			recipe.AddTile(114);
+			recipe.SetResult(this);
+			recipe.AddRecipe();
+		}
     }
 }
