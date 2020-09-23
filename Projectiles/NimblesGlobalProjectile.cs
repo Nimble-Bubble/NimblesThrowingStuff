@@ -22,9 +22,11 @@ namespace NimblesThrowingStuff.Items
             if (crit == true && player.GetModPlayer<NimblesPlayer>().sacredWrist == true && projectile.thrown == true)
             {
                 int star = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y - 250, 0, 20,
-                            92, projectile.damage, 1f, projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
+                            92, projectile.damage / 2, 1f, projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
                 Main.projectile[star].thrown = true;
                 Main.projectile[star].ranged = false;
+                Main.projectile[star].usesLocalNPCImmunity = true;
+            Main.projectile[star].localNPCHitCooldown = 10;
             }
             if (player.GetModPlayer<NimblesPlayer>().chloroThrow == true && projectile.thrown == true)
             {

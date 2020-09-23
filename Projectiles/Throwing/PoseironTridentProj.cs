@@ -37,18 +37,18 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
             Dust.NewDust(new Vector2(projectile.position.X, projectile.position.Y), projectile.width, projectile.height, 206,
                             projectile.velocity.X * 0.1f, projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
          bub++;
-         if (bub >= 10)
+         if (bub >= 30)
          {
            int ble1 = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, 0, 20,
-                            ModContent.ProjectileType<PoseironBubble>(), projectile.damage / 8, 1f, projectile.owner, 0.0f, (float) 1);
+                            ModContent.ProjectileType<PoseironBubble>(), projectile.damage / 5, 1f, projectile.owner, 0.0f, (float) 1);
                 Main.projectile[ble1].thrown = true;
                 Main.projectile[ble1].magic = false;
              int ble2 = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, 20, 20,
-                            ModContent.ProjectileType<PoseironBubble>(), projectile.damage / 8, 1f, projectile.owner, 0.0f, (float) 1);
+                            ModContent.ProjectileType<PoseironBubble>(), projectile.damage / 5, 1f, projectile.owner, 0.0f, (float) 1);
                 Main.projectile[ble2].thrown = true;
                 Main.projectile[ble2].magic = false;
              int ble3 = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, -20, 20,
-                            ModContent.ProjectileType<PoseironBubble>(), projectile.damage / 8, 1f, projectile.owner, 0.0f, (float) 1);
+                            ModContent.ProjectileType<PoseironBubble>(), projectile.damage / 5, 1f, projectile.owner, 0.0f, (float) 1);
                 Main.projectile[ble3].thrown = true;
                 Main.projectile[ble3].magic = false;
              bub = 0;
