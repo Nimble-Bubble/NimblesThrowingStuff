@@ -20,9 +20,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Magic
 			item.useTime = 23;
 			item.useAnimation = 23;
 			item.useStyle = 5;
-			item.knockBack = 7f;
+			item.knockBack = 4f;
             item.noMelee = true;
-            item.noUseGraphic = true;
 			item.value = Item.buyPrice(0, 2, 70, 0);
 			item.rare = 2;
 			item.UseSound = SoundID.Item1;
