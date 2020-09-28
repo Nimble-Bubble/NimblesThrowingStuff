@@ -25,11 +25,11 @@ namespace NimblesThrowingStuff.Projectiles.Magic
         public override void AI()
         {
             projectile.rotation += 0.5f * (float)projectile.direction;
-                Dust.NewDust(projectile.position, projectile.width, projectile.height, 44, Main.rand.Next(2, 3), Main.rand.Next(2, 3), 0, default(Color), 0.75f);
+                Dust.NewDust(projectile.position, projectile.width, projectile.height, 39, Main.rand.Next(2, 3), Main.rand.Next(2, 3), 0, default(Color), 0.75f);
         }
         public override void OnHitNPC (NPC target, int damage, float knockback, bool crit)
         {
-			target.AddBuff(BuffID.Poisoned, 60);
+			target.AddBuff(BuffID.Poisoned, 150);
         }
     }
 }

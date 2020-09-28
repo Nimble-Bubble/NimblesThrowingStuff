@@ -1,4 +1,5 @@
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using System;
 using Terraria;
 using Terraria.ID;
@@ -199,13 +200,17 @@ namespace NimblesThrowingStuff.Projectiles.Summoning
 				}
 			}
 
-			// Some visuals here
+			// light & dust
 			Lighting.AddLight(projectile.Center, Color.Lime.ToVector3() * 0.5f);
 			#endregion
+            if (Main.rand.NextBool(20))
+            {
+                Dust.NewDust(projectile.position, projectile.width, projectile.height, 39, Main.rand.Next(2, 3), Main.rand.Next(2, 3), 0, default(Color), 0.5f);
+            }
 		}
         public override void OnHitNPC (NPC target, int damage, float knockback, bool crit)
         {
-			target.AddBuff(BuffID.Poisoned, 30);
+			target.AddBuff(BuffID.Poisoned, 90);
         }
 	}
 }
