@@ -32,14 +32,14 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
             item.mana = 13;
 		}
 
-		public override void AddRecipes() 
-		{
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(1225, 12);
-            recipe.AddIngredient(548, 5);
-			recipe.AddTile(TileID.MythrilAnvil);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
-		}
+		//public override void AddRecipes() 
+		//{
+			//ModRecipe recipe = new ModRecipe(mod);
+			//recipe.AddIngredient(1225, 12);
+            //recipe.AddIngredient(548, 5);
+			//recipe.AddTile(TileID.MythrilAnvil);
+			//recipe.SetResult(this);
+			//recipe.AddRecipe();
+		//}
 	}
 }
