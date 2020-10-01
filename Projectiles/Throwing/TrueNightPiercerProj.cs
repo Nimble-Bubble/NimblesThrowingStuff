@@ -62,5 +62,21 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
                 index = 0;
                     }
         }
+        public override void PostDraw(SpriteBatch spriteBatch, Color lightColor)
+		{
+			Texture2D texture = mod.GetTexture("Projectiles/Throwing/TrueNightPiercerProj_Glow");
+			spriteBatch.Draw
+			(
+				texture,
+				projectile.position,
+				new Rectangle(0, 0, texture.Width, texture.Height),
+				Color.Green,
+				projectile.rotation,
+				texture.Size() * 0.5f,
+				projectile.scale,
+				SpriteEffects.None,
+				0f
+			);
+		}
     }
 }
