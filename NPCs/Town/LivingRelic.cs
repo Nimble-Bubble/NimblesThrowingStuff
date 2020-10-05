@@ -270,6 +270,11 @@ namespace NimblesThrowingStuff.NPCs.Town
             shop.item[nextSlot].SetDefaults(mod.ItemType("LihzahrdSpikeKnife"));
 			nextSlot++;
             }
+            if (NPC.downedAncientCultist)
+            {
+            shop.item[nextSlot].SetDefaults(mod.ItemType("DoradoFragment"));
+			nextSlot++;
+            }
         }
 
 		public override void NPCLoot()
