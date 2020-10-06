@@ -18,7 +18,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
             projectile.width = 28;
             projectile.height = 32;
             projectile.usesLocalNPCImmunity = true;
-            projectile.localNPCHitCooldown = 10;
+            projectile.localNPCHitCooldown = 12;
             projectile.tileCollide = true;
             projectile.penetrate = 100;
             projectile.friendly = true;
