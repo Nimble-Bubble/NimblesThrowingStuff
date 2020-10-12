@@ -24,6 +24,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 			projectile.thrown = true;
 			projectile.penetrate = 10;
 			projectile.hide = true;
+            projectile.ignoreWater = true;
             projectile.extraUpdates = 1;
 		}
 
@@ -97,7 +98,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 
 		public override void ModifyHitNPC(NPC target, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)
 		{
+            if (projectile.damage > 25)
+            {
             Main.player[projectile.owner].HealEffect(damage / 25);
+            }
 			IsStickingToTarget = true; 
 			TargetWhoAmI = target.whoAmI; 
 			projectile.velocity =

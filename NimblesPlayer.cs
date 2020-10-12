@@ -16,6 +16,7 @@ namespace NimblesThrowingStuff
 {
     public class NimblesPlayer : ModPlayer
     {
+        public bool canSanta;
         public float rangedSpeed = 1f;
         public float magicSpeed = 1f;
         public float thrownSpeed = 1f;
@@ -31,11 +32,23 @@ namespace NimblesThrowingStuff
          sacredWrist = false;
         chloroThrow = false;
             greek = false;
+            canSanta = false;
         }
         public override void UpdateDead()
         {
             greek = false;
     }
+        public override void PostHurt(bool pvp, bool quiet, double damage, int hitDirection, bool crit) {
+         if (canSanta)
+         {
+          Projectile.NewProjectile(player.Center.X, player.Center.Y, 0, -10,
+                            mod.ProjectileType("SantankSpikeProj"), 100, 5f, Main.myPlayer, 0.0f, (float) Main.rand.Next(0, 45)); 
+             Projectile.NewProjectile(player.Center.X, player.Center.Y, -5, -10,
+                            mod.ProjectileType("SantankSpikeProj"), 100, 5f, Main.myPlayer, 0.0f, (float) Main.rand.Next(0, 45)); 
+             Projectile.NewProjectile(player.Center.X, player.Center.Y, 5, -10,
+                            mod.ProjectileType("SantankSpikeProj"), 100, 5f, Main.myPlayer, 0.0f, (float) Main.rand.Next(0, 45)); 
+         }
+        }
         
         public override float UseTimeMultiplier(Item item)
         {
