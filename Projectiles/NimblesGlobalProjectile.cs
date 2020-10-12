@@ -19,7 +19,7 @@ namespace NimblesThrowingStuff.Items
         public override void OnHitNPC(Projectile projectile, NPC target, int damage, float knockback, bool crit)
         {
             Player player = Main.player[projectile.owner];
-            if (crit == true && player.GetModPlayer<NimblesPlayer>().sacredWrist == true && projectile.thrown == true)
+            if (crit == true && player.GetModPlayer<NimblesPlayer>().sacredWrist == true && projectile.thrown == true && projectile.type != 92)
             {
                 int star = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y - 250, 0, 20,
                             92, projectile.damage / 2, 1f, projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
