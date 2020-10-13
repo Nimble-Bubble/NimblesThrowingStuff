@@ -25,6 +25,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
             projectile.thrown = true;
             projectile.aiStyle = 1;
             projectile.extraUpdates = 2;
+            projectile.ignoreWater = true;
             projectile.timeLeft = 150;
         }
         public override void OnHitNPC (NPC target, int damage, float knockback, bool crit)

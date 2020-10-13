@@ -35,7 +35,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 		}
         public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
 		{
-      float numberProjectiles = 3; 
+      float numberProjectiles = 3; //making it an int messes up where the fireballs are headed
 			float rotation = MathHelper.ToRadians(20);
 			position += Vector2.Normalize(new Vector2(speedX, speedY)) * 5f;
 			for (int i = 0; i < numberProjectiles; i++)
