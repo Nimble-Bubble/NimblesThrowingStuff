@@ -37,6 +37,10 @@ namespace NimblesThrowingStuff.NPCs
 			{
 				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<ThrowerEmblem>(), 1);
 			}
+            if (npc.type == 245 && Main.rand.NextBool(4) && !Main.expertMode)
+			{
+				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<GolemGlove>(), 1);
+			}
             if (npc.type == NPCID.DukeFishron && Main.rand.NextBool(5) && !Main.expertMode)
 			{
 				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<PoseironTrident>(), 1);

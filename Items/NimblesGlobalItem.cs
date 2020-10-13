@@ -33,6 +33,10 @@ namespace NimblesThrowingStuff.Items
                 {
                 player.QuickSpawnItem(ItemType<ThrowerEmblem>());
                 }
+                if (arg == ItemID.GolemBossBag && Main.rand.NextBool(4))
+                {
+                player.QuickSpawnItem(ItemType<GolemGlove>());
+                }
             if (arg == ItemID.FishronBossBag && Main.rand.NextBool(4))
                 {
                 player.QuickSpawnItem(ItemType<PoseironTrident>());
