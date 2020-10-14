@@ -43,10 +43,13 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
         }
         public override void Kill(int timeLeft) 
         {
+                        Projectile.NewProjectile(projectile.position.X, projectile.position.Y, 0, 0,
+                            mod.ProjectileType("MeteorSpearExplosion"), projectile.damage, 10f, projectile.owner, 0.0f, 0.0f);
             projectile.position = projectile.Center;
             projectile.width = 250;
             projectile.height = 250;
              projectile.Center = projectile.position;
+            
             projectile.aiStyle = 16;
             Main.PlaySound(2, (int) projectile.position.X, (int) projectile.position.Y, 14, 1f, 0.0f);
             for (int s = 0; s < 50; s++) {
