@@ -53,6 +53,10 @@ namespace NimblesThrowingStuff.NPCs
 			{
 				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<FestiveCloth>(), 1);
 			}
+            if (npc.type >= 273 && npc.type <= 276)
+			{
+				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<BrokeBonesAxe>(), Main.rand.Next(10, 20));
+			}
             if (npc.type == NPCID.SantaNK1)
 			{
 				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<FestiveCloth>(), Main.rand.Next(7, 13));

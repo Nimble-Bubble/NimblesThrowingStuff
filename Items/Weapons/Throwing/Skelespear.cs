@@ -8,6 +8,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 	{
         public override void SetStaticDefaults()
         {
+            //DisplayName.SetDefault("Enchanted Yari");
          Tooltip.SetDefault("Turns into a stream of water");   
         }
 
