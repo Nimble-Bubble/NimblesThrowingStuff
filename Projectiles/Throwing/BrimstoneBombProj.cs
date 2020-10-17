@@ -24,6 +24,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
             projectile.thrown = true;
             projectile.aiStyle = 16;
             projectile.extraUpdates = 0;
+            projectile.timeLeft = 600;
             aiType = 30;
         }
         public override void Kill(int timeLeft) 
