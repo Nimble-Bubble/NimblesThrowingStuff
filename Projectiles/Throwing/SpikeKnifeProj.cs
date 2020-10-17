@@ -19,7 +19,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
             projectile.usesLocalNPCImmunity = true;
             projectile.localNPCHitCooldown = 10;
             projectile.tileCollide = true;
-            projectile.penetrate = 1;
+            projectile.penetrate = 3;
             projectile.friendly = true;
             projectile.thrown = true;
             projectile.aiStyle = 2;

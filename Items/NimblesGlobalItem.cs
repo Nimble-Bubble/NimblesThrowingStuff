@@ -29,6 +29,10 @@ namespace NimblesThrowingStuff.Items
         {
             if (context == "bossBag") 
             {
+                if (arg == ItemID.QueenBeeBossBag && Main.rand.NextBool(3))
+                {
+                player.QuickSpawnItem(ItemType<Beemerang>());
+                }
                 if (arg == ItemID.WallOfFleshBossBag && Main.rand.NextBool(6))
                 {
                 player.QuickSpawnItem(ItemType<ThrowerEmblem>());

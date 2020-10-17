@@ -29,7 +29,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 			item.autoReuse = true;
 			item.shoot = mod.ProjectileType("BrimstoneBombProj");
 			item.shootSpeed = 8.5f;
-            item.mana = 8;
+            item.mana = 13;
 		}
 
 		public override void AddRecipes() 

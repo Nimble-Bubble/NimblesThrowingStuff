@@ -33,6 +33,10 @@ namespace NimblesThrowingStuff.NPCs
 
 		public override void NPCLoot(NPC npc)
 		{
+            if (npc.type == 222 && Main.rand.NextBool(4) && !Main.expertMode)
+			{
+				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<Beemerang>(), 1);
+			}
             if (npc.type == NPCID.WallofFlesh && Main.rand.NextBool(7) && !Main.expertMode)
 			{
 				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<ThrowerEmblem>(), 1);
