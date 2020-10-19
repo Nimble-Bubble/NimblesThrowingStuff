@@ -53,6 +53,10 @@ namespace NimblesThrowingStuff.NPCs
 			{
 				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<SacredWristband>(), 1);
 			}
+            if (npc.type == 49 || npc.type == 93)
+            {
+                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<BatFlesh>(), 1);
+            }
             if (npc.type == 48 && NPC.downedBoss3 && Main.rand.NextBool(25))
 			{
 				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<CumulusCrasher>(), 1);
