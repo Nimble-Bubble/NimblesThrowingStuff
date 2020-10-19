@@ -42,12 +42,12 @@ namespace NimblesThrowingStuff.Items.Weapons.Summoning
 			position = Main.MouseWorld;
 			return true;
 		}
-		// public override void AddRecipes() {
-		//	ModRecipe recipe = new ModRecipe(mod);
-		//	recipe.AddIngredient(ItemID.CrimtaneBar, 12);
-		//	recipe.AddTile(TileID.Anvils);
-		//	recipe.SetResult(this);
-		//	recipe.AddRecipe();
-		//}
+		 public override void AddRecipes() {
+			ModRecipe recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemID.CrimtaneBar, 12);
+			recipe.AddTile(TileID.Anvils);
+			recipe.SetResult(this);
+			recipe.AddRecipe();
+		}
 	}
 }

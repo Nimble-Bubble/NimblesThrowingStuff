@@ -186,7 +186,7 @@ namespace NimblesThrowingStuff.Projectiles.Summoning
 			#endregion
 
 			#region Animation and visuals
-			projectile.rotation = projectile.velocity.ToRotation();
+			projectile.rotation = projectile.velocity.ToRotation() + MathHelper.ToRadians(45f);
 			Lighting.AddLight(projectile.Center, Color.Red.ToVector3() * 0.8f);
 			#endregion
 		}
