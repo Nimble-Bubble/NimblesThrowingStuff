@@ -30,6 +30,20 @@ namespace NimblesThrowingStuff.NPCs
 			}
             
         }
+        public override void SetupShop(int type, Chest shop, ref int nextSlot)
+        {
+            Player player = Main.player[Main.myPlayer];
+            switch (type)
+            {
+            case 209:
+                    if (Main.hardMode)
+                    {
+                        shop.item[nextSlot].SetDefaults(ItemType<NanoMissile>());
+                        nextSlot++;
+                    }
+                    break;
+            }
+        }
 
 		public override void NPCLoot(NPC npc)
 		{
