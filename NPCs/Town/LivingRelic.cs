@@ -284,7 +284,7 @@ namespace NimblesThrowingStuff.NPCs.Town
 
 		public override void TownNPCAttackStrength(ref int damage, ref float knockback)
 		{
-			damage = 25;
+			damage = 20;
 			knockback = 2;
 		}
 

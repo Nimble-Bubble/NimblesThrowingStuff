@@ -75,9 +75,13 @@ namespace NimblesThrowingStuff.NPCs
 			{
 				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<CumulusCrasher>(), 1);
 			}
-            if (npc.type == 62 && NPC.downedBoss3 && Main.rand.NextBool(20))
+            if (npc.type == 62 && NPC.downedBoss3)
 			{
+            Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<ShadowJavelin>(), Main.rand.Next(10, 21));
+            if (Main.rand.NextBool(20))
+                {
 				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<DemonClaw>(), 1);
+                }
 			}
             if (npc.type >= 338 && npc.type <= 340 && Main.rand.NextBool(2) || npc.type >= 347 && npc.type <= 350 && Main.rand.NextBool(2))
 			{
@@ -85,7 +89,7 @@ namespace NimblesThrowingStuff.NPCs
 			}
             if (npc.type >= 273 && npc.type <= 276)
 			{
-				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<BrokeBonesAxe>(), Main.rand.Next(10, 20));
+				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<BrokeBonesAxe>(), Main.rand.Next(10, 21));
 			}
             if (npc.type == NPCID.SantaNK1)
 			{

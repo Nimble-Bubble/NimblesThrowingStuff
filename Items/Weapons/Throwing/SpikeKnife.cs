@@ -20,7 +20,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
             item.noMelee = true;
             item.noUseGraphic = true;
 			item.value = Item.buyPrice(0, 0, 1, 0);
-			item.rare = 3;
+			item.rare = 2;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
 			item.shoot = mod.ProjectileType("SpikeKnifeProj");
