@@ -23,16 +23,30 @@ namespace NimblesThrowingStuff
         public bool sacredWrist;
         public bool greek;
         public bool chloroThrow;
+        public bool miniPoison;
+        public bool miniFire;
+        public bool miniFrost;
+        public bool miniVenom;
+        public bool miniEvil;
+        public bool miniMove;
+        public bool miniGreek;
         
         public override void ResetEffects()
         {
-         rangedSpeed = 1f;
-         magicSpeed = 1f;
-         thrownSpeed = 1f;
-         sacredWrist = false;
+        rangedSpeed = 1f;
+        magicSpeed = 1f;
+        thrownSpeed = 1f;
+        sacredWrist = false;
         chloroThrow = false;
-            greek = false;
-            canSanta = false;
+        greek = false;
+        canSanta = false;
+        miniPoison = false;
+        miniFire = false;
+        miniVenom = false;
+        miniEvil = false;
+        miniFrost = false;
+        miniMove = false;
+        miniGreek = false;
         }
         public override void UpdateDead()
         {

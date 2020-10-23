@@ -33,6 +33,31 @@ namespace NimblesThrowingStuff.Items
                 target.AddBuff(70, 300);
                 target.AddBuff(20, 300);
             }
+            if (player.GetModPlayer<NimblesPlayer>().miniPoison == true && projectile.minion == true && Main.rand.NextBool(5))
+            {
+                target.AddBuff(20, 150);
+            }
+            if (player.GetModPlayer<NimblesPlayer>().miniFire == true && projectile.minion == true && Main.rand.NextBool(5))
+            {
+                target.AddBuff(24, 250);
+            }
+            if (player.GetModPlayer<NimblesPlayer>().miniFrost == true && projectile.minion == true && Main.rand.NextBool(5))
+            {
+                target.AddBuff(44, 300);
+            }
+            if (player.GetModPlayer<NimblesPlayer>().miniEvil == true && projectile.minion == true && Main.rand.NextBool(5))
+            {
+                target.AddBuff(40, 450);
+                target.AddBuff(69, 450);
+            }
+            if (player.GetModPlayer<NimblesPlayer>().miniVenom == true && projectile.minion == true && Main.rand.NextBool(5))
+            {
+                target.AddBuff(70, 750);
+            }
+            if (player.GetModPlayer<NimblesPlayer>().miniMove == true && projectile.minion == true && Main.rand.NextBool(5))
+            {
+                target.AddBuff(31, 450);
+            }
         }
     }
 }

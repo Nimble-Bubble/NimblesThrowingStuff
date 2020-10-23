@@ -1,6 +1,7 @@
 using NimblesThrowingStuff.Items.Accessories;
 using NimblesThrowingStuff.Items.Materials;
 using NimblesThrowingStuff.Items.Weapons.Throwing;
+using NimblesThrowingStuff.Items.Weapons.Ranged;
 using NimblesThrowingStuff.Buffs;
 using Microsoft.Xna.Framework;
 using Terraria;
@@ -35,6 +36,13 @@ namespace NimblesThrowingStuff.NPCs
             Player player = Main.player[Main.myPlayer];
             switch (type)
             {
+            case 19:
+                    if (NPC.downedBoss2 && !Main.dayTime || Main.hardMode)
+                    {
+                        shop.item[nextSlot].SetDefaults(ItemType<HealingArrow>());
+                        nextSlot++;
+                    }
+                    break;
             case 209:
                     if (Main.hardMode)
                     {
@@ -64,6 +72,10 @@ namespace NimblesThrowingStuff.NPCs
 				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<PoseironTrident>(), 1);
 			}
             if (npc.type == NPCID.BigMimicHallow && Main.rand.NextBool(4))
+			{
+				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<SacredWristband>(), 1);
+			}
+            if (npc.type == 43 && Main.rand.NextBool(15))
 			{
 				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<SacredWristband>(), 1);
 			}
