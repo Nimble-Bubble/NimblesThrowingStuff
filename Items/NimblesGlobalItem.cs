@@ -37,6 +37,10 @@ namespace NimblesThrowingStuff.Items
                 {
                 player.QuickSpawnItem(ItemType<ThrowerEmblem>());
                 }
+                if (arg == ItemID.PlanteraBossBag && Main.rand.NextBool(3))
+                {
+                player.QuickSpawnItem(ItemType<ThornyGlove>());
+                }
                 if (arg == ItemID.GolemBossBag && Main.rand.NextBool(4))
                 {
                 player.QuickSpawnItem(ItemType<GolemGlove>());
