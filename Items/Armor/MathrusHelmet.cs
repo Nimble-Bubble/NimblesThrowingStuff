@@ -14,6 +14,7 @@ namespace NimblesThrowingStuff.Items.Armor
     {
         public override void SetStaticDefaults()
         {
+        DisplayName.SetDefault("Draconic Helmet")
                 Tooltip.SetDefault("Increases mana by 120 and throwing velocity by 60%");
         }
 
