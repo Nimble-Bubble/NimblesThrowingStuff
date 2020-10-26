@@ -75,6 +75,10 @@ namespace NimblesThrowingStuff.NPCs
 			{
 				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<PoseironTrident>(), 1);
 			}
+            if (npc.type == 392 && Main.rand.NextBool(5))
+			{
+				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<MartianMiracle>(), 1);
+			}
             if (npc.type == NPCID.BigMimicHallow && Main.rand.NextBool(4))
 			{
 				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<SacredWristband>(), 1);

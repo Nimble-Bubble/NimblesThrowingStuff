@@ -2,6 +2,7 @@ Welcome to the Magnumiactus mod!
 This is a mod that currently focuses on expanding the throwing and summoning classes.
 The throwing class gets several sets and pieces of equipment for Hardmode, making a playthrough much easier. 
 There are non-consumable throwing weapons that consume mana, and you will see more of these the further you progress.
-The summoning class gets a lot of pre-Plantera weapons (and other items) that may finally make more viable.
+(The throwing items may be rather unbalanced compared to other classes, but I don't believe there's a vanilla standard for Hardmode throwing equipment.)
+The summoning class gets some new pre-Plantera weapons (and other items) that may finally make it more viable.
 A new NPC can move into town after defeating the Eye of Cthulhu, and his primary purpose is to sell throwing items. He may even sell a new kind of fragment when the time arises...
 There are also additions for other classes.

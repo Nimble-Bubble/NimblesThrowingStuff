@@ -41,7 +41,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
          if (bub >= 30)
          {
            int ble1 = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, 0, 20,
-                            ModContent.ProjectileType<PoseironBubble>(), projectile.damage / 3, 0.5f, projectile.owner, 0.0f, (float) 1);
+                            ModContent.ProjectileType<PoseironBubble>(), projectile.damage / 2, 0.5f, projectile.owner, 0.0f, (float) 1);
                 Main.projectile[ble1].thrown = true;
                 Main.projectile[ble1].magic = false;
              int ble2 = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, 20, 20,
