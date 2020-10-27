@@ -75,6 +75,14 @@ namespace NimblesThrowingStuff.NPCs
 			{
 				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<PoseironTrident>(), 1);
 			}
+            if (npc.type == NPCID.DukeFishron && Main.rand.NextBool(5) && !Main.expertMode)
+			{
+				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<PoseironTrident>(), 1);
+			}
+            if (npc.type == 398 && Main.rand.NextBool(5) && !Main.expertMode)
+			{
+				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<CosmosCrasher>(), 1);
+			}
             if (npc.type == 392 && Main.rand.NextBool(5))
 			{
 				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<MartianMiracle>(), 1);

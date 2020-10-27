@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Items.Accessories
         public override void SetStaticDefaults()
         {
             Tooltip.SetDefault("Thrown critical strikes cause holy stars to fall down"
-                              +"\n25% increased throwing velocity and 15% increased thrown damage");
+                              +"\n25% increased throwing velocity and 12% increased thrown damage");
         }
         public override void SetDefaults()
         {
@@ -31,7 +31,7 @@ namespace NimblesThrowingStuff.Items.Accessories
         {
             player.GetModPlayer<NimblesPlayer>().sacredWrist = true;
             player.thrownVelocity += 0.25f;
-            player.thrownDamage += 0.15f;
+            player.thrownDamage += 0.12f;
         }
         public override void AddRecipes()
 		{
