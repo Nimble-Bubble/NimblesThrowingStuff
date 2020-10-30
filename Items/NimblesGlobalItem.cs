@@ -52,6 +52,7 @@ namespace NimblesThrowingStuff.Items
                 if (arg == ItemID.MoonLordBossBag && Main.rand.NextBool(5))
                 {
                 player.QuickSpawnItem(ItemType<CosmosCrasher>());
+                player.QuickSpawnItem(ItemType<SatelliteSpear>());
                 }
             }
         }

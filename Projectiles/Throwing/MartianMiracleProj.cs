@@ -28,10 +28,11 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
             aiType = 491;
             projectile.extraUpdates = 1;
         }
-                public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
+        public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
         {
                 Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y - 500, 0, 30,
                             mod.ProjectileType("MartianEcho"), projectile.damage / 2, 5f, projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
+                target.AddBuff(144, 720);
         }
         public override bool OnTileCollide(Vector2 oldVelocity) {
 			projectile.penetrate--;
