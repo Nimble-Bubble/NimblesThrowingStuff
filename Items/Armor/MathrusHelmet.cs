@@ -36,6 +36,9 @@ namespace NimblesThrowingStuff.Items.Armor
             player.setBonus = "Your throwing damage is increased by 25%, and you emit red light";
             Lighting.AddLight((int)(player.position.X + (float)(player.width / 2)) / 16, (int)(player.position.Y + (float)(player.height / 2)) / 16, 1.5f, 0f, 0f);
             player.thrownDamage += 0.25f;
+            player.manaFlower = true;
+            var modPlayer = player.GetModPlayer<NimblesPlayer>();
+            modPlayer.thrownHeal = true;
         }
         public override void UpdateEquip(Player player)
         {

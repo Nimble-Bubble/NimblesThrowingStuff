@@ -21,6 +21,7 @@ namespace NimblesThrowingStuff
         public float magicSpeed = 1f;
         public float thrownSpeed = 1f;
         public bool sacredWrist;
+        public bool thrownHeal;
         public bool greek;
         public bool chloroThrow;
         public bool miniPoison;
@@ -37,6 +38,7 @@ namespace NimblesThrowingStuff
         magicSpeed = 1f;
         thrownSpeed = 1f;
         sacredWrist = false;
+        thrownHeal = false;
         chloroThrow = false;
         greek = false;
         canSanta = false;

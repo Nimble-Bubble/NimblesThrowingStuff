@@ -28,6 +28,10 @@ namespace NimblesThrowingStuff.Items
                 Main.projectile[star].usesLocalNPCImmunity = true;
             Main.projectile[star].localNPCHitCooldown = 10;
             }
+            if (crit == true && player.GetModPlayer<NimblesPlayer>().thrownHeal == true && projectile.thrown)
+            {
+                player.HealEffect(damage / 100);
+            }
             if (player.GetModPlayer<NimblesPlayer>().chloroThrow == true && projectile.thrown == true)
             {
                 target.AddBuff(70, 300);
