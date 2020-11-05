@@ -112,6 +112,10 @@ namespace NimblesThrowingStuff.NPCs
 				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<DemonClaw>(), 1);
                 }
 			}
+            if (npc.type == 471)
+			{
+            Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<ShadowflameSpikeBall>(), Main.rand.Next(125, 251));
+            }
             if (npc.type >= 338 && npc.type <= 340 && Main.rand.NextBool(2) || npc.type >= 347 && npc.type <= 350 && Main.rand.NextBool(2))
 			{
 				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<FestiveCloth>(), 1);

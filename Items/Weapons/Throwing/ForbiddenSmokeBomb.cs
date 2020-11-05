@@ -23,7 +23,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 			item.knockBack = 10f;
             item.noMelee = true;
             item.noUseGraphic = true;
-			item.value = Item.buyPrice(0, 5, 0, 0);
+			item.value = Item.buyPrice(0, 10, 0, 0);
 			item.rare = 5;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;

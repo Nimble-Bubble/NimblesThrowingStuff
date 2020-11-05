@@ -33,7 +33,7 @@ namespace NimblesThrowingStuff.Items.Accessories
         {
             player.wingTimeMax = 100;
             player.moveSpeed += 0.2f;
-            player.accRunSpeed = 8f;
+            player.accRunSpeed = 9f;
             player.rocketBoots = 3;
             player.lavaMax += 420;
             player.fireWalk = true;
