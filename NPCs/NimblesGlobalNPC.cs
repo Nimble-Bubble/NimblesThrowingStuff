@@ -140,6 +140,14 @@ namespace NimblesThrowingStuff.NPCs
 			{
 				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<SpookySpines>(), 1);
 			}
+            if (npc.type == 327 && Main.rand.NextBool(10))
+			{
+				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<UnholyHandGrenade>(), 1);
+			}
+            if (npc.type == 158 && Main.rand.NextBool(25) || npc.type == 159 && Main.rand.NextBool(25))
+			{
+				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<BloodyPike>(), 1);
+			}
 		}
     }
 }
