@@ -31,6 +31,7 @@ namespace NimblesThrowingStuff.Items
             if (crit == true && player.GetModPlayer<NimblesPlayer>().thrownHeal == true && projectile.thrown)
             {
                 player.HealEffect(damage / 100);
+                player.statLife += damage / 100;
             }
             if (player.GetModPlayer<NimblesPlayer>().chloroThrow == true && projectile.thrown == true)
             {

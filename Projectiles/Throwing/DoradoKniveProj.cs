@@ -101,6 +101,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
             if (projectile.damage > 25)
             {
             Main.player[projectile.owner].HealEffect(damage / 25);
+            Main.player[projectile.owner].statLife += damage / 25;
             }
 			IsStickingToTarget = true; 
 			TargetWhoAmI = target.whoAmI; 

@@ -26,11 +26,11 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 		}
 				public override void AddRecipes()
 		{
-			var recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.CrimtaneBar, 8);
-			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			//var recipe = new ModRecipe(mod);
+			//recipe.AddIngredient(ItemID.CrimtaneBar, 8);
+			//recipe.AddTile(TileID.Anvils);
+			//recipe.SetResult(this);
+			//recipe.AddRecipe();
 		}
 	}
 }

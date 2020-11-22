@@ -20,7 +20,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 			item.useTime = 60;
 			item.useAnimation = 60;
 			item.useStyle = 1;
-			item.knockBack = 4f;
+			item.knockBack = 0f;
             item.noMelee = true;
             item.noUseGraphic = true;
 			item.value = Item.buyPrice(0, 20, 0, 0);

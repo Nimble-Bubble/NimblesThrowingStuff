@@ -136,6 +136,10 @@ namespace NimblesThrowingStuff.NPCs
 			{
 				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<FestiveCloth>(), Main.rand.Next(7, 13));
 			}
+            if (npc.type == 345 && Main.rand.NextBool(10))
+			{
+				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<SnowflakeShuriken>(), 1);
+			}
             if (npc.type == 325 && Main.rand.NextBool(20))
 			{
 				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<SpookySpines>(), 1);
