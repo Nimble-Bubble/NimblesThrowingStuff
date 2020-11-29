@@ -94,7 +94,7 @@ namespace NimblesThrowingStuff.NPCs
 			}
             if (npc.type == 43 && Main.rand.NextBool(15))
 			{
-				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<SacredWristband>(), 1);
+				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<HealthEater>(), 1); //??? 
 			}
             if (npc.type == 49 || npc.type == 93)
             {

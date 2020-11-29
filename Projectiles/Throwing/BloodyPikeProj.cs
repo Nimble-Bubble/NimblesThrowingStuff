@@ -79,7 +79,8 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 		{
         if (projectile.damage > 1)
         {
-            Main.player[projectile.owner].HealEffect(damage / 25);      
+            Main.player[projectile.owner].HealEffect(damage / 40);   
+            Main.player[projectile.owner].statLife += damage / 40;
             int stream = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, projectile.velocity.X, projectile.velocity.Y,
             280, projectile.damage, 3.5f, projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
             Main.projectile[stream].thrown = true;

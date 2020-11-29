@@ -35,7 +35,7 @@ namespace NimblesThrowingStuff.Items.Armor
         }
         public override void UpdateArmorSet(Player player)
         {
-            player.setBonus = "10% increase minion damage and knockback";
+            player.setBonus = "10% increased minion damage and knockback";
             player.minionDamage += 0.1f;
             player.minionKB += 0.1f;
         }

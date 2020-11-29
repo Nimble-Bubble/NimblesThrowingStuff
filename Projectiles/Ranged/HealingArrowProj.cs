@@ -16,10 +16,9 @@ namespace NimblesThrowingStuff.Projectiles.Ranged
         {
             projectile.width = 14;
             projectile.height = 14;
-            projectile.usesLocalNPCImmunity = true;
-            projectile.localNPCHitCooldown = 10;
+            projectile.usesLocalNPCImmunity = false;
             projectile.tileCollide = true;
-            projectile.penetrate = 1;
+            projectile.penetrate = 2;
             projectile.friendly = true;
             projectile.ranged = true;
             projectile.arrow = true;
@@ -27,7 +26,8 @@ namespace NimblesThrowingStuff.Projectiles.Ranged
         }
         public override void OnHitNPC (NPC target, int damage, float knockback, bool crit)
         {
-			Main.player[projectile.owner].HealEffect(damage / 25);
+			Main.player[projectile.owner].HealEffect(damage / 50);
+            Main.player[projectile.owner].statLife += damage / 50;
             Dust.NewDust(new Vector2(projectile.position.X, projectile.position.Y), projectile.width, projectile.height, 5,
                             projectile.velocity.X * 0.1f, projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
         }

@@ -190,7 +190,7 @@ namespace NimblesThrowingStuff.NPCs.Town
             }
             else if (Main.raining && Main.rand.Next(5) == 0 && npc.position.Y / 16 <= Main.worldSurface)
             {
-                return "How many springs have we gone through? There's another storm!";
+                return "Were fishes always able to do that?";
             }
             if (Main.rand.Next(6) == 0)
             {
