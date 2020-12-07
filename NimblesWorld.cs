@@ -46,17 +46,17 @@ namespace NimblesThrowingStuff
 						}
 					}
                     }
-                    //if (Main.rand.Next(5) == 1)
-                    //{
-                    //for (int j = 0; j < 40; j++)
-					///{
-						//if (chest.item[j].type == 0)
-						//{
-							//chest.item[j].SetDefaults(Main.rand.Next(eon));
-							//break;
-						//}
-					//}
-                    //} 
+                    if (Main.rand.Next(5) == 1)
+                    {
+                    for (int j = 0; j < 40; j++)
+					{
+						if (chest.item[j].type == 0)
+						{
+							chest.item[j].SetDefaults(Main.rand.Next(eon));
+							break;
+						}
+					}
+                    } 
 				}
 			}
 		}

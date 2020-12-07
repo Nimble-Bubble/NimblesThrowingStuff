@@ -8,7 +8,7 @@ using static Terraria.ModLoader.ModContent;
 
 namespace NimblesThrowingStuff.Buffs
 {
-    public class AquaBlasterBuff : ModBuff
+    public class AquaBlastBuff : ModBuff
 	{
 		public override void SetDefaults()
 		{
@@ -20,7 +20,7 @@ namespace NimblesThrowingStuff.Buffs
 
 		public override void Update(Player player, ref int buffIndex)
 		{
-			if (player.ownedProjectileCounts[ProjectileType<AquaBlasterProj>()] > 0)
+			if (player.ownedProjectileCounts[ProjectileType<AquaBlastProj>()] > 0)
 			{
 				player.buffTime[buffIndex] = 18000;
 			}
