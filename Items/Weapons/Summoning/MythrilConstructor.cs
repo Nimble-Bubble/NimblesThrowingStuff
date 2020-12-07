@@ -41,13 +41,13 @@ namespace NimblesThrowingStuff.Items.Weapons.Summoning
 			position = Main.MouseWorld;
 			return true;
 		}
-		public override void AddRecipes()
-		{
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.MythrilBar, 10); //modded materials
-			recipe.AddTile(TileID.MythrilAnvil);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
-		}
+		//public override void AddRecipes()
+		//{
+			//ModRecipe recipe = new ModRecipe(mod);
+			//recipe.AddIngredient(ItemID.MythrilBar, 10); //modded materials
+			//recipe.AddTile(TileID.MythrilAnvil);
+			//recipe.SetResult(this);
+			//recipe.AddRecipe();
+		//}
 	}
 }
