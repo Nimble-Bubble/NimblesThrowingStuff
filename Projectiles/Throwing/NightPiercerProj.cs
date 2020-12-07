@@ -24,6 +24,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
             projectile.thrown = true;
             projectile.aiStyle = 9;
             projectile.timeLeft = 300;
+            projectile.alpha = 0;
             aiType = 491;
         }
         public override bool OnTileCollide(Vector2 oldVelocity) {

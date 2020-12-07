@@ -27,6 +27,8 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
 			npc.DeathSound = SoundID.NPCDeath2;
 			npc.knockBackResist = 0.1f;
             animationType = 341;
+            banner = npc.type;
+			bannerItem = mod.ItemType("MimiclamBannerItem");
         }
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {

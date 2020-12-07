@@ -52,11 +52,11 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
             
             projectile.aiStyle = 16;
             Main.PlaySound(2, (int) projectile.position.X, (int) projectile.position.Y, 14, 1f, 0.0f);
-            for (int s = 0; s < 50; s++) {
+            for (int s = 0; s < 10; s++) {
 				int smokeIndex = Dust.NewDust(new Vector2(projectile.position.X, projectile.position.Y), projectile.width, projectile.height, 31, 0f, 0f, 100, default(Color), 2f);
 				Main.dust[smokeIndex].velocity *= 1.4f;
 			}
-            for (int f = 0; f < 80; f++) {
+            for (int f = 0; f < 20; f++) {
 				int fireIndex = Dust.NewDust(new Vector2(projectile.position.X, projectile.position.Y), projectile.width, projectile.height, 229, 0f, 0f, 100, default(Color), 3f);
 				Main.dust[fireIndex].velocity *= 4f;
 			}

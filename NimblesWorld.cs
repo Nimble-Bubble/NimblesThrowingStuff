@@ -29,6 +29,7 @@ namespace NimblesThrowingStuff
         public override void PostWorldGen()
 		{
 			int[] dung = new int[] {mod.ItemType("Skelespear")};
+            int[] eon = new int[] {mod.ItemType("AquaBlastCore")};
 			for (int i = 0; i < 1000; i++)
 			{
 				Chest chest = Main.chest[i];
@@ -45,6 +46,17 @@ namespace NimblesThrowingStuff
 						}
 					}
                     }
+                    //if (Main.rand.Next(5) == 1)
+                    //{
+                    //for (int j = 0; j < 40; j++)
+					///{
+						//if (chest.item[j].type == 0)
+						//{
+							//chest.item[j].SetDefaults(Main.rand.Next(eon));
+							//break;
+						//}
+					//}
+                    //} 
 				}
 			}
 		}
