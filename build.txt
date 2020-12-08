@@ -1,3 +1,8 @@
 displayName = Magnumiactus
 author = Nimble-Bubble's Team
-version = 0.1
+version = 0.1.0
+homepage = https://discord.gg/3JM8PbTukA
+hideCode = true
+hideResources = false
+includeSource = false
+buildIgnore = *.csproj, *.user, obj/*, bin/*, .vs/*
