@@ -28,7 +28,7 @@ namespace NimblesThrowingStuff.Items
                 Main.projectile[star].usesLocalNPCImmunity = true;
             Main.projectile[star].localNPCHitCooldown = 10;
             }
-            if (crit == true && player.GetModPlayer<NimblesPlayer>().thrownHeal == true && projectile.thrown)
+            if (crit == true && player.GetModPlayer<NimblesPlayer>().thrownHeal == true && projectile.thrown && Main.rand.NextBool(5))
             {
                 player.HealEffect(damage / 100);
                 player.statLife += damage / 100;
