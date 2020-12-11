@@ -34,7 +34,7 @@ namespace NimblesThrowingStuff.NPCs.Town
 			NPCID.Sets.AttackType[npc.type] = 0;
 			NPCID.Sets.AttackTime[npc.type] = 20;
 			NPCID.Sets.AttackAverageChance[npc.type] = 20;
-			NPCID.Sets.HatOffsetY[npc.type] = -2;
+			NPCID.Sets.HatOffsetY[npc.type] = -2000000;
 		}
 
 		public override void SetDefaults()
