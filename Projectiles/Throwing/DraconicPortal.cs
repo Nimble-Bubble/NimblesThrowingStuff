@@ -9,48 +9,36 @@ using Terraria.Enums;
 
 namespace NimblesThrowingStuff.Projectiles.Throwing
 {
-	public class ChlorophyteChakramProj: ModProjectile
+	public class DraconicPortal: ModProjectile
     {
         private int index = 0; 
         public override void SetDefaults()
         {
             projectile.width = 36;
             projectile.height = 36;
-            projectile.usesLocalNPCImmunity = true;
-            projectile.localNPCHitCooldown = 10;
-            projectile.tileCollide = true;
             projectile.maxPenetrate = -1;
-            projectile.friendly = true;
             projectile.thrown = true;
-            projectile.aiStyle = 3;
+            projectile.tileCollide = false;
+            projectile.aiStyle = 0;
             projectile.penetrate = -1;
-            projectile.extraUpdates = 2;
+            projectile.extraUpdates = 0;
+            projectile.timeLeft = 99;
+            projectile.light = 0.5f;
         }
-        public override bool OnTileCollide(Vector2 oldVelocity) {
-				Collision.HitTiles(projectile.position + projectile.velocity, projectile.velocity, projectile.width, projectile.height);
-				Main.PlaySound(SoundID.Item10, projectile.position);
-				if (projectile.velocity.X != oldVelocity.X) {
-					projectile.velocity.X = -oldVelocity.X;
-				}
-				if (projectile.velocity.Y != oldVelocity.Y) {
-					projectile.velocity.Y = -oldVelocity.Y;
-                    }
-			return false;
-		}
         public override void AI() 
         {
+        projectile.rotation += 0.1f;
+        projectile.alpha += 3;
             ++index;
-                    if (index > 30)
+                    if (index > 20)
                     {
                         var vector2 = new Vector2((float) Main.rand.Next(-100, 101),
                             (float) Main.rand.Next(-100, 101));
                         vector2.Normalize();
                         vector2 *= (float) Main.rand.Next(10, 11) * 1f;
                         int spore = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, vector2.X, vector2.Y,
-                            228, projectile.damage / 2, 1f, projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
+                            mod.ProjectileType("DragonShrapnel"), projectile.damage / 2, 1f, projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
                         index = 0;
-                        Main.projectile[spore].thrown = true;
-                Main.projectile[spore].melee = false;
                     }
         }
     }

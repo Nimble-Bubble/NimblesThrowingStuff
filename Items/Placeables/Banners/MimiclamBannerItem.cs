@@ -8,7 +8,7 @@ namespace NimblesThrowingStuff.Items.Placeables.Banners
 	{
         public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Mimiclam Banner");
+			DisplayName.SetDefault("Clam Banner");
 		}
 		public override void SetDefaults() 
 		{

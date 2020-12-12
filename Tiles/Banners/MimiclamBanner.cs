@@ -21,7 +21,7 @@ namespace NimblesThrowingStuff.Tiles.Banners
             TileObjectData.addTile(Type);
             disableSmartCursor = true;
 			ModTranslation name = CreateMapEntryName();
-			name.SetDefault("Mimiclam Banner");
+			name.SetDefault("Clam Banner");
             AddMapEntry(new Color(132, 132, 88), name); 
         }
  

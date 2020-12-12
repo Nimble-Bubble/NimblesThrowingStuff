@@ -8,6 +8,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 	{
         public override void SetStaticDefaults()
         {
+        DisplayName.SetDefault("Night's Piercer")
          Tooltip.SetDefault("A legendary knife with controlled flight");   
         }
 
