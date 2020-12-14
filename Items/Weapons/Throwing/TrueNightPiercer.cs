@@ -8,7 +8,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 	{
         public override void SetStaticDefaults()
         {
-        DisplayName.SetDefault("True Night's Piercer")
+        DisplayName.SetDefault("True Night's Piercer");
          Tooltip.SetDefault("'Find your own way to the Knife'");   
         }
 
