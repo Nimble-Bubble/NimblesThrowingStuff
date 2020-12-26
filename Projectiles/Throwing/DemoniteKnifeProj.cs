@@ -10,26 +10,19 @@ using NimblesThrowingStuff.Items.Weapons.Throwing;
 
 namespace NimblesThrowingStuff.Projectiles.Throwing
 {
-	public class ObsidianScalpelProj: ModProjectile
+	public class DemoniteKnifeProj: ModProjectile
     {
         public override void SetDefaults()
         {
-            projectile.width = 28;
-            projectile.height = 28;
+            projectile.width = 32;
+            projectile.height = 32;
             projectile.usesLocalNPCImmunity = true;
             projectile.localNPCHitCooldown = 10;
             projectile.tileCollide = true;
             projectile.penetrate = 3;
             projectile.friendly = true;
             projectile.thrown = true;
-            projectile.aiStyle = 1;
-        }
-        public override void OnHitNPC (NPC target, int damage, float knockback, bool crit)
-        {
-			if (crit == true)
-            {
-            Main.player[projectile.owner].AddBuff(1, 600);
-            }
+            projectile.aiStyle = 2;
         }
         public override void Kill(int timeLeft) 
         {
@@ -39,7 +32,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
                             projectile.velocity.X * 0.1f, projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
             if (Main.rand.NextBool(5))
             {
-                Item.NewItem(projectile.getRect(), ModContent.ItemType<ObsidianScalpel>());
+                Item.NewItem(projectile.getRect(), ModContent.ItemType<DemoniteKnife>());
             }
         }
     }
