@@ -34,7 +34,7 @@ namespace NimblesThrowingStuff.Items.Armor
         public override void UpdateArmorSet(Player player)
         {
             player.setBonus = "Increased life regeneration";
-            player.palladiumRegen = true;
+            player.onHitRegen = true;
         }
         public override void UpdateEquip(Player player)
         {

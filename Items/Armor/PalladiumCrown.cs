@@ -36,7 +36,7 @@ namespace NimblesThrowingStuff.Items.Armor
             player.setBonus = "Increased minion damage, slots, and life regen if you hit enemies";
             player.minionDamage += 0.11f;
             player.maxMinions += 1;
-            player.palladiumRegen = true;
+            player.onHitRegen = true;
         }
         public override void UpdateEquip(Player player)
         {
