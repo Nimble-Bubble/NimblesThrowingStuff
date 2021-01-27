@@ -5,4 +5,5 @@ homepage = https://discord.gg/3JM8PbTukA
 hideCode = true
 hideResources = false
 includeSource = false
+includePDB = false
 buildIgnore = *.csproj, *.user, obj/*, bin/*, .vs/*
