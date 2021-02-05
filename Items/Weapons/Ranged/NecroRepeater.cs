@@ -18,8 +18,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 			item.damage = 20;
 			item.width = 40;
 			item.height = 40;
-			item.useTime = 12;
-			item.useAnimation = 12;
+			item.useTime = 14;
+			item.useAnimation = 14;
 			item.useStyle = 5;
 			item.value = Item.buyPrice(0, 5, 0, 0);
 			item.rare = 2;
