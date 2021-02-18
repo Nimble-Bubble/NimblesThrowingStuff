@@ -126,19 +126,22 @@ namespace NimblesThrowingStuff.NPCs.Morilus
             }
             if (npc.ai[1] >= 230 && npc.ai[1] <= 310)
             {
-                if (npc.ai[1] % 40 == 0 && npc.life >= npc.lifeMax / 2 || npc.ai[1] % 20 == 0)
+                if (npc.ai[1] % 30 == 0 && npc.life >= npc.lifeMax / 2 || npc.ai[1] % 20 == 0)
                 {
-                float Speed1 = 12f;
+                float Speed1 = 10f;
                 
-                int damage1 = 135;
-                if (Main.expertMode)
+                int damage1 = 95;
+                if (!Main.expertMode)
                 {
-                damage1 = 95;
+                damage1 = 135;
                 }
                 int type1 = mod.ProjectileType("MorilusBolt");
                 Main.PlaySound(2, (int)npc.position.X, (int)npc.position.Y, 11);
                 float rotation1 = (float)Math.Atan2(vector8.Y - (player.position.Y + (player.height * 0.5f)), vector8.X - (player.position.X + (player.width * 0.5f)));
-                int num54 = Projectile.NewProjectile(vector8.X, vector8.Y, (float)((Math.Cos(rotation1) * Speed1) * -1), (float)((Math.Sin(rotation1) * Speed1) * -1), type1, damage1, 0f, 0);
+                for (int spaldaedal = 0; spaldaedal < 15; spaldaedal++)
+                {
+                int num54 = Projectile.NewProjectile(vector8.X, vector8.Y, (float)((Math.Cos(rotation1) * Speed1) * -1) + Main.rand.Next(-3, 4), (float)((Math.Sin(rotation1) * Speed1) * -1) + Main.rand.Next(-3, 4), type1, damage1, 0f, 0);
+                }
                 }
                 if (npc.ai[1] >= 290)
                 {    
@@ -147,13 +150,13 @@ namespace NimblesThrowingStuff.NPCs.Morilus
             }
             if (npc.ai[1] >= 320 && npc.ai[1] <= 400)
             {
-                if (npc.ai[1] % 84 == 0)
+                if (npc.ai[1] % 6 == 0)
                 {
-                float Speed2 = 12f;
-                int Damage2 = 130;
-                if (Main.expertMode)
+                float Speed2 = 15f;
+                int Damage2 = 80;
+                if (!Main.expertMode)
                 {
-                Damage2 = 90;
+                Damage2 = 120;
                 }
                 int Type2 = mod.ProjectileType("MorilusBolt");
                 Main.PlaySound(2, (int)npc.position.X, (int)npc.position.Y, 11);
@@ -170,10 +173,10 @@ namespace NimblesThrowingStuff.NPCs.Morilus
             if (npc.ai[1] % 3 == 0)
             {
             float Speed3 = 1f;
-                int Damage3 = 130;
-                if (Main.expertMode)
+                int Damage3 = 90;
+                if (!Main.expertMode)
                 {
-                Damage3 = 90;
+                Damage3 = 130;
                 }
                 int Type3 = mod.ProjectileType("MorilusRain");
                 int num55 = Projectile.NewProjectile(npc.position.X + Main.rand.Next(-750, 751), npc.position.Y - 500, 0, Speed3, Type3, Damage3, 0f, 0);
