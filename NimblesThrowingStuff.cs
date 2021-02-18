@@ -37,5 +37,14 @@ namespace NimblesThrowingStuff
              censusMod.Call("TownNPCCondition", NPCType("Living Relic"), "Defeat the Eye of Cthulhu");   
             }
         }
+        private static ModRecipe GetNewRecipe() => new ModRecipe(ModContent.GetInstance<NimblesThrowingStuff>());
+        public override void AddRecipes()
+        {
+        ModRecipe recipe = GetNewRecipe();
+        recipe.AddRecipeGroup("IronBar");
+        recipe.AddTile(TileID.Anvils);
+        recipe.SetResult(ItemID.MusketBall, 50);
+        recipe.AddRecipe();
+        }
 	}
 }
