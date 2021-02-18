@@ -35,5 +35,9 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}
+        public override Vector2? HoldoutOffset()
+		{
+			return new Vector2(0, 4);
+		}
 	}
 }
