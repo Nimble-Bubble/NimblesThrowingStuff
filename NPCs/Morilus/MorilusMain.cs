@@ -27,7 +27,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
         public override void SetDefaults()
         {
             npc.lifeMax = 300000;
-            npc.damage = 160;
+            npc.damage = 140;
             npc.defense = 80;
             npc.knockBackResist = 0f;
             npc.width = 100;
@@ -57,7 +57,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
             if (!NPC.AnyNPCs(mod.NPCType("SkySeaGuardian")))
         {
         sleepy = false;
-            Move(new Vector2(0, 0f));
+            Move(new Vector2(Main.rand.Next(-100, 101), Main.rand.next(-100, 101)));
             
             Vector2 vector8 = new Vector2(npc.position.X + (npc.width), npc.position.Y + (npc.height / 2));
         
@@ -65,10 +65,10 @@ namespace NimblesThrowingStuff.NPCs.Morilus
             if (npc.ai[1] % 60 == 0 && npc.ai[1] <= 120)
                 {
                 float Speed = 8f;
-                int damage = 120;
-                if (Main.expertMode)
+                int damage = 80;
+                if (!Main.expertMode)
                 {
-                damage = 100;
+                damage = 120;
                 }
                 int type = mod.ProjectileType("MorilusStream");
                 Main.PlaySound(2, (int)npc.position.X, (int)npc.position.Y, 11);
@@ -130,7 +130,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
                 {
                 float Speed1 = 10f;
                 
-                int damage1 = 95;
+                int damage1 = 90;
                 if (!Main.expertMode)
                 {
                 damage1 = 135;
@@ -245,7 +245,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
         public override void ScaleExpertStats(int numPlayers, float bossLifeScale)
         {
             npc.lifeMax = (int)(npc.lifeMax * 0.75f * bossLifeScale);
-            npc.damage = 240;
+            npc.damage = 220;
             npc.defense = (int)(npc.defense);
         }
         public override void FindFrame(int frameHeight)

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "BEPTQ895O7NJ9mrQOqCl6UISGv5/Sxi/9MaPMrV/xoOp2L9tDuOr5JYvz+yV5pg3Pemsks+d6J+9R9aZp96Dzg==",
+  "success": true,
+  "projectFilePath": "/Users/Kat/Library/Application Support/Terraria/ModLoader/Mod Sources/NimblesThrowingStuff/NimblesThrowingStuff.csproj",
+  "expectedPackageFiles": [
+    "/Users/Kat/.nuget/packages/tmodloader.codeassist/0.1.1/tmodloader.codeassist.0.1.1.nupkg.sha512"
+  ],
+  "logs": []
+}

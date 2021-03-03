@@ -1,0 +1,45 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Items/Weapons/Melee/FuriousFalchion.cs">
+    <Files>
+      <File FileName="NPCs/Morilus/MorilusMain.cs" Line="75" Column="167" />
+      <File FileName="Projectiles/Melee/FuriousBeam.cs" Line="37" Column="47" />
+      <File FileName="Items/Weapons/Throwing/CosmosCrasher.cs" Line="16" Column="7" />
+      <File FileName="Items/Weapons/Melee/FuriousFalchion.cs" Line="4" Column="18" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="NimblesThrowingStuff" expanded="True">
+            <Node name="NimblesThrowingStuff" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
+              <Node name="Items" expanded="True">
+                <Node name="Weapons" expanded="True">
+                  <Node name="Melee" expanded="True">
+                    <Node name="FuriousFalchion.cs" selected="True" />
+                  </Node>
+                  <Node name="Throwing" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="NPCs" expanded="True">
+                <Node name="Morilus" expanded="True" />
+              </Node>
+              <Node name="Projectiles" expanded="True">
+                <Node name="Melee" expanded="True" />
+                <Node name="Ranged" expanded="True" />
+                <Node name="Throwing" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
