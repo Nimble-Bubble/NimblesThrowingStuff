@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
+using NimblesThrowingStuff.Items.Materials;
 
 namespace NimblesThrowingStuff.Items.Armor
 {
@@ -34,13 +35,13 @@ namespace NimblesThrowingStuff.Items.Armor
         {
             ModRecipe r = new ModRecipe(mod);
             r.AddIngredient(19, 16);
-            r.AddIngredient(mod.ItemType("BatFlesh"), 12);
+            r.AddIngredient(ModContent.ItemType<BatFlesh>(), 12);
             r.AddTile(16);
             r.SetResult(this);
             r.AddRecipe();
             r = new ModRecipe(mod);
             r.AddIngredient(706, 16);
-            r.AddIngredient(mod.ItemType("BatFlesh"), 12);
+            r.AddIngredient(ModContent.ItemType<BatFlesh>(), 12);
             r.AddTile(16);
             r.SetResult(this);
             r.AddRecipe();

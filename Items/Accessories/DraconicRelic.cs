@@ -1,4 +1,4 @@
-  using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
+using NimblesThrowingStuff.Items.Materials;
 
 namespace NimblesThrowingStuff.Items.Accessories
 {
@@ -46,7 +47,7 @@ namespace NimblesThrowingStuff.Items.Accessories
         public override void AddRecipes() 
         {
 			ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(mod.ItemType("DoradoFragment"), 14);
+            recipe.AddIngredient(ModContent.ItemType<DoradoFragment>(), 14);
             recipe.AddIngredient(3467, 10);
 			recipe.AddTile(TileID.LunarCraftingStation);
 			recipe.SetResult(this);

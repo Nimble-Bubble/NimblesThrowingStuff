@@ -4,6 +4,8 @@ using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 using Microsoft.Xna.Framework;
 using System;
+using NimblesThrowingStuff.Projectiles.Melee;
+using NimblesThrowingStuff.Items.Materials;
 
 namespace NimblesThrowingStuff.Items.Weapons.Melee
 {
@@ -22,7 +24,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			item.rare = 11;
 			item.value = Item.buyPrice(1, 0, 0, 0);
             item.melee = true;
-            item.shoot = mod.ProjectileType("ProcellariteBroadswordProj");
+            item.shoot = ModContent.ProjectileType<ProcellariteBroadswordProj>();
             item.shootSpeed = 11f;
 			item.UseSound = SoundID.Item1;
 		}
@@ -65,7 +67,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 		public override void AddRecipes()
 		{
 			var recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.ItemType("ProcellariteBar"), 12);
+			recipe.AddIngredient(ModContent.ItemType<ProcellariteBar>(), 12);
 			recipe.AddTile(TileID.LunarCraftingStation);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

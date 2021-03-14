@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
+using NimblesThrowingStuff.Items.Armor;
+using NimblesThrowingStuff.Items.Materials;
 
 namespace NimblesThrowingStuff.Items.Armor
 {
@@ -31,7 +33,7 @@ namespace NimblesThrowingStuff.Items.Armor
         }
         public override bool IsArmorSet(Item head, Item body, Item legs)
         {
-            return body.type == mod.ItemType("BatMail") && head.type == mod.ItemType("BatMask");
+            return body.type == ModContent.ItemType<BatMail>() && head.type == ModContent.ItemType<BatMask>();
         }
         public override void UpdateArmorSet(Player player)
         {
@@ -43,13 +45,13 @@ namespace NimblesThrowingStuff.Items.Armor
         {
             ModRecipe r = new ModRecipe(mod);
             r.AddIngredient(19, 12);
-            r.AddIngredient(mod.ItemType("BatFlesh"), 9);
+            r.AddIngredient(ModContent.ItemType<BatFlesh>(), 9);
             r.AddTile(16);
             r.SetResult(this);
             r.AddRecipe();
             r = new ModRecipe(mod);
             r.AddIngredient(706, 12);
-            r.AddIngredient(mod.ItemType("BatFlesh"), 9);
+            r.AddIngredient(ModContent.ItemType<BatFlesh>(), 9);
             r.AddTile(16);
             r.SetResult(this);
             r.AddRecipe();

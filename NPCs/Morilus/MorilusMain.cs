@@ -57,7 +57,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
             if (!NPC.AnyNPCs(mod.NPCType("SkySeaGuardian")))
         {
         sleepy = false;
-            Move(new Vector2(Main.rand.Next(-100, 101), Main.rand.next(-100, 101)));
+            Move(new Vector2(Main.rand.Next(-100, 101), Main.rand.Next(-100, 101)));
             
             Vector2 vector8 = new Vector2(npc.position.X + (npc.width), npc.position.Y + (npc.height / 2));
         

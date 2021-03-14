@@ -7,6 +7,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
+using NimblesThrowingStuff.Items.Accessories;
 
 namespace NimblesThrowingStuff.Items.Accessories
 {
@@ -36,7 +37,7 @@ namespace NimblesThrowingStuff.Items.Accessories
         public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.ItemType("SacredWristband")); //modded materials
+			recipe.AddIngredient(ModContent.ItemType<SacredWristband>()); 
             recipe.AddIngredient(935, 1);
 			recipe.AddTile(114);
 			recipe.SetResult(this);
