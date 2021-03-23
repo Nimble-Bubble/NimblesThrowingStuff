@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using NimblesThrowingStuff.Items.Materials;
 
 namespace NimblesThrowingStuff.Items.Tools
 {
@@ -27,7 +28,7 @@ namespace NimblesThrowingStuff.Items.Tools
         public override void AddRecipes() 
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(mod.ItemType("ProcellariteBar"), 12);
+            recipe.AddIngredient(ModContent.ItemType<ProcellariteBar>(), 12);
 			recipe.AddTile(TileID.LunarCraftingStation);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using NimblesThrowingStuff.Projectiles.Throwing;
 
 namespace NimblesThrowingStuff.Items.Weapons.Throwing
 {
@@ -23,7 +24,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 			item.rare = 3;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
-			item.shoot = mod.ProjectileType("BeemerangProj");
+			item.shoot = ModContent.ProjectileType<BeemerangProj>();
 			item.shootSpeed = 13.5f;
             item.mana = 12;
 		}

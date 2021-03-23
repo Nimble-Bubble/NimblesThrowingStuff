@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using NimblesThrowingStuff.Items.Materials;
 
 namespace NimblesThrowingStuff.Items.Tools
 {
@@ -29,7 +30,7 @@ namespace NimblesThrowingStuff.Items.Tools
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.LunarBar, 12);
-            recipe.AddIngredient(mod.ItemType("DoradoFragment"), 14);
+            recipe.AddIngredient(ModContent.ItemType<DoradoFragment>(), 14);
 			recipe.AddTile(TileID.LunarCraftingStation);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

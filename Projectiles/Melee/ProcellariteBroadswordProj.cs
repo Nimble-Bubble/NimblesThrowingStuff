@@ -29,8 +29,11 @@ namespace NimblesThrowingStuff.Projectiles.Melee
         }
         public override void AI() 
         {
-            Dust.NewDust(new Vector2(projectile.position.X, projectile.position.Y), projectile.width, projectile.height, 174,
-                            projectile.velocity.X * 0.1f, projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
+            if (Main.rand.NextBool(10))
+            {
+                Dust.NewDust(new Vector2(projectile.position.X, projectile.position.Y), projectile.width, projectile.height, 174,
+                                projectile.velocity.X * 0.1f, projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
+            }
         }
         public override void PostDraw(SpriteBatch spriteBatch, Color lightColor)
 		{

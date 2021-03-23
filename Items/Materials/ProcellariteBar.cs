@@ -1,6 +1,8 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using NimblesThrowingStuff.Items.Placeables.Blocks;
+using NimblesThrowingStuff.Tiles.Blocks;
 
 namespace NimblesThrowingStuff.Items.Materials
 {
@@ -18,14 +20,14 @@ namespace NimblesThrowingStuff.Items.Materials
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
             item.useTurn = true;
-            item.createTile = mod.TileType("ProcellariteBarTile");
+            item.createTile = ModContent.TileType<ProcellariteBarTile>();
             item.consumable = true;
             item.maxStack = 999;
 		}
         public override void AddRecipes() 
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.ItemType("ProcellariteOre"), 5);
+			recipe.AddIngredient(ModContent.ItemType<ProcellariteOre>(), 5);
 			recipe.AddTile(TileID.LunarCraftingStation);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

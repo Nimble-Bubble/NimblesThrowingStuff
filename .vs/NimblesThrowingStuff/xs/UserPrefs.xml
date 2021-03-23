@@ -1,8 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="NPCs/Morilus/MorilusMain.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Projectiles/Enemy/MorilusRain.cs">
     <Files>
-      <File FileName="Items/Accessories/DraconicRelic.cs" Line="1" Column="1" />
-      <File FileName="NPCs/Morilus/MorilusMain.cs" Line="1" Column="1" />
+      <File FileName="NPCs/Morilus/MorilusMain.cs" Line="231" Column="28" IsPinned="True" />
+      <File FileName="Items/Accessories/DraconicRelic.cs" Line="50" Column="34" />
+      <File FileName="Items/Consumables/MorilusTreasureBag.cs" Line="42" Column="73" />
+      <File FileName="Items/Weapons/Throwing/BloodyPike.cs" Line="4" Column="49" />
+      <File FileName="Items/Weapons/Melee/ProcellariteBroadsword.cs" Line="63" Column="88" />
+      <File FileName="Projectiles/Enemy/MorilusBolt.cs" Line="28" Column="39" />
+      <File FileName="Projectiles/Enemy/MorilusRain.cs" Line="28" Column="33" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -10,16 +15,23 @@
           <Node name="NimblesThrowingStuff" expanded="True">
             <Node name="NimblesThrowingStuff" expanded="True">
               <Node name="Items" expanded="True">
-                <Node name="Accessories" expanded="True" />
-                <Node name="Armor" expanded="True" />
+                <Node name="Consumables" expanded="True" />
                 <Node name="Weapons" expanded="True">
                   <Node name="Melee" expanded="True" />
+                  <Node name="Throwing" expanded="True" />
                 </Node>
               </Node>
               <Node name="NPCs" expanded="True">
-                <Node name="Morilus" expanded="True">
-                  <Node name="MorilusMain.cs" selected="True" />
+                <Node name="Morilus" expanded="True" />
+              </Node>
+              <Node name="Projectiles" expanded="True">
+                <Node name="Enemy" expanded="True">
+                  <Node name="MorilusRain.cs" selected="True" />
                 </Node>
+                <Node name="Melee" expanded="True" />
+              </Node>
+              <Node name="Tiles" expanded="True">
+                <Node name="Blocks" expanded="True" />
               </Node>
             </Node>
           </Node>

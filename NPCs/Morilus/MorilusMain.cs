@@ -8,6 +8,9 @@ using Terraria.ModLoader;
 using Terraria.ID;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using NimblesThrowingStuff.NPCs.Morilus;
+using NimblesThrowingStuff.Projectiles.Enemy;
+using NimblesThrowingStuff.Items.Consumables;
 
 namespace NimblesThrowingStuff.NPCs.Morilus
 {
@@ -44,7 +47,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
             npc.DeathSound = SoundID.NPCDeath3;
             music = MusicID.Boss4;
             npc.buffImmune[31] = true;
-            bossBag = mod.ItemType("MorilusTreasureBag");
+            bossBag = ModContent.ItemType<MorilusTreasureBag>();
             npc.scale = 1.3f;
         }
         
@@ -54,7 +57,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
             Target();
 
             DespawnHandler();
-            if (!NPC.AnyNPCs(mod.NPCType("SkySeaGuardian")))
+            if (!NPC.AnyNPCs(ModContent.NPCType<SkySeaGuardian>()))
         {
         sleepy = false;
             Move(new Vector2(Main.rand.Next(-100, 101), Main.rand.Next(-100, 101)));
@@ -70,7 +73,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
                 {
                 damage = 120;
                 }
-                int type = mod.ProjectileType("MorilusStream");
+                int type = ModContent.ProjectileType<MorilusStream>();
                 Main.PlaySound(2, (int)npc.position.X, (int)npc.position.Y, 11);
                 float rotation = (float)Math.Atan2(vector8.Y - (player.position.Y + (player.height * 0.5f)), vector8.X - (player.position.X + (player.width * 0.5f)));
                 int num54 = Projectile.NewProjectile(vector8.X, vector8.Y, (float)((Math.Cos(rotation) * Speed) * -1), (float)((Math.Sin(rotation) * Speed) * -1), type, damage, 0f, 0);
@@ -117,7 +120,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
             {
                 if (npc.ai[1] % 30 == 0 && npc.life >= npc.lifeMax / 2 || npc.ai[1] % 20 == 0 && npc.life <= npc.lifeMax / 2)
                 {
-                NPC.NewNPC((int)npc.Center.X + 20, (int)npc.Center.Y, mod.NPCType("SkySeaPrankster"));
+                NPC.NewNPC((int)npc.Center.X + 20, (int)npc.Center.Y, ModContent.NPCType<SkySeaPrankster>());
                 }
                 if (npc.ai[1] >= 200)
                 {    
@@ -135,7 +138,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
                 {
                 damage1 = 135;
                 }
-                int type1 = mod.ProjectileType("MorilusBolt");
+                int type1 = ModContent.ProjectileType<MorilusBolt>();
                 Main.PlaySound(2, (int)npc.position.X, (int)npc.position.Y, 11);
                 float rotation1 = (float)Math.Atan2(vector8.Y - (player.position.Y + (player.height * 0.5f)), vector8.X - (player.position.X + (player.width * 0.5f)));
                 for (int spaldaedal = 0; spaldaedal < 15; spaldaedal++)
@@ -158,7 +161,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
                 {
                 Damage2 = 120;
                 }
-                int Type2 = mod.ProjectileType("MorilusBolt");
+                int Type2 = ModContent.ProjectileType<MorilusBolt>();
                 Main.PlaySound(2, (int)npc.position.X, (int)npc.position.Y, 11);
                 float rotation2 = (float)Math.Atan2(vector8.Y - (player.position.Y + (player.height * 0.5f)), vector8.X - (player.position.X + (player.width * 0.5f)));
                 int num55 = Projectile.NewProjectile(vector8.X, vector8.Y, (float)((Math.Cos(rotation2) * Speed2) * -1), (float)((Math.Sin(rotation2) * Speed2) * -1), Type2, Damage2, 0f, 0);
@@ -170,16 +173,16 @@ namespace NimblesThrowingStuff.NPCs.Morilus
             }
             if (npc.ai[1] >= 450 && npc.ai[1] <= 800)
             {
-            if (npc.ai[1] % 3 == 0)
+            if (npc.ai[1] % 2 == 0)
             {
-            float Speed3 = 1f;
-                int Damage3 = 90;
+            float Speed3 = 4f;
+                int Damage3 = 70;
                 if (!Main.expertMode)
                 {
-                Damage3 = 130;
+                Damage3 = 110;
                 }
-                int Type3 = mod.ProjectileType("MorilusRain");
-                int num55 = Projectile.NewProjectile(npc.position.X + Main.rand.Next(-750, 751), npc.position.Y - 500, 0, Speed3, Type3, Damage3, 0f, 0);
+                int Type3 = ModContent.ProjectileType<MorilusRain>();
+                int num55 = Projectile.NewProjectile(npc.position.X + Main.rand.Next(-750, 751), npc.position.Y - 750, 0, Speed3, Type3, Damage3, 0f, 0);
             }
             if (npc.ai[1] >= 650 && npc.life >= npc.lifeMax / 4 || npc.ai[1] >= 750)
             {
@@ -219,7 +222,14 @@ namespace NimblesThrowingStuff.NPCs.Morilus
         private void Move(Vector2 offset)
         {
             float bwingawee = npc.lifeMax / 4;
-            speed = 8f - (npc.life / bwingawee);
+            if (!NPC.AnyNPCs(ModContent.NPCType<SkySeaGuardian>()))
+            {
+                speed = 8f - (npc.life / bwingawee);
+            }
+            else
+            {
+                speed = 1f;
+            }
             Vector2 moveTo = player.Center;
             Vector2 move = moveTo - npc.Center;
             float magnitude = Magnitude(move);
@@ -251,7 +261,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
         public override void FindFrame(int frameHeight)
         {
             npc.frameCounter++;
-            if (!NPC.AnyNPCs(mod.NPCType("SkySeaGuardian")))
+            if (!NPC.AnyNPCs(ModContent.NPCType<SkySeaGuardian>()))
             {
             if (npc.frameCounter < 15) {
 					npc.frame.Y = 1 * frameHeight;
@@ -301,7 +311,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
                 Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("ProcellariteOre"));
                 break;
             }
-                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.ChlorophyteBar, Main.rand.Next(15, 24));
+                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.LunarBar, Main.rand.Next(15, 24));
             }
         }
         public override void BossLoot(ref string name, ref int potionType)

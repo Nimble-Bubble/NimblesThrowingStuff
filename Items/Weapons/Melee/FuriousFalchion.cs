@@ -4,6 +4,7 @@ using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 using Microsoft.Xna.Framework;
 using System;
+using NimblesThrowingStuff.Projectiles.Melee;
 
 namespace NimblesThrowingStuff.Items.Weapons.Melee
 {
@@ -22,7 +23,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			item.rare = 10;
 			item.value = Item.buyPrice(0, 50, 0, 0);
             item.melee = true;
-            item.shoot = mod.ProjectileType("FuriousBeam");
+            item.shoot = ModContent.ProjectileType<FuriousBeam>();
             item.shootSpeed = 6f;
 			item.UseSound = SoundID.Item1;
 		}

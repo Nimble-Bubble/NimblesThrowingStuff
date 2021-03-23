@@ -1,6 +1,8 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using NimblesThrowingStuff.Projectiles.Throwing;
+using NimblesThrowingStuff.Items.Materials;
 
 namespace NimblesThrowingStuff.Items.Weapons.Throwing
 {
@@ -23,7 +25,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 			item.rare = 4;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
-			item.shoot = mod.ProjectileType("AccursedFlaskProj");
+			item.shoot = ModContent.ProjectileType<AccursedFlaskProj>();
 			item.shootSpeed = 13.5f;
             item.consumable = true;
             item.maxStack = 999;
@@ -33,7 +35,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(522, 1);
-            recipe.AddIngredient(mod.ItemType("EmptyFlask"), 50);
+            recipe.AddIngredient(ModContent.ItemType<EmptyFlask>(), 50);
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this, 50);
 			recipe.AddRecipe();

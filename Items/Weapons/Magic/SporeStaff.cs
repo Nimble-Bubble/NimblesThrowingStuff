@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using NimblesThrowingStuff.Projectiles.Magic;
 
 namespace NimblesThrowingStuff.Items.Weapons.Magic
 {
@@ -26,7 +27,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Magic
 			item.rare = 2;
 			item.UseSound = SoundID.Item43;
 			item.autoReuse = true;
-			item.shoot = mod.ProjectileType("SporeBolt");
+			item.shoot = ModContent.ProjectileType<SporeBolt>();
 			item.shootSpeed = 11f;
             item.mana = 10;
 		}

@@ -2,6 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
+using NimblesThrowingStuff.Projectiles.Magic;
 
 namespace NimblesThrowingStuff.Items.Weapons.Magic
 {
@@ -27,7 +28,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Magic
 			item.rare = 4;
 			item.UseSound = SoundID.Item43;
 			item.autoReuse = true;
-			item.shoot = mod.ProjectileType("PalladiumBolt");
+			item.shoot = ModContent.ProjectileType<PalladiumBolt>();
 			item.shootSpeed = 5.5f;
             item.mana = 15;
 		}

@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using NimblesThrowingStuff.Projectiles.Ranged;
 
 namespace NimblesThrowingStuff.Items.Weapons.Ranged
 {
@@ -17,7 +18,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 			item.knockBack = 3.5f;
 			item.value = 45;
 			item.rare = 1;
-			item.shoot = mod.ProjectileType("HealingArrowProj");   //The projectile shoot when your weapon using this ammo
+			item.shoot = ModContent.ProjectileType<HealingArrowProj>();   //The projectile shoot when your weapon using this ammo
 			item.shootSpeed = 4f;                  //The speed of the projectile
 			item.ammo = AmmoID.Arrow;              //The ammo class this ammo belongs to.
 		}

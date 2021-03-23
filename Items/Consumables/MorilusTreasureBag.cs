@@ -7,6 +7,9 @@ using System.IO;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using NimblesThrowingStuff.NPCs.Morilus;
+using NimblesThrowingStuff.Items.Accessories;
+using NimblesThrowingStuff.Items.Placeables.Blocks;
 
 namespace NimblesThrowingStuff.Items.Consumables
 {
@@ -26,7 +29,7 @@ namespace NimblesThrowingStuff.Items.Consumables
             item.rare = 9;
             item.expert = true;
         }
-        public override int BossBagNPC => mod.NPCType("MorilusMain");
+        public override int BossBagNPC => ModContent.NPCType<MorilusMain>();
 
         public override bool CanRightClick()
         {
@@ -36,8 +39,8 @@ namespace NimblesThrowingStuff.Items.Consumables
         {
             player.TryGettingDevArmor();
             player.QuickSpawnItem(ItemID.GoldCoin, Main.rand.Next(50, 76));
-            player.QuickSpawnItem(mod.ItemType("CarpatusDefender"));
-            player.QuickSpawnItem(mod.ItemType("ProcellariteOre"), Main.rand.Next(40, 61));
+            player.QuickSpawnItem(ModContent.ItemType<CarpatusDefender>());
+            player.QuickSpawnItem(ModContent.ItemType<ProcellariteOre>(), Main.rand.Next(40, 61));
         }
     }
 }

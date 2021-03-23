@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using NimblesThrowingStuff.Projectiles.Throwing;
 
 namespace NimblesThrowingStuff.Items.Weapons.Throwing
 {
@@ -27,7 +28,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 			item.rare = 6;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
-			item.shoot = mod.ProjectileType("BloodyPikeProj");
+			item.shoot = ModContent.ProjectileType<BloodyPikeProj>();
 			item.shootSpeed = 9f;
             item.mana = 12;
 		}

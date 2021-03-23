@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using NimblesThrowingStuff.Tiles.Blocks;
 
 namespace NimblesThrowingStuff.Items.Placeables.Blocks
 {
@@ -18,7 +19,7 @@ namespace NimblesThrowingStuff.Items.Placeables.Blocks
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
             item.useTurn = true;
-            item.createTile = mod.TileType("ProcellariteOreTile");
+            item.createTile = ModContent.TileType<ProcellariteOreTile>();
             item.consumable = true;
             item.maxStack = 999;
 		}

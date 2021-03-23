@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using NimblesThrowingStuff.Projectiles.Throwing;
 
 namespace NimblesThrowingStuff.Items.Weapons.Throwing
 {
@@ -27,7 +28,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 			item.rare = 4;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
-			item.shoot = mod.ProjectileType("ArachknifeProj");
+			item.shoot = ModContent.ProjectileType<ArachknifeProj>();
 			item.shootSpeed = 10f;
             item.mana = 8;
 		}

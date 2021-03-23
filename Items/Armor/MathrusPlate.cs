@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
+using NimblesThrowingStuff.Items.Materials;
 
 namespace NimblesThrowingStuff.Items.Armor
 {
@@ -37,7 +38,7 @@ namespace NimblesThrowingStuff.Items.Armor
         public override void AddRecipes()
         {
             ModRecipe r = new ModRecipe(mod);
-            r.AddIngredient(mod.ItemType("DoradoFragment"), 20);
+            r.AddIngredient(ModContent.ItemType<DoradoFragment>(), 20);
             r.AddIngredient(3467, 16);
             r.AddTile(TileID.LunarCraftingStation);
             r.SetResult(this);

@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using NimblesThrowingStuff.Projectiles.Throwing;
 
 namespace NimblesThrowingStuff.Items.Weapons.Throwing
 {
@@ -23,7 +24,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 			item.rare = 4;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
-			item.shoot = mod.ProjectileType("AdamantiteMalletProj");
+			item.shoot = ModContent.ProjectileType<AdamantiteMalletProj>();
 			item.shootSpeed = 12f;
             item.consumable = true;
             item.maxStack = 999;

@@ -4,6 +4,7 @@ using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 using Microsoft.Xna.Framework;
 using System;
+using NimblesThrowingStuff.Projectiles.Melee;
 
 namespace NimblesThrowingStuff.Items.Weapons.Melee
 {
@@ -18,7 +19,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			item.knockBack = 4f;
 			item.width = 36;
 			item.height = 36;
-			item.shoot = mod.ProjectileType("TheToothpickProj");
+			item.shoot = ModContent.ProjectileType<TheToothpickProj>();
             item.shootSpeed = 4.5f;
 			item.rare = ItemRarityID.Blue;
             item.noUseGraphic = true;

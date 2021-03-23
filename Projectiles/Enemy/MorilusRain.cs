@@ -25,7 +25,7 @@ namespace NimblesThrowingStuff.Projectiles.Enemy
             projectile.light = 1f;
             projectile.alpha = 0;
             aiType = 27;
-            projectile.scale = 1.5f;
+            projectile.scale = 0.5f;
             projectile.extraUpdates = 1;
             projectile.timeLeft = 300;
             projectile.tileCollide = false;

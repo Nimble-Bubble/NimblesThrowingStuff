@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using NimblesThrowingStuff.Tiles.Banners;
 
 namespace NimblesThrowingStuff.Items.Placeables.Banners
 {
@@ -22,7 +23,7 @@ namespace NimblesThrowingStuff.Items.Placeables.Banners
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
             item.useTurn = true;
-            item.createTile = mod.TileType("MimiclamBanner");
+            item.createTile = ModContent.TileType<MimiclamBanner>();
             item.consumable = true;
             item.maxStack = 999;
 		}

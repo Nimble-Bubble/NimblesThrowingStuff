@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
+using NimblesThrowingStuff.Items.Materials;
 
 namespace NimblesThrowingStuff.Items.Armor
 {
@@ -14,6 +15,7 @@ namespace NimblesThrowingStuff.Items.Armor
     {
         public override void SetStaticDefaults()
         {
+            DisplayName.SetDefault("Festive Coat");
                 Tooltip.SetDefault("Increases throwing speed by 15% and throwing critical strike chance by 20%");
         }
 
@@ -36,7 +38,7 @@ namespace NimblesThrowingStuff.Items.Armor
         public override void AddRecipes()
         {
             ModRecipe r = new ModRecipe(mod);
-            r.AddIngredient(mod.ItemType("FestiveCloth"), 24);
+            r.AddIngredient(ModContent.ItemType<FestiveCloth>(), 24);
             r.AddTile(134);
             r.SetResult(this);
             r.AddRecipe();
