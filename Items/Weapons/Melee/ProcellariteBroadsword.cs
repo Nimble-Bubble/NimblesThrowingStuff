@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 		public override void SetDefaults() {
 			item.damage = 340;
 			item.useStyle = 1;
-			item.useAnimation = 21;
+			item.useAnimation = 7;
 			item.useTime = 21;
 			item.knockBack = 8f;
 			item.width = 90;
@@ -60,7 +60,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 				heading *= new Vector2(speedX, speedY).Length();
 				speedX = heading.X;
 				speedY = heading.Y + Main.rand.Next(-40, 41) * 0.10f;
-				Projectile.NewProjectile(target.X, position.Y, speedX / 2, speedY, type, damage * 2, knockBack, player.whoAmI, 0f, ceilingLimit);
+				Projectile.NewProjectile(target.X, position.Y, speedX / 2, speedY, type, damage, knockBack, player.whoAmI, 0f, ceilingLimit);
 			}
 			return false;
 		}
