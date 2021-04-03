@@ -1,19 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Items/Tools/MeteoriteDrill.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Projectiles/Throwing/PiercerEcho.cs">
     <Files>
-      <File FileName="NPCs/Morilus/MorilusMain.cs" Line="182" Column="29" IsPinned="True" />
-      <File FileName="Items/Accessories/DraconicRelic.cs" />
-      <File FileName="Items/Consumables/MorilusTreasureBag.cs" />
-      <File FileName="Items/Weapons/Throwing/BloodyPike.cs" />
-      <File FileName="Items/Weapons/Melee/ProcellariteBroadsword.cs" Line="27" Column="58" />
+      <File FileName="NPCs/Morilus/MorilusMain.cs" Line="302" Column="128" IsPinned="True" />
+      <File FileName="Items/Consumables/MorilusTreasureBag.cs" Line="1" Column="1" />
+      <File FileName="Items/Weapons/Melee/ProcellariteBroadsword.cs" Line="38" Column="91" />
+      <File FileName="Projectiles/Throwing/PiercerEcho.cs" Line="10" Column="49" />
       <File FileName="Projectiles/Enemy/MorilusBolt.cs" Line="1" Column="1" />
-      <File FileName="../../Mod Configs/VeinMiner.json" />
-      <File FileName="../../VeinMinerDownloadedOreList" />
-      <File FileName="../CelestialInfernalMod/Items/Weapons/Ranged/FeatherousBow.cs" Line="62" Column="4" />
-      <File FileName="Items/Weapons/Ranged/SporeSling.cs" Line="33" Column="24" />
-      <File FileName="Projectiles/Melee/ProcellariteBroadswordProj.cs" Line="25" Column="36" />
+      <File FileName="Items/Weapons/Ranged/SporeSling.cs" Line="63" Column="4" />
       <File FileName="Projectiles/NimblesGlobalProjectile.cs" Line="31" Column="126" />
-      <File FileName="Items/Tools/DoradoPickaxe.cs" Line="19" Column="45" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -21,17 +15,24 @@
           <Node name="NimblesThrowingStuff" expanded="True">
             <Node name="NimblesThrowingStuff" expanded="True">
               <Node name="Items" expanded="True">
-                <Node name="Tools" expanded="True">
-                  <Node name="DoradoPickaxe.cs" selected="True" />
-                </Node>
+                <Node name="Accessories" expanded="True" />
+                <Node name="Consumables" expanded="True" />
+                <Node name="Tools" expanded="True" />
                 <Node name="Weapons" expanded="True">
                   <Node name="Melee" expanded="True" />
                   <Node name="Ranged" expanded="True" />
+                  <Node name="Throwing" expanded="True" />
                 </Node>
+              </Node>
+              <Node name="NPCs" expanded="True">
+                <Node name="Morilus" expanded="True" />
               </Node>
               <Node name="Projectiles" expanded="True">
                 <Node name="Enemy" expanded="True" />
                 <Node name="Melee" expanded="True" />
+                <Node name="Throwing" expanded="True">
+                  <Node name="PiercerEcho.cs" selected="True" />
+                </Node>
               </Node>
             </Node>
           </Node>

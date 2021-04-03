@@ -61,14 +61,5 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 			}
 			return false;
 		}
-
-		public override void AddRecipes()
-		{
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ModContent.ItemType<ProcellariteBar>(), 12);
-			recipe.AddTile(TileID.LunarCraftingStation);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
-		}
 	}
 }
