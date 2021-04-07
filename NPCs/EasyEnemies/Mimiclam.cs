@@ -21,7 +21,7 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
 			npc.height = 26;
 			npc.aiStyle = 25;
 			npc.damage = 25;
-			npc.defense = 20;
+			npc.defense = 12;
 			npc.lifeMax = 120;
 			npc.HitSound = SoundID.NPCHit2;
 			npc.DeathSound = SoundID.NPCDeath2;

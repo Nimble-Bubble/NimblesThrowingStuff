@@ -16,6 +16,10 @@ namespace NimblesThrowingStuff.Items
                 return true;
             }
         }
+        public override void SetDefaults(Projectile projectile)
+        {
+            Player player = Main.player[projectile.owner];
+        }
         public override void OnHitNPC(Projectile projectile, NPC target, int damage, float knockback, bool crit)
         {
             Player player = Main.player[projectile.owner];
@@ -62,6 +66,11 @@ namespace NimblesThrowingStuff.Items
             if (player.GetModPlayer<NimblesPlayer>().miniMove && projectile.minion && Main.rand.NextBool(5))
             {
                 target.AddBuff(31, 450);
+            }
+            if (player.GetModPlayer<NimblesPlayer>().miniLocal && projectile.minion)
+            {
+                projectile.usesLocalNPCImmunity = true;
+                projectile.localNPCHitCooldown = 10;
             }
         }
     }

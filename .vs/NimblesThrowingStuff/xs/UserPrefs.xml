@@ -1,13 +1,15 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Projectiles/Throwing/PiercerEcho.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Projectiles/NimblesGlobalProjectile.cs">
     <Files>
       <File FileName="NPCs/Morilus/MorilusMain.cs" Line="302" Column="128" IsPinned="True" />
       <File FileName="Items/Consumables/MorilusTreasureBag.cs" Line="1" Column="1" />
-      <File FileName="Items/Weapons/Melee/ProcellariteBroadsword.cs" Line="38" Column="91" />
-      <File FileName="Projectiles/Throwing/PiercerEcho.cs" Line="10" Column="49" />
+      <File FileName="Items/Weapons/Melee/ProcellariteBroadsword.cs" Line="43" Column="48" />
+      <File FileName="Projectiles/Throwing/PiercerEcho.cs" Line="19" Column="49" />
       <File FileName="Projectiles/Enemy/MorilusBolt.cs" Line="1" Column="1" />
       <File FileName="Items/Weapons/Ranged/SporeSling.cs" Line="63" Column="4" />
-      <File FileName="Projectiles/NimblesGlobalProjectile.cs" Line="31" Column="126" />
+      <File FileName="Items/Accessories/ChlorophyteTreaders.cs" Line="26" Column="27" />
+      <File FileName="NimblesPlayer.cs" Line="53" Column="9" />
+      <File FileName="Projectiles/NimblesGlobalProjectile.cs" Line="26" Column="14" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -25,14 +27,14 @@
                 </Node>
               </Node>
               <Node name="NPCs" expanded="True">
+                <Node name="EasyEnemies" expanded="True" />
                 <Node name="Morilus" expanded="True" />
               </Node>
               <Node name="Projectiles" expanded="True">
                 <Node name="Enemy" expanded="True" />
                 <Node name="Melee" expanded="True" />
-                <Node name="Throwing" expanded="True">
-                  <Node name="PiercerEcho.cs" selected="True" />
-                </Node>
+                <Node name="Throwing" expanded="True" />
+                <Node name="NimblesGlobalProjectile.cs" selected="True" />
               </Node>
             </Node>
           </Node>

@@ -1,4 +1,4 @@
-using System;
+  using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,32 +9,35 @@ using Terraria.ID;
 
 namespace NimblesThrowingStuff.Items.Accessories
 {
-    public class ArachnidEmblem : ModItem
+    [AutoloadEquip(EquipType.Neck)]
+    public class CheckeredScarf : ModItem
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Allows your minions, chelicerates or not, to envenom enemies");
+            Tooltip.SetDefault("The perfect scarf for any leader"
+            + "\nGives minions local cooldowns");
         }
         public override void SetDefaults()
         {
             item.accessory = true;
-            item.width = 30;
-            item.height = 30;
-            item.value = Item.buyPrice(0, 10, 0, 0);
-            item.rare = 4;
+            item.width = 22;
+            item.height = 22;
+            item.value = Item.sellPrice(0, 6, 21, 0);
+            item.rare = 5;
             item.expert = false;
         }
-
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             var modPlayer = player.GetModPlayer<NimblesPlayer>();
-            modPlayer.miniVenom = true;
+            modPlayer.miniLocal = true;
         }
         public override void AddRecipes() 
-		{
+        {
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(2607, 12);
-			recipe.AddTile(TileID.Anvils);
+            recipe.AddIngredient(ItemID.DarkShard);
+            recipe.AddIngredient(ItemID.LightShard);
+            recipe.AddIngredient(ItemID.Silk, 20);
+			recipe.AddTile(TileID.Loom);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

@@ -40,6 +40,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 		public override void AddRecipes()
 		{
 			var recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemID.EnchantedSword);
 			recipe.AddIngredient(ItemID.HellstoneBar, 15);
 			recipe.AddIngredient(ItemID.Bone, 25);
 			recipe.AddTile(TileID.Anvils);

@@ -31,6 +31,7 @@ namespace NimblesThrowingStuff
         public bool miniEvil;
         public bool miniMove;
         public bool miniGreek;
+        public bool miniLocal;
         
         public override void ResetEffects()
         {
@@ -49,6 +50,7 @@ namespace NimblesThrowingStuff
         miniFrost = false;
         miniMove = false;
         miniGreek = false;
+        miniLocal = false;
         }
         public override void UpdateDead()
         {
