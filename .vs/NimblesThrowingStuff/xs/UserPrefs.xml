@@ -1,5 +1,5 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Projectiles/NimblesGlobalProjectile.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Projectiles/Summoning/AquaBlast.cs">
     <Files>
       <File FileName="NPCs/Morilus/MorilusMain.cs" Line="302" Column="128" IsPinned="True" />
       <File FileName="Items/Consumables/MorilusTreasureBag.cs" Line="1" Column="1" />
@@ -7,9 +7,10 @@
       <File FileName="Projectiles/Throwing/PiercerEcho.cs" Line="19" Column="49" />
       <File FileName="Projectiles/Enemy/MorilusBolt.cs" Line="1" Column="1" />
       <File FileName="Items/Weapons/Ranged/SporeSling.cs" Line="63" Column="4" />
-      <File FileName="Items/Accessories/ChlorophyteTreaders.cs" Line="26" Column="27" />
-      <File FileName="NimblesPlayer.cs" Line="53" Column="9" />
-      <File FileName="Projectiles/NimblesGlobalProjectile.cs" Line="26" Column="14" />
+      <File FileName="Items/Accessories/ChlorophyteTreaders.cs" Line="32" Column="40" />
+      <File FileName="NimblesPlayer.cs" Line="53" Column="27" />
+      <File FileName="Projectiles/NimblesGlobalProjectile.cs" Line="77" Column="2" />
+      <File FileName="Projectiles/Summoning/AquaBlast.cs" Line="65" Column="134" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -33,8 +34,10 @@
               <Node name="Projectiles" expanded="True">
                 <Node name="Enemy" expanded="True" />
                 <Node name="Melee" expanded="True" />
+                <Node name="Summoning" expanded="True">
+                  <Node name="AquaBlast.cs" selected="True" />
+                </Node>
                 <Node name="Throwing" expanded="True" />
-                <Node name="NimblesGlobalProjectile.cs" selected="True" />
               </Node>
             </Node>
           </Node>
