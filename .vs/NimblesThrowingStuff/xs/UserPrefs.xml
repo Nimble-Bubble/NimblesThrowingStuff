@@ -1,16 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Projectiles/Summoning/AquaBlast.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Items/Weapons/Melee/ProcellariteBroadsword.cs">
     <Files>
-      <File FileName="NPCs/Morilus/MorilusMain.cs" Line="302" Column="128" IsPinned="True" />
+      <File FileName="NPCs/Morilus/MorilusMain.cs" Line="52" Column="10" IsPinned="True" />
       <File FileName="Items/Consumables/MorilusTreasureBag.cs" Line="1" Column="1" />
-      <File FileName="Items/Weapons/Melee/ProcellariteBroadsword.cs" Line="43" Column="48" />
-      <File FileName="Projectiles/Throwing/PiercerEcho.cs" Line="19" Column="49" />
+      <File FileName="Items/Weapons/Melee/ProcellariteBroadsword.cs" Line="19" Column="22" />
       <File FileName="Projectiles/Enemy/MorilusBolt.cs" Line="1" Column="1" />
-      <File FileName="Items/Weapons/Ranged/SporeSling.cs" Line="63" Column="4" />
-      <File FileName="Items/Accessories/ChlorophyteTreaders.cs" Line="32" Column="40" />
-      <File FileName="NimblesPlayer.cs" Line="53" Column="27" />
       <File FileName="Projectiles/NimblesGlobalProjectile.cs" Line="77" Column="2" />
-      <File FileName="Projectiles/Summoning/AquaBlast.cs" Line="65" Column="134" />
+      <File FileName="Projectiles/Summoning/AquaBlast.cs" Line="25" Column="13" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -22,7 +18,10 @@
                 <Node name="Consumables" expanded="True" />
                 <Node name="Tools" expanded="True" />
                 <Node name="Weapons" expanded="True">
-                  <Node name="Melee" expanded="True" />
+                  <Node name="Magic" expanded="True" />
+                  <Node name="Melee" expanded="True">
+                    <Node name="ProcellariteBroadsword.cs" selected="True" />
+                  </Node>
                   <Node name="Ranged" expanded="True" />
                   <Node name="Throwing" expanded="True" />
                 </Node>
@@ -33,10 +32,9 @@
               </Node>
               <Node name="Projectiles" expanded="True">
                 <Node name="Enemy" expanded="True" />
+                <Node name="Magic" expanded="True" />
                 <Node name="Melee" expanded="True" />
-                <Node name="Summoning" expanded="True">
-                  <Node name="AquaBlast.cs" selected="True" />
-                </Node>
+                <Node name="Summoning" expanded="True" />
                 <Node name="Throwing" expanded="True" />
               </Node>
             </Node>

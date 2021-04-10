@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using NimblesThrowingStuff.Projectiles.Throwing;
 
 namespace NimblesThrowingStuff.Items.Weapons.Throwing
 {
@@ -19,15 +20,15 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 			item.height = 24;
 			item.useTime = 45;
 			item.useAnimation = 45;
-			item.useStyle = 1;
+			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.knockBack = 9f;
             item.noMelee = true;
             item.noUseGraphic = true;
 			item.value = Item.buyPrice(0, 2, 70, 0);
-			item.rare = 3;
+			item.rare = ItemRarityID.Orange;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
-			item.shoot = mod.ProjectileType("BrimstoneBombProj");
+			item.shoot = ModContent.ProjectileType<BrimstoneBombProj>();
 			item.shootSpeed = 8.5f;
             item.mana = 13;
 		}
@@ -35,7 +36,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 		public override void AddRecipes() 
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(175, 15);
+			recipe.AddIngredient(ItemID.HellstoneBar, 15);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

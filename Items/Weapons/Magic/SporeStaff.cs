@@ -14,21 +14,21 @@ namespace NimblesThrowingStuff.Items.Weapons.Magic
 
 		public override void SetDefaults() 
 		{
-			item.damage = 26;
+			item.damage = 16;
 			item.magic = true;
 			item.width = 24;
 			item.height = 24;
-			item.useTime = 23;
-			item.useAnimation = 23;
+			item.useTime = 28;
+			item.useAnimation = 28;
 			item.useStyle = 5;
-			item.knockBack = 4f;
+			item.knockBack = 2f;
             item.noMelee = true;
 			item.value = Item.buyPrice(0, 2, 70, 0);
 			item.rare = 2;
 			item.UseSound = SoundID.Item43;
 			item.autoReuse = true;
 			item.shoot = ModContent.ProjectileType<SporeBolt>();
-			item.shootSpeed = 11f;
+			item.shootSpeed = 3f;
             item.mana = 10;
 		}
 

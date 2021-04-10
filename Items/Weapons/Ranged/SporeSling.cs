@@ -20,13 +20,13 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 			item.height = 40;
 			item.useTime = 35;
 			item.useAnimation = 35;
-			item.useStyle = 5;
+			item.useStyle = ItemUseStyleID.HoldingOut;
 			item.value = Item.buyPrice(0, 2, 70, 0);
-			item.rare = 2;
+			item.rare = ItemRarityID.Green;
 			item.noMelee = true;
 			item.useAmmo = AmmoID.Arrow;
 			item.UseSound = SoundID.Item5;
-			item.shoot = 1;
+			item.shoot = ProjectileID.WoodenArrowFriendly;
             item.knockBack = 6f;
 			item.shootSpeed = 7f;
 			item.ranged = true;

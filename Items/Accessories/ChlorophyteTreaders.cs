@@ -27,7 +27,7 @@ namespace NimblesThrowingStuff.Items.Accessories
             item.width = 22;
             item.height = 22;
             item.value = item.value = Item.buyPrice(0, 50, 0, 0);
-            item.rare = 8;
+            item.rare = ItemRarityID.Yellow;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
@@ -59,8 +59,8 @@ namespace NimblesThrowingStuff.Items.Accessories
 			ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ItemID.FrostsparkBoots);
             recipe.AddIngredient(ItemID.LavaWaders);
-            recipe.AddIngredient(1006, 12);
-            recipe.AddIngredient(1162);
+            recipe.AddIngredient(ItemID.ChlorophyteBar, 12);
+            recipe.AddIngredient(ItemID.LeafWings);
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

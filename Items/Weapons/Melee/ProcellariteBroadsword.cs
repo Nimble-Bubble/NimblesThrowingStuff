@@ -14,14 +14,14 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 
 		public override void SetDefaults() {
 			item.damage = 340;
-			item.useStyle = 1;
+			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.useAnimation = 7;
 			item.useTime = 21;
 			item.knockBack = 8f;
 			item.width = 90;
 			item.height = 90;
 			item.scale = 1.5f;
-			item.rare = 11;
+			item.rare = ItemRarityID.Purple;
 			item.value = Item.buyPrice(1, 0, 0, 0);
             item.melee = true;
             item.shoot = ModContent.ProjectileType<ProcellariteBroadswordProj>();

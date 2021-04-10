@@ -11,21 +11,26 @@ namespace NimblesThrowingStuff.Projectiles.Magic
     {
         public override void SetDefaults()
         {
-            projectile.width = 16;
-            projectile.height = 16;
+            projectile.width = 30;
+            projectile.height = 30;
             projectile.aiStyle = 29;
             projectile.hostile = false;
             projectile.friendly = true;
             projectile.magic = true;
-            projectile.penetrate = 3;
-            projectile.maxPenetrate = 3;
-            projectile.light = 0.5f;
-            projectile.alpha = 128;
+            projectile.tileCollide = false;
+            projectile.penetrate = 200;
+            projectile.maxPenetrate = 200;
+            projectile.usesLocalNPCImmunity = true;
+            projectile.localNPCHitCooldown = 10;
+            projectile.alpha = 0;
+            projectile.scale = 0.5f;
+            projectile.timeLeft = 255;
         }
         public override void AI()
         {
-            projectile.rotation += 0.5f * (float)projectile.direction;
-                Dust.NewDust(projectile.position, projectile.width, projectile.height, 39, Main.rand.Next(2, 3), Main.rand.Next(2, 3), 0, default(Color), 0.75f);
+            projectile.rotation += 0.05f * (float)projectile.direction;
+            projectile.alpha++;
+            projectile.scale += 0.02f;
         }
         public override void OnHitNPC (NPC target, int damage, float knockback, bool crit)
         {
