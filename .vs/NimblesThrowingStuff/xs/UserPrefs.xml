@@ -1,12 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Items/Weapons/Melee/ProcellariteBroadsword.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="README.md">
     <Files>
       <File FileName="NPCs/Morilus/MorilusMain.cs" Line="52" Column="10" IsPinned="True" />
       <File FileName="Items/Consumables/MorilusTreasureBag.cs" Line="1" Column="1" />
-      <File FileName="Items/Weapons/Melee/ProcellariteBroadsword.cs" Line="19" Column="22" />
+      <File FileName="Items/Weapons/Melee/ProcellariteBroadsword.cs" Line="17" Column="27" />
       <File FileName="Projectiles/Enemy/MorilusBolt.cs" Line="1" Column="1" />
       <File FileName="Projectiles/NimblesGlobalProjectile.cs" Line="77" Column="2" />
       <File FileName="Projectiles/Summoning/AquaBlast.cs" Line="25" Column="13" />
+      <File FileName="README.md" Line="2" Column="58" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -19,9 +20,7 @@
                 <Node name="Tools" expanded="True" />
                 <Node name="Weapons" expanded="True">
                   <Node name="Magic" expanded="True" />
-                  <Node name="Melee" expanded="True">
-                    <Node name="ProcellariteBroadsword.cs" selected="True" />
-                  </Node>
+                  <Node name="Melee" expanded="True" />
                   <Node name="Ranged" expanded="True" />
                   <Node name="Throwing" expanded="True" />
                 </Node>
@@ -37,6 +36,7 @@
                 <Node name="Summoning" expanded="True" />
                 <Node name="Throwing" expanded="True" />
               </Node>
+              <Node name="README.md" selected="True" />
             </Node>
           </Node>
         </State>
