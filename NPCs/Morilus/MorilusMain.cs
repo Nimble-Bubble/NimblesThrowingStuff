@@ -19,6 +19,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
     {
         private Player player;
         private float speed;
+        private int bigStarHealth;
         private bool sleepy;
         public override void SetStaticDefaults()
         {
@@ -60,11 +61,31 @@ namespace NimblesThrowingStuff.NPCs.Morilus
             if (!NPC.AnyNPCs(ModContent.NPCType<SkySeaGuardian>()))
         {
         sleepy = false;
+                bigStarHealth = npc.lifeMax / 4;
             Move(new Vector2(Main.rand.Next(-100, 101), Main.rand.Next(-100, 101)));
             
             Vector2 vector8 = new Vector2(npc.position.X + (npc.width), npc.position.Y + (npc.height / 2));
         
             npc.ai[1]++;
+                if (npc.life <= npc.lifeMax / 20)
+                {
+                    if (npc.ai[1] % 5 == 0)
+                    {
+                        int starRain = Projectile.NewProjectile(npc.position.X + Main.rand.Next(-750, 751), npc.position.Y - 750, Main.rand.Next(-10, 11), Main.rand.Next(5, 11), ProjectileID.FallingStar, 70, 1);
+                        Main.projectile[starRain].friendly = false;
+                        Main.projectile[starRain].hostile = true;
+                        Main.projectile[starRain].timeLeft = 600;
+                        Main.projectile[starRain].tileCollide = false;
+                    }
+                    if (npc.ai[1] % 20 == 0 && Main.expertMode)
+                    {
+                        int bigStar2 = Projectile.NewProjectile(npc.position.X, npc.position.Y, Main.rand.Next(-5, 6), Main.rand.Next(-5, 6), ModContent.ProjectileType<MorilusBigStar>(), 100, 1);
+                    }
+                }
+                if (Main.rand.NextBool(1000) && Main.expertMode)
+                {
+                    int zapOrb = Projectile.NewProjectile(npc.position.X, npc.position.Y, Main.rand.Next(-5, 6), Main.rand.Next(-5, 6), ProjectileID.CultistBossLightningOrb, 90, 1);
+                }    
             if (npc.ai[1] % 60 == 0 && npc.ai[1] <= 120)
                 {
                 float Speed = 8f;
@@ -133,10 +154,10 @@ namespace NimblesThrowingStuff.NPCs.Morilus
                 {
                 float Speed1 = 10f;
                 
-                int damage1 = 90;
+                int damage1 = 70;
                 if (!Main.expertMode)
                 {
-                damage1 = 135;
+                damage1 = 100;
                 }
                 int type1 = ModContent.ProjectileType<MorilusBolt>();
                 Main.PlaySound(2, (int)npc.position.X, (int)npc.position.Y, 11);
@@ -153,7 +174,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
             }
             if (npc.ai[1] >= 320 && npc.ai[1] <= 400)
             {
-                if (npc.ai[1] % 6 == 0)
+                if (npc.ai[1] % 6 == 0 && npc.life >= npc.lifeMax - bigStarHealth)
                 {
                 float Speed2 = 15f;
                 int Damage2 = 80;
@@ -166,6 +187,11 @@ namespace NimblesThrowingStuff.NPCs.Morilus
                 float rotation2 = (float)Math.Atan2(vector8.Y - (player.position.Y + (player.height * 0.5f)), vector8.X - (player.position.X + (player.width * 0.5f)));
                 int num55 = Projectile.NewProjectile(vector8.X, vector8.Y, (float)((Math.Cos(rotation2) * Speed2) * -1), (float)((Math.Sin(rotation2) * Speed2) * -1), Type2, Damage2, 0f, 0);
                 }
+                if (npc.life <= npc.lifeMax - bigStarHealth)
+                    {
+                        int bigStar = Projectile.NewProjectile(npc.position.X, npc.position.Y, Main.rand.Next(-5, 6), Main.rand.Next(-5, 6), ModContent.ProjectileType<MorilusBigStar>(), 100, 1);
+                        npc.ai[1] = 0;
+                    }
                 if (npc.ai[1] >= 380)
                 {    
                 npc.ai[1] = 0;
@@ -188,6 +214,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
             {
             npc.ai[1] = 20;
             }
+  
             }
             npc.takenDamageMultiplier = 1f;
             }
@@ -196,6 +223,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
             npc.takenDamageMultiplier = 0.01f;
             sleepy = true;
             }
+
         }
 
         private void Target()
@@ -299,7 +327,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
                 Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("ProcellariteOre"));
                 break;
                 case 1:
-                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("ProcellariteOre"));
+                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("ProcellariteLongBow"));
                 break;
                 case 2:
                 Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("ProcellariteOre"));
