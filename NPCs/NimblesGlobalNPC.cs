@@ -55,7 +55,14 @@ namespace NimblesThrowingStuff.NPCs
 
 		public override void NPCLoot(NPC npc)
 		{
-            if (npc.type == 222 && Main.rand.NextBool(4) && !Main.expertMode)
+			if (Main.hardMode && !npc.boss && npc.lifeMax > 1 && npc.damage > 0 && !npc.friendly && npc.value > 0f && Main.rand.NextBool(Main.expertMode ? 2 : 1, 5))
+			{
+				if (Main.player[Player.FindClosest(npc.position, npc.width, npc.height)].ZoneSkyHeight)
+				{
+					Item.NewItem(npc.getRect(), ItemType<SoulOfTrite>(), 1);
+				}
+			}
+			if (npc.type == 222 && Main.rand.NextBool(4) && !Main.expertMode)
 			{
 				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<Beemerang>(), 1);
 			}

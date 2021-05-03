@@ -10,6 +10,7 @@ using Terraria.ModLoader;
 using NimblesThrowingStuff.NPCs.Morilus;
 using NimblesThrowingStuff.Items.Accessories;
 using NimblesThrowingStuff.Items.Placeables.Blocks;
+using NimblesThrowingStuff.Items.Vanity;
 
 namespace NimblesThrowingStuff.Items.Consumables
 {
@@ -35,12 +36,16 @@ namespace NimblesThrowingStuff.Items.Consumables
         {
             return true;
         }
-        public override void RightClick(Player player)
+        public override void OpenBossBag(Player player)
         {
             player.TryGettingDevArmor();
             player.QuickSpawnItem(ItemID.GoldCoin, Main.rand.Next(50, 76));
             player.QuickSpawnItem(ModContent.ItemType<CarpatusDefender>());
             player.QuickSpawnItem(ModContent.ItemType<ProcellariteOre>(), Main.rand.Next(40, 61));
+            if (Main.rand.NextBool(7))
+            {
+                player.QuickSpawnItem(ModContent.ItemType<MorilusMask>());
+            }
         }
     }
 }

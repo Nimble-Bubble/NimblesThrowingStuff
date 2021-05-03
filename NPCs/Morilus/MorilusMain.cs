@@ -11,6 +11,7 @@ using Microsoft.Xna.Framework.Graphics;
 using NimblesThrowingStuff.NPCs.Morilus;
 using NimblesThrowingStuff.Projectiles.Enemy;
 using NimblesThrowingStuff.Items.Consumables;
+using NimblesThrowingStuff.Items.Vanity;
 
 namespace NimblesThrowingStuff.NPCs.Morilus
 {
@@ -320,6 +321,10 @@ namespace NimblesThrowingStuff.NPCs.Morilus
             }
             else
             {
+            if (Main.rand.NextBool(7))
+                {
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("MorilusMask"));
+                }
                 int MorileLoot = Main.rand.Next(5);
             switch (MorileLoot)
             {
@@ -339,7 +344,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
                 Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("ProcellariteOre"));
                 break;
             }
-                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.LunarBar, Main.rand.Next(15, 24));
+                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("SoulOfTrite"), Main.rand.Next(15, 24));
             }
         }
         public override void BossLoot(ref string name, ref int potionType)

@@ -27,7 +27,15 @@ namespace NimblesThrowingStuff.NPCs.Morilus
 			npc.DeathSound = SoundID.NPCDeath3;
 			npc.knockBackResist = 0.5f;
         }
-        public override void FindFrame(int frameHeight)
+		public override float SpawnChance(NPCSpawnInfo spawnInfo)
+		{
+			if (NPC.downedMoonlord && spawnInfo.player.ZoneSkyHeight)
+			{
+				return 0.35f;
+			}
+			return 0f;
+		}
+		public override void FindFrame(int frameHeight)
         {
             npc.frameCounter++;
 

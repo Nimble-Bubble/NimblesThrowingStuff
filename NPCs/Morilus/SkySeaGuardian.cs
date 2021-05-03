@@ -7,12 +7,12 @@ using Terraria.ModLoader;
 
 namespace NimblesThrowingStuff.NPCs.Morilus
 {
+    [AutoloadBossHead]
     public class SkySeaGuardian : ModNPC
     {
-
         public override void SetStaticDefaults()
         {
-            Main.npcFrameCount[npc.type] = 1;
+            Main.npcFrameCount[npc.type] = 6;
         }
         public override void SetDefaults()
         {
@@ -27,6 +27,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
             npc.knockBackResist = 0f;
             npc.aiStyle = 23;
             aiType = 84;
+            animationType = 84;
             npc.boss = true;
             music = MusicID.Boss4;
         }

@@ -2,6 +2,7 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
 using NimblesThrowingStuff.NPCs.Morilus;
+using NimblesThrowingStuff.Items.Materials;
 using System.Collections.Generic;
 
 namespace NimblesThrowingStuff.Items.Consumables
@@ -51,6 +52,7 @@ namespace NimblesThrowingStuff.Items.Consumables
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.LunarBar, 10);
+			recipe.AddIngredient(ModContent.ItemType<SoulOfTrite>(), 6);
 			recipe.AddIngredient(575, 6);
             recipe.AddIngredient(824, 250);
 			recipe.AddTile(TileID.LunarCraftingStation);
