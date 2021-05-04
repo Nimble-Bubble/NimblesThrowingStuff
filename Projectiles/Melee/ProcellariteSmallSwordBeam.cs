@@ -9,12 +9,12 @@ using Terraria.Enums;
 
 namespace NimblesThrowingStuff.Projectiles.Melee
 {
-	public class ProcellariteBroadswordProj: ModProjectile
+	public class ProcellariteSmallSwordBeam: ModProjectile
     {
         public override void SetDefaults()
         {
-            projectile.width = 38;
-            projectile.height = 38;
+            projectile.width = 18;
+            projectile.height = 18;
             projectile.usesLocalNPCImmunity = true;
             projectile.localNPCHitCooldown = 10;
             projectile.tileCollide = false;
@@ -24,7 +24,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             projectile.light = 0.5f;
             projectile.alpha = 0;
             projectile.aiStyle = 1;
-            projectile.timeLeft = 30;
+            projectile.timeLeft = 600;
             projectile.extraUpdates = 1;
         }
         public override void AI() 
@@ -37,7 +37,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
         }
         public override void PostDraw(SpriteBatch spriteBatch, Color lightColor)
 		{
-			Texture2D texture = mod.GetTexture("Projectiles/Melee/ProcellariteBroadswordProj_Glow");
+			Texture2D texture = mod.GetTexture("Projectiles/Melee/ProcellariteSmallSwordBeam_Glow");
 			spriteBatch.Draw
 			(
 				texture,
@@ -58,17 +58,6 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                 Dust.NewDust(new Vector2(projectile.position.X, projectile.position.Y), projectile.width, projectile.height, 174,
                             projectile.velocity.X * 0.1f, projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
             }
-        }
-        public override void Kill(int timeLeft)
-        {
-            for (int furbroaddust = 0; furbroaddust < 10; furbroaddust++)
-            {
-                Dust.NewDust(new Vector2(projectile.position.X, projectile.position.Y), projectile.width, projectile.height, 174,
-                            projectile.velocity.X * 0.1f, projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
-            }
-            int smallprobeam1 = Projectile.NewProjectile(projectile.position, projectile.velocity, ModContent.ProjectileType<ProcellariteSmallSwordBeam>(), projectile.damage / 2, projectile.knockBack, projectile.owner);
-            int smallprobeam2 = Projectile.NewProjectile(projectile.position, projectile.velocity.RotatedBy(MathHelper.ToRadians(10)), ModContent.ProjectileType<ProcellariteSmallSwordBeam>(), projectile.damage / 2, projectile.knockBack, projectile.owner);
-            int smallprobeam3 = Projectile.NewProjectile(projectile.position, projectile.velocity.RotatedBy(MathHelper.ToRadians(350)), ModContent.ProjectileType<ProcellariteSmallSwordBeam>(), projectile.damage / 2, projectile.knockBack, projectile.owner);
         }
     }
 }

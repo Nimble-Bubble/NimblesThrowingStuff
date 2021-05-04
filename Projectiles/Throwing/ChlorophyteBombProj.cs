@@ -33,6 +33,11 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 				int smokeIndex = Dust.NewDust(new Vector2(projectile.position.X, projectile.position.Y), projectile.width * 2, projectile.height * 2, 31, 0f, 0f, 100, default(Color), 2f);
 				Main.dust[smokeIndex].velocity *= 1.4f;
 			}
+            for (int f = 0; f < 40; f++)
+            {
+                int fireIndex = Dust.NewDust(new Vector2(projectile.position.X, projectile.position.Y), projectile.width * 2, projectile.height * 2, 128, 0f, 0f, 100, default(Color), 3f);
+                Main.dust[fireIndex].velocity *= 4f;
+            }
             Main.PlaySound(2, (int) projectile.position.X, (int) projectile.position.Y, 14, 1f, 0.0f);
                     var num = Main.rand.Next(8, 13);
                     for (var index = 0; index < num; ++index)

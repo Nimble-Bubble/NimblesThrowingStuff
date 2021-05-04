@@ -1,28 +1,43 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="README.md">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Items/Weapons/Throwing/ChlorophyteChakram.cs">
     <Files>
-      <File FileName="NPCs/Morilus/MorilusMain.cs" Line="52" Column="10" IsPinned="True" />
-      <File FileName="Items/Consumables/MorilusTreasureBag.cs" Line="1" Column="1" />
-      <File FileName="Items/Weapons/Melee/ProcellariteBroadsword.cs" Line="17" Column="27" />
-      <File FileName="Projectiles/Enemy/MorilusBolt.cs" Line="1" Column="1" />
+      <File FileName="NPCs/Morilus/MorilusMain.cs" Line="257" Column="21" IsPinned="True" />
+      <File FileName="Items/Weapons/Melee/ProcellariteBroadsword.cs" Line="21" Column="20" />
       <File FileName="Projectiles/NimblesGlobalProjectile.cs" Line="77" Column="2" />
       <File FileName="Projectiles/Summoning/AquaBlast.cs" Line="25" Column="13" />
-      <File FileName="README.md" Line="2" Column="58" />
+      <File FileName="Projectiles/Melee/SkyseaSpinnerProj.cs" Line="51" Column="111" />
+      <File FileName="Projectiles/Melee/ProcellariteSpikeProj.cs" Line="72" Column="83" />
+      <File FileName="Items/Weapons/Magic/RazorBolt.cs" Line="17" Column="20" />
+      <File FileName="Projectiles/Magic/RazorboltProj.cs" Line="51" Column="14" />
+      <File FileName="Projectiles/Melee/ProcellariteBroadswordProj.cs" Line="71" Column="77" />
+      <File FileName="Projectiles/Enemy/MorilusBigStar.cs" Line="41" Column="65" />
+      <File FileName="Items/Weapons/Melee/ProcellariteBroadsword.cs" Line="18" Column="26" />
+      <File FileName="Projectiles/Throwing/TrueNightPiercerProj.cs" Line="13" Column="24" />
+      <File FileName="Projectiles/Throwing/ChlorophyteBombProj.cs" Line="38" Column="153" />
+      <File FileName="Projectiles/Throwing/LacusDecapitatorProj.cs" Line="49" Column="18" />
+      <File FileName="Items/Weapons/Throwing/ChlorophyteChakram.cs" Line="26" Column="42" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="NimblesThrowingStuff" expanded="True">
             <Node name="NimblesThrowingStuff" expanded="True">
+              <Node name="Buffs" expanded="True" />
               <Node name="Items" expanded="True">
                 <Node name="Accessories" expanded="True" />
+                <Node name="Armor" expanded="True" />
                 <Node name="Consumables" expanded="True" />
+                <Node name="Materials" expanded="True" />
                 <Node name="Tools" expanded="True" />
+                <Node name="Vanity" expanded="True" />
                 <Node name="Weapons" expanded="True">
                   <Node name="Magic" expanded="True" />
                   <Node name="Melee" expanded="True" />
                   <Node name="Ranged" expanded="True" />
-                  <Node name="Throwing" expanded="True" />
+                  <Node name="Summoning" expanded="True" />
+                  <Node name="Throwing" expanded="True">
+                    <Node name="ChlorophyteChakram.cs" selected="True" />
+                  </Node>
                 </Node>
               </Node>
               <Node name="NPCs" expanded="True">
@@ -36,7 +51,6 @@
                 <Node name="Summoning" expanded="True" />
                 <Node name="Throwing" expanded="True" />
               </Node>
-              <Node name="README.md" selected="True" />
             </Node>
           </Node>
         </State>

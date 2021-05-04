@@ -217,11 +217,11 @@ namespace NimblesThrowingStuff.NPCs.Morilus
             }
   
             }
-            npc.takenDamageMultiplier = 1f;
+            npc.dontTakeDamage = false;
             }
             else
             {
-            npc.takenDamageMultiplier = 0.01f;
+            npc.dontTakeDamage = true;
             sleepy = true;
             }
 
@@ -254,10 +254,12 @@ namespace NimblesThrowingStuff.NPCs.Morilus
             if (!NPC.AnyNPCs(ModContent.NPCType<SkySeaGuardian>()))
             {
                 speed = 8f - (npc.life / bwingawee);
+                npc.defense = 80;
             }
             else
             {
                 speed = 1f;
+                npc.defense = 1000;
             }
             Vector2 moveTo = player.Center;
             Vector2 move = moveTo - npc.Center;
@@ -285,7 +287,6 @@ namespace NimblesThrowingStuff.NPCs.Morilus
         {
             npc.lifeMax = (int)(npc.lifeMax * 0.75f * bossLifeScale);
             npc.damage = 220;
-            npc.defense = (int)(npc.defense);
         }
         public override void FindFrame(int frameHeight)
         {
@@ -329,19 +330,19 @@ namespace NimblesThrowingStuff.NPCs.Morilus
             switch (MorileLoot)
             {
                 case 0:
-                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("ProcellariteOre"));
+                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("SkyseaSpinner"));
                 break;
                 case 1:
-                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("ProcellariteLongBow"));
+                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("ProcellariteLongbow"));
                 break;
                 case 2:
-                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("ProcellariteOre"));
+                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("GuardianStaff"));
                 break;
                 case 3:
                 Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("ProcellariteOre"));
                 break;
                 case 4:
-                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("ProcellariteOre"));
+                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("LacusDecapitator"));
                 break;
             }
                 Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("SoulOfTrite"), Main.rand.Next(15, 24));
