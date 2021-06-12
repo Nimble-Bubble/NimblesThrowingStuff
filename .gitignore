@@ -71,3 +71,13 @@ obj/Debug/net45/NimblesThrowingStuff.assets.cache
 obj/Debug/net45/NimblesThrowingStuff.csprojAssemblyReference.cache
 .vs/NimblesThrowingStuff/xs/UserPrefs.xml
 .vs/NimblesThrowingStuff/xs/project-cache/NimblesThrowingStuff-Debug.json
+*.xml
+*.cache
+*.props
+.vs/NimblesThrowingStuff/xs/UserPrefs.xml
+obj/Debug/net45/NimblesThrowingStuff.assets.cache
+obj/NimblesThrowingStuff.csproj.nuget.dgspec.json
+obj/Debug/net45/NimblesThrowingStuff.csprojAssemblyReference.cache
+obj/NimblesThrowingStuff.csproj.nuget.g.props
+obj/project.assets.json
+obj/project.nuget.cache

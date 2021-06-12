@@ -22,7 +22,7 @@ namespace NimblesThrowingStuff.Tiles.Blocks
             ModTranslation name = CreateMapEntryName();
             name.SetDefault("Procellarite Ore");
             AddMapEntry(new Color(0, 200, 185), name);
-            mineResist = 10f;
+            mineResist = 8f;
             minPick = 225;
             dustType = 43;
             soundType = 21;

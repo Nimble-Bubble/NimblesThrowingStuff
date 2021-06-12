@@ -1,5 +1,6 @@
 using NimblesThrowingStuff.Items.Accessories;
 using NimblesThrowingStuff.Items.Weapons.Throwing;
+using NimblesThrowingStuff.Projectiles.Ranged;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
@@ -10,6 +11,13 @@ namespace NimblesThrowingStuff.Items
 {
     public class NimblesGlobalItem : GlobalItem
     {
+        public override bool InstancePerEntity
+        {
+            get
+            {
+                return true;
+            }
+        }
         public override void SetDefaults(Item item) //no longer virtual
         {
             if (item.type == ItemID.ObsidianHelm)
@@ -25,6 +33,23 @@ namespace NimblesThrowingStuff.Items
              item.defense = 5; 
             }
 		}
+        public override bool CanRightClick(Item item)
+        {
+            if (item.ranged && Main.player[item.owner].GetModPlayer<NimblesPlayer>().rangeMisfire)
+            {
+                return true;
+            }
+            return base.CanRightClick(item);
+        }
+        public override bool Shoot(Item item, Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
+        {
+            if (item.ranged && Main.player[item.owner].GetModPlayer<NimblesPlayer>().rangeMisfire && Main.mouseRight)
+            {
+                Projectile.NewProjectile(position.X, position.Y, speedX, speedY, ModContent.ProjectileType<MisfireProj>(), damage *= 2, knockBack *= 2, Main.myPlayer, 0f);
+            return false;
+        }
+            return base.Shoot(item, player, ref position, ref speedX, ref speedY, ref type, ref damage, ref knockBack);
+        }
         public override void OpenVanillaBag(string context, Player player, int arg)
         {
             if (context == "bossBag") 
