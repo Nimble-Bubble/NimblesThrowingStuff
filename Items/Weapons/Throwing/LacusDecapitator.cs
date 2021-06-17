@@ -11,7 +11,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 
 		public override void SetDefaults() 
 		{
-			item.damage = 317;
+			item.damage = 280;
 			item.thrown = true;
 			item.width = 24;
 			item.height = 24;
