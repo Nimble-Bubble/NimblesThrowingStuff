@@ -23,8 +23,12 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             projectile.thrown = true;
             projectile.light = 0.5f;
             projectile.aiStyle = 27;
-            aiType = 173;
             projectile.timeLeft = 600;
+        }
+        public override void AI()
+        {
+            projectile.rotation = projectile.velocity.ToRotation() + MathHelper.ToRadians(45);
+            Dust.NewDust(new Vector2(projectile.position.X, projectile.position.Y), projectile.width, projectile.height, 6, projectile.velocity.X * 0.1f, projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
         }
         public override void OnHitNPC (NPC target, int damage, float knockback, bool crit)
         {

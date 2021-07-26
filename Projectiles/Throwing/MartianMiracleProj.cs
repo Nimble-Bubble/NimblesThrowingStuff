@@ -30,9 +30,12 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
         }
         public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
         {
+            if (Main.rand.NextBool(3))
+            {
                 Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y - 500, 0, 30,
-                            mod.ProjectileType("MartianEcho"), projectile.damage / 2, 5f, projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
-                target.AddBuff(144, 720);
+                            ModContent.ProjectileType<MartianEcho>(), projectile.damage / 2, 5f, projectile.owner, 0.0f, (float)Main.rand.Next(-45, 1));
+                target.AddBuff(144, 240);
+            }
         }
         public override bool OnTileCollide(Vector2 oldVelocity) {
 			projectile.penetrate--;
