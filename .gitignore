@@ -90,3 +90,8 @@ obj/NimblesThrowingStuff.csproj.nuget.g.props
 obj/project.assets.json
 .vs/NimblesThrowingStuff/xs/project-cache/NimblesThrowingStuff-Debug.json
 .vs/*
+obj/Debug/net45/NimblesThrowingStuff.assets.cache
+obj/NimblesThrowingStuff.csproj.nuget.dgspec.json
+obj/NimblesThrowingStuff.csproj.nuget.g.props
+obj/project.assets.json
+obj/project.nuget.cache

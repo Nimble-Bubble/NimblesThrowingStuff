@@ -26,6 +26,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
             item.melee = true;
             item.shoot = ModContent.ProjectileType<ProcellariteBroadswordProj>();
             item.shootSpeed = 11f;
+			item.autoReuse = true;
 			item.UseSound = SoundID.Item1;
 		}
         public override void MeleeEffects(Player player, Rectangle hitbox) 
