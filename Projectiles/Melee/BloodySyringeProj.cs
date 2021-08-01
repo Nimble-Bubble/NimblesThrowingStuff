@@ -9,7 +9,7 @@ using Terraria.Enums;
 
 namespace NimblesThrowingStuff.Projectiles.Melee
 {
-	public class DemonLanceProj: ModProjectile
+	public class BloodySyringeProj: ModProjectile
     {
         public override void SetDefaults()
         {
