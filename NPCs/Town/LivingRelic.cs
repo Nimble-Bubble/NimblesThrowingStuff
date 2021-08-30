@@ -183,16 +183,30 @@ namespace NimblesThrowingStuff.NPCs.Town
             }
             else if (Main.LocalPlayer.ZoneSnow)
             {
-                if (Main.rand.Next(5) == 0)
+                if (Main.rand.NextBool(10))
                 {
-                    return "As a cold-blooded beast, I hate this.";
+                    return "I mean, it's cool to be cool and all that, but I'm just not the biggest fan of this place.";
+                }
+            }
+            else if (Main.LocalPlayer.ZoneJungle)
+            {
+                if (Main.rand.NextBool(20))
+                {
+                    if (!NPC.downedQueenBee)
+                    {
+                        return "Why are the bees here so big?";
+                    }
+                    else
+                    {
+                        return "It's nice out here. My only complaint is that the plants all go away every few days because some guy with a pickaxe goes on a bug-catching spree.";
+                    }
                 }
             }
             else if (Main.raining && Main.rand.Next(5) == 0 && npc.position.Y / 16 <= Main.worldSurface)
             {
                 return "Were fishes always able to do that?";
             }
-            if (Main.rand.Next(6) == 0)
+            if (Main.rand.NextBool(15))
             {
                 if (npc.homeless)
                 {
@@ -200,21 +214,23 @@ namespace NimblesThrowingStuff.NPCs.Town
                 }
                 else
                 {
-                    return "Thanks for the house.";
+                    return "I'm not exactly sure where I'm going to put all these weapons.";
                 }
             }
-            switch (Main.rand.Next(5))
+            switch (Main.rand.Next(6))
             {
                 case 1:
-                    return "Are you sure that what you're doing is right?";
+                    return "I have heard that your kind asks many questions with itself.";
                 case 2:
-                    return "I've heard that my weapons came back to the ranged class. Is this true?";
+                    return "You humans dress up as other furry creatures, correct? Oh, it's not just mammals?";
                 case 3:
                     return "People think my kind is extinct. I guess they haven't looked far enough yet.";
                 case 4:
-                    return "If you're seeing me, then you've gone past the point of no return.";
+                    return "What's a see 'em cozyman?";
+                case 5:
+                    return "Sometimes, I wish I had wings.";
                 default:
-                    return "I saw someone defeat the Moon Lord with my comparatively weak weapons. Anything is possible, apparently...";
+                    return "This armor's really nice. I wonder what it's made out of.";
             }
         }
 

@@ -32,5 +32,20 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
             item.shootSpeed = 11f;
 			item.UseSound = SoundID.Item1;
 		}
+		public override void AddRecipes()
+		{
+			var recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemID.CrimtaneBar, 10);
+			recipe.AddIngredient(ItemID.GoldShortsword);
+			recipe.AddTile(TileID.Anvils);
+			recipe.SetResult(this);
+			recipe.AddRecipe();
+			recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemID.CrimtaneBar, 10);
+			recipe.AddIngredient(ItemID.PlatinumShortsword);
+			recipe.AddTile(TileID.Anvils);
+			recipe.SetResult(this);
+			recipe.AddRecipe();
+		}
 	}
 }

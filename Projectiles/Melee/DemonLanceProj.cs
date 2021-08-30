@@ -68,5 +68,24 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             projectile.rotation = (float)(Math.Atan2((float)projectile.velocity.Y, (float)projectile.velocity.X) + 1.57000005245209);
             Main.player[projectile.owner].itemRotation = Main.player[projectile.owner].direction != 1 ? (float)Math.Atan2(projectile.velocity.Y * (float)projectile.direction, projectile.velocity.X * (float)projectile.direction) : (float)Math.Atan2(projectile.velocity.Y * (float)projectile.direction, projectile.velocity.X * (float)projectile.direction);
         }
+        //public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
+        //{
+            //if (Main.player[projectile.owner].velocity.X < 0)
+            //{
+            //    damage -= (int)Main.player[projectile.owner].velocity.X;
+            //}
+            //else
+            //{
+            //    damage += (int)Main.player[projectile.owner].velocity.X;
+            //}
+            //if (Main.player[projectile.owner].velocity.Y < 0)
+            //{
+            //    damage -= (int)Main.player[projectile.owner].velocity.Y;
+            //}
+            //else
+            //{
+            //    damage += (int)Main.player[projectile.owner].velocity.Y;
+            //}
+        //}
     }
 }

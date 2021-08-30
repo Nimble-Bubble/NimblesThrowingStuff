@@ -9,7 +9,7 @@ namespace NimblesThrowingStuff.Items.Materials
 	{
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("The essense of what lies above");
+            Tooltip.SetDefault("The essence of what lies above");
 			Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(5, 4));
 			ItemID.Sets.AnimatesAsSoul[item.type] = true;
 			ItemID.Sets.ItemIconPulse[item.type] = true;
