@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Terraria;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ID;
 using Microsoft.Xna.Framework;
@@ -12,6 +13,7 @@ using NimblesThrowingStuff.NPCs.Morilus;
 using NimblesThrowingStuff.Projectiles.Enemy;
 using NimblesThrowingStuff.Items.Consumables;
 using NimblesThrowingStuff.Items.Vanity;
+using NimblesThrowingStuff.Tiles.Blocks;
 
 namespace NimblesThrowingStuff.NPCs.Morilus
 {
@@ -316,6 +318,15 @@ namespace NimblesThrowingStuff.NPCs.Morilus
         }
         public override void NPCLoot()
         {
+            if (!NimblesWorld.downedMorilus)
+            {
+                Utilities.SpawnOre(ModContent.TileType<ProcellariteOreTile>(), 15E-05, .8f, .999f);
+                NimblesWorld.downedMorilus = true;
+                if (Main.netMode == NetmodeID.SinglePlayer)
+                    Main.NewText("The underworld glows with the energy of a storm...", new Color(0, 171, 171));
+                else if (Main.netMode == NetmodeID.Server)
+                    NetMessage.BroadcastChatMessage(NetworkText.FromKey("The underworld glows with the energy of a storm..."), new Color(0, 171, 171));
+            }
             if(Main.expertMode)
             {
                 npc.DropBossBags();

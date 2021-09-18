@@ -45,7 +45,14 @@ namespace NimblesThrowingStuff.Items
         {
             if (item.ranged && Main.player[item.owner].GetModPlayer<NimblesPlayer>().rangeMisfire && Main.mouseRight)
             {
-                Projectile.NewProjectile(position.X, position.Y, speedX, speedY, ModContent.ProjectileType<MisfireProj>(), damage *= 2, knockBack *= 2, Main.myPlayer, 0f);
+                if (Main.player[item.owner].statMana > 100)
+                {
+                    Projectile.NewProjectile(position.X, position.Y, speedX, speedY, ModContent.ProjectileType<MisfireProj>(), damage *= 2, knockBack *= 2, Main.myPlayer, 0f);
+                }
+                else
+                {
+                    Gore.NewGore(position, new Vector2 (speedX, speedY), Main.rand.Next(11, 14), 1f);
+                }
             return false;
         }
             return base.Shoot(item, player, ref position, ref speedX, ref speedY, ref type, ref damage, ref knockBack);
