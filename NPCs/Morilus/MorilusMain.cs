@@ -350,7 +350,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
                 Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("GuardianStaff"));
                 break;
                 case 3:
-                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("ProcellariteOre"));
+                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("StormShot"));
                 break;
                 case 4:
                 Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("LacusDecapitator"));

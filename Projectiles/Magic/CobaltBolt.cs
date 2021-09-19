@@ -21,12 +21,13 @@ namespace NimblesThrowingStuff.Projectiles.Magic
             projectile.maxPenetrate = 1;
             projectile.light = 0.5f;
             projectile.timeLeft = 300;
+            projectile.tileCollide = false;
         }
         public override void AI()
         {
             projectile.velocity.X *= 1.02f;
             projectile.velocity.Y *= 1.02f;
-            projectile.rotation = projectile.velocity.ToRotation() +MathHelper.ToRadians(90f);
+            projectile.rotation = projectile.velocity.ToRotation() + MathHelper.ToRadians(90f);
             if (Main.rand.NextBool(5))
             {
                 Dust.NewDust(projectile.position, projectile.width, projectile.height, 48, (float)projectile.velocity.X / 5, (float)projectile.velocity.Y / 5, 0, default(Color), 0.75f);

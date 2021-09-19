@@ -11,6 +11,11 @@ using NimblesThrowingStuff.NPCs.Morilus;
 using NimblesThrowingStuff.Items.Accessories;
 using NimblesThrowingStuff.Items.Placeables.Blocks;
 using NimblesThrowingStuff.Items.Vanity;
+using NimblesThrowingStuff.Items.Weapons.Melee;
+using NimblesThrowingStuff.Items.Weapons.Ranged;
+using NimblesThrowingStuff.Items.Weapons.Magic;
+using NimblesThrowingStuff.Items.Weapons.Summoning;
+using NimblesThrowingStuff.Items.Weapons.Throwing;
 
 namespace NimblesThrowingStuff.Items.Consumables
 {
@@ -42,6 +47,25 @@ namespace NimblesThrowingStuff.Items.Consumables
             player.QuickSpawnItem(ItemID.GoldCoin, Main.rand.Next(50, 76));
             player.QuickSpawnItem(ModContent.ItemType<CarpatusDefender>());
             player.QuickSpawnItem(ModContent.ItemType<ProcellariteOre>(), Main.rand.Next(40, 61));
+            int MorileTreasure = Main.rand.Next(5);
+            switch (MorileTreasure)
+            {
+                case 0:
+                    player.QuickSpawnItem(ModContent.ItemType<SkyseaSpinner>());
+                    break;
+                case 1:
+                    player.QuickSpawnItem(ModContent.ItemType<ProcellariteLongbow>());
+                    break;
+                case 2:
+                    player.QuickSpawnItem(ModContent.ItemType<GuardianStaff>());
+                    break;
+                case 3:
+                    player.QuickSpawnItem(ModContent.ItemType<StormShot>());
+                    break;
+                case 4:
+                    player.QuickSpawnItem(ModContent.ItemType<LacusDecapitator>());
+                    break;
+            }
             if (Main.rand.NextBool(7))
             {
                 player.QuickSpawnItem(ModContent.ItemType<MorilusMask>());
