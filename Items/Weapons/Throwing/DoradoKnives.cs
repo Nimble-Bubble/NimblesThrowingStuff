@@ -9,7 +9,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 	{
         public override void SetStaticDefaults()
         {
-         Tooltip.SetDefault("Not very good at cutting food.");   
+			DisplayName.SetDefault("Dragon's Fangs");
+         Tooltip.SetDefault("Cleave and claw through the toughest hide.");   
         }
 
 		public override void SetDefaults() 
