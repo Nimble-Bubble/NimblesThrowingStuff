@@ -8,7 +8,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 	{
         public override void SetStaticDefaults()
         {
-        DisplayName.SetDefault("Dragon's Chips");
+        DisplayName.SetDefault("Dragon's Grenade");
          Tooltip.SetDefault("Explodes into a storm of draconic shrapnel");   
         }
 

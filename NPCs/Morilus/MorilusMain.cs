@@ -33,7 +33,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
 
         public override void SetDefaults()
         {
-            npc.lifeMax = 300000;
+            npc.lifeMax = 250000;
             npc.damage = 140;
             npc.defense = 80;
             npc.knockBackResist = 0f;
@@ -67,7 +67,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
                 bigStarHealth = npc.lifeMax / 4;
             Move(new Vector2(Main.rand.Next(-100, 101), Main.rand.Next(-100, 101)));
             
-            Vector2 vector8 = new Vector2(npc.position.X + (npc.width), npc.position.Y + (npc.height / 2));
+            Vector2 vector8 = new Vector2(npc.position.X + (npc.width / 2), npc.position.Y + (npc.height / 2));
         
             npc.ai[1]++;
                 if (npc.life <= npc.lifeMax / 20)
@@ -318,6 +318,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
         }
         public override void NPCLoot()
         {
+            Gore.NewGore(npc.position, npc.velocity, mod.GetGoreSlot("Gores/MorilusGore1"), 1f);
             if (!NimblesWorld.downedMorilus)
             {
                 Utilities.SpawnOre(ModContent.TileType<ProcellariteOreTile>(), 15E-05, .8f, .999f);
