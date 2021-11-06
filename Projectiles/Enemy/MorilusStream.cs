@@ -25,6 +25,7 @@ namespace NimblesThrowingStuff.Projectiles.Enemy
             projectile.light = 1f;
             projectile.alpha = 255;
             aiType = 22;
+            projectile.timeLeft = 300;
         }
     }
 }
