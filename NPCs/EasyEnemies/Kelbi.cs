@@ -50,11 +50,11 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
         }
 		public override void NPCLoot()
 		{
-            Gore.NewGore(npc.position, npc.velocity, mod.GetGoreSlot("Gores/KelbiHead"), 1f);
-            for (int index = 0; index < 4; index++)
-            {
-                int Kelbileg = Gore.NewGore(npc.position, npc.velocity, mod.GetGoreSlot("Gores/KelbiLeg"), 1f);
-            }
+            //Gore.NewGore(npc.position, npc.velocity, mod.GetGoreSlot("Gores/KelbiHead"), 1f);
+            //for (int index = 0; index < 4; index++)
+            //{
+                //int Kelbileg = Gore.NewGore(npc.position, npc.velocity, mod.GetGoreSlot("Gores/KelbiLeg"), 1f);
+            //}
             Item.NewItem(npc.getRect(), mod.ItemType("BeastBone"), Main.rand.Next(3));
         }
 	}
