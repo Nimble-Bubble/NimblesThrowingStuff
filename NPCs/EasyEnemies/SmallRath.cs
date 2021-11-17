@@ -18,6 +18,7 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
     {
         private Player player;
         private float speed;
+        private int bararata;
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Small Rathwyvern");
@@ -37,8 +38,8 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
             npc.onFire = false;
             npc.noGravity = true;
             npc.aiStyle = -1;
-            npc.HitSound = SoundID.NPCHit1;
-            npc.DeathSound = SoundID.NPCDeath1;
+            npc.HitSound = mod.GetLegacySoundSlot(SoundType.NPCHit, "Sounds/NPCHit/SmallRathHurt");
+            npc.DeathSound = mod.GetLegacySoundSlot(SoundType.NPCKilled, "Sounds/NPCKilled/SmallRathKill");
             npc.buffImmune[31] = true;
             npc.scale = 1.1f;
             banner = npc.type;
@@ -61,9 +62,19 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
                 float Speed = 8f;
                 int damage = 25;
                 int type = ModContent.ProjectileType<RathFireball>();
-                Main.PlaySound(mod.GetSoundSlot(SoundType.Custom, "Sounds/Custom/SmallRathFire"), (int)npc.position.X, (int)npc.position.Y);
+                Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/SmallRathFire"));    
                 float rotation = (float)Math.Atan2(vector8.Y - (player.position.Y + (player.height * 0.5f)), vector8.X - (player.position.X + (player.width * 0.5f)));
-                int num54 = Projectile.NewProjectile(vector8.X, vector8.Y, (float)((Math.Cos(rotation) * Speed) * -1), (float)((Math.Sin(rotation) * Speed) * -1), type, damage, 0f, 0);
+
+                if (npc.velocity.X > 0)
+                {
+                    bararata = 18;
+                    int num54 = Projectile.NewProjectile(vector8.X + bararata, vector8.Y, (float)((Math.Cos(rotation) * Speed) * -1), (float)((Math.Sin(rotation) * Speed) * -1), type, damage, 0f, 0);
+                }
+                else
+                {
+                    bararata = -18;
+                    int num54 = Projectile.NewProjectile(vector8.X + bararata, vector8.Y, (float)((Math.Cos(rotation) * Speed) * -1), (float)((Math.Sin(rotation) * Speed) * -1), type, damage, 0f, 0);
+                }
                 }
             if (npc.ai[1] >= 240)
             {
@@ -72,9 +83,14 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
             npc.rotation = npc.velocity.X * 0.05f;
             
         }
+        public override bool PreDraw(SpriteBatch spriteBatch, Color drawColor)
+        {
+            //SpriteEffects effects = npc.spriteDirection > 0 ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
+            return true;
+        }
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            return SpawnCondition.Underworld.Chance * 0.5f;
+            return SpawnCondition.Underworld.Chance * 0.375f;
         }
         private void Target()
         {
@@ -115,6 +131,14 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
                 move *= speed / magnitude;
             }
             npc.velocity = move;
+            if (npc.velocity.X > 0)
+            {
+                npc.direction = 1;
+            }
+            else
+            {
+                npc.direction = -1;
+            }
             
         }
         private float Magnitude(Vector2 mag)

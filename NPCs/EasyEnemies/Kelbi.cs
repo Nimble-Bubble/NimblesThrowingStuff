@@ -21,9 +21,9 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
 			npc.width = 72;
 			npc.height = 72;
 			npc.aiStyle = 41;
-			npc.damage = 10;
+			npc.damage = 8;
 			npc.defense = 2;
-			npc.lifeMax = 35;
+			npc.lifeMax = 25;
 			npc.HitSound = SoundID.NPCHit1;
 			npc.DeathSound = SoundID.NPCDeath1;
 			npc.knockBackResist = 0.5f;
@@ -46,7 +46,7 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
         }
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            return SpawnCondition.OverworldDaySlime.Chance * 0.75f;
+            return SpawnCondition.OverworldDaySlime.Chance * 0.5f;
         }
 		public override void NPCLoot()
 		{

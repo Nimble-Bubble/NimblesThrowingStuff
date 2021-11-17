@@ -23,7 +23,9 @@ namespace NimblesThrowingStuff
         {
             Properties = new ModProperties()
             {
-                Autoload = true
+                Autoload = true,
+                AutoloadSounds = true,
+                AutoloadGores = true
             };
         }
         public override void Load()

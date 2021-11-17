@@ -25,5 +25,9 @@ namespace NimblesThrowingStuff.Projectiles.Enemy
             projectile.light = 1f;
             projectile.timeLeft = 300;
         }
+        public override void OnHitPlayer(Player target, int damage, bool crit)
+        {
+            target.AddBuff(BuffID.OnFire, 300);
+        }
     }
 }
