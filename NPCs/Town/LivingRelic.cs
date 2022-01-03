@@ -202,6 +202,17 @@ namespace NimblesThrowingStuff.NPCs.Town
                     }
                 }
             }
+            else if (Main.LocalPlayer.ZoneBeach)
+            {
+                if (Main.rand.NextBool(10))
+                {
+                    return "What's this shellstone stuff made of, anyway?";
+                }
+                else if (Main.hardMode && Main.rand.NextBool(8))
+                {
+                    return "It seems so strange that most of the seas are unexplored. What could be lying down there? Talking sharks?";
+                }
+            }
             else if (Main.raining && Main.rand.Next(5) == 0 && npc.position.Y / 16 <= Main.worldSurface)
             {
                 return "Were fishes always able to do that?";
@@ -258,6 +269,8 @@ namespace NimblesThrowingStuff.NPCs.Town
 			nextSlot++;
             shop.item[nextSlot].SetDefaults(ItemID.Javelin);
 			nextSlot++;
+            shop.item[nextSlot].SetDefaults(mod.ItemType("HadalShellstone"));
+            nextSlot++;
             if (NPC.downedBoss2)
             {
             shop.item[nextSlot].SetDefaults(ItemID.DesertFossil);
