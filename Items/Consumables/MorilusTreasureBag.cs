@@ -10,6 +10,7 @@ using Terraria.ModLoader;
 using NimblesThrowingStuff.NPCs.Morilus;
 using NimblesThrowingStuff.Items.Accessories;
 using NimblesThrowingStuff.Items.Placeables.Blocks;
+using NimblesThrowingStuff.Items.Placeables.Furniture;
 using NimblesThrowingStuff.Items.Vanity;
 using NimblesThrowingStuff.Items.Weapons.Melee;
 using NimblesThrowingStuff.Items.Weapons.Ranged;
@@ -69,6 +70,10 @@ namespace NimblesThrowingStuff.Items.Consumables
             if (Main.rand.NextBool(7))
             {
                 player.QuickSpawnItem(ModContent.ItemType<MorilusMask>());
+            }
+            if (Main.rand.NextBool(5))
+            {
+                player.QuickSpawnItem(ModContent.ItemType<MorilusTrophy>());
             }
         }
     }

@@ -338,6 +338,10 @@ namespace NimblesThrowingStuff.NPCs.Morilus
                 {
                     Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("MorilusMask"));
                 }
+            if (Main.rand.NextBool(5))
+                {
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("MorilusTrophy"));
+                }
                 int MorileLoot = Main.rand.Next(5);
             switch (MorileLoot)
             {

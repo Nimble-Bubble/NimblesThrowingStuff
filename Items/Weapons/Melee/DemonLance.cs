@@ -12,6 +12,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 	{
         public override void SetStaticDefaults()
         {
+			DisplayName.SetDefault("Demonite Lance");
 			Tooltip.SetDefault("Cthulhu's hardened flesh brings out the best in shortswords.");
         }
         public override void SetDefaults() {
