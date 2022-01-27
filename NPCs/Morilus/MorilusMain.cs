@@ -70,6 +70,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
             Vector2 vector8 = new Vector2(npc.position.X + (npc.width / 2), npc.position.Y + (npc.height / 2));
         
             npc.ai[1]++;
+            npc.ai[2]++;
                 if (npc.life <= npc.lifeMax / 20)
                 {
                     if (npc.ai[1] % 5 == 0)
@@ -156,7 +157,6 @@ namespace NimblesThrowingStuff.NPCs.Morilus
                 if (npc.ai[1] % 30 == 0 && npc.life >= npc.lifeMax / 2 || npc.ai[1] % 20 == 0)
                 {
                 float Speed1 = 10f;
-                
                 int damage1 = 70;
                 if (!Main.expertMode)
                 {
@@ -217,6 +217,10 @@ namespace NimblesThrowingStuff.NPCs.Morilus
             {
             npc.ai[1] = 20;
             }
+            if (npc.ai[2] >= 1000)
+                    {
+                        npc.ai[2] = 0;
+                    }
   
             }
             npc.dontTakeDamage = false;

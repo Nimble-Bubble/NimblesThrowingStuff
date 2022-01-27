@@ -11,6 +11,7 @@ using Terraria.ModLoader.IO;
 using Microsoft.Xna.Framework;
 using NimblesThrowingStuff.Buffs;
 using Terraria.Utilities;
+using Terraria.GameInput;
 
 namespace NimblesThrowingStuff
 {
@@ -33,6 +34,9 @@ namespace NimblesThrowingStuff
         public bool miniGreek;
         public bool miniLocal;
         public bool rangeMisfire;
+        public int whichShield;
+        public bool guardIronShield;
+        public int guardBonus;
         
         public override void ResetEffects()
         {
@@ -52,12 +56,32 @@ namespace NimblesThrowingStuff
         miniMove = false;
         miniGreek = false;
         miniLocal = false;
+        whichShield = 0;
         rangeMisfire = false;
+        guardIronShield = false;
+        guardBonus = 0;
         }
         public override void UpdateDead()
         {
             greek = false;
+            guardIronShield = false;
     }
+        public override void ProcessTriggers(TriggersSet triggersSet)
+        {
+            if (NimblesThrowingStuff.MIGuardKey.Current)
+            {
+                if (whichShield >= 1)
+                {
+                    Dust.NewDust(player.position, player.width, player.height, 43, Main.rand.Next(-3, 2), Main.rand.Next(-3, 2), 0, default, 1);
+                }
+                switch (whichShield)
+                {
+                    case 1:
+                        player.AddBuff(mod.BuffType("GuardIronShield"), 2);
+                    break;
+                }
+            }
+        }
         public override void PostHurt(bool pvp, bool quiet, double damage, int hitDirection, bool crit) {
          if (canSanta)
          {
@@ -110,7 +134,13 @@ namespace NimblesThrowingStuff
         }
         public override void UpdateBadLifeRegen()
 		{
-			if (greek)
+    if (guardIronShield)
+    {
+        player.statDefense += 10;
+        player.statDefense += guardBonus;
+        player.moveSpeed -= 0.5f;
+    }
+    if (greek)
 			{
 				// These lines zero out any positive lifeRegen. This is expected for all bad life regeneration effects.
 				if (player.lifeRegen > 0)

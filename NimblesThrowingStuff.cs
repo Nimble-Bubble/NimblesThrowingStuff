@@ -10,7 +10,13 @@ using Terraria.Localization;
 using NimblesThrowingStuff.NPCs.Morilus;
 using NimblesThrowingStuff.Items.Consumables;
 using NimblesThrowingStuff.Items.Vanity;
+using NimblesThrowingStuff.Items.Weapons.Melee;
+using NimblesThrowingStuff.Items.Weapons.Ranged;
+using NimblesThrowingStuff.Items.Weapons.Magic;
+using NimblesThrowingStuff.Items.Weapons.Summoning;
+using NimblesThrowingStuff.Items.Weapons.Throwing;
 using NimblesThrowingStuff.Items.Placeables.Blocks;
+using NimblesThrowingStuff.Items.Placeables.Furniture;
 using static Terraria.ModLoader.ModContent;
 
 namespace NimblesThrowingStuff
@@ -18,6 +24,8 @@ namespace NimblesThrowingStuff
 	public class NimblesThrowingStuff : Mod
 	{
         public static NimblesThrowingStuff instance;
+
+        public static ModHotKey MIGuardKey;
 
         public NimblesThrowingStuff()
         {
@@ -31,10 +39,12 @@ namespace NimblesThrowingStuff
         public override void Load()
         {
             instance = this;
+            MIGuardKey = RegisterHotKey("Guard", "Z");
         }
         public override void Unload()
         {
             instance = null;
+            MIGuardKey = null;
         }
         public override void PostSetupContent()
         {
@@ -54,8 +64,8 @@ namespace NimblesThrowingStuff
                 "$Mods.NimblesThrowingStuff.NPCName.MorilusMain",
                 (Func<bool>)(() => NimblesWorld.downedMorilus),
                 ModContent.ItemType<DeceptiveArtifact>(),
-                new List<int> { ModContent.ItemType<MorilusMask>() },
-                new List<int> { ModContent.ItemType<ProcellariteOre>() },
+                new List<int> { ModContent.ItemType<MorilusMask>(), ModContent.ItemType<MorilusTrophy>() },
+                new List<int> { ModContent.ItemType<ProcellariteOre>(), ModContent.ItemType<SkyseaSpinner>(), ModContent.ItemType<ProcellariteLongbow>(), ModContent.ItemType<StormShot>(), ModContent.ItemType<LacusDecapitator>(), ModContent.ItemType<GuardianStaff>() },
                 "Create a Deceptive Artifact and use it in space",
                 "Morilus moves on to what it considers to be its next issue...");
 
