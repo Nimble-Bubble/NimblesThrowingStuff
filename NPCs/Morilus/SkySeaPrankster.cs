@@ -22,12 +22,16 @@ namespace NimblesThrowingStuff.NPCs.Morilus
 			npc.aiStyle = 44;
 			npc.damage = 120;
 			npc.defense = 70;
-			npc.lifeMax = 2500;
+			npc.lifeMax = 625;
 			npc.HitSound = SoundID.NPCHit3;
 			npc.DeathSound = SoundID.NPCDeath3;
 			npc.knockBackResist = 0.5f;
         }
-		public override float SpawnChance(NPCSpawnInfo spawnInfo)
+        public override void AI()
+        {
+			npc.rotation = npc.velocity.X * 0.05f;
+		}
+        public override float SpawnChance(NPCSpawnInfo spawnInfo)
 		{
 			if (NPC.downedMoonlord && spawnInfo.player.ZoneSkyHeight)
 			{

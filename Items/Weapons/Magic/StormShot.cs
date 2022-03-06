@@ -14,12 +14,12 @@ namespace NimblesThrowingStuff.Items.Weapons.Magic
 		}
 		public override void SetDefaults() 
 		{
-			item.damage = 270;
+			item.damage = 170;
 			item.magic = true;
 			item.width = 24;
 			item.height = 24;
-			item.useTime = 24;
-			item.useAnimation = 24;
+			item.useTime = 11;
+			item.useAnimation = 11;
 			item.useStyle = 5;
 			item.knockBack = 4f;
             item.noMelee = true;
@@ -29,7 +29,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Magic
 			item.autoReuse = true;
 			item.shoot = ModContent.ProjectileType<StormShotBall>();
 			item.shootSpeed = 13f;
-            item.mana = 21;
+            item.mana = 12;
 		}
 	}
 }

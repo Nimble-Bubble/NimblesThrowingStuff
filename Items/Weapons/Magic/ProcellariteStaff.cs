@@ -14,7 +14,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Magic
 		}
 		public override void SetDefaults() 
 		{
-			item.damage = 170;
+			item.damage = 155;
 			item.magic = true;
 			item.width = 24;
 			item.height = 24;

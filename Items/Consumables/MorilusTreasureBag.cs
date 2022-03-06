@@ -8,7 +8,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using NimblesThrowingStuff.NPCs.Morilus;
-using NimblesThrowingStuff.Items.Accessories;
+using NimblesThrowingStuff.Items.Accessories.Shields;
 using NimblesThrowingStuff.Items.Placeables.Blocks;
 using NimblesThrowingStuff.Items.Placeables.Furniture;
 using NimblesThrowingStuff.Items.Vanity;

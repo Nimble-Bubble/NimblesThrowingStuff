@@ -23,7 +23,6 @@ namespace NimblesThrowingStuff.Projectiles.Enemy
             projectile.tileCollide = false;
             projectile.timeLeft = 120;
             projectile.light = 0f;
-            projectile.alpha = 255;
         }
         public override void AI()
         {
@@ -35,7 +34,7 @@ namespace NimblesThrowingStuff.Projectiles.Enemy
         {
             Vector2 vector8 = new Vector2(projectile.position.X + (projectile.width / 2), projectile.position.Y + (projectile.height / 2));
             float rotation = (float)Math.Atan2(vector8.Y - (player.position.Y + (player.height * 0.5f)), vector8.X - (player.position.X + (player.width * 0.5f)));
-            int makeKindaHomingShot = Projectile.NewProjectile(vector8.X, vector8.Y, (float)((Math.Cos(rotation) * 8f) * -1), (float)((Math.Sin(rotation) * 8f) * -1), ProjectileID.FallingStar, projectile.damage, projectile.knockBack, projectile.owner);
+            Projectile.NewProjectile(vector8.X, vector8.Y, (float)((Math.Cos(rotation) * 8f) * -1), (float)((Math.Sin(rotation) * 8f) * -1), mod.ProjectileType("MorileShot"), projectile.damage, projectile.knockBack, projectile.owner);
         }
     }
 }

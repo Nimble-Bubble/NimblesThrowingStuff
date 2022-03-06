@@ -8,7 +8,7 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
 
-namespace NimblesThrowingStuff.Items.Accessories
+namespace NimblesThrowingStuff.Items.Accessories.Shields
 {
     public class CarpatusDefender : ModItem
     {

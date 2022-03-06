@@ -26,11 +26,12 @@ namespace NimblesThrowingStuff.Projectiles.Enemy
             projectile.light = 1f;
             projectile.alpha = 255;
             projectile.timeLeft = 200;
+            projectile.extraUpdates = 1;
         }
         public override void AI()
         {
-            projectile.velocity.X *= 0.96f;
-            projectile.velocity.Y -= 0.2f;
+            projectile.velocity.X *= 0.995f;
+            projectile.velocity.Y += 0.2f;
             if (projectile.velocity.Y > 10)
             {
                 projectile.velocity.Y = 10;

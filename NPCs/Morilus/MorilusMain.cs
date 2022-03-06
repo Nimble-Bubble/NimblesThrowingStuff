@@ -217,13 +217,48 @@ namespace NimblesThrowingStuff.NPCs.Morilus
             {
             npc.ai[1] = 20;
             }
-            if (npc.ai[2] >= 1000)
-                    {
-                        npc.ai[2] = 0;
-                    }
-  
+
             }
-            npc.dontTakeDamage = false;
+            if (npc.ai[2] == 300 && Main.rand.NextBool(2))
+                {
+                    npc.ai[2] = 600;
+                }
+                if (npc.ai[2] >= 300 && npc.ai[2] <= 500)
+                {
+                    if (npc.ai[2] % 120 == 0)
+                    {
+                        if (Main.rand.NextBool(2))
+                        {
+                            Projectile.NewProjectile(npc.Center.X, npc.Center.Y, 1, 0, mod.ProjectileType("MorilusHorizontalWall"), 125, 10f);
+                            Projectile.NewProjectile(npc.Center.X, npc.Center.Y, -1, 0, mod.ProjectileType("MorilusHorizontalWall"), 125, 10f);
+                        }
+                        else
+                        {
+                            Projectile.NewProjectile(npc.Center.X, npc.Center.Y, 0, 1, mod.ProjectileType("MorilusVerticalWall"), 125, 10f);
+                            Projectile.NewProjectile(npc.Center.X, npc.Center.Y, 0, -1, mod.ProjectileType("MorilusVerticalWall"), 125, 10f);
+                        }
+                    }
+                    if (npc.ai[2] == 400 && Main.rand.NextBool(3))
+                    {
+                        if (Main.expertMode)
+                        {
+                            npc.ai[2] = Main.rand.Next(300, 360);
+                        }
+                        else
+                        {
+                            npc.ai[2] = Main.rand.Next(90, 150);
+                        }
+                    }
+                }
+                if (npc.ai[2] >= 500 && npc.ai[2] <= 510)
+                {
+                    npc.ai[2] = Main.rand.Next(0, 30);
+                }
+                if (npc.ai[2] >= 610)
+                {
+                    npc.ai[2] = 0;
+                }
+                npc.dontTakeDamage = false;
             }
             else
             {

@@ -39,7 +39,7 @@ namespace NimblesThrowingStuff.Projectiles.Magic
         {
             for (int starSpawn = 0; starSpawn < 8; starSpawn++)
             {
-                int bigMakeLittle = Projectile.NewProjectile(projectile.position.X, projectile.position.Y, Main.rand.Next(-10, 11), Main.rand.Next(-10, 11), ProjectileID.FallingStar, projectile.damage, projectile.knockBack, projectile.owner);
+                int bigMakeLittle = Projectile.NewProjectile(projectile.position.X, projectile.position.Y, Main.rand.Next(-10, 11), Main.rand.Next(-10, 11), ProjectileID.FallingStar, projectile.damage / 4, projectile.knockBack, projectile.owner);
                 Main.projectile[bigMakeLittle].friendly = true;
                 Main.projectile[bigMakeLittle].magic = true;
                 Main.projectile[bigMakeLittle].usesLocalNPCImmunity = true;
