@@ -95,3 +95,4 @@ obj/NimblesThrowingStuff.csproj.nuget.dgspec.json
 obj/NimblesThrowingStuff.csproj.nuget.g.props
 obj/project.assets.json
 obj/project.nuget.cache
+*.editorconfig

@@ -9,17 +9,16 @@ using Terraria.ID;
 
 namespace NimblesThrowingStuff.Items.Accessories
 {
-    [AutoloadEquip(EquipType.Wings)]
+    [AutoloadEquip(EquipType.Shoes)]
     public class ChlorophyteTreaders : ModItem
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Allows flight and slow fall"
-            + "\nActs as a pair of Leaf Wings"
-            + "\nAllows super fast running and extra mobility on ice"
+            Tooltip.SetDefault("Allows super fast running and extra mobility on ice"
             + "\n20% increased movement speed"
             + "\nProvides the ability to walk on water, honey & lava"
-            + "\nGrants immunity to fire blocks and 7 seconds of immunity to lava");
+            + "\nGrants immunity to fire blocks and 7 seconds of immunity to lava"
+            + "\nImproved, environment-friendly soles allow for mid-air hops and softer landings");
         }
         public override void SetDefaults()
         {
@@ -31,7 +30,6 @@ namespace NimblesThrowingStuff.Items.Accessories
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            player.wingTimeMax = 100;
             player.moveSpeed += 0.2f;
             player.accRunSpeed = 9f;
             player.rocketBoots = 3;
@@ -39,28 +37,19 @@ namespace NimblesThrowingStuff.Items.Accessories
             player.fireWalk = true;
             player.waterWalk = true;
             player.iceSkate = true;
+            player.doubleJumpSandstorm = true;
+            player.doubleJumpBlizzard = true;
+            player.doubleJumpCloud = true;
+            player.jumpBoost = true;
+            player.noFallDmg = true;
         }
-        public override void VerticalWingSpeeds(Player player, ref float ascentWhenFalling, ref float ascentWhenRising,
-			ref float maxCanAscendMultiplier, ref float maxAscentMultiplier, ref float constantAscend)
-		{
-			ascentWhenFalling = 0.85f;
-			ascentWhenRising = 0.125f;
-			maxCanAscendMultiplier = 1f;
-			maxAscentMultiplier = 2f;
-			constantAscend = 0.135f;
-		}
-		public override void HorizontalWingSpeeds(Player player, ref float speed, ref float acceleration)
-		{
-			speed = 7f;
-			acceleration *= 3f;
-		}
         public override void AddRecipes() 
         {
 			ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ItemID.FrostsparkBoots);
             recipe.AddIngredient(ItemID.LavaWaders);
             recipe.AddIngredient(ItemID.ChlorophyteBar, 12);
-            recipe.AddIngredient(ItemID.LeafWings);
+            recipe.AddIngredient(ItemID.BundleofBalloons);
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
