@@ -11,6 +11,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 {
 	public class BloodySyringeProj: ModProjectile
     {
+        private int bloodSyringePower;
         public override void SetDefaults()
         {
             projectile.width = 80;
@@ -67,6 +68,24 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             //projectile.width = projectile.height = 64;
             projectile.rotation = (float)(Math.Atan2((float)projectile.velocity.Y, (float)projectile.velocity.X) + 1.57000005245209);
             Main.player[projectile.owner].itemRotation = Main.player[projectile.owner].direction != 1 ? (float)Math.Atan2(projectile.velocity.Y * (float)projectile.direction, projectile.velocity.X * (float)projectile.direction) : (float)Math.Atan2(projectile.velocity.Y * (float)projectile.direction, projectile.velocity.X * (float)projectile.direction);
+            ++bloodSyringePower;
+            if (bloodSyringePower > 75)
+            {
+                bloodSyringePower = 75;
+            }
+            if (Main.mouseRight)
+            {
+                if (bloodSyringePower >= 45)
+                {
+                    Projectile.NewProjectile(projectile.Center, projectile.velocity * 2, ModContent.ProjectileType<BloodySyringeBlood>(), projectile.damage / 2, 1.5f, projectile.owner); 
+                    Main.PlaySound(SoundID.Item21);
+                    bloodSyringePower -= 45;
+                }
+                else
+                {
+                    //Main.PlaySound(SoundID.Item16);
+                }
+            }
         }
         //public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
         //{

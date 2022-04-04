@@ -12,7 +12,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 	{
         public override void SetStaticDefaults()
         {
-			Tooltip.SetDefault("Cthulhu's hardened flesh brings out the best in shortswords.");
+			Tooltip.SetDefault("AB is a universal recipient. O is a universal donor. This is a universal source of pain."
+				+"\nRight click while holding the lance out to fire a stream of blood.");
         }
         public override void SetDefaults() {
 			item.damage = 18;
