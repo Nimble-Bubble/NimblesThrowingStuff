@@ -49,7 +49,7 @@ namespace NimblesThrowingStuff.NPCs.Town
 			npc.lifeMax = 400;
 			npc.HitSound = SoundID.NPCHit1;
 			npc.DeathSound = SoundID.NPCDeath1;
-			npc.knockBackResist = 1f;
+			npc.knockBackResist = 0.25f;
             animationType = NPCID.Merchant;
         }
         public override bool CanTownNPCSpawn(int numTownNPCs, int money)
@@ -128,7 +128,7 @@ namespace NimblesThrowingStuff.NPCs.Town
                     relic = "Vincent Raptor";
                     break;
                 case 2:
-                    relic = "Spiny Sam";
+                    relic = "Spino Sam";
                     break;
             }
             switch (WorldGen.genRand.Next(5))
@@ -308,7 +308,7 @@ namespace NimblesThrowingStuff.NPCs.Town
 
 		public override void NPCLoot()
 		{
-			Item.NewItem(npc.getRect(), ItemID.FossilHelm, 1);
+            Gore.NewGore(npc.position, npc.velocity, mod.GetGoreSlot("Gores/LivingRelicHeadGore"), 1);
         }
 
 		public override void TownNPCAttackStrength(ref int damage, ref float knockback)

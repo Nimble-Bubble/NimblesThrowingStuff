@@ -25,7 +25,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			item.noUseGraphic = true;
 			item.noMelee = true;
 			item.rare = ItemRarityID.White;
-			item.value = Item.buyPrice(0, 0, 0, 75);
+			item.value = Item.buyPrice(0, 0, 75, 0);
             item.melee = true;
 			item.channel = true;
             item.shoot = ModContent.ProjectileType<HardLonghornProj>();

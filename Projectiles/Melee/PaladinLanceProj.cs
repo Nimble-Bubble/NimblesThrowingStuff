@@ -9,14 +9,14 @@ using Terraria.Enums;
 
 namespace NimblesThrowingStuff.Projectiles.Melee
 {
-	public class IronLanceProj: ModProjectile
+	public class PaladinLanceProj: ModProjectile
     {
         public override void SetDefaults()
         {
-            projectile.width = 80;
-            projectile.height = 80;
+            projectile.width = 120;
+            projectile.height = 120;
             projectile.usesLocalNPCImmunity = true;
-            projectile.localNPCHitCooldown = 24;
+            projectile.localNPCHitCooldown = 10;
             projectile.tileCollide = false;
             projectile.penetrate = -1;
             projectile.friendly = true;
@@ -61,13 +61,14 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             Main.player[projectile.owner].heldProj = projectile.whoAmI;
             Main.player[projectile.owner].itemTime = 2;
             Main.player[projectile.owner].itemAnimation = 2;
-            projectile.position.X = (vector2_1.X - 40);
-            projectile.position.Y = (vector2_1.Y - 40);
+            projectile.position.X = (vector2_1.X - 60);
+            projectile.position.Y = (vector2_1.Y - 60);
             //projectile.position = projectile.Center;
             //projectile.width = projectile.height = 64;
             projectile.rotation = (float)(Math.Atan2((float)projectile.velocity.Y, (float)projectile.velocity.X) + 1.57000005245209);
             Main.player[projectile.owner].itemRotation = Main.player[projectile.owner].direction != 1 ? (float)Math.Atan2(projectile.velocity.Y * (float)projectile.direction, projectile.velocity.X * (float)projectile.direction) : (float)Math.Atan2(projectile.velocity.Y * (float)projectile.direction, projectile.velocity.X * (float)projectile.direction);
-            Main.player[projectile.owner].statDefense += 3;
+            Main.player[projectile.owner].statDefense += 8;
+            Main.player[projectile.owner].noKnockback = true;
         }
         //public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
         //{

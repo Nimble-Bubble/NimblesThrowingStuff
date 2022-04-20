@@ -8,35 +8,37 @@ using NimblesThrowingStuff.Projectiles.Melee;
 
 namespace NimblesThrowingStuff.Items.Weapons.Melee
 {
-	public class IronLance : ModItem
+	public class PaladinLance : ModItem
 	{
-        public override void SetStaticDefaults()
-        {
-			DisplayName.SetDefault("Iron Lance");
-			Tooltip.SetDefault("A heavy lance for sure, but its power makes up for it.");
-        }
-        public override void SetDefaults() {
-			item.damage = 12;
+		public override void SetStaticDefaults()
+		{
+			DisplayName.SetDefault("Paladin Lance");
+			Tooltip.SetDefault("A powerful and heavy lance known for its presence on the battlefield.");
+		}
+		public override void SetDefaults()
+		{
+			item.damage = 21;
 			item.useStyle = ItemUseStyleID.HoldingOut;
-			item.useAnimation = 24;
-			item.useTime = 24;
+			item.useAnimation = 32;
+			item.useTime = 32;
 			item.knockBack = 6f;
 			item.width = 20;
 			item.height = 20;
 			item.noUseGraphic = true;
 			item.noMelee = true;
-			item.rare = ItemRarityID.White;
-			item.value = Item.buyPrice(0, 0, 12, 50);
-            item.melee = true;
+			item.rare = ItemRarityID.Blue;
+			item.value = Item.buyPrice(0, 1, 0, 0);
+			item.melee = true;
 			item.channel = true;
-            item.shoot = ModContent.ProjectileType<IronLanceProj>();
-            item.shootSpeed = 10f;
+			item.shoot = ModContent.ProjectileType<PaladinLanceProj>();
+			item.shootSpeed = 11f;
 			item.UseSound = SoundID.Item1;
 		}
 		public override void AddRecipes()
 		{
 			var recipe = new ModRecipe(mod);
-			recipe.AddRecipeGroup(RecipeGroupID.IronBar, 10);
+			recipe.AddIngredient(ModContent.ItemType<IronLance>(), 1);
+			recipe.AddIngredient(ItemID.MeteoriteBar, 10);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
