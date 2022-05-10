@@ -9,12 +9,12 @@ using Terraria.Enums;
 
 namespace NimblesThrowingStuff.Projectiles.Melee
 {
-	public class PaladinLanceProj: ModProjectile
+	public class GrowlingWyvernProj: ModProjectile
     {
         public override void SetDefaults()
         {
-            projectile.width = 120;
-            projectile.height = 120;
+            projectile.width = 140;
+            projectile.height = 140;
             projectile.usesLocalNPCImmunity = true;
             projectile.localNPCHitCooldown = 10;
             projectile.tileCollide = false;
@@ -25,6 +25,13 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             projectile.timeLeft = 18000;
             projectile.extraUpdates = 0;
             projectile.scale = 1f;
+        }
+        public override void ModifyHitNPC(NPC target, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)
+        {
+            if (Main.rand.NextBool(3))
+            {
+                target.AddBuff(BuffID.Bleeding, 150);
+            }
         }
         public override void AI()
         {
@@ -61,14 +68,14 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             Main.player[projectile.owner].heldProj = projectile.whoAmI;
             Main.player[projectile.owner].itemTime = 2;
             Main.player[projectile.owner].itemAnimation = 2;
-            projectile.position.X = (vector2_1.X - 60);
-            projectile.position.Y = (vector2_1.Y - 60);
+            projectile.position.X = (vector2_1.X - 70);
+            projectile.position.Y = (vector2_1.Y - 70);
             //projectile.position = projectile.Center;
             //projectile.width = projectile.height = 64;
             projectile.rotation = (float)(Math.Atan2((float)projectile.velocity.Y, (float)projectile.velocity.X) + 1.57000005245209);
             Main.player[projectile.owner].itemRotation = Main.player[projectile.owner].direction != 1 ? (float)Math.Atan2(projectile.velocity.Y * (float)projectile.direction, projectile.velocity.X * (float)projectile.direction) : (float)Math.Atan2(projectile.velocity.Y * (float)projectile.direction, projectile.velocity.X * (float)projectile.direction);
-            Main.player[projectile.owner].statDefense += 8;
-            //Main.player[projectile.owner].noKnockback = true;
+            Main.player[projectile.owner].statDefense += 12;
+            Main.player[projectile.owner].noKnockback = true;
 
             //In case you're wondering why there's a statDefense boost in here, some lances along the default Ore line (Iron Lance > Paladin Lance > Growling Wyvern > Knight Lance > Ascalon > Spectra Lancea > Luminous Piercer) give flat stat boosts, especially defensive ones.
         }
