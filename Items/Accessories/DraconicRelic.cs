@@ -16,7 +16,7 @@ namespace NimblesThrowingStuff.Items.Accessories
         public override void SetStaticDefaults()
         {
             Tooltip.SetDefault("Allows flight and slow fall"
-            + "\nYou swear you've seen it before, but you don't know where...");
+            + "\nStellar membrane gives these wings powerful flight.");
         }
         public override void SetDefaults()
         {

@@ -12,7 +12,9 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 	{
         public override void SetStaticDefaults()
         {
-			Tooltip.SetDefault("The added leather allows for higher agility.");
+			Tooltip.SetDefault("The added leather allows for higher agility."
+				+"\nRight click to launch yourself in the direction of the lance."
+				+"\nThe more damage you deal, the shorter the time between boosts.");
         }
         public override void SetDefaults() {
 			item.damage = 14;

@@ -82,8 +82,21 @@ namespace NimblesThrowingStuff
                 }
             }
         }
+        public override void Hurt(bool pvp, bool quiet, double damage, int hitDirection, bool crit)
+        {
+            if (NimblesThrowingStuff.MIGuardKey.Current && whichShield >= 1)
+            {
+                if (damage <= player.statDefense)
+                {
+                    damage = 0;
+                }
+                quiet = true;
+                Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/GuardMetalMedium"));
+            }
+        }
         public override void PostHurt(bool pvp, bool quiet, double damage, int hitDirection, bool crit) {
-         if (canSanta)
+            
+                if (canSanta)
          {
           Projectile.NewProjectile(player.Center.X, player.Center.Y, 0, -10,
                             mod.ProjectileType("SantankSpikeProj"), 100, 5f, Main.myPlayer, 0.0f, (float) Main.rand.Next(0, 45)); 
