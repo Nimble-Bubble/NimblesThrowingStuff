@@ -29,6 +29,14 @@ namespace NimblesThrowingStuff.NPCs
 				}
 				npc.lifeRegen -= 100; //That's even worse!
 			}
+			if (npc.HasBuff(BuffID.Bleeding))
+            {
+				if (npc.lifeRegen > 0)
+                {
+					npc.lifeRegen = 0;
+                }
+				npc.lifeRegen -= 10;
+            }
             
         }
         public override void SetupShop(int type, Chest shop, ref int nextSlot)

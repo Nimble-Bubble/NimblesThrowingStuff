@@ -5,6 +5,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using NimblesThrowingStuff.Buffs;
 using NimblesThrowingStuff.Projectiles.Summoning;
+using NimblesThrowingStuff.Items.Materials;
 
 namespace NimblesThrowingStuff.Items.Weapons.Summoning
 {
@@ -41,6 +42,14 @@ namespace NimblesThrowingStuff.Items.Weapons.Summoning
 			player.AddBuff(item.buffType, 18000);
 			position = Main.MouseWorld;
 			return true;
+		}
+		public override void AddRecipes()
+		{
+			ModRecipe recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ModContent.ItemType<ShorebrassBar>(), 18);
+			recipe.AddTile(TileID.Anvils);
+			recipe.SetResult(this);
+			recipe.AddRecipe();
 		}
 	}
 }

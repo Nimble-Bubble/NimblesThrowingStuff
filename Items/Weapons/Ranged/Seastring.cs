@@ -4,6 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using NimblesThrowingStuff.Projectiles.Ranged;
+using NimblesThrowingStuff.Items.Materials;
 
 namespace NimblesThrowingStuff.Items.Weapons.Ranged
 {
@@ -41,16 +42,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.Bone, 20);
-			recipe.AddIngredient(ItemID.Sapphire, 10);
-            recipe.AddIngredient(ItemID.GoldBar, 15);
-			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
-			recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.Bone, 20);
-			recipe.AddIngredient(ItemID.Sapphire, 10);
-			recipe.AddIngredient(ItemID.PlatinumBar, 15);
+			recipe.AddIngredient(ModContent.ItemType<ShorebrassBar>(), 12);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

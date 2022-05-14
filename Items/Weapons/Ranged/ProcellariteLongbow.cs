@@ -35,7 +35,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 		}
 		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
 		{
-			int numberProjectiles = 4 + Main.rand.Next(2);  //This defines how many projectiles to shot
+			int numberProjectiles = 2 + Main.rand.Next(2);  //This defines how many projectiles to shot
 			for (int index = 0; index < numberProjectiles; ++index)
 			{
 				Vector2 vector2_1 = new Vector2((float)(player.Center.X + (Main.rand.Next(201) * -player.direction) + Main.mouseX + Main.screenPosition.X - player.position.X), player.Center.Y - 600f);   //this defines the projectile width, direction and position
@@ -53,13 +53,15 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 				}
 				float num14 = new Vector2(num12, num13).Length();
 				float num15 = item.shootSpeed / num14;
-				float num16 = num12 * num15;
-				float num17 = num13 * num15;
+				float num15b = num15 / 2;
+				float num16 = num12 * num15b;
+				float num17 = num13 * num15b;
 				float SpeedX = num16 + Main.rand.NextFloat(-40, 40) * 0.03f;  //this defines the projectile X position speed and randomnes
 				float SpeedY = num17 + Main.rand.NextFloat(-40, 40) * 0.03f;  //this defines the projectile Y position speed and randomnes
 				Projectile.NewProjectile(vector2_1.X, vector2_1.Y, SpeedX, SpeedY, type, damage, knockBack, Main.myPlayer, 0f, (float)Main.rand.Next(5));
 			}
-			return false;
+			Projectile.NewProjectile(position.X, position.X, speedX * 2, speedY * 2, type, damage, knockBack, Main.myPlayer, 0f, (float)Main.rand.Next(5));
+			return true;
 		}
 	}
 }

@@ -1,6 +1,8 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using NimblesThrowingStuff.Projectiles.Throwing;
+using NimblesThrowingStuff.Items.Materials;
 
 namespace NimblesThrowingStuff.Items.Weapons.Throwing
 {
@@ -28,9 +30,17 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 			item.rare = 3;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
-			item.shoot = mod.ProjectileType("SkelespearProj");
+			item.shoot = ModContent.ProjectileType<SkelespearProj>();
 			item.shootSpeed = 8f;
             item.mana = 11;
+		}
+		public override void AddRecipes()
+		{
+			ModRecipe recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ModContent.ItemType<ShorebrassBar>(), 12);
+			recipe.AddTile(TileID.Anvils);
+			recipe.SetResult(this);
+			recipe.AddRecipe();
 		}
 	}
 }

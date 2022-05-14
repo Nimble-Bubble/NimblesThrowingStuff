@@ -6,6 +6,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
+using NimblesThrowingStuff.Items.Materials;
 
 namespace NimblesThrowingStuff.Items
 {
@@ -87,6 +88,62 @@ namespace NimblesThrowingStuff.Items
                 player.QuickSpawnItem(ItemType<SatelliteSpear>());
                 }
             }
+            
+         }
+        public override void AddRecipes()
+        {
+            ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(ModContent.ItemType<ShorebrassBar>(), 12);
+            recipe.AddIngredient(ItemID.GoldenKey, 2);
+            recipe.AddTile(TileID.Anvils);
+            recipe.SetResult(ItemID.Muramasa);
+            recipe.AddRecipe();
+            recipe = new ModRecipe(mod);
+            recipe.AddIngredient(ModContent.ItemType<ShorebrassBar>(), 9);
+            recipe.AddIngredient(ItemID.Diamond, 5);
+            recipe.AddIngredient(ItemID.GoldenKey, 2);
+            recipe.AddTile(TileID.Anvils);
+            recipe.SetResult(ItemID.MagicMissile);
+            recipe.AddRecipe();
+            recipe = new ModRecipe(mod);
+            recipe.AddIngredient(ModContent.ItemType<ShorebrassBar>(), 12);
+            recipe.AddIngredient(ItemID.GoldenKey, 2);
+            recipe.AddTile(TileID.Anvils);
+            recipe.SetResult(ItemID.AquaScepter);
+            recipe.AddRecipe();
+            recipe = new ModRecipe(mod);
+            recipe.AddIngredient(ModContent.ItemType<ShorebrassBar>(), 15);
+            recipe.AddIngredient(ItemID.GoldenKey, 2);
+            recipe.AddTile(TileID.Anvils);
+            recipe.SetResult(ItemID.BlueMoon);
+            recipe.AddRecipe();
+            recipe = new ModRecipe(mod);
+            recipe.AddIngredient(ModContent.ItemType<ShorebrassBar>(), 9);
+            recipe.AddIngredient(ItemID.Cobweb, 20);
+            recipe.AddIngredient(ItemID.GoldenKey, 2);
+            recipe.AddTile(TileID.Anvils);
+            recipe.SetResult(ItemID.Valor);
+            recipe.AddRecipe();
+            recipe = new ModRecipe(mod);
+            recipe.AddIngredient(ModContent.ItemType<ShorebrassBar>(), 12);
+            recipe.AddIngredient(ItemID.IllegalGunParts);
+            recipe.AddIngredient(ItemID.GoldenKey, 2);
+            recipe.AddTile(TileID.Anvils);
+            recipe.SetResult(ItemID.Handgun);
+            recipe.AddRecipe();
+            recipe = new ModRecipe(mod);
+            recipe.AddIngredient(ModContent.ItemType<ShorebrassBar>(), 18);
+            recipe.AddIngredient(ItemID.GoldenKey, 2);
+            recipe.AddTile(TileID.Anvils);
+            recipe.SetResult(ItemID.CobaltShield);
+            recipe.AddRecipe();
+            recipe = new ModRecipe(mod);
+            recipe.AddIngredient(ModContent.ItemType<ShorebrassBar>(), 18);
+            recipe.AddIngredient(ItemID.Obsidian, 25);
+            recipe.AddIngredient(ItemID.GoldenKey, 2);
+            recipe.AddTile(TileID.Anvils);
+            recipe.SetResult(ItemID.ShadowKey);
+            recipe.AddRecipe();
         }
     }
 }
