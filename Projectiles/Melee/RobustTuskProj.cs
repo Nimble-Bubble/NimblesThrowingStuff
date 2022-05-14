@@ -9,12 +9,13 @@ using Terraria.Enums;
 
 namespace NimblesThrowingStuff.Projectiles.Melee
 {
-	public class HardLonghornProj: ModProjectile
+	public class RobustTuskProj: ModProjectile
     {
+        private int robustTuskPower;
         public override void SetDefaults()
         {
-            projectile.width = 90;
-            projectile.height = 90;
+            projectile.width = 100;
+            projectile.height = 100;
             projectile.usesLocalNPCImmunity = true;
             projectile.localNPCHitCooldown = 20;
             projectile.tileCollide = false;
@@ -61,31 +62,36 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             Main.player[projectile.owner].heldProj = projectile.whoAmI;
             Main.player[projectile.owner].itemTime = 2;
             Main.player[projectile.owner].itemAnimation = 2;
-            projectile.position.X = (vector2_1.X - 45);
-            projectile.position.Y = (vector2_1.Y - 45);
+            projectile.position.X = (vector2_1.X - 50);
+            projectile.position.Y = (vector2_1.Y - 50);
             //projectile.position = projectile.Center;
             //projectile.width = projectile.height = 64;
             projectile.rotation = (float)(Math.Atan2((float)projectile.velocity.Y, (float)projectile.velocity.X) + 1.57000005245209);
             Main.player[projectile.owner].itemRotation = Main.player[projectile.owner].direction != 1 ? (float)Math.Atan2(projectile.velocity.Y * (float)projectile.direction, projectile.velocity.X * (float)projectile.direction) : (float)Math.Atan2(projectile.velocity.Y * (float)projectile.direction, projectile.velocity.X * (float)projectile.direction);
+            ++robustTuskPower;
+            if (robustTuskPower > 300)
+            {
+                robustTuskPower = 300;
+            }
+            if (Main.mouseRight)
+            {
+                if (robustTuskPower >= 300)
+                {
+                    Main.player[projectile.owner].velocity.X += projectile.velocity.X * 1.5f;
+                    Main.player[projectile.owner].velocity.Y += projectile.velocity.Y * 1.5f; 
+                    Main.PlaySound(SoundID.Item60);
+                    robustTuskPower -= 300;
+                }
+                else
+                {
+                    //Main.PlaySound(SoundID.Item16);
+                }
+            }
         }
-        //public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
-        //{
-            //if (Main.player[projectile.owner].velocity.X < 0)
-            //{
-            //    damage -= (int)Main.player[projectile.owner].velocity.X;
-            //}
-            //else
-            //{
-            //    damage += (int)Main.player[projectile.owner].velocity.X;
-            //}
-            //if (Main.player[projectile.owner].velocity.Y < 0)
-            //{
-            //    damage -= (int)Main.player[projectile.owner].velocity.Y;
-            //}
-            //else
-            //{
-            //    damage += (int)Main.player[projectile.owner].velocity.Y;
-            //}
-        //}
+
+        public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
+        {
+            robustTuskPower += damage;
+        }
     }
 }

@@ -8,11 +8,11 @@ using NimblesThrowingStuff.Projectiles.Melee;
 
 namespace NimblesThrowingStuff.Items.Weapons.Melee
 {
-	public class HardLonghorn : ModItem
+	public class RobustTusk : ModItem
 	{
         public override void SetStaticDefaults()
         {
-			Tooltip.SetDefault("Adding in extra bone has given this lance a more painful tip.");
+			Tooltip.SetDefault("The added leather allows for higher agility.");
         }
         public override void SetDefaults() {
 			item.damage = 14;
@@ -24,11 +24,11 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			item.height = 20;
 			item.noUseGraphic = true;
 			item.noMelee = true;
-			item.rare = ItemRarityID.White;
+			item.rare = ItemRarityID.Blue;
 			item.value = Item.buyPrice(0, 0, 75, 0);
             item.melee = true;
 			item.channel = true;
-            item.shoot = ModContent.ProjectileType<HardLonghornProj>();
+            item.shoot = ModContent.ProjectileType<RobustTuskProj>();
             item.shootSpeed = 8f;
 			item.UseSound = SoundID.Item1;
 		}
@@ -36,12 +36,14 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 		{
 			var recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.RottenChunk, 10);
+			recipe.AddIngredient(ItemID.Leather, 3);
 			recipe.AddIngredient(ModContent.ItemType<Longhorn>());
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 			recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.Vertebrae, 10);
+			recipe.AddIngredient(ItemID.Leather, 3);
 			recipe.AddIngredient(ModContent.ItemType<Longhorn>());
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);

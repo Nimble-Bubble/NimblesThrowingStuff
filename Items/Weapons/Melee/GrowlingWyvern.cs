@@ -5,6 +5,7 @@ using static Terraria.ModLoader.ModContent;
 using Microsoft.Xna.Framework;
 using System;
 using NimblesThrowingStuff.Projectiles.Melee;
+using NimblesThrowingStuff.Items.Materials;
 
 namespace NimblesThrowingStuff.Items.Weapons.Melee
 {
@@ -39,8 +40,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 		{
 			var recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ModContent.ItemType<PaladinLance>(), 1);
-			recipe.AddIngredient(ItemID.HellstoneBar, 10);
-			recipe.AddIngredient(ItemID.Bone, 5);
+			recipe.AddIngredient(ModContent.ItemType<ShorebrassBar>(), 10);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

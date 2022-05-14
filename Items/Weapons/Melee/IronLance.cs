@@ -26,7 +26,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			item.noUseGraphic = true;
 			item.noMelee = true;
 			item.rare = ItemRarityID.White;
-			item.value = Item.buyPrice(0, 0, 12, 50);
+			item.value = Item.sellPrice(0, 0, 12, 50);
             item.melee = true;
 			item.channel = true;
             item.shoot = ModContent.ProjectileType<IronLanceProj>();
