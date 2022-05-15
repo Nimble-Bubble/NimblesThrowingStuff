@@ -2,6 +2,7 @@ using NimblesThrowingStuff.Items.Accessories;
 using NimblesThrowingStuff.Items.Materials;
 using NimblesThrowingStuff.Items.Weapons.Throwing;
 using NimblesThrowingStuff.Items.Weapons.Ranged;
+using NimblesThrowingStuff.Items.Weapons.Melee;
 using NimblesThrowingStuff.Buffs;
 using Microsoft.Xna.Framework;
 using Terraria;
@@ -58,6 +59,14 @@ namespace NimblesThrowingStuff.NPCs
                         nextSlot++;
                     }
                     break;
+			case 368:
+					if (NPC.downedMoonlord && Main.moonPhase % 2 == 0)
+                    {
+						shop.item[nextSlot].SetDefaults(ItemType<Superfast>());
+						nextSlot++;
+                    }
+					break;
+
             }
         }
 
