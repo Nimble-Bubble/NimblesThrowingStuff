@@ -35,7 +35,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
         }
         public override void AI()
         {
-            Vector2 vector2_1 = Main.player[projectile.owner].RotatedRelativePoint(Main.player[projectile.owner].Center, true);
+            Vector2 vector2_1 = Main.player[projectile.owner].RotatedRelativePoint(Main.player[projectile.owner].MountedCenter, true);
             if (Main.myPlayer == projectile.owner)
             {
                 if (Main.player[projectile.owner].channel)
