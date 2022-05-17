@@ -50,7 +50,10 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
                 }
                 if (npc.ai[1] >= 360 && npc.ai[1] <= 600)
                 {
+                    if (npc.velocity.X <= 0)
+                    {
                     npc.velocity.X = 1;
+                        }
                     npc.direction = 1;
                 }
                 if (npc.ai[1] >= 600 && npc.ai[1] <= 660)
@@ -59,7 +62,10 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
                 }
                 if (npc.ai[1] >= 660 && npc.ai[1] <= 900)
                 {
-                    npc.velocity.X = -1;
+                    if (npc.velocity.X >= 0)
+                    {
+                        npc.velocity.X = -1;
+                    }
                     npc.direction = -1;
                 }
                 if (npc.ai[1] >= 900 && npc.ai[1] <= 960)
@@ -68,7 +74,10 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
                 }
                 else
                 {
-                    npc.velocity.X *= 0.95f;
+                    if (npc.ai[1] <= 300)
+                    {
+                        npc.velocity.X *= 0.95f;
+                    }
                 }
             }
             else if (npc.life < npc.lifeMax)
