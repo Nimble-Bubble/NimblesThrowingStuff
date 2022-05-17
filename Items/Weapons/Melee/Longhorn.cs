@@ -28,7 +28,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			item.rare = ItemRarityID.White;
 			item.value = Item.buyPrice(0, 0, 37, 50);
             item.melee = true;
-			item.channel = true;
             item.shoot = ModContent.ProjectileType<LonghornProj>();
             item.shootSpeed = 8f;
 			item.UseSound = SoundID.Item1;
