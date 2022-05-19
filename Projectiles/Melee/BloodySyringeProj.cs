@@ -18,8 +18,8 @@ namespace NimblesThrowingStuff.Projectiles.Melee
         }
         public override void SetDefaults()
         {
-            projectile.width = 20;
-            projectile.height = 20;
+            projectile.width = 32;
+            projectile.height = 32;
             projectile.usesLocalNPCImmunity = true;
             projectile.localNPCHitCooldown = 20;
             projectile.tileCollide = false;
@@ -38,7 +38,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             Vector2 ownerMountedCenter = projOwner.RotatedRelativePoint(projOwner.MountedCenter, true);
             projectile.direction = projOwner.direction;
             projOwner.heldProj = projectile.whoAmI;
-            // projOwner.itemTime = projOwner.itemAnimation;
+            projOwner.itemTime = projOwner.itemAnimation;
             projectile.position.X = ownerMountedCenter.X - (float)(projectile.width / 2);
             projectile.position.Y = ownerMountedCenter.Y - (float)(projectile.height / 2);
 

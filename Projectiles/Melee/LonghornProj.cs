@@ -38,7 +38,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             Vector2 ownerMountedCenter = projOwner.RotatedRelativePoint(projOwner.MountedCenter, true);
             projectile.direction = projOwner.direction;
             projOwner.heldProj = projectile.whoAmI;
-            // projOwner.itemTime = projOwner.itemAnimation;
+            projOwner.itemTime = projOwner.itemAnimation;
             projectile.position.X = ownerMountedCenter.X - (float)(projectile.width / 2);
             projectile.position.Y = ownerMountedCenter.Y - (float)(projectile.height / 2);
 
