@@ -5,11 +5,11 @@ using Terraria.ModLoader;
 
 namespace NimblesThrowingStuff.Projectiles.Melee
 {
-	public class TheToothpickProj : ModProjectile
+	public class StingerSpearProj : ModProjectile
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("The Toothpick");
+			DisplayName.SetDefault("Stinger Spear");
 		}
 
 		public override void SetDefaults()
@@ -18,7 +18,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 			projectile.height = 24;
 			projectile.aiStyle = 19;
 			projectile.penetrate = -1;
-			projectile.scale = 1.3f;
+			projectile.scale = 1.2f;
 			projectile.alpha = 0;
 
 			projectile.hide = true;
@@ -33,7 +33,13 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 			get => projectile.ai[0];
 			set => projectile.ai[0] = value;
 		}
-
+		public override void ModifyHitNPC(NPC target, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)
+		{
+			if (Main.rand.NextBool(3))
+			{
+				target.AddBuff(BuffID.Poisoned, 150);
+			}
+		}
 		public override void AI() {
 			Player projOwner = Main.player[projectile.owner];
             
@@ -75,13 +81,13 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 			 if (!Main.dedServ)
 			{
 			if (Main.rand.NextBool(3)) {
-				Dust dust = Dust.NewDustDirect(projectile.position, projectile.height, projectile.width, 14,
+				Dust dust = Dust.NewDustDirect(projectile.position, projectile.height, projectile.width, DustID.JungleSpore,
 					projectile.velocity.X * .2f, projectile.velocity.Y * .2f, 200, Scale: 1.2f);
 				dust.velocity += projectile.velocity * 0.3f;
 				dust.velocity *= 0.2f;
 			}
 			if (Main.rand.NextBool(4)) {
-				Dust dust = Dust.NewDustDirect(projectile.position, projectile.height, projectile.width, 0,
+				Dust dust = Dust.NewDustDirect(projectile.position, projectile.height, projectile.width, DustID.JungleGrass,
 					0, 0, 254, Scale: 0.3f);
 				dust.velocity += projectile.velocity * 0.5f;
 				dust.velocity *= 0.5f;
