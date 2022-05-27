@@ -35,8 +35,9 @@ namespace NimblesThrowingStuff
         public bool miniLocal;
         public bool rangeMisfire;
         public int whichShield;
-        public bool guardIronShield;
+        public bool guardState;
         public int guardBonus;
+        public bool compromise;
         
         public override void ResetEffects()
         {
@@ -58,13 +59,14 @@ namespace NimblesThrowingStuff
         miniLocal = false;
         whichShield = 0;
         rangeMisfire = false;
-        guardIronShield = false;
+        guardState = false;
         guardBonus = 0;
         }
         public override void UpdateDead()
         {
             greek = false;
-            guardIronShield = false;
+            guardState = false;
+            compromise = false;
     }
         public override void ProcessTriggers(TriggersSet triggersSet)
         {
@@ -86,10 +88,10 @@ namespace NimblesThrowingStuff
         {
             if (NimblesThrowingStuff.MIGuardKey.Current && whichShield >= 1)
             {
-                if (damage <= player.statDefense)
-                {
-                    damage = 0;
-                }
+                //if (damage <= player.statDefense)
+                //{
+                //    damage = 0;
+                //}
                 quiet = true;
                 Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/GuardMetalMedium"));
             }
@@ -147,11 +149,20 @@ namespace NimblesThrowingStuff
         }
         public override void UpdateBadLifeRegen()
 		{
-    if (guardIronShield)
+    if (guardState)
     {
-        player.statDefense += 10;
-        player.statDefense += guardBonus;
-        player.moveSpeed -= 0.5f;
+          switch (whichShield)
+                {
+                    case 1:
+                        player.statDefense += 10;
+                        player.statDefense += guardBonus;
+                        player.moveSpeed -= 0.5f;
+                        if (Main.rand.NextBool(6))
+                        {
+                            Dust.NewDust(player.position, player.width, player.height, 43, player.velocity.X + Main.rand.Next(-3, 4), player.velocity.Y + Main.rand.Next(-3, 4), 0, new Color (255, 255, 255));
+                        }
+                        break;
+                }
     }
     if (greek)
 			{
@@ -164,6 +175,11 @@ namespace NimblesThrowingStuff
 				// lifeRegen is measured in 1/2 life per second. Therefore, this effect causes 25 life lost per second. Ouch.
 				player.lifeRegen -= 50;
 			}
+    if (compromise)
+            {
+                player.noKnockback = false;
+                guardBonus -= 10;
+            }
         }
     }
 }

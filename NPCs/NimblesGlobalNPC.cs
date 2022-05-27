@@ -16,9 +16,11 @@ namespace NimblesThrowingStuff.NPCs
     {
         public override bool InstancePerEntity => true;
         public bool greek;
+		public bool compromise;
         public override void ResetEffects(NPC npc)
         {
             greek = false;
+			compromise = false;
         }
         public override void UpdateLifeRegen(NPC npc, ref int damage)
 		{
@@ -37,6 +39,17 @@ namespace NimblesThrowingStuff.NPCs
 					npc.lifeRegen = 0;
                 }
 				npc.lifeRegen -= 10;
+            }
+			if (compromise)
+            {
+				if (npc.boss)
+                {
+					// Do nothing
+                }
+				else
+                {
+					npc.knockBackResist += 0.25f;
+                }
             }
             
         }

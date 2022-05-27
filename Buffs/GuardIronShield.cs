@@ -20,7 +20,7 @@ namespace NimblesThrowingStuff.Buffs
 
 		public override void Update(Player player, ref int buffIndex)
 		{
-			player.GetModPlayer<NimblesPlayer>().guardIronShield = true;
+			player.GetModPlayer<NimblesPlayer>().guardState = true;
 		}
 	}
 }
