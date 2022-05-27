@@ -23,7 +23,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             projectile.friendly = true;
             projectile.melee = true;
             projectile.aiStyle = 19;
-            projectile.timeLeft = 18000;
+            projectile.timeLeft = 20;
             projectile.extraUpdates = 0;
             projectile.scale = 1.1f;
             projectile.hide = true;
@@ -54,7 +54,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                 }
                 if (projOwner.itemAnimation > projOwner.itemAnimationMax / 2)
                 {
-                    float bole = 0.2f;
+                    float bole = 0.25f;
                     // bole /= 2;
                     movementFactor += bole;
                 }

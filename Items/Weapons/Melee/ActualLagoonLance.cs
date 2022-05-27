@@ -18,11 +18,11 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 				+"\nRight click while holding the lance out to fire a high-pressure stream of water.");
         }
         public override void SetDefaults() {
-			item.damage = 33;
+			item.damage = 21;
 			item.useStyle = ItemUseStyleID.HoldingOut;
-			item.useAnimation = 30;
-			item.useTime = 30;
-			item.knockBack = 4f;
+			item.useAnimation = 17;
+			item.useTime = 17;
+			item.knockBack = 3.5f;
 			item.width = 20;
 			item.height = 20;
 			item.noUseGraphic = true;

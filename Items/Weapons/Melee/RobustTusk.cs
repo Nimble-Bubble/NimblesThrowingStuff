@@ -5,6 +5,7 @@ using static Terraria.ModLoader.ModContent;
 using Microsoft.Xna.Framework;
 using System;
 using NimblesThrowingStuff.Projectiles.Melee;
+using NimblesThrowingStuff.Items.Materials;
 
 namespace NimblesThrowingStuff.Items.Weapons.Melee
 {
@@ -12,12 +13,11 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 	{
         public override void SetStaticDefaults()
         {
-			Tooltip.SetDefault("The added leather allows for higher agility."
-				+"\nRight click to launch yourself in the direction of the lance."
-				+"\nThe more damage you deal, the shorter the time between boosts.");
+			Tooltip.SetDefault("The added leather allows for higher agility"
+				+"\nRight click to launch yourself in the direction of the lance");
         }
         public override void SetDefaults() {
-			item.damage = 14;
+			item.damage = 17;
 			item.useStyle = ItemUseStyleID.HoldingOut;
 			item.useAnimation = 28;
 			item.useTime = 28;
@@ -47,6 +47,20 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			recipe.AddIngredient(ItemID.Vertebrae, 10);
 			recipe.AddIngredient(ItemID.Leather, 3);
 			recipe.AddIngredient(ModContent.ItemType<Longhorn>());
+			recipe.AddTile(TileID.Anvils);
+			recipe.SetResult(this);
+			recipe.AddRecipe();
+			recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemID.ShadowScale, 10);
+			recipe.AddIngredient(ItemID.Leather, 5);
+			recipe.AddIngredient(ModContent.ItemType<BeastBone>(), 10);
+			recipe.AddTile(TileID.Anvils);
+			recipe.SetResult(this);
+			recipe.AddRecipe();
+			recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemID.TissueSample, 10);
+			recipe.AddIngredient(ItemID.Leather, 5);
+			recipe.AddIngredient(ModContent.ItemType<BeastBone>(), 10);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
