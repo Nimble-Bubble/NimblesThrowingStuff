@@ -9,13 +9,13 @@ using Terraria.Enums;
 
 namespace NimblesThrowingStuff.Projectiles.Melee
 {
-	
-    public class PaladinLanceProj: ModProjectile
+	public class RedTailProj: ModProjectile
     {
+        private int redTailPower;
         public override void SetDefaults()
         {
-            projectile.width = 24;
-            projectile.height = 24;
+            projectile.width = 32;
+            projectile.height = 32;
             projectile.usesLocalNPCImmunity = true;
             projectile.localNPCHitCooldown = 10;
             projectile.tileCollide = false;
@@ -23,9 +23,16 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             projectile.friendly = true;
             projectile.melee = true;
             projectile.aiStyle = 19;
-            projectile.timeLeft = 18000;
+            projectile.timeLeft = 40;
             projectile.extraUpdates = 0;
-            projectile.scale = 1f;
+            projectile.scale = 1.2f;
+        }
+        public override void ModifyHitNPC(NPC target, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)
+        {
+            if (Main.rand.NextBool(4))
+            {
+                target.AddBuff(BuffID.OnFire, 300);
+            }
         }
         public float movementFactor
         {
@@ -100,10 +107,29 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             {
                 projectile.Kill();
             }
-            Main.player[projectile.owner].statDefense += 8;
-            //Main.player[projectile.owner].noKnockback = true;
-
-            //In case you're wondering why there's a statDefense boost in here, some lances along the default Ore line (Iron Lance > Paladin Lance > Growling Wyvern > Knight Lance > Ascalon > Spectra Lancea > Luminous Piercer) give flat stat boosts, especially defensive ones.
+            --redTailPower;
+            if (redTailPower < 0)
+            {
+                redTailPower = 0;
+            }
+            if (redTailPower >= 40)
+            {
+                Main.player[projectile.owner].immune = true;
+            }
+            if (Main.mouseRight)
+            {
+                if (redTailPower == 0)
+                {
+                    Main.player[projectile.owner].velocity.X += projectile.velocity.X * 1f;
+                    Main.player[projectile.owner].velocity.Y += projectile.velocity.Y * 1f;
+                    Main.PlaySound(SoundID.Item60);
+                    redTailPower += 60;
+                }
+                else
+                {
+                    //Main.PlaySound(SoundID.Item16);
+                }
+            }
         }
         //public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
         //{
