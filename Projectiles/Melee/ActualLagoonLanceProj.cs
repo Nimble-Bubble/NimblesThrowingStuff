@@ -79,7 +79,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             }
             if (Main.mouseRight && !hasWatered)
             {
-                    int neatostream = Projectile.NewProjectile(projectile.Center, projectile.velocity, ProjectileID.WaterStream, projectile.damage / 2, 1.5f, projectile.owner);
+                    int neatostream = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, projectile.velocity.X / 2, projectile.velocity.Y / 2, ProjectileID.WaterStream, projectile.damage / 2, 1.5f, projectile.owner);
                     Main.projectile[neatostream].magic = false;
                     Main.projectile[neatostream].melee = true;
                     Main.projectile[neatostream].usesLocalNPCImmunity = true;

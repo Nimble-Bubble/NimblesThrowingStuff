@@ -112,17 +112,14 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             {
                 redTailPower = 0;
             }
-            if (redTailPower >= 40)
-            {
-                Main.player[projectile.owner].immune = true;
-            }
             if (Main.mouseRight)
             {
                 if (redTailPower == 0)
                 {
-                    Main.player[projectile.owner].velocity.X += projectile.velocity.X * 1f;
-                    Main.player[projectile.owner].velocity.Y += projectile.velocity.Y * 1f;
-                    Main.PlaySound(SoundID.Item60);
+                    int throwFlames = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, projectile.velocity.X / 3, projectile.velocity.Y / 3, ProjectileID.Flames, projectile.damage / 2, projectile.knockBack / 2, projectile.owner);
+                    Main.projectile[throwFlames].ranged = false;
+                    Main.projectile[throwFlames].melee = true;
+                   Main.PlaySound(SoundID.Item34);
                     redTailPower += 60;
                 }
                 else

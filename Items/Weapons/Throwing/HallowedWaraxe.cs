@@ -13,8 +13,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 			item.thrown = true;
 			item.width = 24;
 			item.height = 24;
-			item.useTime = 25;
-			item.useAnimation = 25;
+			item.useTime = 27;
+			item.useAnimation = 27;
 			item.useStyle = 1;
 			item.knockBack = 7f;
             item.noMelee = true;
@@ -24,7 +24,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
 			item.shoot = mod.ProjectileType("HallowedWaraxeProj");
-			item.shootSpeed = 15f;
+			item.shootSpeed = 12f;
             item.mana = 10;
 		}
 

@@ -13,10 +13,11 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 	{
         public override void SetStaticDefaults()
         {
-			Tooltip.SetDefault("Made to resemble a Rathalos' tail. It's a bit small, but it spits flames.");
+			Tooltip.SetDefault("Made to resemble a Rathalos' tail. It's a bit small, but it spits flames."
+				+"\nRight click to spew flames from the tip of the lance.");
         }
         public override void SetDefaults() {
-			item.damage = 32;
+			item.damage = 26;
 			item.useStyle = ItemUseStyleID.HoldingOut;
 			item.useAnimation = 32;
 			item.useTime = 32;

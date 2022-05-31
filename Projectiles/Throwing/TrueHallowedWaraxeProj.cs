@@ -29,6 +29,14 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
         {
             Dust.NewDust(new Vector2(projectile.position.X, projectile.position.Y), projectile.width, projectile.height, 57,
                             projectile.velocity.X * 0.1f, projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
+            int g = 0; 
+            g++;
+            if (g % 30 == 0)
+            {
+                Projectile.NewProjectile(projectile.position, projectile.velocity.RotatedBy(MathHelper.ToRadians(-30)), ModContent.ProjectileType<WaraxeEcho>(), projectile.damage / 4, projectile.knockBack / 2);
+                Projectile.NewProjectile(projectile.position, projectile.velocity, ModContent.ProjectileType<WaraxeEcho>(), projectile.damage / 3, projectile.knockBack / 2);
+                Projectile.NewProjectile(projectile.position, projectile.velocity.RotatedBy(MathHelper.ToRadians(30)), ModContent.ProjectileType<WaraxeEcho>(), projectile.damage / 4, projectile.knockBack / 2);
+            }
         }
         public override void PostDraw(SpriteBatch spriteBatch, Color lightColor)
 		{
