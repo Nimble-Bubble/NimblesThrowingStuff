@@ -9,30 +9,28 @@ using Terraria.Enums;
 
 namespace NimblesThrowingStuff.Projectiles.Melee
 {
-	public class BloodySyringeProj: ModProjectile
+	
+    public class KnightLanceProj: ModProjectile
     {
-        private bool hasBlooded;
-        public float movementFactor
-        {
-            get => projectile.ai[0];
-            set => projectile.ai[0] = value;
-        }
         public override void SetDefaults()
         {
-            projectile.width = 20;
-            projectile.height = 20;
+            projectile.width = 32;
+            projectile.height = 32;
             projectile.usesLocalNPCImmunity = true;
-            projectile.localNPCHitCooldown = 20;
+            projectile.localNPCHitCooldown = 10;
             projectile.tileCollide = false;
             projectile.penetrate = -1;
             projectile.friendly = true;
             projectile.melee = true;
             projectile.aiStyle = 19;
-            projectile.timeLeft = 18000;
+            projectile.timeLeft = 40;
             projectile.extraUpdates = 0;
             projectile.scale = 1.1f;
-            projectile.ownerHitCheck = true;
-            hasBlooded = false;
+        }
+        public float movementFactor
+        {
+            get => projectile.ai[0];
+            set => projectile.ai[0] = value;
         }
         public override void AI()
         {
@@ -42,6 +40,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             projectile.direction = projOwner.direction;
             projOwner.heldProj = projectile.whoAmI;
             projOwner.itemTime = projOwner.itemAnimation;
+            projectile.timeLeft = projOwner.itemAnimation;
             projectile.position.X = ownerMountedCenter.X - (float)(projectile.width / 2);
             projectile.position.Y = ownerMountedCenter.Y - (float)(projectile.height / 2);
 
@@ -54,7 +53,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                 }
                 if (projOwner.itemAnimation > projOwner.itemAnimationMax / 2)
                 {
-                    float bole = 0.15f;
+                    float bole = 0.25f;
                     // bole /= 2;
                     movementFactor += bole;
                 }
@@ -102,31 +101,29 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             {
                 projectile.Kill();
             }
-            if (Main.mouseRight && !hasBlooded)
-            {
-                    Projectile.NewProjectile(projectile.Center, projectile.velocity, ModContent.ProjectileType<BloodySyringeBlood>(), projectile.damage / 3, 1.5f, projectile.owner); 
-                    Main.PlaySound(SoundID.Item21);
-                    hasBlooded = true;
-            }
+            Main.player[projectile.owner].statDefense += 20;
+            //Main.player[projectile.owner].endurance += 0.125f;
+
+            //In case you're wondering why there's a statDefense boost in here, some lances along the default Ore line (Iron Lance > Paladin Lance > Growling Wyvern > Knight Lance > Ascalon > Spectra Lancea > Luminous Piercer) give flat stat boosts, especially defensive ones.
         }
         //public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
         //{
-        //if (Main.player[projectile.owner].velocity.X < 0)
-        //{
-        //    damage -= (int)Main.player[projectile.owner].velocity.X;
-        //}
-        //else
-        //{
-        //    damage += (int)Main.player[projectile.owner].velocity.X;
-        //}
-        //if (Main.player[projectile.owner].velocity.Y < 0)
-        //{
-        //    damage -= (int)Main.player[projectile.owner].velocity.Y;
-        //}
-        //else
-        //{
-        //    damage += (int)Main.player[projectile.owner].velocity.Y;
-        //}
+            //if (Main.player[projectile.owner].velocity.X < 0)
+            //{
+            //    damage -= (int)Main.player[projectile.owner].velocity.X;
+            //}
+            //else
+            //{
+            //    damage += (int)Main.player[projectile.owner].velocity.X;
+            //}
+            //if (Main.player[projectile.owner].velocity.Y < 0)
+            //{
+            //    damage -= (int)Main.player[projectile.owner].velocity.Y;
+            //}
+            //else
+            //{
+            //    damage += (int)Main.player[projectile.owner].velocity.Y;
+            //}
         //}
     }
 }

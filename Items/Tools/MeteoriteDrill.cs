@@ -25,7 +25,7 @@ namespace NimblesThrowingStuff.Items.Tools
 			item.autoReuse = true;
 			item.noMelee = true;
 			item.noUseGraphic = true;
-            item.pick = 65;
+            item.pick = 64;
 			item.shoot = ModContent.ProjectileType<MeteoriteDrillProj>();
 			item.shootSpeed = 30;
 		}
