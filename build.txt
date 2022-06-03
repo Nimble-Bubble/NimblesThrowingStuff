@@ -1,6 +1,6 @@
 displayName = Magnumiactus
 author = Nimble-Bubble's Team
-version = 0.3.0
+version = 0.3.0.0
 homepage = https://discord.gg/3JM8PbTukA
 hideCode = true
 hideResources = false

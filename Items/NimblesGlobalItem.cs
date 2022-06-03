@@ -33,6 +33,10 @@ namespace NimblesThrowingStuff.Items
             {
              item.defense = 5; 
             }
+            if (item.type == ItemID.ReaverShark)
+            {
+                item.pick = 65;
+            }
 		}
         public override bool CanRightClick(Item item)
         {
