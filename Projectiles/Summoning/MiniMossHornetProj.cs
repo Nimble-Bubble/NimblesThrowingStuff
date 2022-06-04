@@ -12,35 +12,35 @@ namespace NimblesThrowingStuff.Projectiles.Summoning
 	{
 		public override void SetStaticDefaults() {
 			DisplayName.SetDefault("Moss Hornet");
-			Main.projFrames[projectile.type] = 3;
-			ProjectileID.Sets.MinionTargettingFeature[projectile.type] = true;
+			Main.projFrames[Projectile.type] = 3;
+			ProjectileID.Sets.MinionTargettingFeature[Projectile.type] = true;
 			// Denotes that this projectile is a pet or minion
-			Main.projPet[projectile.type] = true;
+			Main.projPet[Projectile.type] = true;
 			// This is needed so your minion can properly spawn when summoned and replaced when other minions are summoned
-			ProjectileID.Sets.MinionSacrificable[projectile.type] = true;
+			ProjectileID.Sets.MinionSacrificable[Projectile.type] = true;
 			// Don't mistake this with "if this is true, then it will automatically home". It is just for damage reduction for certain NPCs
-			ProjectileID.Sets.Homing[projectile.type] = true;
+			ProjectileID.Sets.CultistIsResistantTo[Projectile.type] = true;
 		}
 
 		public sealed override void SetDefaults() {
-			projectile.width = 44;
-			projectile.height = 38;
-			projectile.tileCollide = false;
-            projectile.usesLocalNPCImmunity = true;
-            projectile.localNPCHitCooldown = 10;
-            projectile.alpha = 0;
-            projectile.aiStyle = 62;
+			Projectile.width = 44;
+			Projectile.height = 38;
+			Projectile.tileCollide = false;
+            Projectile.usesLocalNPCImmunity = true;
+            Projectile.localNPCHitCooldown = 10;
+            Projectile.alpha = 0;
+            Projectile.aiStyle = 62;
 
 			// These below are needed for a minion weapon
 			// Only controls if it deals damage to enemies on contact (more on that later)
-			projectile.friendly = true;
+			Projectile.friendly = true;
 			// Only determines the damage type
-			projectile.minion = true;
+			Projectile.minion = true;
 			// Amount of slots this minion occupies from the total minion slots available to the player (more on that later)
-			projectile.minionSlots = 1f;
+			Projectile.minionSlots = 1f;
 			// Needed so the minion doesn't despawn on collision with enemies or tiles
-			projectile.penetrate = -1;
-            aiType = 373;
+			Projectile.penetrate = -1;
+            AIType = 373;
 		}
 
 		// Here you can decide if your minion breaks things like grass or pots
@@ -54,16 +54,16 @@ namespace NimblesThrowingStuff.Projectiles.Summoning
 
 		public override void AI() 
         {
-			Player player = Main.player[projectile.owner];
+			Player player = Main.player[Projectile.owner];
 
 			#region Active check
-                int num1 = projectile.type == ModContent.ProjectileType<MiniMossHornetProj>() ? 1 : 0;
+                int num1 = Projectile.type == ModContent.ProjectileType<MiniMossHornetProj>() ? 1 : 0;
 			// This is the "active check", makes sure the minion is alive while the player is alive, and despawns if not
 			if (!player.active) {
-				player.ClearBuff(mod.BuffType("MossHornetBuff"));
+				player.ClearBuff(Mod.Find<ModBuff>("MossHornetBuff").Type);
 			}
-			if (player.HasBuff(mod.BuffType("MossHornetBuff"))) {
-				projectile.timeLeft = 2;
+			if (player.HasBuff(Mod.Find<ModBuff>("MossHornetBuff").Type)) {
+				Projectile.timeLeft = 2;
 			}
              if (num1 == 0)
              {
@@ -73,7 +73,7 @@ namespace NimblesThrowingStuff.Projectiles.Summoning
 			#endregion
                 
 			#region Animation and visuals
-			Lighting.AddLight(projectile.Center, Color.Green.ToVector3() * 0.75f);
+			Lighting.AddLight(Projectile.Center, Color.Green.ToVector3() * 0.75f);
 			#endregion
 		}
 	}

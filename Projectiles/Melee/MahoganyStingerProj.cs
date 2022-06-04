@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
+using Terraria.Audio;
 using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.Enums;
@@ -14,18 +15,18 @@ namespace NimblesThrowingStuff.Projectiles.Melee
         private int mahoganyStingerPower;
         public override void SetDefaults()
         {
-            projectile.width = 28;
-            projectile.height = 28;
-            projectile.usesLocalNPCImmunity = true;
-            projectile.localNPCHitCooldown = 10;
-            projectile.tileCollide = false;
-            projectile.penetrate = -1;
-            projectile.friendly = true;
-            projectile.melee = true;
-            projectile.aiStyle = 19;
-            projectile.timeLeft = 18000;
-            projectile.extraUpdates = 0;
-            projectile.scale = 1f;
+            Projectile.width = 28;
+            Projectile.height = 28;
+            Projectile.usesLocalNPCImmunity = true;
+            Projectile.localNPCHitCooldown = 10;
+            Projectile.tileCollide = false;
+            Projectile.penetrate = -1;
+            Projectile.friendly = true;
+            Projectile.DamageType = DamageClass.Melee;
+            Projectile.aiStyle = 19;
+            Projectile.timeLeft = 18000;
+            Projectile.extraUpdates = 0;
+            Projectile.scale = 1f;
         }
         public override void ModifyHitNPC(NPC target, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)
         {
@@ -36,27 +37,27 @@ namespace NimblesThrowingStuff.Projectiles.Melee
         }
         public float movementFactor
         {
-            get => projectile.ai[0];
-            set => projectile.ai[0] = value;
+            get => Projectile.ai[0];
+            set => Projectile.ai[0] = value;
         }
         public override void AI()
         {
-            Player projOwner = Main.player[projectile.owner];
+            Player projOwner = Main.player[Projectile.owner];
 
             Vector2 ownerMountedCenter = projOwner.RotatedRelativePoint(projOwner.MountedCenter, true);
-            projectile.direction = projOwner.direction;
-            projOwner.heldProj = projectile.whoAmI;
+            Projectile.direction = projOwner.direction;
+            projOwner.heldProj = Projectile.whoAmI;
             projOwner.itemTime = projOwner.itemAnimation;
-            projectile.timeLeft = projOwner.itemAnimation;
-            projectile.position.X = ownerMountedCenter.X - (float)(projectile.width / 2);
-            projectile.position.Y = ownerMountedCenter.Y - (float)(projectile.height / 2);
+            Projectile.timeLeft = projOwner.itemAnimation;
+            Projectile.position.X = ownerMountedCenter.X - (float)(Projectile.width / 2);
+            Projectile.position.Y = ownerMountedCenter.Y - (float)(Projectile.height / 2);
 
             if (!projOwner.frozen)
             {
                 if (movementFactor == 0f)
                 {
                     movementFactor = 3f;
-                    projectile.netUpdate = true;
+                    Projectile.netUpdate = true;
                 }
                 if (projOwner.itemAnimation > projOwner.itemAnimationMax / 2)
                 {
@@ -70,22 +71,22 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                 //}
             }
 
-            projectile.position += projectile.velocity * movementFactor;
+            Projectile.position += Projectile.velocity * movementFactor;
 
             if (projOwner.itemAnimation == 0)
             {
-                projectile.Kill();
+                Projectile.Kill();
             }
 
-            projectile.rotation = projectile.velocity.ToRotation() + MathHelper.ToRadians(135f);
+            Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.ToRadians(135f);
 
-            if (projectile.spriteDirection == -1)
+            if (Projectile.spriteDirection == -1)
             {
-                projectile.rotation -= MathHelper.ToRadians(90f);
+                Projectile.rotation -= MathHelper.ToRadians(90f);
             }
-            if (Main.myPlayer == projectile.owner)
+            if (Main.myPlayer == Projectile.owner)
             {
-                if (Main.player[projectile.owner].channel)
+                if (Main.player[Projectile.owner].channel)
                 {
                     //float num1 = Main.player[projectile.owner].inventory[Main.player[projectile.owner].selectedItem].shootSpeed * projectile.scale;
                     //Vector2 vector2_2 = ownerMountedCenter;
@@ -106,7 +107,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             }
             else
             {
-                projectile.Kill();
+                Projectile.Kill();
             }
             --mahoganyStingerPower;
             if (mahoganyStingerPower < 0)
@@ -115,15 +116,15 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             }
             if (mahoganyStingerPower >= 40)
             {
-                Main.player[projectile.owner].immune = true;
+                Main.player[Projectile.owner].immune = true;
             }
             if (Main.mouseRight)
             {
                 if (mahoganyStingerPower == 0)
                 {
-                    Main.player[projectile.owner].velocity.X += projectile.velocity.X * 1f;
-                    Main.player[projectile.owner].velocity.Y += projectile.velocity.Y * 1f;
-                    Main.PlaySound(SoundID.Item60);
+                    Main.player[Projectile.owner].velocity.X += Projectile.velocity.X * 1f;
+                    Main.player[Projectile.owner].velocity.Y += Projectile.velocity.Y * 1f;
+                    SoundEngine.PlaySound(SoundID.Item60);
                     mahoganyStingerPower += 60;
                 }
                 else

@@ -18,24 +18,24 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 		}
 		public override void SetDefaults()
 		{
-			item.damage = 47;
-			item.useStyle = ItemUseStyleID.HoldingOut;
-			item.useAnimation = 26;
-			item.useTime = 26;
-			item.knockBack = 6.5f;
-			item.width = 76;
-			item.height = 76;
-			item.noUseGraphic = true;
-			item.noMelee = true;
-			item.rare = ItemRarityID.LightRed;
-			item.value = Item.buyPrice(0, 15, 0, 0);
-			item.melee = true;
-			item.channel = true;
-			item.shoot = ModContent.ProjectileType<KnightLanceProj>();
-			item.shootSpeed = 13f;
-			item.autoReuse = true;
-			item.UseSound = SoundID.Item1;
-			item.scale = 1.15f;
+			Item.damage = 47;
+			Item.useStyle = ItemUseStyleID.Shoot;
+			Item.useAnimation = 26;
+			Item.useTime = 26;
+			Item.knockBack = 6.5f;
+			Item.width = 76;
+			Item.height = 76;
+			Item.noUseGraphic = true;
+			Item.noMelee = true;
+			Item.rare = ItemRarityID.LightRed;
+			Item.value = Item.buyPrice(0, 15, 0, 0);
+			Item.DamageType = DamageClass.Melee;
+			Item.channel = true;
+			Item.shoot = ModContent.ProjectileType<KnightLanceProj>();
+			Item.shootSpeed = 13f;
+			Item.autoReuse = true;
+			Item.UseSound = SoundID.Item1;
+			Item.scale = 1.15f;
 		}
         public override bool AltFunctionUse(Player player)
         {
@@ -45,46 +45,46 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
         {
             if (player.altFunctionUse == 2)
             {
-				item.useStyle = ItemUseStyleID.SwingThrow;
-				item.shoot = ProjectileID.None;
-				item.noUseGraphic = false;
-				item.noMelee = false;
+				Item.useStyle = ItemUseStyleID.Swing;
+				Item.shoot = ProjectileID.None;
+				Item.noUseGraphic = false;
+				Item.noMelee = false;
             }
 			else
             {
-				item.useStyle = ItemUseStyleID.HoldingOut;
-				item.shoot = ModContent.ProjectileType<KnightLanceProj>();
-				item.noUseGraphic = true;
-				item.noMelee = true;
+				Item.useStyle = ItemUseStyleID.Shoot;
+				Item.shoot = ModContent.ProjectileType<KnightLanceProj>();
+				Item.noUseGraphic = true;
+				Item.noMelee = true;
 			}
 			return base.CanUseItem(player);
         }
         public override void AddRecipes()
 		{
-			var recipe = new ModRecipe(mod);
+			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ModContent.ItemType<GrowlingWyvern>(), 1);
 			recipe.AddIngredient(ItemID.CobaltBar, 12);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
-			recipe.AddRecipe();
-			recipe = new ModRecipe(mod);
+			recipe.Register();
+			recipe = CreateRecipe();
 			recipe.AddIngredient(ModContent.ItemType<GrowlingWyvern>(), 1);
 			recipe.AddIngredient(ItemID.PalladiumBar, 12);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
-			recipe.AddRecipe();
-			recipe = new ModRecipe(mod);
+			recipe.Register();
+			recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.CrystalShard, 10);
 			recipe.AddIngredient(ItemID.CobaltBar, 18);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
-			recipe.AddRecipe();
-			recipe = new ModRecipe(mod);
+			recipe.Register();
+			recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.CrystalShard, 10);
 			recipe.AddIngredient(ItemID.PalladiumBar, 18);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
-			recipe.AddRecipe();
+			recipe.Register();
 		}
 	}
 }

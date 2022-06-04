@@ -16,28 +16,28 @@ namespace NimblesThrowingStuff.Projectiles.Enemy
 
         public override void SetDefaults()
         {
-            projectile.width = 32;
-            projectile.height = 32;
-            projectile.hostile = true;
-            projectile.tileCollide = false;
-            projectile.timeLeft = 150;
-            projectile.light = 0f;
-            projectile.alpha = 255;
+            Projectile.width = 32;
+            Projectile.height = 32;
+            Projectile.hostile = true;
+            Projectile.tileCollide = false;
+            Projectile.timeLeft = 150;
+            Projectile.light = 0f;
+            Projectile.alpha = 255;
         }
         public override void AI()
         {
-            projectile.scale += 0.01f;
-            projectile.light += 0.01f;
-            projectile.alpha -= 5;
-            projectile.rotation += 0.1f;
-            projectile.velocity.X *= 0.95f;
-            projectile.velocity.Y *= 0.95f;
+            Projectile.scale += 0.01f;
+            Projectile.light += 0.01f;
+            Projectile.alpha -= 5;
+            Projectile.rotation += 0.1f;
+            Projectile.velocity.X *= 0.95f;
+            Projectile.velocity.Y *= 0.95f;
         }
         public override void Kill(int timeLeft)
         {
             for (int starSpawn = 0; starSpawn < 8; starSpawn++)
             {
-                int bigMakeLittle = Projectile.NewProjectile(projectile.position.X, projectile.position.Y, Main.rand.Next(-10, 11), Main.rand.Next(-10, 11), ProjectileID.FallingStar, projectile.damage, projectile.knockBack, projectile.owner);
+                int bigMakeLittle = Projectile.NewProjectile(Projectile.position.X, Projectile.position.Y, Main.rand.Next(-10, 11), Main.rand.Next(-10, 11), ProjectileID.FallingStar, Projectile.damage, Projectile.knockBack, Projectile.owner);
                 Main.projectile[bigMakeLittle].friendly = false;
                 Main.projectile[bigMakeLittle].hostile = true;
                 Main.projectile[bigMakeLittle].timeLeft = 600;

@@ -10,27 +10,27 @@ namespace NimblesThrowingStuff.Items.Materials
 	{
 		public override void SetDefaults() 
 		{
-			item.width = 28;
-			item.height = 28;
-			item.useTime = 6;
-			item.useAnimation = 12;
-			item.useStyle = 1;
-			item.value = Item.buyPrice(0, 10, 0, 0);
-			item.rare = 11;
-			item.UseSound = SoundID.Item1;
-			item.autoReuse = true;
-            item.useTurn = true;
-            item.createTile = ModContent.TileType<ProcellariteBarTile>();
-            item.consumable = true;
-            item.maxStack = 999;
+			Item.width = 28;
+			Item.height = 28;
+			Item.useTime = 6;
+			Item.useAnimation = 12;
+			Item.useStyle = 1;
+			Item.value = Item.buyPrice(0, 10, 0, 0);
+			Item.rare = 11;
+			Item.UseSound = SoundID.Item1;
+			Item.autoReuse = true;
+            Item.useTurn = true;
+            Item.createTile = ModContent.TileType<ProcellariteBarTile>();
+            Item.consumable = true;
+            Item.maxStack = 999;
 		}
         public override void AddRecipes() 
 		{
-			ModRecipe recipe = new ModRecipe(mod);
+			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ModContent.ItemType<ProcellariteOre>(), 5);
 			recipe.AddTile(TileID.LunarCraftingStation);
 			recipe.SetResult(this);
-			recipe.AddRecipe();
+			recipe.Register();
 		}
 	}
 }

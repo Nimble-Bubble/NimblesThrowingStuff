@@ -16,30 +16,30 @@ namespace NimblesThrowingStuff.Projectiles.Magic
 
         public override void SetDefaults()
         {
-            projectile.width = 32;
-            projectile.height = 32;
-            projectile.friendly = true;
-            projectile.tileCollide = false;
-            projectile.usesLocalNPCImmunity = true;
-            projectile.localNPCHitCooldown = 10;
-            projectile.timeLeft = 150;
-            projectile.light = 0f;
-            projectile.alpha = 255;
+            Projectile.width = 32;
+            Projectile.height = 32;
+            Projectile.friendly = true;
+            Projectile.tileCollide = false;
+            Projectile.usesLocalNPCImmunity = true;
+            Projectile.localNPCHitCooldown = 10;
+            Projectile.timeLeft = 150;
+            Projectile.light = 0f;
+            Projectile.alpha = 255;
         }
         public override void AI()
         {
-            projectile.scale += 0.01f;
-            projectile.light += 0.01f;
-            projectile.alpha -= 5;
-            projectile.rotation += 0.1f;
-            projectile.velocity.X *= 0.975f;
-            projectile.velocity.Y *= 0.975f;
+            Projectile.scale += 0.01f;
+            Projectile.light += 0.01f;
+            Projectile.alpha -= 5;
+            Projectile.rotation += 0.1f;
+            Projectile.velocity.X *= 0.975f;
+            Projectile.velocity.Y *= 0.975f;
         }
         public override void Kill(int timeLeft)
         {
             for (int starSpawn = 0; starSpawn < 8; starSpawn++)
             {
-                int bigMakeLittle = Projectile.NewProjectile(projectile.position.X, projectile.position.Y, Main.rand.Next(-10, 11), Main.rand.Next(-10, 11), ProjectileID.FallingStar, projectile.damage / 4, projectile.knockBack, projectile.owner);
+                int bigMakeLittle = Projectile.NewProjectile(Projectile.position.X, Projectile.position.Y, Main.rand.Next(-10, 11), Main.rand.Next(-10, 11), ProjectileID.FallingStar, Projectile.damage / 4, Projectile.knockBack, Projectile.owner);
                 Main.projectile[bigMakeLittle].friendly = true;
                 Main.projectile[bigMakeLittle].magic = true;
                 Main.projectile[bigMakeLittle].usesLocalNPCImmunity = true;

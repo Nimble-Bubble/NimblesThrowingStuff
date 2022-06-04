@@ -13,27 +13,27 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
         public override void SetStaticDefaults()
         {
 			Tooltip.SetDefault("A very agile yoyo that rains spikes upon its targets");
-			ItemID.Sets.Yoyo[item.type] = true;
-			ItemID.Sets.GamepadExtraRange[item.type] = 50;
-			ItemID.Sets.GamepadSmartQuickReach[item.type] = true;
+			ItemID.Sets.Yoyo[Item.type] = true;
+			ItemID.Sets.GamepadExtraRange[Item.type] = 50;
+			ItemID.Sets.GamepadSmartQuickReach[Item.type] = true;
         }
         public override void SetDefaults() {
-			item.damage = 220;
-			item.useStyle = ItemUseStyleID.HoldingOut;
-			item.useAnimation = 24;
-			item.useTime = 24;
-			item.knockBack = 7f;
-			item.width = 20;
-			item.height = 20;
-			item.noUseGraphic = true;
-			item.noMelee = true;
-			item.rare = ItemRarityID.Purple;
-			item.value = Item.buyPrice(1, 0, 0, 0);
-            item.melee = true;
-			item.channel = true;
-            item.shoot = ModContent.ProjectileType<SkyseaSpinnerProj>();
-            item.shootSpeed = 14f;
-			item.UseSound = SoundID.Item1;
+			Item.damage = 220;
+			Item.useStyle = ItemUseStyleID.Shoot;
+			Item.useAnimation = 24;
+			Item.useTime = 24;
+			Item.knockBack = 7f;
+			Item.width = 20;
+			Item.height = 20;
+			Item.noUseGraphic = true;
+			Item.noMelee = true;
+			Item.rare = ItemRarityID.Purple;
+			Item.value = Item.buyPrice(1, 0, 0, 0);
+            Item.DamageType = DamageClass.Melee;
+			Item.channel = true;
+            Item.shoot = ModContent.ProjectileType<SkyseaSpinnerProj>();
+            Item.shootSpeed = 14f;
+			Item.UseSound = SoundID.Item1;
 		}
 	}
 }

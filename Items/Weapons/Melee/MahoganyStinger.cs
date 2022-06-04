@@ -17,33 +17,33 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 				+"\nHits may poison enemies.");
         }
         public override void SetDefaults() {
-			item.damage = 22;
-			item.useStyle = ItemUseStyleID.HoldingOut;
-			item.useAnimation = 35;
-			item.useTime = 35;
-			item.knockBack = 4.5f;
-			item.width = 20;
-			item.height = 20;
-			item.noUseGraphic = true;
-			item.noMelee = true;
-			item.rare = ItemRarityID.Green;
-			item.value = Item.buyPrice(0, 4, 5, 0);
-            item.melee = true;
-			item.channel = true;
-            item.shoot = ModContent.ProjectileType<MahoganyStingerProj>();
-            item.shootSpeed = 9f;
-			item.UseSound = SoundID.Item1;
+			Item.damage = 22;
+			Item.useStyle = ItemUseStyleID.Shoot;
+			Item.useAnimation = 35;
+			Item.useTime = 35;
+			Item.knockBack = 4.5f;
+			Item.width = 20;
+			Item.height = 20;
+			Item.noUseGraphic = true;
+			Item.noMelee = true;
+			Item.rare = ItemRarityID.Green;
+			Item.value = Item.buyPrice(0, 4, 5, 0);
+            Item.DamageType = DamageClass.Melee;
+			Item.channel = true;
+            Item.shoot = ModContent.ProjectileType<MahoganyStingerProj>();
+            Item.shootSpeed = 9f;
+			Item.UseSound = SoundID.Item1;
 		}
 		public override void AddRecipes()
 		{
-			var recipe = new ModRecipe(mod);
+			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.RichMahogany, 12);
 			recipe.AddIngredient(ItemID.JungleSpores, 12);
 			recipe.AddIngredient(ItemID.Stinger, 3);
 			recipe.AddIngredient(ModContent.ItemType<RobustTusk>());
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
-			recipe.AddRecipe();
+			recipe.Register();
 		}
 	}
 }

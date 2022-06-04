@@ -7,12 +7,12 @@ namespace NimblesThrowingStuff.Walls
 {
     public class HadalShellstoneWallTile : ModWall
     {
-        public override void SetDefaults()
+        public override void SetStaticDefaults()
         {
             Main.wallHouse[Type] = true;
-            drop = ModContent.ItemType<HadalShellstoneWall>();
+            ItemDrop = ModContent.ItemType<HadalShellstoneWall>();
             AddMapEntry(new Color(4, 36, 54));
-            dustType = 42;
+            DustType = 42;
         }
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {

@@ -2,13 +2,14 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
+using Terraria.ID;
 using Terraria.ObjectData;
  
 namespace NimblesThrowingStuff.Tiles.Banners
 {
     public class KelbiBanner : ModTile
     {
-        public override void SetDefaults()
+        public override void SetStaticDefaults()
         {
             Main.tileFrameImportant[Type] = true;
             Main.tileNoAttach[Type] = true;
@@ -19,15 +20,15 @@ namespace NimblesThrowingStuff.Tiles.Banners
             TileObjectData.newTile.StyleHorizontal = true;
             TileObjectData.newTile.StyleWrapLimit = 111;
             TileObjectData.addTile(Type);
-            disableSmartCursor = true;
-			ModTranslation name = CreateMapEntryName();
+            TileID.Sets.DisableSmartCursor[Type] = true;
+            ModTranslation name = CreateMapEntryName();
 			name.SetDefault("Kelbi Banner");
             AddMapEntry(new Color(68, 181, 154), name); 
         }
  
         public override void KillMultiTile(int i, int j, int frameX, int frameY)
         {
-            Item.NewItem(i * 16, j * 16, 16, 48, mod.ItemType("KelbiBannerItem"));
+            Item.NewItem(i * 16, j * 16, 16, 48, Mod.Find<ModItem>("KelbiBannerItem").Type);
         }
  
         public override void NearbyEffects(int i, int j, bool closer)   
@@ -35,7 +36,7 @@ namespace NimblesThrowingStuff.Tiles.Banners
             if (closer)          
             {
                 Player player = Main.LocalPlayer;
-                player.NPCBannerBuff[mod.NPCType("Kelbi")] = true;	
+                player.NPCBannerBuff[Mod.Find<ModNPC>("Kelbi").Type] = true;	
                 player.hasBanner = true;
             }
         }

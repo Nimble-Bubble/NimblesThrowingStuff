@@ -9,24 +9,24 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 	{
 		public override void SetDefaults() 
 		{
-			item.damage = 38;
-			item.thrown = true;
-			item.width = 34;
-			item.height = 34;
-			item.useTime = 16;
-			item.useAnimation = 16;
-			item.useStyle = 1;
-			item.knockBack = 1f;
-            item.noMelee = true;
-            item.noUseGraphic = true;
-			item.value = Item.buyPrice(0, 0, 12, 50);
-			item.rare = 5;
-			item.UseSound = SoundID.Item1;
-			item.autoReuse = true;
-			item.shoot = mod.ProjectileType("ShadowflameSpikeBallProj");
-			item.shootSpeed = 6f;
-            item.consumable = true;
-            item.maxStack = 999;
+			Item.damage = 38;
+			Item.DamageType = DamageClass.Throwing;
+			Item.width = 34;
+			Item.height = 34;
+			Item.useTime = 16;
+			Item.useAnimation = 16;
+			Item.useStyle = 1;
+			Item.knockBack = 1f;
+            Item.noMelee = true;
+            Item.noUseGraphic = true;
+			Item.value = Item.buyPrice(0, 0, 12, 50);
+			Item.rare = 5;
+			Item.UseSound = SoundID.Item1;
+			Item.autoReuse = true;
+			Item.shoot = Mod.Find<ModProjectile>("ShadowflameSpikeBallProj").Type;
+			Item.shootSpeed = 6f;
+            Item.consumable = true;
+            Item.maxStack = 999;
 		}
 	}
 }

@@ -9,32 +9,32 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 
 		public override void SetDefaults() 
 		{
-			item.damage = 60;
-			item.thrown = true;
-			item.width = 24;
-			item.height = 24;
-			item.useTime = 27;
-			item.useAnimation = 27;
-			item.useStyle = 1;
-			item.knockBack = 7f;
-            item.noMelee = true;
-            item.noUseGraphic = true;
-			item.value = Item.buyPrice(0, 25, 0, 0);
-			item.rare = 5;
-			item.UseSound = SoundID.Item1;
-			item.autoReuse = true;
-			item.shoot = mod.ProjectileType("HallowedWaraxeProj");
-			item.shootSpeed = 12f;
-            item.mana = 10;
+			Item.damage = 60;
+			Item.DamageType = DamageClass.Throwing;
+			Item.width = 24;
+			Item.height = 24;
+			Item.useTime = 27;
+			Item.useAnimation = 27;
+			Item.useStyle = 1;
+			Item.knockBack = 7f;
+            Item.noMelee = true;
+            Item.noUseGraphic = true;
+			Item.value = Item.buyPrice(0, 25, 0, 0);
+			Item.rare = 5;
+			Item.UseSound = SoundID.Item1;
+			Item.autoReuse = true;
+			Item.shoot = Mod.Find<ModProjectile>("HallowedWaraxeProj").Type;
+			Item.shootSpeed = 12f;
+            Item.mana = 10;
 		}
 
 		public override void AddRecipes() 
 		{
-			ModRecipe recipe = new ModRecipe(mod);
+			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.HallowedBar, 8);
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);
-			recipe.AddRecipe();
+			recipe.Register();
 		}
 	}
 }

@@ -9,7 +9,7 @@ namespace NimblesThrowingStuff.Tiles.Trophies
 {
     public class MorilusTrophyTile : ModTile
     {
-        public override void SetDefaults()
+        public override void SetStaticDefaults()
         {
             Main.tileFrameImportant[Type] = true;
             Main.tileLavaDeath[Type] = false;
@@ -18,8 +18,8 @@ namespace NimblesThrowingStuff.Tiles.Trophies
             TileObjectData.newTile.StyleHorizontal = true;
             TileObjectData.newTile.StyleWrapLimit = 36;
             TileObjectData.addTile(Type);
-            dustType = 43;
-            disableSmartCursor = true;
+            DustType = 43;
+            DisableSmartCursor = true;
 			ModTranslation name = CreateMapEntryName();
 			name.SetDefault("Morilus Trophy");
             AddMapEntry(new Color(255, 136, 64), name); 
@@ -27,7 +27,7 @@ namespace NimblesThrowingStuff.Tiles.Trophies
  
         public override void KillMultiTile(int i, int j, int frameX, int frameY)
         {
-            Item.NewItem(i * 16, j * 16, 16, 48, mod.ItemType("MorilusTrophy"));
+            Item.NewItem(i * 16, j * 16, 16, 48, Mod.Find<ModItem>("MorilusTrophy").Type);
         }
     }
 }

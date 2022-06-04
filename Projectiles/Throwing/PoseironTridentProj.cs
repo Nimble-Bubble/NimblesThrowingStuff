@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
+using Terraria.Audio;
 using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.Enums;
@@ -15,18 +16,18 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
         private int bub = 0;
         public override void SetDefaults()
         {
-            projectile.width = 38;
-            projectile.height = 38;
-            projectile.usesLocalNPCImmunity = true;
-            projectile.localNPCHitCooldown = 10;
-            projectile.tileCollide = false;
-            projectile.penetrate = 10;
-            projectile.friendly = true;
-            projectile.thrown = true;
-            projectile.aiStyle = 1;
-            projectile.extraUpdates = 2;
-            projectile.ignoreWater = true;
-            projectile.timeLeft = 150;
+            Projectile.width = 38;
+            Projectile.height = 38;
+            Projectile.usesLocalNPCImmunity = true;
+            Projectile.localNPCHitCooldown = 10;
+            Projectile.tileCollide = false;
+            Projectile.penetrate = 10;
+            Projectile.friendly = true;
+            Projectile.DamageType = DamageClass.Throwing;
+            Projectile.aiStyle = 1;
+            Projectile.extraUpdates = 2;
+            Projectile.ignoreWater = true;
+            Projectile.timeLeft = 150;
         }
         public override void OnHitNPC (NPC target, int damage, float knockback, bool crit)
         {
@@ -35,21 +36,21 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
         }
         public override void AI()
         {
-            Dust.NewDust(new Vector2(projectile.position.X, projectile.position.Y), projectile.width, projectile.height, 206,
-                            projectile.velocity.X * 0.1f, projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
+            Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 206,
+                            Projectile.velocity.X * 0.1f, Projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
          bub++;
          if (bub >= 30)
          {
-           int ble1 = Projectile.NewProjectile(projectile.Center, projectile.velocity.RotatedBy(MathHelper.ToRadians(170)),
-                            ModContent.ProjectileType<PoseironBubble>(), projectile.damage / 3, 0.5f, projectile.owner, 0.0f, (float) 1);
+           int ble1 = Projectile.NewProjectile(Projectile.Center, Projectile.velocity.RotatedBy(MathHelper.ToRadians(170)),
+                            ModContent.ProjectileType<PoseironBubble>(), Projectile.damage / 3, 0.5f, Projectile.owner, 0.0f, (float) 1);
                 Main.projectile[ble1].thrown = true;
                 Main.projectile[ble1].magic = false;
-             int ble2 = Projectile.NewProjectile(projectile.Center, projectile.velocity.RotatedBy(MathHelper.ToRadians(180)),
-                            ModContent.ProjectileType<PoseironBubble>(), projectile.damage / 3, 0.5f, projectile.owner, 0.0f, (float) 1);
+             int ble2 = Projectile.NewProjectile(Projectile.Center, Projectile.velocity.RotatedBy(MathHelper.ToRadians(180)),
+                            ModContent.ProjectileType<PoseironBubble>(), Projectile.damage / 3, 0.5f, Projectile.owner, 0.0f, (float) 1);
                 Main.projectile[ble2].thrown = true;
                 Main.projectile[ble2].magic = false;
-             int ble3 = Projectile.NewProjectile(projectile.Center, projectile.velocity.RotatedBy(MathHelper.ToRadians(190)),
-                            ModContent.ProjectileType<PoseironBubble>(), projectile.damage / 3, 0.5f, projectile.owner, 0.0f, (float) 1);
+             int ble3 = Projectile.NewProjectile(Projectile.Center, Projectile.velocity.RotatedBy(MathHelper.ToRadians(190)),
+                            ModContent.ProjectileType<PoseironBubble>(), Projectile.damage / 3, 0.5f, Projectile.owner, 0.0f, (float) 1);
                 Main.projectile[ble3].thrown = true;
                 Main.projectile[ble3].magic = false;
              bub = 0;
@@ -57,7 +58,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
         }
         public override void Kill(int timeLeft) 
         {
-            Main.PlaySound(0, (int) projectile.position.X, (int) projectile.position.Y, 1, 1f, 0.0f);
+            SoundEngine.PlaySound(0, (int) Projectile.position.X, (int) Projectile.position.Y, 1, 1f, 0.0f);
         }
     }
 }

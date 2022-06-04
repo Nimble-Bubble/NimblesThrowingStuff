@@ -13,23 +13,23 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 
 		public override void SetDefaults() 
 		{
-			item.damage = 73;
-			item.thrown = true;
-			item.width = 24;
-			item.height = 24;
-			item.useTime = 52;
-			item.useAnimation = 52;
-			item.useStyle = 1;
-			item.knockBack = 7f;
-            item.noMelee = true;
-            item.noUseGraphic = true;
-			item.value = Item.buyPrice(0, 37, 50, 0);
-			item.rare = 8;
-			item.UseSound = SoundID.Item1;
-			item.autoReuse = true;
-			item.shoot = mod.ProjectileType("UnholyHandGrenadeProj");
-			item.shootSpeed = 9f;
-            item.mana = 15;
+			Item.damage = 73;
+			Item.DamageType = DamageClass.Throwing;
+			Item.width = 24;
+			Item.height = 24;
+			Item.useTime = 52;
+			Item.useAnimation = 52;
+			Item.useStyle = 1;
+			Item.knockBack = 7f;
+            Item.noMelee = true;
+            Item.noUseGraphic = true;
+			Item.value = Item.buyPrice(0, 37, 50, 0);
+			Item.rare = 8;
+			Item.UseSound = SoundID.Item1;
+			Item.autoReuse = true;
+			Item.shoot = Mod.Find<ModProjectile>("UnholyHandGrenadeProj").Type;
+			Item.shootSpeed = 9f;
+            Item.mana = 15;
 		}
 	}
 }

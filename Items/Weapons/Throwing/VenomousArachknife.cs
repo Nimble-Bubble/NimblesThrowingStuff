@@ -13,33 +13,33 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 
 		public override void SetDefaults() 
 		{
-			item.damage = 48;
-			item.thrown = true;
-			item.width = 24;
-			item.height = 24;
-			item.useTime = 32;
-			item.useAnimation = 32;
-			item.useStyle = 1;
-			item.knockBack = 8f;
-            item.noMelee = true;
-            item.noUseGraphic = true;
-			item.value = Item.buyPrice(0, 16, 0, 0);
-			item.rare = 6;
-			item.UseSound = SoundID.Item1;
-			item.autoReuse = true;
-			item.shoot = mod.ProjectileType("VenomousArachknifeProj");
-			item.shootSpeed = 12f;
-            item.mana = 12;
+			Item.damage = 48;
+			Item.DamageType = DamageClass.Throwing;
+			Item.width = 24;
+			Item.height = 24;
+			Item.useTime = 32;
+			Item.useAnimation = 32;
+			Item.useStyle = 1;
+			Item.knockBack = 8f;
+            Item.noMelee = true;
+            Item.noUseGraphic = true;
+			Item.value = Item.buyPrice(0, 16, 0, 0);
+			Item.rare = 6;
+			Item.UseSound = SoundID.Item1;
+			Item.autoReuse = true;
+			Item.shoot = Mod.Find<ModProjectile>("VenomousArachknifeProj").Type;
+			Item.shootSpeed = 12f;
+            Item.mana = 12;
 		}
 
 		public override void AddRecipes() 
 		{
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.ItemType("Arachknife"));
+			Recipe recipe = CreateRecipe();
+			recipe.AddIngredient(Mod.Find<ModItem>("Arachknife").Type);
             recipe.AddIngredient(1006, 12);
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);
-			recipe.AddRecipe();
+			recipe.Register();
 		}
 	}
 }

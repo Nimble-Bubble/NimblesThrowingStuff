@@ -9,34 +9,33 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 
 		public override void SetDefaults() 
 		{
-			item.damage = 64;
-			item.thrown = true;
-			item.width = 24;
-			item.height = 24;
-			item.useTime = 15;
-			item.useAnimation = 15;
-			item.useStyle = 1;
-			item.knockBack = 7f;
-            item.noMelee = true;
-            item.noUseGraphic = true;
-			item.value = Item.buyPrice(1, 0, 0, 0);
-			item.rare = 8;
-			item.UseSound = SoundID.Item1;
-			item.autoReuse = false;
-			item.shoot = mod.ProjectileType("TerraDaggerProj");
-			item.shootSpeed = 22.5f;
-            item.mana = 50;
-            item.channel = true;
+			Item.damage = 64;
+			Item.DamageType = DamageClass.Throwing;
+			Item.width = 24;
+			Item.height = 24;
+			Item.useTime = 15;
+			Item.useAnimation = 15;
+			Item.useStyle = 1;
+			Item.knockBack = 7f;
+            Item.noMelee = true;
+            Item.noUseGraphic = true;
+			Item.value = Item.buyPrice(1, 0, 0, 0);
+			Item.rare = 8;
+			Item.UseSound = SoundID.Item1;
+			Item.autoReuse = false;
+			Item.shoot = Mod.Find<ModProjectile>("TerraDaggerProj").Type;
+			Item.shootSpeed = 22.5f;
+            Item.mana = 50;
+            Item.channel = true;
 		}
 
 		public override void AddRecipes() 
 		{
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.ItemType("TrueHallowedWaraxe"));
-            recipe.AddIngredient(mod.ItemType("TrueNightPiercer"));
+			Recipe recipe = CreateRecipe();
+			recipe.AddIngredient(Mod.Find<ModItem>("TrueHallowedWaraxe").Type);
+            recipe.AddIngredient(Mod.Find<ModItem>("TrueNightPiercer").Type);
 			recipe.AddTile(TileID.MythrilAnvil);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			recipe.Register();
 		}
 	}
 }

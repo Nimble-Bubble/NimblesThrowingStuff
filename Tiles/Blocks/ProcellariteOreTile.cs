@@ -7,24 +7,24 @@ namespace NimblesThrowingStuff.Tiles.Blocks
 {
     public class ProcellariteOreTile : ModTile
     {
-        public override void SetDefaults()
+        public override void SetStaticDefaults()
         {
             TileID.Sets.Ore[Type] = true;
             Main.tileShine2[Type] = true;
             Main.tileMergeDirt[Type] = true;
-            Main.tileValue[Type] = 825;
+            Main.tileOreFinderPriority[Type] = 825;
             Main.tileShine[Type] = 975;
             Main.tileSolid[Type] = true;
             Main.tileBlockLight[Type] = true;
             Main.tileMergeDirt[Type] = true;
 
-            drop = ModContent.ItemType<ProcellariteOre>();
+            ItemDrop = ModContent.ItemType<ProcellariteOre>();
             ModTranslation name = CreateMapEntryName();
             name.SetDefault("Procellarite Ore");
             AddMapEntry(new Color(0, 200, 185), name);
             mineResist = 8f;
             minPick = 225;
-            dustType = 43;
+            DustType = 43;
             soundType = 21;
             soundStyle = 1;
             Main.tileSpelunker[Type] = true;

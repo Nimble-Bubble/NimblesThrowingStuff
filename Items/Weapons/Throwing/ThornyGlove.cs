@@ -14,33 +14,28 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 
 		public override void SetDefaults() 
 		{
-			item.damage = 40;
-			item.thrown = true;
-			item.width = 34;
-			item.height = 34;
-			item.useTime = 10;
-			item.useAnimation = 10;
-			item.useStyle = 1;
-			item.knockBack = 3.6f;
-            item.noMelee = true;
-            item.noUseGraphic = true;
-			item.value = Item.buyPrice(0, 36, 0, 0);
-			item.rare = 7;
-			item.UseSound = SoundID.Item5;
-			item.autoReuse = true;
-			item.shoot = mod.ProjectileType("PoisonSeedProj");
-			item.shootSpeed = 12f;
-            item.mana = 6;
+			Item.damage = 40;
+			Item.DamageType = DamageClass.Throwing;
+			Item.width = 34;
+			Item.height = 34;
+			Item.useTime = 10;
+			Item.useAnimation = 10;
+			Item.useStyle = 1;
+			Item.knockBack = 3.6f;
+            Item.noMelee = true;
+            Item.noUseGraphic = true;
+			Item.value = Item.buyPrice(0, 36, 0, 0);
+			Item.rare = 7;
+			Item.UseSound = SoundID.Item5;
+			Item.autoReuse = true;
+			Item.shoot = Mod.Find<ModProjectile>("PoisonSeedProj").Type;
+			Item.shootSpeed = 12f;
+            Item.mana = 6;
 		}
-        public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
+        public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
 		{
-      int numberProjectiles = 1; 
-			for (int i = 0; i < numberProjectiles; i++)
-			{
-				Vector2 perturbedSpeed = new Vector2(speedX, speedY).RotatedByRandom(MathHelper.ToRadians(20)); 
-				Projectile.NewProjectile(position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, type, damage, knockBack, player.whoAmI);
-			}
-			return false;
+				Vector2 perturbedSpeed = velocity.RotatedByRandom(MathHelper.ToRadians(20));
+			velocity = perturbedSpeed;
         }
 	}
 }

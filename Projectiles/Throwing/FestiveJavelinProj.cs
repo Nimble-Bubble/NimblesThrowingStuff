@@ -1,6 +1,7 @@
 using Microsoft.Xna.Framework;
 using System.Collections.Generic;
 using Terraria;
+using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
@@ -12,39 +13,16 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 
 		public override void SetDefaults()
 		{
-			projectile.width = 22;
-			projectile.height = 22;
-			projectile.friendly = true;
-            projectile.usesLocalNPCImmunity = true;
-            projectile.localNPCHitCooldown = 60;
-			projectile.thrown = true;
-			projectile.penetrate = 2;
-			projectile.hide = true;
+			Projectile.width = 22;
+			Projectile.height = 22;
+			Projectile.friendly = true;
+            Projectile.usesLocalNPCImmunity = true;
+            Projectile.localNPCHitCooldown = 60;
+			Projectile.DamageType = DamageClass.Throwing;
+			Projectile.penetrate = 2;
+			Projectile.hide = true;
 		}
-
-		public override void DrawBehind(int index, List<int> drawCacheProjsBehindNPCsAndTiles, List<int> drawCacheProjsBehindNPCs, List<int> drawCacheProjsBehindProjectiles, List<int> drawCacheProjsOverWiresUI)
-		{
-			if (projectile.ai[0] == 1f) 
-			{
-				int npcIndex = (int)projectile.ai[1];
-				if (npcIndex >= 0 && npcIndex < 200 && Main.npc[npcIndex].active)
-				{
-					if (Main.npc[npcIndex].behindTiles)
-					{
-						drawCacheProjsBehindNPCsAndTiles.Add(index);
-					}
-					else
-					{
-						drawCacheProjsBehindNPCs.Add(index);
-					}
-
-					return;
-				}
-			}
-			drawCacheProjsBehindProjectiles.Add(index);
-		}
-
-		public override bool TileCollideStyle(ref int width, ref int height, ref bool fallThrough)
+		public override bool TileCollideStyle(ref int width, ref int height, ref bool fallThrough, ref Vector2 hitboxCenterFrac)
 		{
 			width = height = 10; 
 			return true;
@@ -61,46 +39,46 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 
 		public override void Kill(int timeLeft)
 		{
-			Main.PlaySound(0, (int)projectile.position.X, (int)projectile.position.Y); 
-			Vector2 usePos = projectile.position; 
-			Vector2 rotVector = (projectile.rotation - MathHelper.ToRadians(90f)).ToRotationVector2(); 
+			SoundEngine.PlaySound(0, (int)Projectile.position.X, (int)Projectile.position.Y); 
+			Vector2 usePos = Projectile.position; 
+			Vector2 rotVector = (Projectile.rotation - MathHelper.ToRadians(90f)).ToRotationVector2(); 
 			usePos += rotVector * 16f;
 			const int NUM_DUSTS = 5;
 			for (int i = 0; i < NUM_DUSTS; i++)
 			{
-				Dust dust = Dust.NewDustDirect(usePos, projectile.width, projectile.height, 16);
-				dust.position = (dust.position + projectile.Center) / 2f;
+				Dust dust = Dust.NewDustDirect(usePos, Projectile.width, Projectile.height, 16);
+				dust.position = (dust.position + Projectile.Center) / 2f;
 				dust.velocity += rotVector * 2f;
 				dust.velocity *= 0.5f;
 				dust.noGravity = true;
 				usePos -= rotVector * 8f;
 			}
-            Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, 0, -20,
-                            mod.ProjectileType("FestiveSnowflake"), projectile.damage / 4, 1f, projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
-            Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, 20, -20,
-                            mod.ProjectileType("FestiveSnowflake"), projectile.damage / 4, 1f, projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
-            Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, 20, 0,
-                            mod.ProjectileType("FestiveSnowflake"), projectile.damage / 4, 1f, projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
-            Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, 20, 20,
-                            mod.ProjectileType("FestiveSnowflake"), projectile.damage / 4, 1f, projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
-            Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, 0, 20,
-                            mod.ProjectileType("FestiveSnowflake"), projectile.damage / 4, 1f, projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
-            Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, -20, 20,
-                            mod.ProjectileType("FestiveSnowflake"), projectile.damage / 4, 1f, projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
-            Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, -20, 0,
-                            mod.ProjectileType("FestiveSnowflake"), projectile.damage / 4, 1f, projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
-            Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, -20, -20,
-                            mod.ProjectileType("FestiveSnowflake"), projectile.damage / 4, 1f, projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
+            Projectile.NewProjectile(Projectile.Center.X, Projectile.Center.Y, 0, -20,
+                            Mod.Find<ModProjectile>("FestiveSnowflake").Type, Projectile.damage / 4, 1f, Projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
+            Projectile.NewProjectile(Projectile.Center.X, Projectile.Center.Y, 20, -20,
+                            Mod.Find<ModProjectile>("FestiveSnowflake").Type, Projectile.damage / 4, 1f, Projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
+            Projectile.NewProjectile(Projectile.Center.X, Projectile.Center.Y, 20, 0,
+                            Mod.Find<ModProjectile>("FestiveSnowflake").Type, Projectile.damage / 4, 1f, Projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
+            Projectile.NewProjectile(Projectile.Center.X, Projectile.Center.Y, 20, 20,
+                            Mod.Find<ModProjectile>("FestiveSnowflake").Type, Projectile.damage / 4, 1f, Projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
+            Projectile.NewProjectile(Projectile.Center.X, Projectile.Center.Y, 0, 20,
+                            Mod.Find<ModProjectile>("FestiveSnowflake").Type, Projectile.damage / 4, 1f, Projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
+            Projectile.NewProjectile(Projectile.Center.X, Projectile.Center.Y, -20, 20,
+                            Mod.Find<ModProjectile>("FestiveSnowflake").Type, Projectile.damage / 4, 1f, Projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
+            Projectile.NewProjectile(Projectile.Center.X, Projectile.Center.Y, -20, 0,
+                            Mod.Find<ModProjectile>("FestiveSnowflake").Type, Projectile.damage / 4, 1f, Projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
+            Projectile.NewProjectile(Projectile.Center.X, Projectile.Center.Y, -20, -20,
+                            Mod.Find<ModProjectile>("FestiveSnowflake").Type, Projectile.damage / 4, 1f, Projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
 		}
 		public bool IsStickingToTarget
 		{
-			get => projectile.ai[0] == 1f;
-			set => projectile.ai[0] = value ? 1f : 0f;
+			get => Projectile.ai[0] == 1f;
+			set => Projectile.ai[0] = value ? 1f : 0f;
 		}
 		public int TargetWhoAmI
 		{
-			get => (int)projectile.ai[1];
-			set => projectile.ai[1] = value;
+			get => (int)Projectile.ai[1];
+			set => Projectile.ai[1] = value;
 		}
 
 		private const int MAX_STICKY_JAVELINS = 10; 
@@ -110,10 +88,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 		{
 			IsStickingToTarget = true; 
 			TargetWhoAmI = target.whoAmI; 
-			projectile.velocity =
-				(target.Center - projectile.Center) *
+			Projectile.velocity =
+				(target.Center - Projectile.Center) *
 				0.75f; 
-			projectile.netUpdate = true; 
+			Projectile.netUpdate = true; 
 			UpdateStickyJavelins(target);
 		}
 		private void UpdateStickyJavelins(NPC target)
@@ -123,11 +101,11 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 			for (int i = 0; i < Main.maxProjectiles; i++) 
 			{
 				Projectile currentProjectile = Main.projectile[i];
-				if (i != projectile.whoAmI 
+				if (i != Projectile.whoAmI 
 					&& currentProjectile.active 
 					&& currentProjectile.owner == Main.myPlayer 
-					&& currentProjectile.type == projectile.type 
-					&& currentProjectile.modProjectile is FestiveJavelinProj daggerProjectile 
+					&& currentProjectile.type == Projectile.type 
+					&& currentProjectile.ModProjectile is FestiveJavelinProj daggerProjectile 
 					&& daggerProjectile.IsStickingToTarget 
 					&& daggerProjectile.TargetWhoAmI == target.whoAmI)
 				{
@@ -162,14 +140,14 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 
 		private void UpdateAlpha()
 		{
-			if (projectile.alpha > 0)
+			if (Projectile.alpha > 0)
 			{
-				projectile.alpha -= ALPHA_REDUCTION;
+				Projectile.alpha -= ALPHA_REDUCTION;
 			}
 
-			if (projectile.alpha < 0)
+			if (Projectile.alpha < 0)
 			{
-				projectile.alpha = 0;
+				Projectile.alpha = 0;
 			}
 		}
 
@@ -179,37 +157,37 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 			deathCount++;
             if (deathCount >= 100)
             {
-				projectile.Kill();
+				Projectile.Kill();
 			}
 			if (TargetWhoAmI >= MAX_TICKS)
 			{
 				const float velXmult = 0.98f; 
 				const float velYmult = 0.14f; 
 				TargetWhoAmI = MAX_TICKS; 
-				projectile.velocity.X *= velXmult;
-				projectile.velocity.Y += velYmult;
+				Projectile.velocity.X *= velXmult;
+				Projectile.velocity.Y += velYmult;
 			}
-			projectile.rotation =
-				projectile.velocity.ToRotation() +
+			Projectile.rotation =
+				Projectile.velocity.ToRotation() +
 				MathHelper.ToRadians(90f);
 		}
 
 		private void StickyAI()
 		{
-			projectile.ignoreWater = true; 
-			projectile.tileCollide = false; 
+			Projectile.ignoreWater = true; 
+			Projectile.tileCollide = false; 
 			const int aiFactor = 3; 
-			projectile.localAI[0] += 1f;
-			bool hitEffect = projectile.localAI[0] % 30f == 0f;
+			Projectile.localAI[0] += 1f;
+			bool hitEffect = Projectile.localAI[0] % 30f == 0f;
 			int projTargetIndex = (int)TargetWhoAmI;
-			if (projectile.localAI[0] >= 60 * aiFactor || projTargetIndex < 0 || projTargetIndex >= 200)
+			if (Projectile.localAI[0] >= 60 * aiFactor || projTargetIndex < 0 || projTargetIndex >= 200)
 			{ 
-				projectile.Kill();
+				Projectile.Kill();
 			}
 			else if (Main.npc[projTargetIndex].active && !Main.npc[projTargetIndex].dontTakeDamage)
 			{ 
-				projectile.Center = Main.npc[projTargetIndex].Center - projectile.velocity * 2f;
-				projectile.gfxOffY = Main.npc[projTargetIndex].gfxOffY;
+				Projectile.Center = Main.npc[projTargetIndex].Center - Projectile.velocity * 2f;
+				Projectile.gfxOffY = Main.npc[projTargetIndex].gfxOffY;
 				if (hitEffect)
 				{ 
 					Main.npc[projTargetIndex].HitEffect(0, 1.0);
@@ -217,7 +195,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 			}
 			else
 			{ 
-				projectile.Kill();
+				Projectile.Kill();
 			}
 		}
 	}

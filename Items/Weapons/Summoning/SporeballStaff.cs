@@ -14,42 +14,41 @@ namespace NimblesThrowingStuff.Items.Weapons.Summoning
 		{
 			DisplayName.SetDefault("Sporeball Staff"); 
 			Tooltip.SetDefault("Summons poisonous spore balls");
-            Item.staff[item.type] = true;
-            ItemID.Sets.GamepadWholeScreenUseRange[item.type] = true; // This lets the player target anywhere on the whole screen while using a controller.
-			ItemID.Sets.LockOnIgnoresCollision[item.type] = true;
+            Item.staff[Item.type] = true;
+            ItemID.Sets.GamepadWholeScreenUseRange[Item.type] = true; // This lets the player target anywhere on the whole screen while using a controller.
+			ItemID.Sets.LockOnIgnoresCollision[Item.type] = true;
 		}
 		public override void SetDefaults() {
-			item.damage = 14;
-			item.knockBack = 4f;
-			item.mana = 10;
-			item.width = 32;
-			item.height = 32;
-			item.useTime = 30;
-			item.useAnimation = 30;
-			item.useStyle = 1;
-			item.value = Item.buyPrice(0, 2, 70, 0);
-			item.rare = 2;
-			item.UseSound = SoundID.Item8;
-			item.noMelee = true;
-			item.summon = true;
-			item.buffType = ModContent.BuffType<SporeballBuff>();
-			item.shoot = ModContent.ProjectileType<SporeballProj>();
+			Item.damage = 14;
+			Item.knockBack = 4f;
+			Item.mana = 10;
+			Item.width = 32;
+			Item.height = 32;
+			Item.useTime = 30;
+			Item.useAnimation = 30;
+			Item.useStyle = 1;
+			Item.value = Item.buyPrice(0, 2, 70, 0);
+			Item.rare = 2;
+			Item.UseSound = SoundID.Item8;
+			Item.noMelee = true;
+			Item.DamageType = DamageClass.Summon;;
+			Item.buffType = ModContent.BuffType<SporeballBuff>();
+			Item.shoot = ModContent.ProjectileType<SporeballProj>();
 		}
 
-		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack) 
+		public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback) 
         {
-			player.AddBuff(item.buffType, 2);
+			player.AddBuff(Item.buffType, 2);
 			position = Main.MouseWorld;
-			return true;
 		}
 		public override void AddRecipes()
 		{
-			ModRecipe recipe = new ModRecipe(mod);
+			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(331, 12); //modded materials
 			recipe.AddIngredient(209, 8);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
-			recipe.AddRecipe();
+			recipe.Register();
 		}
 	}
 }

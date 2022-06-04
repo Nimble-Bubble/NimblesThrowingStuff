@@ -11,29 +11,29 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 	{
 		public override void SetDefaults()
 		{
-			item.damage = 68;
-			item.width = 40;
-			item.height = 40;
-			item.useTime = 5;
-			item.useAnimation = 6;
-			item.useStyle = 5;
-			item.value = Item.buyPrice(1, 0, 0, 0);
-			item.rare = 11;
-			item.noMelee = true;
-			item.useAmmo = AmmoID.Arrow;
-			item.UseSound = SoundID.Item5;
-			item.shoot = 1;
-            item.knockBack = 5f;
-			item.shootSpeed = 38f;
-			item.ranged = true;
+			Item.damage = 68;
+			Item.width = 40;
+			Item.height = 40;
+			Item.useTime = 5;
+			Item.useAnimation = 6;
+			Item.useStyle = 5;
+			Item.value = Item.buyPrice(1, 0, 0, 0);
+			Item.rare = 11;
+			Item.noMelee = true;
+			Item.useAmmo = AmmoID.Arrow;
+			Item.UseSound = SoundID.Item5;
+			Item.shoot = 1;
+            Item.knockBack = 5f;
+			Item.shootSpeed = 38f;
+			Item.DamageType = DamageClass.Ranged;
 		}
 		public override void AddRecipes()
 		{
-			var recipe = new ModRecipe(mod);
+			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ModContent.ItemType<ProcellariteBar>(), 10);
 			recipe.AddTile(TileID.LunarCraftingStation);
 			recipe.SetResult(this);
-			recipe.AddRecipe();
+			recipe.Register();
 		}
 	}
 }

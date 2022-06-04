@@ -20,12 +20,12 @@ namespace NimblesThrowingStuff.Items.Accessories
         }
         public override void SetDefaults()
         {
-            item.accessory = true;
-            item.width = 30;
-            item.height = 30;
-            item.value = Item.buyPrice(0, 25, 0, 0);
-            item.rare = 6;
-            item.expert = false;
+            Item.accessory = true;
+            Item.width = 30;
+            Item.height = 30;
+            Item.value = Item.buyPrice(0, 25, 0, 0);
+            Item.rare = 6;
+            Item.expert = false;
         }
 
         public override void UpdateAccessory(Player player, bool hideVisual)
@@ -36,12 +36,12 @@ namespace NimblesThrowingStuff.Items.Accessories
         }
         public override void AddRecipes()
 		{
-			ModRecipe recipe = new ModRecipe(mod);
+			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ModContent.ItemType<SacredWristband>()); 
             recipe.AddIngredient(935, 1);
 			recipe.AddTile(114);
 			recipe.SetResult(this);
-			recipe.AddRecipe();
+			recipe.Register();
 		}
     }
 }

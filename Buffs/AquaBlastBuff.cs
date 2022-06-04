@@ -10,7 +10,7 @@ namespace NimblesThrowingStuff.Buffs
 {
     public class AquaBlastBuff : ModBuff
 	{
-		public override void SetDefaults()
+		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Aqua Blaster");
 			Description.SetDefault("The shiny little things will fight for you");

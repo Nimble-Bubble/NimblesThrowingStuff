@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
+using Terraria.Audio;
 using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.Enums;
@@ -16,21 +17,21 @@ namespace NimblesThrowingStuff.Projectiles.Summoning
         private float targetspeed = 1f;
         public override void SetStaticDefaults() 
         {
-        ProjectileID.Sets.MinionTargettingFeature[projectile.type] = true;
+        ProjectileID.Sets.MinionTargettingFeature[Projectile.type] = true;
         }
         public override void SetDefaults()
         {
-            projectile.width = 16;
-            projectile.height = 16;
-            projectile.usesLocalNPCImmunity = true;
-            projectile.localNPCHitCooldown = 10;
-            projectile.tileCollide = true;
-            projectile.penetrate = 1;
-            projectile.friendly = true;
-            projectile.minion = true;
-            projectile.aiStyle = 8;
-            projectile.timeLeft = 150;
-            aiType = 27;
+            Projectile.width = 16;
+            Projectile.height = 16;
+            Projectile.usesLocalNPCImmunity = true;
+            Projectile.localNPCHitCooldown = 10;
+            Projectile.tileCollide = true;
+            Projectile.penetrate = 1;
+            Projectile.friendly = true;
+            Projectile.minion = true;
+            Projectile.aiStyle = 8;
+            Projectile.timeLeft = 150;
+            AIType = 27;
         }
         public override void AI()
         {
@@ -41,8 +42,8 @@ namespace NimblesThrowingStuff.Projectiles.Summoning
         NPC target = Main.npc[i];
        if(!target.friendly)
        {
-           float shootToX = target.position.X + (float)target.width * 0.5f - projectile.Center.X;
-           float shootToY = target.position.Y - projectile.Center.Y;
+           float shootToX = target.position.X + (float)target.width * 0.5f - Projectile.Center.X;
+           float shootToY = target.position.Y - Projectile.Center.Y;
            float distance = (float)System.Math.Sqrt((double)(shootToX * shootToX + shootToY * shootToY));
 
            if(distance < targetrange && !target.friendly && target.active)
@@ -52,18 +53,18 @@ namespace NimblesThrowingStuff.Projectiles.Summoning
                shootToX *= distance * 1;
                shootToY *= distance * 1;
 
-               projectile.velocity.X = shootToX * targetspeed;
-               projectile.velocity.Y = shootToY * targetspeed;
+               Projectile.velocity.X = shootToX * targetspeed;
+               Projectile.velocity.Y = shootToY * targetspeed;
            }
        }
         }
         }
         public override void Kill(int timeLeft) 
         {
-            Main.PlaySound(0, (int) projectile.position.X, (int) projectile.position.Y, 1, 1f, 0.0f);
+            SoundEngine.PlaySound(0, (int) Projectile.position.X, (int) Projectile.position.Y, 1, 1f, 0.0f);
                     for (int index = 0; index < 10; index++)
-                        Dust.NewDust(new Vector2(projectile.position.X, projectile.position.Y), projectile.width, projectile.height, 33,
-                            projectile.velocity.X * 0.1f, projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
+                        Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 33,
+                            Projectile.velocity.X * 0.1f, Projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
         }
     }
 }

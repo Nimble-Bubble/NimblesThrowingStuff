@@ -8,32 +8,32 @@ namespace NimblesThrowingStuff.Items.Placeables.Walls
 	{
 		public override void SetDefaults() 
 		{
-			item.width = 28;
-			item.height = 28;
-			item.useTime = 7;
-			item.useAnimation = 15;
-			item.useStyle = 1;
-			item.value = Item.buyPrice(0, 0, 0, 12);
-			item.rare = 0;
-			item.UseSound = SoundID.Item1;
-			item.autoReuse = true;
-            item.createWall = mod.WallType("HadalShellstoneWallTile");
-            item.consumable = true;
-            item.maxStack = 999;
+			Item.width = 28;
+			Item.height = 28;
+			Item.useTime = 7;
+			Item.useAnimation = 15;
+			Item.useStyle = 1;
+			Item.value = Item.buyPrice(0, 0, 0, 12);
+			Item.rare = 0;
+			Item.UseSound = SoundID.Item1;
+			Item.autoReuse = true;
+            Item.createWall = Mod.Find<ModWall>("HadalShellstoneWallTile").Type;
+            Item.consumable = true;
+            Item.maxStack = 999;
 		}
 
 		public override void AddRecipes() 
 		{
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.ItemType("HadalShellstone"), 1);
+			Recipe recipe = CreateRecipe();
+			recipe.AddIngredient(Mod.Find<ModItem>("HadalShellstone").Type, 1);
 			recipe.AddTile(TileID.WorkBenches);
 			recipe.SetResult(this, 4);
-			recipe.AddRecipe();
-            recipe = new ModRecipe(mod);
+			recipe.Register();
+            recipe = CreateRecipe();
 			recipe.AddIngredient(this, 4);
 			recipe.AddTile(TileID.WorkBenches);
-			recipe.SetResult(mod.ItemType("HadalShellstone"), 1);
-			recipe.AddRecipe();
+			recipe.SetResult(Mod.Find<ModItem>("HadalShellstone").Type, 1);
+			recipe.Register();
 		}
 	}
 }

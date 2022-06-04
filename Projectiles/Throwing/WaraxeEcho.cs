@@ -13,15 +13,15 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetDefaults()
         {
-            projectile.width = 32;
-            projectile.height = 32;
-            projectile.tileCollide = true;
-            projectile.maxPenetrate = -1;
-            projectile.friendly = true;
-            projectile.thrown = true;
-            projectile.aiStyle = 3;
-            projectile.penetrate = -1;
-            projectile.extraUpdates = 1;
+            Projectile.width = 32;
+            Projectile.height = 32;
+            Projectile.tileCollide = true;
+            Projectile.maxPenetrate = -1;
+            Projectile.friendly = true;
+            Projectile.DamageType = DamageClass.Throwing;
+            Projectile.aiStyle = 3;
+            Projectile.penetrate = -1;
+            Projectile.extraUpdates = 1;
         }
     }
 }

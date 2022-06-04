@@ -13,18 +13,18 @@ namespace NimblesThrowingStuff.Projectiles.Melee
     {
         public override void SetDefaults()
         {
-            projectile.width = 18;
-            projectile.height = 18;
-            projectile.usesLocalNPCImmunity = true;
-            projectile.localNPCHitCooldown = 20;
-            projectile.tileCollide = false;
-            projectile.penetrate = -1;
-            projectile.friendly = true;
-            projectile.melee = true;
-            projectile.light = 0.25f;
-            projectile.aiStyle = 20;
-            projectile.timeLeft = 18000;
-            projectile.extraUpdates = 1;
+            Projectile.width = 18;
+            Projectile.height = 18;
+            Projectile.usesLocalNPCImmunity = true;
+            Projectile.localNPCHitCooldown = 20;
+            Projectile.tileCollide = false;
+            Projectile.penetrate = -1;
+            Projectile.friendly = true;
+            Projectile.DamageType = DamageClass.Melee;
+            Projectile.light = 0.25f;
+            Projectile.aiStyle = 20;
+            Projectile.timeLeft = 18000;
+            Projectile.extraUpdates = 1;
         }
     }
 }

@@ -16,14 +16,14 @@ namespace NimblesThrowingStuff.Projectiles.Enemy
 
         public override void SetDefaults()
         {
-            projectile.width = 16;
-            projectile.height = 16;
-            projectile.aiStyle = 8;
-            projectile.hostile = true;
-            projectile.magic = false;
-            projectile.maxPenetrate = 2;
-            projectile.light = 1f;
-            projectile.timeLeft = 300;
+            Projectile.width = 16;
+            Projectile.height = 16;
+            Projectile.aiStyle = 8;
+            Projectile.hostile = true;
+            Projectile.magic = false;
+            Projectile.maxPenetrate = 2;
+            Projectile.light = 1f;
+            Projectile.timeLeft = 300;
         }
         public override void OnHitPlayer(Player target, int damage, bool crit)
         {

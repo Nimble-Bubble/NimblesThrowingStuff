@@ -19,12 +19,12 @@ namespace NimblesThrowingStuff.Items.Accessories
         }
         public override void SetDefaults()
         {
-            item.accessory = true;
-            item.width = 22;
-            item.height = 22;
-            item.value = Item.sellPrice(0, 6, 21, 0);
-            item.rare = 5;
-            item.expert = false;
+            Item.accessory = true;
+            Item.width = 22;
+            Item.height = 22;
+            Item.value = Item.sellPrice(0, 6, 21, 0);
+            Item.rare = 5;
+            Item.expert = false;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
@@ -33,13 +33,13 @@ namespace NimblesThrowingStuff.Items.Accessories
         }
         public override void AddRecipes() 
         {
-			ModRecipe recipe = new ModRecipe(mod);
+			Recipe recipe = CreateRecipe();
             recipe.AddIngredient(ItemID.DarkShard);
             recipe.AddIngredient(ItemID.LightShard);
             recipe.AddIngredient(ItemID.Silk, 20);
 			recipe.AddTile(TileID.Loom);
 			recipe.SetResult(this);
-			recipe.AddRecipe();
+			recipe.Register();
 		}
     }
 }

@@ -13,33 +13,33 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 
 		public override void SetDefaults() 
 		{
-			item.damage = 15;
-			item.thrown = true;
-			item.width = 24;
-			item.height = 24;
-			item.useTime = 29;
-			item.useAnimation = 29;
-			item.useStyle = 1;
-			item.knockBack = 4f;
-            item.noMelee = true;
-            item.noUseGraphic = true;
-			item.value = Item.buyPrice(0, 0, 1, 50);
-			item.rare = 0;
-			item.UseSound = SoundID.Item1;
-			item.autoReuse = true;
-			item.shoot = mod.ProjectileType("CoralKnifeProj");
-			item.shootSpeed = 8f;
-            item.consumable = true;
-            item.maxStack = 999;
+			Item.damage = 15;
+			Item.DamageType = DamageClass.Throwing;
+			Item.width = 24;
+			Item.height = 24;
+			Item.useTime = 29;
+			Item.useAnimation = 29;
+			Item.useStyle = 1;
+			Item.knockBack = 4f;
+            Item.noMelee = true;
+            Item.noUseGraphic = true;
+			Item.value = Item.buyPrice(0, 0, 1, 50);
+			Item.rare = 0;
+			Item.UseSound = SoundID.Item1;
+			Item.autoReuse = true;
+			Item.shoot = Mod.Find<ModProjectile>("CoralKnifeProj").Type;
+			Item.shootSpeed = 8f;
+            Item.consumable = true;
+            Item.maxStack = 999;
 		}
 
 		public override void AddRecipes() 
 		{
-			ModRecipe recipe = new ModRecipe(mod);
+			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(275, 1);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this, 100);
-			recipe.AddRecipe();
+			recipe.Register();
 		}
 	}
 }

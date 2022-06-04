@@ -17,23 +17,23 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 
 		public override void SetDefaults()
 		{
-			item.damage = 110;
-			item.width = 40;
-			item.height = 40;
-			item.useTime = 16;
-			item.useAnimation = 16;
-			item.useStyle = 5;
-			item.value = Item.buyPrice(1, 0, 0, 0);
-			item.rare = 11;
-			item.noMelee = true;
-			item.useAmmo = AmmoID.Arrow;
-			item.UseSound = SoundID.Item5;
-			item.shoot = 1;
-            item.knockBack = 6f;
-			item.shootSpeed = 21f;
-			item.ranged = true;
+			Item.damage = 110;
+			Item.width = 40;
+			Item.height = 40;
+			Item.useTime = 16;
+			Item.useAnimation = 16;
+			Item.useStyle = 5;
+			Item.value = Item.buyPrice(1, 0, 0, 0);
+			Item.rare = 11;
+			Item.noMelee = true;
+			Item.useAmmo = AmmoID.Arrow;
+			Item.UseSound = SoundID.Item5;
+			Item.shoot = 1;
+            Item.knockBack = 6f;
+			Item.shootSpeed = 21f;
+			Item.DamageType = DamageClass.Ranged;
 		}
-		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
+		public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockBack)
 		{
 			int numberProjectiles = 2 + Main.rand.Next(2);  //This defines how many projectiles to shot
 			for (int index = 0; index < numberProjectiles; ++index)
@@ -52,16 +52,14 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 					num13 = 20f;
 				}
 				float num14 = new Vector2(num12, num13).Length();
-				float num15 = item.shootSpeed / num14;
+				float num15 = Item.shootSpeed / num14;
 				float num15b = num15 / 2;
 				float num16 = num12 * num15b;
 				float num17 = num13 * num15b;
-				float SpeedX = num16 + Main.rand.NextFloat(-40, 40) * 0.03f;  //this defines the projectile X position speed and randomnes
-				float SpeedY = num17 + Main.rand.NextFloat(-40, 40) * 0.03f;  //this defines the projectile Y position speed and randomnes
-				Projectile.NewProjectile(vector2_1.X, vector2_1.Y, SpeedX, SpeedY, type, damage, knockBack, Main.myPlayer, 0f, (float)Main.rand.Next(5));
+				Vector2 Speed = (num16 + Main.rand.NextFloat(-40, 40) * 0.03f, num17 + Main.rand.NextFloat(-40, 40) * 0.03f);  
+				Projectile.NewProjectile(vector2_1, velocity, type, damage, knockBack, Main.myPlayer, 0f, (float)Main.rand.Next(5));
 			}
-			Projectile.NewProjectile(position.X, position.X, speedX * 2, speedY * 2, type, damage, knockBack, Main.myPlayer, 0f, (float)Main.rand.Next(5));
-			return true;
+			Projectile.NewProjectile(position, velocity * new Vector2 (2, 2), type, damage, knockBack, Main.myPlayer, 0f, (float)Main.rand.Next(5));
 		}
 	}
 }

@@ -14,21 +14,21 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
         private int index = 0; 
         public override void SetDefaults()
         {
-            projectile.width = 36;
-            projectile.height = 36;
-            projectile.maxPenetrate = -1;
-            projectile.thrown = true;
-            projectile.tileCollide = false;
-            projectile.aiStyle = 0;
-            projectile.penetrate = -1;
-            projectile.extraUpdates = 0;
-            projectile.timeLeft = 99;
-            projectile.light = 0.5f;
+            Projectile.width = 36;
+            Projectile.height = 36;
+            Projectile.maxPenetrate = -1;
+            Projectile.DamageType = DamageClass.Throwing;
+            Projectile.tileCollide = false;
+            Projectile.aiStyle = 0;
+            Projectile.penetrate = -1;
+            Projectile.extraUpdates = 0;
+            Projectile.timeLeft = 99;
+            Projectile.light = 0.5f;
         }
         public override void AI() 
         {
-        projectile.rotation += 0.1f;
-        projectile.alpha += 3;
+        Projectile.rotation += 0.1f;
+        Projectile.alpha += 3;
             ++index;
                     if (index > 20)
                     {
@@ -36,8 +36,8 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
                             (float) Main.rand.Next(-100, 101));
                         vector2.Normalize();
                         vector2 *= (float) Main.rand.Next(10, 11) * 1f;
-                        int spore = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, vector2.X, vector2.Y,
-                            mod.ProjectileType("DragonShrapnel"), projectile.damage / 2, 1f, projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
+                        int spore = Projectile.NewProjectile(Projectile.Center.X, Projectile.Center.Y, vector2.X, vector2.Y,
+                            Mod.Find<ModProjectile>("DragonShrapnel").Type, Projectile.damage / 2, 1f, Projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
                         index = 0;
                     }
         }

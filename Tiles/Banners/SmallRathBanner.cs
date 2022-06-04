@@ -8,7 +8,7 @@ namespace NimblesThrowingStuff.Tiles.Banners
 {
     public class SmallRathBanner : ModTile
     {
-        public override void SetDefaults()
+        public override void SetStaticDefaults()
         {
             Main.tileFrameImportant[Type] = true;
             Main.tileNoAttach[Type] = true;
@@ -19,7 +19,7 @@ namespace NimblesThrowingStuff.Tiles.Banners
             TileObjectData.newTile.StyleHorizontal = true;
             TileObjectData.newTile.StyleWrapLimit = 111;
             TileObjectData.addTile(Type);
-            disableSmartCursor = true;
+            DisableSmartCursor = true;
 			ModTranslation name = CreateMapEntryName();
 			name.SetDefault("Kelbi Banner");
             AddMapEntry(new Color(232, 106, 48), name); 
@@ -27,7 +27,7 @@ namespace NimblesThrowingStuff.Tiles.Banners
  
         public override void KillMultiTile(int i, int j, int frameX, int frameY)
         {
-            Item.NewItem(i * 16, j * 16, 16, 48, mod.ItemType("SmallRathBannerItem"));
+            Item.NewItem(i * 16, j * 16, 16, 48, Mod.Find<ModItem>("SmallRathBannerItem").Type);
         }
  
         public override void NearbyEffects(int i, int j, bool closer)   
@@ -35,7 +35,7 @@ namespace NimblesThrowingStuff.Tiles.Banners
             if (closer)          
             {
                 Player player = Main.LocalPlayer;
-                player.NPCBannerBuff[mod.NPCType("SmallRath")] = true;	
+                player.NPCBannerBuff[Mod.Find<ModNPC>("SmallRath").Type] = true;	
                 player.hasBanner = true;
             }
         }

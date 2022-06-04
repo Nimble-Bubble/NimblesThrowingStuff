@@ -13,32 +13,32 @@ namespace NimblesThrowingStuff.Items.Placeables.Walls
 
 		public override void SetDefaults() 
 		{
-			item.width = 28;
-			item.height = 28;
-			item.useTime = 7;
-			item.useAnimation = 15;
-			item.useStyle = 1;
-			item.value = Item.buyPrice(0, 0, 0, 20);
-			item.rare = 0;
-			item.UseSound = SoundID.Item1;
-			item.autoReuse = true;
-            item.createWall = 62;
-            item.consumable = true;
-            item.maxStack = 999;
+			Item.width = 28;
+			Item.height = 28;
+			Item.useTime = 7;
+			Item.useAnimation = 15;
+			Item.useStyle = 1;
+			Item.value = Item.buyPrice(0, 0, 0, 20);
+			Item.rare = 0;
+			Item.UseSound = SoundID.Item1;
+			Item.autoReuse = true;
+            Item.createWall = 62;
+            Item.consumable = true;
+            Item.maxStack = 999;
 		}
 
 		public override void AddRecipes() 
 		{
-			ModRecipe recipe = new ModRecipe(mod);
+			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(150, 1);
 			recipe.AddTile(TileID.WorkBenches);
 			recipe.SetResult(this, 4);
-			recipe.AddRecipe();
-            recipe = new ModRecipe(mod);
+			recipe.Register();
+            recipe = CreateRecipe();
 			recipe.AddIngredient(this, 4);
 			recipe.AddTile(TileID.WorkBenches);
 			recipe.SetResult(150, 1);
-			recipe.AddRecipe();
+			recipe.Register();
 		}
 	}
 }

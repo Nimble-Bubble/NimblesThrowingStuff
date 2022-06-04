@@ -10,7 +10,7 @@ namespace NimblesThrowingStuff.Buffs
 {
     public class SporeballBuff : ModBuff
 	{
-		public override void SetDefaults()
+		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Spore Balls");
 			Description.SetDefault("The poisonous spore balls will fight for you");

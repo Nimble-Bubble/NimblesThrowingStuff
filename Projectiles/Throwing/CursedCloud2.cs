@@ -14,10 +14,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetDefaults()
         {
-            projectile.CloneDefaults(512);
-            aiType = 512;
-            projectile.usesLocalNPCImmunity = true;
-            projectile.localNPCHitCooldown = 60;
+            Projectile.CloneDefaults(512);
+            AIType = 512;
+            Projectile.usesLocalNPCImmunity = true;
+            Projectile.localNPCHitCooldown = 60;
         }
         public override void OnHitNPC (NPC target, int damage, float knockback, bool crit)
         {

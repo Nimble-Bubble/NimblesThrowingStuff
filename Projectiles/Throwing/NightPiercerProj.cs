@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
+using Terraria.Audio;
 using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.Enums;
@@ -14,40 +15,40 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetDefaults()
         {
-            projectile.width = 28;
-            projectile.height = 32;
-            projectile.usesLocalNPCImmunity = true;
-            projectile.localNPCHitCooldown = 10;
-            projectile.tileCollide = true;
-            projectile.penetrate = 100;
-            projectile.friendly = true;
-            projectile.thrown = true;
-            projectile.aiStyle = 9;
-            projectile.timeLeft = 300;
-            projectile.alpha = 0;
-            aiType = 491;
+            Projectile.width = 28;
+            Projectile.height = 32;
+            Projectile.usesLocalNPCImmunity = true;
+            Projectile.localNPCHitCooldown = 10;
+            Projectile.tileCollide = true;
+            Projectile.penetrate = 100;
+            Projectile.friendly = true;
+            Projectile.DamageType = DamageClass.Throwing;
+            Projectile.aiStyle = 9;
+            Projectile.timeLeft = 300;
+            Projectile.alpha = 0;
+            AIType = 491;
         }
         public override bool OnTileCollide(Vector2 oldVelocity) {
-			projectile.penetrate--;
-			if (projectile.penetrate <= 0) {
-				projectile.Kill();
+			Projectile.penetrate--;
+			if (Projectile.penetrate <= 0) {
+				Projectile.Kill();
 			}
 			else {
-				Collision.HitTiles(projectile.position + projectile.velocity, projectile.velocity, projectile.width, projectile.height);
-				Main.PlaySound(SoundID.Item10, projectile.position);
-				if (projectile.velocity.X != oldVelocity.X) {
-					projectile.velocity.X = -oldVelocity.X;
+				Collision.HitTiles(Projectile.position + Projectile.velocity, Projectile.velocity, Projectile.width, Projectile.height);
+				SoundEngine.PlaySound(SoundID.Item10, Projectile.position);
+				if (Projectile.velocity.X != oldVelocity.X) {
+					Projectile.velocity.X = -oldVelocity.X;
 				}
-				if (projectile.velocity.Y != oldVelocity.Y) {
-					projectile.velocity.Y = -oldVelocity.Y;
+				if (Projectile.velocity.Y != oldVelocity.Y) {
+					Projectile.velocity.Y = -oldVelocity.Y;
 				}
 			}
 			return false;
 		}
         public override void AI()
         {
-            Dust.NewDust(new Vector2(projectile.position.X, projectile.position.Y), projectile.width, projectile.height, 272,
-                            projectile.velocity.X * 0.1f, projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
+            Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 272,
+                            Projectile.velocity.X * 0.1f, Projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
         }
     }
 }

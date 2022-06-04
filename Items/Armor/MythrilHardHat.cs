@@ -20,11 +20,11 @@ namespace NimblesThrowingStuff.Items.Armor
 
         public override void SetDefaults()
         {
-            item.width = 30;
-            item.height = 32;
-            item.value = 112500;
-            item.rare = 4;
-            item.defense = 8; // The Defence value for this piece of armour.
+            Item.width = 30;
+            Item.height = 32;
+            Item.value = 112500;
+            Item.rare = 4;
+            Item.defense = 8; // The Defence value for this piece of armour.
         }
 
         public override bool IsArmorSet(Item head, Item body, Item legs)
@@ -45,7 +45,7 @@ namespace NimblesThrowingStuff.Items.Armor
 
         public override void AddRecipes()
         {
-            ModRecipe r = new ModRecipe(mod);
+            ModRecipe r = new ModRecipe(Mod);
             r.AddIngredient(382, 10);
             r.AddTile(134);
             r.SetResult(this);

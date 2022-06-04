@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
+using Terraria.GameContent;
 using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.Enums;
@@ -14,44 +15,44 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
         private int index = 0; 
         public override void SetStaticDefaults() {
 			DisplayName.SetDefault("Draconic Harvest");     
-			ProjectileID.Sets.TrailCacheLength[projectile.type] = 10;    
-			ProjectileID.Sets.TrailingMode[projectile.type] = 0;        
+			ProjectileID.Sets.TrailCacheLength[Projectile.type] = 10;    
+			ProjectileID.Sets.TrailingMode[Projectile.type] = 0;        
 		}
         public override void SetDefaults()
         {
-            projectile.width = 60;
-            projectile.height = 60;
-            projectile.usesLocalNPCImmunity = true;
-            projectile.localNPCHitCooldown = 10;
-            projectile.tileCollide = false;
-            projectile.maxPenetrate = -1;
-            projectile.friendly = true;
-            projectile.thrown = true;
-            projectile.aiStyle = 3;
-            projectile.penetrate = -1;
-            projectile.extraUpdates = 3;
+            Projectile.width = 60;
+            Projectile.height = 60;
+            Projectile.usesLocalNPCImmunity = true;
+            Projectile.localNPCHitCooldown = 10;
+            Projectile.tileCollide = false;
+            Projectile.maxPenetrate = -1;
+            Projectile.friendly = true;
+            Projectile.DamageType = DamageClass.Throwing;
+            Projectile.aiStyle = 3;
+            Projectile.penetrate = -1;
+            Projectile.extraUpdates = 3;
         }
-        public override bool PreDraw(SpriteBatch spriteBatch, Color lightColor) {
-			Vector2 drawOrigin = new Vector2(Main.projectileTexture[projectile.type].Width * 0.5f, projectile.height * 0.5f);
-			for (int k = 0; k < projectile.oldPos.Length; k++) {
-				Vector2 drawPos = projectile.oldPos[k] - Main.screenPosition + drawOrigin + new Vector2(0f, projectile.gfxOffY);
-				Color color = projectile.GetAlpha(lightColor) * ((float)(projectile.oldPos.Length - k) / (float)projectile.oldPos.Length);
-				spriteBatch.Draw(Main.projectileTexture[projectile.type], drawPos, null, color, projectile.rotation, drawOrigin, projectile.scale, SpriteEffects.None, 0f);
+        public override bool PreDraw(ref Color lightColor) {
+			Vector2 drawOrigin = new Vector2(TextureAssets.Projectile[Projectile.type].Value.Width * 0.5f, Projectile.height * 0.5f);
+			for (int k = 0; k < Projectile.oldPos.Length; k++) {
+				Vector2 drawPos = Projectile.oldPos[k] - Main.screenPosition + drawOrigin + new Vector2(0f, Projectile.gfxOffY);
+				Color color = Projectile.GetAlpha(lightColor) * ((float)(Projectile.oldPos.Length - k) / (float)Projectile.oldPos.Length);
+				spriteBatch.Draw(TextureAssets.Projectile[Projectile.type].Value, drawPos, null, color, Projectile.rotation, drawOrigin, Projectile.scale, SpriteEffects.None, 0f);
 			}
 			return true;
 		}
-        public override void PostDraw(SpriteBatch spriteBatch, Color lightColor)
+        public override void PostDraw(Color lightColor)
 		{
-			Texture2D texture = mod.GetTexture("Projectiles/Throwing/DraconicHarvestProj_Glow");
+			Texture2D texture = Mod.GetTexture("Projectiles/Throwing/DraconicHarvestProj_Glow");
 			spriteBatch.Draw
 			(
 				texture,
-				projectile.position,
+				Projectile.position,
 				new Rectangle(0, 0, texture.Width, texture.Height),
 				Color.Orange,
-				projectile.rotation,
+				Projectile.rotation,
 				texture.Size() * 0.5f,
-				projectile.scale,
+				Projectile.scale,
 				SpriteEffects.None,
 				0f
 			);
@@ -61,7 +62,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
             ++index;
             if (Main.rand.NextBool(5)) 
             {
-				int fireIndex = Dust.NewDust(new Vector2(projectile.position.X, projectile.position.Y), projectile.width * 2, projectile.height * 2, 127, 0f, 0f, 100, default(Color), 3f);
+				int fireIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width * 2, Projectile.height * 2, 127, 0f, 0f, 100, default(Color), 3f);
 				Main.dust[fireIndex].velocity *= 4f;
 			}
                     if (index > 30)
@@ -70,8 +71,8 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
                             (float) Main.rand.Next(-10, 11));
                         vector2.Normalize();
                         vector2 *= (float) Main.rand.Next(10, 11) * 1f;
-                        int spore = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, vector2.X, vector2.Y,
-                            mod.ProjectileType("DraconicPortal"), projectile.damage, 1f, projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
+                        int spore = Projectile.NewProjectile(Projectile.Center.X, Projectile.Center.Y, vector2.X, vector2.Y,
+                            Mod.Find<ModProjectile>("DraconicPortal").Type, Projectile.damage, 1f, Projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
                         index = 0;
                         Main.projectile[spore].thrown = true;
                 Main.projectile[spore].melee = false;

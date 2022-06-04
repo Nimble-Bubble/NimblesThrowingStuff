@@ -14,20 +14,20 @@ namespace NimblesThrowingStuff.Items.Vanity
     {
         public override void SetDefaults()
         {
-            item.width = 30;
-            item.height = 22;
-            item.value = 10000;
-            item.rare = ItemRarityID.Blue;
-            item.vanity = true;
+            Item.width = 30;
+            Item.height = 22;
+            Item.value = 10000;
+            Item.rare = ItemRarityID.Blue;
+            Item.vanity = true;
         }
         public override void AddRecipes()
         {
-            var recipe = new ModRecipe(mod);
+            Recipe recipe = CreateRecipe();
             recipe.AddIngredient(ItemID.FossilOre, 4);
             recipe.AddIngredient(ItemID.Silk, 10);
             recipe.AddTile(TileID.Loom);
             recipe.SetResult(this);
-            recipe.AddRecipe();
+            recipe.Register();
         }
     }
 }

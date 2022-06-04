@@ -17,33 +17,33 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 				+"\nRight click to spew flames from the tip of the lance.");
         }
         public override void SetDefaults() {
-			item.damage = 26;
-			item.useStyle = ItemUseStyleID.HoldingOut;
-			item.useAnimation = 32;
-			item.useTime = 32;
-			item.knockBack = 7f;
-			item.width = 20;
-			item.height = 20;
-			item.noUseGraphic = true;
-			item.noMelee = true;
-			item.rare = ItemRarityID.Orange;
-			item.value = Item.buyPrice(0, 15, 0, 0);
-            item.melee = true;
-			item.channel = true;
-            item.shoot = ModContent.ProjectileType<RedTailProj>();
-            item.shootSpeed = 10f;
-			item.UseSound = SoundID.Item1;
+			Item.damage = 26;
+			Item.useStyle = ItemUseStyleID.Shoot;
+			Item.useAnimation = 32;
+			Item.useTime = 32;
+			Item.knockBack = 7f;
+			Item.width = 20;
+			Item.height = 20;
+			Item.noUseGraphic = true;
+			Item.noMelee = true;
+			Item.rare = ItemRarityID.Orange;
+			Item.value = Item.buyPrice(0, 15, 0, 0);
+            Item.DamageType = DamageClass.Melee;
+			Item.channel = true;
+            Item.shoot = ModContent.ProjectileType<RedTailProj>();
+            Item.shootSpeed = 10f;
+			Item.UseSound = SoundID.Item1;
 		}
 		public override void AddRecipes()
 		{
-			var recipe = new ModRecipe(mod);
+			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ModContent.ItemType<RedRathScale>(), 8);
 			recipe.AddIngredient(ItemID.BeeWax, 12);
 			recipe.AddIngredient(ItemID.Fireblossom, 10);
 			recipe.AddIngredient(ModContent.ItemType<RobustTusk>());
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
-			recipe.AddRecipe();
+			recipe.Register();
 		}
 	}
 }

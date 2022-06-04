@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
+using Terraria.Audio;
 using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.Enums;
@@ -14,23 +15,23 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetDefaults()
         {
-            projectile.width = 18;
-            projectile.height = 18;
-            projectile.usesLocalNPCImmunity = true;
-            projectile.localNPCHitCooldown = 10;
-            projectile.tileCollide = true;
-            projectile.penetrate = 1;
-            projectile.friendly = true;
-            projectile.thrown = true;
-            projectile.aiStyle = 2;
-            projectile.extraUpdates = 0;
+            Projectile.width = 18;
+            Projectile.height = 18;
+            Projectile.usesLocalNPCImmunity = true;
+            Projectile.localNPCHitCooldown = 10;
+            Projectile.tileCollide = true;
+            Projectile.penetrate = 1;
+            Projectile.friendly = true;
+            Projectile.DamageType = DamageClass.Throwing;
+            Projectile.aiStyle = 2;
+            Projectile.extraUpdates = 0;
         }
         public override void Kill(int timeLeft) 
         {
-            Main.PlaySound(SoundID.Item107, projectile.position);
-                Gore.NewGore(projectile.Center, -projectile.oldVelocity * 0.2f, 704, 1f);
-                Gore.NewGore(projectile.Center, -projectile.oldVelocity * 0.2f, 705, 1f);
-                if (projectile.owner == Main.myPlayer)
+            SoundEngine.PlaySound(SoundID.Item107, Projectile.position);
+                Gore.NewGore(Projectile.Center, -Projectile.oldVelocity * 0.2f, 704, 1f);
+                Gore.NewGore(Projectile.Center, -Projectile.oldVelocity * 0.2f, 705, 1f);
+                if (Projectile.owner == Main.myPlayer)
                 {
                     var num = Main.rand.Next(20, 31);
                     for (var index = 0; index < num; ++index)
@@ -39,8 +40,8 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
                             (float) Main.rand.Next(-100, 101));
                         vector2.Normalize();
                         vector2 *= (float) Main.rand.Next(10, 201) * 0.01f;
-                        Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, vector2.X, vector2.Y,
-                            mod.ProjectileType("IchorCloud1"), projectile.damage / 5, 1f, projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
+                        Projectile.NewProjectile(Projectile.Center.X, Projectile.Center.Y, vector2.X, vector2.Y,
+                            Mod.Find<ModProjectile>("IchorCloud1").Type, Projectile.damage / 5, 1f, Projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
                     }
                 }
         }

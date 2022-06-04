@@ -16,19 +16,19 @@ namespace NimblesThrowingStuff.Projectiles.Enemy
 
         public override void SetDefaults()
         {
-            projectile.width = 14;
-            projectile.height = 14;
-            projectile.aiStyle = 1;
-            projectile.hostile = true;
-            projectile.magic = false;
-            projectile.maxPenetrate = 10;
-            projectile.light = 1f;
-            projectile.alpha = 0;
-            aiType = 27;
-            projectile.scale = 0.5f;
-            projectile.extraUpdates = 1;
-            projectile.timeLeft = 300;
-            projectile.tileCollide = false;
+            Projectile.width = 14;
+            Projectile.height = 14;
+            Projectile.aiStyle = 1;
+            Projectile.hostile = true;
+            Projectile.magic = false;
+            Projectile.maxPenetrate = 10;
+            Projectile.light = 1f;
+            Projectile.alpha = 0;
+            AIType = 27;
+            Projectile.scale = 0.5f;
+            Projectile.extraUpdates = 1;
+            Projectile.timeLeft = 300;
+            Projectile.tileCollide = false;
         }
     }
 }

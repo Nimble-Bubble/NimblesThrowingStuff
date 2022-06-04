@@ -7,6 +7,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Localization;
+using Terraria.WorldBuilding;
 using NimblesThrowingStuff.NPCs.Morilus;
 using NimblesThrowingStuff.Items.Consumables;
 using NimblesThrowingStuff.Items.Vanity;
@@ -25,21 +26,21 @@ namespace NimblesThrowingStuff
 	{
         public static NimblesThrowingStuff instance;
 
-        public static ModHotKey MIGuardKey;
+        public static ModKeybind MIGuardKey;
 
         public NimblesThrowingStuff()
         {
-            Properties = new ModProperties()
-            {
-                Autoload = true,
-                AutoloadSounds = true,
-                AutoloadGores = true
-            };
+            //Properties = new ModProperties()
+           // {
+            //    Autoload = true,
+            //    AutoloadSounds = true,
+            //    AutoloadGores = true
+            //};
         }
         public override void Load()
         {
             instance = this;
-            MIGuardKey = RegisterHotKey("Guard", "Z");
+            MIGuardKey = KeybindLoader.RegisterKeybind(this, "Guard", "Z");
         }
         public override void Unload()
         {
@@ -48,38 +49,30 @@ namespace NimblesThrowingStuff
         }
         public override void PostSetupContent()
         {
-        Mod censusMod = ModLoader.GetMod("Census");
-            if(censusMod != null)
-            {
-             censusMod.Call("TownNPCCondition", NPCType("Living Relic"), "Defeat the Eye of Cthulhu");   
-            }
-        Mod bossChecklist = ModLoader.GetMod("BossChecklist");
-            if(bossChecklist != null)
-            {
-                bossChecklist.Call(
-                "addBoss",
-                15f,
-                ModContent.NPCType<MorilusMain>(),
-                this,
-                "$Mods.NimblesThrowingStuff.NPCName.MorilusMain",
-                (Func<bool>)(() => NimblesWorld.downedMorilus),
-                ModContent.ItemType<DeceptiveArtifact>(),
-                new List<int> { ModContent.ItemType<MorilusMask>(), ModContent.ItemType<MorilusTrophy>() },
-                new List<int> { ModContent.ItemType<ProcellariteOre>(), ModContent.ItemType<SkyseaSpinner>(), ModContent.ItemType<ProcellariteLongbow>(), ModContent.ItemType<StormShot>(), ModContent.ItemType<LacusDecapitator>(), ModContent.ItemType<GuardianStaff>() },
-                "Create a Deceptive Artifact and use it in space",
-                "Morilus moves on to what it considers to be its next issue...");
-
-            }
+        //Mod censusMod = ModLoader.GetMod("Census");
+        //    if(censusMod != null)
+        //    {
+        //     censusMod.Call("TownNPCCondition", Find<ModNPC>("Living Relic").Type, "Defeat the Eye of Cthulhu");   
+        //    }
+        //Mod bossChecklist = ModLoader.GetMod("BossChecklist");
+        //    if(bossChecklist != null)
+        //    {
+        //        bossChecklist.Call(
+        //        "addBoss",
+        //        15f,
+        //        ModContent.NPCType<MorilusMain>(),
+        //        this,
+        //        "$Mods.NimblesThrowingStuff.NPCName.MorilusMain",
+        //        (Func<bool>)(() => NimblesWorld.downedMorilus),
+        //        ModContent.ItemType<DeceptiveArtifact>(),
+        //        new List<int> { ModContent.ItemType<MorilusMask>(), ModContent.ItemType<MorilusTrophy>() },
+        //        new List<int> { ModContent.ItemType<ProcellariteOre>(), ModContent.ItemType<SkyseaSpinner>(), ModContent.ItemType<ProcellariteLongbow>(), ModContent.ItemType<StormShot>(), ModContent.ItemType<LacusDecapitator>(), ModContent.ItemType<GuardianStaff>() },
+        //        "Create a Deceptive Artifact and use it in space",
+        //        "Morilus moves on to what it considers to be its next issue...");
+//
+        //    }
 
         }
-        private static ModRecipe GetNewRecipe() => new ModRecipe(ModContent.GetInstance<NimblesThrowingStuff>());
-        public override void AddRecipes()
-        {
-        ModRecipe recipe = GetNewRecipe();
-        recipe.AddRecipeGroup("IronBar");
-        recipe.AddTile(TileID.Anvils);
-        recipe.SetResult(ItemID.MusketBall, 50);
-        recipe.AddRecipe();
-        }
+        //private static ModRecipe GetNewRecipe() => new ModRecipe(ModContent.GetInstance<NimblesThrowingStuff>());
 	}
 }

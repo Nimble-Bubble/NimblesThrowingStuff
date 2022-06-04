@@ -10,7 +10,7 @@ namespace NimblesThrowingStuff.Buffs
 {
     public class GuardIronShield : ModBuff
 	{
-		public override void SetDefaults()
+		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Guard");
 			Description.SetDefault("Defense boosted at the cost of reduced mobility");

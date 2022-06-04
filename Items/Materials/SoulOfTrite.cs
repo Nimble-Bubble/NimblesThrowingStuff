@@ -10,18 +10,18 @@ namespace NimblesThrowingStuff.Items.Materials
         public override void SetStaticDefaults()
         {
             Tooltip.SetDefault("The essence of what lies above");
-			Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(5, 4));
-			ItemID.Sets.AnimatesAsSoul[item.type] = true;
-			ItemID.Sets.ItemIconPulse[item.type] = true;
-            ItemID.Sets.ItemNoGravity[item.type] = true;
+			Main.RegisterItemAnimation(Item.type, new DrawAnimationVertical(5, 4));
+			ItemID.Sets.AnimatesAsSoul[Item.type] = true;
+			ItemID.Sets.ItemIconPulse[Item.type] = true;
+            ItemID.Sets.ItemNoGravity[Item.type] = true;
         }
 		public override void SetDefaults()
         {
-			item.width = 26;
-			item.height = 26;
-			item.maxStack = 999;
-			item.value = Item.buyPrice(0, 2, 50, 0);
-			item.rare = ItemRarityID.Cyan;
+			Item.width = 26;
+			Item.height = 26;
+			Item.maxStack = 999;
+			Item.value = Item.buyPrice(0, 2, 50, 0);
+			Item.rare = ItemRarityID.Cyan;
         }
 	}
 }

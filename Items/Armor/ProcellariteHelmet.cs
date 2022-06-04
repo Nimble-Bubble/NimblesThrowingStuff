@@ -20,16 +20,16 @@ namespace NimblesThrowingStuff.Items.Armor
 
         public override void SetDefaults()
         {
-            item.width = 30;
-            item.height = 32;
-            item.value = 500000;
-            item.rare = 11;
-            item.defense = 36; 
+            Item.width = 30;
+            Item.height = 32;
+            Item.value = 500000;
+            Item.rare = 11;
+            Item.defense = 36; 
         }
 
         public override bool IsArmorSet(Item head, Item body, Item legs)
         {
-            return body.type == mod.ItemType("ProcellariteChestplate") && legs.type == mod.ItemType("ProcellariteLeggings");
+            return body.type == Mod.Find<ModItem>("ProcellariteChestplate").Type && legs.type == Mod.Find<ModItem>("ProcellariteLeggings").Type;
         }
         public override void UpdateArmorSet(Player player)
         {
@@ -39,14 +39,14 @@ namespace NimblesThrowingStuff.Items.Armor
         }
         public override void UpdateEquip(Player player)
         {
-            player.meleeDamage += 0.3f;
+             player.GetDamage(DamageClass.Melee) += 0.3f;
             player.meleeCrit += 30;
         }
 
 
         public override void AddRecipes()
         {
-            ModRecipe r = new ModRecipe(mod);
+            ModRecipe r = new ModRecipe(Mod);
             r.AddIngredient(ModContent.ItemType<ProcellariteBar>(), 12);
             r.AddTile(TileID.LunarCraftingStation);
             r.SetResult(this);

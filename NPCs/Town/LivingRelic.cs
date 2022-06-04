@@ -1,5 +1,6 @@
 using Microsoft.Xna.Framework;
 using System;
+using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
@@ -18,38 +19,42 @@ namespace NimblesThrowingStuff.NPCs.Town
 			}
 		}
 
-		public override bool Autoload(ref string name)
-		{
-			name = "Living Relic";
-			return mod.Properties.Autoload;
-		}
+		//public override void Load()
+		//{
+		//	name = "Living Relic";
+		//	base.Load();
+		//}
 
 		public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Living Relic");
-            Main.npcFrameCount[npc.type] = 25;
-			NPCID.Sets.ExtraFramesCount[npc.type] = 5;
-			NPCID.Sets.AttackFrameCount[npc.type] = 4;
-			NPCID.Sets.DangerDetectRange[npc.type] = 1000;
-			NPCID.Sets.AttackType[npc.type] = 0;
-			NPCID.Sets.AttackTime[npc.type] = 20;
-			NPCID.Sets.AttackAverageChance[npc.type] = 20;
-			NPCID.Sets.HatOffsetY[npc.type] = -2000000;
+            Main.npcFrameCount[NPC.type] = 25;
+			NPCID.Sets.ExtraFramesCount[NPC.type] = 5;
+			NPCID.Sets.AttackFrameCount[NPC.type] = 4;
+			NPCID.Sets.DangerDetectRange[NPC.type] = 1000;
+			NPCID.Sets.AttackType[NPC.type] = 0;
+			NPCID.Sets.AttackTime[NPC.type] = 20;
+			NPCID.Sets.AttackAverageChance[NPC.type] = 20;
+			NPCID.Sets.HatOffsetY[NPC.type] = -2000000;
+            NPC.Happiness
+                .SetBiomeAffection<DesertBiome>(AffectionLevel.Love)
+                .SetBiomeAffection<SnowBiome>(AffectionLevel.Hate)
+                ;
 		}
 
 		public override void SetDefaults()
 		{
-			npc.townNPC = true;
-			npc.friendly = true;
-			npc.width = 24;
-			npc.height = 46;
-			npc.aiStyle = 7;
-			npc.damage = 20;
-			npc.defense = 50;
-			npc.lifeMax = 400;
-			npc.HitSound = SoundID.NPCHit1;
-			npc.DeathSound = SoundID.NPCDeath1;
-			npc.knockBackResist = 0.25f;
+			NPC.townNPC = true;
+			NPC.friendly = true;
+			NPC.width = 24;
+			NPC.height = 46;
+			NPC.aiStyle = 7;
+			NPC.damage = 20;
+			NPC.defense = 50;
+			NPC.lifeMax = 400;
+			NPC.HitSound = SoundID.NPCHit1;
+			NPC.DeathSound = SoundID.NPCDeath1;
+			NPC.knockBackResist = 0.25f;
             animationType = NPCID.Merchant;
         }
         public override bool CanTownNPCSpawn(int numTownNPCs, int money)
@@ -66,50 +71,50 @@ namespace NimblesThrowingStuff.NPCs.Town
         }
         public override void PostAI()
         {
-            int xl = (int)((npc.position.X - 2) / 16f);
-            int xr = (int)((npc.position.X + npc.width + 2) / 16f);
-            int xc = (int)((npc.Center.X) / 16f);
-            int y = (int)((npc.position.Y + npc.height + 2) / 16f);
-            if (npc.velocity.X < -4)
+            int xl = (int)((NPC.position.X - 2) / 16f);
+            int xr = (int)((NPC.position.X + NPC.width + 2) / 16f);
+            int xc = (int)((NPC.Center.X) / 16f);
+            int y = (int)((NPC.position.Y + NPC.height + 2) / 16f);
+            if (NPC.velocity.X < -4)
             {
-                npc.direction = -1;
+                NPC.direction = -1;
             }
-            if (npc.velocity.X > 4)
+            if (NPC.velocity.X > 4)
             {
-                npc.direction = 1;
+                NPC.direction = 1;
             }
-            if (npc.velocity.Y == 0)
+            if (NPC.velocity.Y == 0)
             {
-                if (Main.tile[xr, y].type == TileID.ConveyorBeltRight)
+                if (Main.tile[xr, y].TileType == TileID.ConveyorBeltRight)
                 {
-                    npc.direction = -1;
+                    NPC.direction = -1;
                 }
-                if (Main.tile[xl, y].type == TileID.ConveyorBeltLeft)
+                if (Main.tile[xl, y].TileType == TileID.ConveyorBeltLeft)
                 {
-                    npc.direction = 1;
+                    NPC.direction = 1;
                 }
-                int type = Main.tile[xc, y].type;
-                if (npc.oldVelocity.X < 0 && npc.velocity.X > 0)
+                int type = Main.tile[xc, y].TileType;
+                if (NPC.oldVelocity.X < 0 && NPC.velocity.X > 0)
                 {
-                    npc.direction = 1;
+                    NPC.direction = 1;
                 }
-                if (npc.oldVelocity.X > 0 && npc.velocity.X < 0)
+                if (NPC.oldVelocity.X > 0 && NPC.velocity.X < 0)
                 {
-                    npc.direction = -1;
+                    NPC.direction = -1;
                 }
-                if (Math.Abs(npc.oldVelocity.X) > 4 && npc.velocity.X == 0)
+                if (Math.Abs(NPC.oldVelocity.X) > 4 && NPC.velocity.X == 0)
                 {
-                    npc.velocity.Y = -6;
-                    npc.velocity.X = npc.oldVelocity.X;
+                    NPC.velocity.Y = -6;
+                    NPC.velocity.X = NPC.oldVelocity.X;
                 }
             }
             else
             {
-                if (npc.velocity.X == 0)
+                if (NPC.velocity.X == 0)
                 {
-                    npc.velocity.X = npc.direction;
+                    NPC.velocity.X = NPC.direction;
                 }
-                npc.velocity.X += npc.direction * 0.095f;
+                NPC.velocity.X += NPC.direction * 0.095f;
             }
         }
         public override bool CheckConditions(int left, int right, int top, int bottom)
@@ -119,29 +124,10 @@ namespace NimblesThrowingStuff.NPCs.Town
 			return score > 800;
 		}
 
-		public override string TownNPCName()
+        public override List<string> SetNPCNameList()
         {
-            string relic = "Toby Rex";
-            switch (WorldGen.genRand.Next(3))
-            {
-                case 1:
-                    relic = "Vincent Raptor";
-                    break;
-                case 2:
-                    relic = "Spino Sam";
-                    break;
-            }
-            switch (WorldGen.genRand.Next(5))
-			{
-				case 1:
-					return "Tyler Horridus";
-				case 2:
-					return "Charlie Tops";
-				case 3:
-					return "Oliver Raptor";
-                default:
-					return relic;
-			}
+            return new List<string>() { "Jimmy Bay", "Oliver Raptor", "Andy Wyliei",  "Albert Gorgo" };
+                
 		}
         public override bool? CanBeHitByProjectile(Projectile projectile)
         {
@@ -155,30 +141,19 @@ namespace NimblesThrowingStuff.NPCs.Town
         {
             if (Main.eclipse)
             {
-                switch (Main.rand.Next(3))
-                {
-                    case 1:
-                        return "Staying inside would probably help.";
-                    case 2:
-                        return "Are those 'Deaf Grapes' guys filming a video?";
-                    default:
-                        return "Another eclipse?";
-                }
+                return new List<string>() { "Staying inside would probably help.", "Are those 'Deaf Grapes' guys filming a video?", "Another eclipse? Really?" };
             }
             if (Main.bloodMoon)
             {
-                if (Main.raining && Main.rand.Next(4) == 0 && npc.position.Y/16 <= Main.worldSurface)
+                if (Main.raining && Main.rand.Next(4) == 0 && NPC.position.Y / 16 <= Main.worldSurface)
                 {
-                    return "So the moon is guilty of something...";
+                    return new List<string>() { "So the moon is guilty of something..." };
                 }
-                switch (Main.rand.Next(3))
+                else
                 {
-                    case 1:
-                        return "Why is everybody so mad? Did you higher primates evolve to get angry at a lunar eclipse?";
-                    case 2:
-                        return "I think the moon is guilty of something.";
-                    default:
-                        return "I fear what the future might bring...";
+                    return new List<string>() { "Why is everybody so mad? Did you higher primates evolve to get angry at a lunar eclipse?",
+                         "I think the moon is guilty of something.",
+                        "I fear what the future might bring..." };
                 }
             }
             else if (Main.LocalPlayer.ZoneSnow)
@@ -213,13 +188,13 @@ namespace NimblesThrowingStuff.NPCs.Town
                     return "It seems so strange that most of the seas are unexplored. What could be lying down there? Talking sharks?";
                 }
             }
-            else if (Main.raining && Main.rand.Next(5) == 0 && npc.position.Y / 16 <= Main.worldSurface)
+            else if (Main.raining && Main.rand.Next(5) == 0 && NPC.position.Y / 16 <= Main.worldSurface)
             {
                 return "Were fishes always able to do that?";
             }
             if (Main.rand.NextBool(15))
             {
-                if (npc.homeless)
+                if (NPC.homeless)
                 {
                     return "I'm an ancient beast. I've lived without a house for many years, but it would still be appreciated.";
                 }
@@ -269,7 +244,7 @@ namespace NimblesThrowingStuff.NPCs.Town
 			nextSlot++;
             shop.item[nextSlot].SetDefaults(ItemID.Javelin);
 			nextSlot++;
-            shop.item[nextSlot].SetDefaults(mod.ItemType("HadalShellstone"));
+            shop.item[nextSlot].SetDefaults(Mod.Find<ModItem>("HadalShellstone").Type);
             nextSlot++;
             if (NPC.downedBoss2)
             {
@@ -286,29 +261,29 @@ namespace NimblesThrowingStuff.NPCs.Town
             {
             shop.item[nextSlot].SetDefaults(ItemID.Bone);
 			nextSlot++;
-            shop.item[nextSlot].SetDefaults(mod.ItemType("SpikeKnife"));
+            shop.item[nextSlot].SetDefaults(Mod.Find<ModItem>("SpikeKnife").Type);
 			nextSlot++;
             }
             if (Main.hardMode)
             {
-            shop.item[nextSlot].SetDefaults(mod.ItemType("EmptyFlask"));
+            shop.item[nextSlot].SetDefaults(Mod.Find<ModItem>("EmptyFlask").Type);
 			nextSlot++;
             }
             if (NPC.downedPlantBoss)
             {
-            shop.item[nextSlot].SetDefaults(mod.ItemType("LihzahrdSpikeKnife"));
+            shop.item[nextSlot].SetDefaults(Mod.Find<ModItem>("LihzahrdSpikeKnife").Type);
 			nextSlot++;
             }
             if (NPC.downedAncientCultist)
             {
-            shop.item[nextSlot].SetDefaults(mod.ItemType("DoradoFragment"));
+            shop.item[nextSlot].SetDefaults(Mod.Find<ModItem>("DoradoFragment").Type);
 			nextSlot++;
             }
         }
 
-		public override void NPCLoot()
+		public override void OnKill()
 		{
-            Gore.NewGore(npc.position, npc.velocity, mod.GetGoreSlot("Gores/LivingRelicHeadGore"), 1);
+            Gore.NewGore(NPC.position, NPC.velocity, Mod.GetGoreSlot("Gores/LivingRelicHeadGore"), 1);
         }
 
 		public override void TownNPCAttackStrength(ref int damage, ref float knockback)

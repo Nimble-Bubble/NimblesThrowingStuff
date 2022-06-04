@@ -15,41 +15,40 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 
 		public override void SetDefaults() 
 		{
-			item.damage = 58;
-			item.thrown = true;
-			item.width = 34;
-			item.height = 34;
-			item.useTime = 16;
-			item.useAnimation = 16;
-			item.useStyle = 1;
-			item.knockBack = 7f;
-            item.noMelee = true;
-            item.noUseGraphic = true;
-			item.value = Item.buyPrice(0, 50, 0, 0);
-			item.rare = 10;
-			item.UseSound = SoundID.Item1;
-			item.autoReuse = true;
-			item.shoot = mod.ProjectileType("DoradoKniveProj");
-			item.shootSpeed = 15f;
-            item.mana = 8;
+			Item.damage = 58;
+			Item.DamageType = DamageClass.Throwing;
+			Item.width = 34;
+			Item.height = 34;
+			Item.useTime = 16;
+			Item.useAnimation = 16;
+			Item.useStyle = 1;
+			Item.knockBack = 7f;
+            Item.noMelee = true;
+            Item.noUseGraphic = true;
+			Item.value = Item.buyPrice(0, 50, 0, 0);
+			Item.rare = 10;
+			Item.UseSound = SoundID.Item1;
+			Item.autoReuse = true;
+			Item.shoot = Mod.Find<ModProjectile>("DoradoKniveProj").Type;
+			Item.shootSpeed = 15f;
+            Item.mana = 8;
 		}
         public override void AddRecipes() 
 		{
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.ItemType("DoradoFragment"), 18);
+			Recipe recipe = CreateRecipe();
+			recipe.AddIngredient(Mod.Find<ModItem>("DoradoFragment").Type, 18);
 			recipe.AddTile(TileID.LunarCraftingStation);
 			recipe.SetResult(this);
-			recipe.AddRecipe();
+			recipe.Register();
 		}
-        public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
+        public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
 		{
       int numberProjectiles = 3 + Main.rand.Next(3); 
 			for (int i = 0; i < numberProjectiles; i++)
 			{
-				Vector2 perturbedSpeed = new Vector2(speedX, speedY).RotatedByRandom(MathHelper.ToRadians(10)); 
-				Projectile.NewProjectile(position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, type, damage, knockBack, player.whoAmI);
+				Vector2 perturbedSpeed = velocity.RotatedByRandom(MathHelper.ToRadians(10)); 
+				Projectile.NewProjectile(position, perturbedSpeed, type, damage, knockBack, player.whoAmI);
 			}
-			return false;
         }
 	}
 }

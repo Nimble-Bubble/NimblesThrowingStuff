@@ -17,27 +17,27 @@ namespace NimblesThrowingStuff.Projectiles.Enemy
 
         public override void SetDefaults()
         {
-            projectile.width = 250;
-            projectile.height = 10;
-            projectile.aiStyle = 0;
-            projectile.hostile = true;
-            projectile.magic = false;
-            projectile.maxPenetrate = 1;
-            projectile.tileCollide = false;
-            projectile.light = 1f;
-            projectile.alpha = 0;
-            projectile.timeLeft = 600;
+            Projectile.width = 250;
+            Projectile.height = 10;
+            Projectile.aiStyle = 0;
+            Projectile.hostile = true;
+            Projectile.magic = false;
+            Projectile.maxPenetrate = 1;
+            Projectile.tileCollide = false;
+            Projectile.light = 1f;
+            Projectile.alpha = 0;
+            Projectile.timeLeft = 600;
         }
         public override void AI()
         {
-            projectile.velocity.X *= 1.025f;
-            projectile.velocity.Y *= 1.025f;
-            Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<ProcellariteStarDust>(), Main.rand.Next(-2, 1), Main.rand.Next(-2, 1), 0, default, Main.rand.NextFloat(0.5f, 1.5f));
+            Projectile.velocity.X *= 1.025f;
+            Projectile.velocity.Y *= 1.025f;
+            Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<ProcellariteStarDust>(), Main.rand.Next(-2, 1), Main.rand.Next(-2, 1), 0, default, Main.rand.NextFloat(0.5f, 1.5f));
         }
         public override void Kill(int timeLeft)
         {
             for (int io = 0; io < 10; io++)
-                Dust.NewDust(projectile.position, projectile.width, projectile.height, ModContent.DustType<ProcellariteStarDust>(), Main.rand.Next(-2, 1), Main.rand.Next(-2, 1), 0, default, Main.rand.NextFloat(0.5f, 1.5f));
+                Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<ProcellariteStarDust>(), Main.rand.Next(-2, 1), Main.rand.Next(-2, 1), 0, default, Main.rand.NextFloat(0.5f, 1.5f));
         }
     }
 }

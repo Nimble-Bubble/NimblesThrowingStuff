@@ -10,32 +10,32 @@ namespace NimblesThrowingStuff.Items.Tools
 	{
 		public override void SetDefaults() 
 		{
-			item.damage = 13;
-			item.melee = true;
-			item.width = 48;
-			item.height = 48;
-			item.useTime = 14;
-			item.useAnimation = 14;
-			item.useStyle = ItemUseStyleID.HoldingOut;
-			item.knockBack = 3.5f;
-			item.value = Item.buyPrice(0, 1, 50, 0);
-			item.rare = ItemRarityID.Green;
-			item.UseSound = SoundID.Item1;
-			item.channel = true;
-			item.autoReuse = true;
-			item.noMelee = true;
-			item.noUseGraphic = true;
-            item.pick = 64;
-			item.shoot = ModContent.ProjectileType<MeteoriteDrillProj>();
-			item.shootSpeed = 30;
+			Item.damage = 13;
+			Item.DamageType = DamageClass.Melee;
+			Item.width = 48;
+			Item.height = 48;
+			Item.useTime = 14;
+			Item.useAnimation = 14;
+			Item.useStyle = ItemUseStyleID.Shoot;
+			Item.knockBack = 3.5f;
+			Item.value = Item.buyPrice(0, 1, 50, 0);
+			Item.rare = ItemRarityID.Green;
+			Item.UseSound = SoundID.Item1;
+			Item.channel = true;
+			Item.autoReuse = true;
+			Item.noMelee = true;
+			Item.noUseGraphic = true;
+            Item.pick = 64;
+			Item.shoot = ModContent.ProjectileType<MeteoriteDrillProj>();
+			Item.shootSpeed = 30;
 		}
         public override void AddRecipes() 
 		{
-			ModRecipe recipe = new ModRecipe(mod);
+			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.MeteoriteBar, 20);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
-			recipe.AddRecipe();
+			recipe.Register();
 		}
 	}
 }

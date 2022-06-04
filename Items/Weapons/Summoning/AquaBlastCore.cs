@@ -15,41 +15,40 @@ namespace NimblesThrowingStuff.Items.Weapons.Summoning
 		{
 			DisplayName.SetDefault("Aqua Blaster Core"); 
 			Tooltip.SetDefault("Summons an Aqua Blaster");
-            Item.staff[item.type] = true;
-            ItemID.Sets.GamepadWholeScreenUseRange[item.type] = true; 
-			ItemID.Sets.LockOnIgnoresCollision[item.type] = true;
+            Item.staff[Item.type] = true;
+            ItemID.Sets.GamepadWholeScreenUseRange[Item.type] = true; 
+			ItemID.Sets.LockOnIgnoresCollision[Item.type] = true;
 		}
 		public override void SetDefaults() {
-			item.damage = 25;
-			item.knockBack = 4f;
-			item.mana = 11;
-			item.width = 32;
-			item.height = 32;
-			item.useTime = 30;
-			item.useAnimation = 30;
-			item.useStyle = 5;
-			item.value = Item.buyPrice(0, 7, 50, 0);
-			item.rare = 2;
-			item.UseSound = SoundID.Item21;
-			item.noMelee = true;
-			item.summon = true;
-			item.buffType = ModContent.BuffType<AquaBlastBuff>();
-			item.shoot = ModContent.ProjectileType<AquaBlastProj>();
+			Item.damage = 25;
+			Item.knockBack = 4f;
+			Item.mana = 11;
+			Item.width = 32;
+			Item.height = 32;
+			Item.useTime = 30;
+			Item.useAnimation = 30;
+			Item.useStyle = 5;
+			Item.value = Item.buyPrice(0, 7, 50, 0);
+			Item.rare = 2;
+			Item.UseSound = SoundID.Item21;
+			Item.noMelee = true;
+			Item.DamageType = DamageClass.Summon;;
+			Item.buffType = ModContent.BuffType<AquaBlastBuff>();
+			Item.shoot = ModContent.ProjectileType<AquaBlastProj>();
 		}
 
-		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack) 
-        {
-			player.AddBuff(item.buffType, 18000);
+		public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
+		{
+			player.AddBuff(Item.buffType, 18000);
 			position = Main.MouseWorld;
-			return true;
 		}
 		public override void AddRecipes()
 		{
-			ModRecipe recipe = new ModRecipe(mod);
+			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ModContent.ItemType<ShorebrassBar>(), 18);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
-			recipe.AddRecipe();
+			recipe.Register();
 		}
 	}
 }

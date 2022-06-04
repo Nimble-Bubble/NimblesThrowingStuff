@@ -14,11 +14,11 @@ namespace NimblesThrowingStuff.Items.Vanity
     {
         public override void SetDefaults()
         {
-            item.width = 30;
-            item.height = 32;
-            item.value = 37500;
-            item.rare = ItemRarityID.Blue;
-            item.vanity = true;
+            Item.width = 30;
+            Item.height = 32;
+            Item.value = 37500;
+            Item.rare = ItemRarityID.Blue;
+            Item.vanity = true;
         }
     }
 }

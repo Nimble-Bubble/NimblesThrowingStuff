@@ -10,30 +10,30 @@ namespace NimblesThrowingStuff.Items.Tools
 	{
 		public override void SetDefaults() 
 		{
-			item.damage = 60;
-			item.melee = true;
-			item.width = 48;
-			item.height = 48;
-			item.useTime = 7;
-			item.useAnimation = 28;
-			item.useStyle = 1;
-			item.knockBack = 7f;
-			item.value = Item.buyPrice(0, 25, 0, 0);
-			item.rare = 10;
-			item.UseSound = SoundID.Item1;
-			item.autoReuse = true;
-            item.axe = 30;
-            item.hammer = 100;
-            item.tileBoost += 4;
+			Item.damage = 60;
+			Item.DamageType = DamageClass.Melee;
+			Item.width = 48;
+			Item.height = 48;
+			Item.useTime = 7;
+			Item.useAnimation = 28;
+			Item.useStyle = 1;
+			Item.knockBack = 7f;
+			Item.value = Item.buyPrice(0, 25, 0, 0);
+			Item.rare = 10;
+			Item.UseSound = SoundID.Item1;
+			Item.autoReuse = true;
+            Item.axe = 30;
+            Item.hammer = 100;
+            Item.tileBoost += 4;
 		}
         public override void AddRecipes() 
 		{
-			ModRecipe recipe = new ModRecipe(mod);
+			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.LunarBar, 12);
             recipe.AddIngredient(ModContent.ItemType<DoradoFragment>(), 14);
 			recipe.AddTile(TileID.LunarCraftingStation);
 			recipe.SetResult(this);
-			recipe.AddRecipe();
+			recipe.Register();
 		}
 	}
 }

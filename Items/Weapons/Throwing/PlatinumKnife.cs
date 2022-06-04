@@ -9,33 +9,33 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 
 		public override void SetDefaults() 
 		{
-			item.damage = 15;
-			item.thrown = true;
-			item.width = 24;
-			item.height = 24;
-			item.useTime = 19;
-			item.useAnimation = 19;
-			item.useStyle = 1;
-			item.knockBack = 4.5f;
-            item.noMelee = true;
-            item.noUseGraphic = true;
-			item.value = Item.buyPrice(0, 0, 5, 0);
-			item.rare = 0;
-			item.UseSound = SoundID.Item1;
-			item.autoReuse = true;
-			item.shoot = mod.ProjectileType("PlatinumKnifeProj");
-			item.shootSpeed = 9f;
-            item.consumable = true;
-            item.maxStack = 999;
+			Item.damage = 15;
+			Item.DamageType = DamageClass.Throwing;
+			Item.width = 24;
+			Item.height = 24;
+			Item.useTime = 19;
+			Item.useAnimation = 19;
+			Item.useStyle = 1;
+			Item.knockBack = 4.5f;
+            Item.noMelee = true;
+            Item.noUseGraphic = true;
+			Item.value = Item.buyPrice(0, 0, 5, 0);
+			Item.rare = 0;
+			Item.UseSound = SoundID.Item1;
+			Item.autoReuse = true;
+			Item.shoot = Mod.Find<ModProjectile>("PlatinumKnifeProj").Type;
+			Item.shootSpeed = 9f;
+            Item.consumable = true;
+            Item.maxStack = 999;
 		}
 
 		public override void AddRecipes() 
 		{
-			ModRecipe recipe = new ModRecipe(mod);
+			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.PlatinumBar, 1);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this, 50);
-			recipe.AddRecipe();
+			recipe.Register();
 		}
 	}
 }

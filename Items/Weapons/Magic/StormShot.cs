@@ -10,26 +10,26 @@ namespace NimblesThrowingStuff.Items.Weapons.Magic
         public override void SetStaticDefaults()
 		{
 			Tooltip.SetDefault("Fires a ball of acid rain");
-            Item.staff[item.type] = false;
+            Item.staff[Item.type] = false;
 		}
 		public override void SetDefaults() 
 		{
-			item.damage = 170;
-			item.magic = true;
-			item.width = 24;
-			item.height = 24;
-			item.useTime = 11;
-			item.useAnimation = 11;
-			item.useStyle = 5;
-			item.knockBack = 4f;
-            item.noMelee = true;
-			item.value = Item.buyPrice(1, 0, 0, 0);
-			item.rare = ItemRarityID.Purple;
-			item.UseSound = SoundID.Item61;
-			item.autoReuse = true;
-			item.shoot = ModContent.ProjectileType<StormShotBall>();
-			item.shootSpeed = 13f;
-            item.mana = 12;
+			Item.damage = 170;
+			Item.DamageType = DamageClass.Magic;
+			Item.width = 24;
+			Item.height = 24;
+			Item.useTime = 11;
+			Item.useAnimation = 11;
+			Item.useStyle = 5;
+			Item.knockBack = 4f;
+            Item.noMelee = true;
+			Item.value = Item.buyPrice(1, 0, 0, 0);
+			Item.rare = ItemRarityID.Purple;
+			Item.UseSound = SoundID.Item61;
+			Item.autoReuse = true;
+			Item.shoot = ModContent.ProjectileType<StormShotBall>();
+			Item.shootSpeed = 13f;
+            Item.mana = 12;
 		}
 	}
 }

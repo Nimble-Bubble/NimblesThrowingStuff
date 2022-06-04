@@ -14,36 +14,36 @@ namespace NimblesThrowingStuff.Items.Materials
         }
         public override void SetDefaults() 
 		{
-			item.width = 28;
-			item.height = 28;
-			item.useTime = 12;
-			item.useAnimation = 12;
-			item.useStyle = 1;
-			item.value = Item.buyPrice(0, 2, 50, 0);
-			item.rare = 3;
-			item.UseSound = SoundID.Item1;
-			item.autoReuse = true;
-            item.useTurn = true;
-            item.createTile = ModContent.TileType<ShorebrassBarTile>();
-            item.consumable = true;
-            item.maxStack = 999;
+			Item.width = 28;
+			Item.height = 28;
+			Item.useTime = 12;
+			Item.useAnimation = 12;
+			Item.useStyle = 1;
+			Item.value = Item.buyPrice(0, 2, 50, 0);
+			Item.rare = 3;
+			Item.UseSound = SoundID.Item1;
+			Item.autoReuse = true;
+            Item.useTurn = true;
+            Item.createTile = ModContent.TileType<ShorebrassBarTile>();
+            Item.consumable = true;
+            Item.maxStack = 999;
 		}
         public override void AddRecipes() 
 		{
-			ModRecipe recipe = new ModRecipe(mod);
+			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.Bone, 2);
 			recipe.AddIngredient(ItemID.Coral, 1);
 			recipe.AddIngredient(ItemID.CopperBar, 2);
 			recipe.AddTile(TileID.Furnaces);
 			recipe.SetResult(this, 3);
-			recipe.AddRecipe();
-			recipe = new ModRecipe(mod);
+			recipe.Register();
+			recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.Bone, 2);
 			recipe.AddIngredient(ItemID.Coral, 1);
 			recipe.AddIngredient(ItemID.TinBar, 2);
 			recipe.AddTile(TileID.Furnaces);
 			recipe.SetResult(this, 3);
-			recipe.AddRecipe();
+			recipe.Register();
 		}
 	}
 }

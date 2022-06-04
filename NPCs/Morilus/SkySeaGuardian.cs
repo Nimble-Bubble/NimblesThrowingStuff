@@ -12,29 +12,29 @@ namespace NimblesThrowingStuff.NPCs.Morilus
     {
         public override void SetStaticDefaults()
         {
-            Main.npcFrameCount[npc.type] = 6;
+            Main.npcFrameCount[NPC.type] = 6;
         }
         public override void SetDefaults()
         {
-            npc.width = 52;
-            npc.height = 52;
-            npc.damage = 150;
-            npc.defense = 50;
-            npc.lifeMax = 25000;
-            npc.HitSound = SoundID.NPCHit4;
-            npc.DeathSound = SoundID.NPCDeath14;
-            npc.value = 25000f;
-            npc.knockBackResist = 0f;
-            npc.aiStyle = 23;
-            aiType = 84;
+            NPC.width = 52;
+            NPC.height = 52;
+            NPC.damage = 150;
+            NPC.defense = 50;
+            NPC.lifeMax = 25000;
+            NPC.HitSound = SoundID.NPCHit4;
+            NPC.DeathSound = SoundID.NPCDeath14;
+            NPC.value = 25000f;
+            NPC.knockBackResist = 0f;
+            NPC.aiStyle = 23;
+            AIType = 84;
             animationType = 84;
-            npc.boss = true;
+            NPC.boss = true;
             music = MusicID.Boss4;
         }
         public override void ScaleExpertStats(int numPlayers, float bossLifeScale)
         {
-            npc.lifeMax = (int)(npc.lifeMax * 0.75f * bossLifeScale);
-            npc.damage = 225;
+            NPC.lifeMax = (int)(NPC.lifeMax * 0.75f * bossLifeScale);
+            NPC.damage = 225;
         }
     }
 }

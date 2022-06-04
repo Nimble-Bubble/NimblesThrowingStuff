@@ -16,15 +16,16 @@ namespace NimblesThrowingStuff.Items.Armor
         {
             DisplayName.SetDefault("Palladium Crown");
                 Tooltip.SetDefault("Increases minion damage by 6%");
+            ArmorIDs.Head.Sets.DrawHair[Item.headSlot] = true;
         }
 
         public override void SetDefaults()
         {
-            item.width = 30;
-            item.height = 32;
-            item.value = 75000;
-            item.rare = 4;
-            item.defense = 0; // The Defence value for this piece of armour.
+            Item.width = 30;
+            Item.height = 32;
+            Item.value = 75000;
+            Item.rare = 4;
+            Item.defense = 0; // The Defence value for this piece of armour.
         }
 
         public override bool IsArmorSet(Item head, Item body, Item legs)
@@ -43,15 +44,9 @@ namespace NimblesThrowingStuff.Items.Armor
             player.minionDamage += 0.06f;
             player.maxMinions += 1;
         }
-        public override void DrawHair(ref bool drawHair, ref bool drawAltHair)
-        {
-            drawHair = true;  
-        }
-
-
         public override void AddRecipes()
         {
-            ModRecipe r = new ModRecipe(mod);
+            ModRecipe r = new ModRecipe(Mod);
             r.AddIngredient(1184, 12);
             r.AddTile(16);
             r.SetResult(this);

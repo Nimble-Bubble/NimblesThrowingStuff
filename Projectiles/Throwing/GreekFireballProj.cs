@@ -13,35 +13,35 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetDefaults()
         {
-            projectile.width = 14;
-            projectile.height = 14;
-            projectile.usesLocalNPCImmunity = true;
-            projectile.localNPCHitCooldown = 10;
-            projectile.tileCollide = true;
-            projectile.maxPenetrate = 2;
-            projectile.friendly = true;
-            projectile.thrown = true;
-            projectile.aiStyle = 8;
-            projectile.penetrate = 2;
-            projectile.extraUpdates = 1;
-            aiType = 15;
+            Projectile.width = 14;
+            Projectile.height = 14;
+            Projectile.usesLocalNPCImmunity = true;
+            Projectile.localNPCHitCooldown = 10;
+            Projectile.tileCollide = true;
+            Projectile.maxPenetrate = 2;
+            Projectile.friendly = true;
+            Projectile.DamageType = DamageClass.Throwing;
+            Projectile.aiStyle = 8;
+            Projectile.penetrate = 2;
+            Projectile.extraUpdates = 1;
+            AIType = 15;
         }
         public override void OnHitNPC (NPC target, int damage, float knockback, bool crit)
         {
-			target.AddBuff(mod.BuffType("GreekFire"), 120);
+			target.AddBuff(Mod.Find<ModBuff>("GreekFire").Type, 120);
         }
-        public override void PostDraw(SpriteBatch spriteBatch, Color lightColor)
+        public override void PostDraw(Color lightColor)
 		{
-			Texture2D texture = mod.GetTexture("Projectiles/Throwing/GreekFireballProj_Glow");
+			Texture2D texture = Mod.GetTexture("Projectiles/Throwing/GreekFireballProj_Glow");
 			spriteBatch.Draw
 			(
 				texture,
-				projectile.position,
+				Projectile.position,
 				new Rectangle(0, 0, texture.Width, texture.Height),
 				Color.Orange,
-				projectile.rotation,
+				Projectile.rotation,
 				texture.Size() * 0.5f,
-				projectile.scale,
+				Projectile.scale,
 				SpriteEffects.None,
 				0f
 			);

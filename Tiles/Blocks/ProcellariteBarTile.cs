@@ -8,14 +8,14 @@ namespace NimblesThrowingStuff.Tiles.Blocks
 {
     public class ProcellariteBarTile : ModTile
     {
-        public override void SetDefaults()
+        public override void SetStaticDefaults()
         {
             Main.tileFrameImportant[Type] = true;
 			Main.tileLavaDeath[Type] = false;
             Main.tileSolid[Type] = true;
             Main.tileBlockLight[Type] = false;
             Main.tileMergeDirt[Type] = false;
-            drop = ModContent.ItemType<ProcellariteBar>();
+            ItemDrop = ModContent.ItemType<ProcellariteBar>();
             TileObjectData.newTile.StyleWrapLimit = 18;
             ModTranslation name = CreateMapEntryName();
             name.SetDefault("Procellarite Bar");

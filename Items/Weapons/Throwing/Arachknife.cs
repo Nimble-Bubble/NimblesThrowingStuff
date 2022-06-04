@@ -14,32 +14,32 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 
 		public override void SetDefaults() 
 		{
-			item.damage = 32;
-			item.thrown = true;
-			item.width = 24;
-			item.height = 24;
-			item.useTime = 32;
-			item.useAnimation = 32;
-			item.useStyle = 1;
-			item.knockBack = 0f;
-            item.noMelee = true;
-            item.noUseGraphic = true;
-			item.value = Item.buyPrice(0, 8, 0, 0);
-			item.rare = 4;
-			item.UseSound = SoundID.Item1;
-			item.autoReuse = true;
-			item.shoot = ModContent.ProjectileType<ArachknifeProj>();
-			item.shootSpeed = 10f;
-            item.mana = 8;
+			Item.damage = 32;
+			Item.DamageType = DamageClass.Throwing;
+			Item.width = 24;
+			Item.height = 24;
+			Item.useTime = 32;
+			Item.useAnimation = 32;
+			Item.useStyle = 1;
+			Item.knockBack = 0f;
+            Item.noMelee = true;
+            Item.noUseGraphic = true;
+			Item.value = Item.buyPrice(0, 8, 0, 0);
+			Item.rare = 4;
+			Item.UseSound = SoundID.Item1;
+			Item.autoReuse = true;
+			Item.shoot = ModContent.ProjectileType<ArachknifeProj>();
+			Item.shootSpeed = 10f;
+            Item.mana = 8;
 		}
 
 		public override void AddRecipes() 
 		{
-			ModRecipe recipe = new ModRecipe(mod);
+			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(2607, 8);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
-			recipe.AddRecipe();
+			recipe.Register();
 		}
 	}
 }

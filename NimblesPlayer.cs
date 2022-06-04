@@ -3,9 +3,10 @@ using System;
 using System.IO;
 using System.Collections.Generic;
 using Terraria;
+using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.World.Generation;
+using Terraria.WorldBuilding;
 using Terraria.GameContent.Generation;
 using Terraria.ModLoader.IO;
 using Microsoft.Xna.Framework;
@@ -74,12 +75,12 @@ namespace NimblesThrowingStuff
             {
                 if (whichShield >= 1)
                 {
-                    Dust.NewDust(player.position, player.width, player.height, 43, Main.rand.Next(-3, 2), Main.rand.Next(-3, 2), 0, default, 1);
+                    Dust.NewDust(Player.position, Player.width, Player.height, 43, Main.rand.Next(-3, 2), Main.rand.Next(-3, 2), 0, default, 1);
                 }
                 switch (whichShield)
                 {
                     case 1:
-                        player.AddBuff(mod.BuffType("GuardIronShield"), 2);
+                        Player.AddBuff(Mod.Find<ModBuff>("GuardIronShield").Type, 2);
                     break;
                 }
             }
@@ -93,19 +94,19 @@ namespace NimblesThrowingStuff
                 //    damage = 0;
                 //}
                 quiet = true;
-                Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/GuardMetalMedium"));
+                SoundEngine.PlaySound(Mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/GuardMetalMedium"));
             }
         }
         public override void PostHurt(bool pvp, bool quiet, double damage, int hitDirection, bool crit) {
             
                 if (canSanta)
          {
-          Projectile.NewProjectile(player.Center.X, player.Center.Y, 0, -10,
-                            mod.ProjectileType("SantankSpikeProj"), 100, 5f, Main.myPlayer, 0.0f, (float) Main.rand.Next(0, 45)); 
-             Projectile.NewProjectile(player.Center.X, player.Center.Y, -5, -10,
-                            mod.ProjectileType("SantankSpikeProj"), 100, 5f, Main.myPlayer, 0.0f, (float) Main.rand.Next(0, 45)); 
-             Projectile.NewProjectile(player.Center.X, player.Center.Y, 5, -10,
-                            mod.ProjectileType("SantankSpikeProj"), 100, 5f, Main.myPlayer, 0.0f, (float) Main.rand.Next(0, 45)); 
+          Projectile.NewProjectile(Player.Center.X, Player.Center.Y, 0, -10,
+                            Mod.Find<ModProjectile>("SantankSpikeProj").Type, 100, 5f, Main.myPlayer, 0.0f, (float) Main.rand.Next(0, 45)); 
+             Projectile.NewProjectile(Player.Center.X, Player.Center.Y, -5, -10,
+                            Mod.Find<ModProjectile>("SantankSpikeProj").Type, 100, 5f, Main.myPlayer, 0.0f, (float) Main.rand.Next(0, 45)); 
+             Projectile.NewProjectile(Player.Center.X, Player.Center.Y, 5, -10,
+                            Mod.Find<ModProjectile>("SantankSpikeProj").Type, 100, 5f, Main.myPlayer, 0.0f, (float) Main.rand.Next(0, 45)); 
          }
         }
         
@@ -128,9 +129,9 @@ namespace NimblesThrowingStuff
 
             return speed;
         }
-        public override float MeleeSpeedMultiplier(Item item)
+        public override float UseSpeedMultiplier(Item item)
         {
-            float speed = base.MeleeSpeedMultiplier(item);
+            float speed = base.UseSpeedMultiplier(item);
 
             if (item.thrown)
             {
@@ -154,12 +155,12 @@ namespace NimblesThrowingStuff
           switch (whichShield)
                 {
                     case 1:
-                        player.statDefense += 10;
-                        player.statDefense += guardBonus;
-                        player.moveSpeed -= 0.5f;
+                        Player.statDefense += 10;
+                        Player.statDefense += guardBonus;
+                        Player.moveSpeed -= 0.5f;
                         if (Main.rand.NextBool(6))
                         {
-                            Dust.NewDust(player.position, player.width, player.height, 43, player.velocity.X + Main.rand.Next(-3, 4), player.velocity.Y + Main.rand.Next(-3, 4), 0, new Color (255, 255, 255));
+                            Dust.NewDust(Player.position, Player.width, Player.height, 43, Player.velocity.X + Main.rand.Next(-3, 4), Player.velocity.Y + Main.rand.Next(-3, 4), 0, new Color (255, 255, 255));
                         }
                         break;
                 }
@@ -167,17 +168,17 @@ namespace NimblesThrowingStuff
     if (greek)
 			{
 				// These lines zero out any positive lifeRegen. This is expected for all bad life regeneration effects.
-				if (player.lifeRegen > 0)
+				if (Player.lifeRegen > 0)
 				{
-					player.lifeRegen = 0;
+					Player.lifeRegen = 0;
 				}
-				player.lifeRegenTime = 0;
+				Player.lifeRegenTime = 0;
 				// lifeRegen is measured in 1/2 life per second. Therefore, this effect causes 25 life lost per second. Ouch.
-				player.lifeRegen -= 50;
+				Player.lifeRegen -= 50;
 			}
     if (compromise)
             {
-                player.noKnockback = false;
+                Player.noKnockback = false;
                 guardBonus -= 10;
             }
         }

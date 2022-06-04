@@ -16,31 +16,31 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 
 		public override void SetDefaults() 
 		{
-			item.damage = 21;
-			item.thrown = true;
-			item.width = 24;
-			item.height = 24;
-			item.useTime = 17;
-			item.useAnimation = 17;
-			item.useStyle = 1;
-			item.knockBack = 4.5f;
-            item.noMelee = true;
-            item.noUseGraphic = true;
-			item.value = Item.buyPrice(0, 8, 75, 0);
-			item.rare = 3;
-			item.UseSound = SoundID.Item1;
-			item.autoReuse = true;
-			item.shoot = ModContent.ProjectileType<SkelespearProj>();
-			item.shootSpeed = 8f;
-            item.mana = 11;
+			Item.damage = 21;
+			Item.DamageType = DamageClass.Throwing;
+			Item.width = 24;
+			Item.height = 24;
+			Item.useTime = 17;
+			Item.useAnimation = 17;
+			Item.useStyle = 1;
+			Item.knockBack = 4.5f;
+            Item.noMelee = true;
+            Item.noUseGraphic = true;
+			Item.value = Item.buyPrice(0, 8, 75, 0);
+			Item.rare = 3;
+			Item.UseSound = SoundID.Item1;
+			Item.autoReuse = true;
+			Item.shoot = ModContent.ProjectileType<SkelespearProj>();
+			Item.shootSpeed = 8f;
+            Item.mana = 11;
 		}
 		public override void AddRecipes()
 		{
-			ModRecipe recipe = new ModRecipe(mod);
+			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ModContent.ItemType<ShorebrassBar>(), 12);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
-			recipe.AddRecipe();
+			recipe.Register();
 		}
 	}
 }

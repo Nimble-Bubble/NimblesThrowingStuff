@@ -20,16 +20,16 @@ namespace NimblesThrowingStuff.Items.Armor
 
         public override void SetDefaults()
         {
-            item.width = 30;
-            item.height = 32;
-            item.value = 500000;
-            item.rare = 8;
-            item.defense = 12; // The Defence value for this piece of armour.
+            Item.width = 30;
+            Item.height = 32;
+            Item.value = 500000;
+            Item.rare = 8;
+            Item.defense = 12; // The Defence value for this piece of armour.
         }
 
         public override bool IsArmorSet(Item head, Item body, Item legs)
         {
-            return body.type == mod.ItemType("FestiveShirt") && legs.type == mod.ItemType("FestivePants");
+            return body.type == Mod.Find<ModItem>("FestiveShirt").Type && legs.type == Mod.Find<ModItem>("FestivePants").Type;
         }
         public override void UpdateArmorSet(Player player)
         {
@@ -47,7 +47,7 @@ namespace NimblesThrowingStuff.Items.Armor
 
         public override void AddRecipes()
         {
-            ModRecipe r = new ModRecipe(mod);
+            ModRecipe r = new ModRecipe(Mod);
             r.AddIngredient(ModContent.ItemType<FestiveCloth>(), 12);
             r.AddTile(134);
             r.SetResult(this);

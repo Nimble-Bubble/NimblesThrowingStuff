@@ -16,30 +16,30 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
         }
 
         public override void SetDefaults() {
-			item.damage = 24;
-			item.useStyle = 5;
-			item.useAnimation = 38;
-			item.useTime = 38;
-			item.knockBack = 5.5f;
-			item.width = 36;
-			item.height = 36;
-			item.shoot = ModContent.ProjectileType<StingerSpearProj>();
-            item.shootSpeed = 3.25f;
-			item.rare = ItemRarityID.Green;
-            item.noUseGraphic = true;
-            item.noMelee = true;
-			item.value = Item.sellPrice(silver: 54);
-            item.melee = true;
-			item.UseSound = SoundID.Item1;
+			Item.damage = 24;
+			Item.useStyle = 5;
+			Item.useAnimation = 38;
+			Item.useTime = 38;
+			Item.knockBack = 5.5f;
+			Item.width = 36;
+			Item.height = 36;
+			Item.shoot = ModContent.ProjectileType<StingerSpearProj>();
+            Item.shootSpeed = 3.25f;
+			Item.rare = ItemRarityID.Green;
+            Item.noUseGraphic = true;
+            Item.noMelee = true;
+			Item.value = Item.sellPrice(silver: 54);
+            Item.DamageType = DamageClass.Melee;
+			Item.UseSound = SoundID.Item1;
 		}
         public override void AddRecipes()
 		{
-			var recipe = new ModRecipe(mod);
+			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.JungleSpores, 12);
             recipe.AddIngredient(ItemID.Stinger, 4);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
-			recipe.AddRecipe();
+			recipe.Register();
 		}
 	}
 }

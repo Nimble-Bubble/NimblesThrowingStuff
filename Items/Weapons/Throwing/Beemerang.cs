@@ -10,23 +10,23 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 
 		public override void SetDefaults() 
 		{
-			item.damage = 26;
-			item.thrown = true;
-			item.width = 24;
-			item.height = 24;
-			item.useTime = 22;
-			item.useAnimation = 22;
-			item.useStyle = 1;
-			item.knockBack = 6.5f;
-            item.noMelee = true;
-            item.noUseGraphic = true;
-			item.value = Item.buyPrice(0, 5, 0, 0);
-			item.rare = 3;
-			item.UseSound = SoundID.Item1;
-			item.autoReuse = true;
-			item.shoot = ModContent.ProjectileType<BeemerangProj>();
-			item.shootSpeed = 13.5f;
-            item.mana = 12;
+			Item.damage = 26;
+			Item.DamageType = DamageClass.Throwing;
+			Item.width = 24;
+			Item.height = 24;
+			Item.useTime = 22;
+			Item.useAnimation = 22;
+			Item.useStyle = 1;
+			Item.knockBack = 6.5f;
+            Item.noMelee = true;
+            Item.noUseGraphic = true;
+			Item.value = Item.buyPrice(0, 5, 0, 0);
+			Item.rare = 3;
+			Item.UseSound = SoundID.Item1;
+			Item.autoReuse = true;
+			Item.shoot = ModContent.ProjectileType<BeemerangProj>();
+			Item.shootSpeed = 13.5f;
+            Item.mana = 12;
 		}
 	}
 }

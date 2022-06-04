@@ -13,22 +13,22 @@ namespace NimblesThrowingStuff.Projectiles.Melee
     {
         public override void SetDefaults()
         {
-            projectile.width = 44;
-            projectile.height = 44;
-            projectile.usesLocalNPCImmunity = true;
-            projectile.localNPCHitCooldown = 10;
-            projectile.tileCollide = false;
-            projectile.penetrate = 2;
-            projectile.friendly = true;
-            projectile.thrown = true;
-            projectile.light = 0.5f;
-            projectile.aiStyle = 27;
-            projectile.timeLeft = 600;
+            Projectile.width = 44;
+            Projectile.height = 44;
+            Projectile.usesLocalNPCImmunity = true;
+            Projectile.localNPCHitCooldown = 10;
+            Projectile.tileCollide = false;
+            Projectile.penetrate = 2;
+            Projectile.friendly = true;
+            Projectile.DamageType = DamageClass.Throwing;
+            Projectile.light = 0.5f;
+            Projectile.aiStyle = 27;
+            Projectile.timeLeft = 600;
         }
         public override void AI()
         {
-            projectile.rotation = projectile.velocity.ToRotation() + MathHelper.ToRadians(45);
-            Dust.NewDust(new Vector2(projectile.position.X, projectile.position.Y), projectile.width, projectile.height, 6, projectile.velocity.X * 0.1f, projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
+            Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.ToRadians(45);
+            Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 6, Projectile.velocity.X * 0.1f, Projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
         }
         public override void OnHitNPC (NPC target, int damage, float knockback, bool crit)
         {

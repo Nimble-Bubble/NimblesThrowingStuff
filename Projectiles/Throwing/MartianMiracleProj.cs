@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
+using Terraria.Audio;
 using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.Enums;
@@ -14,50 +15,50 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetDefaults()
         {
-            projectile.width = 32;
-            projectile.height = 36;
-            projectile.usesLocalNPCImmunity = true;
-            projectile.localNPCHitCooldown = 10;
-            projectile.tileCollide = false;
-            projectile.penetrate = 300;
-            projectile.friendly = true;
-            projectile.thrown = true;
-            projectile.aiStyle = 9;
-            projectile.timeLeft = 900;
-            projectile.light = 1;
-            aiType = 491;
-            projectile.extraUpdates = 1;
+            Projectile.width = 32;
+            Projectile.height = 36;
+            Projectile.usesLocalNPCImmunity = true;
+            Projectile.localNPCHitCooldown = 10;
+            Projectile.tileCollide = false;
+            Projectile.penetrate = 300;
+            Projectile.friendly = true;
+            Projectile.DamageType = DamageClass.Throwing;
+            Projectile.aiStyle = 9;
+            Projectile.timeLeft = 900;
+            Projectile.light = 1;
+            AIType = 491;
+            Projectile.extraUpdates = 1;
         }
         public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
         {
             if (Main.rand.NextBool(3))
             {
-                Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y - 500, 0, 30,
-                            ModContent.ProjectileType<MartianEcho>(), projectile.damage / 2, 5f, projectile.owner, 0.0f, (float)Main.rand.Next(-45, 1));
+                Projectile.NewProjectile(Projectile.Center.X, Projectile.Center.Y - 500, 0, 30,
+                            ModContent.ProjectileType<MartianEcho>(), Projectile.damage / 2, 5f, Projectile.owner, 0.0f, (float)Main.rand.Next(-45, 1));
                 target.AddBuff(144, 240);
             }
         }
         public override bool OnTileCollide(Vector2 oldVelocity) {
-			projectile.penetrate--;
-			if (projectile.penetrate <= 0) {
-				projectile.Kill();
+			Projectile.penetrate--;
+			if (Projectile.penetrate <= 0) {
+				Projectile.Kill();
 			}
 			else {
-				Collision.HitTiles(projectile.position + projectile.velocity, projectile.velocity, projectile.width, projectile.height);
-				Main.PlaySound(SoundID.Item10, projectile.position);
-				if (projectile.velocity.X != oldVelocity.X) {
-					projectile.velocity.X = -oldVelocity.X;
+				Collision.HitTiles(Projectile.position + Projectile.velocity, Projectile.velocity, Projectile.width, Projectile.height);
+				SoundEngine.PlaySound(SoundID.Item10, Projectile.position);
+				if (Projectile.velocity.X != oldVelocity.X) {
+					Projectile.velocity.X = -oldVelocity.X;
 				}
-				if (projectile.velocity.Y != oldVelocity.Y) {
-					projectile.velocity.Y = -oldVelocity.Y;
+				if (Projectile.velocity.Y != oldVelocity.Y) {
+					Projectile.velocity.Y = -oldVelocity.Y;
 				}
 			}
 			return false;
 		}
         public override void AI()
         {
-            Dust.NewDust(new Vector2(projectile.position.X, projectile.position.Y), projectile.width, projectile.height, 226,
-                            projectile.velocity.X * 0.1f, projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
+            Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 226,
+                            Projectile.velocity.X * 0.1f, Projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
         }
     }
 }

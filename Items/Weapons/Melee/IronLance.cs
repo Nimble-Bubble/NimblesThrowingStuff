@@ -16,29 +16,29 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			Tooltip.SetDefault("A heavy lance for sure, but its power makes up for it.");
         }
         public override void SetDefaults() {
-			item.damage = 12;
-			item.useStyle = ItemUseStyleID.HoldingOut;
-			item.useAnimation = 24;
-			item.useTime = 24;
-			item.knockBack = 6f;
-			item.width = 20;
-			item.height = 20;
-			item.noUseGraphic = true;
-			item.noMelee = true;
-			item.rare = ItemRarityID.White;
-			item.value = Item.sellPrice(0, 0, 12, 50);
-            item.melee = true;
-            item.shoot = ModContent.ProjectileType<IronLanceProj>();
-            item.shootSpeed = 10f;
-			item.UseSound = SoundID.Item1;
+			Item.damage = 12;
+			Item.useStyle = ItemUseStyleID.Shoot;
+			Item.useAnimation = 24;
+			Item.useTime = 24;
+			Item.knockBack = 6f;
+			Item.width = 20;
+			Item.height = 20;
+			Item.noUseGraphic = true;
+			Item.noMelee = true;
+			Item.rare = ItemRarityID.White;
+			Item.value = Item.sellPrice(0, 0, 12, 50);
+            Item.DamageType = DamageClass.Melee;
+            Item.shoot = ModContent.ProjectileType<IronLanceProj>();
+            Item.shootSpeed = 10f;
+			Item.UseSound = SoundID.Item1;
 		}
 		public override void AddRecipes()
 		{
-			var recipe = new ModRecipe(mod);
+			Recipe recipe = CreateRecipe();
 			recipe.AddRecipeGroup(RecipeGroupID.IronBar, 10);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
-			recipe.AddRecipe();
+			recipe.Register();
 		}
 	}
 }

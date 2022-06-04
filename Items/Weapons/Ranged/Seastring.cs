@@ -17,35 +17,33 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 
 		public override void SetDefaults()
 		{
-			item.damage = 25;
-			item.width = 40;
-			item.height = 40;
-			item.useTime = 17;
-			item.useAnimation = 17;
-			item.useStyle = ItemUseStyleID.HoldingOut;
-			item.value = Item.buyPrice(0, 13, 50, 0);
-			item.rare = ItemRarityID.Orange;
-			item.noMelee = true;
-			item.useAmmo = AmmoID.Arrow;
-			item.UseSound = SoundID.Item5;
-			item.shoot = ProjectileID.WoodenArrowFriendly;
-            item.knockBack = 8f;
-			item.shootSpeed = 15f;
-			item.ranged = true;
+			Item.damage = 25;
+			Item.width = 40;
+			Item.height = 40;
+			Item.useTime = 17;
+			Item.useAnimation = 17;
+			Item.useStyle = ItemUseStyleID.Shoot;
+			Item.value = Item.buyPrice(0, 13, 50, 0);
+			Item.rare = ItemRarityID.Orange;
+			Item.noMelee = true;
+			Item.useAmmo = AmmoID.Arrow;
+			Item.UseSound = SoundID.Item5;
+			Item.shoot = ProjectileID.WoodenArrowFriendly;
+            Item.knockBack = 8f;
+			Item.shootSpeed = 15f;
+			Item.DamageType = DamageClass.Ranged;
 		}
-        public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
+        public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
 		{
-			Projectile.NewProjectile(position.X, position.Y, speedX, speedY, ModContent.ProjectileType<SeastringArrowProj>(), damage, knockBack, player.whoAmI);
-			return false;
+			type = ModContent.ProjectileType<SeastringArrowProj>();
 		}
-
 		public override void AddRecipes()
 		{
-			ModRecipe recipe = new ModRecipe(mod);
+			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ModContent.ItemType<ShorebrassBar>(), 12);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
-			recipe.AddRecipe();
+			recipe.Register();
 		}
 	}
 }

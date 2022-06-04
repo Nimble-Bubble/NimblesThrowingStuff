@@ -10,7 +10,7 @@ namespace NimblesThrowingStuff.Buffs
 {
     public class HexHammerBuff : ModBuff
 	{
-		public override void SetDefaults()
+		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Hexed Hammer");
 			Description.SetDefault("The Breaker will fight for you");

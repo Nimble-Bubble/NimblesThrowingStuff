@@ -14,43 +14,43 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 
 		public override void SetDefaults() 
 		{
-			item.damage = 32;
-			item.thrown = true;
-			item.width = 24;
-			item.height = 24;
-			item.useTime = 27;
-			item.useAnimation = 27;
-			item.useStyle = 1;
-			item.knockBack = 5.5f;
-            item.noMelee = true;
-            item.noUseGraphic = true;
-			item.value = Item.buyPrice(0, 5, 40, 0);
-			item.rare = 3;
-			item.UseSound = SoundID.Item1;
-			item.shoot = mod.ProjectileType("NightPiercerProj");
-			item.shootSpeed = 15f;
-            item.mana = 20;
-            item.channel = true;
+			Item.damage = 32;
+			Item.DamageType = DamageClass.Throwing;
+			Item.width = 24;
+			Item.height = 24;
+			Item.useTime = 27;
+			Item.useAnimation = 27;
+			Item.useStyle = 1;
+			Item.knockBack = 5.5f;
+            Item.noMelee = true;
+            Item.noUseGraphic = true;
+			Item.value = Item.buyPrice(0, 5, 40, 0);
+			Item.rare = 3;
+			Item.UseSound = SoundID.Item1;
+			Item.shoot = Mod.Find<ModProjectile>("NightPiercerProj").Type;
+			Item.shootSpeed = 15f;
+            Item.mana = 20;
+            Item.channel = true;
 		}
 
 		public override void AddRecipes() 
 		{
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.ItemType("VileHarvest"));
-            recipe.AddIngredient(mod.ItemType("StingerDagger"));
-            recipe.AddIngredient(mod.ItemType("BrimstoneBomb"));
-            recipe.AddIngredient(mod.ItemType("Skelespear"));
+			Recipe recipe = CreateRecipe();
+			recipe.AddIngredient(Mod.Find<ModItem>("VileHarvest").Type);
+            recipe.AddIngredient(Mod.Find<ModItem>("StingerDagger").Type);
+            recipe.AddIngredient(Mod.Find<ModItem>("BrimstoneBomb").Type);
+            recipe.AddIngredient(Mod.Find<ModItem>("Skelespear").Type);
 			recipe.AddTile(TileID.DemonAltar);
 			recipe.SetResult(this);
-			recipe.AddRecipe();
-            recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.ItemType("ViciousHarvest"));
-            recipe.AddIngredient(mod.ItemType("StingerDagger"));
-            recipe.AddIngredient(mod.ItemType("BrimstoneBomb"));
-            recipe.AddIngredient(mod.ItemType("Skelespear"));
+			recipe.Register();
+            recipe = CreateRecipe();
+			recipe.AddIngredient(Mod.Find<ModItem>("ViciousHarvest").Type);
+            recipe.AddIngredient(Mod.Find<ModItem>("StingerDagger").Type);
+            recipe.AddIngredient(Mod.Find<ModItem>("BrimstoneBomb").Type);
+            recipe.AddIngredient(Mod.Find<ModItem>("Skelespear").Type);
 			recipe.AddTile(TileID.DemonAltar);
 			recipe.SetResult(this);
-			recipe.AddRecipe();
+			recipe.Register();
 		}
 	}
 }

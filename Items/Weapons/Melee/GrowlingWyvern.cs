@@ -19,31 +19,31 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 		}
 		public override void SetDefaults()
 		{
-			item.damage = 30;
-			item.useStyle = ItemUseStyleID.HoldingOut;
-			item.useAnimation = 32;
-			item.useTime = 32;
-			item.knockBack = 6.5f;
-			item.width = 20;
-			item.height = 20;
-			item.noUseGraphic = true;
-			item.noMelee = true;
-			item.rare = ItemRarityID.Orange;
-			item.value = Item.buyPrice(0, 5, 0, 0);
-			item.melee = true;
-			item.channel = true;
-			item.shoot = ModContent.ProjectileType<GrowlingWyvernProj>();
-			item.shootSpeed = 13f;
-			item.UseSound = SoundID.Item1;
+			Item.damage = 30;
+			Item.useStyle = ItemUseStyleID.Shoot;
+			Item.useAnimation = 32;
+			Item.useTime = 32;
+			Item.knockBack = 6.5f;
+			Item.width = 20;
+			Item.height = 20;
+			Item.noUseGraphic = true;
+			Item.noMelee = true;
+			Item.rare = ItemRarityID.Orange;
+			Item.value = Item.buyPrice(0, 5, 0, 0);
+			Item.DamageType = DamageClass.Melee;
+			Item.channel = true;
+			Item.shoot = ModContent.ProjectileType<GrowlingWyvernProj>();
+			Item.shootSpeed = 13f;
+			Item.UseSound = SoundID.Item1;
 		}
 		public override void AddRecipes()
 		{
-			var recipe = new ModRecipe(mod);
+			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ModContent.ItemType<PaladinLance>(), 1);
 			recipe.AddIngredient(ModContent.ItemType<ShorebrassBar>(), 10);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
-			recipe.AddRecipe();
+			recipe.Register();
 		}
 	}
 }

@@ -10,26 +10,26 @@ namespace NimblesThrowingStuff.Items.Weapons.Magic
         public override void SetStaticDefaults()
 		{
 			Tooltip.SetDefault("Creates a big star that explodes into other stars");
-            Item.staff[item.type] = true;
+            Item.staff[Item.type] = true;
 		}
 		public override void SetDefaults() 
 		{
-			item.damage = 155;
-			item.magic = true;
-			item.width = 24;
-			item.height = 24;
-			item.useTime = 40;
-			item.useAnimation = 40;
-			item.useStyle = 5;
-			item.knockBack = 4f;
-            item.noMelee = true;
-			item.value = Item.buyPrice(1, 0, 0, 0);
-			item.rare = ItemRarityID.Purple;
-			item.UseSound = SoundID.Item9;
-			item.autoReuse = true;
-			item.shoot = ModContent.ProjectileType<MagicBigStar>();
-			item.shootSpeed = 14f;
-            item.mana = 17;
+			Item.damage = 155;
+			Item.DamageType = DamageClass.Magic;
+			Item.width = 24;
+			Item.height = 24;
+			Item.useTime = 40;
+			Item.useAnimation = 40;
+			Item.useStyle = 5;
+			Item.knockBack = 4f;
+            Item.noMelee = true;
+			Item.value = Item.buyPrice(1, 0, 0, 0);
+			Item.rare = ItemRarityID.Purple;
+			Item.UseSound = SoundID.Item9;
+			Item.autoReuse = true;
+			Item.shoot = ModContent.ProjectileType<MagicBigStar>();
+			Item.shootSpeed = 14f;
+            Item.mana = 17;
 		}
 	}
 }

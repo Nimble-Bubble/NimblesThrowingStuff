@@ -14,23 +14,23 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 
 		public override void SetDefaults() 
 		{
-			item.damage = 78;
-			item.thrown = true;
-			item.width = 24;
-			item.height = 24;
-			item.useTime = 24;
-			item.useAnimation = 24;
-			item.useStyle = 1;
-			item.knockBack = 7f;
-            item.noMelee = true;
-            item.noUseGraphic = true;
-			item.value = Item.buyPrice(0, 25, 0, 0);
-			item.rare = 9;
-			item.UseSound = SoundID.Item1;
-			item.autoReuse = true;
-			item.shoot = mod.ProjectileType("PoseironTridentProj");
-			item.shootSpeed = 10f;
-            item.mana = 20;
+			Item.damage = 78;
+			Item.DamageType = DamageClass.Throwing;
+			Item.width = 24;
+			Item.height = 24;
+			Item.useTime = 24;
+			Item.useAnimation = 24;
+			Item.useStyle = 1;
+			Item.knockBack = 7f;
+            Item.noMelee = true;
+            Item.noUseGraphic = true;
+			Item.value = Item.buyPrice(0, 25, 0, 0);
+			Item.rare = 9;
+			Item.UseSound = SoundID.Item1;
+			Item.autoReuse = true;
+			Item.shoot = Mod.Find<ModProjectile>("PoseironTridentProj").Type;
+			Item.shootSpeed = 10f;
+            Item.mana = 20;
 		}
 	}
 }

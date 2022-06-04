@@ -16,30 +16,30 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			Tooltip.SetDefault("Rough-hewn, but sturdy.");
         }
         public override void SetDefaults() {
-			item.damage = 10;
-			item.useStyle = ItemUseStyleID.HoldingOut;
-			item.useAnimation = 28;
-			item.useTime = 28;
-			item.knockBack = 4f;
-			item.width = 20;
-			item.height = 20;
-			item.noUseGraphic = true;
-			item.noMelee = true;
-			item.rare = ItemRarityID.White;
-			item.value = Item.buyPrice(0, 0, 37, 50);
-            item.melee = true;
-            item.shoot = ModContent.ProjectileType<LonghornProj>();
-            item.shootSpeed = 8f;
-			item.UseSound = SoundID.Item1;
+			Item.damage = 10;
+			Item.useStyle = ItemUseStyleID.Shoot;
+			Item.useAnimation = 28;
+			Item.useTime = 28;
+			Item.knockBack = 4f;
+			Item.width = 20;
+			Item.height = 20;
+			Item.noUseGraphic = true;
+			Item.noMelee = true;
+			Item.rare = ItemRarityID.White;
+			Item.value = Item.buyPrice(0, 0, 37, 50);
+            Item.DamageType = DamageClass.Melee;
+            Item.shoot = ModContent.ProjectileType<LonghornProj>();
+            Item.shootSpeed = 8f;
+			Item.UseSound = SoundID.Item1;
 		}
 		public override void AddRecipes()
 		{
-			var recipe = new ModRecipe(mod);
+			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.Wood, 20);
 			recipe.AddIngredient(ModContent.ItemType<BeastBone>(), 5);
 			recipe.AddTile(TileID.WorkBenches);
 			recipe.SetResult(this);
-			recipe.AddRecipe();
+			recipe.Register();
 		}
 	}
 }

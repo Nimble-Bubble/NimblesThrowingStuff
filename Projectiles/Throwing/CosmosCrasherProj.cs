@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
+using Terraria.GameContent;
 using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.Enums;
@@ -14,44 +15,44 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetStaticDefaults() {
 			DisplayName.SetDefault("Cosmos Crasher");     
-			ProjectileID.Sets.TrailCacheLength[projectile.type] = 10;    
-			ProjectileID.Sets.TrailingMode[projectile.type] = 0;        
+			ProjectileID.Sets.TrailCacheLength[Projectile.type] = 10;    
+			ProjectileID.Sets.TrailingMode[Projectile.type] = 0;        
 		}
         public override void SetDefaults()
         {
-            projectile.width = 38;
-            projectile.height = 38;
-            projectile.usesLocalNPCImmunity = true;
-            projectile.localNPCHitCooldown = 5;
-            projectile.tileCollide = false;
-            projectile.penetrate = -1;
-            projectile.friendly = true;
-            projectile.thrown = true;
-            projectile.aiStyle = 1;
-            projectile.extraUpdates = 2;
-            projectile.timeLeft = 150;
+            Projectile.width = 38;
+            Projectile.height = 38;
+            Projectile.usesLocalNPCImmunity = true;
+            Projectile.localNPCHitCooldown = 5;
+            Projectile.tileCollide = false;
+            Projectile.penetrate = -1;
+            Projectile.friendly = true;
+            Projectile.DamageType = DamageClass.Throwing;
+            Projectile.aiStyle = 1;
+            Projectile.extraUpdates = 2;
+            Projectile.timeLeft = 150;
         }
-        public override bool PreDraw(SpriteBatch spriteBatch, Color lightColor) {
-			Vector2 drawOrigin = new Vector2(Main.projectileTexture[projectile.type].Width * 0.5f, projectile.height * 0.5f);
-			for (int k = 0; k < projectile.oldPos.Length; k++) {
-				Vector2 drawPos = projectile.oldPos[k] - Main.screenPosition + drawOrigin + new Vector2(0f, projectile.gfxOffY);
-				Color color = projectile.GetAlpha(lightColor) * ((float)(projectile.oldPos.Length - k) / (float)projectile.oldPos.Length);
-				spriteBatch.Draw(Main.projectileTexture[projectile.type], drawPos, null, color, projectile.rotation, drawOrigin, projectile.scale, SpriteEffects.None, 0f);
+        public override bool PreDraw(ref Color lightColor) {
+			Vector2 drawOrigin = new Vector2(TextureAssets.Projectile[Projectile.type].Value.Width * 0.5f, Projectile.height * 0.5f);
+			for (int k = 0; k < Projectile.oldPos.Length; k++) {
+				Vector2 drawPos = Projectile.oldPos[k] - Main.screenPosition + drawOrigin + new Vector2(0f, Projectile.gfxOffY);
+				Color color = Projectile.GetAlpha(lightColor) * ((float)(Projectile.oldPos.Length - k) / (float)Projectile.oldPos.Length);
+				spriteBatch.Draw(TextureAssets.Projectile[Projectile.type].Value, drawPos, null, color, Projectile.rotation, drawOrigin, Projectile.scale, SpriteEffects.None, 0f);
 			}
 			return true;
 		}
-        public override void PostDraw(SpriteBatch spriteBatch, Color lightColor)
+        public override void PostDraw(Color lightColor)
 		{
-			Texture2D texture = mod.GetTexture("Projectiles/Throwing/CosmosCrasherProj_Glow");
+			Texture2D texture = Mod.GetTexture("Projectiles/Throwing/CosmosCrasherProj_Glow");
 			spriteBatch.Draw
 			(
 				texture,
-				projectile.position,
+				Projectile.position,
 				new Rectangle(0, 0, texture.Width, texture.Height),
 				Color.Cyan,
-				projectile.rotation,
+				Projectile.rotation,
 				texture.Size() * 0.5f,
-				projectile.scale,
+				Projectile.scale,
 				SpriteEffects.None,
 				0f
 			);

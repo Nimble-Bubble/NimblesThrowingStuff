@@ -13,19 +13,19 @@ namespace NimblesThrowingStuff.Items.Placeables.Blocks
         }
         public override void SetDefaults() 
 		{
-			item.width = 28;
-			item.height = 28;
-			item.useTime = 6;
-			item.useAnimation = 12;
-			item.useStyle = 1;
-			item.value = Item.buyPrice(0, 0, 0, 50);
-			item.rare = 0;
-			item.UseSound = SoundID.Item1;
-			item.autoReuse = true;
-            item.useTurn = true;
-            item.createTile = ModContent.TileType<HadalShellstoneTile>();
-            item.consumable = true;
-            item.maxStack = 999;
+			Item.width = 28;
+			Item.height = 28;
+			Item.useTime = 6;
+			Item.useAnimation = 12;
+			Item.useStyle = 1;
+			Item.value = Item.buyPrice(0, 0, 0, 50);
+			Item.rare = 0;
+			Item.UseSound = SoundID.Item1;
+			Item.autoReuse = true;
+            Item.useTurn = true;
+            Item.createTile = ModContent.TileType<HadalShellstoneTile>();
+            Item.consumable = true;
+            Item.maxStack = 999;
 		}
 	}
 }

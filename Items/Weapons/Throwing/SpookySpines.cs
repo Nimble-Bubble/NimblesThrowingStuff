@@ -11,38 +11,37 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
         {
         DisplayName.SetDefault("Macabrazor");
          Tooltip.SetDefault("Hmm...This is familiar...");   
-            Item.staff[item.type] = true;
+            Item.staff[Item.type] = true;
         }
 
 		public override void SetDefaults() 
 		{
-			item.damage = 48;
-			item.thrown = true;
-			item.width = 34;
-			item.height = 34;
-			item.useTime = 12;
-			item.useAnimation = 12;
-			item.useStyle = 5;
-			item.knockBack = 3.25f;
-            item.noMelee = true;
-            item.noUseGraphic = false;
-			item.value = Item.buyPrice(0, 45, 0, 0);
-			item.rare = 8;
-			item.UseSound = SoundID.Item5;
-			item.autoReuse = true;
-			item.shoot = mod.ProjectileType("SpookySpineProj");
-			item.shootSpeed = 12f;
-            item.mana = 5;
+			Item.damage = 48;
+			Item.DamageType = DamageClass.Throwing;
+			Item.width = 34;
+			Item.height = 34;
+			Item.useTime = 12;
+			Item.useAnimation = 12;
+			Item.useStyle = 5;
+			Item.knockBack = 3.25f;
+            Item.noMelee = true;
+            Item.noUseGraphic = false;
+			Item.value = Item.buyPrice(0, 45, 0, 0);
+			Item.rare = 8;
+			Item.UseSound = SoundID.Item5;
+			Item.autoReuse = true;
+			Item.shoot = Mod.Find<ModProjectile>("SpookySpineProj").Type;
+			Item.shootSpeed = 12f;
+            Item.mana = 5;
 		}
-        public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
+        public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
 		{
-      int numberProjectiles = 2 + Main.rand.Next(3); 
+      int numberProjectiles = 2 + Main.rand.Next(2); 
 			for (int i = 0; i < numberProjectiles; i++)
 			{
 				Vector2 perturbedSpeed = new Vector2(speedX, speedY).RotatedByRandom(MathHelper.ToRadians(20)); 
 				Projectile.NewProjectile(position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, type, damage, knockBack, player.whoAmI);
 			}
-			return false;
         }
 	}
 }

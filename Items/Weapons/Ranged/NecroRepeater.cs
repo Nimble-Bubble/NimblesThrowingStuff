@@ -15,30 +15,30 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 
 		public override void SetDefaults()
 		{
-			item.damage = 20;
-			item.width = 40;
-			item.height = 40;
-			item.useTime = 14;
-			item.useAnimation = 14;
-			item.useStyle = 5;
-			item.value = Item.buyPrice(0, 5, 0, 0);
-			item.rare = 2;
-			item.noMelee = true;
-			item.useAmmo = AmmoID.Arrow;
-			item.UseSound = SoundID.Item5;
-			item.shoot = 1;
-            item.knockBack = 5f;
-			item.shootSpeed = 9f;
-			item.ranged = true;
+			Item.damage = 20;
+			Item.width = 40;
+			Item.height = 40;
+			Item.useTime = 14;
+			Item.useAnimation = 14;
+			Item.useStyle = 5;
+			Item.value = Item.buyPrice(0, 5, 0, 0);
+			Item.rare = 2;
+			Item.noMelee = true;
+			Item.useAmmo = AmmoID.Arrow;
+			Item.UseSound = SoundID.Item5;
+			Item.shoot = 1;
+            Item.knockBack = 5f;
+			Item.shootSpeed = 9f;
+			Item.DamageType = DamageClass.Ranged;
 		}
 		public override void AddRecipes()
 		{
-			ModRecipe recipe = new ModRecipe(mod);
+			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(154, 20);
 			recipe.AddIngredient(150, 15);
 			recipe.AddTile(TileID.WorkBenches);
 			recipe.SetResult(this);
-			recipe.AddRecipe();
+			recipe.Register();
 		}
 	}
 }

@@ -13,25 +13,25 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetDefaults()
         {
-            projectile.width = 6;
-            projectile.height = 32;
-            projectile.usesLocalNPCImmunity = true;
-            projectile.localNPCHitCooldown = 10;
-            projectile.tileCollide = true;
-            projectile.penetrate = 1;
-            projectile.friendly = true;
-            projectile.thrown = true;
-            projectile.aiStyle = 2;
-            projectile.extraUpdates = 1;
+            Projectile.width = 6;
+            Projectile.height = 32;
+            Projectile.usesLocalNPCImmunity = true;
+            Projectile.localNPCHitCooldown = 10;
+            Projectile.tileCollide = true;
+            Projectile.penetrate = 1;
+            Projectile.friendly = true;
+            Projectile.DamageType = DamageClass.Throwing;
+            Projectile.aiStyle = 2;
+            Projectile.extraUpdates = 1;
         }
         public override void AI()
         {
-            Dust.NewDust(new Vector2(projectile.position.X, projectile.position.Y), projectile.width, projectile.height, 35,
-                            projectile.velocity.X * 0.1f, projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
+            Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 35,
+                            Projectile.velocity.X * 0.1f, Projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
         }
         public override void OnHitNPC (NPC target, int damage, float knockback, bool crit)
         {
-			target.AddBuff(mod.BuffType("GreekFire"), 240);
+			target.AddBuff(Mod.Find<ModBuff>("GreekFire").Type, 240);
         }
     }
 }

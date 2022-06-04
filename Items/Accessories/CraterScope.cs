@@ -17,12 +17,12 @@ namespace NimblesThrowingStuff.Items.Accessories
         }
         public override void SetDefaults()
         {
-            item.accessory = true;
-            item.width = 22;
-            item.height = 22;
-            item.value = Item.buyPrice(0, 12, 50, 0);
-            item.rare = ItemRarityID.Green;
-            item.expert = false;
+            Item.accessory = true;
+            Item.width = 22;
+            Item.height = 22;
+            Item.value = Item.buyPrice(0, 12, 50, 0);
+            Item.rare = ItemRarityID.Green;
+            Item.expert = false;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
@@ -31,12 +31,12 @@ namespace NimblesThrowingStuff.Items.Accessories
         }
         public override void AddRecipes()
         {
-            ModRecipe recipe = new ModRecipe(mod);
+            Recipe recipe = CreateRecipe();
             recipe.AddIngredient(ItemID.MeteoriteBar, 20);
             recipe.AddIngredient(ItemID.Lens, 3);
             recipe.AddTile(TileID.Anvils);
             recipe.SetResult(this);
-            recipe.AddRecipe();
+            recipe.Register();
         }
     }
 }

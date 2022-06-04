@@ -13,179 +13,179 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
 		public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Kelbi");
-            Main.npcFrameCount[npc.type] = 9;
+            Main.npcFrameCount[NPC.type] = 9;
 		}
 
 		public override void SetDefaults()
 		{
-			npc.width = 60;
-			npc.height = 60;
-			npc.aiStyle = -1;
-			npc.damage = 8;
-			npc.defense = 2;
-			npc.lifeMax = 20;
-			npc.HitSound = SoundID.NPCHit1;
-			npc.DeathSound = SoundID.NPCDeath1;
-			npc.knockBackResist = 0.5f;
-            // aiType = 174;
+			NPC.width = 60;
+			NPC.height = 60;
+			NPC.aiStyle = -1;
+			NPC.damage = 8;
+			NPC.defense = 2;
+			NPC.lifeMax = 20;
+			NPC.HitSound = SoundID.NPCHit1;
+			NPC.DeathSound = SoundID.NPCDeath1;
+			NPC.knockBackResist = 0.5f;
+            // AIType = 174;
             // animationType = 174;
-            banner = npc.type;
-			bannerItem = mod.ItemType("KelbiBannerItem");
+            Banner = NPC.type;
+			bannerItem = Mod.Find<ModItem>("KelbiBannerItem").Type;
         }
         public override void AI()
         {
-            npc.ai[1]++;
-            if (npc.life == npc.lifeMax)
+            NPC.ai[1]++;
+            if (NPC.life == NPC.lifeMax)
             {
-                if (npc.ai[1] == 300)
+                if (NPC.ai[1] == 300)
                 {
                     if (Main.rand.NextBool(2))
                     {
-                        npc.ai[1] += 60 + Main.rand.Next(181);
+                        NPC.ai[1] += 60 + Main.rand.Next(181);
                     }
                     else 
                     {
-                        npc.ai[1] += 360 + Main.rand.Next(181);
+                        NPC.ai[1] += 360 + Main.rand.Next(181);
                     }
                 }
-                if (npc.ai[1] >= 360 && npc.ai[1] <= 600)
+                if (NPC.ai[1] >= 360 && NPC.ai[1] <= 600)
                 {
-                    if (npc.velocity.X <= 0)
+                    if (NPC.velocity.X <= 0)
                     {
-                    npc.velocity.X = 1;
+                    NPC.velocity.X = 1;
                         }
-                    npc.direction = 1;
+                    NPC.direction = 1;
                 }
-                if (npc.ai[1] >= 600 && npc.ai[1] <= 660)
+                if (NPC.ai[1] >= 600 && NPC.ai[1] <= 660)
                 {
-                    npc.ai[1] = 0 + Main.rand.Next(151);
+                    NPC.ai[1] = 0 + Main.rand.Next(151);
                 }
-                if (npc.ai[1] >= 660 && npc.ai[1] <= 900)
+                if (NPC.ai[1] >= 660 && NPC.ai[1] <= 900)
                 {
-                    if (npc.velocity.X >= 0)
+                    if (NPC.velocity.X >= 0)
                     {
-                        npc.velocity.X = -1;
+                        NPC.velocity.X = -1;
                     }
-                    npc.direction = -1;
+                    NPC.direction = -1;
                 }
-                if (npc.ai[1] >= 900 && npc.ai[1] <= 960)
+                if (NPC.ai[1] >= 900 && NPC.ai[1] <= 960)
                 {
-                    npc.ai[1] = 0 + Main.rand.Next(151);
+                    NPC.ai[1] = 0 + Main.rand.Next(151);
                 }
                 else
                 {
-                    if (npc.ai[1] <= 300)
+                    if (NPC.ai[1] <= 300)
                     {
-                        npc.velocity.X *= 0.95f;
+                        NPC.velocity.X *= 0.95f;
                     }
                 }
             }
-            else if (npc.life < npc.lifeMax)
+            else if (NPC.life < NPC.lifeMax)
             {
-                if (npc.ai[1] == 330)
+                if (NPC.ai[1] == 330)
                 {
                     if (Main.rand.NextBool(2))
                     {
-                        npc.velocity.X = 6 + Main.rand.Next(3);
-                        npc.direction = 1;
+                        NPC.velocity.X = 6 + Main.rand.Next(3);
+                        NPC.direction = 1;
                     }
                     else
                     {
-                        npc.velocity.X = -6 - Main.rand.Next(3);
-                        npc.direction = -1;
+                        NPC.velocity.X = -6 - Main.rand.Next(3);
+                        NPC.direction = -1;
                     }
-                    npc.velocity.Y = -8 + Main.rand.Next(4);
+                    NPC.velocity.Y = -8 + Main.rand.Next(4);
                 }
-                npc.velocity.X *= 0.9875f;
+                NPC.velocity.X *= 0.9875f;
                 // npc.velocity.Y += 0.05f;
-                if (npc.velocity.Y == 0 && npc.life < npc.lifeMax && npc.ai[1] >= 331)
+                if (NPC.velocity.Y == 0 && NPC.life < NPC.lifeMax && NPC.ai[1] >= 331)
                 {
-                    npc.velocity.X *= 0.95f;
-                    npc.ai[1] = 300 + Main.rand.Next(-11, 31);
+                    NPC.velocity.X *= 0.95f;
+                    NPC.ai[1] = 300 + Main.rand.Next(-11, 31);
                 }
             }
             else
             {
-                npc.velocity.Y -= 0.25f;
+                NPC.velocity.Y -= 0.25f;
             }
         }
         public override void HitEffect(int hitDirection, double damage)
         {
-            if (npc.life <= 0)
+            if (NPC.life <= 0)
             {
 
-                Gore.NewGore(npc.position, npc.velocity, mod.GetGoreSlot("Gores/KelbiHead"), 1f);
+                Gore.NewGore(NPC.position, NPC.velocity, Mod.GetGoreSlot("Gores/KelbiHead"), 1f);
                 for (int index = 0; index < 4; index++)
                 {
-                    Gore.NewGore(npc.position, npc.velocity, mod.GetGoreSlot("Gores/KelbiLeg"), 1f);
+                    Gore.NewGore(NPC.position, NPC.velocity, Mod.GetGoreSlot("Gores/KelbiLeg"), 1f);
                 }
             }
         }
         public override void FindFrame(int frameHeight)
         {
-            npc.spriteDirection = npc.direction;
-            npc.frameCounter++;
-            if (npc.ai[1] >= 300 && npc.ai[1] <= 960 && npc.life == npc.lifeMax)
+            NPC.spriteDirection = NPC.direction;
+            NPC.frameCounter++;
+            if (NPC.ai[1] >= 300 && NPC.ai[1] <= 960 && NPC.life == NPC.lifeMax)
             {
-                if (npc.frameCounter < 15)
+                if (NPC.frameCounter < 15)
                 {
-                    npc.frame.Y = 1 * frameHeight;
+                    NPC.frame.Y = 1 * frameHeight;
                 }
-                else if (npc.frameCounter < 30)
+                else if (NPC.frameCounter < 30)
                 {
-                    npc.frame.Y = 2 * frameHeight;
+                    NPC.frame.Y = 2 * frameHeight;
                 }
-                else if (npc.frameCounter < 45)
+                else if (NPC.frameCounter < 45)
                 {
-                    npc.frame.Y = 3 * frameHeight;
+                    NPC.frame.Y = 3 * frameHeight;
                 }
-                else if (npc.frameCounter < 60)
+                else if (NPC.frameCounter < 60)
                 {
-                    npc.frame.Y = 4 * frameHeight;
+                    NPC.frame.Y = 4 * frameHeight;
                 }
                 else
                 {
-                    npc.frameCounter = 0;
+                    NPC.frameCounter = 0;
                 }
 
             }
-            else if (npc.ai[1] >= 300 && npc.life != npc.lifeMax && npc.velocity.Y != 0)
+            else if (NPC.ai[1] >= 300 && NPC.life != NPC.lifeMax && NPC.velocity.Y != 0)
             {
-                if (npc.frameCounter < 15)
+                if (NPC.frameCounter < 15)
                 {
-                    npc.frame.Y = 6 * frameHeight;
+                    NPC.frame.Y = 6 * frameHeight;
                 }
-                else if (npc.frameCounter < 30)
+                else if (NPC.frameCounter < 30)
                 {
-                    npc.frame.Y = 7 * frameHeight;
+                    NPC.frame.Y = 7 * frameHeight;
                 }
                 else 
                 {
-                    npc.frame.Y = 8 * frameHeight;
+                    NPC.frame.Y = 8 * frameHeight;
                 }
             }
-            else if (npc.ai[1] >= 300 && npc.ai[1] <= 330 && npc.life < npc.lifeMax)
+            else if (NPC.ai[1] >= 300 && NPC.ai[1] <= 330 && NPC.life < NPC.lifeMax)
             {
-                npc.frame.Y = 5 * frameHeight;
-                npc.frameCounter = 0;
+                NPC.frame.Y = 5 * frameHeight;
+                NPC.frameCounter = 0;
             }
             else
             {
-                npc.frame.Y = 0;
+                NPC.frame.Y = 0;
             }
         }
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
             return SpawnCondition.OverworldDaySlime.Chance * 0.25f;
         }
-		public override void NPCLoot()
+		public override void OnKill()
 		{
             //Gore.NewGore(npc.position, npc.velocity, mod.GetGoreSlot("Gores/KelbiHead"), 1f);
             //for (int index = 0; index < 4; index++)
             //{
                 //int Kelbileg = Gore.NewGore(npc.position, npc.velocity, mod.GetGoreSlot("Gores/KelbiLeg"), 1f);
             //}
-            Item.NewItem(npc.getRect(), mod.ItemType("BeastBone"), Main.rand.Next(3));
+            Item.NewItem(NPC.getRect(), Mod.Find<ModItem>("BeastBone").Type, Main.rand.Next(3));
         }
 	}
 }

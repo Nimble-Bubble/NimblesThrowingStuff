@@ -16,16 +16,16 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
         private float targetspeed = 1f;
         public override void SetDefaults()
         {
-            projectile.width = 20;
-            projectile.height = 20;
-            projectile.usesLocalNPCImmunity = true;
-            projectile.localNPCHitCooldown = 10;
-            projectile.tileCollide = false;
-            projectile.penetrate = 1;
-            projectile.friendly = true;
-            projectile.thrown = true;
-            projectile.aiStyle = 1;
-            projectile.timeLeft = 60;
+            Projectile.width = 20;
+            Projectile.height = 20;
+            Projectile.usesLocalNPCImmunity = true;
+            Projectile.localNPCHitCooldown = 10;
+            Projectile.tileCollide = false;
+            Projectile.penetrate = 1;
+            Projectile.friendly = true;
+            Projectile.DamageType = DamageClass.Throwing;
+            Projectile.aiStyle = 1;
+            Projectile.timeLeft = 60;
         }
         public override void AI()
         {
@@ -36,8 +36,8 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
         NPC target = Main.npc[i];
        if(!target.friendly)
        {
-           float shootToX = target.position.X + (float)target.width * 0.5f - projectile.Center.X;
-           float shootToY = target.position.Y - projectile.Center.Y;
+           float shootToX = target.position.X + (float)target.width * 0.5f - Projectile.Center.X;
+           float shootToY = target.position.Y - Projectile.Center.Y;
            float distance = (float)System.Math.Sqrt((double)(shootToX * shootToX + shootToY * shootToY));
 
            if(distance < targetrange && !target.friendly && target.active)
@@ -47,14 +47,14 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
                shootToX *= distance * 1;
                shootToY *= distance * 1;
 
-               projectile.velocity.X = shootToX * targetspeed;
-               projectile.velocity.Y = shootToY * targetspeed;
+               Projectile.velocity.X = shootToX * targetspeed;
+               Projectile.velocity.Y = shootToY * targetspeed;
            }
        }
         }
-            if (projectile.timeLeft <= 10)
+            if (Projectile.timeLeft <= 10)
             {
-             projectile.alpha += 30;   
+             Projectile.alpha += 30;   
             }
         }
     }

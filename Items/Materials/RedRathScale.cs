@@ -12,11 +12,11 @@ namespace NimblesThrowingStuff.Items.Materials
         }
 		public override void SetDefaults()
         {
-			item.width = 18;
-			item.height = 18;
-			item.maxStack = 999;
-			item.value = Item.buyPrice(0, 0, 29, 50);
-			item.rare = 2;
+			Item.width = 18;
+			Item.height = 18;
+			Item.maxStack = 999;
+			Item.value = Item.buyPrice(0, 0, 29, 50);
+			Item.rare = 2;
         }
 	}
 }

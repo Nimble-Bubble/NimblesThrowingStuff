@@ -30,12 +30,12 @@ namespace NimblesThrowingStuff
 
 		#region Player Utilities
 		// These functions factor in TML 0.11 allDamage to get the player's total damage boost which affects the specified class.
-		public static float MeleeDamage(this Player player) => player.allDamage + player.meleeDamage - 1f;
-		public static float RangedDamage(this Player player) => player.allDamage + player.rangedDamage - 1f;
-		public static float MagicDamage(this Player player) => player.allDamage + player.magicDamage - 1f;
-		public static float MinionDamage(this Player player) => player.allDamage + player.minionDamage - 1f;
-		public static float ThrownDamage(this Player player) => player.allDamage + player.thrownDamage - 1f;
-		public static float AverageDamage(this Player player) => player.allDamage + (player.meleeDamage + player.rangedDamage + player.magicDamage + player.minionDamage + player.thrownDamage - 5f) / 5f;
+		//public static float MeleeDamage(this Player player) => player.GetDamage(DamageClass.Generic) + player.GetDamage(DamageClass.Melee) - 1f;
+		//public static float RangedDamage(this Player player) => player.GetDamage(DamageClass.Generic) + player.GetDamage(DamageClass.Ranged) - 1f;
+		//public static float MagicDamage(this Player player) => player.GetDamage(DamageClass.Generic) + player.magicDamage - 1f;
+		//public static float MinionDamage(this Player player) => player.GetDamage(DamageClass.Generic) + player.minionDamage - 1f;
+		//public static float ThrownDamage(this Player player) => player.GetDamage(DamageClass.Generic) + player.thrownDamage - 1f;
+		//public static float AverageDamage(this Player player) => player.GetDamage(DamageClass.Generic) + ( player.GetDamage(DamageClass.Melee) + player.rangedDamage + player.magicDamage + player.minionDamage + player.thrownDamage - 5f) / 5f;
 
 		public static bool IsUnderwater(this Player player) => Collision.DrownCollision(player.position, player.width, player.height, player.gravDir);
 		public static bool InSpace(this Player player)

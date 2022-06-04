@@ -10,26 +10,26 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 
 		public override void SetDefaults() 
 		{
-			item.damage = 22;
-			item.thrown = true;
-			item.width = 24;
-			item.height = 24;
-			item.useTime = 15;
-			item.useAnimation = 15;
-			item.useStyle = 1;
-			item.knockBack = 4.5f;
-            item.noMelee = true;
-            item.noUseGraphic = true;
-			item.value = Item.buyPrice(0, 6, 0, 0);
-			item.rare = 3;
-			item.UseSound = SoundID.Item1;
-			item.autoReuse = false;
-			item.shoot = mod.ProjectileType("CumulusCrasherProj");
-			item.shootSpeed = 14f;
-            item.mana = 9;
-            item.channel = true;
+			Item.damage = 22;
+			Item.DamageType = DamageClass.Throwing;
+			Item.width = 24;
+			Item.height = 24;
+			Item.useTime = 15;
+			Item.useAnimation = 15;
+			Item.useStyle = 1;
+			Item.knockBack = 4.5f;
+            Item.noMelee = true;
+            Item.noUseGraphic = true;
+			Item.value = Item.buyPrice(0, 6, 0, 0);
+			Item.rare = 3;
+			Item.UseSound = SoundID.Item1;
+			Item.autoReuse = false;
+			Item.shoot = Mod.Find<ModProjectile>("CumulusCrasherProj").Type;
+			Item.shootSpeed = 14f;
+            Item.mana = 9;
+            Item.channel = true;
 		}
-        public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
+        public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
 		{
 			Vector2 target = Main.screenPosition + new Vector2((float)Main.mouseX, (float)Main.mouseY);
 			float ceilingLimit = target.Y;
@@ -52,11 +52,10 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 				}
 				heading.Normalize();
 				heading *= new Vector2(speedX, speedY).Length();
-				speedX = heading.X;
-				speedY = heading.Y + Main.rand.Next(-40, 41) * 0.10f;
-				Projectile.NewProjectile(target.X, position.Y, speedX / 2, speedY, type, damage, knockBack, player.whoAmI, 0f, ceilingLimit);
+				velocity.X = heading.X;
+				velocity.Y = heading.Y + Main.rand.Next(-40, 41) * 0.10f;
+				position.X = target.X;
 			}
-			return false;
 		}
 	}
 }

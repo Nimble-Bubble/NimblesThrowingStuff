@@ -12,30 +12,30 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 	{
 
 		public override void SetDefaults() {
-			item.damage = 12;
-			item.useStyle = 5;
-			item.useAnimation = 22;
-			item.useTime = 22;
-			item.knockBack = 4f;
-			item.width = 36;
-			item.height = 36;
-			item.shoot = ModContent.ProjectileType<TheToothpickProj>();
-            item.shootSpeed = 4.5f;
-			item.rare = ItemRarityID.Blue;
-            item.noUseGraphic = true;
-            item.noMelee = true;
-			item.value = Item.sellPrice(silver: 54);
-            item.melee = true;
-			item.UseSound = SoundID.Item1;
+			Item.damage = 12;
+			Item.useStyle = 5;
+			Item.useAnimation = 22;
+			Item.useTime = 22;
+			Item.knockBack = 4f;
+			Item.width = 36;
+			Item.height = 36;
+			Item.shoot = ModContent.ProjectileType<TheToothpickProj>();
+            Item.shootSpeed = 4.5f;
+			Item.rare = ItemRarityID.Blue;
+            Item.noUseGraphic = true;
+            Item.noMelee = true;
+			Item.value = Item.sellPrice(silver: 54);
+            Item.DamageType = DamageClass.Melee;
+			Item.UseSound = SoundID.Item1;
 		}
         public override void AddRecipes()
 		{
-			var recipe = new ModRecipe(mod);
+			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.DemoniteBar, 10);
             recipe.AddIngredient(ItemID.ShadowScale, 5);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
-			recipe.AddRecipe();
+			recipe.Register();
 		}
 	}
 }

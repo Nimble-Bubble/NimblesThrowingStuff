@@ -13,40 +13,40 @@ namespace NimblesThrowingStuff.Projectiles.Melee
     {
         public override void SetDefaults()
         {
-            projectile.width = 18;
-            projectile.height = 18;
-            projectile.usesLocalNPCImmunity = true;
-            projectile.localNPCHitCooldown = 10;
-            projectile.tileCollide = false;
-            projectile.penetrate = 2;
-            projectile.friendly = true;
-            projectile.melee = true;
-            projectile.light = 0.5f;
-            projectile.alpha = 0;
-            projectile.aiStyle = 1;
-            projectile.timeLeft = 600;
-            projectile.extraUpdates = 1;
+            Projectile.width = 18;
+            Projectile.height = 18;
+            Projectile.usesLocalNPCImmunity = true;
+            Projectile.localNPCHitCooldown = 10;
+            Projectile.tileCollide = false;
+            Projectile.penetrate = 2;
+            Projectile.friendly = true;
+            Projectile.DamageType = DamageClass.Melee;
+            Projectile.light = 0.5f;
+            Projectile.alpha = 0;
+            Projectile.aiStyle = 1;
+            Projectile.timeLeft = 600;
+            Projectile.extraUpdates = 1;
         }
         public override void AI() 
         {
             if (Main.rand.NextBool(10))
             {
-                Dust.NewDust(new Vector2(projectile.position.X, projectile.position.Y), projectile.width, projectile.height, 174,
-                                projectile.velocity.X * 0.1f, projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
+                Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 174,
+                                Projectile.velocity.X * 0.1f, Projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
             }
         }
-        public override void PostDraw(SpriteBatch spriteBatch, Color lightColor)
+        public override void PostDraw(Color lightColor)
 		{
-			Texture2D texture = mod.GetTexture("Projectiles/Melee/ProcellariteSmallSwordBeam_Glow");
+			Texture2D texture = Mod.GetTexture("Projectiles/Melee/ProcellariteSmallSwordBeam_Glow");
 			spriteBatch.Draw
 			(
 				texture,
-				projectile.position,
+				Projectile.position,
 				new Rectangle(0, 0, texture.Width, texture.Height),
 				Color.Yellow,
-				projectile.rotation,
+				Projectile.rotation,
 				texture.Size() * 0.5f,
-				projectile.scale,
+				Projectile.scale,
 				SpriteEffects.None,
 				0f
 			);
@@ -55,8 +55,8 @@ namespace NimblesThrowingStuff.Projectiles.Melee
         {
             for (int furbroaddust = 0; furbroaddust < 10; furbroaddust++)
             {
-                Dust.NewDust(new Vector2(projectile.position.X, projectile.position.Y), projectile.width, projectile.height, 174,
-                            projectile.velocity.X * 0.1f, projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
+                Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 174,
+                            Projectile.velocity.X * 0.1f, Projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
             }
         }
     }

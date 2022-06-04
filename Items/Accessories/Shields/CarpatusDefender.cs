@@ -19,13 +19,13 @@ namespace NimblesThrowingStuff.Items.Accessories.Shields
         }
         public override void SetDefaults()
         {
-            item.accessory = true;
-            item.width = 30;
-            item.height = 30;
-            item.value = item.value = Item.buyPrice(1, 50, 0, 0);
-            item.rare = 11;
-            item.defense = 10;
-            item.expert = true;
+            Item.accessory = true;
+            Item.width = 30;
+            Item.height = 30;
+            Item.value = Item.value = Item.buyPrice(1, 50, 0, 0);
+            Item.rare = 11;
+            Item.defense = 10;
+            Item.expert = true;
         }
 
         public override void UpdateAccessory(Player player, bool hideVisual)

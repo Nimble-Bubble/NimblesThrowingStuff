@@ -7,20 +7,20 @@ namespace NimblesThrowingStuff.Tiles.Blocks
 {
     public class HadalShellstoneTile : ModTile
     {
-        public override void SetDefaults()
+        public override void SetStaticDefaults()
         {
             Main.tileMergeDirt[Type] = true;
             Main.tileSolid[Type] = true;
             Main.tileBlockLight[Type] = true;
             Main.tileMergeDirt[Type] = true;
 
-            drop = ModContent.ItemType<HadalShellstone>();
+            ItemDrop = ModContent.ItemType<HadalShellstone>();
             ModTranslation name = CreateMapEntryName();
             name.SetDefault("Deep Shellstone");
             AddMapEntry(new Color(8, 72, 107), name);
             mineResist = 2f;
             minPick = 50;
-            dustType = 42;
+            DustType = 42;
             soundType = 21;
             soundStyle = 1;
         }

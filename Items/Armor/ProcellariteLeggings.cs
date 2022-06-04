@@ -21,11 +21,11 @@ namespace NimblesThrowingStuff.Items.Armor
 
         public override void SetDefaults()
         {
-            item.width = 30;
-            item.height = 32;
-            item.value = 750000;
-            item.rare = ItemRarityID.Purple;
-            item.defense = 21; // The Defence value for this piece of armour.
+            Item.width = 30;
+            Item.height = 32;
+            Item.value = 750000;
+            Item.rare = ItemRarityID.Purple;
+            Item.defense = 21; // The Defence value for this piece of armour.
         }
         public override void UpdateEquip(Player player)
         {
@@ -38,7 +38,7 @@ namespace NimblesThrowingStuff.Items.Armor
 
         public override void AddRecipes()
         {
-            ModRecipe r = new ModRecipe(mod);
+            ModRecipe r = new ModRecipe(Mod);
             r.AddIngredient(ModContent.ItemType<ProcellariteBar>(), 18);
             r.AddTile(TileID.LunarCraftingStation);
             r.SetResult(this);

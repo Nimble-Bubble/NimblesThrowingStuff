@@ -21,16 +21,16 @@ namespace NimblesThrowingStuff.Items.Armor
 
         public override void SetDefaults()
         {
-            item.width = 30;
-            item.height = 32;
-            item.value = 350000;
-            item.rare = 10;
-            item.defense = 15; // The Defence value for this piece of armour.
+            Item.width = 30;
+            Item.height = 32;
+            Item.value = 350000;
+            Item.rare = 10;
+            Item.defense = 15; // The Defence value for this piece of armour.
         }
 
         public override bool IsArmorSet(Item head, Item body, Item legs)
         {
-            return body.type == mod.ItemType("MathrusPlate") && legs.type == mod.ItemType("MathrusGreaves");
+            return body.type == Mod.Find<ModItem>("MathrusPlate").Type && legs.type == Mod.Find<ModItem>("MathrusGreaves").Type;
         }
         public override void UpdateArmorSet(Player player)
         {
@@ -50,7 +50,7 @@ namespace NimblesThrowingStuff.Items.Armor
 
         public override void AddRecipes()
         {
-            ModRecipe r = new ModRecipe(mod);
+            ModRecipe r = new ModRecipe(Mod);
             r.AddIngredient(ModContent.ItemType<DoradoFragment>(), 12);
             r.AddIngredient(3467, 8);
             r.AddTile(TileID.LunarCraftingStation);

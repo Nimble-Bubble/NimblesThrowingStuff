@@ -20,25 +20,25 @@ namespace NimblesThrowingStuff.Items.Accessories.Shields
         }
         public override void SetDefaults()
         {
-            item.accessory = true;
-            item.width = 26;
-            item.height = 26;
-            item.value = item.value = Item.buyPrice(0, 1, 25, 0);
-            item.rare = 0;
-            item.defense = 2;
+            Item.accessory = true;
+            Item.width = 26;
+            Item.height = 26;
+            Item.value = Item.value = Item.buyPrice(0, 1, 25, 0);
+            Item.rare = 0;
+            Item.defense = 2;
         }
-        public override bool CanEquipAccessory(Player player, int slot)
-        {
-            var modPlayer = player.GetModPlayer<NimblesPlayer>();
-            if (modPlayer.whichShield >= 1)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-        }
+        //public override bool CanEquipAccessory(Player player, int slot)
+        //{
+        //    var modPlayer = player.GetModPlayer<NimblesPlayer>();
+        //    if (modPlayer.whichShield >= 1)
+        //    {
+        //        return false;
+        //    }
+        //    else
+        //    {
+        //        return true;
+        //    }
+        //}
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             var modPlayer = player.GetModPlayer<NimblesPlayer>();
@@ -46,11 +46,11 @@ namespace NimblesThrowingStuff.Items.Accessories.Shields
         }
         public override void AddRecipes()
         {
-            ModRecipe recipe = new ModRecipe(mod);
+            Recipe recipe = CreateRecipe();
             recipe.AddRecipeGroup(RecipeGroupID.IronBar, 10);
             recipe.AddTile(TileID.Anvils);
             recipe.SetResult(this);
-            recipe.AddRecipe();
+            recipe.Register();
         }
     }
 }

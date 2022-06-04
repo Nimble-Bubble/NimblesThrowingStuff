@@ -9,33 +9,33 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 
 		public override void SetDefaults() 
 		{
-			item.damage = 46;
-			item.thrown = true;
-			item.width = 24;
-			item.height = 24;
-			item.useTime = 18;
-			item.useAnimation = 18;
-			item.useStyle = 1;
-			item.knockBack = 6f;
-            item.noMelee = true;
-            item.noUseGraphic = true;
-			item.value = Item.buyPrice(0, 0, 17, 0);
-			item.rare = 4;
-			item.UseSound = SoundID.Item1;
-			item.autoReuse = true;
-			item.shoot = mod.ProjectileType("TitaniumMalletProj");
-			item.shootSpeed = 12f;
-            item.consumable = true;
-            item.maxStack = 999;
+			Item.damage = 46;
+			Item.DamageType = DamageClass.Throwing;
+			Item.width = 24;
+			Item.height = 24;
+			Item.useTime = 18;
+			Item.useAnimation = 18;
+			Item.useStyle = 1;
+			Item.knockBack = 6f;
+            Item.noMelee = true;
+            Item.noUseGraphic = true;
+			Item.value = Item.buyPrice(0, 0, 17, 0);
+			Item.rare = 4;
+			Item.UseSound = SoundID.Item1;
+			Item.autoReuse = true;
+			Item.shoot = Mod.Find<ModProjectile>("TitaniumMalletProj").Type;
+			Item.shootSpeed = 12f;
+            Item.consumable = true;
+            Item.maxStack = 999;
 		}
 
 		public override void AddRecipes() 
 		{
-			ModRecipe recipe = new ModRecipe(mod);
+			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(1198, 1);
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this, 50);
-			recipe.AddRecipe();
+			recipe.Register();
 		}
 	}
 }

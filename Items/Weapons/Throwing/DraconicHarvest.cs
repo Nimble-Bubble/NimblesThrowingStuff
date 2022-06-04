@@ -14,31 +14,31 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 
 		public override void SetDefaults() 
 		{
-			item.damage = 87;
-			item.thrown = true;
-			item.width = 7;
-			item.height = 31;
-			item.useTime = 18;
-			item.useAnimation = 18;
-			item.useStyle = 1;
-			item.knockBack = 13f;
-            item.noMelee = true;
-            item.noUseGraphic = true;
-			item.value = Item.buyPrice(0, 50, 0, 0);
-			item.rare = 10;
-			item.UseSound = SoundID.Item1;
-			item.autoReuse = true;
-			item.shoot = mod.ProjectileType("DraconicHarvestProj");
-			item.shootSpeed = 25f;
-            item.mana = 13;
+			Item.damage = 87;
+			Item.DamageType = DamageClass.Throwing;
+			Item.width = 7;
+			Item.height = 31;
+			Item.useTime = 18;
+			Item.useAnimation = 18;
+			Item.useStyle = 1;
+			Item.knockBack = 13f;
+            Item.noMelee = true;
+            Item.noUseGraphic = true;
+			Item.value = Item.buyPrice(0, 50, 0, 0);
+			Item.rare = 10;
+			Item.UseSound = SoundID.Item1;
+			Item.autoReuse = true;
+			Item.shoot = Mod.Find<ModProjectile>("DraconicHarvestProj").Type;
+			Item.shootSpeed = 25f;
+            Item.mana = 13;
 		}
         public override void AddRecipes() 
 		{
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.ItemType("DoradoFragment"), 18);
+			Recipe recipe = CreateRecipe();
+			recipe.AddIngredient(Mod.Find<ModItem>("DoradoFragment").Type, 18);
 			recipe.AddTile(TileID.LunarCraftingStation);
 			recipe.SetResult(this);
-			recipe.AddRecipe();
+			recipe.Register();
 		}
 	}
 }

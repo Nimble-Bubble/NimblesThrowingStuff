@@ -9,33 +9,33 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 
 		public override void SetDefaults() 
 		{
-			item.damage = 22;
-			item.thrown = true;
-			item.width = 24;
-			item.height = 24;
-			item.useTime = 23;
-			item.useAnimation = 23;
-			item.useStyle = 1;
-			item.knockBack = 6f;
-            item.noMelee = true;
-            item.noUseGraphic = true;
-			item.value = Item.buyPrice(0, 0, 7, 50);
-			item.rare = 1;
-			item.UseSound = SoundID.Item1;
-			item.autoReuse = true;
-			item.shoot = mod.ProjectileType("CrimtaneKnifeProj");
-			item.shootSpeed = 10f;
-            item.consumable = true;
-            item.maxStack = 999;
+			Item.damage = 22;
+			Item.DamageType = DamageClass.Throwing;
+			Item.width = 24;
+			Item.height = 24;
+			Item.useTime = 23;
+			Item.useAnimation = 23;
+			Item.useStyle = 1;
+			Item.knockBack = 6f;
+            Item.noMelee = true;
+            Item.noUseGraphic = true;
+			Item.value = Item.buyPrice(0, 0, 7, 50);
+			Item.rare = 1;
+			Item.UseSound = SoundID.Item1;
+			Item.autoReuse = true;
+			Item.shoot = Mod.Find<ModProjectile>("CrimtaneKnifeProj").Type;
+			Item.shootSpeed = 10f;
+            Item.consumable = true;
+            Item.maxStack = 999;
 		}
 
 		public override void AddRecipes() 
 		{
-			ModRecipe recipe = new ModRecipe(mod);
+			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.CrimtaneBar, 1);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this, 50);
-			recipe.AddRecipe();
+			recipe.Register();
 		}
 	}
 }

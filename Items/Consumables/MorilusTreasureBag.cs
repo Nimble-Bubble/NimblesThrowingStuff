@@ -29,12 +29,12 @@ namespace NimblesThrowingStuff.Items.Consumables
         }
         public override void SetDefaults()
         {
-            item.maxStack = 999;
-            item.consumable = true;
-            item.width = 32;
-            item.height = 32;
-            item.rare = 9;
-            item.expert = true;
+            Item.maxStack = 999;
+            Item.consumable = true;
+            Item.width = 32;
+            Item.height = 32;
+            Item.rare = 9;
+            Item.expert = true;
         }
         public override int BossBagNPC => ModContent.NPCType<MorilusMain>();
 

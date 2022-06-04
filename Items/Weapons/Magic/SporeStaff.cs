@@ -9,37 +9,37 @@ namespace NimblesThrowingStuff.Items.Weapons.Magic
 	{
         public override void SetStaticDefaults()
 		{
-            Item.staff[item.type] = true;
+            Item.staff[Item.type] = true;
 		}
 
 		public override void SetDefaults() 
 		{
-			item.damage = 16;
-			item.magic = true;
-			item.width = 24;
-			item.height = 24;
-			item.useTime = 28;
-			item.useAnimation = 28;
-			item.useStyle = 5;
-			item.knockBack = 2f;
-            item.noMelee = true;
-			item.value = Item.buyPrice(0, 2, 70, 0);
-			item.rare = 2;
-			item.UseSound = SoundID.Item43;
-			item.autoReuse = true;
-			item.shoot = ModContent.ProjectileType<SporeBolt>();
-			item.shootSpeed = 3f;
-            item.mana = 10;
+			Item.damage = 16;
+			Item.DamageType = DamageClass.Magic;
+			Item.width = 24;
+			Item.height = 24;
+			Item.useTime = 28;
+			Item.useAnimation = 28;
+			Item.useStyle = 5;
+			Item.knockBack = 2f;
+            Item.noMelee = true;
+			Item.value = Item.buyPrice(0, 2, 70, 0);
+			Item.rare = 2;
+			Item.UseSound = SoundID.Item43;
+			Item.autoReuse = true;
+			Item.shoot = ModContent.ProjectileType<SporeBolt>();
+			Item.shootSpeed = 3f;
+            Item.mana = 10;
 		}
 
 		public override void AddRecipes() 
 		{
-			ModRecipe recipe = new ModRecipe(mod);
+			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(331, 12);
             recipe.AddIngredient(209, 12);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
-			recipe.AddRecipe();
+			recipe.Register();
 		}
 	}
 }

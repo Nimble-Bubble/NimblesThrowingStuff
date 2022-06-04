@@ -10,37 +10,36 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 
 		public override void SetDefaults() 
 		{
-			item.damage = 120;
-			item.thrown = true;
-			item.width = 24;
-			item.height = 24;
-			item.useTime = 8;
-			item.useAnimation = 8;
-			item.useStyle = 1;
-			item.knockBack = 4f;
-            item.noMelee = true;
-            item.noUseGraphic = true;
-			item.value = Item.buyPrice(1, 0, 0, 0);
-			item.rare = 11;
-			item.UseSound = SoundID.Item1;
-			item.autoReuse = true;
-			item.shoot = mod.ProjectileType("ProcellariteKnifeProj");
-			item.shootSpeed = 20f;
-            item.mana = 12;
+			Item.damage = 120;
+			Item.DamageType = DamageClass.Throwing;
+			Item.width = 24;
+			Item.height = 24;
+			Item.useTime = 8;
+			Item.useAnimation = 8;
+			Item.useStyle = 1;
+			Item.knockBack = 4f;
+            Item.noMelee = true;
+            Item.noUseGraphic = true;
+			Item.value = Item.buyPrice(1, 0, 0, 0);
+			Item.rare = 11;
+			Item.UseSound = SoundID.Item1;
+			Item.autoReuse = true;
+			Item.shoot = Mod.Find<ModProjectile>("ProcellariteKnifeProj").Type;
+			Item.shootSpeed = 20f;
+            Item.mana = 12;
 		}
-		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
+		public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
 		{
-			Vector2 perturbedSpeed = new Vector2(speedX, speedY).RotatedByRandom(MathHelper.ToRadians(15));
-			Projectile.NewProjectile(position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, type, damage, knockBack, player.whoAmI);
-			return false;
+			Vector2 perturbedSpeed = velocity.RotatedByRandom(MathHelper.ToRadians(15));
+			Projectile.NewProjectile(position, perturbedSpeed, type, damage, knockBack, player.whoAmI);
 		}
 		public override void AddRecipes() 
 		{
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.ItemType("ProcellariteBar"), 10);
+			Recipe recipe = CreateRecipe();
+			recipe.AddIngredient(Mod.Find<ModItem>("ProcellariteBar").Type, 10);
 			recipe.AddTile(TileID.LunarCraftingStation);
 			recipe.SetResult(this);
-			recipe.AddRecipe();
+			recipe.Register();
 		}
 	}
 }

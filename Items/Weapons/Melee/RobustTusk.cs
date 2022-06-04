@@ -17,53 +17,53 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 				+"\nRight click to launch yourself in the direction of the lance");
         }
         public override void SetDefaults() {
-			item.damage = 17;
-			item.useStyle = ItemUseStyleID.HoldingOut;
-			item.useAnimation = 28;
-			item.useTime = 28;
-			item.knockBack = 6f;
-			item.width = 20;
-			item.height = 20;
-			item.noUseGraphic = true;
-			item.noMelee = true;
-			item.rare = ItemRarityID.Blue;
-			item.value = Item.buyPrice(0, 0, 75, 0);
-            item.melee = true;
-			item.channel = true;
-            item.shoot = ModContent.ProjectileType<RobustTuskProj>();
-            item.shootSpeed = 8f;
-			item.UseSound = SoundID.Item1;
+			Item.damage = 17;
+			Item.useStyle = ItemUseStyleID.Shoot;
+			Item.useAnimation = 28;
+			Item.useTime = 28;
+			Item.knockBack = 6f;
+			Item.width = 20;
+			Item.height = 20;
+			Item.noUseGraphic = true;
+			Item.noMelee = true;
+			Item.rare = ItemRarityID.Blue;
+			Item.value = Item.buyPrice(0, 0, 75, 0);
+            Item.DamageType = DamageClass.Melee;
+			Item.channel = true;
+            Item.shoot = ModContent.ProjectileType<RobustTuskProj>();
+            Item.shootSpeed = 8f;
+			Item.UseSound = SoundID.Item1;
 		}
 		public override void AddRecipes()
 		{
-			var recipe = new ModRecipe(mod);
+			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.RottenChunk, 10);
 			recipe.AddIngredient(ItemID.Leather, 3);
 			recipe.AddIngredient(ModContent.ItemType<Longhorn>());
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
-			recipe.AddRecipe();
-			recipe = new ModRecipe(mod);
+			recipe.Register();
+			recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.Vertebrae, 10);
 			recipe.AddIngredient(ItemID.Leather, 3);
 			recipe.AddIngredient(ModContent.ItemType<Longhorn>());
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
-			recipe.AddRecipe();
-			recipe = new ModRecipe(mod);
+			recipe.Register();
+			recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.ShadowScale, 10);
 			recipe.AddIngredient(ItemID.Leather, 5);
 			recipe.AddIngredient(ModContent.ItemType<BeastBone>(), 10);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
-			recipe.AddRecipe();
-			recipe = new ModRecipe(mod);
+			recipe.Register();
+			recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.TissueSample, 10);
 			recipe.AddIngredient(ItemID.Leather, 5);
 			recipe.AddIngredient(ModContent.ItemType<BeastBone>(), 10);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
-			recipe.AddRecipe();
+			recipe.Register();
 		}
 	}
 }

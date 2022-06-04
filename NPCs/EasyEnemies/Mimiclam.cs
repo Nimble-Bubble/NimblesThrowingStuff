@@ -12,34 +12,34 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
 		public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Clam");
-            Main.npcFrameCount[npc.type] = 6;
+            Main.npcFrameCount[NPC.type] = 6;
 		}
 
 		public override void SetDefaults()
 		{
-			npc.width = 26;
-			npc.height = 26;
-			npc.aiStyle = 25;
-			npc.damage = 25;
-			npc.defense = 12;
-			npc.lifeMax = 120;
-			npc.HitSound = SoundID.NPCHit2;
-			npc.DeathSound = SoundID.NPCDeath2;
-			npc.knockBackResist = 0.1f;
+			NPC.width = 26;
+			NPC.height = 26;
+			NPC.aiStyle = 25;
+			NPC.damage = 25;
+			NPC.defense = 12;
+			NPC.lifeMax = 120;
+			NPC.HitSound = SoundID.NPCHit2;
+			NPC.DeathSound = SoundID.NPCDeath2;
+			NPC.knockBackResist = 0.1f;
             animationType = 341;
-            banner = npc.type;
-			bannerItem = mod.ItemType("MimiclamBannerItem");
+            banner = NPC.type;
+			bannerItem = Mod.Find<ModItem>("MimiclamBannerItem").Type;
         }
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
             return SpawnCondition.OceanMonster.Chance * 0.75f;
         }
-		public override void NPCLoot()
+		public override void OnKill()
 		{
-            Item.NewItem(npc.getRect(), 2625, 1);
+            Item.NewItem(NPC.getRect(), 2625, 1);
             for (int index = 0; index < 10; index++)
-                        Dust.NewDust(new Vector2(npc.position.X, npc.position.Y), npc.width, npc.height, 194,
-                            npc.velocity.X * 0.1f, npc.velocity.Y * 0.1f, 0, new Color(), 0.75f);
+                        Dust.NewDust(new Vector2(NPC.position.X, NPC.position.Y), NPC.width, NPC.height, 194,
+                            NPC.velocity.X * 0.1f, NPC.velocity.Y * 0.1f, 0, new Color(), 0.75f);
 			
         }
 	}

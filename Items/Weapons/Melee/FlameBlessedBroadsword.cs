@@ -15,20 +15,20 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			DisplayName.SetDefault("Flame-Blessed Broadsword");
         }
         public override void SetDefaults() {
-			item.damage = 32;
-			item.useStyle = ItemUseStyleID.SwingThrow;
-			item.useAnimation = 20;
-			item.useTime = 20;
-			item.knockBack = 5f;
-			item.width = 66;
-			item.height = 66;
-			item.scale = 1.3f;
-			item.rare = ItemRarityID.Orange;
-			item.value = Item.buyPrice(0, 25, 0, 0);
-            item.melee = true;
-            item.shoot = ModContent.ProjectileType<FlameBlessedBeamProj>();
-            item.shootSpeed = 12f;
-			item.UseSound = SoundID.Item1;
+			Item.damage = 32;
+			Item.useStyle = ItemUseStyleID.Swing;
+			Item.useAnimation = 20;
+			Item.useTime = 20;
+			Item.knockBack = 5f;
+			Item.width = 66;
+			Item.height = 66;
+			Item.scale = 1.3f;
+			Item.rare = ItemRarityID.Orange;
+			Item.value = Item.buyPrice(0, 25, 0, 0);
+            Item.DamageType = DamageClass.Melee;
+            Item.shoot = ModContent.ProjectileType<FlameBlessedBeamProj>();
+            Item.shootSpeed = 12f;
+			Item.UseSound = SoundID.Item1;
 		}
         public override void MeleeEffects(Player player, Rectangle hitbox) 
         {
@@ -39,13 +39,13 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 		}
 		public override void AddRecipes()
 		{
-			var recipe = new ModRecipe(mod);
+			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.EnchantedSword);
 			recipe.AddIngredient(ItemID.HellstoneBar, 15);
 			recipe.AddIngredient(ItemID.Bone, 25);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
-			recipe.AddRecipe();
+			recipe.Register();
 		}
 	}
 }

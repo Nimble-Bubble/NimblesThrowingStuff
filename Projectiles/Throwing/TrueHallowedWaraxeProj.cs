@@ -13,43 +13,43 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetDefaults()
         {
-            projectile.width = 62;
-            projectile.height = 62;
-            projectile.usesLocalNPCImmunity = true;
-            projectile.localNPCHitCooldown = 10;
-            projectile.tileCollide = false;
-            projectile.maxPenetrate = -1;
-            projectile.friendly = true;
-            projectile.thrown = true;
-            projectile.aiStyle = 3;
-            projectile.penetrate = -1;
-            projectile.extraUpdates = 3;
+            Projectile.width = 62;
+            Projectile.height = 62;
+            Projectile.usesLocalNPCImmunity = true;
+            Projectile.localNPCHitCooldown = 10;
+            Projectile.tileCollide = false;
+            Projectile.maxPenetrate = -1;
+            Projectile.friendly = true;
+            Projectile.DamageType = DamageClass.Throwing;
+            Projectile.aiStyle = 3;
+            Projectile.penetrate = -1;
+            Projectile.extraUpdates = 3;
         }
         public override void AI() 
         {
-            Dust.NewDust(new Vector2(projectile.position.X, projectile.position.Y), projectile.width, projectile.height, 57,
-                            projectile.velocity.X * 0.1f, projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
+            Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 57,
+                            Projectile.velocity.X * 0.1f, Projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
             int g = 0; 
             g++;
             if (g % 30 == 0)
             {
-                Projectile.NewProjectile(projectile.position, projectile.velocity.RotatedBy(MathHelper.ToRadians(-30)), ModContent.ProjectileType<WaraxeEcho>(), projectile.damage / 4, projectile.knockBack / 2);
-                Projectile.NewProjectile(projectile.position, projectile.velocity, ModContent.ProjectileType<WaraxeEcho>(), projectile.damage / 3, projectile.knockBack / 2);
-                Projectile.NewProjectile(projectile.position, projectile.velocity.RotatedBy(MathHelper.ToRadians(30)), ModContent.ProjectileType<WaraxeEcho>(), projectile.damage / 4, projectile.knockBack / 2);
+                Projectile.NewProjectile(Projectile.position, Projectile.velocity.RotatedBy(MathHelper.ToRadians(-30)), ModContent.ProjectileType<WaraxeEcho>(), Projectile.damage / 4, Projectile.knockBack / 2);
+                Projectile.NewProjectile(Projectile.position, Projectile.velocity, ModContent.ProjectileType<WaraxeEcho>(), Projectile.damage / 3, Projectile.knockBack / 2);
+                Projectile.NewProjectile(Projectile.position, Projectile.velocity.RotatedBy(MathHelper.ToRadians(30)), ModContent.ProjectileType<WaraxeEcho>(), Projectile.damage / 4, Projectile.knockBack / 2);
             }
         }
-        public override void PostDraw(SpriteBatch spriteBatch, Color lightColor)
+        public override void PostDraw(Color lightColor)
 		{
-			Texture2D texture = mod.GetTexture("Projectiles/Throwing/TrueHallowedWaraxeProj_Glow");
+			Texture2D texture = Mod.GetTexture("Projectiles/Throwing/TrueHallowedWaraxeProj_Glow");
 			spriteBatch.Draw
 			(
 				texture,
-				projectile.position,
+				Projectile.position,
 				new Rectangle(0, 0, texture.Width, texture.Height),
 				Color.Blue,
-				projectile.rotation,
+				Projectile.rotation,
 				texture.Size() * 0.5f,
-				projectile.scale,
+				Projectile.scale,
 				SpriteEffects.None,
 				0f
 			);

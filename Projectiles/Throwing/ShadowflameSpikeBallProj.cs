@@ -13,21 +13,21 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetDefaults()
         {
-            projectile.width = 14;
-            projectile.height = 14;
-            projectile.tileCollide = true;
-            projectile.maxPenetrate = -1;
-            projectile.friendly = true;
-            projectile.timeLeft = 600;
-            projectile.thrown = true;
-            projectile.aiStyle = 14;
-            projectile.penetrate = -1;
+            Projectile.width = 14;
+            Projectile.height = 14;
+            Projectile.tileCollide = true;
+            Projectile.maxPenetrate = -1;
+            Projectile.friendly = true;
+            Projectile.timeLeft = 600;
+            Projectile.DamageType = DamageClass.Throwing;
+            Projectile.aiStyle = 14;
+            Projectile.penetrate = -1;
         }
         public override void AI()
         {
             if (Main.rand.NextBool(3)) 
             {
-				int dust = Dust.NewDust(new Vector2(projectile.position.X, projectile.position.Y), projectile.width, projectile.height, 272);
+				int dust = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 272);
 			}
             
         }

@@ -12,24 +12,24 @@ namespace NimblesThrowingStuff.NPCs.Morilus
 		public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Prankster of the Sky Sea");
-            Main.npcFrameCount[npc.type] = 4;
+            Main.npcFrameCount[NPC.type] = 4;
 		}
 
 		public override void SetDefaults()
 		{
-			npc.width = 26;
-			npc.height = 26;
-			npc.aiStyle = 44;
-			npc.damage = 120;
-			npc.defense = 70;
-			npc.lifeMax = 625;
-			npc.HitSound = SoundID.NPCHit3;
-			npc.DeathSound = SoundID.NPCDeath3;
-			npc.knockBackResist = 0.5f;
+			NPC.width = 26;
+			NPC.height = 26;
+			NPC.aiStyle = 44;
+			NPC.damage = 120;
+			NPC.defense = 70;
+			NPC.lifeMax = 625;
+			NPC.HitSound = SoundID.NPCHit3;
+			NPC.DeathSound = SoundID.NPCDeath3;
+			NPC.knockBackResist = 0.5f;
         }
         public override void AI()
         {
-			npc.rotation = npc.velocity.X * 0.05f;
+			NPC.rotation = NPC.velocity.X * 0.05f;
 		}
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
 		{
@@ -41,22 +41,22 @@ namespace NimblesThrowingStuff.NPCs.Morilus
 		}
 		public override void FindFrame(int frameHeight)
         {
-            npc.frameCounter++;
+            NPC.frameCounter++;
 
-                if (npc.frameCounter < 10) {
-					npc.frame.Y = 0 * frameHeight;
+                if (NPC.frameCounter < 10) {
+					NPC.frame.Y = 0 * frameHeight;
 				}
-				else if (npc.frameCounter < 20) {
-					npc.frame.Y = 1 * frameHeight;
+				else if (NPC.frameCounter < 20) {
+					NPC.frame.Y = 1 * frameHeight;
 				}
-				else if (npc.frameCounter < 30) {
-					npc.frame.Y = 2 * frameHeight;
+				else if (NPC.frameCounter < 30) {
+					NPC.frame.Y = 2 * frameHeight;
 				}
-                else if (npc.frameCounter < 40) {
-					npc.frame.Y = 3 * frameHeight;
+                else if (NPC.frameCounter < 40) {
+					NPC.frame.Y = 3 * frameHeight;
 				}
 				else {
-					npc.frameCounter = 0;
+					NPC.frameCounter = 0;
 				} 
         }
 	}

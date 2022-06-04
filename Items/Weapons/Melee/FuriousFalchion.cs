@@ -12,20 +12,20 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 	{
 
 		public override void SetDefaults() {
-			item.damage = 135;
-			item.useStyle = 1;
-			item.useAnimation = 17;
-			item.useTime = 17;
-			item.knockBack = 6.5f;
-			item.width = 80;
-			item.height = 80;
-			item.scale = 1.6f;
-			item.rare = 10;
-			item.value = Item.buyPrice(0, 50, 0, 0);
-            item.melee = true;
-            item.shoot = ModContent.ProjectileType<FuriousBeam>();
-            item.shootSpeed = 6f;
-			item.UseSound = SoundID.Item1;
+			Item.damage = 135;
+			Item.useStyle = 1;
+			Item.useAnimation = 17;
+			Item.useTime = 17;
+			Item.knockBack = 6.5f;
+			Item.width = 80;
+			Item.height = 80;
+			Item.scale = 1.6f;
+			Item.rare = 10;
+			Item.value = Item.buyPrice(0, 50, 0, 0);
+            Item.DamageType = DamageClass.Melee;
+            Item.shoot = ModContent.ProjectileType<FuriousBeam>();
+            Item.shootSpeed = 6f;
+			Item.UseSound = SoundID.Item1;
 		}
         public override void MeleeEffects(Player player, Rectangle hitbox) 
         {
@@ -34,7 +34,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 				int dust = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, 174);
 			}
 		}
-        public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
+        public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
 		{
       float numberProjectiles = 3; 
 			float rotation = MathHelper.ToRadians(10);
@@ -44,15 +44,14 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 				Vector2 perturbedSpeed = new Vector2(speedX, speedY).RotatedBy(MathHelper.Lerp(-rotation, rotation, i / (numberProjectiles - 1))) * 2f; // Watch out for dividing by 0 if there is only 1 projectile.
 				Projectile.NewProjectile(position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, type, damage / 2, knockBack, player.whoAmI);
 			}
-			return false;
         }
         public override void AddRecipes()
 		{
-			var recipe = new ModRecipe(mod);
+			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.FragmentSolar, 18);
 			recipe.AddTile(TileID.LunarCraftingStation);
 			recipe.SetResult(this);
-			recipe.AddRecipe();
+			recipe.Register();
 		}
 	}
 }

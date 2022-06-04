@@ -13,32 +13,32 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 
 		public override void SetDefaults() 
 		{
-			item.damage = 80;
-			item.thrown = true;
-			item.width = 24;
-			item.height = 24;
-			item.useTime = 60;
-			item.useAnimation = 60;
-			item.useStyle = 1;
-			item.knockBack = 0f;
-            item.noMelee = true;
-            item.noUseGraphic = true;
-			item.value = Item.buyPrice(0, 20, 0, 0);
-			item.rare = 8;
-			item.UseSound = SoundID.Item1;
-			item.autoReuse = true;
-			item.shoot = mod.ProjectileType("FestiveEggnogProj");
-			item.shootSpeed = 8f;
-            item.mana = 18;
+			Item.damage = 80;
+			Item.DamageType = DamageClass.Throwing;
+			Item.width = 24;
+			Item.height = 24;
+			Item.useTime = 60;
+			Item.useAnimation = 60;
+			Item.useStyle = 1;
+			Item.knockBack = 0f;
+            Item.noMelee = true;
+            Item.noUseGraphic = true;
+			Item.value = Item.buyPrice(0, 20, 0, 0);
+			Item.rare = 8;
+			Item.UseSound = SoundID.Item1;
+			Item.autoReuse = true;
+			Item.shoot = Mod.Find<ModProjectile>("FestiveEggnogProj").Type;
+			Item.shootSpeed = 8f;
+            Item.mana = 18;
 		}
 
 		public override void AddRecipes() 
 		{
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.ItemType("FestiveCloth"), 8);
+			Recipe recipe = CreateRecipe();
+			recipe.AddIngredient(Mod.Find<ModItem>("FestiveCloth").Type, 8);
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);
-			recipe.AddRecipe();
+			recipe.Register();
 		}
 	}
 }

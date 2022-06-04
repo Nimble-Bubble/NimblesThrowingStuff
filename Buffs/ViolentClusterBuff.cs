@@ -10,7 +10,7 @@ namespace NimblesThrowingStuff.Buffs
 {
     public class ViolentClusterBuff : ModBuff
 	{
-		public override void SetDefaults()
+		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Violent Chopper");
 			Description.SetDefault("Blood Lust Cluster will fight for you");

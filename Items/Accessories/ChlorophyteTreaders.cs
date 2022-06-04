@@ -22,11 +22,11 @@ namespace NimblesThrowingStuff.Items.Accessories
         }
         public override void SetDefaults()
         {
-            item.accessory = true;
-            item.width = 22;
-            item.height = 22;
-            item.value = item.value = Item.buyPrice(0, 50, 0, 0);
-            item.rare = ItemRarityID.Yellow;
+            Item.accessory = true;
+            Item.width = 22;
+            Item.height = 22;
+            Item.value = Item.value = Item.buyPrice(0, 50, 0, 0);
+            Item.rare = ItemRarityID.Yellow;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
@@ -37,22 +37,22 @@ namespace NimblesThrowingStuff.Items.Accessories
             player.fireWalk = true;
             player.waterWalk = true;
             player.iceSkate = true;
-            player.doubleJumpSandstorm = true;
-            player.doubleJumpBlizzard = true;
-            player.doubleJumpCloud = true;
+            player.hasJumpOption_Sandstorm = true;
+            player.hasJumpOption_Blizzard = true;
+            player.hasJumpOption_Cloud = true;
             player.jumpBoost = true;
             player.noFallDmg = true;
         }
         public override void AddRecipes() 
         {
-			ModRecipe recipe = new ModRecipe(mod);
+			Recipe recipe = CreateRecipe();
             recipe.AddIngredient(ItemID.FrostsparkBoots);
             recipe.AddIngredient(ItemID.LavaWaders);
             recipe.AddIngredient(ItemID.ChlorophyteBar, 12);
             recipe.AddIngredient(ItemID.BundleofBalloons);
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);
-			recipe.AddRecipe();
+			recipe.Register();
 		}
     }
 }

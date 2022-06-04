@@ -13,42 +13,42 @@ namespace NimblesThrowingStuff.Projectiles.Melee
     {
         public override void SetStaticDefaults()
         {
-            ProjectileID.Sets.YoyosMaximumRange[projectile.type] = 750f;
-            ProjectileID.Sets.YoyosTopSpeed[projectile.type] = 40f;
+            ProjectileID.Sets.YoyosMaximumRange[Projectile.type] = 750f;
+            ProjectileID.Sets.YoyosTopSpeed[Projectile.type] = 40f;
         }
         public override void SetDefaults()
         {
-            projectile.width = 20;
-            projectile.height = 20;
-            projectile.usesLocalNPCImmunity = true;
-            projectile.localNPCHitCooldown = 10;
-            projectile.tileCollide = false;
-            projectile.penetrate = -1;
-            projectile.friendly = true;
-            projectile.melee = true;
-            projectile.alpha = 0;
-            projectile.aiStyle = 99;
-            projectile.extraUpdates = 1;
+            Projectile.width = 20;
+            Projectile.height = 20;
+            Projectile.usesLocalNPCImmunity = true;
+            Projectile.localNPCHitCooldown = 10;
+            Projectile.tileCollide = false;
+            Projectile.penetrate = -1;
+            Projectile.friendly = true;
+            Projectile.DamageType = DamageClass.Melee;
+            Projectile.alpha = 0;
+            Projectile.aiStyle = 99;
+            Projectile.extraUpdates = 1;
         }
-        public override void PostDraw(SpriteBatch spriteBatch, Color lightColor)
+        public override void PostDraw(Color lightColor)
 		{
-			Texture2D texture = mod.GetTexture("Projectiles/Melee/SkyseaSpinnerProj_Glow");
+			Texture2D texture = Mod.GetTexture("Projectiles/Melee/SkyseaSpinnerProj_Glow");
 			spriteBatch.Draw
 			(
 				texture,
-				projectile.position,
+				Projectile.position,
 				new Rectangle(0, 0, texture.Width, texture.Height),
 				Color.Yellow,
-				projectile.rotation,
+				Projectile.rotation,
 				texture.Size() * 0.5f,
-				projectile.scale,
+				Projectile.scale,
 				SpriteEffects.None,
 				0f
 			);
 		}
         public override void OnHitNPC (NPC target, int damage, float knockback, bool crit)
         {
-            Projectile.NewProjectile(projectile.position.X + Main.rand.Next(-1, 2), projectile.position.Y - 1000, Main.rand.Next(-1, 2), Main.rand.Next(5, 9), ModContent.ProjectileType<ProcellariteSpikeProj>(), projectile.damage / 3, projectile.knockBack, projectile.owner);
+            Projectile.NewProjectile(Projectile.position.X + Main.rand.Next(-1, 2), Projectile.position.Y - 1000, Main.rand.Next(-1, 2), Main.rand.Next(5, 9), ModContent.ProjectileType<ProcellariteSpikeProj>(), Projectile.damage / 3, Projectile.knockBack, Projectile.owner);
         }
     }
 }

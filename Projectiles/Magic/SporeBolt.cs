@@ -11,26 +11,26 @@ namespace NimblesThrowingStuff.Projectiles.Magic
     {
         public override void SetDefaults()
         {
-            projectile.width = 30;
-            projectile.height = 30;
-            projectile.aiStyle = 29;
-            projectile.hostile = false;
-            projectile.friendly = true;
-            projectile.magic = true;
-            projectile.tileCollide = false;
-            projectile.penetrate = 200;
-            projectile.maxPenetrate = 200;
-            projectile.usesLocalNPCImmunity = true;
-            projectile.localNPCHitCooldown = 10;
-            projectile.alpha = 0;
-            projectile.scale = 0.5f;
-            projectile.timeLeft = 255;
+            Projectile.width = 30;
+            Projectile.height = 30;
+            Projectile.aiStyle = 29;
+            Projectile.hostile = false;
+            Projectile.friendly = true;
+            Projectile.DamageType = DamageClass.Magic;
+            Projectile.tileCollide = false;
+            Projectile.penetrate = 200;
+            Projectile.maxPenetrate = 200;
+            Projectile.usesLocalNPCImmunity = true;
+            Projectile.localNPCHitCooldown = 10;
+            Projectile.alpha = 0;
+            Projectile.scale = 0.5f;
+            Projectile.timeLeft = 255;
         }
         public override void AI()
         {
-            projectile.rotation += 0.05f * (float)projectile.direction;
-            projectile.alpha++;
-            projectile.scale += 0.02f;
+            Projectile.rotation += 0.05f * (float)Projectile.direction;
+            Projectile.alpha++;
+            Projectile.scale += 0.02f;
         }
         public override void OnHitNPC (NPC target, int damage, float knockback, bool crit)
         {

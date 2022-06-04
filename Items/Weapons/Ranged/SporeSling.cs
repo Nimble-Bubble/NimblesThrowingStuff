@@ -15,45 +15,43 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 
 		public override void SetDefaults()
 		{
-			item.damage = 17;
-			item.width = 40;
-			item.height = 40;
-			item.useTime = 35;
-			item.useAnimation = 35;
-			item.useStyle = ItemUseStyleID.HoldingOut;
-			item.value = Item.buyPrice(0, 2, 70, 0);
-			item.rare = ItemRarityID.Green;
-			item.noMelee = true;
-			item.useAmmo = AmmoID.Arrow;
-			item.UseSound = SoundID.Item5;
-			item.shoot = ProjectileID.WoodenArrowFriendly;
-            item.knockBack = 6f;
-			item.shootSpeed = 7f;
-			item.ranged = true;
+			Item.damage = 17;
+			Item.width = 40;
+			Item.height = 40;
+			Item.useTime = 35;
+			Item.useAnimation = 35;
+			Item.useStyle = ItemUseStyleID.Shoot;
+			Item.value = Item.buyPrice(0, 2, 70, 0);
+			Item.rare = ItemRarityID.Green;
+			Item.noMelee = true;
+			Item.useAmmo = AmmoID.Arrow;
+			Item.UseSound = SoundID.Item5;
+			Item.shoot = ProjectileID.WoodenArrowFriendly;
+            Item.knockBack = 6f;
+			Item.shootSpeed = 7f;
+			Item.DamageType = DamageClass.Ranged;
 		}
-        public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
+        public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
 		{
-			Projectile.NewProjectile(position.X, position.Y, speedX, speedY, type, damage, knockBack, player.whoAmI);
             int numberProjectiles = 3; 
 			for (int i = 0; i < numberProjectiles; i++)
 			{
-				Vector2 stingerSpeed = new Vector2(speedX, speedY).RotatedByRandom(MathHelper.ToRadians(30)); // 15 degree spread.
-				int stinger = Projectile.NewProjectile(position.X, position.Y, stingerSpeed.X, stingerSpeed.Y, ProjectileID.HornetStinger, damage / 3, knockBack, player.whoAmI);
+				Vector2 stingerSpeed = velocity.RotatedByRandom(MathHelper.ToRadians(30)); 
+				int stinger = Projectile.NewProjectile(position, stingerSpeed, ProjectileID.HornetStinger, damage / 3, knockBack, player.whoAmI);
                 Main.projectile[stinger].minion = false;
                 Main.projectile[stinger].ranged = true;
 			}
-			return false;
 		}
 
 		public override void AddRecipes()
 		{
-			ModRecipe recipe = new ModRecipe(mod);
+			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.JungleSpores, 12);
 			recipe.AddIngredient(ItemID.Stinger, 12);
             recipe.AddIngredient(ItemID.Vine, 2);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
-			recipe.AddRecipe();
+			recipe.Register();
 		}
 	}
 }

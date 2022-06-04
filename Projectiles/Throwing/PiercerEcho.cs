@@ -13,17 +13,17 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetDefaults()
         {
-            projectile.width = 24;
-            projectile.height = 30;
-            projectile.usesLocalNPCImmunity = true;
-            projectile.localNPCHitCooldown = 10;
-            projectile.tileCollide = true;
-            projectile.penetrate = 1;
-            projectile.friendly = true;
-            projectile.thrown = true;
-            projectile.light = 0.5f;
-            projectile.aiStyle = 27;
-            aiType = 157;
+            Projectile.width = 24;
+            Projectile.height = 30;
+            Projectile.usesLocalNPCImmunity = true;
+            Projectile.localNPCHitCooldown = 10;
+            Projectile.tileCollide = true;
+            Projectile.penetrate = 1;
+            Projectile.friendly = true;
+            Projectile.DamageType = DamageClass.Throwing;
+            Projectile.light = 0.5f;
+            Projectile.aiStyle = 27;
+            AIType = 157;
         }
         public override void OnHitNPC (NPC target, int damage, float knockback, bool crit)
         {

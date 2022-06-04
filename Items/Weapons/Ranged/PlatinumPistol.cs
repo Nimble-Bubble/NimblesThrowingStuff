@@ -10,30 +10,30 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 	{
 		public override void SetDefaults()
 		{
-			item.damage = 13;
-			item.width = 40;
-			item.height = 40;
-			item.useTime = 24;
-			item.useAnimation = 24;
-			item.useStyle = 5;
-			item.value = Item.buyPrice(0, 3, 0, 0);
-			item.rare = 1;
-			item.noMelee = true;
-			item.useAmmo = AmmoID.Bullet;
-			item.UseSound = SoundID.Item11;
-			item.shoot = ProjectileID.Bullet;
-            item.knockBack = 4f;
-			item.shootSpeed = 8.5f;
-			item.ranged = true;
+			Item.damage = 13;
+			Item.width = 40;
+			Item.height = 40;
+			Item.useTime = 24;
+			Item.useAnimation = 24;
+			Item.useStyle = 5;
+			Item.value = Item.buyPrice(0, 3, 0, 0);
+			Item.rare = 1;
+			Item.noMelee = true;
+			Item.useAmmo = AmmoID.Bullet;
+			Item.UseSound = SoundID.Item11;
+			Item.shoot = ProjectileID.Bullet;
+            Item.knockBack = 4f;
+			Item.shootSpeed = 8.5f;
+			Item.DamageType = DamageClass.Ranged;
 		}
 		public override void AddRecipes()
 		{
-			ModRecipe recipe = new ModRecipe(mod);
+			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.PlatinumBar, 8);
 			recipe.AddIngredient(ItemID.Diamond, 8);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
-			recipe.AddRecipe();
+			recipe.Register();
 		}
         public override Vector2? HoldoutOffset()
 		{

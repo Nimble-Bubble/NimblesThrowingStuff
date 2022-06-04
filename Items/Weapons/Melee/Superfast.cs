@@ -13,27 +13,27 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
         public override void SetStaticDefaults()
         {
 			Tooltip.SetDefault("A superfast pulsar-like yoyo that attacks relentlessly");
-			ItemID.Sets.Yoyo[item.type] = true;
-			ItemID.Sets.GamepadExtraRange[item.type] = 50;
-			ItemID.Sets.GamepadSmartQuickReach[item.type] = true;
+			ItemID.Sets.Yoyo[Item.type] = true;
+			ItemID.Sets.GamepadExtraRange[Item.type] = 50;
+			ItemID.Sets.GamepadSmartQuickReach[Item.type] = true;
         }
         public override void SetDefaults() {
-			item.damage = 125;
-			item.useStyle = ItemUseStyleID.HoldingOut;
-			item.useAnimation = 8;
-			item.useTime = 8;
-			item.knockBack = 4f;
-			item.width = 20;
-			item.height = 20;
-			item.noUseGraphic = true;
-			item.noMelee = true;
-			item.rare = ItemRarityID.Cyan;
-			item.value = Item.buyPrice(1, 0, 0, 0);
-            item.melee = true;
-			item.channel = true;
-            item.shoot = ModContent.ProjectileType<SuperfastProj>();
-            item.shootSpeed = 18f;
-			item.UseSound = SoundID.Item1;
+			Item.damage = 125;
+			Item.useStyle = ItemUseStyleID.Shoot;
+			Item.useAnimation = 8;
+			Item.useTime = 8;
+			Item.knockBack = 4f;
+			Item.width = 20;
+			Item.height = 20;
+			Item.noUseGraphic = true;
+			Item.noMelee = true;
+			Item.rare = ItemRarityID.Cyan;
+			Item.value = Item.buyPrice(1, 0, 0, 0);
+            Item.DamageType = DamageClass.Melee;
+			Item.channel = true;
+            Item.shoot = ModContent.ProjectileType<SuperfastProj>();
+            Item.shootSpeed = 18f;
+			Item.UseSound = SoundID.Item1;
 		}
 	}
 }
