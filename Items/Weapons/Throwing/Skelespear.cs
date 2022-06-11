@@ -39,7 +39,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ModContent.ItemType<ShorebrassBar>(), 12);
 			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this);
 			recipe.Register();
 		}
 	}

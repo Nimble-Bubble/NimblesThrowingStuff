@@ -38,7 +38,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(Mod.Find<ModItem>("ProcellariteBar").Type, 10);
 			recipe.AddTile(TileID.LunarCraftingStation);
-			recipe.SetResult(this);
 			recipe.Register();
 		}
 	}

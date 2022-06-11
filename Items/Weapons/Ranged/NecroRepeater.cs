@@ -37,7 +37,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 			recipe.AddIngredient(154, 20);
 			recipe.AddIngredient(150, 15);
 			recipe.AddTile(TileID.WorkBenches);
-			recipe.SetResult(this);
 			recipe.Register();
 		}
 	}

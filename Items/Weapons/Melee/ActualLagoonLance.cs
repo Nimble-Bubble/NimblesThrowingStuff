@@ -41,7 +41,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			recipe.AddIngredient(ItemID.GoldenKey, 2);
 			recipe.AddIngredient(ModContent.ItemType<GrowlingWyvern>());
 			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this);
 			recipe.Register();
 		}
 	}

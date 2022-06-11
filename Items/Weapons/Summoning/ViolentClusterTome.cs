@@ -45,7 +45,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Summoning
 			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.CrimtaneBar, 12);
 			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this);
 			recipe.Register();
 		}
 	}

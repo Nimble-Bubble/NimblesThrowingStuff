@@ -42,7 +42,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			recipe.AddIngredient(ModContent.ItemType<PaladinLance>(), 1);
 			recipe.AddIngredient(ModContent.ItemType<ShorebrassBar>(), 10);
 			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this);
 			recipe.Register();
 		}
 	}

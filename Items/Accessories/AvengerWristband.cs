@@ -40,7 +40,6 @@ namespace NimblesThrowingStuff.Items.Accessories
 			recipe.AddIngredient(ModContent.ItemType<SacredWristband>()); 
             recipe.AddIngredient(935, 1);
 			recipe.AddTile(114);
-			recipe.SetResult(this);
 			recipe.Register();
 		}
     }

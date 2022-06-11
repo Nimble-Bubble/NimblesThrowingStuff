@@ -45,7 +45,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Summoning
 			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.DemoniteBar, 12);
 			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this);
 			recipe.Register();
 		}
 	}

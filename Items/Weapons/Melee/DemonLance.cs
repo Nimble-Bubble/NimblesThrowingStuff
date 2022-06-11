@@ -38,7 +38,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			recipe.AddIngredient(ItemID.DemoniteBar, 10);
 			recipe.AddIngredient(ModContent.ItemType<IronLance>());
 			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this);
 			recipe.Register();
 		}
 	}

@@ -55,7 +55,7 @@ namespace NimblesThrowingStuff.NPCs.Town
 			NPC.HitSound = SoundID.NPCHit1;
 			NPC.DeathSound = SoundID.NPCDeath1;
 			NPC.knockBackResist = 0.25f;
-            animationType = NPCID.Merchant;
+            AnimationType = NPCID.Merchant;
         }
         public override bool CanTownNPCSpawn(int numTownNPCs, int money)
         {
@@ -283,7 +283,7 @@ namespace NimblesThrowingStuff.NPCs.Town
 
 		public override void OnKill()
 		{
-            Gore.NewGore(NPC.position, NPC.velocity, Mod.GetGoreSlot("Gores/LivingRelicHeadGore"), 1);
+            Gore.NewGore(NPC.position, NPC.velocity, Mod.Find<ModGore>("Gores/LivingRelicHeadGore").Type, 1);
         }
 
 		public override void TownNPCAttackStrength(ref int damage, ref float knockback)

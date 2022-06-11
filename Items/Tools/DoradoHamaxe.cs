@@ -32,7 +32,6 @@ namespace NimblesThrowingStuff.Items.Tools
 			recipe.AddIngredient(ItemID.LunarBar, 12);
             recipe.AddIngredient(ModContent.ItemType<DoradoFragment>(), 14);
 			recipe.AddTile(TileID.LunarCraftingStation);
-			recipe.SetResult(this);
 			recipe.Register();
 		}
 	}

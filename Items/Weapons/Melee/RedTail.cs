@@ -42,7 +42,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			recipe.AddIngredient(ItemID.Fireblossom, 10);
 			recipe.AddIngredient(ModContent.ItemType<RobustTusk>());
 			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this);
 			recipe.Register();
 		}
 	}

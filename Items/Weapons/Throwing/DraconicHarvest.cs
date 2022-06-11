@@ -37,7 +37,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(Mod.Find<ModItem>("DoradoFragment").Type, 18);
 			recipe.AddTile(TileID.LunarCraftingStation);
-			recipe.SetResult(this);
 			recipe.Register();
 		}
 	}

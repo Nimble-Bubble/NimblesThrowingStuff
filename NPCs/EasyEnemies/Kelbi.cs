@@ -30,7 +30,7 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
             // AIType = 174;
             // animationType = 174;
             Banner = NPC.type;
-			bannerItem = Mod.Find<ModItem>("KelbiBannerItem").Type;
+			BannerItem = Mod.Find<ModItem>("KelbiBannerItem").Type;
         }
         public override void AI()
         {
@@ -114,10 +114,10 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
             if (NPC.life <= 0)
             {
 
-                Gore.NewGore(NPC.position, NPC.velocity, Mod.GetGoreSlot("Gores/KelbiHead"), 1f);
+                Gore.NewGore(NPC.position, NPC.velocity, Mod.Find<ModGore>("Gores/KelbiHead").Type, 1f);
                 for (int index = 0; index < 4; index++)
                 {
-                    Gore.NewGore(NPC.position, NPC.velocity, Mod.GetGoreSlot("Gores/KelbiLeg"), 1f);
+                    Gore.NewGore(NPC.position, NPC.velocity, Mod.Find<ModGore>("Gores/KelbiLeg").Type, 1f);
                 }
             }
         }

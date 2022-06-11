@@ -36,7 +36,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
             recipe.AddIngredient(548, 5);
             recipe.AddIngredient(549, 5);
 			recipe.AddTile(TileID.MythrilAnvil);
-			recipe.SetResult(this);
 			recipe.Register();
 		}
 	}

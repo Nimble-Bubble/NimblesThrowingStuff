@@ -42,7 +42,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			recipe.AddIngredient(ItemID.Stinger, 3);
 			recipe.AddIngredient(ModContent.ItemType<RobustTusk>());
 			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this);
 			recipe.Register();
 		}
 	}

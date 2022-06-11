@@ -51,7 +51,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
             NPC.aiStyle = -1;
             NPC.HitSound = SoundID.NPCHit3;
             NPC.DeathSound = SoundID.NPCDeath3;
-            music = MusicID.Boss4;
+            Music = MusicID.Boss4;
             NPC.buffImmune[31] = true;
             bossBag = ModContent.ItemType<MorilusTreasureBag>();
             NPC.scale = 1.3f;
@@ -359,7 +359,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
         }
         public override void OnKill()
         {
-            Gore.NewGore(NPC.position, NPC.velocity, Mod.GetGoreSlot("Gores/MorilusGore1"), 1f);
+            Gore.NewGore(NPC.position, NPC.velocity, Mod.Find<ModGore>("Gores/MorilusGore1").Type, 1f);
             if (!NimblesWorld.downedMorilus)
             {
                 Utilities.SpawnOre(ModContent.TileType<ProcellariteOreTile>(), 15E-05, .8f, .999f);

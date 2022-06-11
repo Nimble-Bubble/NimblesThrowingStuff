@@ -20,8 +20,8 @@ namespace NimblesThrowingStuff.Tiles.Blocks
             ModTranslation name = CreateMapEntryName();
             name.SetDefault("Procellarite Bar");
             AddMapEntry(new Color(0, 200, 185), name);
-            mineResist = 2f;
-            minPick = 210;
+            MineResist = 2f;
+            MinPick = 210;
             soundType = 21;
         }
 

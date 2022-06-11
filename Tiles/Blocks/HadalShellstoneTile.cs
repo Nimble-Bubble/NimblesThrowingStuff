@@ -18,8 +18,8 @@ namespace NimblesThrowingStuff.Tiles.Blocks
             ModTranslation name = CreateMapEntryName();
             name.SetDefault("Deep Shellstone");
             AddMapEntry(new Color(8, 72, 107), name);
-            mineResist = 2f;
-            minPick = 50;
+            MineResist = 2f;
+            MinPick = 50;
             DustType = 42;
             soundType = 21;
             soundStyle = 1;

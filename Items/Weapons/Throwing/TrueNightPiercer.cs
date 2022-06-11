@@ -39,7 +39,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 			recipe.AddIngredient(Mod.Find<ModItem>("NightPiercer").Type);
             recipe.AddIngredient(1570);
 			recipe.AddTile(TileID.MythrilAnvil);
-			recipe.SetResult(this);
 			recipe.Register();
 		}
 	}

@@ -47,7 +47,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Summoning
 			recipe.AddIngredient(331, 12); //modded materials
 			recipe.AddIngredient(209, 8);
 			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this);
 			recipe.Register();
 		}
 	}

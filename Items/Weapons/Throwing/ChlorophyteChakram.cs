@@ -33,7 +33,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.ChlorophyteBar, 12);
 			recipe.AddTile(TileID.MythrilAnvil);
-			recipe.SetResult(this);
 			recipe.Register();
 		}
 	}

@@ -50,7 +50,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.FragmentSolar, 18);
 			recipe.AddTile(TileID.LunarCraftingStation);
-			recipe.SetResult(this);
 			recipe.Register();
 		}
 	}

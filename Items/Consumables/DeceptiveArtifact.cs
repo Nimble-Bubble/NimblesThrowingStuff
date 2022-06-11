@@ -58,7 +58,6 @@ namespace NimblesThrowingStuff.Items.Consumables
 			recipe.AddIngredient(575, 6);
             recipe.AddIngredient(824, 250);
 			recipe.AddTile(TileID.LunarCraftingStation);
-			recipe.SetResult(this);
 			recipe.Register();
 		}
 	}

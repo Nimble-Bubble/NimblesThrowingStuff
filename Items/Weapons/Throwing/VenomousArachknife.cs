@@ -38,7 +38,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 			recipe.AddIngredient(Mod.Find<ModItem>("Arachknife").Type);
             recipe.AddIngredient(1006, 12);
 			recipe.AddTile(TileID.MythrilAnvil);
-			recipe.SetResult(this);
 			recipe.Register();
 		}
 	}

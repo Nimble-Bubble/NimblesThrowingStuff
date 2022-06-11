@@ -49,7 +49,6 @@ namespace NimblesThrowingStuff.Items.Accessories.Shields
             Recipe recipe = CreateRecipe();
             recipe.AddRecipeGroup(RecipeGroupID.IronBar, 10);
             recipe.AddTile(TileID.Anvils);
-            recipe.SetResult(this);
             recipe.Register();
         }
     }

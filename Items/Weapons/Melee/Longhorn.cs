@@ -38,7 +38,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			recipe.AddIngredient(ItemID.Wood, 20);
 			recipe.AddIngredient(ModContent.ItemType<BeastBone>(), 5);
 			recipe.AddTile(TileID.WorkBenches);
-			recipe.SetResult(this);
 			recipe.Register();
 		}
 	}

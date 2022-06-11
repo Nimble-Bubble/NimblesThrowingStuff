@@ -34,7 +34,6 @@ namespace NimblesThrowingStuff.Items.Tools
 			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.MeteoriteBar, 20);
 			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this);
 			recipe.Register();
 		}
 	}

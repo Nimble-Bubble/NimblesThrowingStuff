@@ -41,28 +41,24 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			recipe.AddIngredient(ItemID.Leather, 3);
 			recipe.AddIngredient(ModContent.ItemType<Longhorn>());
 			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this);
 			recipe.Register();
 			recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.Vertebrae, 10);
 			recipe.AddIngredient(ItemID.Leather, 3);
 			recipe.AddIngredient(ModContent.ItemType<Longhorn>());
 			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this);
 			recipe.Register();
 			recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.ShadowScale, 10);
 			recipe.AddIngredient(ItemID.Leather, 5);
 			recipe.AddIngredient(ModContent.ItemType<BeastBone>(), 10);
 			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this);
 			recipe.Register();
 			recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.TissueSample, 10);
 			recipe.AddIngredient(ItemID.Leather, 5);
 			recipe.AddIngredient(ModContent.ItemType<BeastBone>(), 10);
 			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this);
 			recipe.Register();
 		}
 	}

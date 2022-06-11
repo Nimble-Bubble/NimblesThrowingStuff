@@ -37,7 +37,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(Mod.Find<ModItem>("FestiveCloth").Type, 8);
 			recipe.AddTile(TileID.MythrilAnvil);
-			recipe.SetResult(this);
 			recipe.Register();
 		}
 	}

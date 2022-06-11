@@ -35,7 +35,6 @@ namespace NimblesThrowingStuff.Items.Accessories
             recipe.AddIngredient(ItemID.MeteoriteBar, 20);
             recipe.AddIngredient(ItemID.Lens, 3);
             recipe.AddTile(TileID.Anvils);
-            recipe.SetResult(this);
             recipe.Register();
         }
     }

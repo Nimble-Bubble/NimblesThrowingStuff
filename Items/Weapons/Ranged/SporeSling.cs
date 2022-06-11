@@ -50,7 +50,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 			recipe.AddIngredient(ItemID.Stinger, 12);
             recipe.AddIngredient(ItemID.Vine, 2);
 			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this);
 			recipe.Register();
 		}
 	}

@@ -33,13 +33,11 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 			recipe.AddIngredient(2161, 1);
             recipe.AddIngredient(1198, 13);
 			recipe.AddTile(TileID.MythrilAnvil);
-			recipe.SetResult(this);
 			recipe.Register();
             recipe = CreateRecipe();
 			recipe.AddIngredient(2161, 1);
             recipe.AddIngredient(391, 12);
 			recipe.AddTile(TileID.MythrilAnvil);
-			recipe.SetResult(this);
 			recipe.Register();
 		}
 	}

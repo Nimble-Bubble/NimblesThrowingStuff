@@ -4,6 +4,7 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.ObjectData;
+using Terraria.DataStructures;
  
 namespace NimblesThrowingStuff.Tiles.Banners
 {
@@ -28,7 +29,7 @@ namespace NimblesThrowingStuff.Tiles.Banners
  
         public override void KillMultiTile(int i, int j, int frameX, int frameY)
         {
-            Item.NewItem(i * 16, j * 16, 16, 48, Mod.Find<ModItem>("KelbiBannerItem").Type);
+            Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 48, Mod.Find<ModItem>("KelbiBannerItem").Type);
         }
  
         public override void NearbyEffects(int i, int j, bool closer)   

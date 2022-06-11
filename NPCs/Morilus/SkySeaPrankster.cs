@@ -33,7 +33,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
 		}
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
 		{
-			if (NPC.downedMoonlord && spawnInfo.player.ZoneSkyHeight)
+			if (NPC.downedMoonlord && spawnInfo.Player.ZoneSkyHeight)
 			{
 				return 0.35f;
 			}

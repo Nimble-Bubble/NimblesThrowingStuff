@@ -44,7 +44,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			recipe.AddIngredient(ItemID.HellstoneBar, 15);
 			recipe.AddIngredient(ItemID.Bone, 25);
 			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this);
 			recipe.Register();
 		}
 	}

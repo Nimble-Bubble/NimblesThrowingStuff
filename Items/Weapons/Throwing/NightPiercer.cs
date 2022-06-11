@@ -41,7 +41,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
             recipe.AddIngredient(Mod.Find<ModItem>("BrimstoneBomb").Type);
             recipe.AddIngredient(Mod.Find<ModItem>("Skelespear").Type);
 			recipe.AddTile(TileID.DemonAltar);
-			recipe.SetResult(this);
 			recipe.Register();
             recipe = CreateRecipe();
 			recipe.AddIngredient(Mod.Find<ModItem>("ViciousHarvest").Type);
@@ -49,7 +48,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
             recipe.AddIngredient(Mod.Find<ModItem>("BrimstoneBomb").Type);
             recipe.AddIngredient(Mod.Find<ModItem>("Skelespear").Type);
 			recipe.AddTile(TileID.DemonAltar);
-			recipe.SetResult(this);
 			recipe.Register();
 		}
 	}

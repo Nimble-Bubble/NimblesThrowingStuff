@@ -38,7 +38,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Magic
 			recipe.AddIngredient(331, 12);
             recipe.AddIngredient(209, 12);
 			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this);
 			recipe.Register();
 		}
 	}

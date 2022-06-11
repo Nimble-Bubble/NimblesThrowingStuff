@@ -39,12 +39,12 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
             NPC.onFire = false;
             NPC.noGravity = true;
             NPC.aiStyle = -1;
-            NPC.HitSound = Mod.GetLegacySoundSlot(SoundType.NPCHit, "Sounds/NPCHit/SmallRathHurt");
-            NPC.DeathSound = Mod.GetLegacySoundSlot(SoundType.NPCKilled, "Sounds/NPCKilled/SmallRathKill");
+            NPC.HitSound = SoundEngine.PlaySound(new SoundStyle("Sounds/NPCHit/SmallRathHurt"));
+            NPC.DeathSound = SoundEngine.PlaySound(new SoundStyle("Sounds/NPCKilled/SmallRathKill"));
             NPC.buffImmune[31] = true;
             NPC.scale = 1.1f;
-            banner = NPC.type;
-            bannerItem = Mod.Find<ModItem>("SmallRathBannerItem").Type;
+            Banner = NPC.type;
+            BannerItem = Mod.Find<ModItem>("SmallRathBannerItem").Type;
         }
         
         public override void AI()
@@ -63,7 +63,7 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
                 float Speed = 8f;
                 int damage = 25;
                 int type = ModContent.ProjectileType<RathFireball>();
-                SoundEngine.PlaySound(Mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/SmallRathFire"));    
+                SoundEngine.PlaySound(new SoundStyle("Sounds/Item/SmallRathFire"));    
                 float rotation = (float)Math.Atan2(vector8.Y - (player.position.Y + (player.height * 0.5f)), vector8.X - (player.position.X + (player.width * 0.5f)));
 
                 if (NPC.velocity.X > 0)
@@ -148,7 +148,7 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
         }
         public override bool CheckDead()
         {
-            Gore.NewGore(NPC.position, NPC.velocity, Mod.GetGoreSlot("Gores/SmallRathHead"), 1f);
+            Gore.NewGore(NPC.position, NPC.velocity, Mod.Find<ModGore>("Gores/SmallRathHead").Type, 1f);
             for (int f = 0; f < 30; f++)
             {
                 int rathDust = Dust.NewDust(new Vector2(NPC.position.X, NPC.position.Y), NPC.width * 2, NPC.height * 2, 6, 0f, 0f, 100, default(Color), 3f);

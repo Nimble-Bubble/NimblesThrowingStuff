@@ -31,15 +31,14 @@ namespace NimblesThrowingStuff.Items.Accessories
             var modPlayer = player.GetModPlayer<NimblesPlayer>();
             modPlayer.miniLocal = true;
         }
-        public override void AddRecipes() 
-        {
-			Recipe recipe = CreateRecipe();
-            recipe.AddIngredient(ItemID.DarkShard);
-            recipe.AddIngredient(ItemID.LightShard);
-            recipe.AddIngredient(ItemID.Silk, 20);
-			recipe.AddTile(TileID.Loom);
-			recipe.SetResult(this);
-			recipe.Register();
-		}
+        //public override void AddRecipes() 
+        //{
+		//	Recipe recipe = CreateRecipe();
+        //    recipe.AddIngredient(ItemID.DarkShard);
+        //    recipe.AddIngredient(ItemID.LightShard);
+        //    recipe.AddIngredient(ItemID.Silk, 20);
+		//	recipe.AddTile(TileID.Loom);
+		//	recipe.Register();
+		//}
     }
 }

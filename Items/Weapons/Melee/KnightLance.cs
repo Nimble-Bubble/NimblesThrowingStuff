@@ -65,25 +65,21 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			recipe.AddIngredient(ModContent.ItemType<GrowlingWyvern>(), 1);
 			recipe.AddIngredient(ItemID.CobaltBar, 12);
 			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this);
 			recipe.Register();
 			recipe = CreateRecipe();
 			recipe.AddIngredient(ModContent.ItemType<GrowlingWyvern>(), 1);
 			recipe.AddIngredient(ItemID.PalladiumBar, 12);
 			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this);
 			recipe.Register();
 			recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.CrystalShard, 10);
 			recipe.AddIngredient(ItemID.CobaltBar, 18);
 			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this);
 			recipe.Register();
 			recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.CrystalShard, 10);
 			recipe.AddIngredient(ItemID.PalladiumBar, 18);
 			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this);
 			recipe.Register();
 		}
 	}

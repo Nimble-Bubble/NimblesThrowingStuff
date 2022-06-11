@@ -38,7 +38,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			recipe.AddIngredient(ItemID.JungleSpores, 12);
             recipe.AddIngredient(ItemID.Stinger, 4);
 			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this);
 			recipe.Register();
 		}
 	}

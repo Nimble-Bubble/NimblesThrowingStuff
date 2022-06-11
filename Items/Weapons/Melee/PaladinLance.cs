@@ -41,21 +41,18 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			recipe.AddIngredient(ItemID.MeteoriteBar, 10);
 			recipe.AddIngredient(ItemID.Sapphire, 5);
 			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this);
 			recipe.Register();
 			recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.MeteoriteBar, 20);
 			recipe.AddIngredient(ItemID.ShadowScale, 5);
 			recipe.AddIngredient(ItemID.Ruby, 5);
 			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this);
 			recipe.Register();
 			recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.MeteoriteBar, 20);
 			recipe.AddIngredient(ItemID.TissueSample, 5);
 			recipe.AddIngredient(ItemID.Ruby, 5);
 			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this);
 			recipe.Register();
 		}
 	}

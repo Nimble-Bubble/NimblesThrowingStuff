@@ -32,7 +32,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 			recipe.AddIngredient(ItemID.PlatinumBar, 8);
 			recipe.AddIngredient(ItemID.Diamond, 8);
 			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this);
 			recipe.Register();
 		}
         public override Vector2? HoldoutOffset()

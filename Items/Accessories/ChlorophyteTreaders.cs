@@ -51,7 +51,6 @@ namespace NimblesThrowingStuff.Items.Accessories
             recipe.AddIngredient(ItemID.ChlorophyteBar, 12);
             recipe.AddIngredient(ItemID.BundleofBalloons);
 			recipe.AddTile(TileID.MythrilAnvil);
-			recipe.SetResult(this);
 			recipe.Register();
 		}
     }

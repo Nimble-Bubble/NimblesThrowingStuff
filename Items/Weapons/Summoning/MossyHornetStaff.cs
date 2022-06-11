@@ -47,7 +47,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Summoning
 			recipe.AddIngredient(1006, 12); //modded materials
 			recipe.AddIngredient(2364, 1);
 			recipe.AddTile(TileID.MythrilAnvil);
-			recipe.SetResult(this);
 			recipe.Register();
 		}
 	}

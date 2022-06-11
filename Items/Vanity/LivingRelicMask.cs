@@ -26,7 +26,6 @@ namespace NimblesThrowingStuff.Items.Vanity
             recipe.AddIngredient(ItemID.FossilOre, 4);
             recipe.AddIngredient(ItemID.Silk, 10);
             recipe.AddTile(TileID.Loom);
-            recipe.SetResult(this);
             recipe.Register();
         }
     }
