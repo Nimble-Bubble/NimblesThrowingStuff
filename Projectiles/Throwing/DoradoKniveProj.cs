@@ -45,7 +45,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 
 		public override void Kill(int timeLeft)
 		{
-			SoundEngine.PlaySound(0, (int)Projectile.position.X, (int)Projectile.position.Y); 
+			SoundEngine.PlaySound(SoundID.Dig, Projectile.position); 
 			Vector2 usePos = Projectile.position; 
 			Vector2 rotVector = (Projectile.rotation - MathHelper.ToRadians(90f)).ToRotationVector2(); 
 			usePos += rotVector * 16f;

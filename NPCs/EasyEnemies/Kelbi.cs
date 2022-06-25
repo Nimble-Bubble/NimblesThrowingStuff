@@ -5,6 +5,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using NimblesThrowingStuff;
+using Terraria.ModLoader.Utilities;
 
 namespace NimblesThrowingStuff.NPCs.EasyEnemies
 {

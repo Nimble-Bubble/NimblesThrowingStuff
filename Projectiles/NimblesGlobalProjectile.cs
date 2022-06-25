@@ -23,21 +23,21 @@ namespace NimblesThrowingStuff.Items
         public override void OnHitNPC(Projectile projectile, NPC target, int damage, float knockback, bool crit)
         {
             Player player = Main.player[projectile.owner];
-            if (crit && player.GetModPlayer<NimblesPlayer>().sacredWrist && projectile.thrown && projectile.type != 92 && !projectile.npcProj)
+            if (crit && player.GetModPlayer<NimblesPlayer>().sacredWrist && projectile.CountsAsClass(DamageClass.Throwing) && projectile.type != 92 && !projectile.npcProj)
             {
                 int star = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y - 250, 0, 20,
                             92, projectile.damage / 2, 1f, projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
-                Main.projectile[star].thrown = true;
-                Main.projectile[star].ranged = false;
+                Main.projectile[star].DamageType = DamageClass.Throwing;
+                Main.projectile[star].ranged = false/* tModPorter Suggestion: Remove. See Item.DamageType */;
                 Main.projectile[star].usesLocalNPCImmunity = true;
             Main.projectile[star].localNPCHitCooldown = 10;
             }
-            if (crit == true && player.GetModPlayer<NimblesPlayer>().thrownHeal && projectile.thrown && Main.rand.NextBool(10) && !projectile.npcProj)
+            if (crit == true && player.GetModPlayer<NimblesPlayer>().thrownHeal && projectile.CountsAsClass(DamageClass.Throwing) && Main.rand.NextBool(10) && !projectile.npcProj)
             {
                 player.HealEffect(damage / 100);
                 player.statLife += damage / 100;
             }
-            if (player.GetModPlayer<NimblesPlayer>().chloroThrow && projectile.thrown && !projectile.npcProj)
+            if (player.GetModPlayer<NimblesPlayer>().chloroThrow && projectile.CountsAsClass(DamageClass.Throwing) && !projectile.npcProj)
             {
                 target.AddBuff(70, 300);
                 target.AddBuff(20, 300);

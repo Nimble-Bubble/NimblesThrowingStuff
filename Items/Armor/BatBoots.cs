@@ -38,23 +38,21 @@ namespace NimblesThrowingStuff.Items.Armor
         public override void UpdateArmorSet(Player player)
         {
             player.setBonus = "10% increased minion damage and knockback";
-            player.minionDamage += 0.1f;
-            player.minionKB += 0.1f;
+            player.GetDamage(DamageClass.Summon) += 0.1f;
+            player.GetKnockback(DamageClass.Summon).Base += 0.1f;
         }
         public override void AddRecipes()
         {
-            ModRecipe r = new ModRecipe(Mod);
+            Recipe r = CreateRecipe();
             r.AddIngredient(19, 12);
             r.AddIngredient(ModContent.ItemType<BatFlesh>(), 9);
             r.AddTile(16);
-            r.SetResult(this);
-            r.AddRecipe();
-            r = new ModRecipe(Mod);
+            r.Register();
+            r = CreateRecipe();
             r.AddIngredient(706, 12);
             r.AddIngredient(ModContent.ItemType<BatFlesh>(), 9);
             r.AddTile(16);
-            r.SetResult(this);
-            r.AddRecipe();
+            r.Register();
         }
     }
 }

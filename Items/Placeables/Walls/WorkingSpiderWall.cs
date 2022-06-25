@@ -29,15 +29,13 @@ namespace NimblesThrowingStuff.Items.Placeables.Walls
 
 		public override void AddRecipes() 
 		{
-			Recipe recipe = CreateRecipe();
+			Recipe recipe = CreateRecipe(this.Type, 4);
 			recipe.AddIngredient(150, 1);
 			recipe.AddTile(TileID.WorkBenches);
-			recipe.SetResult(this, 4);
 			recipe.Register();
-            recipe = CreateRecipe();
+            recipe = CreateRecipe(150, 1);
 			recipe.AddIngredient(this, 4);
 			recipe.AddTile(TileID.WorkBenches);
-			recipe.SetResult(150, 1);
 			recipe.Register();
 		}
 	}

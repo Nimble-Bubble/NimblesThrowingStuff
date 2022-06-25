@@ -94,7 +94,7 @@ namespace NimblesThrowingStuff
                 //    damage = 0;
                 //}
                 quiet = true;
-                SoundEngine.PlaySound(Mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/GuardMetalMedium"));
+                SoundEngine.PlaySound(new SoundStyle("Sounds/Item/GuardMetalMedium"));
             }
         }
         public override void PostHurt(bool pvp, bool quiet, double damage, int hitDirection, bool crit) {
@@ -114,15 +114,15 @@ namespace NimblesThrowingStuff
         {
             float speed = base.UseTimeMultiplier(item);
 
-            if (item.thrown)
+            if (item.CountsAsClass(DamageClass.Throwing))
             {
                 speed *= thrownSpeed;
             }
-            if (item.ranged)
+            if (item.CountsAsClass(DamageClass.Ranged))
             {
                 speed *= rangedSpeed;
             }
-            if (item.magic || item.summon)
+            if (item.CountsAsClass(DamageClass.Magic) || item.CountsAsClass(DamageClass.Summon))
             {
                 speed *= magicSpeed;
             }
@@ -133,15 +133,15 @@ namespace NimblesThrowingStuff
         {
             float speed = base.UseSpeedMultiplier(item);
 
-            if (item.thrown)
+            if (item.CountsAsClass(DamageClass.Throwing))
             {
                 speed *= thrownSpeed;
             }
-            if (item.ranged)
+            if (item.CountsAsClass(DamageClass.Ranged))
             {
                 speed *= rangedSpeed;
             }
-            if (item.magic || item.summon)
+            if (item.CountsAsClass(DamageClass.Magic) || item.CountsAsClass(DamageClass.Summon))
             {
                 speed *= magicSpeed;
             }

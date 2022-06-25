@@ -27,7 +27,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
         }
         public override void Kill(int timeLeft) 
         {
-            SoundEngine.PlaySound(0, (int) Projectile.position.X, (int) Projectile.position.Y, 1, 1f, 0.0f);
+            SoundEngine.PlaySound(SoundID.Dig, Projectile.position);
                     for (int index = 0; index < 10; index++)
                         Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 84,
                             Projectile.velocity.X * 0.1f, Projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);

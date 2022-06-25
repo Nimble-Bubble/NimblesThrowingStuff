@@ -34,22 +34,21 @@ namespace NimblesThrowingStuff.Items.Armor
         public override void UpdateArmorSet(Player player)
         {
             player.setBonus = "33% chance to not consume weapons";
-            player.thrownCost33 = true;
+            player.ThrownCost33 = true;
         }
         public override void UpdateEquip(Player player)
         {
-            player.thrownDamage += 0.24f;
-            player.thrownCrit += 8;
+            player.GetDamage(DamageClass.Throwing) += 0.24f;
+            player.GetCritChance(DamageClass.Throwing) += 8;
         }
 
 
         public override void AddRecipes()
         {
-            ModRecipe r = new ModRecipe(Mod);
+            Recipe r = CreateRecipe();
             r.AddIngredient(391, 12);
             r.AddTile(134);
-            r.SetResult(this);
-            r.AddRecipe();
+            r.Register();
         }
     }
 }

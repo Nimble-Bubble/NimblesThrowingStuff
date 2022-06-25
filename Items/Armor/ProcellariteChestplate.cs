@@ -31,10 +31,10 @@ namespace NimblesThrowingStuff.Items.Armor
         {
             var modPlayer = player.GetModPlayer<NimblesPlayer>();
             player.GetDamage(DamageClass.Generic) += 0.1f;
-            player.meleeCrit += 10;
-            player.rangedCrit += 10;
-            player.magicCrit += 10;
-            player.thrownCrit += 10;
+            player.GetCritChance(DamageClass.Generic) += 10;
+            player.GetCritChance(DamageClass.Ranged) += 10;
+            player.GetCritChance(DamageClass.Magic) += 10;
+            player.GetCritChance(DamageClass.Throwing) += 10;
             player.statLifeMax2 += 100;
         }
 
@@ -44,7 +44,7 @@ namespace NimblesThrowingStuff.Items.Armor
             Recipe r = CreateRecipe();
             r.AddIngredient(ModContent.ItemType<ProcellariteBar>(), 24);
             r.AddTile(TileID.LunarCraftingStation);
-            r.AddRecipe();
+            r.Register();
         }
     }
 }

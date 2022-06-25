@@ -41,7 +41,7 @@ namespace NimblesThrowingStuff.Projectiles.Magic
             {
                 int bigMakeLittle = Projectile.NewProjectile(Projectile.position.X, Projectile.position.Y, Main.rand.Next(-10, 11), Main.rand.Next(-10, 11), ProjectileID.FallingStar, Projectile.damage / 4, Projectile.knockBack, Projectile.owner);
                 Main.projectile[bigMakeLittle].friendly = true;
-                Main.projectile[bigMakeLittle].magic = true;
+                Main.projectile[bigMakeLittle].DamageType = DamageClass.Magic;
                 Main.projectile[bigMakeLittle].usesLocalNPCImmunity = true;
                 Main.projectile[bigMakeLittle].localNPCHitCooldown = 10;
                 Main.projectile[bigMakeLittle].timeLeft = 600;

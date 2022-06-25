@@ -29,7 +29,7 @@ namespace NimblesThrowingStuff.Items.Accessories
         {
             var modPlayer = player.GetModPlayer<NimblesPlayer>();
             modPlayer.thrownSpeed += 0.15f;
-            player.thrownVelocity += 0.15f;
+            player.ThrownVelocity += 0.15f;
         }
     }
 }

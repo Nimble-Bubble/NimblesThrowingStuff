@@ -124,7 +124,7 @@ namespace NimblesThrowingStuff.NPCs.Town
 			return score > 800;
 		}
 
-        public override List<string> SetNPCNameList()
+        public override List<string> SetNPCNameList()/* tModPorter Suggestion: Return a list of names */
         {
             return new List<string>() { "Jimmy Bay", "Oliver Raptor", "Andy Wyliei",  "Albert Gorgo" };
                 

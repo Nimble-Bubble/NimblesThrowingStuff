@@ -34,22 +34,21 @@ namespace NimblesThrowingStuff.Items.Armor
         public override void UpdateArmorSet(Player player)
         {
             player.setBonus = "Throwing critical strike chance increased by 10%";
-            player.thrownCrit += 10;
+            player.GetCritChance(DamageClass.Throwing) += 10;
         }
         public override void UpdateEquip(Player player)
         {
-            player.thrownDamage += 0.15f;
-            player.thrownVelocity += 0.15f;
+            player.GetDamage(DamageClass.Throwing) += 0.15f;
+            player.ThrownVelocity += 0.15f;
         }
 
 
         public override void AddRecipes()
         {
-            ModRecipe r = new ModRecipe(Mod);
+            Recipe r = CreateRecipe();
             r.AddIngredient(382, 10);
             r.AddTile(134);
-            r.SetResult(this);
-            r.AddRecipe();
+            r.Register();
         }
     }
 }

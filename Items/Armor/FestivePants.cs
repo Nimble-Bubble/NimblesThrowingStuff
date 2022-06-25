@@ -30,17 +30,16 @@ namespace NimblesThrowingStuff.Items.Armor
         public override void UpdateEquip(Player player)
         {
             player.moveSpeed += 0.25f;
-            player.thrownDamage += 0.3f;
+            player.GetDamage(DamageClass.Throwing) += 0.3f;
         }
 
 
         public override void AddRecipes()
         {
-            ModRecipe r = new ModRecipe(Mod);
+            Recipe r = CreateRecipe();
             r.AddIngredient(ModContent.ItemType<FestiveCloth>(), 18);
             r.AddTile(134);
-            r.SetResult(this);
-            r.AddRecipe();
+            r.Register();
         }
     }
 }

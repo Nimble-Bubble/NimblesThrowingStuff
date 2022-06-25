@@ -35,22 +35,21 @@ namespace NimblesThrowingStuff.Items.Armor
         public override void UpdateArmorSet(Player player)
         {
             player.setBonus = "Increased minion damage, slots, and life regen if you hit enemies";
-            player.minionDamage += 0.11f;
+            player.GetDamage(DamageClass.Summon) += 0.11f;
             player.maxMinions += 1;
             player.onHitRegen = true;
         }
         public override void UpdateEquip(Player player)
         {
-            player.minionDamage += 0.06f;
+            player.GetDamage(DamageClass.Summon) += 0.06f;
             player.maxMinions += 1;
         }
         public override void AddRecipes()
         {
-            ModRecipe r = new ModRecipe(Mod);
+            Recipe r = CreateRecipe();
             r.AddIngredient(1184, 12);
             r.AddTile(16);
-            r.SetResult(this);
-            r.AddRecipe();
+            r.Register();
         }
     }
 }

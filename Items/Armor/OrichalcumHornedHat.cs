@@ -35,13 +35,13 @@ namespace NimblesThrowingStuff.Items.Armor
         {
             player.setBonus = "Increased minion damage and slots, plus some petals";
             player.maxMinions += 1;
-            player.minionDamage += 0.18f;
+            player.GetDamage(DamageClass.Summon) += 0.18f;
             player.onHitPetal = true;
             
         }
         public override void UpdateEquip(Player player)
         {
-            player.minionDamage += 0.08f;
+            player.GetDamage(DamageClass.Summon) += 0.08f;
             player.maxMinions += 1;
         }
         //unfortunately, minions can't crit
@@ -49,11 +49,10 @@ namespace NimblesThrowingStuff.Items.Armor
 
         public override void AddRecipes()
         {
-            ModRecipe r = new ModRecipe(Mod);
+            Recipe r = CreateRecipe();
             r.AddIngredient(1191, 12);
             r.AddTile(134);
-            r.SetResult(this);
-            r.AddRecipe();
+            r.Register();
         }
     }
 }

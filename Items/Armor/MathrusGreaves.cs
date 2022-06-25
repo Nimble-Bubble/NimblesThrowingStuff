@@ -30,18 +30,17 @@ namespace NimblesThrowingStuff.Items.Armor
         public override void UpdateEquip(Player player)
         {
             player.moveSpeed += 0.4f;
-            player.thrownDamage += 0.4f;
+            player.GetDamage(DamageClass.Throwing) += 0.4f;
         }
 
 
         public override void AddRecipes()
         {
-            ModRecipe r = new ModRecipe(Mod);
+            Recipe r = CreateRecipe();
             r.AddIngredient(ModContent.ItemType<DoradoFragment>(), 16);
             r.AddIngredient(3467, 12);
             r.AddTile(TileID.LunarCraftingStation);
-            r.SetResult(this);
-            r.AddRecipe();
+            r.Register();
         }
     }
 }

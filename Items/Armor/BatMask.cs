@@ -28,22 +28,20 @@ namespace NimblesThrowingStuff.Items.Armor
         }
         public override void UpdateEquip(Player player)
         {
-            player.minionDamage += 0.05f;
+            player.GetDamage(DamageClass.Summon) += 0.05f;
         }
         public override void AddRecipes()
         {
-            ModRecipe r = new ModRecipe(Mod);
+            Recipe r = CreateRecipe();
             r.AddIngredient(19, 8);
             r.AddIngredient(ModContent.ItemType<BatFlesh>(), 6);
             r.AddTile(16);
-            r.SetResult(this);
-            r.AddRecipe();
-            r = new ModRecipe(Mod);
+            r.Register();
+            r = CreateRecipe();
             r.AddIngredient(706, 8);
             r.AddIngredient(ModContent.ItemType<BatFlesh>(), 6);
             r.AddTile(16);
-            r.SetResult(this);
-            r.AddRecipe();
+            r.Register();
         }
     }
 }

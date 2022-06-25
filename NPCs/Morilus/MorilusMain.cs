@@ -53,7 +53,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
             NPC.DeathSound = SoundID.NPCDeath3;
             Music = MusicID.Boss4;
             NPC.buffImmune[31] = true;
-            bossBag = ModContent.ItemType<MorilusTreasureBag>();
+            bossBag/* tModPorter Note: Removed. Spawn the treasure bag alongside other loot via npcLoot.Add(ItemDropRule.BossBag(type)) */ = ModContent.ItemType<MorilusTreasureBag>();
             NPC.scale = 1.3f;
         }
         
@@ -101,7 +101,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
                 damage = 120;
                 }
                 int type = ModContent.ProjectileType<MorilusStream>();
-                SoundEngine.PlaySound(2, (int)NPC.position.X, (int)NPC.position.Y, 11);
+                SoundEngine.PlaySound(SoundID.Item11, NPC.position);
                 float rotation = (float)Math.Atan2(vector8.Y - (player.position.Y + (player.height * 0.5f)), vector8.X - (player.position.X + (player.width * 0.5f)));
                 int num54 = Projectile.NewProjectile(vector8.X, vector8.Y, (float)((Math.Cos(rotation) * Speed) * -1), (float)((Math.Sin(rotation) * Speed) * -1), type, damage, 0f, 0);
                 }
@@ -165,7 +165,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
                 damage1 = 100;
                 }
                 int type1 = ModContent.ProjectileType<MorilusBolt>();
-                SoundEngine.PlaySound(2, (int)NPC.position.X, (int)NPC.position.Y, 11);
+                SoundEngine.PlaySound(SoundID.Item11, NPC.position);
                 float rotation1 = (float)Math.Atan2(vector8.Y - (player.position.Y + (player.height * 0.5f)), vector8.X - (player.position.X + (player.width * 0.5f)));
                 for (int spaldaedal = 0; spaldaedal < 15; spaldaedal++)
                 {
@@ -188,7 +188,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
                 Damage2 = 120;
                 }
                 int Type2 = ModContent.ProjectileType<MorilusBolt>();
-                SoundEngine.PlaySound(2, (int)NPC.position.X, (int)NPC.position.Y, 11);
+                SoundEngine.PlaySound(SoundID.Item11, NPC.position);
                 float rotation2 = (float)Math.Atan2(vector8.Y - (player.position.Y + (player.height * 0.5f)), vector8.X - (player.position.X + (player.width * 0.5f)));
                 int num55 = Projectile.NewProjectile(vector8.X, vector8.Y, (float)((Math.Cos(rotation2) * Speed2) * -1), (float)((Math.Sin(rotation2) * Speed2) * -1), Type2, Damage2, 0f, 0);
                 }

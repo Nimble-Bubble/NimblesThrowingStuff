@@ -21,8 +21,7 @@ namespace NimblesThrowingStuff.Tiles.Blocks
             MineResist = 2f;
             MinPick = 50;
             DustType = 42;
-            soundType = 21;
-            soundStyle = 1;
+            HitSound = SoundID.Dig;
         }
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {

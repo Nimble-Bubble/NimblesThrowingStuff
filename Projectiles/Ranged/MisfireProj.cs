@@ -39,7 +39,7 @@ namespace NimblesThrowingStuff.Projectiles.Ranged
                 int fireIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 127, 0f, 0f, 100, default(Color), 3f);
                 Main.dust[fireIndex].velocity *= 4f;
             }
-            SoundEngine.PlaySound(2, (int)Projectile.position.X, (int)Projectile.position.Y, 14, 1f, 0.0f);
+            SoundEngine.PlaySound(SoundID.Item14, Projectile.position);
             Main.player[Projectile.owner].velocity.X -= Projectile.velocity.X * 1;
             Main.player[Projectile.owner].velocity.Y -= Projectile.velocity.Y * 1;
 

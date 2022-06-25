@@ -39,18 +39,17 @@ namespace NimblesThrowingStuff.Items.Armor
         }
         public override void UpdateEquip(Player player)
         {
-            player.minionDamage += 0.5f;
+            player.GetDamage(DamageClass.Summon) += 0.5f;
             player.maxMinions += 4;
         }
 
 
         public override void AddRecipes()
         {
-            ModRecipe r = new ModRecipe(Mod);
+            Recipe r = CreateRecipe();
             r.AddIngredient(ModContent.ItemType<ProcellariteBar>(), 12);
             r.AddTile(TileID.LunarCraftingStation);
-            r.SetResult(this);
-            r.AddRecipe();
+            r.Register();
         }
     }
 }

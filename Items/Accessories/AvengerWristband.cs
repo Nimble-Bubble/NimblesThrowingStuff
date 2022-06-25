@@ -31,8 +31,8 @@ namespace NimblesThrowingStuff.Items.Accessories
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             player.GetModPlayer<NimblesPlayer>().sacredWrist = true;
-            player.thrownVelocity += 0.25f;
-            player.thrownDamage += 0.12f;
+            player.ThrownVelocity += 0.25f;
+            player.GetDamage(DamageClass.Throwing) += 0.12f;
         }
         public override void AddRecipes()
 		{

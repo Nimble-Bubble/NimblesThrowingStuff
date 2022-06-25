@@ -43,22 +43,22 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
          {
            int ble1 = Projectile.NewProjectile(Projectile.Center, Projectile.velocity.RotatedBy(MathHelper.ToRadians(170)),
                             ModContent.ProjectileType<PoseironBubble>(), Projectile.damage / 3, 0.5f, Projectile.owner, 0.0f, (float) 1);
-                Main.projectile[ble1].thrown = true;
-                Main.projectile[ble1].magic = false;
+                Main.projectile[ble1].DamageType = DamageClass.Throwing;
+                Main.projectile[ble1].magic = false/* tModPorter Suggestion: Remove. See Item.DamageType */;
              int ble2 = Projectile.NewProjectile(Projectile.Center, Projectile.velocity.RotatedBy(MathHelper.ToRadians(180)),
                             ModContent.ProjectileType<PoseironBubble>(), Projectile.damage / 3, 0.5f, Projectile.owner, 0.0f, (float) 1);
-                Main.projectile[ble2].thrown = true;
-                Main.projectile[ble2].magic = false;
+                Main.projectile[ble2].DamageType = DamageClass.Throwing;
+                Main.projectile[ble2].magic = false/* tModPorter Suggestion: Remove. See Item.DamageType */;
              int ble3 = Projectile.NewProjectile(Projectile.Center, Projectile.velocity.RotatedBy(MathHelper.ToRadians(190)),
                             ModContent.ProjectileType<PoseironBubble>(), Projectile.damage / 3, 0.5f, Projectile.owner, 0.0f, (float) 1);
-                Main.projectile[ble3].thrown = true;
-                Main.projectile[ble3].magic = false;
+                Main.projectile[ble3].DamageType = DamageClass.Throwing;
+                Main.projectile[ble3].magic = false/* tModPorter Suggestion: Remove. See Item.DamageType */;
              bub = 0;
          }
         }
         public override void Kill(int timeLeft) 
         {
-            SoundEngine.PlaySound(0, (int) Projectile.position.X, (int) Projectile.position.Y, 1, 1f, 0.0f);
+            SoundEngine.PlaySound(SoundID.Dig, Projectile.position);
         }
     }
 }

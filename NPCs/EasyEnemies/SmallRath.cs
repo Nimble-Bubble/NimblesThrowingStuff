@@ -12,6 +12,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using NimblesThrowingStuff.Projectiles.Enemy;
 using NimblesThrowingStuff.Items.Materials;
+using Terraria.ModLoader.Utilities;
 
 namespace NimblesThrowingStuff.NPCs.EasyEnemies
 {

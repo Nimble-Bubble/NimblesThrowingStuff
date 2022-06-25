@@ -36,26 +36,25 @@ namespace NimblesThrowingStuff.Items.Armor
         {
             player.setBonus = "Your throwing damage is increased by 25%, and you emit red light";
             Lighting.AddLight((int)(player.position.X + (float)(player.width / 2)) / 16, (int)(player.position.Y + (float)(player.height / 2)) / 16, 1.5f, 0f, 0f);
-            player.thrownDamage += 0.25f;
+            player.GetDamage(DamageClass.Throwing) += 0.25f;
             player.manaFlower = true;
             var modPlayer = player.GetModPlayer<NimblesPlayer>();
             modPlayer.thrownHeal = true;
         }
         public override void UpdateEquip(Player player)
         {
-            player.thrownVelocity += 0.6f;
+            player.ThrownVelocity += 0.6f;
             player.statManaMax2 += 120;
         }
 
 
         public override void AddRecipes()
         {
-            ModRecipe r = new ModRecipe(Mod);
+            Recipe r = CreateRecipe();
             r.AddIngredient(ModContent.ItemType<DoradoFragment>(), 12);
             r.AddIngredient(3467, 8);
             r.AddTile(TileID.LunarCraftingStation);
-            r.SetResult(this);
-            r.AddRecipe();
+            r.Register();
         }
     }
 }

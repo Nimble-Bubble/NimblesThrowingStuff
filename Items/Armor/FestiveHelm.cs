@@ -36,22 +36,21 @@ namespace NimblesThrowingStuff.Items.Armor
             player.setBonus = "You drop spike balls when hit, and your throwing damage is increased by 20%";
             var modPlayer = player.GetModPlayer<NimblesPlayer>();
             modPlayer.canSanta = true;
-            player.thrownDamage += 0.2f;
+            player.GetDamage(DamageClass.Throwing) += 0.2f;
         }
         public override void UpdateEquip(Player player)
         {
-            player.thrownVelocity += 0.4f;
+            player.ThrownVelocity += 0.4f;
             player.statManaMax2 += 100;
         }
 
 
         public override void AddRecipes()
         {
-            ModRecipe r = new ModRecipe(Mod);
+            Recipe r = CreateRecipe();
             r.AddIngredient(ModContent.ItemType<FestiveCloth>(), 12);
             r.AddTile(134);
-            r.SetResult(this);
-            r.AddRecipe();
+            r.Register();
         }
     }
 }

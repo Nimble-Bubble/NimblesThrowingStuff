@@ -35,12 +35,11 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
         }
         public override void AddRecipes()
         {
-            ModRecipe r = new ModRecipe(Mod);
+            Recipe r = CreateRecipe();
             r.AddIngredient(502, 20);
             r.AddIngredient(520, 5);
             r.AddTile(TileID.MythrilAnvil);
-            r.SetResult(this);
-            r.AddRecipe();
+            r.Register();
         }
 	}
 }

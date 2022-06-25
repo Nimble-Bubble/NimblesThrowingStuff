@@ -22,7 +22,7 @@ namespace NimblesThrowingStuff.Tiles.Blocks
             AddMapEntry(new Color(0, 200, 185), name);
             MineResist = 1.5f;
             MinPick = 65;
-            soundType = 21;
+            HitSound = SoundID.Dig;
         }
 
         public override void NumDust(int i, int j, bool fail, ref int num)

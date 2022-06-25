@@ -31,11 +31,10 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 
 		public override void AddRecipes() 
 		{
-			Recipe recipe = CreateRecipe();
+			Recipe recipe = CreateRecipe(this.Type, 50);
 			recipe.AddIngredient(1332, 1);
             recipe.AddIngredient(Mod.Find<ModItem>("EmptyFlask").Type, 50);
 			recipe.AddTile(TileID.MythrilAnvil);
-			recipe.SetResult(this, 50);
 			recipe.Register();
 		}
 	}

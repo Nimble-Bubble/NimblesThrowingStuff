@@ -39,7 +39,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
                 int fireIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width * 2, Projectile.height * 2, 128, 0f, 0f, 100, default(Color), 3f);
                 Main.dust[fireIndex].velocity *= 4f;
             }
-            SoundEngine.PlaySound(2, (int) Projectile.position.X, (int) Projectile.position.Y, 14, 1f, 0.0f);
+            SoundEngine.PlaySound(SoundID.Item14, Projectile.position);
                     var num = Main.rand.Next(8, 13);
                     for (var index = 0; index < num; ++index)
                     {
@@ -49,7 +49,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
                         vector2 *= (float) Main.rand.Next(10, 201) * 0.025f;
                         int spore = Projectile.NewProjectile(Projectile.Center.X, Projectile.Center.Y, vector2.X, vector2.Y,
                             228, Projectile.damage / 5, 1f, Projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
-                        Main.projectile[spore].thrown = true;
+                        Main.projectile[spore].DamageType = DamageClass.Throwing;
                 Main.projectile[spore].usesLocalNPCImmunity = true;
                 Main.projectile[spore].localNPCHitCooldown = 30;
                 }

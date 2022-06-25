@@ -40,18 +40,17 @@ namespace NimblesThrowingStuff.Items.Armor
         }
         public override void UpdateEquip(Player player)
         {
-            player.thrownDamage += 0.3f;
-            player.thrownCrit += 30;
+            player.GetDamage(DamageClass.Throwing) += 0.3f;
+            player.GetCritChance(DamageClass.Throwing) += 30;
         }
 
 
         public override void AddRecipes()
         {
-            ModRecipe r = new ModRecipe(Mod);
+            Recipe r = CreateRecipe();
             r.AddIngredient(ModContent.ItemType<ProcellariteBar>(), 12);
             r.AddTile(TileID.LunarCraftingStation);
-            r.SetResult(this);
-            r.AddRecipe();
+            r.Register();
         }
     }
 }

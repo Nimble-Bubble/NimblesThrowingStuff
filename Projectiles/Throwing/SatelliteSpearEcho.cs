@@ -52,7 +52,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
              Projectile.Center = Projectile.position;
             
             Projectile.aiStyle = 16;
-            SoundEngine.PlaySound(2, (int) Projectile.position.X, (int) Projectile.position.Y, 14, 1f, 0.0f);
+            SoundEngine.PlaySound(SoundID.Item14, Projectile.position);
             for (int s = 0; s < 10; s++) {
 				int smokeIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 31, 0f, 0f, 100, default(Color), 2f);
 				Main.dust[smokeIndex].velocity *= 1.4f;

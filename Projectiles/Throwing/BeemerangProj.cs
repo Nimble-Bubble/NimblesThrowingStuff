@@ -31,13 +31,13 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
                 {
                     int stronkbees = Projectile.NewProjectile(Projectile.position.X, Projectile.position.Y, Projectile.velocity.X, Projectile.velocity.Y,
                             566, Projectile.damage / 2, 4f, Projectile.owner, 0.0f, 0.0f); 
-                    Main.projectile[stronkbees].thrown = true;
+                    Main.projectile[stronkbees].DamageType = DamageClass.Throwing;
                 Main.projectile[stronkbees].usesLocalNPCImmunity = true;
             Main.projectile[stronkbees].localNPCHitCooldown = 10;
                 }
              int weakbees = Projectile.NewProjectile(Projectile.position.X, Projectile.position.Y, Projectile.velocity.X / 2, Projectile.velocity.Y / 2,
                             181, Projectile.damage / 3, 2f, Projectile.owner, 0.0f, 0.0f);   
-                Main.projectile[weakbees].thrown = true;
+                Main.projectile[weakbees].DamageType = DamageClass.Throwing;
                 Main.projectile[weakbees].usesLocalNPCImmunity = true;
             Main.projectile[weakbees].localNPCHitCooldown = 10;
         }

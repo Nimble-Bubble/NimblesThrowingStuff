@@ -34,23 +34,22 @@ namespace NimblesThrowingStuff.Items.Armor
         public override void UpdateArmorSet(Player player)
         {
             player.setBonus = "Damage reduction and melee speed increased by 25%";
-            player.meleeSpeed += 0.25f;
+            player.GetAttackSpeed(DamageClass.Melee) += 0.25f;
             player.endurance += 0.25f;
         }
         public override void UpdateEquip(Player player)
         {
              player.GetDamage(DamageClass.Melee) += 0.3f;
-            player.meleeCrit += 30;
+            player.GetCritChance(DamageClass.Generic) += 30;
         }
 
 
         public override void AddRecipes()
         {
-            ModRecipe r = new ModRecipe(Mod);
+            Recipe r = CreateRecipe();
             r.AddIngredient(ModContent.ItemType<ProcellariteBar>(), 12);
             r.AddTile(TileID.LunarCraftingStation);
-            r.SetResult(this);
-            r.AddRecipe();
+            r.Register();
         }
     }
 }

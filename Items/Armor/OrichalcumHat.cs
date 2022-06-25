@@ -35,22 +35,21 @@ namespace NimblesThrowingStuff.Items.Armor
         {
             player.setBonus = "Attacks spawn petals from the sides of the screen";
             player.onHitPetal = true;
-            player.thrownVelocity += 0.25f;
+            player.ThrownVelocity += 0.25f;
         }
         public override void UpdateEquip(Player player)
         {
-            player.thrownDamage += 0.08f;
-            player.thrownCrit += 15;
+            player.GetDamage(DamageClass.Throwing) += 0.08f;
+            player.GetCritChance(DamageClass.Throwing) += 15;
         }
 
 
         public override void AddRecipes()
         {
-            ModRecipe r = new ModRecipe(Mod);
+            Recipe r = CreateRecipe();
             r.AddIngredient(1191, 12);
             r.AddTile(134);
-            r.SetResult(this);
-            r.AddRecipe();
+            r.Register();
         }
     }
 }

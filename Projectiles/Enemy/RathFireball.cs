@@ -20,7 +20,6 @@ namespace NimblesThrowingStuff.Projectiles.Enemy
             Projectile.height = 16;
             Projectile.aiStyle = 8;
             Projectile.hostile = true;
-            Projectile.magic = false;
             Projectile.maxPenetrate = 2;
             Projectile.light = 1f;
             Projectile.timeLeft = 300;

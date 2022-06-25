@@ -31,17 +31,16 @@ namespace NimblesThrowingStuff.Items.Armor
         {
             var modPlayer = player.GetModPlayer<NimblesPlayer>();
             modPlayer.thrownSpeed += 0.15f;
-            player.thrownCrit += 20;
+            player.GetCritChance(DamageClass.Throwing) += 20;
         }
 
 
         public override void AddRecipes()
         {
-            ModRecipe r = new ModRecipe(Mod);
+            Recipe r = CreateRecipe();
             r.AddIngredient(ModContent.ItemType<FestiveCloth>(), 24);
             r.AddTile(134);
-            r.SetResult(this);
-            r.AddRecipe();
+            r.Register();
         }
     }
 }

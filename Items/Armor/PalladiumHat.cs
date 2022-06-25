@@ -38,18 +38,17 @@ namespace NimblesThrowingStuff.Items.Armor
         }
         public override void UpdateEquip(Player player)
         {
-            player.thrownDamage += 0.13f;
-            player.thrownCrit += 6;
+            player.GetDamage(DamageClass.Throwing) += 0.13f;
+            player.GetCritChance(DamageClass.Throwing) += 6;
         }
 
 
         public override void AddRecipes()
         {
-            ModRecipe r = new ModRecipe(Mod);
+            Recipe r = CreateRecipe();
             r.AddIngredient(1184, 12);
             r.AddTile(16);
-            r.SetResult(this);
-            r.AddRecipe();
+            r.Register();
         }
     }
 }

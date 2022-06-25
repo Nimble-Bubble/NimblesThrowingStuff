@@ -24,11 +24,10 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 		}
         public override void AddRecipes() 
 		{
-			Recipe recipe = CreateRecipe();
+			Recipe recipe = CreateRecipe(this.Type, 5);
 			recipe.AddIngredient(40, 5);
             recipe.AddIngredient(1330);
 			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this, 5);
 			recipe.Register();
 		}
 	}

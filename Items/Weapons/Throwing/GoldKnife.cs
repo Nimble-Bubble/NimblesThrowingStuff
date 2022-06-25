@@ -31,10 +31,9 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 
 		public override void AddRecipes() 
 		{
-			Recipe recipe = CreateRecipe();
+			Recipe recipe = CreateRecipe(this.Type, 50);
 			recipe.AddIngredient(ItemID.GoldBar, 1);
 			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this, 50);
 			recipe.Register();
 		}
 	}

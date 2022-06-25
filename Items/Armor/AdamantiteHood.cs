@@ -34,22 +34,21 @@ namespace NimblesThrowingStuff.Items.Armor
         {
             player.setBonus = "Increased minion damage and slots";
             player.maxMinions += 1;
-            player.minionDamage += 0.13f;
+            player.GetDamage(DamageClass.Summon) += 0.13f;
         }
         public override void UpdateEquip(Player player)
         {
-            player.minionDamage += 0.09f;
+            player.GetDamage(DamageClass.Summon) += 0.09f;
             player.maxMinions += 1;
         }
 
 
         public override void AddRecipes()
         {
-            ModRecipe r = new ModRecipe(Mod);
+            Recipe r = CreateRecipe();
             r.AddIngredient(ItemID.AdamantiteBar, 12);
             r.AddTile(134);
-            r.SetResult(this);
-            r.AddRecipe();
+            r.Register();
         }
     }
 }

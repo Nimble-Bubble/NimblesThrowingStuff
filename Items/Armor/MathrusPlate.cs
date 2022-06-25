@@ -31,18 +31,17 @@ namespace NimblesThrowingStuff.Items.Armor
         {
             var modPlayer = player.GetModPlayer<NimblesPlayer>();
             modPlayer.thrownSpeed += 0.2f;
-            player.thrownCrit += 25;
+            player.GetCritChance(DamageClass.Throwing) += 25;
         }
 
 
         public override void AddRecipes()
         {
-            ModRecipe r = new ModRecipe(Mod);
+            Recipe r = CreateRecipe();
             r.AddIngredient(ModContent.ItemType<DoradoFragment>(), 20);
             r.AddIngredient(3467, 16);
             r.AddTile(TileID.LunarCraftingStation);
-            r.SetResult(this);
-            r.AddRecipe();
+            r.Register();
         }
     }
 }

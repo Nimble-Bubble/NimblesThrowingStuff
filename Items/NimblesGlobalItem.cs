@@ -29,7 +29,7 @@ namespace NimblesThrowingStuff.Items
 		}
         public override bool CanRightClick(Item item)
         {
-            if (item.ranged && Main.player[item.playerIndexTheItemIsReservedFor].GetModPlayer<NimblesPlayer>().rangeMisfire)
+            if (item.CountsAsClass(DamageClass.Ranged) && Main.player[item.playerIndexTheItemIsReservedFor].GetModPlayer<NimblesPlayer>().rangeMisfire)
             {
                 return true;
             }

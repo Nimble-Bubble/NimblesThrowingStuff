@@ -30,7 +30,7 @@ namespace NimblesThrowingStuff.Items.Accessories
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             player.GetModPlayer<NimblesPlayer>().sacredWrist = true;
-            player.thrownVelocity += 0.25f;
+            player.ThrownVelocity += 0.25f;
         }
     }
 }
