@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
 using Terraria;
+using Terraria.GameContent.Personalities;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
@@ -38,7 +39,7 @@ namespace NimblesThrowingStuff.NPCs.Town
 			NPCID.Sets.HatOffsetY[NPC.type] = -2000000;
             NPC.Happiness
                 .SetBiomeAffection<DesertBiome>(AffectionLevel.Love)
-                .SetBiomeAffection<SnowBiome>(AffectionLevel.Hate)
+                .SetBiomeAffection<SnowBiome>(AffectionLevel.Dislike)
                 ;
 		}
 
@@ -126,7 +127,12 @@ namespace NimblesThrowingStuff.NPCs.Town
 
         public override List<string> SetNPCNameList()/* tModPorter Suggestion: Return a list of names */
         {
-            return new List<string>() { "Jimmy Bay", "Oliver Raptor", "Andy Wyliei",  "Albert Gorgo" };
+            return new List<string>() { 
+                "Jimmy Bay", 
+                "Oliver Raptor", 
+                "Andy Wyliei",  
+                "Albert Gorgo" 
+            };
                 
 		}
         public override bool? CanBeHitByProjectile(Projectile projectile)
@@ -202,6 +208,10 @@ namespace NimblesThrowingStuff.NPCs.Town
                 {
                     return "I'm not exactly sure where I'm going to put all these weapons.";
                 }
+            }
+            if (BirthdayParty.PartyIsUp && Main.rand.Next(4))
+            {
+                return "I'm not really sure how to celebrate this kind of thing...";
             }
             switch (Main.rand.Next(6))
             {
