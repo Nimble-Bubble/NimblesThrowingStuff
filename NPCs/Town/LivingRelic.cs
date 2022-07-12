@@ -62,14 +62,7 @@ namespace NimblesThrowingStuff.NPCs.Town
         {
             return NPC.downedBoss1;
         }
-        public override bool? CanHitNPC(NPC target)
-        {
-            if (target.type == NPCID.ChatteringTeethBomb)
-            {
-                return false;
-            }
-            return base.CanHitNPC(target);
-        }
+
         public override void PostAI()
         {
             int xl = (int)((NPC.position.X - 2) / 16f);
@@ -118,13 +111,6 @@ namespace NimblesThrowingStuff.NPCs.Town
                 NPC.velocity.X += NPC.direction * 0.095f;
             }
         }
-        public override bool CheckConditions(int left, int right, int top, int bottom)
-		{
-			int score = 900;
-            
-			return score > 800;
-		}
-
         public override List<string> SetNPCNameList()/* tModPorter Suggestion: Return a list of names */
         {
             return new List<string>() { 
@@ -147,19 +133,20 @@ namespace NimblesThrowingStuff.NPCs.Town
         {
             if (Main.eclipse)
             {
-                return new List<string>() { "Staying inside would probably help.", "Are those 'Deaf Grapes' guys filming a video?", "Another eclipse? Really?" };
+                switch (Main.rand.Next(3)) { case 0: return "Staying inside would probably help."; case 1: return "Are those 'Deaf Grapes' guys filming a video?"; case 2: return "Another eclipse? Really?"; }
             }
             if (Main.bloodMoon)
             {
                 if (Main.raining && Main.rand.Next(4) == 0 && NPC.position.Y / 16 <= Main.worldSurface)
                 {
-                    return new List<string>() { "So the moon is guilty of something..." };
+                    return "So the moon is guilty of something...";
                 }
                 else
                 {
-                    return new List<string>() { "Why is everybody so mad? Did you higher primates evolve to get angry at a lunar eclipse?",
-                         "I think the moon is guilty of something.",
-                        "I fear what the future might bring..." };
+                    switch (Main.rand.Next(3)) {
+                        case 0: return "Why is everybody so mad? Did you higher primates evolve to get angry at a lunar eclipse?";
+                        case 1: return "I think the moon is guilty of something.";
+                        case 2: return "I fear what the future might bring..."; }
                 }
             }
             else if (Main.LocalPlayer.ZoneSnow)

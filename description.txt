@@ -13,8 +13,4 @@ Mert - Programmer, Conceptualizer
 Fefo - Tester, Conceptualizer
 Aura - Conceptualizer
 
-One last thing: If you are seeing this mod (and this last part) on the Mod Browser for 1.3, note that this version is basically just what we had completed before 1.4 became the main version and not a beta. 
-This update of the mod isn't exactly finished, but it may at least show a noticeable improvement over 0.2.3 or 0.2.x in general.
-Still, we would like to welcome to 0.3.x, the third major version of Magnumiactus. 
-Notable changes include some changes to Kelbi AI, the addition of Dungeon-tier Shorebrass Bars, a new weapon tree for Lances, and a Guard mechanic with Shields.
-Note that none of these are particularly finished yet, so if anything seems buggy, that's why.
+We have a wiki on the Terraria Mods Wiki, by the way. However, it's in an unfinished state, so some help might be nice.

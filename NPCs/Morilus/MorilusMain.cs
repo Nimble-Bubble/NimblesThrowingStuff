@@ -16,6 +16,8 @@ using NimblesThrowingStuff.Projectiles.Enemy;
 using NimblesThrowingStuff.Items.Consumables;
 using NimblesThrowingStuff.Items.Vanity;
 using NimblesThrowingStuff.Tiles.Blocks;
+using Terraria.GameContent.Bestiary;
+using Terraria.GameContent.ItemDropRules;
 
 namespace NimblesThrowingStuff.NPCs.Morilus
 {
@@ -404,6 +406,14 @@ namespace NimblesThrowingStuff.NPCs.Morilus
             }
                 Item.NewItem((int)NPC.position.X, (int)NPC.position.Y, NPC.width, NPC.height, Mod.Find<ModItem>("SoulOfTrite").Type, Main.rand.Next(15, 24));
             }
+        }
+        public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
+        {
+            bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+            {
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Space,
+                new FlavorTestBestiaryInfoElement("This strange cycloptic automaton serves as the protector of a slightly less strange place called the Sky's Sea.")
+            });
         }
         public override void BossLoot(ref string name, ref int potionType)
         {
