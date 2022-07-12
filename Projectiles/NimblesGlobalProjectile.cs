@@ -25,10 +25,9 @@ namespace NimblesThrowingStuff.Items
             Player player = Main.player[projectile.owner];
             if (crit && player.GetModPlayer<NimblesPlayer>().sacredWrist && projectile.CountsAsClass(DamageClass.Throwing) && projectile.type != 92 && !projectile.npcProj)
             {
-                int star = Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y - 250, 0, 20,
+                int star = Projectile.NewProjectile(projectile.GetSource_FromThis(), projectile.Center.X, projectile.Center.Y - 250, 0, 20,
                             92, projectile.damage / 2, 1f, projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
                 Main.projectile[star].DamageType = DamageClass.Throwing;
-                Main.projectile[star].ranged = false/* tModPorter Suggestion: Remove. See Item.DamageType */;
                 Main.projectile[star].usesLocalNPCImmunity = true;
             Main.projectile[star].localNPCHitCooldown = 10;
             }

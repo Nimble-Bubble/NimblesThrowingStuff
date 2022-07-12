@@ -27,11 +27,11 @@ namespace NimblesThrowingStuff.Items.Accessories
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            Player.GetDamage(DamageClass.Throwing) += 0.15f;
+            player.GetDamage(DamageClass.Throwing) += 0.15f;
         }
         public override void AddRecipes()
 		{
-			Recipe recipe = CreateRecipe(935, 1);
+			Recipe recipe = Recipe.Create(935, 1);
 			recipe.AddIngredient(this); //modded materials
             recipe.AddIngredient(547, 5);
 			recipe.AddIngredient(548, 5);

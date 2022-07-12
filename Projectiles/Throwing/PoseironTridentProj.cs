@@ -39,20 +39,17 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
             Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 206,
                             Projectile.velocity.X * 0.1f, Projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
          bub++;
-         if (bub >= 30)
+         if (bub >= 45)
          {
-           int ble1 = Projectile.NewProjectile(Projectile.Center, Projectile.velocity.RotatedBy(MathHelper.ToRadians(170)),
+           int ble1 = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.velocity.RotatedBy(MathHelper.ToRadians(170)),
                             ModContent.ProjectileType<PoseironBubble>(), Projectile.damage / 3, 0.5f, Projectile.owner, 0.0f, (float) 1);
                 Main.projectile[ble1].DamageType = DamageClass.Throwing;
-                Main.projectile[ble1].magic = false/* tModPorter Suggestion: Remove. See Item.DamageType */;
-             int ble2 = Projectile.NewProjectile(Projectile.Center, Projectile.velocity.RotatedBy(MathHelper.ToRadians(180)),
+             int ble2 = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.velocity.RotatedBy(MathHelper.ToRadians(180)),
                             ModContent.ProjectileType<PoseironBubble>(), Projectile.damage / 3, 0.5f, Projectile.owner, 0.0f, (float) 1);
                 Main.projectile[ble2].DamageType = DamageClass.Throwing;
-                Main.projectile[ble2].magic = false/* tModPorter Suggestion: Remove. See Item.DamageType */;
-             int ble3 = Projectile.NewProjectile(Projectile.Center, Projectile.velocity.RotatedBy(MathHelper.ToRadians(190)),
+             int ble3 = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.velocity.RotatedBy(MathHelper.ToRadians(190)),
                             ModContent.ProjectileType<PoseironBubble>(), Projectile.damage / 3, 0.5f, Projectile.owner, 0.0f, (float) 1);
                 Main.projectile[ble3].DamageType = DamageClass.Throwing;
-                Main.projectile[ble3].magic = false/* tModPorter Suggestion: Remove. See Item.DamageType */;
              bub = 0;
          }
         }

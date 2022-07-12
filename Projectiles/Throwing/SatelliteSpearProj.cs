@@ -29,7 +29,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
         }
         public override void AI()
         {
-            Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 35,
+            Dust.NewDust(new Vector2(Projectile.GetSource_FromThis(), Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 35,
                             Projectile.velocity.X * 0.1f, Projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
          if (Projectile.penetrate <= 1 || Projectile.timeLeft <= 3)
          {
@@ -44,7 +44,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
         }
         public override void Kill(int timeLeft) 
         {
-                        Projectile.NewProjectile(Projectile.position.X, Projectile.position.Y, 0, 0,
+                        Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.position.X, Projectile.position.Y, 0, 0,
                             Mod.Find<ModProjectile>("SatelliteSpearEchosplosion").Type, Projectile.damage * 2, 10f, Projectile.owner, 0.0f, 0.0f);
             Projectile.position = Projectile.Center;
             Projectile.width = 250;

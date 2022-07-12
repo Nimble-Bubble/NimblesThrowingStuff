@@ -33,7 +33,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
         {
             if (Main.rand.NextBool(3))
             {
-                Projectile.NewProjectile(Projectile.Center.X, Projectile.Center.Y - 500, 0, 30,
+                Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y - 500, 0, 30,
                             ModContent.ProjectileType<MartianEcho>(), Projectile.damage / 2, 5f, Projectile.owner, 0.0f, (float)Main.rand.Next(-45, 1));
                 target.AddBuff(144, 240);
             }

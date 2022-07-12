@@ -58,10 +58,8 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
         if (Projectile.damage > 1)
         {
         
-            int stream = Projectile.NewProjectile(Projectile.Center.X, Projectile.Center.Y, Projectile.velocity.X, Projectile.velocity.Y,
-            22, Projectile.damage, 3.5f, Projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
+            int stream = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.velocity, 22, Projectile.damage, 3.5f, Projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
             Main.projectile[stream].DamageType = DamageClass.Throwing;
-            Main.projectile[stream].magic = false/* tModPorter Suggestion: Remove. See Item.DamageType */;
             Main.projectile[stream].usesLocalNPCImmunity = true;
             Main.projectile[stream].localNPCHitCooldown = 10;
             Main.projectile[stream].penetrate = 5;      
