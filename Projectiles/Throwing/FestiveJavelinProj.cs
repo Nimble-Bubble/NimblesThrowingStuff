@@ -53,21 +53,22 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 				dust.noGravity = true;
 				usePos -= rotVector * 8f;
 			}
-            Projectile.NewProjectile(Projectile.Center.X, Projectile.Center.Y, 0, -20,
+			// The following section will probably be optimized at some point
+            Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, 0, -20,
                             Mod.Find<ModProjectile>("FestiveSnowflake").Type, Projectile.damage / 4, 1f, Projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
-            Projectile.NewProjectile(Projectile.Center.X, Projectile.Center.Y, 20, -20,
+            Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, 20, -20,
                             Mod.Find<ModProjectile>("FestiveSnowflake").Type, Projectile.damage / 4, 1f, Projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
-            Projectile.NewProjectile(Projectile.Center.X, Projectile.Center.Y, 20, 0,
+            Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, 20, 0,
                             Mod.Find<ModProjectile>("FestiveSnowflake").Type, Projectile.damage / 4, 1f, Projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
-            Projectile.NewProjectile(Projectile.Center.X, Projectile.Center.Y, 20, 20,
+            Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, 20, 20,
                             Mod.Find<ModProjectile>("FestiveSnowflake").Type, Projectile.damage / 4, 1f, Projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
-            Projectile.NewProjectile(Projectile.Center.X, Projectile.Center.Y, 0, 20,
+            Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, 0, 20,
                             Mod.Find<ModProjectile>("FestiveSnowflake").Type, Projectile.damage / 4, 1f, Projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
-            Projectile.NewProjectile(Projectile.Center.X, Projectile.Center.Y, -20, 20,
+            Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, -20, 20,
                             Mod.Find<ModProjectile>("FestiveSnowflake").Type, Projectile.damage / 4, 1f, Projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
-            Projectile.NewProjectile(Projectile.Center.X, Projectile.Center.Y, -20, 0,
+            Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, -20, 0,
                             Mod.Find<ModProjectile>("FestiveSnowflake").Type, Projectile.damage / 4, 1f, Projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
-            Projectile.NewProjectile(Projectile.Center.X, Projectile.Center.Y, -20, -20,
+            Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, -20, -20,
                             Mod.Find<ModProjectile>("FestiveSnowflake").Type, Projectile.damage / 4, 1f, Projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
 		}
 		public bool IsStickingToTarget

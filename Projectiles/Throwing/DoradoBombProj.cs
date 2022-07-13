@@ -48,7 +48,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
                             (float) Main.rand.Next(-100, 101));
                         vector2.Normalize();
                         vector2 *= (float) Main.rand.Next(10, 201) * 0.025f;
-                        Projectile.NewProjectile(Projectile.Center.X, Projectile.Center.Y, vector2.X, vector2.Y,
+                        Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, vector2.X, vector2.Y,
                             Mod.Find<ModProjectile>("DragonShrapnel").Type, Projectile.damage / 4, 1f, Projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
                     }
                 }

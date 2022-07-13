@@ -33,9 +33,9 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
             g++;
             if (g % 30 == 0)
             {
-                Projectile.NewProjectile(Projectile.position, Projectile.velocity.RotatedBy(MathHelper.ToRadians(-30)), ModContent.ProjectileType<WaraxeEcho>(), Projectile.damage / 4, Projectile.knockBack / 2);
-                Projectile.NewProjectile(Projectile.position, Projectile.velocity, ModContent.ProjectileType<WaraxeEcho>(), Projectile.damage / 3, Projectile.knockBack / 2);
-                Projectile.NewProjectile(Projectile.position, Projectile.velocity.RotatedBy(MathHelper.ToRadians(30)), ModContent.ProjectileType<WaraxeEcho>(), Projectile.damage / 4, Projectile.knockBack / 2);
+                Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.position, Projectile.velocity.RotatedBy(MathHelper.ToRadians(-30)), ModContent.ProjectileType<WaraxeEcho>(), Projectile.damage / 4, Projectile.knockBack / 2);
+                Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.position, Projectile.velocity, ModContent.ProjectileType<WaraxeEcho>(), Projectile.damage / 3, Projectile.knockBack / 2);
+                Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.position, Projectile.velocity.RotatedBy(MathHelper.ToRadians(30)), ModContent.ProjectileType<WaraxeEcho>(), Projectile.damage / 4, Projectile.knockBack / 2);
             }
         }
         public override void PostDraw(Color lightColor)

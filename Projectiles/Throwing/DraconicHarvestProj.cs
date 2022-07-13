@@ -71,11 +71,9 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
                             (float) Main.rand.Next(-10, 11));
                         vector2.Normalize();
                         vector2 *= (float) Main.rand.Next(10, 11) * 1f;
-                        int spore = Projectile.NewProjectile(Projectile.Center.X, Projectile.Center.Y, vector2.X, vector2.Y,
+                        int portal = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, vector2.X, vector2.Y,
                             Mod.Find<ModProjectile>("DraconicPortal").Type, Projectile.damage, 1f, Projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
                         index = 0;
-                        Main.projectile[spore].DamageType = DamageClass.Throwing;
-                Main.projectile[spore].melee = false/* tModPorter Suggestion: Remove. See Item.DamageType */;
                     }
         }
     }

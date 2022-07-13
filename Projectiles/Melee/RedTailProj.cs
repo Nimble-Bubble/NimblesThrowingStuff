@@ -118,8 +118,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             {
                 if (redTailPower == 0)
                 {
-                    int throwFlames = Projectile.NewProjectile(Projectile.Center.X, Projectile.Center.Y, Projectile.velocity.X / 3, Projectile.velocity.Y / 3, ProjectileID.Flames, Projectile.damage / 2, Projectile.knockBack / 2, Projectile.owner);
-                    Main.projectile[throwFlames].ranged = false/* tModPorter Suggestion: Remove. See Item.DamageType */;
+                    int throwFlames = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, Projectile.velocity.X / 3, Projectile.velocity.Y / 3, ProjectileID.Flames, Projectile.damage / 2, Projectile.knockBack / 2, Projectile.owner);
                     Main.projectile[throwFlames].DamageType = DamageClass.Melee;
                    SoundEngine.PlaySound(SoundID.Item34);
                     redTailPower += 60;
