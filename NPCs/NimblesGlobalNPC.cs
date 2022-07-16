@@ -82,112 +82,112 @@ namespace NimblesThrowingStuff.NPCs
 
             }
         }
-
+		//One day, this will probably be all NPCID instead of just numbers. Also, considering that most of this is loot, this may need to be put under the proper loot function instead of OnKill
 		public override void OnKill(NPC npc)
 		{
 			if (Main.hardMode && !npc.boss && npc.lifeMax > 1 && npc.damage > 0 && !npc.friendly && npc.value > 0f && Main.rand.NextBool(Main.expertMode ? 2 : 1, 5))
 			{
 				if (Main.player[Player.FindClosest(npc.position, npc.width, npc.height)].ZoneSkyHeight)
 				{
-					Item.NewItem(npc.getRect(), ItemType<SoulOfTrite>(), 1);
+					Item.NewItem(npc.GetSource_FromThis(), npc.getRect(), ItemType<SoulOfTrite>(), 1);
 				}
 			}
 			if (npc.type == 222 && Main.rand.NextBool(4) && !Main.expertMode)
 			{
-				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<Beemerang>(), 1);
+				Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<Beemerang>(), 1);
 			}
             if (npc.type == NPCID.WallofFlesh && Main.rand.NextBool(7) && !Main.expertMode)
 			{
-				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<ThrowerEmblem>(), 1);
+				Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<ThrowerEmblem>(), 1);
 			}
             if (npc.type == 262 && Main.rand.NextBool(4) && !Main.expertMode)
 			{
-				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<ThornyGlove>(), 1);
+				Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<ThornyGlove>(), 1);
 			}
             if (npc.type == 245 && Main.rand.NextBool(4) && !Main.expertMode)
 			{
-				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<GolemGlove>(), 1);
+				Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<GolemGlove>(), 1);
 			}
             if (npc.type == NPCID.DukeFishron && Main.rand.NextBool(5) && !Main.expertMode)
 			{
-				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<PoseironTrident>(), 1);
+				Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<PoseironTrident>(), 1);
 			}
             if (npc.type == NPCID.DukeFishron && Main.rand.NextBool(5) && !Main.expertMode)
 			{
-				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<PoseironTrident>(), 1);
+				Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<PoseironTrident>(), 1);
 			}
             if (npc.type == 398 && Main.rand.NextBool(5) && !Main.expertMode)
 			{
-				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<CosmosCrasher>(), 1);
-                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<SatelliteSpear>(), 1);
+				Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<CosmosCrasher>(), 1);
+                Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<SatelliteSpear>(), 1);
 			}
             if (npc.type == 392 && Main.rand.NextBool(5))
 			{
-				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<MartianMiracle>(), 1);
+				Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<MartianMiracle>(), 1);
 			}
             if (npc.type == NPCID.BigMimicHallow && Main.rand.NextBool(4))
 			{
-				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<SacredWristband>(), 1);
+				Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<SacredWristband>(), 1);
 			}
             if (npc.type == 43 && Main.rand.NextBool(15))
 			{
-				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<HealthEater>(), 1); //??? 
+				Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<HealthEater>(), 1); //??? 
 			}
             if (npc.type == 49 || npc.type == 93)
             {
-                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<BatFlesh>(), 1);
+                Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<BatFlesh>(), 1);
             }
             if (npc.type == 48 && NPC.downedBoss3 && Main.rand.NextBool(25))
 			{
-				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<CumulusCrasher>(), 1);
+				Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<CumulusCrasher>(), 1);
 			}
             if (npc.type == 62 && NPC.downedBoss3)
 			{
-            Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<ShadowJavelin>(), Main.rand.Next(10, 21));
+            Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<ShadowJavelin>(), Main.rand.Next(10, 21));
             if (Main.rand.NextBool(20))
                 {
-				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<DemonClaw>(), 1);
+				Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<DemonClaw>(), 1);
                 }
 			}
             if (npc.type == 471)
 			{
-            Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<ShadowflameSpikeBall>(), Main.rand.Next(125, 251));
+            Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<ShadowflameSpikeBall>(), Main.rand.Next(125, 251));
             }
             if (npc.type >= 338 && npc.type <= 340 && Main.rand.NextBool(2) || npc.type >= 347 && npc.type <= 350 && Main.rand.NextBool(2))
 			{
-				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<FestiveCloth>(), 1);
+				Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<FestiveCloth>(), 1);
 			}
             if (npc.type >= 269 && npc.type <= 272)
 			{
-				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<RustyBonesAxe>(), Main.rand.Next(10, 21));
+				Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<RustyBonesAxe>(), Main.rand.Next(10, 21));
 			}
             if (npc.type >= 273 && npc.type <= 276)
 			{
-				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<BrokeBonesAxe>(), Main.rand.Next(10, 21));
+				Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<BrokeBonesAxe>(), Main.rand.Next(10, 21));
 			}
             if (npc.type >= 277 && npc.type <= 280)
 			{
-				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<HellBonesAxe>(), Main.rand.Next(10, 21));
+				Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<HellBonesAxe>(), Main.rand.Next(10, 21));
 			}
             if (npc.type == NPCID.SantaNK1)
 			{
-				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<FestiveCloth>(), Main.rand.Next(7, 13));
+				Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<FestiveCloth>(), Main.rand.Next(7, 13));
 			}
             if (npc.type == 345 && Main.rand.NextBool(10))
 			{
-				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<SnowflakeShuriken>(), 1);
+				Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<SnowflakeShuriken>(), 1);
 			}
             if (npc.type == 325 && Main.rand.NextBool(20))
 			{
-				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<SpookySpines>(), 1);
+				Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<SpookySpines>(), 1);
 			}
             if (npc.type == 327 && Main.rand.NextBool(10))
 			{
-				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<UnholyHandGrenade>(), 1);
+				Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<UnholyHandGrenade>(), 1);
 			}
             if (npc.type == 158 && Main.rand.NextBool(25) || npc.type == 159 && Main.rand.NextBool(25))
 			{
-				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<BloodyPike>(), 1);
+				Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<BloodyPike>(), 1);
 			}
 		}
     }

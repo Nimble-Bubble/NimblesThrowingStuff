@@ -135,13 +135,13 @@ namespace NimblesThrowingStuff.Projectiles.Summoning
 			float speed = 10f;
 			float inertia = 5f;
 			if (foundTarget) {
-            aquablastcd += 1;
-            if (aquablastcd >= 40)
-                {
-                Projectile.NewProjectile(Projectile.Center.X, Projectile.Center.Y, 0, 0, Mod.Find<ModProjectile>("AquaBlast").Type, Projectile.damage, 3f, Projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
-                aquablastcd = 0;
-                }
-            if (distanceToIdlePosition > 600f) {
+				//aquablastcd += 1;
+				//if (aquablastcd >= 40)
+				//    {
+				//    Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, 0, 0, Mod.Find<ModProjectile>("AquaBlast").Type, Projectile.damage, 3f, Projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
+				//    aquablastcd = 0;
+				//    }
+				if (distanceToIdlePosition > 600f) {
 					speed = 12f;
 					inertia = 6f;
 				}
@@ -187,7 +187,7 @@ namespace NimblesThrowingStuff.Projectiles.Summoning
 				aquablastcd += 1;
                 if (aquablastcd >= 40)
                 {
-                Projectile.NewProjectile(Projectile.GetSource_FromThis(), projectile.Center.X, projectile.Center.Y, 0, 0, 27, projectile.damage, 3f, projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
+                Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, 0, 0, 27, Projectile.damage, 3f, Projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
                 aquablastcd = 0;
                 }
 			}
