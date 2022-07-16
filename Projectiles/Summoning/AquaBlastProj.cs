@@ -182,20 +182,19 @@ namespace NimblesThrowingStuff.Projectiles.Summoning
 			}
 			#endregion
             
-            //#region Water Gun
-            //if (foundTarget) {
-				//aquablastcd += 1;
-                //if (aquablastcd >= 40)
-                //{
-                //Projectile.NewProjectile(projectile.Center.X, projectile.Center.Y, 0, 0,
-                            //27, projectile.damage, 3f, projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
-                //aquablastcd = 0;
-                //}
-			//}
-			//else {
-            //aquablastcd = 0;
-            //}
-            //#endregion
+            #region Water Gun
+            if (foundTarget) {
+				aquablastcd += 1;
+                if (aquablastcd >= 40)
+                {
+                Projectile.NewProjectile(Projectile.GetSource_FromThis(), projectile.Center.X, projectile.Center.Y, 0, 0, 27, projectile.damage, 3f, projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
+                aquablastcd = 0;
+                }
+			}
+			else {
+            aquablastcd = 0;
+            }
+            #endregion
 
 			#region Animation and visuals
             Projectile.rotation += 0.1f;

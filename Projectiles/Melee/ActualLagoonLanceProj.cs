@@ -81,8 +81,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             }
             if (Main.mouseRight && !hasWatered)
             {
-                    int neatostream = Projectile.NewProjectile(Projectile.Center.X, Projectile.Center.Y, Projectile.velocity.X / 2, Projectile.velocity.Y / 2, ProjectileID.WaterStream, Projectile.damage / 2, 1.5f, Projectile.owner);
-                    Main.projectile[neatostream].magic = false/* tModPorter Suggestion: Remove. See Item.DamageType */;
+                    int neatostream = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, Projectile.velocity.X / 2, Projectile.velocity.Y / 2, ProjectileID.WaterStream, Projectile.damage / 2, 1.5f, Projectile.owner);
                     Main.projectile[neatostream].DamageType = DamageClass.Melee;
                     Main.projectile[neatostream].usesLocalNPCImmunity = true;
                     Main.projectile[neatostream].localNPCHitCooldown = 10;

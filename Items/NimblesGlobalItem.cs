@@ -57,28 +57,28 @@ namespace NimblesThrowingStuff.Items
             {
                 if (arg == ItemID.QueenBeeBossBag && Main.rand.NextBool(3))
                 {
-                player.QuickSpawnItem(ItemType<Beemerang>());
+                player.QuickSpawnItem(player.GetSource_FromThis(), ItemType<Beemerang>(), 1);
                 }
                 if (arg == ItemID.WallOfFleshBossBag && Main.rand.NextBool(6))
                 {
-                player.QuickSpawnItem(ItemType<ThrowerEmblem>());
+                player.QuickSpawnItem(player.GetSource_FromThis(), ItemType<ThrowerEmblem>(), 1);
                 }
                 if (arg == ItemID.PlanteraBossBag && Main.rand.NextBool(3))
                 {
-                player.QuickSpawnItem(ItemType<ThornyGlove>());
+                player.QuickSpawnItem(player.GetSource_FromThis(), ItemType<ThornyGlove>(), 1);
                 }
                 if (arg == ItemID.GolemBossBag && Main.rand.NextBool(4))
                 {
-                player.QuickSpawnItem(ItemType<GolemGlove>());
+                player.QuickSpawnItem(player.GetSource_FromThis(), ItemType<GolemGlove>(), 1);
                 }
             if (arg == ItemID.FishronBossBag && Main.rand.NextBool(4))
                 {
-                player.QuickSpawnItem(ItemType<PoseironTrident>());
+                player.QuickSpawnItem(player.GetSource_FromThis(), ItemType<PoseironTrident>(), 1);
                 }
                 if (arg == ItemID.MoonLordBossBag && Main.rand.NextBool(5))
                 {
-                player.QuickSpawnItem(ItemType<CosmosCrasher>());
-                player.QuickSpawnItem(ItemType<SatelliteSpear>());
+                player.QuickSpawnItem(player.GetSource_FromThis(), ItemType<CosmosCrasher>(), 1);
+                player.QuickSpawnItem(player.GetSource_FromThis(), ItemType<SatelliteSpear>(), 1);
                 }
             }
             

@@ -106,7 +106,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             }
             if (Main.mouseRight && !hasBlooded)
             {
-                    Projectile.NewProjectile(Projectile.Center, Projectile.velocity, ModContent.ProjectileType<BloodySyringeBlood>(), Projectile.damage / 3, 1.5f, Projectile.owner); 
+                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.velocity, ModContent.ProjectileType<BloodySyringeBlood>(), Projectile.damage / 3, 1.5f, Projectile.owner); 
                     SoundEngine.PlaySound(SoundID.Item21);
                     hasBlooded = true;
             }

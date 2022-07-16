@@ -30,13 +30,13 @@ namespace NimblesThrowingStuff.Items.Materials
 		}
         public override void AddRecipes() 
 		{
-			Recipe recipe = CreateRecipe(this.Type, 3);
+			Recipe recipe = CreateRecipe(3);
 			recipe.AddIngredient(ItemID.Bone, 2);
 			recipe.AddIngredient(ItemID.Coral, 1);
 			recipe.AddIngredient(ItemID.CopperBar, 2);
 			recipe.AddTile(TileID.Furnaces);
 			recipe.Register();
-			recipe = CreateRecipe(this.Type, 3);
+			recipe = CreateRecipe(3);
 			recipe.AddIngredient(ItemID.Bone, 2);
 			recipe.AddIngredient(ItemID.Coral, 1);
 			recipe.AddIngredient(ItemID.TinBar, 2);
