@@ -38,8 +38,8 @@ namespace NimblesThrowingStuff.Projectiles.Melee
         public override void PostDraw(Color lightColor)
 		{
 			Texture2D texture = Mod.GetTexture("Projectiles/Melee/ProcellariteBroadswordProj_Glow");
-			spriteBatch.Draw
-			(
+            Main.EntitySpriteDraw
+            (
 				texture,
 				Projectile.position,
 				new Rectangle(0, 0, texture.Width, texture.Height),
@@ -48,7 +48,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 				texture.Size() * 0.5f,
 				Projectile.scale,
 				SpriteEffects.None,
-				0f
+				0
 			);
 		}
         public override void OnHitNPC (NPC target, int damage, float knockback, bool crit)

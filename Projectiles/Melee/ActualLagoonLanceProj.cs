@@ -89,14 +89,6 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                 hasWatered = true;
             }
         }
-        //public override bool PreDraw(SpriteBatch spriteBatch, Color lightColor)
-        //{
-            //Texture2D texture = Main.projectileTexture[projectile.type];
-            //Vector2 moreNormalPosition = projectile.position + new Vector2(projectile.width, projectile.height) / 2f - Main.screenPosition;
-            //Vector2 moreNormalOrigin = new Vector2(projectile.width, projectile.height) / 2f;
-            //spriteBatch.Draw(texture, projectile.Center, Color.White);
-            //return true;
-        //}
         //public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
         //{
         //if (Main.player[projectile.owner].velocity.X < 0)

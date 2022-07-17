@@ -66,8 +66,8 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
         public override void PostDraw(Color lightColor)
 		{
 			Texture2D texture = Mod.GetTexture("Projectiles/Throwing/TrueNightPiercerProj_Glow");
-			spriteBatch.Draw
-			(
+            Main.EntitySpriteDraw
+            (
 				texture,
 				Projectile.position,
 				new Rectangle(0, 0, texture.Width, texture.Height),
@@ -76,7 +76,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 				texture.Size() * 0.5f,
 				Projectile.scale,
 				SpriteEffects.None,
-				0f
+				0
 			);
 		}
     }

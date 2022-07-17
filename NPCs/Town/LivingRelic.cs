@@ -197,10 +197,10 @@ namespace NimblesThrowingStuff.NPCs.Town
                     return "I'm not exactly sure where I'm going to put all these weapons.";
                 }
             }
-            if (BirthdayParty.PartyIsUp && Main.rand.Next(4))
-            {
-                return "I'm not really sure how to celebrate this kind of thing...";
-            }
+            //if (BirthdayParty.PartyIsUp && Main.rand.Next(4))
+            //{
+            //    return "I'm not really sure how to celebrate this kind of thing...";
+            //}
             switch (Main.rand.Next(6))
             {
                 case 1:

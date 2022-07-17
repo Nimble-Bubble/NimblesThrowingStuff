@@ -155,7 +155,7 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
             Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, Mod.Find<ModGore>("Gores/SmallRathHead").Type, 1f);
             for (int f = 0; f < 30; f++)
             {
-                int rathDust = Dust.NewDust(new Vector2(NPC.GetSource_FromThis(), NPC.position.X, NPC.position.Y), NPC.width * 2, NPC.height * 2, 6, 0f, 0f, 100, default(Color), 3f);
+                int rathDust = Dust.NewDust(new Vector2(NPC.position.X, NPC.position.Y), NPC.width * 2, NPC.height * 2, 6, 0f, 0f, 100, default(Color), 3f);
                 Main.dust[rathDust].velocity *= 2f;
             }
             return true;

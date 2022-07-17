@@ -201,21 +201,21 @@ namespace NimblesThrowingStuff.Projectiles.Summoning
 			Lighting.AddLight(Projectile.Center, Color.Blue.ToVector3() * 0.5f);
 			#endregion
 		}
-        //public override void PostDraw(SpriteBatch spriteBatch, Color lightColor)
-		//{
-			//Texture2D texture = mod.GetTexture("Projectiles/Throwing/AquaBlastProj_Glow");
-			//spriteBatch.Draw
-			//(
-				//texture,
-				//projectile.position,
-				//new Rectangle(0, 0, texture.Width, texture.Height),
-				//Color.Blue,
-				//projectile.rotation,
-				//texture.Size() * 0.5f,
-				//projectile.scale,
-				//SpriteEffects.None,
-				//0f
-			//);
-		//}
+       public override void PostDraw(Color lightColor)
+		{
+			Texture2D texture = mod.GetTexture("Projectiles/Throwing/AquaBlastProj_Glow");
+			Main.EntitySpriteDraw
+			(
+				texture,
+				projectile.position,
+				new Rectangle(0, 0, texture.Width, texture.Height),
+				Color.Blue,
+				projectile.rotation,
+				texture.Size() * 0.5f,
+				projectile.scale,
+				SpriteEffects.None,
+				0
+			);
+		}
 	}
 }

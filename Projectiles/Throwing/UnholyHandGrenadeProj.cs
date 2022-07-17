@@ -44,7 +44,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
                             (float) Main.rand.Next(-100, 101));
                         vector2.Normalize();
                         vector2 *= (float) Main.rand.Next(10, 201) * 0.025f;
-                        int fire = Projectile.NewProjectile(Projectile.Center.X, Projectile.Center.Y, vector2.X, vector2.Y,
+                        int fire = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, vector2.X, vector2.Y,
                             Mod.Find<ModProjectile>("GreekFireballProj").Type, Projectile.damage / 4, 3f, Projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
                 }
         }
