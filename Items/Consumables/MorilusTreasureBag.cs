@@ -45,7 +45,7 @@ namespace NimblesThrowingStuff.Items.Consumables
         }
         public override void OpenBossBag(Player player)
         {
-            player.TryGettingDevArmor();
+            player.TryGettingDevArmor(Item.GetSource_FromThis());
             player.QuickSpawnItem(Item.GetSource_FromThis(), ItemID.GoldCoin, Main.rand.Next(50, 76));
             player.QuickSpawnItem(Item.GetSource_FromThis(), ModContent.ItemType<CarpatusDefender>(), 1);
             player.QuickSpawnItem(Item.GetSource_FromThis(), ModContent.ItemType<ProcellariteOre>(), Main.rand.Next(40, 61));

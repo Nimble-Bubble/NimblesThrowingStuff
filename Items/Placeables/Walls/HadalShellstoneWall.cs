@@ -24,11 +24,11 @@ namespace NimblesThrowingStuff.Items.Placeables.Walls
 
 		public override void AddRecipes() 
 		{
-			Recipe recipe = CreateRecipe(this.Type, 4);
+			Recipe recipe = CreateRecipe(4);
 			recipe.AddIngredient(Mod.Find<ModItem>("HadalShellstone").Type, 1);
 			recipe.AddTile(TileID.WorkBenches);
 			recipe.Register();
-            recipe = CreateRecipe(Mod.Find<ModItem>("HadalShellstone").Type, 1);
+            recipe = Recipe.Create(Mod.Find<ModItem>("HadalShellstone").Type, 1);
 			recipe.AddIngredient(this, 4);
 			recipe.AddTile(TileID.WorkBenches);
 			recipe.Register();

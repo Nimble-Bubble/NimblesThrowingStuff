@@ -55,7 +55,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
             NPC.DeathSound = SoundID.NPCDeath3;
             Music = MusicID.Boss4;
             NPC.buffImmune[31] = true;
-            bossBag/* tModPorter Note: Removed. Spawn the treasure bag alongside other loot via npcLoot.Add(ItemDropRule.BossBag(type)) */ = ModContent.ItemType<MorilusTreasureBag>();
+            // bossBag/* tModPorter Note: Removed. Spawn the treasure bag alongside other loot via npcLoot.Add(ItemDropRule.BossBag(type)) */ = ModContent.ItemType<MorilusTreasureBag>();
             NPC.scale = 1.3f;
         }
         
@@ -79,7 +79,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
                 {
                     if (NPC.ai[1] % 5 == 0)
                     {
-                        int starRain = Projectile.NewProjectile(NPC.position.X + Main.rand.Next(-750, 751), NPC.position.Y - 750, Main.rand.Next(-10, 11), Main.rand.Next(5, 11), ProjectileID.FallingStar, 70, 1);
+                        int starRain = Projectile.NewProjectile(NPC.GetSource_FromThis(), NPC.position.X + Main.rand.Next(-750, 751), NPC.position.Y - 750, Main.rand.Next(-10, 11), Main.rand.Next(5, 11), ProjectileID.FallingStar, 70, 1);
                         Main.projectile[starRain].friendly = false;
                         Main.projectile[starRain].hostile = true;
                         Main.projectile[starRain].timeLeft = 600;
@@ -87,12 +87,12 @@ namespace NimblesThrowingStuff.NPCs.Morilus
                     }
                     if (NPC.ai[1] % 20 == 0 && Main.expertMode)
                     {
-                        int bigStar2 = Projectile.NewProjectile(NPC.position.X, NPC.position.Y, Main.rand.Next(-5, 6), Main.rand.Next(-5, 6), ModContent.ProjectileType<MorilusBigStar>(), 100, 1);
+                        int bigStar2 = Projectile.NewProjectile(NPC.GetSource_FromThis(), NPC.position.X, NPC.position.Y, Main.rand.Next(-5, 6), Main.rand.Next(-5, 6), ModContent.ProjectileType<MorilusBigStar>(), 100, 1);
                     }
                 }
                 if (Main.rand.NextBool(1000) && Main.expertMode)
                 {
-                    int zapOrb = Projectile.NewProjectile(NPC.position.X, NPC.position.Y, Main.rand.Next(-5, 6), Main.rand.Next(-5, 6), ProjectileID.CultistBossLightningOrb, 90, 1);
+                    int zapOrb = Projectile.NewProjectile(NPC.GetSource_FromThis(), NPC.position.X, NPC.position.Y, Main.rand.Next(-5, 6), Main.rand.Next(-5, 6), ProjectileID.CultistBossLightningOrb, 90, 1);
                 }    
             if (NPC.ai[1] % 60 == 0 && NPC.ai[1] <= 120)
                 {
@@ -105,7 +105,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
                 int type = ModContent.ProjectileType<MorilusStream>();
                 SoundEngine.PlaySound(SoundID.Item11, NPC.position);
                 float rotation = (float)Math.Atan2(vector8.Y - (player.position.Y + (player.height * 0.5f)), vector8.X - (player.position.X + (player.width * 0.5f)));
-                int num54 = Projectile.NewProjectile(vector8.X, vector8.Y, (float)((Math.Cos(rotation) * Speed) * -1), (float)((Math.Sin(rotation) * Speed) * -1), type, damage, 0f, 0);
+                int num54 = Projectile.NewProjectile(NPC.GetSource_FromThis(), vector8.X, vector8.Y, (float)((Math.Cos(rotation) * Speed) * -1), (float)((Math.Sin(rotation) * Speed) * -1), type, damage, 0f, 0);
                 }
              if (NPC.ai[1] >= 120 && NPC.ai[1] <= 130)
              {
@@ -149,7 +149,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
             {
                 if (NPC.ai[1] % 30 == 0 && NPC.life >= NPC.lifeMax / 2 || NPC.ai[1] % 20 == 0 && NPC.life <= NPC.lifeMax / 2)
                 {
-                NPC.NewNPC((int)NPC.Center.X + 20, (int)NPC.Center.Y, ModContent.NPCType<SkySeaPrankster>());
+                NPC.NewNPC(NPC.GetSource_FromThis(), (int)NPC.Center.X + 20, (int)NPC.Center.Y, ModContent.NPCType<SkySeaPrankster>());
                 }
                 if (NPC.ai[1] >= 200)
                 {    
@@ -171,7 +171,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
                 float rotation1 = (float)Math.Atan2(vector8.Y - (player.position.Y + (player.height * 0.5f)), vector8.X - (player.position.X + (player.width * 0.5f)));
                 for (int spaldaedal = 0; spaldaedal < 15; spaldaedal++)
                 {
-                int num54 = Projectile.NewProjectile(vector8.X, vector8.Y, (float)((Math.Cos(rotation1) * Speed1) * -1) + Main.rand.Next(-3, 4), (float)((Math.Sin(rotation1) * Speed1) * -1) + Main.rand.Next(-3, 4), type1, damage1, 0f, 0);
+                int num54 = Projectile.NewProjectile(NPC.GetSource_FromThis(), vector8.X, vector8.Y, (float)((Math.Cos(rotation1) * Speed1) * -1) + Main.rand.Next(-3, 4), (float)((Math.Sin(rotation1) * Speed1) * -1) + Main.rand.Next(-3, 4), type1, damage1, 0f, 0);
                 }
                 }
                 if (NPC.ai[1] >= 290)
@@ -192,11 +192,11 @@ namespace NimblesThrowingStuff.NPCs.Morilus
                 int Type2 = ModContent.ProjectileType<MorilusBolt>();
                 SoundEngine.PlaySound(SoundID.Item11, NPC.position);
                 float rotation2 = (float)Math.Atan2(vector8.Y - (player.position.Y + (player.height * 0.5f)), vector8.X - (player.position.X + (player.width * 0.5f)));
-                int num55 = Projectile.NewProjectile(vector8.X, vector8.Y, (float)((Math.Cos(rotation2) * Speed2) * -1), (float)((Math.Sin(rotation2) * Speed2) * -1), Type2, Damage2, 0f, 0);
+                int num55 = Projectile.NewProjectile(NPC.GetSource_FromThis(), vector8.X, vector8.Y, (float)((Math.Cos(rotation2) * Speed2) * -1), (float)((Math.Sin(rotation2) * Speed2) * -1), Type2, Damage2, 0f, 0);
                 }
                 if (NPC.life <= NPC.lifeMax - bigStarHealth)
                     {
-                        int bigStar = Projectile.NewProjectile(NPC.position.X, NPC.position.Y, Main.rand.Next(-5, 6), Main.rand.Next(-5, 6), ModContent.ProjectileType<MorilusBigStar>(), 100, 1);
+                        int bigStar = Projectile.NewProjectile(NPC.GetSource_FromThis(), NPC.position.X, NPC.position.Y, Main.rand.Next(-5, 6), Main.rand.Next(-5, 6), ModContent.ProjectileType<MorilusBigStar>(), 100, 1);
                         NPC.ai[1] = 0;
                     }
                 if (NPC.ai[1] >= 380)
@@ -215,7 +215,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
                 Damage3 = 110;
                 }
                 int Type3 = ModContent.ProjectileType<MorilusRain>();
-                int num55 = Projectile.NewProjectile(NPC.position.X + Main.rand.Next(-750, 751), NPC.position.Y - 750, 0, Speed3, Type3, Damage3, 0f, 0);
+                int num55 = Projectile.NewProjectile(NPC.GetSource_FromThis(), NPC.position.X + Main.rand.Next(-750, 751), NPC.position.Y - 750, 0, Speed3, Type3, Damage3, 0f, 0);
             }
             if (NPC.ai[1] >= 650 && NPC.life >= NPC.lifeMax / 4 || NPC.ai[1] >= 750)
             {
@@ -233,13 +233,13 @@ namespace NimblesThrowingStuff.NPCs.Morilus
                     {
                         if (Main.rand.NextBool(2))
                         {
-                            Projectile.NewProjectile(NPC.Center.X, NPC.Center.Y, 1, 0, Mod.Find<ModProjectile>("MorilusHorizontalWall").Type, 125, 10f);
-                            Projectile.NewProjectile(NPC.Center.X, NPC.Center.Y, -1, 0, Mod.Find<ModProjectile>("MorilusHorizontalWall").Type, 125, 10f);
+                            Projectile.NewProjectile(NPC.GetSource_FromThis(), NPC.Center.X, NPC.Center.Y, 1, 0, Mod.Find<ModProjectile>("MorilusHorizontalWall").Type, 125, 10f);
+                            Projectile.NewProjectile(NPC.GetSource_FromThis(), NPC.Center.X, NPC.Center.Y, -1, 0, Mod.Find<ModProjectile>("MorilusHorizontalWall").Type, 125, 10f);
                         }
                         else
                         {
-                            Projectile.NewProjectile(NPC.Center.X, NPC.Center.Y, 0, 1, Mod.Find<ModProjectile>("MorilusVerticalWall").Type, 125, 10f);
-                            Projectile.NewProjectile(NPC.Center.X, NPC.Center.Y, 0, -1, Mod.Find<ModProjectile>("MorilusVerticalWall").Type, 125, 10f);
+                            Projectile.NewProjectile(NPC.GetSource_FromThis(), NPC.Center.X, NPC.Center.Y, 0, 1, Mod.Find<ModProjectile>("MorilusVerticalWall").Type, 125, 10f);
+                            Projectile.NewProjectile(NPC.GetSource_FromThis(), NPC.Center.X, NPC.Center.Y, 0, -1, Mod.Find<ModProjectile>("MorilusVerticalWall").Type, 125, 10f);
                         }
                     }
                     if (NPC.ai[2] == 400 && Main.rand.NextBool(3))
@@ -361,7 +361,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
         }
         public override void OnKill()
         {
-            Gore.NewGore(NPC.position, NPC.velocity, Mod.Find<ModGore>("Gores/MorilusGore1").Type, 1f);
+            Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, Mod.Find<ModGore>("Gores/MorilusGore1").Type, 1f);
             if (!NimblesWorld.downedMorilus)
             {
                 Utilities.SpawnOre(ModContent.TileType<ProcellariteOreTile>(), 15E-05, .8f, .999f);
@@ -379,32 +379,32 @@ namespace NimblesThrowingStuff.NPCs.Morilus
             {
             if (Main.rand.NextBool(7))
                 {
-                    Item.NewItem((int)NPC.position.X, (int)NPC.position.Y, NPC.width, NPC.height, Mod.Find<ModItem>("MorilusMask").Type);
+                    Item.NewItem(NPC.GetSource_FromThis(), (int)NPC.position.X, (int)NPC.position.Y, NPC.width, NPC.height, Mod.Find<ModItem>("MorilusMask").Type);
                 }
             if (Main.rand.NextBool(5))
                 {
-                    Item.NewItem((int)NPC.position.X, (int)NPC.position.Y, NPC.width, NPC.height, Mod.Find<ModItem>("MorilusTrophy").Type);
+                    Item.NewItem(NPC.GetSource_FromThis(), (int)NPC.position.X, (int)NPC.position.Y, NPC.width, NPC.height, Mod.Find<ModItem>("MorilusTrophy").Type);
                 }
                 int MorileLoot = Main.rand.Next(5);
             switch (MorileLoot)
             {
                 case 0:
-                Item.NewItem((int)NPC.position.X, (int)NPC.position.Y, NPC.width, NPC.height, Mod.Find<ModItem>("SkyseaSpinner").Type);
+                Item.NewItem(NPC.GetSource_FromThis(), (int)NPC.position.X, (int)NPC.position.Y, NPC.width, NPC.height, Mod.Find<ModItem>("SkyseaSpinner").Type);
                 break;
                 case 1:
-                Item.NewItem((int)NPC.position.X, (int)NPC.position.Y, NPC.width, NPC.height, Mod.Find<ModItem>("ProcellariteLongbow").Type);
+                Item.NewItem(NPC.GetSource_FromThis(), (int)NPC.position.X, (int)NPC.position.Y, NPC.width, NPC.height, Mod.Find<ModItem>("ProcellariteLongbow").Type);
                 break;
                 case 2:
-                Item.NewItem((int)NPC.position.X, (int)NPC.position.Y, NPC.width, NPC.height, Mod.Find<ModItem>("GuardianStaff").Type);
+                Item.NewItem(NPC.GetSource_FromThis(), (int)NPC.position.X, (int)NPC.position.Y, NPC.width, NPC.height, Mod.Find<ModItem>("GuardianStaff").Type);
                 break;
                 case 3:
-                Item.NewItem((int)NPC.position.X, (int)NPC.position.Y, NPC.width, NPC.height, Mod.Find<ModItem>("StormShot").Type);
+                Item.NewItem(NPC.GetSource_FromThis(), (int)NPC.position.X, (int)NPC.position.Y, NPC.width, NPC.height, Mod.Find<ModItem>("StormShot").Type);
                 break;
                 case 4:
-                Item.NewItem((int)NPC.position.X, (int)NPC.position.Y, NPC.width, NPC.height, Mod.Find<ModItem>("LacusDecapitator").Type);
+                Item.NewItem(NPC.GetSource_FromThis(), (int)NPC.position.X, (int)NPC.position.Y, NPC.width, NPC.height, Mod.Find<ModItem>("LacusDecapitator").Type);
                 break;
             }
-                Item.NewItem((int)NPC.position.X, (int)NPC.position.Y, NPC.width, NPC.height, Mod.Find<ModItem>("SoulOfTrite").Type, Main.rand.Next(15, 24));
+                Item.NewItem(NPC.GetSource_FromThis(), (int)NPC.position.X, (int)NPC.position.Y, NPC.width, NPC.height, Mod.Find<ModItem>("SoulOfTrite").Type, Main.rand.Next(15, 24));
             }
         }
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)

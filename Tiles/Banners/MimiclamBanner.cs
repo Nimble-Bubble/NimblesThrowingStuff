@@ -38,8 +38,8 @@ namespace NimblesThrowingStuff.Tiles.Banners
             if (closer)          
             {
                 Player player = Main.LocalPlayer;
-                player.NPCBannerBuff[Mod.Find<ModNPC>("Mimiclam").Type] = true;	
-                player.hasBanner = true;
+                Main.SceneMetrics.NPCBannerBuff[Mod.Find<ModNPC>("Mimiclam").Type] = true;	
+                Main.SceneMetrics.hasBanner = true;
             }
         }
     }
