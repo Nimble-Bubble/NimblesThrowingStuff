@@ -31,11 +31,11 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 		{
       float numberProjectiles = 2; 
 			float rotation = MathHelper.ToRadians(20);
-			position += Vector2.Normalize(new Vector2(speedX, speedY)) * 6f;
+			position += Vector2.Normalize(velocity) * 6f;
 			for (int i = 0; i < numberProjectiles; i++)
 			{
 				Vector2 perturbedSpeed = velocity.RotatedBy(MathHelper.Lerp(-rotation, rotation, i / (numberProjectiles - 1))) * 2f; // Watch out for dividing by 0 if there is only 1 projectile.
-				Projectile.NewProjectile(position, perturbedSpeed, type, damage, knockBack, player.whoAmI);
+				Projectile.NewProjectile(Item.GetSource_FromThis(), position, perturbedSpeed, type, damage, Item.knockBack, player.whoAmI);
 			}
         }
 	}

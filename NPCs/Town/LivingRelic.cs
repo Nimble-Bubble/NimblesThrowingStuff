@@ -281,7 +281,7 @@ namespace NimblesThrowingStuff.NPCs.Town
 
 		public override void OnKill()
 		{
-            Gore.NewGore(NPC.position, NPC.velocity, Mod.Find<ModGore>("Gores/LivingRelicHeadGore").Type, 1);
+            Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, Mod.Find<ModGore>("Gores/LivingRelicHeadGore").Type, 1);
         }
 
 		public override void TownNPCAttackStrength(ref int damage, ref float knockback)

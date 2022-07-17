@@ -66,9 +66,9 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                 Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 174,
                             Projectile.velocity.X * 0.1f, Projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
             }
-            int smallprobeam1 = Projectile.NewProjectile(Projectile.position, Projectile.velocity, ModContent.ProjectileType<ProcellariteSmallSwordBeam>(), Projectile.damage / 2, Projectile.knockBack, Projectile.owner);
-            int smallprobeam2 = Projectile.NewProjectile(Projectile.position, Projectile.velocity.RotatedBy(MathHelper.ToRadians(10)), ModContent.ProjectileType<ProcellariteSmallSwordBeam>(), Projectile.damage / 2, Projectile.knockBack, Projectile.owner);
-            int smallprobeam3 = Projectile.NewProjectile(Projectile.position, Projectile.velocity.RotatedBy(MathHelper.ToRadians(350)), ModContent.ProjectileType<ProcellariteSmallSwordBeam>(), Projectile.damage / 2, Projectile.knockBack, Projectile.owner);
+            int smallprobeam1 = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.position, Projectile.velocity, ModContent.ProjectileType<ProcellariteSmallSwordBeam>(), Projectile.damage / 2, Projectile.knockBack, Projectile.owner);
+            int smallprobeam2 = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.position, Projectile.velocity.RotatedBy(MathHelper.ToRadians(10)), ModContent.ProjectileType<ProcellariteSmallSwordBeam>(), Projectile.damage / 2, Projectile.knockBack, Projectile.owner);
+            int smallprobeam3 = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.position, Projectile.velocity.RotatedBy(MathHelper.ToRadians(350)), ModContent.ProjectileType<ProcellariteSmallSwordBeam>(), Projectile.damage / 2, Projectile.knockBack, Projectile.owner);
         }
     }
 }

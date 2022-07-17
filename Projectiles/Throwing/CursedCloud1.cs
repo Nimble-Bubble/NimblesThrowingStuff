@@ -15,7 +15,6 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
         public override void SetDefaults()
         {
             Projectile.CloneDefaults(511);
-            Projectile.magic = false/* tModPorter Suggestion: Remove. See Item.DamageType */;
             Projectile.DamageType = DamageClass.Throwing;
             AIType = 511;
             Projectile.usesLocalNPCImmunity = true;

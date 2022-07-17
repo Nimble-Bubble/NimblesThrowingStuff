@@ -35,7 +35,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 		}
 		public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockBack)
 		{
-			int numberProjectiles = 2 + Main.rand.Next(2);  //This defines how many projectiles to shot
+			int numberProjectiles = 2 + Main.rand.Next(2);  
 			for (int index = 0; index < numberProjectiles; ++index)
 			{
 				Vector2 vector2_1 = new Vector2((float)(player.Center.X + (Main.rand.Next(201) * -player.direction) + Main.mouseX + Main.screenPosition.X - player.position.X), player.Center.Y - 600f);   //this defines the projectile width, direction and position
@@ -56,10 +56,10 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 				float num15b = num15 / 2;
 				float num16 = num12 * num15b;
 				float num17 = num13 * num15b;
-				Vector2 Speed = (num16 + Main.rand.NextFloat(-40, 40) * 0.03f, num17 + Main.rand.NextFloat(-40, 40) * 0.03f);  
-				Projectile.NewProjectile(vector2_1, velocity, type, damage, knockBack, Main.myPlayer, 0f, (float)Main.rand.Next(5));
+				Vector2 Speed = new Vector2(num16 + Main.rand.NextFloat(-40, 40) * 0.03f, num17 + Main.rand.NextFloat(-40, 40) * 0.03f);  
+				Projectile.NewProjectile(Item.GetSource_FromThis(), vector2_1, Speed, type, damage, knockBack, Main.myPlayer, 0f, (float)Main.rand.Next(5));
 			}
-			Projectile.NewProjectile(position, velocity * new Vector2 (2, 2), type, damage, knockBack, Main.myPlayer, 0f, (float)Main.rand.Next(5));
+			Projectile.NewProjectile(Item.GetSource_FromThis(), position, velocity * new Vector2 (2, 2), type, damage, knockBack, Main.myPlayer, 0f, (float)Main.rand.Next(5));
 		}
 	}
 }
