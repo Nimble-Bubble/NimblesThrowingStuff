@@ -21,7 +21,6 @@ namespace NimblesThrowingStuff.Projectiles.Enemy
             Projectile.height = 10;
             Projectile.aiStyle = 0;
             Projectile.hostile = true;
-            Projectile.magic = false/* tModPorter Suggestion: Remove. See Item.DamageType */;
             Projectile.maxPenetrate = 1;
             Projectile.tileCollide = false;
             Projectile.light = 1f;

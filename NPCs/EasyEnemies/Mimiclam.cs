@@ -37,7 +37,7 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
         }
 		public override void OnKill()
 		{
-            Item.NewItem(NPC.getRect(), 2625, 1);
+            Item.NewItem(NPC.GetSource_FromThis(), NPC.getRect(), 2625, 1);
             for (int index = 0; index < 10; index++)
                         Dust.NewDust(new Vector2(NPC.position.X, NPC.position.Y), NPC.width, NPC.height, 194,
                             NPC.velocity.X * 0.1f, NPC.velocity.Y * 0.1f, 0, new Color(), 0.75f);

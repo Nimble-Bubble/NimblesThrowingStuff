@@ -21,6 +21,9 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
         private Player player;
         private float speed;
         private int bararata;
+        SoundStyle SmallRathHurtNoise = new SoundStyle("Sounds/NPCHit/SmallRathHurt");
+        SoundStyle SmallRathKillNoise = new SoundStyle("Sounds/NPCKilled/SmallRathKill");
+        SoundStyle SmallRathFireNoise = new SoundStyle("Sounds/Item/SmallRathFire");
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Small Rathwyvern");
@@ -40,8 +43,8 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
             NPC.onFire = false;
             NPC.noGravity = true;
             NPC.aiStyle = -1;
-            NPC.HitSound = SoundEngine.PlaySound(new SoundStyle("Sounds/NPCHit/SmallRathHurt"));
-            NPC.DeathSound = SoundEngine.PlaySound(new SoundStyle("Sounds/NPCKilled/SmallRathKill"));
+            NPC.HitSound = SmallRathHurtNoise;
+            NPC.DeathSound = SmallRathKillNoise;
             NPC.buffImmune[31] = true;
             NPC.scale = 1.1f;
             Banner = NPC.type;
@@ -64,18 +67,18 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
                 float Speed = 8f;
                 int damage = 25;
                 int type = ModContent.ProjectileType<RathFireball>();
-                SoundEngine.PlaySound(new SoundStyle("Sounds/Item/SmallRathFire"));    
+                SoundEngine.PlaySound(SmallRathFireNoise);    
                 float rotation = (float)Math.Atan2(vector8.Y - (player.position.Y + (player.height * 0.5f)), vector8.X - (player.position.X + (player.width * 0.5f)));
 
                 if (NPC.velocity.X > 0)
                 {
                     bararata = 18;
-                    int num54 = Projectile.NewProjectile(vector8.X + bararata, vector8.Y, (float)((Math.Cos(rotation) * Speed) * -1), (float)((Math.Sin(rotation) * Speed) * -1), type, damage, 0f, 0);
+                    int num54 = Projectile.NewProjectile(NPC.GetSource_FromThis(), vector8.X + bararata, vector8.Y, (float)((Math.Cos(rotation) * Speed) * -1), (float)((Math.Sin(rotation) * Speed) * -1), type, damage, 0f, 0);
                 }
                 else
                 {
                     bararata = -18;
-                    int num54 = Projectile.NewProjectile(vector8.X + bararata, vector8.Y, (float)((Math.Cos(rotation) * Speed) * -1), (float)((Math.Sin(rotation) * Speed) * -1), type, damage, 0f, 0);
+                    int num54 = Projectile.NewProjectile(NPC.GetSource_FromThis(), vector8.X + bararata, vector8.Y, (float)((Math.Cos(rotation) * Speed) * -1), (float)((Math.Sin(rotation) * Speed) * -1), type, damage, 0f, 0);
                 }
                 }
             if (NPC.ai[1] >= 240)
@@ -149,10 +152,10 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
         }
         public override bool CheckDead()
         {
-            Gore.NewGore(NPC.position, NPC.velocity, Mod.Find<ModGore>("Gores/SmallRathHead").Type, 1f);
+            Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, Mod.Find<ModGore>("Gores/SmallRathHead").Type, 1f);
             for (int f = 0; f < 30; f++)
             {
-                int rathDust = Dust.NewDust(new Vector2(NPC.position.X, NPC.position.Y), NPC.width * 2, NPC.height * 2, 6, 0f, 0f, 100, default(Color), 3f);
+                int rathDust = Dust.NewDust(new Vector2(NPC.GetSource_FromThis(), NPC.position.X, NPC.position.Y), NPC.width * 2, NPC.height * 2, 6, 0f, 0f, 100, default(Color), 3f);
                 Main.dust[rathDust].velocity *= 2f;
             }
             return true;
@@ -211,7 +214,7 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
         public override void OnKill()
         {
             
-            Item.NewItem((int)NPC.position.X, (int)NPC.position.Y, NPC.width, NPC.height, Mod.Find<ModItem>("RedRathScale").Type, Main.rand.Next(1, 3));
+            Item.NewItem(NPC.GetSource_FromThis(), (int)NPC.position.X, (int)NPC.position.Y, NPC.width, NPC.height, Mod.Find<ModItem>("RedRathScale").Type, Main.rand.Next(1, 3));
         }
     }
 }

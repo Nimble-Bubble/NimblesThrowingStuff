@@ -6,6 +6,7 @@ using Terraria.GameContent.Personalities;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
+using Terraria.Social;
 
 namespace NimblesThrowingStuff.NPCs.Town
 {

@@ -115,10 +115,10 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
             if (NPC.life <= 0)
             {
 
-                Gore.NewGore(NPC.position, NPC.velocity, Mod.Find<ModGore>("Gores/KelbiHead").Type, 1f);
+                Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, Mod.Find<ModGore>("Gores/KelbiHead").Type, 1f);
                 for (int index = 0; index < 4; index++)
                 {
-                    Gore.NewGore(NPC.position, NPC.velocity, Mod.Find<ModGore>("Gores/KelbiLeg").Type, 1f);
+                    Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, Mod.Find<ModGore>("Gores/KelbiLeg").Type, 1f);
                 }
             }
         }
@@ -186,7 +186,7 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
             //{
                 //int Kelbileg = Gore.NewGore(npc.position, npc.velocity, mod.GetGoreSlot("Gores/KelbiLeg"), 1f);
             //}
-            Item.NewItem(NPC.getRect(), Mod.Find<ModItem>("BeastBone").Type, Main.rand.Next(3));
+            Item.NewItem(NPC.GetSource_FromThis(), NPC.getRect(), Mod.Find<ModItem>("BeastBone").Type, Main.rand.Next(3));
         }
 	}
 }
