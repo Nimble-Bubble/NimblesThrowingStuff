@@ -158,7 +158,6 @@ namespace NimblesThrowingStuff.Projectiles.Summoning
 					Projectile.velocity.X = -0.15f;
 					Projectile.velocity.Y = -0.05f;
 				}
-//aqua blasters fire water bolts, why would they need to fly towards the enemy
 			}
 			else {
             aquablastcd = 0;
@@ -203,16 +202,16 @@ namespace NimblesThrowingStuff.Projectiles.Summoning
 		}
        public override void PostDraw(Color lightColor)
 		{
-			Texture2D texture = mod.GetTexture("Projectiles/Throwing/AquaBlastProj_Glow");
+			Texture2D texture = Mod.Assets.Request<Texture2D>("Projectiles/Throwing/AquaBlastProj_Glow");
 			Main.EntitySpriteDraw
 			(
 				texture,
-				projectile.position,
+				Projectile.position,
 				new Rectangle(0, 0, texture.Width, texture.Height),
 				Color.Blue,
-				projectile.rotation,
+				Projectile.rotation,
 				texture.Size() * 0.5f,
-				projectile.scale,
+				Projectile.scale,
 				SpriteEffects.None,
 				0
 			);

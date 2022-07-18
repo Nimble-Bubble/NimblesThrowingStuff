@@ -29,8 +29,8 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
         public override void Kill(int timeLeft) 
         {
             SoundEngine.PlaySound(SoundID.Item107, Projectile.position);
-                Gore.NewGore(Projectile.Center, -Projectile.oldVelocity * 0.2f, 704, 1f);
-                Gore.NewGore(Projectile.Center, -Projectile.oldVelocity * 0.2f, 705, 1f);
+                Gore.NewGore(Projectile.GetSource_FromThis(), Projectile.Center, -Projectile.oldVelocity * 0.2f, 704, 1f);
+                Gore.NewGore(Projectile.GetSource_FromThis(), Projectile.Center, -Projectile.oldVelocity * 0.2f, 705, 1f);
                 if (Projectile.owner == Main.myPlayer)
                 {
                     var num = Main.rand.Next(20, 31);
@@ -40,7 +40,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
                             (float) Main.rand.Next(-100, 101));
                         vector2.Normalize();
                         vector2 *= (float) Main.rand.Next(10, 201) * 0.01f;
-                        Projectile.NewProjectile(Projectile.Center.X, Projectile.Center.Y, vector2.X, vector2.Y,
+                        Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, vector2.X, vector2.Y,
                             Mod.Find<ModProjectile>("IchorCloud1").Type, Projectile.damage / 5, 1f, Projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
                     }
                 }

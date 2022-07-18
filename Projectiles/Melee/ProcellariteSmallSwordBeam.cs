@@ -37,7 +37,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
         }
         public override void PostDraw(Color lightColor)
 		{
-			Texture2D texture = Mod.GetTexture("Projectiles/Melee/ProcellariteSmallSwordBeam_Glow");
+			Texture2D texture = Mod.Assets.Request<Texture2D>("Projectiles/Melee/ProcellariteSmallSwordBeam_Glow");
 			Main.EntitySpriteDraw
 			(
 				texture,

@@ -43,8 +43,8 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 		}
         public override void PostDraw(Color lightColor)
 		{
-			Texture2D texture = Mod.GetTexture("Projectiles/Throwing/DraconicHarvestProj_Glow");
-			spriteBatch.Draw
+			Texture2D texture = Mod.Assets.Request<Texture2D>("Projectiles/Throwing/DraconicHarvestProj_Glow");
+			Main.EntitySpriteDraw
 			(
 				texture,
 				Projectile.position,
@@ -54,7 +54,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 				texture.Size() * 0.5f,
 				Projectile.scale,
 				SpriteEffects.None,
-				0f
+				0
 			);
 		}
         public override void AI() 

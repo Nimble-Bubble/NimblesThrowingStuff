@@ -64,19 +64,8 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
         }
         public override void PostDraw(Color lightColor)
 		{
-			Texture2D texture = Mod.GetTexture("Projectiles/Throwing/NanoMissileProj_Glow");
-			spriteBatch.Draw
-			(
-				texture,
-				Projectile.position,
-				new Rectangle(0, 0, texture.Width, texture.Height),
-				Color.Cyan,
-				Projectile.rotation,
-				texture.Size() * 0.5f,
-				Projectile.scale,
-				SpriteEffects.None,
-				0f
-			);
+			Texture2D texture = Mod.Assets.Request<Texture2D>("Projectiles/Throwing/NanoMissileProj_Glow");
+			Main.EntitySpriteDraw(texture, Projectile.position, new Rectangle(0, 0, texture.Width, texture.Height), Color.Cyan, Projectile.rotation, texture.Size() * 0.5f, Projectile.scale, SpriteEffects.None, 0);
 		}
     }
 }

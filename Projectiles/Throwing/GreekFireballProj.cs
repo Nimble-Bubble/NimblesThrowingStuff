@@ -32,7 +32,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
         }
         public override void PostDraw(Color lightColor)
 		{
-			Texture2D texture = Mod.GetTexture("Projectiles/Throwing/GreekFireballProj_Glow");
+			Texture2D texture = Mod.Assets.Request<Texture2D>("Projectiles/Throwing/GreekFireballProj_Glow");
             Main.EntitySpriteDraw
             (
 				texture,
