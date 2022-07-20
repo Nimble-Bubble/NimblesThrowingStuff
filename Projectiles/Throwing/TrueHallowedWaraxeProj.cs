@@ -40,7 +40,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
         }
         public override void PostDraw(Color lightColor)
 		{
-			Texture2D texture = Mod.GetTexture("Projectiles/Throwing/TrueHallowedWaraxeProj_Glow");
+			Texture2D texture = Mod.Assets.Request<Texture2D>("Projectiles/Throwing/TrueHallowedWaraxeProj_Glow").Value;
             Main.EntitySpriteDraw
             (
 				texture,

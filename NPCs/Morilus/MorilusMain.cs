@@ -16,6 +16,11 @@ using NimblesThrowingStuff.Projectiles.Enemy;
 using NimblesThrowingStuff.Items.Consumables;
 using NimblesThrowingStuff.Items.Vanity;
 using NimblesThrowingStuff.Tiles.Blocks;
+using NimblesThrowingStuff.Items.Weapons.Melee;
+using NimblesThrowingStuff.Items.Weapons.Ranged;
+using NimblesThrowingStuff.Items.Weapons.Magic;
+using NimblesThrowingStuff.Items.Weapons.Summoning;
+using NimblesThrowingStuff.Items.Weapons.Throwing;
 using Terraria.GameContent.Bestiary;
 using Terraria.GameContent.ItemDropRules;
 
@@ -371,6 +376,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
                 else if (Main.netMode == NetmodeID.Server)
                     ChatHelper.BroadcastChatMessage(NetworkText.FromKey("The underworld glows with the energy of a storm..."), new Color(0, 171, 171));
             }
+            /*
             if(Main.expertMode)
             {
                 NPC.DropBossBags();
@@ -406,14 +412,25 @@ namespace NimblesThrowingStuff.NPCs.Morilus
             }
                 Item.NewItem(NPC.GetSource_FromThis(), (int)NPC.position.X, (int)NPC.position.Y, NPC.width, NPC.height, Mod.Find<ModItem>("SoulOfTrite").Type, Main.rand.Next(15, 24));
             }
+            */
         }
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Space,
-                new FlavorTestBestiaryInfoElement("This strange cycloptic automaton serves as the protector of a slightly less strange place called the Sky's Sea.")
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Sky,
+                new FlavorTextBestiaryInfoElement("This strange cycloptic automaton serves as the protector of a slightly less strange place called the Sky's Sea.")
             });
+        }
+        public override void ModifyNPCLoot(NPCLoot npcLoot)
+        {
+            npcLoot.Add(ItemDropRule.BossBag(ModContent.ItemType<MorilusTreasureBag>()));
+            LeadingConditionRule notExpertRule = new LeadingConditionRule(new Conditions.NotExpert());
+            notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<MorilusMask>(), 7));
+            notExpertRule.OnSuccess(ItemDropRule.Common(Mod.Find<ModItem>("MorilusTrophy").Type, 5));
+            notExpertRule.OnSuccess(ItemDropRule.OneFromOptions(1, Mod.Find<ModItem>("SkyseaSpinner").Type, Mod.Find<ModItem>("ProcellariteLongbow").Type, Mod.Find<ModItem>("GuardianStaff").Type, Mod.Find<ModItem>("StormShot").Type, Mod.Find<ModItem>("LacusDecapitator").Type));
+            //notExpertRule.OnSuccess(ItemDropRule.OneFromOptions(2, ModContent.ItemType<SkyseaSpinner>(), ModContent.ItemType<ProcellariteLongbow>(), ModContent.ItemType<StormShot>(), ModContent.ItemType<GuardianStaff>(), ModContent.ItemType<LacusDecapitator>()));
+            notExpertRule.OnSuccess(ItemDropRule.Common(Mod.Find<ModItem>("SoulOfTrite").Type, 1, 12, 20));
         }
         public override void BossLoot(ref string name, ref int potionType)
         {

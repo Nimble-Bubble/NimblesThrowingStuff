@@ -52,14 +52,14 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
                             Projectile.velocity.X * 0.1f, Projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
             if (lacdex >= 20)
                     {
-                        Projectile.NewProjectile(Projectile.Center.X, Projectile.Center.Y, Projectile.velocity.X, Projectile.velocity.Y,
+                        Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, Projectile.velocity.X, Projectile.velocity.Y,
                             Mod.Find<ModProjectile>("LacusEcho").Type, Projectile.damage / 2, 5f, Projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
                 lacdex = 0;
                     }
         }
         public override void PostDraw(Color lightColor)
 		{
-			Texture2D texture = Mod.Assets.Request<Texture2D>("Projectiles/Throwing/LacusDecapitatorProj_Glow");
+			Texture2D texture = Mod.Assets.Request<Texture2D>("Projectiles/Throwing/LacusDecapitatorProj_Glow").Value;
 			Main.EntitySpriteDraw
 			(
 				texture,

@@ -46,7 +46,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 			for (int i = 0; i < numberProjectiles; i++)
 			{
 				Vector2 perturbedSpeed = velocity.RotatedByRandom(MathHelper.ToRadians(10)); 
-				Projectile.NewProjectile(position, perturbedSpeed, type, damage, knockBack, player.whoAmI);
+				Projectile.NewProjectile(Item.GetSource_FromThis(), position, perturbedSpeed, type, damage, Item.knockBack, player.whoAmI);
 			}
         }
 	}

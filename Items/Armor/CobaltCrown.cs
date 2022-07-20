@@ -16,7 +16,7 @@ namespace NimblesThrowingStuff.Items.Armor
         {
             DisplayName.SetDefault("Cobalt Crown");
                 Tooltip.SetDefault("Increases minion damage by 5%");
-            ArmorIDs.Head.Sets.DrawHair[Item.headSlot] = true;
+            ArmorIDs.Head.Sets.DrawHatHair[Item.headSlot] = true;
         }
 
         public override void SetDefaults()

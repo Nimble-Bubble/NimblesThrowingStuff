@@ -38,7 +38,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 				ceilingLimit = player.Center.Y - 200f;
 			}
 			position = player.Center + new Vector2((-(float)Main.rand.Next(0, 11) * player.direction), -600f);
-			position.Y -= (100 * i);
+			position.Y -= 250;
 			Vector2 heading = target - position;
 			if (heading.Y < 0f)
 				{
@@ -49,7 +49,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 					heading.Y = 20f;
 				}
 			heading.Normalize();
-			heading *= new Vector2(speedX, speedY).Length();
+			heading *= velocity.Length();
 			velocity.X = heading.X;
 			velocity.Y = heading.Y + Main.rand.Next(-40, 41) * 0.10f;
 			position.X = target.X;

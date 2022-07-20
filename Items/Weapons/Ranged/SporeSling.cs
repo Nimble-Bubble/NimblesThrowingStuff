@@ -37,7 +37,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 			for (int i = 0; i < numberProjectiles; i++)
 			{
 				Vector2 stingerSpeed = velocity.RotatedByRandom(MathHelper.ToRadians(30)); 
-				int stinger = Projectile.NewProjectile(position, stingerSpeed, ProjectileID.HornetStinger, damage / 3, knockBack, player.whoAmI);
+				int stinger = Projectile.NewProjectile(Item.GetSource_FromThis(), position, stingerSpeed, ProjectileID.HornetStinger, damage / 3, Item.knockBack, player.whoAmI);
                 Main.projectile[stinger].minion = false;
                 Main.projectile[stinger].DamageType = DamageClass.Ranged;
 			}

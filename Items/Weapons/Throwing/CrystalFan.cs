@@ -30,7 +30,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
         public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
 		{
 
-				Vector2 perturbedSpeed = new Vector2(speedX, speedY).RotatedByRandom(MathHelper.ToRadians(20));
+				Vector2 perturbedSpeed = velocity.RotatedByRandom(MathHelper.ToRadians(20));
 			velocity = perturbedSpeed;
         }
         public override void AddRecipes()

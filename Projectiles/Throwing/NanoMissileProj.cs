@@ -44,7 +44,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
         }
         public override void Kill(int timeLeft) 
         {
-                        Projectile.NewProjectile(Projectile.position.X, Projectile.position.Y, 0, 0,
+                        Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.position.X, Projectile.position.Y, 0, 0,
                             Mod.Find<ModProjectile>("NanoMissileExplosion").Type, Projectile.damage, 10f, Projectile.owner, 0.0f, 0.0f);
             Projectile.position = Projectile.Center;
             Projectile.width = 250;
@@ -64,7 +64,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
         }
         public override void PostDraw(Color lightColor)
 		{
-			Texture2D texture = Mod.Assets.Request<Texture2D>("Projectiles/Throwing/NanoMissileProj_Glow");
+			Texture2D texture = Mod.Assets.Request<Texture2D>("Projectiles/Throwing/NanoMissileProj_Glow").Value;
 			Main.EntitySpriteDraw(texture, Projectile.position, new Rectangle(0, 0, texture.Width, texture.Height), Color.Cyan, Projectile.rotation, texture.Size() * 0.5f, Projectile.scale, SpriteEffects.None, 0);
 		}
     }

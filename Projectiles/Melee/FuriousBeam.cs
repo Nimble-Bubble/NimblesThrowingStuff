@@ -33,8 +33,8 @@ namespace NimblesThrowingStuff.Projectiles.Melee
         }
         public override void PostDraw(Color lightColor)
 		{
-			Texture2D texture = Mod.GetTexture("Projectiles/Melee/FuriousBeam_Glow");
-			spriteBatch.Draw
+			Texture2D texture = Mod.Assets.Request<Texture2D>("Projectiles/Melee/FuriousBeam_Glow").Value;
+			Main.EntitySpriteDraw
 			(
 				texture,
 				Projectile.position,
@@ -44,13 +44,13 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 				texture.Size() * 0.5f,
 				Projectile.scale,
 				SpriteEffects.None,
-				0f
+				0
 			);
 		}
         public override void OnHitNPC (NPC target, int damage, float knockback, bool crit)
         {
 			target.AddBuff(189, 750);
-            int splode = Projectile.NewProjectile(Projectile.Center.X, Projectile.Center.Y, 0, 0,
+            int splode = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, 0, 0,
             612, Projectile.damage, 6f, Projectile.owner, 0, (float) Main.rand.Next(-1, 1));
             Main.projectile[splode].usesLocalNPCImmunity = true;
             Main.projectile[splode].localNPCHitCooldown = 10;

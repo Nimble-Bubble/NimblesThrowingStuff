@@ -48,7 +48,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
                             (float) Main.rand.Next(-100, 101));
                         vector2.Normalize();
                         vector2 *= (float) Main.rand.Next(10, 201) * 0.025f;
-                        int forb = Projectile.NewProjectile(Projectile.Center.X, Projectile.Center.Y, vector2.X, vector2.Y,
+                        int forb = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, vector2.X, vector2.Y,
                             656, Projectile.damage / 2, 5f, Projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
                         Main.projectile[forb].DamageType = DamageClass.Throwing;
                 Main.projectile[forb].minion = false;

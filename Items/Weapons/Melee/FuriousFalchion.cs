@@ -38,11 +38,11 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 		{
       float numberProjectiles = 3; 
 			float rotation = MathHelper.ToRadians(10);
-			position += Vector2.Normalize(new Vector2(speedX, speedY)) * 6f;
+			position += Vector2.Normalize(velocity) * 6f;
 			for (int i = 0; i < numberProjectiles; i++)
 			{
-				Vector2 perturbedSpeed = new Vector2(speedX, speedY).RotatedBy(MathHelper.Lerp(-rotation, rotation, i / (numberProjectiles - 1))) * 2f; // Watch out for dividing by 0 if there is only 1 projectile.
-				Projectile.NewProjectile(position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, type, damage / 2, knockBack, player.whoAmI);
+				Vector2 perturbedSpeed = velocity.RotatedBy(MathHelper.Lerp(-rotation, rotation, i / (numberProjectiles - 1))) * 2f; 
+				Projectile.NewProjectile(Item.GetSource_FromThis(), position, perturbedSpeed, type, damage / 2, Item.knockBack, player.whoAmI);
 			}
         }
         public override void AddRecipes()

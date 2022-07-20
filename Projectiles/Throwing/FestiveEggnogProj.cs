@@ -71,7 +71,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
                         var SpeedY =
                             (float) (-(double) Math.Abs(Projectile.velocity.Y) * (double) Main.rand.Next(30, 50) *
                                      0.00999999977648258 + (double) Main.rand.Next(-20, 5) * 0.400000005960464);
-                        Projectile.NewProjectile(Projectile.Center.X + SpeedX, Projectile.Center.Y + SpeedY, SpeedX, SpeedY,
+                        Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X + SpeedX, Projectile.Center.Y + SpeedY, SpeedX, SpeedY,
                             type, (int) ((double) Projectile.damage * 0.5), 0.0f, Projectile.owner, 0.0f, 0.0f);
                     }
                 }

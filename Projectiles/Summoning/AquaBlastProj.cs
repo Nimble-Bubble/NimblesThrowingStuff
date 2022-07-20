@@ -202,7 +202,7 @@ namespace NimblesThrowingStuff.Projectiles.Summoning
 		}
        public override void PostDraw(Color lightColor)
 		{
-			Texture2D texture = Mod.Assets.Request<Texture2D>("Projectiles/Throwing/AquaBlastProj_Glow");
+			Texture2D texture = Mod.Assets.Request<Texture2D>("Projectiles/Throwing/AquaBlastProj_Glow").Value;
 			Main.EntitySpriteDraw
 			(
 				texture,

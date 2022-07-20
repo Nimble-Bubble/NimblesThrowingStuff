@@ -46,7 +46,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
                             Projectile.velocity.X * 0.1f, Projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
             if (Main.rand.NextBool(4))
             {
-            Item.NewItem(Projectile.getRect(), Mod.Find<ModItem>("ShadowJavelin").Type, 1);
+            Item.NewItem(Projectile.GetSource_FromThis(), Projectile.getRect(), Mod.Find<ModItem>("ShadowJavelin").Type);
             }
         }
     }

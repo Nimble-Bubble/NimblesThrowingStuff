@@ -37,7 +37,7 @@ namespace NimblesThrowingStuff.Projectiles.Enemy
         {
             for (int starSpawn = 0; starSpawn < 8; starSpawn++)
             {
-                int bigMakeLittle = Projectile.NewProjectile(Projectile.position.X, Projectile.position.Y, Main.rand.Next(-10, 11), Main.rand.Next(-10, 11), ProjectileID.FallingStar, Projectile.damage, Projectile.knockBack, Projectile.owner);
+                int bigMakeLittle = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.position.X, Projectile.position.Y, Main.rand.Next(-10, 11), Main.rand.Next(-10, 11), ProjectileID.FallingStar, Projectile.damage, Projectile.knockBack, Projectile.owner);
                 Main.projectile[bigMakeLittle].friendly = false;
                 Main.projectile[bigMakeLittle].hostile = true;
                 Main.projectile[bigMakeLittle].timeLeft = 600;

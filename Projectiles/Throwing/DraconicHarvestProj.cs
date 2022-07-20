@@ -43,7 +43,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 		}
         public override void PostDraw(Color lightColor)
 		{
-			Texture2D texture = Mod.Assets.Request<Texture2D>("Projectiles/Throwing/DraconicHarvestProj_Glow");
+			Texture2D texture = Mod.Assets.Request<Texture2D>("Projectiles/Throwing/DraconicHarvestProj_Glow").Value;
 			Main.EntitySpriteDraw
 			(
 				texture,

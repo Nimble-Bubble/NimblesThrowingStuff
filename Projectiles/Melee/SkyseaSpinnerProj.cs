@@ -32,7 +32,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
         }
         public override void PostDraw(Color lightColor)
 		{
-			Texture2D texture = Mod.Assets.Request<Texture2D>("Projectiles/Melee/SkyseaSpinnerProj_Glow");
+			Texture2D texture = ModContent.Request<Texture2D>("Projectiles/Melee/SkyseaSpinnerProj_Glow").Value;
             Main.EntitySpriteDraw
             (
 				texture,
@@ -48,7 +48,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 		}
         public override void OnHitNPC (NPC target, int damage, float knockback, bool crit)
         {
-            Projectile.NewProjectile(Projectile.position.X + Main.rand.Next(-1, 2), Projectile.position.Y - 1000, Main.rand.Next(-1, 2), Main.rand.Next(5, 9), ModContent.ProjectileType<ProcellariteSpikeProj>(), Projectile.damage / 3, Projectile.knockBack, Projectile.owner);
+            Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.position.X + Main.rand.Next(-1, 2), Projectile.position.Y - 1000, Main.rand.Next(-1, 2), Main.rand.Next(5, 9), ModContent.ProjectileType<ProcellariteSpikeProj>(), Projectile.damage / 3, Projectile.knockBack, Projectile.owner);
         }
     }
 }

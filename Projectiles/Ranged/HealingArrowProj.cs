@@ -40,7 +40,7 @@ namespace NimblesThrowingStuff.Projectiles.Ranged
                             Projectile.velocity.X * 0.1f, Projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
             if (Main.rand.NextBool(10))
             {
-                Item.NewItem(Projectile.getRect(), ModContent.ItemType<HealingArrow>());
+                Item.NewItem(Projectile.GetSource_FromThis(), Projectile.getRect(), ModContent.ItemType<HealingArrow>());
             }
         }
     }

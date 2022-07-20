@@ -38,7 +38,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
                             Projectile.velocity.X * 0.1f, Projectile.velocity.Y * 0.1f, 8, new Color(), 0.75f);
             if (Main.rand.NextBool(5))
             {
-                Item.NewItem(Projectile.getRect(), ModContent.ItemType<RustyBonesAxe>());
+                Item.NewItem(Projectile.GetSource_FromThis(), Projectile.getRect(), ModContent.ItemType<RustyBonesAxe>());
             }
         }
     }

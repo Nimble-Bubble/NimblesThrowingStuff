@@ -16,7 +16,7 @@ namespace NimblesThrowingStuff.Items.Armor
         {
             DisplayName.SetDefault("Palladium Crown");
                 Tooltip.SetDefault("Increases minion damage by 6%");
-            ArmorIDs.Head.Sets.DrawHair[Item.headSlot] = true;
+            ArmorIDs.Head.Sets.DrawHatHair[Item.headSlot] = true;
         }
 
         public override void SetDefaults()

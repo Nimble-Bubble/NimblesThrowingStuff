@@ -51,7 +51,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 					heading.Y = 20f;
 				}
 				heading.Normalize();
-				heading *= new Vector2(speedX, speedY).Length();
+				heading *= velocity.Length();
 				velocity.X = heading.X;
 				velocity.Y = heading.Y + Main.rand.Next(-40, 41) * 0.10f;
 				position.X = target.X;
