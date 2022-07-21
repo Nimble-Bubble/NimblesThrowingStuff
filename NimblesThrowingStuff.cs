@@ -27,11 +27,15 @@ namespace NimblesThrowingStuff
         public static NimblesThrowingStuff instance;
 
         public static ModKeybind MIGuardKey;
+        
+        
 
         public NimblesThrowingStuff()
         {
+            GoreAutoloadingEnabled = true;
+            ContentAutoloadingEnabled = true;
             //Properties = new ModProperties()
-           // {
+            // {
             //    Autoload = true,
             //    AutoloadSounds = true,
             //    AutoloadGores = true

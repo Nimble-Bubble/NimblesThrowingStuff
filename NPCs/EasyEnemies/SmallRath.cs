@@ -13,6 +13,8 @@ using Microsoft.Xna.Framework.Graphics;
 using NimblesThrowingStuff.Projectiles.Enemy;
 using NimblesThrowingStuff.Items.Materials;
 using Terraria.ModLoader.Utilities;
+using Terraria.GameContent.Bestiary;
+using Terraria.GameContent.ItemDropRules;
 
 namespace NimblesThrowingStuff.NPCs.EasyEnemies
 {
@@ -21,9 +23,9 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
         private Player player;
         private float speed;
         private int bararata;
-        SoundStyle SmallRathHurtNoise = new SoundStyle("Sounds/NPCHit/SmallRathHurt");
-        SoundStyle SmallRathKillNoise = new SoundStyle("Sounds/NPCKilled/SmallRathKill");
-        SoundStyle SmallRathFireNoise = new SoundStyle("Sounds/Item/SmallRathFire");
+        SoundStyle SmallRathHurtNoise = new SoundStyle("NimblesThrowingStuff/Sounds/NPCHit/SmallRathHurt");
+        SoundStyle SmallRathKillNoise = new SoundStyle("NimblesThrowingStuff/Sounds/NPCKilled/SmallRathKill");
+        SoundStyle SmallRathFireNoise = new SoundStyle("NimblesThrowingStuff/Sounds/Item/SmallRathFire");
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Small Rathwyvern");
@@ -152,7 +154,7 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
         }
         public override bool CheckDead()
         {
-            Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, Mod.Find<ModGore>("Gores/SmallRathHead").Type, 1f);
+            Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, Mod.Find<ModGore>("SmallRathHead").Type, 1f);
             for (int f = 0; f < 30; f++)
             {
                 int rathDust = Dust.NewDust(new Vector2(NPC.position.X, NPC.position.Y), NPC.width * 2, NPC.height * 2, 6, 0f, 0f, 100, default(Color), 3f);
@@ -211,10 +213,14 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
                 }
             }
         }
-        public override void OnKill()
+        /* public override void OnKill()
         {
             
             Item.NewItem(NPC.GetSource_FromThis(), (int)NPC.position.X, (int)NPC.position.Y, NPC.width, NPC.height, Mod.Find<ModItem>("RedRathScale").Type, Main.rand.Next(1, 3));
+        } */
+        public override void ModifyNPCLoot(NPCLoot npcLoot)
+        {
+            npcLoot.Add(ItemDropRule.Common(Mod.Find<ModItem>("RedRathScale").Type, 1, 1, 2));
         }
     }
 }
