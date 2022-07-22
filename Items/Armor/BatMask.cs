@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Items.Armor
     {
         public override void SetStaticDefaults()
         {
-                Tooltip.SetDefault("Increases minion damage by 5%");
+                Tooltip.SetDefault("Increases throwing damage by 10%");
         }
 
         public override void SetDefaults()
@@ -28,7 +28,7 @@ namespace NimblesThrowingStuff.Items.Armor
         }
         public override void UpdateEquip(Player player)
         {
-            player.GetDamage(DamageClass.Summon) += 0.05f;
+            player.GetDamage(DamageClass.Throwing) += 0.1f;
         }
         public override void AddRecipes()
         {

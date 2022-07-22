@@ -16,7 +16,7 @@ namespace NimblesThrowingStuff.Items.Armor
     {
         public override void SetStaticDefaults()
         {
-                Tooltip.SetDefault("Increases movement speed by 10%");
+                Tooltip.SetDefault("Increases thrown critical strike chance by 6%");
         }
 
         public override void SetDefaults()
@@ -29,7 +29,7 @@ namespace NimblesThrowingStuff.Items.Armor
         }
         public override void UpdateEquip(Player player)
         {
-            player.moveSpeed += 0.1f;
+            player.GetCritChance(DamageClass.Throwing) += 6;
         }
         public override bool IsArmorSet(Item head, Item body, Item legs)
         {
@@ -37,9 +37,8 @@ namespace NimblesThrowingStuff.Items.Armor
         }
         public override void UpdateArmorSet(Player player)
         {
-            player.setBonus = "10% increased minion damage and knockback";
-            player.GetDamage(DamageClass.Summon) += 0.1f;
-            player.GetKnockback(DamageClass.Summon).Base += 0.1f;
+            player.setBonus = "Fall damage is negated";
+            player.noFallDmg = true;
         }
         public override void AddRecipes()
         {

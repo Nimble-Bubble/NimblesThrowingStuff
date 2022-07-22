@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Items.Armor
     {
         public override void SetStaticDefaults()
         {
-                Tooltip.SetDefault("Increases the amount of minions and sentries that can be summoned");
+                Tooltip.SetDefault("Increases throwing velocity by 15%");
         }
 
         public override void SetDefaults()
@@ -24,12 +24,11 @@ namespace NimblesThrowingStuff.Items.Armor
             Item.height = 32;
             Item.value = 25000;
             Item.rare = 1;
-            Item.defense = 4; // The Defence value for this piece of armour.
+            Item.defense = 4; 
         }
         public override void UpdateEquip(Player player)
         {
-            player.maxMinions += 1;
-            player.maxTurrets += 1;
+            player.ThrownVelocity += 0.15f;
         }
         public override void AddRecipes()
         {
