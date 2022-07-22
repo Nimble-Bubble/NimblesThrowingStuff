@@ -222,5 +222,13 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
         {
             npcLoot.Add(ItemDropRule.Common(Mod.Find<ModItem>("RedRathScale").Type, 1, 1, 2));
         }
+        public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
+        {
+            bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+            {
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheUnderworld,
+                new FlavorTextBestiaryInfoElement("These small flying wyverns will one day grow up to be fierce apex predators.")
+            });
+        }
     }
 }

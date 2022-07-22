@@ -194,5 +194,14 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
         {
             npcLoot.Add(ItemDropRule.Common(Mod.Find<ModItem>("BeastBone").Type, 3));
         }
-	}
+        public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
+        {
+            bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
+            {
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Times.DayTime,
+                BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Surface,
+                new FlavorTextBestiaryInfoElement("These deer-like herbivores fall prey to all sorts of species, including humans.")
+            });
+        }
+    }
 }
