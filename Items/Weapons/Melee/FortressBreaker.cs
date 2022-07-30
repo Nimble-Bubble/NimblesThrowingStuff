@@ -42,11 +42,13 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			recipe.AddIngredient(ModContent.ItemType<RobustTusk>());
 			recipe.AddTile(TileID.Anvils);
 			recipe.Register();
+			recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.Bone, 15);
 			recipe.AddIngredient(ItemID.GreenBrick, 25);
 			recipe.AddIngredient(ModContent.ItemType<RobustTusk>());
 			recipe.AddTile(TileID.Anvils);
 			recipe.Register();
+			recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.Bone, 15);
 			recipe.AddIngredient(ItemID.PinkBrick, 25);
 			recipe.AddIngredient(ModContent.ItemType<RobustTusk>());
