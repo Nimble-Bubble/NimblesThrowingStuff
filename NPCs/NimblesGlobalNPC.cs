@@ -8,23 +8,24 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.ItemDropRules;
 using static Terraria.ModLoader.ModContent;
 
 namespace NimblesThrowingStuff.NPCs
 {
-    public class NimblesGlobalNPC : GlobalNPC
-    {
-        public override bool InstancePerEntity => true;
-        public bool greek;
+	public class NimblesGlobalNPC : GlobalNPC
+	{
+		public override bool InstancePerEntity => true;
+		public bool greek;
 		public bool compromise;
-        public override void ResetEffects(NPC npc)
-        {
-            greek = false;
-			compromise = false;
-        }
-        public override void UpdateLifeRegen(NPC npc, ref int damage)
+		public override void ResetEffects(NPC npc)
 		{
-            if (greek)
+			greek = false;
+			compromise = false;
+		}
+		public override void UpdateLifeRegen(NPC npc, ref int damage)
+		{
+			if (greek)
 			{
 				if (npc.lifeRegen > 0)
 				{
@@ -33,56 +34,55 @@ namespace NimblesThrowingStuff.NPCs
 				npc.lifeRegen -= 100; //That's even worse!
 			}
 			if (npc.HasBuff(BuffID.Bleeding))
-            {
+			{
 				if (npc.lifeRegen > 0)
-                {
+				{
 					npc.lifeRegen = 0;
-                }
+				}
 				npc.lifeRegen -= 10;
-            }
+			}
 			if (compromise)
-            {
+			{
 				if (npc.boss)
-                {
+				{
 					// Do nothing
-                }
+				}
 				else
-                {
+				{
 					npc.knockBackResist += 0.25f;
-                }
-            }
-            
-        }
-        public override void SetupShop(int type, Chest shop, ref int nextSlot)
-        {
-            Player player = Main.player[Main.myPlayer];
-            switch (type)
-            {
-            case 19:
-                    if (NPC.downedBoss2 && !Main.dayTime || Main.hardMode)
-                    {
-                        shop.item[nextSlot].SetDefaults(ItemType<HealingArrow>());
-                        nextSlot++;
-                    }
-                    break;
-            case 209:
-                    if (Main.hardMode)
-                    {
-                        shop.item[nextSlot].SetDefaults(ItemType<NanoMissile>());
-                        nextSlot++;
-                    }
-                    break;
-			case 368:
+				}
+			}
+
+		}
+		public override void SetupShop(int type, Chest shop, ref int nextSlot)
+		{
+			Player player = Main.player[Main.myPlayer];
+			switch (type)
+			{
+				case 19:
+					if (NPC.downedBoss2 && !Main.dayTime || Main.hardMode)
+					{
+						shop.item[nextSlot].SetDefaults(ItemType<HealingArrow>());
+						nextSlot++;
+					}
+					break;
+				case 209:
+					if (Main.hardMode)
+					{
+						shop.item[nextSlot].SetDefaults(ItemType<NanoMissile>());
+						nextSlot++;
+					}
+					break;
+				case 368:
 					if (NPC.downedMoonlord && Main.moonPhase % 2 == 0)
-                    {
+					{
 						shop.item[nextSlot].SetDefaults(ItemType<Superfast>());
 						nextSlot++;
-                    }
+					}
 					break;
 
-            }
-        }
-		//One day, this will probably be all NPCID instead of just numbers. Also, considering that most of this is loot, this may need to be put under the proper loot function instead of OnKill
+			}
+		}
 		public override void OnKill(NPC npc)
 		{
 			if (Main.hardMode && !npc.boss && npc.lifeMax > 1 && npc.damage > 0 && !npc.friendly && npc.value > 0f && Main.rand.NextBool(Main.expertMode ? 2 : 1, 5))
@@ -92,103 +92,107 @@ namespace NimblesThrowingStuff.NPCs
 					Item.NewItem(npc.GetSource_FromThis(), npc.getRect(), ItemType<SoulOfTrite>(), 1);
 				}
 			}
-			if (npc.type == 222 && Main.rand.NextBool(4) && !Main.expertMode)
+		}
+		public override void ModifyNPCLoot(NPC npc, NPCLoot npcLoot)
+		{
+			LeadingConditionRule notExpertRule = new LeadingConditionRule(new Conditions.NotExpert());
+			//Now, a lot of this could theoretically be done through switch instead, but I'll settle with this for now
+			if (npc.type == 158 || npc.type == 159)
 			{
-				Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<Beemerang>(), 1);
+				npcLoot.Add(ItemDropRule.Common(ItemType<BloodyPike>(), 25));
 			}
-            if (npc.type == NPCID.WallofFlesh && Main.rand.NextBool(7) && !Main.expertMode)
+			if (npc.type == 327)
 			{
-				Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<ThrowerEmblem>(), 1);
+				npcLoot.Add(ItemDropRule.Common(ItemType<UnholyHandGrenade>(), 10));
 			}
-            if (npc.type == 262 && Main.rand.NextBool(4) && !Main.expertMode)
+			if (npc.type == 325)
 			{
-				Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<ThornyGlove>(), 1);
+				npcLoot.Add(ItemDropRule.Common(ItemType<SpookySpines>(), 10));
 			}
-            if (npc.type == 245 && Main.rand.NextBool(4) && !Main.expertMode)
+			if (npc.type == 345)
 			{
-				Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<GolemGlove>(), 1);
+				npcLoot.Add(ItemDropRule.Common(ItemType<SnowflakeShuriken>(), 10));
 			}
-            if (npc.type == NPCID.DukeFishron && Main.rand.NextBool(5) && !Main.expertMode)
+			if (npc.type == NPCID.SantaNK1)
 			{
-				Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<PoseironTrident>(), 1);
+				npcLoot.Add(ItemDropRule.Common(ItemType<FestiveCloth>(), 1, 7, 12));
 			}
-            if (npc.type == NPCID.DukeFishron && Main.rand.NextBool(5) && !Main.expertMode)
+			if (npc.type >= 277 && npc.type <= 280)
 			{
-				Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<PoseironTrident>(), 1);
+				npcLoot.Add(ItemDropRule.Common(ItemType<HellBonesAxe>(), 3, 10, 20));
 			}
-            if (npc.type == 398 && Main.rand.NextBool(5) && !Main.expertMode)
+			if (npc.type >= 273 && npc.type <= 276)
 			{
-				Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<CosmosCrasher>(), 1);
-                Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<SatelliteSpear>(), 1);
+				npcLoot.Add(ItemDropRule.Common(ItemType<BrokeBonesAxe>(), 3, 10, 20));
 			}
-            if (npc.type == 392 && Main.rand.NextBool(5))
+			if (npc.type >= 269 && npc.type <= 272)
 			{
-				Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<MartianMiracle>(), 1);
+				npcLoot.Add(ItemDropRule.Common(ItemType<RustyBonesAxe>(), 3, 10, 20));
 			}
-            if (npc.type == NPCID.BigMimicHallow && Main.rand.NextBool(4))
+			if (npc.type >= 338 && npc.type <= 340 || npc.type >= 347 && npc.type <= 350)
 			{
-				Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<SacredWristband>(), 1);
+				npcLoot.Add(ItemDropRule.Common(ItemType<FestiveCloth>(), 2));
 			}
-            if (npc.type == 43 && Main.rand.NextBool(15))
+			if (npc.type == 471)
 			{
-				Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<HealthEater>(), 1); //??? 
+				npcLoot.Add(ItemDropRule.Common(ItemType<ShadowflameSpikeBall>(), 1, 125, 250));
 			}
-            if (npc.type == 49 || npc.type == 93)
-            {
-                Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<BatFlesh>(), 1);
-            }
-            if (npc.type == 48 && NPC.downedBoss3 && Main.rand.NextBool(25))
+			if (npc.type == 62 && NPC.downedBoss3)
 			{
-				Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<CumulusCrasher>(), 1);
+				npcLoot.Add(ItemDropRule.Common(ItemType<ShadowJavelin>(), 3, 20, 30));
+				npcLoot.Add(ItemDropRule.Common(ItemType<DemonClaw>(), 25));
 			}
-            if (npc.type == 62 && NPC.downedBoss3)
+			if (npc.type == 48 && NPC.downedBoss3)
 			{
-            Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<ShadowJavelin>(), Main.rand.Next(10, 21));
-            if (Main.rand.NextBool(20))
-                {
-				Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<DemonClaw>(), 1);
-                }
+				npcLoot.Add(ItemDropRule.Common(ItemType<CumulusCrasher>(), 20));
 			}
-            if (npc.type == 471)
+			if (npc.type == 49 || npc.type == 93)
 			{
-            Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<ShadowflameSpikeBall>(), Main.rand.Next(125, 251));
-            }
-            if (npc.type >= 338 && npc.type <= 340 && Main.rand.NextBool(2) || npc.type >= 347 && npc.type <= 350 && Main.rand.NextBool(2))
-			{
-				Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<FestiveCloth>(), 1);
+				npcLoot.Add(ItemDropRule.Common(ItemType<BatFlesh>(), 3, 1, 3));
 			}
-            if (npc.type >= 269 && npc.type <= 272)
+			if (npc.type == 43)
 			{
-				Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<RustyBonesAxe>(), Main.rand.Next(10, 21));
+				npcLoot.Add(ItemDropRule.Common(ItemType<HealthEater>(), 15));
 			}
-            if (npc.type >= 273 && npc.type <= 276)
+			if (npc.type == NPCID.BigMimicHallow)
 			{
-				Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<BrokeBonesAxe>(), Main.rand.Next(10, 21));
+				npcLoot.Add(ItemDropRule.Common(ItemType<SacredWristband>(), 4));
 			}
-            if (npc.type >= 277 && npc.type <= 280)
+			if (npc.type == 392)
 			{
-				Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<HellBonesAxe>(), Main.rand.Next(10, 21));
+				npcLoot.Add(ItemDropRule.Common(ItemType<MartianMiracle>(), 5));
 			}
-            if (npc.type == NPCID.SantaNK1)
+			if (npc.type == 398)
 			{
-				Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<FestiveCloth>(), Main.rand.Next(7, 13));
+				notExpertRule.OnSuccess(ItemDropRule.Common(ItemType<CosmosCrasher>(), 10));
+				notExpertRule.OnSuccess(ItemDropRule.Common(ItemType<SatelliteSpear>(), 10));
+				npcLoot.Add(notExpertRule);
 			}
-            if (npc.type == 345 && Main.rand.NextBool(10))
+			if (npc.type == NPCID.DukeFishron)
 			{
-				Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<SnowflakeShuriken>(), 1);
+				notExpertRule.OnSuccess(ItemDropRule.Common(ItemType<PoseironTrident>(), 5));
+				npcLoot.Add(notExpertRule);
 			}
-            if (npc.type == 325 && Main.rand.NextBool(20))
+			if (npc.type == 245)
 			{
-				Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<SpookySpines>(), 1);
+				notExpertRule.OnSuccess(ItemDropRule.Common(ItemType<GolemGlove>(), 4));
+				npcLoot.Add(notExpertRule);
 			}
-            if (npc.type == 327 && Main.rand.NextBool(10))
+			if (npc.type == 262)
 			{
-				Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<UnholyHandGrenade>(), 1);
+				notExpertRule.OnSuccess(ItemDropRule.Common(ItemType<ThornyGlove>(), 4));
+				npcLoot.Add(notExpertRule);
 			}
-            if (npc.type == 158 && Main.rand.NextBool(25) || npc.type == 159 && Main.rand.NextBool(25))
+			if (npc.type == NPCID.WallofFlesh)
 			{
-				Item.NewItem(npc.GetSource_FromThis(), (int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemType<BloodyPike>(), 1);
+				notExpertRule.OnSuccess(ItemDropRule.Common(ItemType<ThrowerEmblem>(), 7));
+				npcLoot.Add(notExpertRule);
+			}
+			if (npc.type == 222)
+			{
+				notExpertRule.OnSuccess(ItemDropRule.Common(ItemType<Beemerang>(), 4));
+				npcLoot.Add(notExpertRule);
 			}
 		}
-    }
+	}
 }
