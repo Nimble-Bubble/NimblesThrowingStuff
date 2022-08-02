@@ -13,4 +13,4 @@ Mert - Programmer, Conceptualizer
 Fefo - Tester, Conceptualizer
 Aura - Conceptualizer
 
-We have a wiki on the Terraria Mods Wiki, by the way. However, it's in an unfinished state, so some help might be nice.
+0.3.0.1 is our big port update. Things still don't work perfectly compared to 1.3, but most things may work. Lances are still not complete, as they do not span the whole game yet. Shields will be finished one day.

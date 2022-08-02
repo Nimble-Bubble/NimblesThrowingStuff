@@ -60,7 +60,6 @@ namespace NimblesThrowingStuff.NPCs.Morilus
             NPC.DeathSound = SoundID.NPCDeath3;
             Music = MusicID.Boss4;
             NPC.buffImmune[31] = true;
-            // bossBag/* tModPorter Note: Removed. Spawn the treasure bag alongside other loot via npcLoot.Add(ItemDropRule.BossBag(type)) */ = ModContent.ItemType<MorilusTreasureBag>();
             NPC.scale = 1.3f;
         }
         
@@ -366,7 +365,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
         }
         public override void OnKill()
         {
-            Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, Mod.Find<ModGore>("Gores/MorilusGore1").Type, 1f);
+            Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, Mod.Find<ModGore>("MorilusGore1").Type, 1f);
             if (!NimblesWorld.downedMorilus)
             {
                 Utilities.SpawnOre(ModContent.TileType<ProcellariteOreTile>(), 15E-05, .8f, .999f);
@@ -376,43 +375,6 @@ namespace NimblesThrowingStuff.NPCs.Morilus
                 else if (Main.netMode == NetmodeID.Server)
                     ChatHelper.BroadcastChatMessage(NetworkText.FromKey("The underworld glows with the energy of a storm..."), new Color(0, 171, 171));
             }
-            /*
-            if(Main.expertMode)
-            {
-                NPC.DropBossBags();
-            }
-            else
-            {
-            if (Main.rand.NextBool(7))
-                {
-                    Item.NewItem(NPC.GetSource_FromThis(), (int)NPC.position.X, (int)NPC.position.Y, NPC.width, NPC.height, Mod.Find<ModItem>("MorilusMask").Type);
-                }
-            if (Main.rand.NextBool(5))
-                {
-                    Item.NewItem(NPC.GetSource_FromThis(), (int)NPC.position.X, (int)NPC.position.Y, NPC.width, NPC.height, Mod.Find<ModItem>("MorilusTrophy").Type);
-                }
-                int MorileLoot = Main.rand.Next(5);
-            switch (MorileLoot)
-            {
-                case 0:
-                Item.NewItem(NPC.GetSource_FromThis(), (int)NPC.position.X, (int)NPC.position.Y, NPC.width, NPC.height, Mod.Find<ModItem>("SkyseaSpinner").Type);
-                break;
-                case 1:
-                Item.NewItem(NPC.GetSource_FromThis(), (int)NPC.position.X, (int)NPC.position.Y, NPC.width, NPC.height, Mod.Find<ModItem>("ProcellariteLongbow").Type);
-                break;
-                case 2:
-                Item.NewItem(NPC.GetSource_FromThis(), (int)NPC.position.X, (int)NPC.position.Y, NPC.width, NPC.height, Mod.Find<ModItem>("GuardianStaff").Type);
-                break;
-                case 3:
-                Item.NewItem(NPC.GetSource_FromThis(), (int)NPC.position.X, (int)NPC.position.Y, NPC.width, NPC.height, Mod.Find<ModItem>("StormShot").Type);
-                break;
-                case 4:
-                Item.NewItem(NPC.GetSource_FromThis(), (int)NPC.position.X, (int)NPC.position.Y, NPC.width, NPC.height, Mod.Find<ModItem>("LacusDecapitator").Type);
-                break;
-            }
-                Item.NewItem(NPC.GetSource_FromThis(), (int)NPC.position.X, (int)NPC.position.Y, NPC.width, NPC.height, Mod.Find<ModItem>("SoulOfTrite").Type, Main.rand.Next(15, 24));
-            }
-            */
         }
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
         {
