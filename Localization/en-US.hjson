@@ -1,0 +1,22 @@
+Mods: {
+  NimblesThrowingStuff: {
+    TownNPCMood: {
+      LivingRelic: {
+        Content: "Things are fine. All is well."
+        NoHome: "Where am I going to put my stuff?"
+        LoveSpace: "This is such a nice place! What's your place like?"
+        FarFromHome: "I think I need to get back home..."
+        DislikeCrowded: "It's a bit crowded in here. I'm not used to being around so many mammals."
+        HateCrowded: "It's awfully crowded here..."
+        LikeBiome: "I love the outside, but I now have to choose between the outside and the inside."
+        LoveBiome: "I think I've made my choice between the inside and the outside..."
+        DislikeBiome: "Normally, I love the outside, but now, I'm not too sure."
+        HateBiome: "I think I've made my choice between the inside and the outside..."
+        LikeNPC: "I think {NPCName} is neat."
+        LoveNPC: "Are these kinds of feelings between {NPCName} and I normal?"
+        DislikeNPC: "I'm not a big fan of {NPCName}...Something about them just seems odd."
+        HateNPC: "{NPCName} keeps trying to deny my ancestors' existence. Not a big fan of that."
+      }
+    }
+  }
+}

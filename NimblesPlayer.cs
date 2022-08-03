@@ -85,7 +85,7 @@ namespace NimblesThrowingStuff
                 }
             }
         }
-        public override void Hurt(bool pvp, bool quiet, double damage, int hitDirection, bool crit)
+        public override void Hurt(bool pvp, bool quiet, double damage, int hitDirection, bool crit, int cooldownCounter)
         {
             if (NimblesThrowingStuff.MIGuardKey.Current && whichShield >= 1)
             {
@@ -97,7 +97,7 @@ namespace NimblesThrowingStuff
                 SoundEngine.PlaySound(new SoundStyle("Sounds/Item/GuardMetalMedium"));
             }
         }
-        public override void PostHurt(bool pvp, bool quiet, double damage, int hitDirection, bool crit) {
+        public override void PostHurt(bool pvp, bool quiet, double damage, int hitDirection, bool crit, int cooldownCounter) {
             
                 if (canSanta)
          {
