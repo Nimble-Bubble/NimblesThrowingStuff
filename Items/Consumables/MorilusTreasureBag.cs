@@ -17,6 +17,7 @@ using NimblesThrowingStuff.Items.Weapons.Ranged;
 using NimblesThrowingStuff.Items.Weapons.Magic;
 using NimblesThrowingStuff.Items.Weapons.Summoning;
 using NimblesThrowingStuff.Items.Weapons.Throwing;
+using Terraria.GameContent.ItemDropRules;
 
 namespace NimblesThrowingStuff.Items.Consumables
 {
@@ -43,7 +44,7 @@ namespace NimblesThrowingStuff.Items.Consumables
         {
             return true;
         }
-        public override void OpenBossBag(Player player)
+        /* public override void OpenBossBag(Player player)
         {
             player.TryGettingDevArmor(Item.GetSource_FromThis());
             player.QuickSpawnItem(Item.GetSource_FromThis(), ItemID.GoldCoin, Main.rand.Next(50, 76));
@@ -76,6 +77,15 @@ namespace NimblesThrowingStuff.Items.Consumables
             {
                 player.QuickSpawnItem(Item.GetSource_FromThis(), ModContent.ItemType<MorilusTrophy>(), 1);
             }
+        } */
+        public override void ModifyItemLoot(ItemLoot itemLoot)
+        {
+            itemLoot.Add(ItemDropRule.CoinsBasedOnNPCValue(ModContent.NPCType<MorilusMain>()));
+            itemLoot.Add(ItemDropRule.Common(Mod.Find<ModItem>("CarpatusDefender").Type, 1));
+            itemLoot.Add(ItemDropRule.OneFromOptions(1, Mod.Find<ModItem>("SkyseaSpinner").Type, Mod.Find<ModItem>("ProcellariteLongbow").Type, Mod.Find<ModItem>("GuardianStaff").Type, Mod.Find<ModItem>("StormShot").Type, Mod.Find<ModItem>("LacusDecapitator").Type));
+            itemLoot.Add(ItemDropRule.Common(Mod.Find<ModItem>("SoulOfTrite").Type, 1, 16, 25));
+            itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<MorilusMask>(), 7));
+            itemLoot.Add(ItemDropRule.Common(Mod.Find<ModItem>("MorilusTrophy").Type, 5));
         }
     }
 }
