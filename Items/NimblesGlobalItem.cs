@@ -133,6 +133,21 @@ namespace NimblesThrowingStuff.Items
             recipe.AddRecipeGroup("IronBar");
             recipe.AddTile(TileID.Anvils);
             recipe.Register();
+            recipe = Recipe.Create(ItemID.DepthMeter, 1);
+            recipe.AddRecipeGroup("IronBar", 20);
+            recipe.AddRecipeGroup(nameof(ItemID.GoldBar), 5);
+            recipe.AddIngredient(ModContent.ItemType<BatFlesh>(), 5);
+            recipe.AddTile(TileID.Tables);
+            recipe.AddTile(TileID.Chairs);
+            recipe.Register();
+            recipe = Recipe.Create(ItemID.Compass, 1);
+            recipe.AddRecipeGroup("IronBar", 20);
+            recipe.AddRecipeGroup(nameof(ItemID.GoldBar), 10);
+            recipe.AddIngredient(ItemID.MarbleBlock, 25);
+            recipe.AddIngredient(ItemID.GraniteBlock, 25);
+            recipe.AddTile(TileID.Tables);
+            recipe.AddTile(TileID.Chairs);
+            recipe.Register();
         }
     }
 }

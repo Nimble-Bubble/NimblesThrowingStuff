@@ -95,5 +95,14 @@ namespace NimblesThrowingStuff
 				}
 			}
 		}
+        public override void AddRecipeGroups()
+        {
+            RecipeGroup Coppergroup = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.CopperBar)}", ItemID.CopperBar, ItemID.TinBar);
+            RecipeGroup.RegisterGroup(nameof(ItemID.CopperBar), Coppergroup);
+            RecipeGroup Silvergroup = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.SilverBar)}", ItemID.SilverBar, ItemID.TungstenBar);
+            RecipeGroup.RegisterGroup(nameof(ItemID.SilverBar), Silvergroup);
+            RecipeGroup Goldgroup = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.GoldBar)}", ItemID.GoldBar, ItemID.PlatinumBar);
+            RecipeGroup.RegisterGroup(nameof(ItemID.GoldBar), Goldgroup);
+        }
 	}
 }
