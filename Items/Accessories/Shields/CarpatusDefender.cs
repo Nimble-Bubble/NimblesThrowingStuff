@@ -23,15 +23,17 @@ namespace NimblesThrowingStuff.Items.Accessories.Shields
             Item.width = 30;
             Item.height = 30;
             Item.value = Item.value = Item.buyPrice(1, 50, 0, 0);
-            Item.rare = 11;
+            Item.rare = 10;
             Item.defense = 10;
-            Item.expert = true;
+            Item.expert = false;
         }
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             player.dash = 3;
             player.endurance += 0.2f;
+            var modPlayer = player.GetModPlayer<NimblesPlayer>();
+            modPlayer.whichShield = 3;
         }
     }
 }

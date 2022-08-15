@@ -82,6 +82,9 @@ namespace NimblesThrowingStuff
                     case 1:
                         Player.AddBuff(Mod.Find<ModBuff>("GuardIronShield").Type, 2);
                     break;
+                    case 2:
+                        Player.AddBuff(Mod.Find<ModBuff>("GuardHorrorshowShield").Type, 2);
+                        break;
                 }
             }
         }
@@ -95,6 +98,7 @@ namespace NimblesThrowingStuff
                 //}
                 quiet = true;
                 SoundEngine.PlaySound(new SoundStyle("Sounds/Item/GuardMetalMedium"));
+                cooldownCounter += 40;
             }
         }
         public override void PostHurt(bool pvp, bool quiet, double damage, int hitDirection, bool crit, int cooldownCounter) {
@@ -162,6 +166,15 @@ namespace NimblesThrowingStuff
                         {
                             Dust.NewDust(Player.position, Player.width, Player.height, 43, Player.velocity.X + Main.rand.Next(-3, 4), Player.velocity.Y + Main.rand.Next(-3, 4), 0, new Color (255, 255, 255));
                         }
+                        break;
+                    case 2:
+                        Player.immune = true;
+                        Player.invis = true;
+                        Player.cursed = true;
+                        break;
+                    case 3:
+                        Player.statDefense += 50;
+                        Player.statDefense += guardBonus;
                         break;
                 }
     }

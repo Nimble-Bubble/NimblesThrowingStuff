@@ -390,6 +390,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
             LeadingConditionRule notExpertRule = new LeadingConditionRule(new Conditions.NotExpert());
             notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<MorilusMask>(), 7));
             notExpertRule.OnSuccess(ItemDropRule.Common(Mod.Find<ModItem>("MorilusTrophy").Type, 5));
+            notExpertRule.OnSuccess(ItemDropRule.Common(Mod.Find<ModItem>("CarpatusDefender").Type, 4));
             notExpertRule.OnSuccess(ItemDropRule.OneFromOptions(1, Mod.Find<ModItem>("SkyseaSpinner").Type, Mod.Find<ModItem>("ProcellariteLongbow").Type, Mod.Find<ModItem>("GuardianStaff").Type, Mod.Find<ModItem>("StormShot").Type, Mod.Find<ModItem>("LacusDecapitator").Type));
             //notExpertRule.OnSuccess(ItemDropRule.OneFromOptions(2, ModContent.ItemType<SkyseaSpinner>(), ModContent.ItemType<ProcellariteLongbow>(), ModContent.ItemType<StormShot>(), ModContent.ItemType<GuardianStaff>(), ModContent.ItemType<LacusDecapitator>()));
             notExpertRule.OnSuccess(ItemDropRule.Common(Mod.Find<ModItem>("SoulOfTrite").Type, 1, 12, 20));

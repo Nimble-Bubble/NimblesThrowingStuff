@@ -26,7 +26,7 @@ namespace NimblesThrowingStuff.Items
             {
                 item.pick = 65;
             }
-		}
+        }
         public override bool CanRightClick(Item item)
         {
             if (item.CountsAsClass(DamageClass.Ranged) && Main.player[item.playerIndexTheItemIsReservedFor].GetModPlayer<NimblesPlayer>().rangeMisfire)
@@ -35,22 +35,22 @@ namespace NimblesThrowingStuff.Items
             }
             return base.CanRightClick(item);
         }
-        //public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
-        //{
-        //    if (source.ranged && Main.player[item.playerIndexTheItemIsReservedFor].GetModPlayer<NimblesPlayer>().rangeMisfire && Main.mouseRight)
-        //    {
-                //if (Main.player[item.playerIndexTheItemIsReservedFor].statMana > 100)
-                //{
-        //            Projectile.NewProjectile(position, Velocity, ModContent.ProjectileType<MisfireProj>(), damage *= 2, knockBack *= 2, Main.myPlayer, 0f);
-                //}
-                //else
-                //{
-                //    Gore.NewGore(position, new Vector2 (speedX, speedY), Main.rand.Next(11, 14), 1f);
-                //}
-        //    return false;
-        //}
-        //    return base.Shoot(player, item, source, position, Velocity, type, damage, knockBack);
-        //}
+        public override bool Shoot(Item item, Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+        {
+            if (item.DamageType == DamageClass.Ranged && Main.player[item.playerIndexTheItemIsReservedFor].GetModPlayer<NimblesPlayer>().rangeMisfire && Main.mouseRight)
+            {
+        if (Main.player[item.playerIndexTheItemIsReservedFor].statMana > 100)
+        {
+                    Projectile.NewProjectile(player.GetSource_FromThis(), position, velocity, ModContent.ProjectileType<MisfireProj>(), damage *= 2, knockback *= 2, Main.myPlayer, 0f);
+        }
+        else
+        {
+            Gore.NewGore(player.GetSource_FromThis(), position, velocity, Main.rand.Next(11, 14), 1f);
+        }
+            return false;
+        }
+            return base.Shoot(item, player, source, position, velocity, type, damage, knockback);
+    }
         public override void OpenVanillaBag(string context, Player player, int arg)
         {
             if (context == "bossBag") 
