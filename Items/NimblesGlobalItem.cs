@@ -37,11 +37,12 @@ namespace NimblesThrowingStuff.Items
         }
         public override bool Shoot(Item item, Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
         {
-            if (item.DamageType == DamageClass.Ranged && Main.player[item.playerIndexTheItemIsReservedFor].GetModPlayer<NimblesPlayer>().rangeMisfire && Main.mouseRight)
+            if (item.CountsAsClass(DamageClass.Ranged) && player.GetModPlayer<NimblesPlayer>().rangeMisfire && Main.mouseRight)
             {
-        if (Main.player[item.playerIndexTheItemIsReservedFor].statMana > 100)
+        if (player.statMana > 100)
         {
                     Projectile.NewProjectile(player.GetSource_FromThis(), position, velocity, ModContent.ProjectileType<MisfireProj>(), damage *= 2, knockback *= 2, Main.myPlayer, 0f);
+                        player.statMana -= 100;
         }
         else
         {

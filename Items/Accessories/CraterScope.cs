@@ -29,13 +29,13 @@ namespace NimblesThrowingStuff.Items.Accessories
             var modPlayer = player.GetModPlayer<NimblesPlayer>();
             modPlayer.rangeMisfire = true;
         }
-        /* public override void AddRecipes()
+        public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
             recipe.AddIngredient(ItemID.MeteoriteBar, 20);
             recipe.AddIngredient(ItemID.Lens, 3);
             recipe.AddTile(TileID.Anvils);
             recipe.Register();
-        } */
+        }
     }
 }
