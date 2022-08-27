@@ -6,6 +6,7 @@ There are non-consumable throwing weapons that consume mana, and you will see mo
 The summoning class gets some new pre-Plantera weapons (and other items) that may finally make it more viable.
 A new NPC can move into town after defeating the Eye of Cthulhu, and his primary purpose is to sell throwing items. He may even sell a new kind of fragment when the time arises...
 There are also additions for other classes, such as the new Lance weapon type for the Melee class.
+0.3.0.1 is our big port update. Things probably don't work perfectly compared to 1.3, but most things may work. Lances are still not complete, as they do not span the whole game yet. Shields will be finished one day.
 
 Credits:
 Nimble - Director, Programmer, Spriter, Conceptualizer
@@ -13,4 +14,3 @@ Mert - Programmer, Conceptualizer
 Fefo - Tester, Conceptualizer
 Aura - Conceptualizer
 
-0.3.0.1 is our big port update. Things still don't work perfectly compared to 1.3, but most things may work. Lances are still not complete, as they do not span the whole game yet. Shields will be finished one day.
