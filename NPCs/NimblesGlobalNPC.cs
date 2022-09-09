@@ -181,6 +181,7 @@ namespace NimblesThrowingStuff.NPCs
 			if (npc.type == NPCID.DukeFishron)
 			{
 				notExpertRule.OnSuccess(ItemDropRule.Common(ItemType<PoseironTrident>(), 5));
+				notExpertRule.OnSuccess(ItemDropRule.Common(ItemType<RoyalFin>(), 1, 7, 10));
 				npcLoot.Add(notExpertRule);
 			}
 			if (npc.type == 245)

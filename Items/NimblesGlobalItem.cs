@@ -73,9 +73,13 @@ namespace NimblesThrowingStuff.Items
                 {
                 player.QuickSpawnItem(player.GetSource_FromThis(), ItemType<GolemGlove>(), 1);
                 }
-            if (arg == ItemID.FishronBossBag && Main.rand.NextBool(4))
+            if (arg == ItemID.FishronBossBag)
                 {
-                player.QuickSpawnItem(player.GetSource_FromThis(), ItemType<PoseironTrident>(), 1);
+                player.QuickSpawnItem(player.GetSource_FromThis(), ItemType<RoyalFin>(), Main.rand.Next(10, 15));
+                    if (Main.rand.NextBool(4))
+                    {
+                        player.QuickSpawnItem(player.GetSource_FromThis(), ItemType<PoseironTrident>(), 1);
+                    }
                 }
                 if (arg == ItemID.MoonLordBossBag && Main.rand.NextBool(5))
                 {
