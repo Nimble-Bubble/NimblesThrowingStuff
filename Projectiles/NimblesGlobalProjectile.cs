@@ -16,6 +16,7 @@ namespace NimblesThrowingStuff.Items
                 return true;
             }
         }
+        public int maxShells;
         public override void SetDefaults(Projectile projectile)
         {
             Player player = Main.player[projectile.owner];

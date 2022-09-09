@@ -39,6 +39,9 @@ namespace NimblesThrowingStuff
         public bool guardState;
         public int guardBonus;
         public bool compromise;
+        public bool drownDebuff;
+        public int currentShells;
+        public int bonusShells;
         
         public override void ResetEffects()
         {
@@ -62,12 +65,14 @@ namespace NimblesThrowingStuff
         rangeMisfire = false;
         guardState = false;
         guardBonus = 0;
+        drownDebuff = false;
         }
         public override void UpdateDead()
         {
             greek = false;
             guardState = false;
             compromise = false;
+            drownDebuff = false;
     }
         public override void ProcessTriggers(TriggersSet triggersSet)
         {
@@ -193,6 +198,15 @@ namespace NimblesThrowingStuff
             {
                 Player.noKnockback = false;
                 guardBonus -= 10;
+            }
+    if (drownDebuff)
+            {
+                if (Player.lifeRegen > 0)
+                {
+                    Player.lifeRegen = 0;
+                }
+                Player.lifeRegenTime = 0;
+                Player.lifeRegen -= 14;
             }
         }
     }

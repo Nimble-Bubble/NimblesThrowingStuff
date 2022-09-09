@@ -20,6 +20,7 @@ namespace NimblesThrowingStuff.Items
                 return true;
             }
         }
+        public int maxShells;
         public override void SetDefaults(Item item) //no longer virtual
         {
             if (item.type == ItemID.ReaverShark)

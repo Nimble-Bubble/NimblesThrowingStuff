@@ -18,10 +18,12 @@ namespace NimblesThrowingStuff.NPCs
 		public override bool InstancePerEntity => true;
 		public bool greek;
 		public bool compromise;
+		public bool drowndebuff;
 		public override void ResetEffects(NPC npc)
 		{
 			greek = false;
 			compromise = false;
+			drowndebuff = false;
 		}
 		public override void UpdateLifeRegen(NPC npc, ref int damage)
 		{
@@ -52,6 +54,14 @@ namespace NimblesThrowingStuff.NPCs
 					npc.knockBackResist += 0.25f;
 				}
 			}
+			if (drowndebuff)
+            {
+				if (npc.lifeRegen > 0)
+                {
+					npc.lifeRegen = 0;
+                }
+				npc.lifeRegen -= 14;
+            }
 
 		}
 		public override void SetupShop(int type, Chest shop, ref int nextSlot)
