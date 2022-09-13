@@ -66,6 +66,8 @@ namespace NimblesThrowingStuff
         guardState = false;
         guardBonus = 0;
         drownDebuff = false;
+            //currentShells = 0;
+            bonusShells = 0;
         }
         public override void UpdateDead()
         {
@@ -73,6 +75,7 @@ namespace NimblesThrowingStuff
             guardState = false;
             compromise = false;
             drownDebuff = false;
+            currentShells = 0;
     }
         public override void ProcessTriggers(TriggersSet triggersSet)
         {
