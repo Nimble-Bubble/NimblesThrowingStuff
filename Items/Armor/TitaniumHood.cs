@@ -32,10 +32,8 @@ namespace NimblesThrowingStuff.Items.Armor
         }
         public override void UpdateArmorSet(Player player)
         {
-            player.setBonus = "Increased minion damage and slots";
-            player.maxMinions += 1;
-            player.GetDamage(DamageClass.Summon) += 0.13f;
-            player.onHitDodge = true;
+            player.setBonus = "Attacking generates a defensive barrier of titanium shards";
+            player.onHitTitaniumStorm = true;
         }
         public override void UpdateEquip(Player player)
         {

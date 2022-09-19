@@ -33,8 +33,8 @@ namespace NimblesThrowingStuff.Items.Armor
         }
         public override void UpdateArmorSet(Player player)
         {
-            player.setBonus = "Some attacks give you a free shadow dodge";
-            player.onHitDodge = true;
+            player.setBonus = "Attacking generates a defensive barrier of titanium shards";
+            player.onHitTitaniumStorm = true;
         }
         public override void UpdateEquip(Player player)
         {
