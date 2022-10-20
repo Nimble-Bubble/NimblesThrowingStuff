@@ -45,6 +45,12 @@ namespace NimblesThrowingStuff
         {
             instance = this;
             MIGuardKey = KeybindLoader.RegisterKeybind(this, "Guard", "Z");
+            //Chances are, a lot of players won't see this message. However, if you do, please note that the wiki is currently incomplete and outdated. You don't need to help, but if you want to, you can do so.
+            ModLoader.TryGetMod("Wikithis", out Mod wikithis);
+            if (wikithis != null && !Main.dedServ)
+            {
+                wikithis.Call("AddModURL", this, "https://terrariamods.fandom.com/wiki/Magnumiactus/{}");
+            }
         }
         public override void Unload()
         {
