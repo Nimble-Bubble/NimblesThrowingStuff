@@ -30,6 +30,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
             Item.knockBack = 5f;
 			Item.shootSpeed = 9f;
 			Item.DamageType = DamageClass.Ranged;
+			Item.autoReuse = true;
 		}
 		public override void AddRecipes()
 		{

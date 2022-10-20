@@ -32,6 +32,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
             Item.knockBack = 6f;
 			Item.shootSpeed = 21f;
 			Item.DamageType = DamageClass.Ranged;
+			Item.autoReuse = true;
 		}
 		public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockBack)
 		{
