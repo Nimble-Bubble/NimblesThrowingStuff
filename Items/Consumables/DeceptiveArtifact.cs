@@ -37,19 +37,17 @@ namespace NimblesThrowingStuff.Items.Consumables
 		{
 			return !NPC.AnyNPCs(ModContent.NPCType<MorilusMain>());
 		}
-		//public override Nullable UseItem(Player player)
-		//{
-		//	NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<MorilusMain>());
-        //    NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<SkySeaGuardian>());
-         //   NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<SkySeaGuardian>());
-        //    NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<SkySeaGuardian>());
-        //    NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<SkySeaGuardian>());
-		//	SoundEngine.PlaySound(15, (int)player.position.X, (int)player.position.Y);
-//
-		//	return null;
-		//}
+		public override bool? UseItem(Player player)
+		{
+			NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<MorilusMain>());
+            NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<SkySeaGuardian>());
+            NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<SkySeaGuardian>());
+            NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<SkySeaGuardian>());
+            NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<SkySeaGuardian>());
+			SoundEngine.PlaySound(SoundID.Roar);
 
-
+			return true;
+		}
 		public override void AddRecipes()
 		{
 			Recipe recipe = CreateRecipe();

@@ -33,6 +33,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
         private float speed;
         private int bigStarHealth;
         private bool sleepy;
+        private bool doFunkyAnimationThing;
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Morilus, the Great Guardian of the Sky's Sea");
@@ -271,6 +272,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
             else
             {
             NPC.dontTakeDamage = true;
+            NPC.damage = 0;
             sleepy = true;
             }
 
@@ -366,9 +368,11 @@ namespace NimblesThrowingStuff.NPCs.Morilus
         public override void OnKill()
         {
             Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, Mod.Find<ModGore>("MorilusGore1").Type, 1f);
+            Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, Mod.Find<ModGore>("MorilusGore2").Type, 1f);
             if (!NimblesWorld.downedMorilus)
             {
                 Utilities.SpawnOre(ModContent.TileType<ProcellariteOreTile>(), 15E-05, .8f, .999f);
+                Utilities.SpawnOre(ModContent.TileType<ProcellariteOreTile>(), 15E-04, 0f, .1f);
                 NimblesWorld.downedMorilus = true;
                 if (Main.netMode == NetmodeID.SinglePlayer)
                     Main.NewText("The underworld glows with the energy of a storm...", new Color(0, 171, 171));
