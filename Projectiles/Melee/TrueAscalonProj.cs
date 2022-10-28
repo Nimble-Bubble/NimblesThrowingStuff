@@ -11,7 +11,7 @@ using NimblesThrowingStuff.Items;
 
 namespace NimblesThrowingStuff.Projectiles.Melee
 {
-    public class AscalonProj : ModProjectile
+    public class TrueAscalonProj : ModProjectile
     {
         private bool hasShelled;
         private int currentShellsLocal;
@@ -22,8 +22,8 @@ namespace NimblesThrowingStuff.Projectiles.Melee
         }
         public override void SetDefaults()
         {
-            Projectile.width = 32;
-            Projectile.height = 32;
+            Projectile.width = 40;
+            Projectile.height = 40;
             Projectile.usesLocalNPCImmunity = true;
             Projectile.localNPCHitCooldown = 10;
             Projectile.tileCollide = false;
@@ -33,7 +33,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             Projectile.aiStyle = 19;
             Projectile.timeLeft = 18000;
             Projectile.extraUpdates = 0;
-            Projectile.scale = 1.2f;
+            Projectile.scale = 1.3f;
             Projectile.ownerHitCheck = true;
             hasShelled = false;
         }
@@ -48,12 +48,12 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             Projectile.timeLeft = projOwner.itemAnimation;
             Projectile.position.X = ownerMountedCenter.X - (float)(Projectile.width / 2);
             Projectile.position.Y = ownerMountedCenter.Y - (float)(Projectile.height / 2);
-            Projectile.GetGlobalProjectile<NimblesGlobalProjectile>().maxShells = 5 + projOwner.GetModPlayer<NimblesPlayer>().bonusShells;
-            if (projOwner.GetModPlayer<NimblesPlayer>().currentShells > 5)
+            Projectile.GetGlobalProjectile<NimblesGlobalProjectile>().maxShells = 12 + projOwner.GetModPlayer<NimblesPlayer>().bonusShells;
+            if (projOwner.GetModPlayer<NimblesPlayer>().currentShells > 12)
             {
                 Gore.NewGore(Projectile.GetSource_FromThis(), Projectile.position, Projectile.velocity, Mod.Find<ModGore>("ShellFlying").Type, 1f);
                 SoundEngine.PlaySound(SoundID.Item14);
-                projOwner.GetModPlayer<NimblesPlayer>().currentShells = 5;
+                projOwner.GetModPlayer<NimblesPlayer>().currentShells = 12;
             }
 
             if (!projOwner.frozen)
@@ -65,7 +65,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                 }
                 if (projOwner.itemAnimation > projOwner.itemAnimationMax / 2)
                 {
-                    float bole = 0.35f;
+                    float bole = 0.425f;
                     // bole /= 2;
                     movementFactor += bole;
                 }
@@ -118,7 +118,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                 if (NimblesThrowingStuff.MIGuardKey.Current)
                 {
                     Projectile.damage = 0;
-                    projOwner.GetModPlayer<NimblesPlayer>().currentShells += 1;
+                    projOwner.GetModPlayer<NimblesPlayer>().currentShells += 4;
                     if (projOwner.GetModPlayer<NimblesPlayer>().currentShells <= 0)
                     {
                         projOwner.GetModPlayer<NimblesPlayer>().currentShells = 1;
@@ -135,16 +135,20 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                 {
                     if (projOwner.GetModPlayer<NimblesPlayer>().currentShells > 0)
                     {
-                        int holylaser = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.velocity, ProjectileID.PurpleLaser, Projectile.damage / 2 * 3, 1.5f, Projectile.owner);
-                        Main.projectile[holylaser].DamageType = DamageClass.Melee;
-                           SoundEngine.PlaySound(SoundID.Item33);
+                        int holylaser1 = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.velocity.RotatedBy(MathHelper.ToRadians(-20f)), ProjectileID.PurpleLaser, Projectile.damage / 2, 1.5f, Projectile.owner);
+                        Main.projectile[holylaser1].DamageType = DamageClass.Melee;
+                        int holylaser2 = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.velocity, ProjectileID.PurpleLaser, Projectile.damage / 2, 1.5f, Projectile.owner);
+                        Main.projectile[holylaser2].DamageType = DamageClass.Melee;
+                        int holylaser3 = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.velocity.RotatedBy(MathHelper.ToRadians(20f)), ProjectileID.PurpleLaser, Projectile.damage / 2, 1.5f, Projectile.owner);
+                        Main.projectile[holylaser3].DamageType = DamageClass.Melee;
+                        SoundEngine.PlaySound(SoundID.Item33);
                         for (int f = 0; f < 20; f++)
                         {
                             int fireIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 72, 0f, 0f, 100, default(Color), 2f);
                             Main.dust[fireIndex].velocity *= 4f;
                         }
                         hasShelled = true;
-                        projOwner.GetModPlayer<NimblesPlayer>().currentShells -= 2;
+                        projOwner.GetModPlayer<NimblesPlayer>().currentShells -= 3;
                     }
                     else
                     {

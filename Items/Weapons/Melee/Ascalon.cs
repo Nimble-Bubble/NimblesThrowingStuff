@@ -13,7 +13,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 	{
 		public override void SetStaticDefaults()
 		{
-			Tooltip.SetDefault("Made with valuable ores, this lance can slice and thrust."
+			Tooltip.SetDefault("A masterwork of metalsmithing and machinery."
 				+"\nRight click to fire a holy laser beam. Guard and right click to charge the laser beams.");
 		}
 		public override void SetDefaults()
@@ -46,22 +46,22 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ModContent.ItemType<KnightLance>(), 1);
 			recipe.AddIngredient(ItemID.HallowedBar, 12);
-			recipe.AddTile(TileID.Anvils);
+			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.Register();
 			recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.SoulofFright, 10);
 			recipe.AddIngredient(ItemID.HallowedBar, 18);
-			recipe.AddTile(TileID.Anvils);
+			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.Register();
 			recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.SoulofMight, 10);
 			recipe.AddIngredient(ItemID.HallowedBar, 18);
-			recipe.AddTile(TileID.Anvils);
+			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.Register();
 			recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.SoulofSight, 10);
 			recipe.AddIngredient(ItemID.HallowedBar, 18);
-			recipe.AddTile(TileID.Anvils);
+			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.Register();
 		}
 	}
