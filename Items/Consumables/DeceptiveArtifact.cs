@@ -15,7 +15,9 @@ namespace NimblesThrowingStuff.Items.Consumables
 		{
 			DisplayName.SetDefault("Deceptive Artifact of the Sky's Sea");
             ItemID.Sets.SortingPriorityBossSpawns[Item.type] = 13;
-			Tooltip.SetDefault("Provokes the guardians of the Sky's Sea despite its status");
+			Tooltip.SetDefault("A precious-looking work of art, but not quite genuine"
+				+"\nProvokes the great guardian of the Sky's Sea regardless"
+				+"\nUse it as high as you can go for the best results");
 		}
 
 		public override void SetDefaults()
@@ -40,10 +42,10 @@ namespace NimblesThrowingStuff.Items.Consumables
 		public override bool? UseItem(Player player)
 		{
 			NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<MorilusMain>());
-            NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<SkySeaGuardian>());
-            NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<SkySeaGuardian>());
-            NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<SkySeaGuardian>());
-            NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<SkySeaGuardian>());
+            //NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<SkySeaGuardian>());
+            //NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<SkySeaGuardian>());
+            //NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<SkySeaGuardian>());
+            //NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<SkySeaGuardian>());
 			SoundEngine.PlaySound(SoundID.Roar);
 
 			return true;

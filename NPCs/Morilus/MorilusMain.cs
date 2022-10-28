@@ -32,8 +32,10 @@ namespace NimblesThrowingStuff.NPCs.Morilus
         private Player player;
         private float speed;
         private int bigStarHealth;
+        private Vector2 whereToOrbit;
         private bool sleepy;
         private bool doFunkyAnimationThing;
+        private bool moveNormally;
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Morilus, the Great Guardian of the Sky's Sea");
@@ -74,12 +76,16 @@ namespace NimblesThrowingStuff.NPCs.Morilus
         {
         sleepy = false;
                 bigStarHealth = NPC.lifeMax / 4;
-            Move(new Vector2(Main.rand.Next(-100, 101), Main.rand.Next(-100, 101)));
+                if (moveNormally)
+                {
+                    Move(new Vector2(Main.rand.Next(-100, 101), Main.rand.Next(-100, 101)));
+                }
             
             Vector2 vector8 = new Vector2(NPC.position.X + (NPC.width / 2), NPC.position.Y + (NPC.height / 2));
         
             NPC.ai[1]++;
             NPC.ai[2]++;
+            NPC.ai[3]++;
                 if (NPC.life <= NPC.lifeMax / 20)
                 {
                     if (NPC.ai[1] % 5 == 0)
@@ -116,6 +122,10 @@ namespace NimblesThrowingStuff.NPCs.Morilus
              {
             if (NPC.life >= NPC.lifeMax / 2)
             {
+                        if (Main.rand.NextBool(4) && NPC.ai[3] <= 4950)
+                        {
+                            NPC.ai[3] = Main.rand.Next(4950, 5250);
+                        }
                 int MoriAttack1 = Main.rand.Next(3);
             switch(MoriAttack1)
             {
@@ -267,6 +277,55 @@ namespace NimblesThrowingStuff.NPCs.Morilus
                 {
                     NPC.ai[2] = 0;
                 }
+                    if (NPC.ai[3] >= 4950 && NPC.ai[3] <= 9000)
+                    {
+                        moveNormally = false;
+                        if (NPC.ai[3] >= 4950 && NPC.ai[3] <= 5400)
+                        {
+                            whereToOrbit = new Vector2(0, -400);
+                            Move(whereToOrbit);
+                        }
+                        if (NPC.ai[3] >= 5400 && NPC.ai[3] <= 7200)
+                        {
+                            Move(whereToOrbit);
+                            if (Main.expertMode)
+                            {
+                            whereToOrbit.RotatedBy(MathHelper.ToRadians(0.75f));
+                            }
+                            else
+                            {
+                                whereToOrbit.RotatedBy(MathHelper.ToRadians(0.5f));
+                            }
+                            if (NPC.ai[3] >= 6000 && Main.rand.NextBool(2))
+                            {
+                                NPC.ai[3] += Main.rand.Next(1200, 4200);
+                            }
+                        }
+                        if (NPC.ai[3] >= 7200 && NPC.ai[3] <= 9000)
+                        {
+                            Move(whereToOrbit);
+                            if (Main.expertMode)
+                            {
+                                whereToOrbit.RotatedBy(MathHelper.ToRadians(-0.75f));
+                            }
+                            else
+                            {
+                                whereToOrbit.RotatedBy(MathHelper.ToRadians(-0.5f));
+                            }
+                            if (NPC.ai[3] >= 6000 && Main.rand.NextBool(2))
+                            {
+                                NPC.ai[3] += Main.rand.Next(1200, 4200);
+                            }
+                        }
+                    }
+                    if (NPC.ai[3] <= 4949 || NPC.ai[3] >= 9000)
+                    {
+                        moveNormally = true;
+                        if (NPC.ai[3] >= 9000)
+                        {
+                            NPC.ai[3] = Main.rand.Next(0, 4800);
+                        }
+                    }
                 NPC.dontTakeDamage = false;
             }
             else
@@ -301,10 +360,16 @@ namespace NimblesThrowingStuff.NPCs.Morilus
         }
         private void Move(Vector2 offset)
         {
+            float addspeedwhenlow = NPC.position.Y / 25000;
+            float enoughinposition = addspeedwhenlow - 1;
+            if (enoughinposition < 0)
+            {
+                enoughinposition = 0;
+            }
             float bwingawee = NPC.lifeMax / 4;
             if (!NPC.AnyNPCs(ModContent.NPCType<SkySeaGuardian>()))
             {
-                speed = 8f - (NPC.life / bwingawee);
+                speed = 8f + enoughinposition - (NPC.life / bwingawee);
                 NPC.defense = 80;
             }
             else
@@ -369,7 +434,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
         {
             Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, Mod.Find<ModGore>("MorilusGore1").Type, 1f);
             Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, Mod.Find<ModGore>("MorilusGore2").Type, 1f);
-            if (!NimblesWorld.downedMorilus)
+            if (NimblesWorld.downedMorilus == false)
             {
                 Utilities.SpawnOre(ModContent.TileType<ProcellariteOreTile>(), 15E-05, .8f, .999f);
                 Utilities.SpawnOre(ModContent.TileType<ProcellariteOreTile>(), 15E-04, 0f, .1f);
@@ -390,6 +455,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
         }
         public override void ModifyNPCLoot(NPCLoot npcLoot)
         {
+            NimblesWorld.downedMorilus = true;
             npcLoot.Add(ItemDropRule.BossBag(ModContent.ItemType<MorilusTreasureBag>()));
             LeadingConditionRule notExpertRule = new LeadingConditionRule(new Conditions.NotExpert());
             notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<MorilusMask>(), 7));

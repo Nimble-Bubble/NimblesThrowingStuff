@@ -27,7 +27,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
             NPC.knockBackResist = 0f;
             NPC.aiStyle = 23;
             AIType = 84;
-            AnimationType = 84;
+            //AnimationType = 84;
             NPC.boss = true;
             Music = MusicID.Boss4;
         }

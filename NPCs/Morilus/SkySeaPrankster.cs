@@ -59,5 +59,11 @@ namespace NimblesThrowingStuff.NPCs.Morilus
 					NPC.frameCounter = 0;
 				} 
         }
+		public override void OnKill()
+		{
+			Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity.RotatedBy(MathHelper.ToRadians(90f)), Mod.Find<ModGore>("SkySeaPranksterGore2").Type, 1f);
+			Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, Mod.Find<ModGore>("SkySeaPranksterGore1").Type, 1f);
+			Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity * new Vector2(-1, -1), Mod.Find<ModGore>("SkySeaPranksterGore1").Type, 1f);
+		}
 	}
 }
