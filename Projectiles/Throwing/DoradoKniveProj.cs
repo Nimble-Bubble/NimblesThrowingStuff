@@ -1,4 +1,5 @@
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
 using Terraria;
 using Terraria.Audio;
@@ -24,9 +25,26 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
             Projectile.localNPCHitCooldown = 10;
 			Projectile.DamageType = DamageClass.Throwing;
 			Projectile.penetrate = 10;
-			Projectile.hide = true;
+			Projectile.hide = false;
             Projectile.ignoreWater = true;
             Projectile.extraUpdates = 1;
+			Projectile.alpha = 0;
+		}
+		public override void PostDraw(Color lightColor)
+		{
+			Texture2D texture = Mod.Assets.Request<Texture2D>("Projectiles/Throwing/DoradoKniveProj").Value;
+			Main.EntitySpriteDraw
+			(
+				texture,
+				Projectile.position,
+				new Rectangle(0, 0, texture.Width, texture.Height),
+				Color.Orange,
+				Projectile.rotation,
+				texture.Size() * 0.5f,
+				Projectile.scale,
+				SpriteEffects.None,
+				0
+			);
 		}
 		public override bool TileCollideStyle(ref int width, ref int height, ref bool fallThrough, ref Vector2 hitboxCenterFrac)
 		{
@@ -126,27 +144,27 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 			}
 		}
 		private const int MAX_TICKS = 4;
-		private const int ALPHA_REDUCTION = 25;
+		private const int ALPHA_REDUCTION = 1;
 		int deathCount = 0;
 		public override void AI()
 		{
-			UpdateAlpha();
+			//UpdateAlpha();
 			if (IsStickingToTarget) StickyAI();
 			else NormalAI();
 		}
 
-		private void UpdateAlpha()
+		/* private void UpdateAlpha()
 		{
 			if (Projectile.alpha > 0)
 			{
-				Projectile.alpha -= ALPHA_REDUCTION;
+				Projectile.alpha += ALPHA_REDUCTION;
 			}
 
 			if (Projectile.alpha < 0)
 			{
 				Projectile.alpha = 0;
 			}
-		}
+		} */
 
 		private void NormalAI()
 		{

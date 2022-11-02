@@ -27,7 +27,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 		}
 		public override bool TileCollideStyle(ref int width, ref int height, ref bool fallThrough, ref Vector2 hitboxCenterFrac)
 		{
-			width = height = 34; 
+			width = height = 20; 
 			return true;
 		}
 
@@ -128,7 +128,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 		private void StickyAI()
 		{
 			Projectile.ignoreWater = true; 
-            Projectile.alpha += 10;
+            Projectile.alpha += 1;
 			Projectile.tileCollide = false; 
 			const int aiFactor = 3; 
 			Projectile.localAI[0] += 1f;
