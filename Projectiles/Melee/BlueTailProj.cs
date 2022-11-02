@@ -120,6 +120,12 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                 {
                     int throwFlames = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, Projectile.velocity.X / 3, Projectile.velocity.Y / 3, Mod.Find<ModProjectile>("BlueTailFlames").Type, Projectile.damage / 2, Projectile.knockBack / 2, Projectile.owner);
                    SoundEngine.PlaySound(SoundID.Item34);
+                    int throwFlames2 = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, Projectile.velocity.X / 5, Projectile.velocity.Y / 5, Mod.Find<ModProjectile>("BlueTailFlames").Type, Projectile.damage / 2, Projectile.knockBack / 2, Projectile.owner);
+                    SoundEngine.PlaySound(SoundID.Item34);
+                    Main.projectile[throwFlames2].velocity.RotatedBy(MathHelper.ToRadians(5));
+                    int throwFlames3 = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, Projectile.velocity.X / 5, Projectile.velocity.Y / 5, Mod.Find<ModProjectile>("BlueTailFlames").Type, Projectile.damage / 2, Projectile.knockBack / 2, Projectile.owner);
+                    SoundEngine.PlaySound(SoundID.Item34);
+                    Main.projectile[throwFlames3].velocity.RotatedBy(MathHelper.ToRadians(-5));
                     redTailPower += 60;
                 }
                 else
