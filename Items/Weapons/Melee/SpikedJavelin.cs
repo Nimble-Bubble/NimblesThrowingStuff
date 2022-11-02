@@ -9,20 +9,20 @@ using NimblesThrowingStuff.Items.Materials;
 
 namespace NimblesThrowingStuff.Items.Weapons.Melee
 {
-	public class KnightLance : ModItem
+	public class SpikedJavelin : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
-			Tooltip.SetDefault("Made with valuable ores, this lance can slice and thrust."
+			Tooltip.SetDefault("This lance is lightweight and easy to craft, which makes it popular among hunters."
 				+"\nRight click to swing like a sword.");
 		}
 		public override void SetDefaults()
 		{
-			Item.damage = 47;
+			Item.damage = 55;
 			Item.useStyle = ItemUseStyleID.Shoot;
-			Item.useAnimation = 26;
-			Item.useTime = 26;
-			Item.knockBack = 6.5f;
+			Item.useAnimation = 30;
+			Item.useTime = 30;
+			Item.knockBack = 5f;
 			Item.width = 76;
 			Item.height = 76;
 			Item.noUseGraphic = true;
@@ -31,7 +31,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			Item.value = Item.buyPrice(0, 15, 0, 0);
 			Item.DamageType = DamageClass.Melee;
 			Item.channel = true;
-			Item.shoot = ModContent.ProjectileType<KnightLanceProj>();
+			Item.shoot = ModContent.ProjectileType<SpikedJavelinProj>();
 			Item.shootSpeed = 13f;
 			Item.autoReuse = true;
 			Item.UseSound = SoundID.Item1;
@@ -46,31 +46,27 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
             if (player.altFunctionUse == 2)
             {
 				Item.useStyle = ItemUseStyleID.Swing;
-				Item.shoot = ProjectileID.None;
-				Item.noUseGraphic = false;
-				Item.noMelee = false;
+				Item.shoot = ModContent.ProjectileType<SpikedJavelinThrown>();
             }
 			else
             {
 				Item.useStyle = ItemUseStyleID.Shoot;
-				Item.shoot = ModContent.ProjectileType<KnightLanceProj>();
-				Item.noUseGraphic = true;
-				Item.noMelee = true;
+				Item.shoot = ModContent.ProjectileType<SpikedJavelinProj>();
 			}
 			return base.CanUseItem(player);
         }
         public override void AddRecipes()
 		{
 			Recipe recipe = CreateRecipe();
-			recipe.AddIngredient(ModContent.ItemType<GrowlingWyvern>(), 1);
-			recipe.AddRecipeGroup(nameof(ItemID.CobaltBar), 12);
-			recipe.AddIngredient(ItemID.CrystalShard, 6);
-			recipe.AddTile(TileID.Anvils);
+			recipe.AddIngredient(ModContent.ItemType<FortressBreaker>(), 1);
+			recipe.AddIngredient(ItemID.Bone, 20);
+			recipe.AddRecipeGroup(nameof(ItemID.CursedFlames), 6);
+			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.Register();
 			recipe = CreateRecipe();
-			recipe.AddIngredient(ItemID.CrystalShard, 10);
-			recipe.AddRecipeGroup(nameof(ItemID.CobaltBar), 18);
-			recipe.AddTile(TileID.Anvils);
+			recipe.AddIngredient(ItemID.Bone, 30);
+			recipe.AddRecipeGroup(nameof(ItemID.CursedFlames), 12);
+			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.Register();
 		}
 	}

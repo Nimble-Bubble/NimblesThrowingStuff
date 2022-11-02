@@ -103,6 +103,14 @@ namespace NimblesThrowingStuff
             RecipeGroup.RegisterGroup(nameof(ItemID.SilverBar), Silvergroup);
             RecipeGroup Goldgroup = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.GoldBar)}", ItemID.GoldBar, ItemID.PlatinumBar);
             RecipeGroup.RegisterGroup(nameof(ItemID.GoldBar), Goldgroup);
+            RecipeGroup Cobaltgroup = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.CobaltBar)}", ItemID.CobaltBar, ItemID.PalladiumBar);
+            RecipeGroup.RegisterGroup(nameof(ItemID.CobaltBar), Cobaltgroup);
+            RecipeGroup Mythgroup = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.MythrilBar)}", ItemID.MythrilBar, ItemID.OrichalcumBar);
+            RecipeGroup.RegisterGroup(nameof(ItemID.MythrilBar), Mythgroup);
+            RecipeGroup Adamantgroup = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.AdamantiteBar)}", ItemID.AdamantiteBar, ItemID.TitaniumBar);
+            RecipeGroup.RegisterGroup(nameof(ItemID.AdamantiteBar), Adamantgroup);
+            RecipeGroup EvilTomeIngredients = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Debuff-causing substance that can be obtained from an Evil Biome in Hardmode", ItemID.CursedFlames, ItemID.Ichor);
+            RecipeGroup.RegisterGroup(nameof(ItemID.CursedFlames), EvilTomeIngredients);
         }
 	}
 }
