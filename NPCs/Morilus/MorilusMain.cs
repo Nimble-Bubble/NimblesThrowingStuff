@@ -113,10 +113,17 @@ namespace NimblesThrowingStuff.NPCs.Morilus
                 {
                 damage = 120;
                 }
-                int type = ModContent.ProjectileType<MorilusStream>();
+                int type = ModContent.ProjectileType<MorilusBolt>();
                 SoundEngine.PlaySound(SoundID.Item11, NPC.position);
                 float rotation = (float)Math.Atan2(vector8.Y - (player.position.Y + (player.height * 0.5f)), vector8.X - (player.position.X + (player.width * 0.5f)));
                 int num54 = Projectile.NewProjectile(NPC.GetSource_FromThis(), vector8.X, vector8.Y, (float)((Math.Cos(rotation) * Speed) * -1), (float)((Math.Sin(rotation) * Speed) * -1), type, damage, 0f, 0);
+                if (Main.rand.NextBool(4) && NPC.life >= NPC.lifeMax / 2 || NPC.life <= NPC.lifeMax / 2)
+                    {
+                        int num54b = Projectile.NewProjectile(NPC.GetSource_FromThis(), vector8.X, vector8.Y, (float)((Math.Cos(rotation) * Speed) * -1), (float)((Math.Sin(rotation) * Speed) * -1), type, damage, 0f, 0);
+                        Main.projectile[num54b].velocity.RotatedBy(MathHelper.ToDegrees(20));
+                        int num54c = Projectile.NewProjectile(NPC.GetSource_FromThis(), vector8.X, vector8.Y, (float)((Math.Cos(rotation) * Speed) * -1), (float)((Math.Sin(rotation) * Speed) * -1), type, damage, 0f, 0);
+                        Main.projectile[num54c].velocity.RotatedBy(MathHelper.ToDegrees(-20));
+                    }
                 }
              if (NPC.ai[1] >= 120 && NPC.ai[1] <= 130)
              {

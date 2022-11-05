@@ -1,12 +1,12 @@
 Welcome to the Magnumiactus mod! 
-This is a mod that currently focuses on expanding the throwing and summoning classes, but it will be a much more expansive content mod in the future.
-The throwing class gets several sets and pieces of equipment for Hardmode, making a playthrough much easier. 
+This mod is a general content mod, with lots of things to be found. One of its biggest focus points is the throwing class expansion, bringing it from a bit of a novelty in vanilla 1.3 to a class on par with any other.
 There are non-consumable throwing weapons that consume mana, and you will see more of these the further you progress.
 (The throwing items may be rather unbalanced compared to other classes, but I don't believe there's a vanilla standard for Hardmode throwing equipment.)
 The summoning class gets some new pre-Plantera weapons (and other items) that may finally make it more viable.
 A new NPC can move into town after defeating the Eye of Cthulhu, and his primary purpose is to sell throwing items. He may even sell a new kind of fragment when the time arises...
 There are also additions for other classes, such as the new Lance weapon type for the Melee class.
 0.3.0.1 is our big port update. Things probably don't work perfectly compared to 1.3, but most things may work. Lances are still not complete, as they do not span the whole game yet. Shields will be finished one day.
+One thing of note for this update is that a new command/action has been added: Guard. This key's purpose is not only for guarding, but for interacting with special weapons such as Gunlances in special ways.
 
 Credits:
 Nimble - Director, Programmer, Spriter, Conceptualizer
