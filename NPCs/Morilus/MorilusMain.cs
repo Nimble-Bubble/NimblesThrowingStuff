@@ -191,10 +191,20 @@ namespace NimblesThrowingStuff.NPCs.Morilus
                 int type1 = ModContent.ProjectileType<MorilusBolt>();
                 SoundEngine.PlaySound(SoundID.Item11, NPC.position);
                 float rotation1 = (float)Math.Atan2(vector8.Y - (player.position.Y + (player.height * 0.5f)), vector8.X - (player.position.X + (player.width * 0.5f)));
-                for (int spaldaedal = 0; spaldaedal < 15; spaldaedal++)
-                {
-                int num54 = Projectile.NewProjectile(NPC.GetSource_FromThis(), vector8.X, vector8.Y, (float)((Math.Cos(rotation1) * Speed1) * -1) + Main.rand.Next(-3, 4), (float)((Math.Sin(rotation1) * Speed1) * -1) + Main.rand.Next(-3, 4), type1, damage1, 0f, 0);
-                }
+                        if (!Main.expertMode)
+                        {
+                            for (int spaldaedal = 0 + Main.rand.Next(6); spaldaedal < 10; spaldaedal++)
+                            {
+                                int num54 = Projectile.NewProjectile(NPC.GetSource_FromThis(), vector8.X, vector8.Y, (float)((Math.Cos(rotation1) * Speed1) * -1) + Main.rand.Next(-3, 4), (float)((Math.Sin(rotation1) * Speed1) * -1) + Main.rand.Next(-3, 4), type1, damage1, 0f, 0);
+                            }
+                        }
+                        else
+                        {
+                            for (int spaldaedal = 0; spaldaedal < 15; spaldaedal++)
+                            {
+                                int num54 = Projectile.NewProjectile(NPC.GetSource_FromThis(), vector8.X, vector8.Y, (float)((Math.Cos(rotation1) * Speed1) * -1) + Main.rand.Next(-3, 4), (float)((Math.Sin(rotation1) * Speed1) * -1) + Main.rand.Next(-3, 4), type1, damage1, 0f, 0);
+                            }
+                        }
                 }
                 if (NPC.ai[1] >= 290)
                 {    
