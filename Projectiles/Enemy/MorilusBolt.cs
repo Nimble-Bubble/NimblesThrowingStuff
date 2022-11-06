@@ -25,16 +25,10 @@ namespace NimblesThrowingStuff.Projectiles.Enemy
             Projectile.light = 1f;
             Projectile.alpha = 255;
             Projectile.timeLeft = 200;
-            Projectile.extraUpdates = 1;
+            //Projectile.extraUpdates = 1;
         }
         public override void AI()
         {
-            Projectile.velocity.X *= 0.995f;
-            Projectile.velocity.Y += 0.2f;
-            if (Projectile.velocity.Y > 10)
-            {
-                Projectile.velocity.Y = 10;
-            }
             Projectile.rotation += 10;
             Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<ProcellariteWaterDust>(), Main.rand.Next(-3, 2), Main.rand.Next(-3, 2), 0, default, Main.rand.NextFloat(0.5f, 1.5f));
         }
