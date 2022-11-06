@@ -32,9 +32,6 @@ namespace NimblesThrowingStuff.Items.Armor
             var modPlayer = player.GetModPlayer<NimblesPlayer>();
             player.GetDamage(DamageClass.Generic) += 0.1f;
             player.GetCritChance(DamageClass.Generic) += 10;
-            player.GetCritChance(DamageClass.Ranged) += 10;
-            player.GetCritChance(DamageClass.Magic) += 10;
-            player.GetCritChance(DamageClass.Throwing) += 10;
             player.statLifeMax2 += 100;
         }
 
