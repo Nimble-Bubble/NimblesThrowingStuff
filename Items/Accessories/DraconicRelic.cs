@@ -15,6 +15,7 @@ namespace NimblesThrowingStuff.Items.Accessories
     {
         public override void SetStaticDefaults()
         {
+            DisplayName.SetDefault("Dorado's Flight");
             Tooltip.SetDefault("Allows flight and slow fall"
             + "\nStellar membrane gives these wings powerful flight.");
         }

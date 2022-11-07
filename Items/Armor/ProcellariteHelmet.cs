@@ -40,7 +40,7 @@ namespace NimblesThrowingStuff.Items.Armor
         public override void UpdateEquip(Player player)
         {
              player.GetDamage(DamageClass.Melee) += 0.3f;
-            player.GetCritChance(DamageClass.Generic) += 30;
+            player.GetCritChance(DamageClass.Melee) += 30;
         }
 
 

@@ -15,7 +15,8 @@ namespace NimblesThrowingStuff.Items.Accessories.Shields
         
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Makes you completely invisible when guarding");
+            Tooltip.SetDefault("Makes you invisible when guarding"
+                +"\nIn this invisible state, you are invincible, but your weapons become much less useful");
         }
         public override void SetDefaults()
         {
