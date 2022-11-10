@@ -12,7 +12,9 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 	{
         public override void SetStaticDefaults()
         {
-			Tooltip.SetDefault("Part-gun, part-lance, part-shark. It's ompletely safe, we swear.");
+			Tooltip.SetDefault("Part-gun, part-lance, part-shark. It's completely safe, we swear."
+				+"\nRight click while using to shoot. Guard and right click while using to reload."
+				+"\nAfter reloading, you can shoot up to six times before needing to reload again.");
         }
         public override void SetDefaults() {
 			Item.damage = 15;
