@@ -53,7 +53,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             if (projOwner.GetModPlayer<NimblesPlayer>().currentShells > 8)
             {
                 Gore.NewGore(Projectile.GetSource_FromThis(), Projectile.position, Projectile.velocity, Mod.Find<ModGore>("ShellFlying").Type, 1f);
-                SoundEngine.PlaySound(SoundID.Item14);
+                SoundEngine.PlaySound(SoundID.Item150);
                 projOwner.GetModPlayer<NimblesPlayer>().currentShells = 8;
             }
 
@@ -139,10 +139,10 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                         if (!hasShelled)
                         {
                             Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.velocity, ModContent.ProjectileType<SeaDiverBullet>(), Projectile.damage, Projectile.knockBack / 2, Projectile.owner);
-                        SoundEngine.PlaySound(SoundID.Item14);
+                        SoundEngine.PlaySound(SoundID.Item41);
                         //SoundEngine.PlaySound(HecklerShot);
-                            projOwner.velocity.X -= Projectile.velocity.X / 12;
-                        projOwner.velocity.Y -= Projectile.velocity.Y / 12;
+                            projOwner.velocity.X -= Projectile.velocity.X / 24;
+                        projOwner.velocity.Y -= Projectile.velocity.Y / 24;
                         for (int f = 0; f < 20; f++)
                         {
                             int fireIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 135, 0f, 0f, 100, default(Color), 3f);

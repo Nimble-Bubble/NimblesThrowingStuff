@@ -53,7 +53,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             if (projOwner.GetModPlayer<NimblesPlayer>().currentShells > 6)
             {
                 Gore.NewGore(Projectile.GetSource_FromThis(), Projectile.position, Projectile.velocity, Mod.Find<ModGore>("ShellFlying").Type, 1f);
-                SoundEngine.PlaySound(SoundID.Item14);
+                SoundEngine.PlaySound(SoundID.Item150);
                 projOwner.GetModPlayer<NimblesPlayer>().currentShells = 6;
             }
 
@@ -139,7 +139,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                         if (!hasShelled)
                         {
                             Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.velocity, ModContent.ProjectileType<SeaDiverBullet>(), Projectile.damage, Projectile.knockBack / 2, Projectile.owner);
-                        SoundEngine.PlaySound(SoundID.Item14);
+                        SoundEngine.PlaySound(SoundID.Item11);
                         //SoundEngine.PlaySound(HecklerShot);
                             projOwner.velocity.X -= Projectile.velocity.X / 12;
                         projOwner.velocity.Y -= Projectile.velocity.Y / 12;
