@@ -22,6 +22,7 @@ namespace NimblesThrowingStuff
         public float rangedSpeed = 1f;
         public float magicSpeed = 1f;
         public float thrownSpeed = 1f;
+        public float universalSpeed = 1f;
         public bool sacredWrist;
         public bool thrownHeal;
         public bool greek;
@@ -48,6 +49,7 @@ namespace NimblesThrowingStuff
         rangedSpeed = 1f;
         magicSpeed = 1f;
         thrownSpeed = 1f;
+        universalSpeed = 1f;
         sacredWrist = false;
         thrownHeal = false;
         chloroThrow = false;
@@ -138,6 +140,7 @@ namespace NimblesThrowingStuff
             {
                 speed *= magicSpeed;
             }
+            speed *= universalSpeed;
 
             return speed;
         }
@@ -169,7 +172,7 @@ namespace NimblesThrowingStuff
                     case 1:
                         Player.statDefense += 10;
                         Player.statDefense += guardBonus;
-                        Player.moveSpeed -= 0.5f;
+                        Player.moveSpeed /= 2;
                         if (Main.rand.NextBool(6))
                         {
                             Dust.NewDust(Player.position, Player.width, Player.height, 43, Player.velocity.X + Main.rand.Next(-3, 4), Player.velocity.Y + Main.rand.Next(-3, 4), 0, new Color (255, 255, 255));
@@ -178,7 +181,7 @@ namespace NimblesThrowingStuff
                     case 2:
                         Player.immune = true;
                         Player.invis = true;
-                        Player.cursed = true;
+                        Player.GetDamage(DamageClass.Generic) /= 10;
                         break;
                     case 3:
                         Player.statDefense += 50;
