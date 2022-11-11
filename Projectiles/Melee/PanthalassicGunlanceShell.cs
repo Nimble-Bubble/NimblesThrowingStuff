@@ -9,12 +9,12 @@ using Terraria.Enums;
 
 namespace NimblesThrowingStuff.Projectiles.Melee
 {
-	public class AtlantisGunlanceShell: ModProjectile
+	public class PanthalassicGunlanceShell: ModProjectile
     {
         public override void SetDefaults()
         {
-            Projectile.width = 125;
-            Projectile.height = 125;
+            Projectile.width = 150;
+            Projectile.height = 150;
             Projectile.usesLocalNPCImmunity = true;
             Projectile.localNPCHitCooldown = 10;
             Projectile.tileCollide = false;

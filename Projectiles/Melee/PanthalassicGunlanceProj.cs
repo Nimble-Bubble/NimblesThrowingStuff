@@ -11,7 +11,7 @@ using NimblesThrowingStuff.Items;
 
 namespace NimblesThrowingStuff.Projectiles.Melee
 {
-    public class AtlantisGunlanceProj : ModProjectile
+    public class PanthalassicGunlanceProj : ModProjectile
     {
         private bool hasShelled;
         private int currentShellsLocal;
@@ -22,8 +22,8 @@ namespace NimblesThrowingStuff.Projectiles.Melee
         }
         public override void SetDefaults()
         {
-            Projectile.width = 32;
-            Projectile.height = 32;
+            Projectile.width = 48;
+            Projectile.height = 48;
             Projectile.usesLocalNPCImmunity = true;
             Projectile.localNPCHitCooldown = 20;
             Projectile.tileCollide = false;
@@ -33,7 +33,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             Projectile.aiStyle = 19;
             Projectile.timeLeft = 18000;
             Projectile.extraUpdates = 0;
-            Projectile.scale = 1.1f;
+            Projectile.scale = 1.2f;
             Projectile.ownerHitCheck = true;
             hasShelled = false;
         }
@@ -48,12 +48,12 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             Projectile.timeLeft = projOwner.itemAnimation;
             Projectile.position.X = ownerMountedCenter.X - (float)(Projectile.width / 2);
             Projectile.position.Y = ownerMountedCenter.Y - (float)(Projectile.height / 2);
-            Projectile.GetGlobalProjectile<NimblesGlobalProjectile>().maxShells = 3 + projOwner.GetModPlayer<NimblesPlayer>().bonusShells;
-            if (projOwner.GetModPlayer<NimblesPlayer>().currentShells > 3)
+            Projectile.GetGlobalProjectile<NimblesGlobalProjectile>().maxShells = 6 + projOwner.GetModPlayer<NimblesPlayer>().bonusShells;
+            if (projOwner.GetModPlayer<NimblesPlayer>().currentShells > 6)
             {
                 Gore.NewGore(Projectile.GetSource_FromThis(), Projectile.position, Projectile.velocity, Mod.Find<ModGore>("ShellFlying").Type, 1f);
                 SoundEngine.PlaySound(SoundID.Item42);
-                projOwner.GetModPlayer<NimblesPlayer>().currentShells = 3;
+                projOwner.GetModPlayer<NimblesPlayer>().currentShells = 6;
             }
 
             if (!projOwner.frozen)
@@ -65,7 +65,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                 }
                 if (projOwner.itemAnimation > projOwner.itemAnimationMax / 2)
                 {
-                    float bole = 0.15f;
+                    float bole = 0.25f;
                     // bole /= 2;
                     movementFactor += bole;
                 }
@@ -118,10 +118,10 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                 if (NimblesThrowingStuff.MIGuardKey.Current)
                 {
                     Projectile.damage = 0;
-                    projOwner.GetModPlayer<NimblesPlayer>().currentShells += 1;
+                    projOwner.GetModPlayer<NimblesPlayer>().currentShells += 2;
                     if (projOwner.GetModPlayer<NimblesPlayer>().currentShells <= 0)
                     {
-                        projOwner.GetModPlayer<NimblesPlayer>().currentShells = 1;
+                        projOwner.GetModPlayer<NimblesPlayer>().currentShells = 2;
                     }
                     for (int f = 0; f < 5; f++)
                     {
@@ -137,12 +137,12 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                     {
                         Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.velocity, ModContent.ProjectileType<AtlantisGunlanceShell>(), (Projectile.damage / 4) * 5, 1.5f, Projectile.owner);
                         SoundEngine.PlaySound(SoundID.Item38);
-                        projOwner.velocity.X -= Projectile.velocity.X / 5;
-                        projOwner.velocity.Y -= Projectile.velocity.Y / 5;
+                        projOwner.velocity.X -= Projectile.velocity.X / 13;
+                        projOwner.velocity.Y -= Projectile.velocity.Y / 13;
                         for (int f = 0; f < 20; f++)
                         {
                             int fireIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 59, 0f, 0f, 100, default(Color), 3f);
-                            Main.dust[fireIndex].velocity *= 8f;
+                            Main.dust[fireIndex].velocity *= 10f;
                         }
                         hasShelled = true;
                         projOwner.GetModPlayer<NimblesPlayer>().currentShells -= 1;
