@@ -31,6 +31,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
             Item.shoot = ModContent.ProjectileType<CursedDemonLanceProj>();
             Item.shootSpeed = 11f;
 			Item.UseSound = SoundID.Item1;
+			Item.autoReuse = true;
 		}
 		public override void AddRecipes()
 		{

@@ -33,6 +33,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
             Item.shoot = ModContent.ProjectileType<ActualLagoonLanceProj>();
             Item.shootSpeed = 10f;
 			Item.UseSound = SoundID.Item1;
+			Item.autoReuse = true;
 		}
 		public override void AddRecipes()
 		{
