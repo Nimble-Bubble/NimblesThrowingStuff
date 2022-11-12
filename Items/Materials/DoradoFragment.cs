@@ -2,6 +2,7 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.DataStructures;
 using Terraria.ID;
+using Terraria.GameContent.Creative;
 
 namespace NimblesThrowingStuff.Items.Materials
 {
@@ -9,7 +10,8 @@ namespace NimblesThrowingStuff.Items.Materials
 	{
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("A shard of the Dragon's Head");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 100;
+			Tooltip.SetDefault("A shard of the Dragon's Head");
             ItemID.Sets.ItemIconPulse[Item.type] = true;
             ItemID.Sets.ItemNoGravity[Item.type] = true;
         }

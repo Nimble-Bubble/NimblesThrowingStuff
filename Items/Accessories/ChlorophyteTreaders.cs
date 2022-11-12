@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
+using Terraria.GameContent.Creative;
 
 namespace NimblesThrowingStuff.Items.Accessories
 {
@@ -14,6 +15,7 @@ namespace NimblesThrowingStuff.Items.Accessories
     {
         public override void SetStaticDefaults()
         {
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
             Tooltip.SetDefault("Allows super fast running and extra mobility on ice"
             + "\n20% increased movement speed"
             + "\nProvides the ability to walk on water, honey & lava"

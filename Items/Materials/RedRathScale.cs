@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
+using Terraria.GameContent.Creative;
 
 namespace NimblesThrowingStuff.Items.Materials
 {
@@ -8,7 +9,8 @@ namespace NimblesThrowingStuff.Items.Materials
 	{
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("This beautiful Rathalos scale shines like a ruby");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 25;
+			Tooltip.SetDefault("This beautiful Rathalos scale shines like a ruby");
         }
 		public override void SetDefaults()
         {

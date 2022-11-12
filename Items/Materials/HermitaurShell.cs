@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
+using Terraria.GameContent.Creative;
 
 namespace NimblesThrowingStuff.Items.Materials
 {
@@ -8,7 +9,8 @@ namespace NimblesThrowingStuff.Items.Materials
 	{
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("This durable, bone-like material makes up the exoskeleton of a Hermitaur."
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+			Tooltip.SetDefault("This durable, bone-like material makes up the exoskeleton of a Hermitaur."
 				+"\nWhen a large Hermitaur dies, scavengers bring pieces of its shell far away.");
         }
 		public override void SetDefaults()

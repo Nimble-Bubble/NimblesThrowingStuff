@@ -7,6 +7,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
+using Terraria.GameContent.Creative;
 
 namespace NimblesThrowingStuff.Items.Accessories.Shields
 {
@@ -14,6 +15,7 @@ namespace NimblesThrowingStuff.Items.Accessories.Shields
     {
         public override void SetStaticDefaults()
         {
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
             Tooltip.SetDefault("Grants a powerful dash"
                               +"\n20% increased damage reduction");
         }

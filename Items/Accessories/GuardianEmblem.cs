@@ -8,6 +8,7 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
 using NimblesThrowingStuff.Items.Materials;
+using Terraria.GameContent.Creative;
 
 namespace NimblesThrowingStuff.Items.Accessories
 {
@@ -15,6 +16,7 @@ namespace NimblesThrowingStuff.Items.Accessories
     {
         public override void SetStaticDefaults()
         {
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
             Tooltip.SetDefault("When you stare into it, it stares back."
                               +"\n15% increased damage for all classes and 15% increased critical strike chance");
         }

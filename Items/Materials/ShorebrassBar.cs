@@ -3,6 +3,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using NimblesThrowingStuff.Items.Placeables.Blocks;
 using NimblesThrowingStuff.Tiles.Blocks;
+using Terraria.GameContent.Creative;
 
 namespace NimblesThrowingStuff.Items.Materials
 {
@@ -10,6 +11,7 @@ namespace NimblesThrowingStuff.Items.Materials
 	{
         public override void SetStaticDefaults()
         {
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 25;
 			Tooltip.SetDefault("This unusual brass-steel-coral hybrid makes for a surprisingly good alloy.");
         }
         public override void SetDefaults() 

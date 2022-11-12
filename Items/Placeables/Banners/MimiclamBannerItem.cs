@@ -2,6 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using NimblesThrowingStuff.Tiles.Banners;
+using Terraria.GameContent.Creative;
 
 namespace NimblesThrowingStuff.Items.Placeables.Banners
 {
@@ -9,6 +10,7 @@ namespace NimblesThrowingStuff.Items.Placeables.Banners
 	{
         public override void SetStaticDefaults()
 		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 			DisplayName.SetDefault("Clam Banner");
 		}
 		public override void SetDefaults() 

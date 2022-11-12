@@ -2,6 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using NimblesThrowingStuff.Tiles.Trophies;
+using Terraria.GameContent.Creative;
 
 namespace NimblesThrowingStuff.Items.Placeables.Furniture
 {
@@ -9,6 +10,7 @@ namespace NimblesThrowingStuff.Items.Placeables.Furniture
 	{
         public override void SetStaticDefaults()
         {
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 3;
 			Tooltip.SetDefault("A chip of such power could only be encased in the finest of forbidden cheese.");
         }
         public override void SetDefaults() 

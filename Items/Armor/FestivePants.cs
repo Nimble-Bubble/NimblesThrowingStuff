@@ -7,6 +7,7 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
 using NimblesThrowingStuff.Items.Materials;
+using Terraria.GameContent.Creative;
 
 namespace NimblesThrowingStuff.Items.Armor
 {
@@ -15,6 +16,7 @@ namespace NimblesThrowingStuff.Items.Armor
     {
         public override void SetStaticDefaults()
         {
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
             DisplayName.SetDefault("Festive Boots");
                 Tooltip.SetDefault("Increases movement speed by 25% and throwing damage by 30%");
         }

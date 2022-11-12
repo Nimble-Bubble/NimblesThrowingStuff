@@ -2,6 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using NimblesThrowingStuff.Tiles.Blocks;
+using Terraria.GameContent.Creative;
 
 namespace NimblesThrowingStuff.Items.Placeables.Blocks
 {
@@ -9,6 +10,7 @@ namespace NimblesThrowingStuff.Items.Placeables.Blocks
 	{
         public override void SetStaticDefaults()
         {
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 100;
 			Tooltip.SetDefault("It's surprisingly bright down there. \nSo are the flames of hell, right?");
         }
         public override void SetDefaults() 

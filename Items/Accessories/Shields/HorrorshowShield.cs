@@ -7,6 +7,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
+using Terraria.GameContent.Creative;
 
 namespace NimblesThrowingStuff.Items.Accessories.Shields
 {
@@ -15,6 +16,7 @@ namespace NimblesThrowingStuff.Items.Accessories.Shields
         
         public override void SetStaticDefaults()
         {
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
             Tooltip.SetDefault("Makes you invisible when guarding"
                 +"\nIn this invisible state, you are invincible, but your weapons become much less useful");
         }

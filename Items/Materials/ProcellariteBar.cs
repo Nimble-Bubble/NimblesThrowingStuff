@@ -3,11 +3,16 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using NimblesThrowingStuff.Items.Placeables.Blocks;
 using NimblesThrowingStuff.Tiles.Blocks;
+using Terraria.GameContent.Creative;
 
 namespace NimblesThrowingStuff.Items.Materials
 {
 	public class ProcellariteBar : ModItem
 	{
+		public override void SetStaticDefaults()
+        {
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 25;
+		}
 		public override void SetDefaults() 
 		{
 			Item.width = 28;

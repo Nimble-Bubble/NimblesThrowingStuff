@@ -19,6 +19,7 @@ using NimblesThrowingStuff.Items.Weapons.Magic;
 using NimblesThrowingStuff.Items.Weapons.Summoning;
 using NimblesThrowingStuff.Items.Weapons.Throwing;
 using Terraria.GameContent.ItemDropRules;
+using Terraria.GameContent.Creative;
 
 namespace NimblesThrowingStuff.Items.Consumables
 {
@@ -26,6 +27,7 @@ namespace NimblesThrowingStuff.Items.Consumables
     {
         public override void SetStaticDefaults()
         {
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 3;
             DisplayName.SetDefault("Treasure Bag");
             Tooltip.SetDefault("{$CommonItemTooltip.RightClickToOpen}");
             ItemID.Sets.BossBag[Type] = true;

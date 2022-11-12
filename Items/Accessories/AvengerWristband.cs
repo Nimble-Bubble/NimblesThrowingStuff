@@ -8,6 +8,7 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
 using NimblesThrowingStuff.Items.Accessories;
+using Terraria.GameContent.Creative;
 
 namespace NimblesThrowingStuff.Items.Accessories
 {
@@ -15,6 +16,7 @@ namespace NimblesThrowingStuff.Items.Accessories
     {
         public override void SetStaticDefaults()
         {
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
             Tooltip.SetDefault("Thrown critical strikes cause holy stars to fall down"
                               +"\n25% increased throwing velocity and 12% increased thrown damage");
         }

@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
+using Terraria.GameContent.Creative;
 
 namespace NimblesThrowingStuff.Items.Materials
 {
@@ -8,7 +9,8 @@ namespace NimblesThrowingStuff.Items.Materials
 	{
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("The hide of the sea's live plague is unsurprisingly powerful when it comes to weaponsmithery.");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 25;
+			Tooltip.SetDefault("The hide of the sea's live plague is unsurprisingly powerful when it comes to weaponsmithery.");
         }
 		public override void SetDefaults()
         {
