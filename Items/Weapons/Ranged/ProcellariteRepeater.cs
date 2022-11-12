@@ -4,11 +4,16 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using NimblesThrowingStuff.Items.Materials;
+using Terraria.GameContent.Creative;
 
 namespace NimblesThrowingStuff.Items.Weapons.Ranged
 {
 	public class ProcellariteRepeater : ModItem
 	{
+		public override void SetStaticDefaults()
+        {
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+		}
 		public override void SetDefaults()
 		{
 			Item.damage = 68;

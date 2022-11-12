@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace NimblesThrowingStuff.Items.Weapons.Throwing
 {
@@ -8,7 +9,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 	{
         public override void SetStaticDefaults()
         {
-        DisplayName.SetDefault("Dragon's Grenade");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+			DisplayName.SetDefault("Dragon's Grenade");
          Tooltip.SetDefault("Explodes into a storm of draconic shrapnel");   
         }
 

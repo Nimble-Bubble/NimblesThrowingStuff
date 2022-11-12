@@ -3,11 +3,16 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace NimblesThrowingStuff.Items.Weapons.Throwing
 {
 	public class SatelliteSpear : ModItem
 	{
+		public override void SetStaticDefaults()
+        {
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+		}
 		public override void SetDefaults()
 		{
 			Item.damage = 125;

@@ -2,6 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using NimblesThrowingStuff.Projectiles.Throwing;
+using Terraria.GameContent.Creative;
 
 namespace NimblesThrowingStuff.Items.Weapons.Throwing
 {
@@ -9,9 +10,9 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 	{
         public override void SetStaticDefaults()
         {
-         Tooltip.SetDefault("Turns into a stream of ichor");   
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+			Tooltip.SetDefault("Turns into a stream of ichor");   
         }
-
 		public override void SetDefaults() 
 		{
 			Item.damage = 42;

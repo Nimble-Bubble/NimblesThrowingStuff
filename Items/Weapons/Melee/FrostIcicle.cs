@@ -6,6 +6,7 @@ using Microsoft.Xna.Framework;
 using System;
 using NimblesThrowingStuff.Projectiles.Melee;
 using NimblesThrowingStuff.Items.Materials;
+using Terraria.GameContent.Creative;
 
 namespace NimblesThrowingStuff.Items.Weapons.Melee
 {
@@ -13,6 +14,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 	{
 		public override void SetStaticDefaults()
 		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 			Tooltip.SetDefault("A metallic lance with an icy edge."
 				+"\nIts frostburn-inducing edge ensures the most bang for your buck.");
 		}

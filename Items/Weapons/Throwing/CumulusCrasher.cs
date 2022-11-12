@@ -2,12 +2,16 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
+using Terraria.GameContent.Creative;
 
 namespace NimblesThrowingStuff.Items.Weapons.Throwing
 {
 	public class CumulusCrasher : ModItem
 	{
-
+		public override void SetStaticDefaults()
+        {
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+		}
 		public override void SetDefaults() 
 		{
 			Item.damage = 22;

@@ -3,12 +3,17 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using NimblesThrowingStuff.Projectiles.Throwing;
 using NimblesThrowingStuff.Items.Materials;
+using Terraria.GameContent.Creative;
 
 namespace NimblesThrowingStuff.Items.Weapons.Throwing
 {
 	public class AccursedFlask : ModItem
 	{
-
+		public override void SetStaticDefaults()
+        {
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 99;
+			DisplayName.SetDefault("Cursed Flame Throwing Flask");
+		}
 		public override void SetDefaults() 
 		{
 			Item.damage = 40;

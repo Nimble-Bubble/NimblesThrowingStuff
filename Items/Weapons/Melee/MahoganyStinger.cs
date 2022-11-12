@@ -5,6 +5,7 @@ using static Terraria.ModLoader.ModContent;
 using Microsoft.Xna.Framework;
 using System;
 using NimblesThrowingStuff.Projectiles.Melee;
+using Terraria.GameContent.Creative;
 
 namespace NimblesThrowingStuff.Items.Weapons.Melee
 {
@@ -12,6 +13,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 	{
         public override void SetStaticDefaults()
         {
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 			Tooltip.SetDefault("Sting like a bee. Fly...like a bee."
 				+"\nRight click to launch yourself in the direction of the lance."
 				+"\nHits may poison enemies.");

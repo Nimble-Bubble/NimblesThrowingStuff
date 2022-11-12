@@ -5,6 +5,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using NimblesThrowingStuff.Buffs;
 using NimblesThrowingStuff.Projectiles.Summoning;
+using Terraria.GameContent.Creative;
 
 namespace NimblesThrowingStuff.Items.Weapons.Summoning
 {
@@ -12,10 +13,11 @@ namespace NimblesThrowingStuff.Items.Weapons.Summoning
 	{
         public override void SetStaticDefaults() 
 		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 			DisplayName.SetDefault("Mossy Hornet Staff"); 
 			Tooltip.SetDefault("Summons miniature moss hornets that fire stingers");
             Item.staff[Item.type] = true;
-            ItemID.Sets.GamepadWholeScreenUseRange[Item.type] = true; // This lets the player target anywhere on the whole screen while using a controller.
+            ItemID.Sets.GamepadWholeScreenUseRange[Item.type] = true; 
 			ItemID.Sets.LockOnIgnoresCollision[Item.type] = true;
 		}
 		public override void SetDefaults() {

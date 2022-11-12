@@ -5,6 +5,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using NimblesThrowingStuff.Buffs;
 using NimblesThrowingStuff.Projectiles.Summoning;
+using Terraria.GameContent.Creative;
 
 namespace NimblesThrowingStuff.Items.Weapons.Summoning
 {
@@ -12,6 +13,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Summoning
 	{
         public override void SetStaticDefaults() 
 		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 			DisplayName.SetDefault("Miniature Guardian Staff"); 
 			Tooltip.SetDefault("Summons a small Guardian of the Sky Sea");
             Item.staff[Item.type] = true;

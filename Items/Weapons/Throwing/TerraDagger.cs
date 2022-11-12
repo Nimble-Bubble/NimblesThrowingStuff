@@ -1,12 +1,16 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace NimblesThrowingStuff.Items.Weapons.Throwing
 {
 	public class TerraDagger : ModItem
 	{
-
+		public override void SetStaticDefaults()
+        {
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+		}
 		public override void SetDefaults() 
 		{
 			Item.damage = 64;
@@ -28,7 +32,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
             Item.mana = 50;
             Item.channel = true;
 		}
-
 		public override void AddRecipes() 
 		{
 			Recipe recipe = CreateRecipe();

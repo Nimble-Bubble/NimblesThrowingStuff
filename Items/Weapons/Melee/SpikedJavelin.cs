@@ -6,6 +6,7 @@ using Microsoft.Xna.Framework;
 using System;
 using NimblesThrowingStuff.Projectiles.Melee;
 using NimblesThrowingStuff.Items.Materials;
+using Terraria.GameContent.Creative;
 
 namespace NimblesThrowingStuff.Items.Weapons.Melee
 {
@@ -13,6 +14,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 	{
 		public override void SetStaticDefaults()
 		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 			Tooltip.SetDefault("This lance is lightweight and easy to craft, which makes it popular among hunters."
 				+"\nRight click to swing like a sword.");
 		}

@@ -6,6 +6,7 @@ using Microsoft.Xna.Framework;
 using System;
 using NimblesThrowingStuff.Projectiles.Melee;
 using NimblesThrowingStuff.Items.Materials;
+using Terraria.GameContent.Creative;
 
 namespace NimblesThrowingStuff.Items.Weapons.Melee
 {
@@ -13,6 +14,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 	{
         public override void SetStaticDefaults()
         {
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 			DisplayName.SetDefault("Laguna Lance");
 			Tooltip.SetDefault("This water gun-like lance pulls moisture from the air into its chamber."
 				+"\nRight click while holding the lance out to fire a high-pressure stream of water.");

@@ -1,12 +1,17 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent.Creative;
 
 namespace NimblesThrowingStuff.Items.Weapons.Throwing
 {
 	public class IchoredFlask : ModItem
 	{
-
+		public override void SetStaticDefaults()
+        {
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 99;
+			DisplayName.SetDefault("Ichor Throwing Flask");
+		}
 		public override void SetDefaults() 
 		{
 			Item.damage = 40;

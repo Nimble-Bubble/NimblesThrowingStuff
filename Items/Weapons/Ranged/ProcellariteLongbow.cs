@@ -4,6 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using NimblesThrowingStuff.Items.Materials;
+using Terraria.GameContent.Creative;
 
 namespace NimblesThrowingStuff.Items.Weapons.Ranged
 {
@@ -11,6 +12,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 	{
 		public override void SetStaticDefaults()
 		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 			DisplayName.SetDefault("Pain Rain");
 			Tooltip.SetDefault("Rains several arrows down from the heavens(?)");
 		}

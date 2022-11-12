@@ -6,6 +6,7 @@ using Terraria.ModLoader;
 using NimblesThrowingStuff.Buffs;
 using NimblesThrowingStuff.Projectiles.Summoning;
 using NimblesThrowingStuff.Items.Materials;
+using Terraria.GameContent.Creative;
 
 namespace NimblesThrowingStuff.Items.Weapons.Summoning
 {
@@ -13,6 +14,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Summoning
 	{
         public override void SetStaticDefaults() 
 		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 			DisplayName.SetDefault("Aqua Blaster Core"); 
 			Tooltip.SetDefault("Summons an Aqua Blaster");
             Item.staff[Item.type] = true;

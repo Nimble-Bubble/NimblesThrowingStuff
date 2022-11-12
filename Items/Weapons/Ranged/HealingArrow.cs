@@ -2,12 +2,16 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using NimblesThrowingStuff.Projectiles.Ranged;
+using Terraria.GameContent.Creative;
 
 namespace NimblesThrowingStuff.Items.Weapons.Ranged
 {
 	public class HealingArrow : ModItem
 	{
-
+		public override void SetStaticDefaults() 
+		{ 
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 99; 
+		}
 		public override void SetDefaults() {
 			Item.damage = 7;
 			Item.DamageType = DamageClass.Ranged;

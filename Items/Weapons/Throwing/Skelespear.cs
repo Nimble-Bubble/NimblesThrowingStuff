@@ -3,6 +3,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using NimblesThrowingStuff.Projectiles.Throwing;
 using NimblesThrowingStuff.Items.Materials;
+using Terraria.GameContent.Creative;
 
 namespace NimblesThrowingStuff.Items.Weapons.Throwing
 {
@@ -10,8 +11,9 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 	{
         public override void SetStaticDefaults()
         {
-            //DisplayName.SetDefault("Enchanted Yari");
-         Tooltip.SetDefault("Turns into a stream of water");   
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+			//DisplayName.SetDefault("Enchanted Yari");
+			Tooltip.SetDefault("Turns into a stream of water");   
         }
 
 		public override void SetDefaults() 

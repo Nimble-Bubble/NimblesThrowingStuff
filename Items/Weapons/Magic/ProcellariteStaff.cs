@@ -2,6 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using NimblesThrowingStuff.Projectiles.Magic;
+using Terraria.GameContent.Creative;
 
 namespace NimblesThrowingStuff.Items.Weapons.Magic
 {
@@ -9,6 +10,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Magic
 	{
         public override void SetStaticDefaults()
 		{
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 			Tooltip.SetDefault("Creates a big star that explodes into other stars");
             Item.staff[Item.type] = true;
 		}
