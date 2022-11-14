@@ -32,12 +32,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 		{
 			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(2161, 1);
-            recipe.AddIngredient(1198, 13);
-			recipe.AddTile(TileID.MythrilAnvil);
-			recipe.Register();
-            recipe = CreateRecipe();
-			recipe.AddIngredient(2161, 1);
-            recipe.AddIngredient(391, 12);
+            recipe.AddRecipeGroup(nameof(ItemID.AdamantiteBar), 12);
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.Register();
 		}

@@ -45,12 +45,7 @@ namespace NimblesThrowingStuff.Items.Armor
         public override void AddRecipes()
         {
             Recipe r = CreateRecipe();
-            r.AddIngredient(19, 12);
-            r.AddIngredient(ModContent.ItemType<BatFlesh>(), 9);
-            r.AddTile(16);
-            r.Register();
-            r = CreateRecipe();
-            r.AddIngredient(706, 12);
+            r.AddRecipeGroup(nameof(ItemID.GoldBar), 12);
             r.AddIngredient(ModContent.ItemType<BatFlesh>(), 9);
             r.AddTile(16);
             r.Register();

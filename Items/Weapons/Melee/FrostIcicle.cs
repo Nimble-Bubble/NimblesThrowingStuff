@@ -42,13 +42,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 		{
 			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ModContent.ItemType<KnightLance>(), 1);
-			recipe.AddIngredient(ItemID.AdamantiteBar, 15);
-			recipe.AddIngredient(ItemID.FrostCore);
-			recipe.AddTile(TileID.MythrilAnvil);
-			recipe.Register();
-			recipe = CreateRecipe();
-			recipe.AddIngredient(ModContent.ItemType<KnightLance>(), 1);
-			recipe.AddIngredient(ItemID.TitaniumBar, 15);
+			recipe.AddRecipeGroup(nameof(ItemID.AdamantiteBar), 15);
 			recipe.AddIngredient(ItemID.FrostCore);
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.Register();

@@ -9,10 +9,10 @@ namespace NimblesThrowingStuff.Projectiles.Enemy
 {
     public class RathFireball : ModProjectile
     {
-        public override void SetStaticDefaults()
+        /* public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("a wee rathwyvern's fireball");
-        }
+        } */
 
         public override void SetDefaults()
         {
