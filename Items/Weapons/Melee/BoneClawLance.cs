@@ -15,8 +15,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("The added leather allows for higher agility"
-				+"\nRight click to launch yourself in the direction of the lance");
+			Tooltip.SetDefault("Made from Hermitaur parts, this weapon is more than adequate as a beginner's lance."
+				+"\nCritical strikes give you increased endurance for a short period of time.");
         }
         public override void SetDefaults() {
 			Item.damage = 26;

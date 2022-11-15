@@ -35,13 +35,7 @@ namespace NimblesThrowingStuff.Items.Materials
 			Recipe recipe = CreateRecipe(3);
 			recipe.AddIngredient(ItemID.Bone, 2);
 			recipe.AddIngredient(ItemID.Coral, 1);
-			recipe.AddIngredient(ItemID.CopperBar, 2);
-			recipe.AddTile(TileID.Furnaces);
-			recipe.Register();
-			recipe = CreateRecipe(3);
-			recipe.AddIngredient(ItemID.Bone, 2);
-			recipe.AddIngredient(ItemID.Coral, 1);
-			recipe.AddIngredient(ItemID.TinBar, 2);
+			recipe.AddRecipeGroup(nameof(ItemID.CopperBar), 2);
 			recipe.AddTile(TileID.Furnaces);
 			recipe.Register();
 		}

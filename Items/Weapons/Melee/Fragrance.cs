@@ -19,10 +19,10 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 				+"\n...Pleasant enough to you, at least. Right click while attacking to fire a damaging spore cloud.");
         }
         public override void SetDefaults() {
-			Item.damage = 20;
+			Item.damage = 23;
 			Item.useStyle = ItemUseStyleID.Shoot;
-			Item.useAnimation = 24;
-			Item.useTime = 24;
+			Item.useAnimation = 23;
+			Item.useTime = 23;
 			Item.knockBack = 4f;
 			Item.width = 20;
 			Item.height = 20;
