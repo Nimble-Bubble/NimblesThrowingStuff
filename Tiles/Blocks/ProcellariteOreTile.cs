@@ -11,6 +11,7 @@ namespace NimblesThrowingStuff.Tiles.Blocks
         {
             TileID.Sets.Ore[Type] = true;
             Main.tileShine2[Type] = true;
+            Main.tileLavaDeath[Type] = false;
             Main.tileMergeDirt[Type] = true;
             Main.tileOreFinderPriority[Type] = 825;
             Main.tileShine[Type] = 975;
@@ -22,7 +23,7 @@ namespace NimblesThrowingStuff.Tiles.Blocks
             ModTranslation name = CreateMapEntryName();
             name.SetDefault("Procellarite Ore");
             AddMapEntry(new Color(0, 200, 185), name);
-            MineResist = 8f;
+            MineResist = 6f;
             MinPick = 225;
             DustType = 43;
             HitSound = SoundID.Dig;

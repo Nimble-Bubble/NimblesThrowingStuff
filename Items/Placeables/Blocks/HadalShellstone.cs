@@ -11,7 +11,8 @@ namespace NimblesThrowingStuff.Items.Placeables.Blocks
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 100;
-			Tooltip.SetDefault("It's surprisingly bright down there. \nSo are the flames of hell, right?");
+			DisplayName.SetDefault("Deep Shellstone");
+			Tooltip.SetDefault("Formed from a mixture of minerals and remains, this material has a remarkable deep tone to it.");
         }
         public override void SetDefaults() 
 		{

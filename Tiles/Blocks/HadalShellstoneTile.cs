@@ -11,6 +11,7 @@ namespace NimblesThrowingStuff.Tiles.Blocks
         {
             Main.tileMergeDirt[Type] = true;
             Main.tileSolid[Type] = true;
+            Main.tileLavaDeath[Type] = false;
             Main.tileBlockLight[Type] = true;
             Main.tileMergeDirt[Type] = true;
 
