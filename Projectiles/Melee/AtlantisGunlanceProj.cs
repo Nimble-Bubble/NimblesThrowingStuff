@@ -25,7 +25,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             Projectile.width = 32;
             Projectile.height = 32;
             Projectile.usesLocalNPCImmunity = true;
-            Projectile.localNPCHitCooldown = 20;
+            Projectile.localNPCHitCooldown = 10;
             Projectile.tileCollide = false;
             Projectile.penetrate = -1;
             Projectile.friendly = true;

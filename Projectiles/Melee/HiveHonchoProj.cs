@@ -7,12 +7,14 @@ using Terraria.Audio;
 using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.Enums;
+using NimblesThrowingStuff.Items;
 
 namespace NimblesThrowingStuff.Projectiles.Melee
 {
-	public class FragranceProj: ModProjectile
+    public class HiveHonchoProj : ModProjectile
     {
-        private bool hasOdored;
+        private bool hasShelled;
+        private int currentShellsLocal;
         public float movementFactor
         {
             get => Projectile.ai[0];
@@ -20,8 +22,8 @@ namespace NimblesThrowingStuff.Projectiles.Melee
         }
         public override void SetDefaults()
         {
-            Projectile.width = 24;
-            Projectile.height = 24;
+            Projectile.width = 32;
+            Projectile.height = 32;
             Projectile.usesLocalNPCImmunity = true;
             Projectile.localNPCHitCooldown = 10;
             Projectile.tileCollide = false;
@@ -33,7 +35,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             Projectile.extraUpdates = 0;
             Projectile.scale = 1.1f;
             Projectile.ownerHitCheck = true;
-            hasOdored = false;
+            hasShelled = false;
         }
         public override void AI()
         {
@@ -46,6 +48,13 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             Projectile.timeLeft = projOwner.itemAnimation;
             Projectile.position.X = ownerMountedCenter.X - (float)(Projectile.width / 2);
             Projectile.position.Y = ownerMountedCenter.Y - (float)(Projectile.height / 2);
+            Projectile.GetGlobalProjectile<NimblesGlobalProjectile>().maxShells = 6 + projOwner.GetModPlayer<NimblesPlayer>().bonusShells;
+            if (projOwner.GetModPlayer<NimblesPlayer>().currentShells > 6)
+            {
+                Gore.NewGore(Projectile.GetSource_FromThis(), Projectile.position, Projectile.velocity, Mod.Find<ModGore>("ShellFlying").Type, 1f);
+                //SoundEngine.PlaySound(SoundID.Item42);
+                projOwner.GetModPlayer<NimblesPlayer>().currentShells = 6;
+            }
 
             if (!projOwner.frozen)
             {
@@ -56,7 +65,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                 }
                 if (projOwner.itemAnimation > projOwner.itemAnimationMax / 2)
                 {
-                    float bole = 0.225f;
+                    float bole = 0.2f;
                     // bole /= 2;
                     movementFactor += bole;
                 }
@@ -104,31 +113,40 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             {
                 Projectile.Kill();
             }
-            if (Main.mouseRight && !hasOdored)
+            if (Main.mouseRight)
             {
-                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.velocity, ProjectileID.SporeCloud, Projectile.damage / (4 / 3), 1.5f, Projectile.owner); 
-                    SoundEngine.PlaySound(SoundID.Item42);
-                    hasOdored = true;
+                    if (projOwner.GetModPlayer<NimblesPlayer>().currentShells > 0)
+                    {
+                        int fireBee = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.velocity, ProjectileID.Bee, Projectile.damage / 3, 1.5f, Projectile.owner);
+                    Main.projectile[fireBee].DamageType = DamageClass.Melee;    
+                    if (!hasShelled)
+                        {
+                            SoundEngine.PlaySound(SoundID.Item97);
+                        }
+                        hasShelled = true;
+                        projOwner.GetModPlayer<NimblesPlayer>().currentShells -= 1;
+                    }
+                    else
+                    {
+                    if (!hasShelled)
+                    {
+                        SoundEngine.PlaySound(SoundID.Item16);
+                    }
+                        hasShelled = true;
+                    }
             }
         }
-        //public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
-        //{
-        //if (Main.player[projectile.owner].velocity.X < 0)
-        //{
-        //    damage -= (int)Main.player[projectile.owner].velocity.X;
-        //}
-        //else
-        //{
-        //    damage += (int)Main.player[projectile.owner].velocity.X;
-        //}
-        //if (Main.player[projectile.owner].velocity.Y < 0)
-        //{
-        //    damage -= (int)Main.player[projectile.owner].velocity.Y;
-        //}
-        //else
-        //{
-        //    damage += (int)Main.player[projectile.owner].velocity.Y;
-        //}
-        //}
+        public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
+        {
+            Player projOwner = Main.player[Projectile.owner];
+            if (crit)
+            {
+                projOwner.GetModPlayer<NimblesPlayer>().currentShells += 1;
+                if (projOwner.GetModPlayer<NimblesPlayer>().currentShells <= 0)
+                {
+                    projOwner.GetModPlayer<NimblesPlayer>().currentShells = 1;
+                }
+            }
+        }
     }
 }
