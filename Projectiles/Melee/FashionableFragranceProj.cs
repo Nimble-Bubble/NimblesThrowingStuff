@@ -7,6 +7,7 @@ using Terraria.Audio;
 using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.Enums;
+using NimblesThrowingStuff.Projectiles.Magic;
 
 namespace NimblesThrowingStuff.Projectiles.Melee
 {
@@ -106,7 +107,8 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             }
             if (Main.mouseRight && !hasOdored)
             {
-                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.velocity, ProjectileID.SporeCloud, Projectile.damage / (4 / 3), 1.5f, Projectile.owner); 
+                    int sporeBolt = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.velocity, ModContent.ProjectileType<SporeBolt>(), Projectile.damage * (4 / 3), 1.5f, Projectile.owner);
+                Main.projectile[sporeBolt].DamageType = DamageClass.Melee;
                     SoundEngine.PlaySound(SoundID.Item42);
                     hasOdored = true;
             }

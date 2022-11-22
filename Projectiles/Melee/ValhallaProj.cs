@@ -52,6 +52,29 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                 }
                 if (projOwner.itemAnimation > projOwner.itemAnimationMax / 2)
                 {
+                    int dust1 = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 68,
+                            Projectile.velocity.X * 0.1f, Projectile.velocity.Y * 0.1f, 100, new Color(), 1f);
+                    if (Main.rand.Next(3) != 0)
+                    {
+                        Main.dust[dust1].noGravity = true;
+                        Main.dust[dust1].scale *= 2f;
+                        Dust lungado = Main.dust[dust1];
+                        lungado.velocity.X = lungado.velocity.X * 2f;
+                        Dust gadolun = Main.dust[dust1];
+                        gadolun.velocity.Y = gadolun.velocity.Y * 2f;
+                    }
+                    else
+                    {
+                        Main.dust[dust1].scale *= 1.25f;
+                    }
+                    if (Main.rand.NextBool(4))
+                    {
+                        int dust2 = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 69,
+                                    0f, 0f, 0, new Color(), 1f);
+                        Main.dust[dust2].noGravity = true;
+                        Main.dust[dust2].velocity *= 0.5f;
+                        Main.dust[dust2].scale *= 0.9f;
+                    }
                     float bole = 0.3f;
                     // bole /= 2;
                     movementFactor += bole;
@@ -63,7 +86,21 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             }
 
             Projectile.position += Projectile.velocity * movementFactor;
-
+            int dust5 = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 69,
+                            Projectile.velocity.X * 0.1f, Projectile.velocity.Y * 0.1f, 100, new Color(), 1f);
+            if (Main.rand.Next(3) != 0)
+            {
+                Main.dust[dust5].noGravity = true;
+                Main.dust[dust5].scale *= 2f;
+                Dust lungadi = Main.dust[dust5];
+                lungadi.velocity.X = lungadi.velocity.X * 2f;
+                Dust gadilun = Main.dust[dust5];
+                gadilun.velocity.Y = gadilun.velocity.Y * 2f;
+            }
+            else
+            {
+                Main.dust[dust5].scale *= 1.25f;
+            }
             if (projOwner.itemAnimation == 0)
             {
                 Projectile.Kill();
