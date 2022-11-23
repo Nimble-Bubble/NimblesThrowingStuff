@@ -1,7 +1,12 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
+using Terraria.ModLoader.Utilities;
 using Terraria.ID;
 using NimblesThrowingStuff.NPCs.Morilus;
 using NimblesThrowingStuff.Items.Materials;
@@ -39,7 +44,7 @@ namespace NimblesThrowingStuff.Items.Consumables
 		}
 		public override bool CanUseItem(Player player)
 		{
-			return !NPC.AnyNPCs(ModContent.NPCType<MorilusMain>());
+			return !NPC.AnyNPCs(ModContent.NPCType<MorilusMain>()) && player.ZoneSkyHeight;
 		}
 		public override bool? UseItem(Player player)
 		{

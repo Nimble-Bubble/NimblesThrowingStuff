@@ -8,6 +8,7 @@ using Terraria.Audio;
 using Terraria.Chat;
 using Terraria.Localization;
 using Terraria.ModLoader;
+using Terraria.ModLoader.Utilities;
 using Terraria.ID;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -39,7 +40,6 @@ namespace NimblesThrowingStuff.NPCs.Morilus
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Morilus, the Great Guardian of the Sky's Sea");
-            //it's a pretty long name, but there's much more to this weird thing than that, believe me
             Main.npcFrameCount[NPC.type] = 5;
         }
 
@@ -182,7 +182,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
             {
                 if (NPC.ai[1] % 30 == 0 && NPC.life >= NPC.lifeMax / 2 || NPC.ai[1] % 20 == 0)
                 {
-                float Speed1 = 10f;
+                float Speed1 = 8.5f;
                 int damage1 = 70;
                 if (!Main.expertMode)
                 {
@@ -215,7 +215,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
             {
                 if (NPC.ai[1] % 6 == 0 && NPC.life >= NPC.lifeMax - bigStarHealth)
                 {
-                float Speed2 = 15f;
+                float Speed2 = 12f;
                 int Damage2 = 80;
                 if (!Main.expertMode)
                 {
@@ -467,12 +467,12 @@ namespace NimblesThrowingStuff.NPCs.Morilus
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Sky,
-                new FlavorTextBestiaryInfoElement("This strange cycloptic automaton serves as the protector of a slightly less strange place called the Sky's Sea.")
+                new FlavorTextBestiaryInfoElement("This strange ocular automaton serves as the protector of a place called the Sky's Sea.")
             });
         }
         public override void ModifyNPCLoot(NPCLoot npcLoot)
         {
-            NimblesWorld.downedMorilus = true;
+            //NimblesWorld.downedMorilus = true;
             npcLoot.Add(ItemDropRule.BossBag(ModContent.ItemType<MorilusTreasureBag>()));
             LeadingConditionRule notExpertRule = new LeadingConditionRule(new Conditions.NotExpert());
             notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<MorilusMask>(), 7));
