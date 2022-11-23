@@ -15,7 +15,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Summoning
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 			DisplayName.SetDefault("Sporeball Staff"); 
-			Tooltip.SetDefault("Summons poisonous spore balls");
+			Tooltip.SetDefault("Summons small, but poisonous living spore balls"
+				+"\nThe spore balls will sometimes leave small spores in their path");
             Item.staff[Item.type] = true;
             ItemID.Sets.GamepadWholeScreenUseRange[Item.type] = true; 
 			ItemID.Sets.LockOnIgnoresCollision[Item.type] = true;

@@ -9,6 +9,7 @@ namespace NimblesThrowingStuff.Projectiles.Summoning
 {
 	public class SporeballProj : ModProjectile
 	{
+		private int shootSporeCounter;
 		public override void SetStaticDefaults() {
 			DisplayName.SetDefault("Spore Ball");
 			Main.projFrames[Projectile.type] = 4;
@@ -50,6 +51,7 @@ namespace NimblesThrowingStuff.Projectiles.Summoning
 		}
 
 		public override void AI() {
+			++shootSporeCounter;
 			Player player = Main.player[Projectile.owner];
 
 			#region Active check
@@ -149,7 +151,12 @@ namespace NimblesThrowingStuff.Projectiles.Summoning
 			// Default movement parameters (here for attacking)
 			float speed = 8f;
 			float inertia = 20f;
-
+			if (shootSporeCounter > 150)
+            {
+				int shootSpore = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, 0, Main.rand.Next(0, 5), ModContent.ProjectileType<SporeballSpore>(), Projectile.damage * (3 / 4), 2f, Projectile.owner);
+				Main.projectile[shootSpore].velocity.RotatedByRandom(MathHelper.ToRadians(360));
+				shootSporeCounter -= Main.rand.Next(120, 150);
+			}
 			if (foundTarget) {
 				// Minion has a target: attack (here, fly towards the enemy)
 				if (distanceFromTarget > 40f) {

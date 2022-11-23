@@ -31,10 +31,13 @@ namespace NimblesThrowingStuff.Projectiles.Magic
             Projectile.rotation += 0.05f * (float)Projectile.direction;
             Projectile.alpha++;
             Projectile.scale += 0.02f;
+            Projectile.velocity.X *= 0.98f;
+            Projectile.velocity.Y *= 0.98f;
+
         }
         public override void OnHitNPC (NPC target, int damage, float knockback, bool crit)
         {
-			target.AddBuff(BuffID.Poisoned, 150);
+			target.AddBuff(BuffID.Poisoned, 300);
         }
     }
 }
