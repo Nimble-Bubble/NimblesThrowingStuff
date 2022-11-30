@@ -24,7 +24,7 @@ namespace NimblesThrowingStuff.Items.Consumables
             ItemID.Sets.SortingPriorityBossSpawns[Item.type] = 13;
 			Tooltip.SetDefault("A precious-looking work of art, but not quite genuine"
 				+"\nProvokes the great guardian of the Sky's Sea regardless"
-				+"\nUse it as high as you can go for the best results");
+				+"\nUse it in space for the best results");
 		}
 
 		public override void SetDefaults()

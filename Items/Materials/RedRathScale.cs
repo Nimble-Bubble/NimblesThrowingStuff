@@ -10,7 +10,8 @@ namespace NimblesThrowingStuff.Items.Materials
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 25;
-			Tooltip.SetDefault("This beautiful Rathalos scale shines like a ruby");
+			DisplayName.SetDefault("Vermilion Scale");
+			Tooltip.SetDefault("The heat-related properties of this scale make it a must-have for equipment crafting.");
         }
 		public override void SetDefaults()
         {

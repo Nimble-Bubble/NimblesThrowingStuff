@@ -37,6 +37,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(Mod.Find<ModItem>("TrueHallowedWaraxe").Type);
             recipe.AddIngredient(Mod.Find<ModItem>("TrueNightPiercer").Type);
+			recipe.AddIngredient(1570);
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.Register();
 		}

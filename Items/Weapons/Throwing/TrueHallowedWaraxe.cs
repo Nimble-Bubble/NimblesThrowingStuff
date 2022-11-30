@@ -36,9 +36,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 		{
 			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(Mod.Find<ModItem>("HallowedWaraxe").Type);
-            recipe.AddIngredient(547, 5);
-            recipe.AddIngredient(548, 5);
-            recipe.AddIngredient(549, 5);
+			recipe.AddIngredient(ItemID.ChlorophyteBar, 20);
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.Register();
 		}
