@@ -15,21 +15,25 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetDefaults()
         {
-            Projectile.width = 21;
-            Projectile.height = 21;
+            Projectile.width = 30;
+            Projectile.height = 30;
             Projectile.usesLocalNPCImmunity = true;
             Projectile.localNPCHitCooldown = 10;
             Projectile.tileCollide = true;
-            Projectile.penetrate = 5;
+            Projectile.penetrate = -1;
             Projectile.friendly = true;
             Projectile.DamageType = DamageClass.Throwing;
             Projectile.aiStyle = 2;
-            Projectile.timeLeft = 60;
+            Projectile.timeLeft = 80;
             Projectile.scale = 0.75f;
+        }
+        public override void AI()
+        {
+            Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, 92, Projectile.velocity.X * 0.1f, Projectile.velocity.Y * 0.1f, 0, default, Main.rand.NextFloat(0.5f, 1.5f));
         }
         public override void OnHitNPC (NPC target, int damage, float knockback, bool crit)
         {
-            target.AddBuff(44, 440);
+            target.AddBuff(BuffID.Frostburn2, 450);
         }
         public override void Kill(int timeLeft) 
         {

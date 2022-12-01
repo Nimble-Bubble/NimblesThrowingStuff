@@ -29,7 +29,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
 			Item.shoot = Mod.Find<ModProjectile>("SnowflakeShurikenProj").Type;
-			Item.shootSpeed = 7f;
+			Item.shootSpeed = 12f;
             Item.mana = 10;
 		}
         public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
@@ -39,7 +39,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 			position += Vector2.Normalize(velocity) * 6f;
 			for (int i = 0; i < numberProjectiles; i++)
 			{
-				Vector2 perturbedSpeed = velocity.RotatedBy(MathHelper.Lerp(-rotation, rotation, i / (numberProjectiles - 1))) * 2f; // Watch out for dividing by 0 if there is only 1 projectile.
+				Vector2 perturbedSpeed = velocity.RotatedBy(MathHelper.Lerp(-rotation, rotation, i / (numberProjectiles - 1))) * 0.8f; // Watch out for dividing by 0 if there is only 1 projectile.
 				Projectile.NewProjectile(Item.GetSource_FromThis(), position, perturbedSpeed, type, damage, Item.knockBack, player.whoAmI);
 			}
         }
