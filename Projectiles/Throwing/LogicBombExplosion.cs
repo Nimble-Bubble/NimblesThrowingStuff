@@ -9,16 +9,16 @@ using Terraria.Enums;
 
 namespace NimblesThrowingStuff.Projectiles.Throwing
 {
-	public class NanoMissileExplosion: ModProjectile
+	public class LogicBombExplosion: ModProjectile
     {
         public override void SetDefaults()
         {
-            Projectile.width = 250;
-            Projectile.height = 250;
+            Projectile.width = 100;
+            Projectile.height = 100;
             Projectile.usesLocalNPCImmunity = true;
             Projectile.localNPCHitCooldown = 10;
             Projectile.tileCollide = false;
-            Projectile.penetrate = -1;
+            Projectile.penetrate = 9999;
             Projectile.friendly = true;
             Projectile.timeLeft = 1;
             Projectile.DamageType = DamageClass.Throwing;
@@ -28,7 +28,6 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
         }
         public override void OnHitNPC (NPC target, int damage, float knockback, bool crit)
         {
-			target.AddBuff(324, 300);
             target.AddBuff(31, 750);
         }
     }
