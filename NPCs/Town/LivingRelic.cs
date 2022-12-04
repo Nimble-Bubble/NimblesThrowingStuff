@@ -197,6 +197,10 @@ namespace NimblesThrowingStuff.NPCs.Town
                     return "I'm not exactly sure where I'm going to put all these weapons.";
                 }
             }
+            if (NimblesWorld.downedMorilus)
+            {
+                return "I heard that you defeated that \"Morilus\" guy. Someone with weird pants told me to sell this artifact to you. I think those two things are related?";
+            }
             //if (BirthdayParty.PartyIsUp && Main.rand.Next(4))
             //{
             //    return "I'm not really sure how to celebrate this kind of thing...";
@@ -276,6 +280,11 @@ namespace NimblesThrowingStuff.NPCs.Town
             {
             shop.item[nextSlot].SetDefaults(Mod.Find<ModItem>("DoradoFragment").Type);
 			nextSlot++;
+            }
+            if (NimblesWorld.downedMorilus)
+            {
+                shop.item[nextSlot].SetDefaults(Mod.Find<ModItem>("ConvincingArtifact").Type);
+                nextSlot++;
             }
         }
 

@@ -204,6 +204,11 @@ namespace NimblesThrowingStuff.NPCs
 				notExpertRule.OnSuccess(ItemDropRule.Common(ItemType<Beemerang>(), 4));
 				npcLoot.Add(notExpertRule);
 			}
+			if (npc.type == NPCID.KingSlime)
+            {
+				notExpertRule.OnSuccess(ItemDropRule.Common(ItemType<ScavengedKunai>(), 5));
+				npcLoot.Add(notExpertRule);
+            }
 			if (npc.type == NPCID.Crab)
             {
 				npcLoot.Add(ItemDropRule.Common(ItemType<HermitaurShell>(), 2));

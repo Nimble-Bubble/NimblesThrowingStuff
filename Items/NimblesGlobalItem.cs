@@ -57,6 +57,10 @@ namespace NimblesThrowingStuff.Items
         {
             if (context == "bossBag") 
             {
+                if (arg == ItemID.KingSlimeBossBag && Main.rand.NextBool(4))
+                {
+                    player.QuickSpawnItem(player.GetSource_FromThis(), ItemType<ScavengedKunai>(), 1);
+                }
                 if (arg == ItemID.QueenBeeBossBag && Main.rand.NextBool(3))
                 {
                 player.QuickSpawnItem(player.GetSource_FromThis(), ItemType<Beemerang>(), 1);

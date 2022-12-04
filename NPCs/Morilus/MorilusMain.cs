@@ -451,7 +451,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
         {
             Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, Mod.Find<ModGore>("MorilusGore1").Type, 1f);
             Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, Mod.Find<ModGore>("MorilusGore2").Type, 1f);
-            if (NimblesWorld.downedMorilus == false)
+            if (!NimblesWorld.downedMorilus)
             {
                 Utilities.SpawnOre(ModContent.TileType<ProcellariteOreTile>(), 15E-05, .8f, .999f);
                 Utilities.SpawnOre(ModContent.TileType<ProcellariteOreTile>(), 15E-04, 0f, .1f);
