@@ -30,7 +30,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			Item.height = 76;
 			Item.noUseGraphic = true;
 			Item.noMelee = true;
-			Item.rare = ItemRarityID.LightRed;
+			Item.rare = ItemRarityID.Pink;
 			Item.value = Item.buyPrice(0, 23, 0, 0);
 			Item.DamageType = DamageClass.Melee;
 			Item.channel = true;
