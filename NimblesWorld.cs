@@ -103,6 +103,8 @@ namespace NimblesThrowingStuff
             RecipeGroup.RegisterGroup(nameof(ItemID.SilverBar), Silvergroup);
             RecipeGroup Goldgroup = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.GoldBar)}", ItemID.GoldBar, ItemID.PlatinumBar);
             RecipeGroup.RegisterGroup(nameof(ItemID.GoldBar), Goldgroup);
+            RecipeGroup Demonitegroup = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.DemoniteBar)}", ItemID.DemoniteBar, ItemID.CrimtaneBar);
+            RecipeGroup.RegisterGroup(nameof(ItemID.DemoniteBar), Demonitegroup);
             RecipeGroup Cobaltgroup = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.CobaltBar)}", ItemID.CobaltBar, ItemID.PalladiumBar);
             RecipeGroup.RegisterGroup(nameof(ItemID.CobaltBar), Cobaltgroup);
             RecipeGroup Mythgroup = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.MythrilBar)}", ItemID.MythrilBar, ItemID.OrichalcumBar);
