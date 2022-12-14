@@ -21,7 +21,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
             Projectile.tileCollide = true;
             Projectile.friendly = true;
             Projectile.DamageType = DamageClass.Throwing;
-            Projectile.aiStyle = 68;
+            Projectile.aiStyle = 2;
             Projectile.penetrate = 1;
         }
         public override void AI()

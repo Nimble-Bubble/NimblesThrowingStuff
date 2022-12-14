@@ -33,7 +33,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 			Item.shoot = ModContent.ProjectileType<AccursedFlaskProj>();
 			Item.shootSpeed = 13.5f;
             Item.consumable = true;
-            Item.maxStack = 999;
+            Item.maxStack = 9999;
 		}
 
 		public override void AddRecipes() 

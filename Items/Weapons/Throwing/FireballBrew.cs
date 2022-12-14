@@ -30,7 +30,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
 			Item.shoot = Mod.Find<ModProjectile>("FireballBrewProj").Type;
-			Item.shootSpeed = 6.5f;
+			Item.shootSpeed = 11f;
 			Item.mana = 8;
 		}
 		public override void AddRecipes()

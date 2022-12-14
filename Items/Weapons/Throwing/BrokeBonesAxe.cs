@@ -33,7 +33,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 			Item.shoot = Mod.Find<ModProjectile>("BrokeBonesAxeProj").Type;
 			Item.shootSpeed = 14f;
             Item.consumable = true;
-            Item.maxStack = 999;
+            Item.maxStack = 9999;
 		}
 
 		public override void AddRecipes() 

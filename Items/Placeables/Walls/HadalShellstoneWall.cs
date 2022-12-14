@@ -24,7 +24,7 @@ namespace NimblesThrowingStuff.Items.Placeables.Walls
 			Item.autoReuse = true;
             Item.createWall = Mod.Find<ModWall>("HadalShellstoneWallTile").Type;
             Item.consumable = true;
-            Item.maxStack = 999;
+            Item.maxStack = 9999;
 		}
 
 		public override void AddRecipes() 

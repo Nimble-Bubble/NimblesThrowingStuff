@@ -27,7 +27,7 @@ namespace NimblesThrowingStuff.Items.Materials
             Item.useTurn = true;
             Item.createTile = ModContent.TileType<ProcellariteBarTile>();
             Item.consumable = true;
-            Item.maxStack = 999;
+            Item.maxStack = 9999;
 		}
         public override void AddRecipes() 
 		{

@@ -16,7 +16,7 @@ namespace NimblesThrowingStuff.Items.Materials
         {
 			Item.width = 18;
 			Item.height = 18;
-			Item.maxStack = 999;
+			Item.maxStack = 9999;
 			Item.value = Item.buyPrice(0, 7, 50, 0);
 			Item.rare = 8;
         }

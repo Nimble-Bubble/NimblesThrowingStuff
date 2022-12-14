@@ -30,7 +30,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 			Item.shoot = Mod.Find<ModProjectile>("PalladiumShortspearProj").Type;
 			Item.shootSpeed = 10f;
             Item.consumable = true;
-            Item.maxStack = 999;
+            Item.maxStack = 9999;
 		}
 
 		public override void AddRecipes() 

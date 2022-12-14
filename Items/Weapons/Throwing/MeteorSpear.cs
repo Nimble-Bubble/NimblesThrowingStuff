@@ -32,7 +32,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 			Item.shoot = Mod.Find<ModProjectile>("MeteorSpearProj").Type;
 			Item.shootSpeed = 9f;
             Item.consumable = true;
-            Item.maxStack = 999;
+            Item.maxStack = 9999;
 		}
 
 		public override void AddRecipes() 

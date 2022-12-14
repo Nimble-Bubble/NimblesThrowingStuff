@@ -27,7 +27,7 @@ namespace NimblesThrowingStuff.Items.Placeables.Banners
             Item.useTurn = true;
             Item.createTile = ModContent.TileType<SmallRathBanner>();
             Item.consumable = true;
-            Item.maxStack = 999;
+            Item.maxStack = 9999;
 		}
 	}
 }

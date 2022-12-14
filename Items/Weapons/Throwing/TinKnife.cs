@@ -30,7 +30,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 			Item.shoot = Mod.Find<ModProjectile>("TinKnifeProj").Type;
 			Item.shootSpeed = 6f;
 			Item.consumable = true;
-			Item.maxStack = 999;
+			Item.maxStack = 9999;
 		}
 
 		public override void AddRecipes()

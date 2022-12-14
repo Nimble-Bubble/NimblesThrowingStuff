@@ -31,7 +31,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 			Item.shoot = Mod.Find<ModProjectile>("ShadowflameSpikeBallProj").Type;
 			Item.shootSpeed = 6f;
             Item.consumable = true;
-            Item.maxStack = 999;
+            Item.maxStack = 9999;
 		}
 	}
 }

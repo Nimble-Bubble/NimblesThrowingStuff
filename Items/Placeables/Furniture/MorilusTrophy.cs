@@ -27,7 +27,7 @@ namespace NimblesThrowingStuff.Items.Placeables.Furniture
             Item.useTurn = true;
             Item.createTile = ModContent.TileType<MorilusTrophyTile>();
             Item.consumable = true;
-            Item.maxStack = 999;
+            Item.maxStack = 9999;
 		}
 	}
 }
