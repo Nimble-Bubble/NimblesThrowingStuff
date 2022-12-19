@@ -27,8 +27,17 @@ namespace NimblesThrowingStuff.Projectiles.Ranged
         }
         public override void OnHitNPC (NPC target, int damage, float knockback, bool crit)
         {
-			Main.player[Projectile.owner].HealEffect(damage / 50);
-            Main.player[Projectile.owner].statLife += damage / 50;
+            int gamungo = damage / 50;
+            if (gamungo > 5)
+            {
+                gamungo = 5;
+            }
+            if (gamungo < 1)
+            {
+                gamungo = 1;
+            }
+			Main.player[Projectile.owner].HealEffect(gamungo);
+            Main.player[Projectile.owner].statLife += gamungo;
             Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 5,
                             Projectile.velocity.X * 0.1f, Projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
         }

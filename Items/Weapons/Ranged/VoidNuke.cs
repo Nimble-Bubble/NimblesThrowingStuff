@@ -15,9 +15,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 		{
 			DisplayName.SetDefault("Nuclear Void");
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("Fires a homing rocket"
-				+"\nAt the moment, only basic numbered rockets (Rockets I-IV) work as described"
-				+"\nOther rockets function as if they were fired out of the Rocket Launcher");
+			Tooltip.SetDefault("Fires powerful rockets");
 		}
 
 		public override void SetDefaults()
@@ -33,7 +31,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 			Item.noMelee = true;
 			Item.useAmmo = AmmoID.Rocket;
 			Item.UseSound = SoundID.Item38;
-			Item.shoot = ModContent.ProjectileType<VoidRocket1>();
+			Item.shoot = ProjectileID.VortexBeaterRocket;
             Item.knockBack = 8f;
 			Item.shootSpeed = 15f;
 			Item.DamageType = DamageClass.Ranged;
@@ -41,22 +39,10 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 		}
         public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
 		{
-			//Rocket III and IV give minions for some reason!?
-			if (type == ProjectileID.RocketI)
+			
+			if (type == ProjectileID.RocketI || type == ProjectileID.RocketII || type == ProjectileID.RocketIII || type == ProjectileID.RocketIV  || type >= 617 && type <= 712)
 			{
-				type = ModContent.ProjectileType<VoidRocket1>();
-			}
-			if (type == ProjectileID.RocketII)
-			{
-				type = ModContent.ProjectileType<VoidRocket2>();
-			}
-			if (type == ProjectileID.RocketIII)
-			{
-				type = ModContent.ProjectileType<VoidRocket3>();
-			}
-			if (type == ProjectileID.RocketIV)
-			{
-				type = ModContent.ProjectileType<VoidRocket4>();
+				type = ProjectileID.VortexBeaterRocket;
 			}
 		}
 		public override void AddRecipes()

@@ -10,7 +10,9 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 	{
 		public override void SetStaticDefaults() 
 		{ 
-			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 99; 
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 99;
+			Tooltip.SetDefault("Heals you by a small amount depending on the damage dealt"
+				+"\nYou can't heal more than 5 HP with one arrow");
 		}
 		public override void SetDefaults() {
 			Item.damage = 7;
@@ -18,13 +20,13 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 			Item.width = 8;
 			Item.height = 8;
 			Item.maxStack = 9999;
-			Item.consumable = true;             //You need to set the item consumable so that the ammo would automatically consumed
+			Item.consumable = true;             
 			Item.knockBack = 3.5f;
 			Item.value = 45;
 			Item.rare = 1;
-			Item.shoot = ModContent.ProjectileType<HealingArrowProj>();   //The projectile shoot when your weapon using this ammo
-			Item.shootSpeed = 4f;                  //The speed of the projectile
-			Item.ammo = AmmoID.Arrow;              //The ammo class this ammo belongs to.
+			Item.shoot = ModContent.ProjectileType<HealingArrowProj>();   
+			Item.shootSpeed = 4f;                  
+			Item.ammo = AmmoID.Arrow;              
 		}
         public override void AddRecipes() 
 		{
