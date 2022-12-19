@@ -53,6 +53,26 @@ namespace NimblesThrowingStuff.Items
         }
             return base.Shoot(item, player, source, position, velocity, type, damage, knockback);
     }
+        public override void UpdateEquip(Item item, Player player)
+        {
+            var modPlayer = player.GetModPlayer<NimblesPlayer>();
+            if (item.type == 686)
+            {
+                modPlayer.rangedSpeed += 0.1f;
+            }
+            if (item.type == 1865 || item.type == 899 && Main.dayTime || item.type == 900 && !Main.dayTime || item.type == 3110 || item.type == 2277 || item.type == 4984)
+            {
+                modPlayer.rangedSpeed += 0.1f;
+                modPlayer.magicSpeed += 0.1f;
+                modPlayer.thrownSpeed += 0.1f;
+                if (item.type == 3110 && !Main.dayTime)
+                {
+                    modPlayer.rangedSpeed += 0.051f;
+                    modPlayer.magicSpeed += 0.051f;
+                    modPlayer.thrownSpeed += 0.051f;
+                }
+            }
+        }
         public override void OpenVanillaBag(string context, Player player, int arg)
         {
             if (context == "bossBag") 
