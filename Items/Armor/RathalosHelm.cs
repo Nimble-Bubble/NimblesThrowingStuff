@@ -11,34 +11,34 @@ using Terraria.GameContent.Creative;
 
 namespace NimblesThrowingStuff.Items.Armor
 {
-    [AutoloadEquip(EquipType.Body)]
-    public class RathalosMail : ModItem
+    [AutoloadEquip(EquipType.Head)]
+    public class RathalosHelm : ModItem
     {
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
             Tooltip.SetDefault("Increases damage by 5%"
-                +"\nGrants 3 seconds of lava immunity");
+                +"\nGrants 1 second of lava immunity");
         }
 
         public override void SetDefaults()
         {
             Item.width = 30;
             Item.height = 32;
-            Item.value = 36000;
+            Item.value = 24000;
             Item.rare = 3;
-            Item.defense = 8; 
+            Item.defense = 6; 
         }
         public override void UpdateEquip(Player player)
         {
             player.GetDamage(DamageClass.Generic) += 0.05f;
-            player.lavaMax += 180;
+            player.lavaMax += 60;
         }
         public override void AddRecipes()
         {
             Recipe r = CreateRecipe();
-            r.AddIngredient(ItemID.HellstoneBar, 12);
-            r.AddIngredient(ModContent.ItemType<RedRathScale>(), 12);
+            r.AddIngredient(ItemID.HellstoneBar, 8);
+            r.AddIngredient(ModContent.ItemType<RedRathScale>(), 8);
             r.AddTile(16);
             r.Register();
         }

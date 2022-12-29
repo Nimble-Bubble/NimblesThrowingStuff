@@ -42,6 +42,10 @@ namespace NimblesThrowingStuff.Items
                 target.AddBuff(70, 300);
                 target.AddBuff(20, 300);
             }
+            if (player.GetModPlayer<NimblesPlayer>().rathalosOnFire && projectile.owner == Main.myPlayer && Main.rand.NextBool(5))
+            {
+                target.AddBuff(BuffID.OnFire, 300);
+            }
             if (player.GetModPlayer<NimblesPlayer>().miniPoison && projectile.minion && Main.rand.NextBool(5))
             {
                 target.AddBuff(20, 150);
