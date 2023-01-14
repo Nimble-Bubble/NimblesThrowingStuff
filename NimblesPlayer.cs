@@ -142,7 +142,10 @@ namespace NimblesThrowingStuff
             {
                 speed *= magicSpeed;
             }
-            speed *= universalSpeed;
+            if (item.damage >= 1)
+            {
+                speed *= universalSpeed;
+            }
 
             return speed;
         }
@@ -162,7 +165,10 @@ namespace NimblesThrowingStuff
             {
                 speed *= magicSpeed;
             }
-
+            if (item.damage >= 1)
+            {
+                speed *= universalSpeed;
+            }
             return speed;
         }
         public override void UpdateBadLifeRegen()
