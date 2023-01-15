@@ -16,7 +16,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 			Tooltip.SetDefault("This lance is lightweight and easy to craft, which makes it popular among hunters."
-				+"\nRight click to swing like a sword.");
+				+"\nRight click to throw the lance like a javelin");
 		}
 		public override void SetDefaults()
 		{
