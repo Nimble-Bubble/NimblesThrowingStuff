@@ -18,15 +18,15 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			DisplayName.SetDefault("\"Noctiluca\" the Illuminator");
 			Tooltip.SetDefault("In the darkness of the night, \"Noctiluca\" gave them light."
 				+"\nCritical strikes and reloads build up energy"
-				+"\nRight click to fire an illuminous ray if accumulated energy is high enough");
+				+"\nRight click to fire an illuminous blast if accumulated energy is high enough");
 		}
 		public override void SetDefaults()
 		{
-			Item.damage = 100;
+			Item.damage = 150;
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.useAnimation = 24;
 			Item.useTime = 24;
-			Item.knockBack = 6f;
+			Item.knockBack = 7f;
 			Item.width = 76;
 			Item.height = 76;
 			Item.noUseGraphic = true;
