@@ -137,11 +137,8 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                     {
                         if (!hasShelled)
                         {
-                            int phantas = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.velocity, ProjectileID.PhantasmalSphere, Projectile.damage * 3, Projectile.knockBack * 2, Projectile.owner);
-                        SoundEngine.PlaySound(SoundID.Item11);
-                            Main.projectile[phantas].friendly = true;
-                            Main.projectile[phantas].hostile = false;
-                            Main.projectile[phantas].DamageType = DamageClass.Melee;
+                            Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.velocity, ModContent.ProjectileType<PhantasRayTwo>(), Projectile.damage * 3, 15f, Projectile.owner);
+                            SoundEngine.PlaySound(SoundID.Item11);
                             projOwner.velocity.X -= Projectile.velocity.X / 2;
                         projOwner.velocity.Y -= Projectile.velocity.Y / 2;
                         for (int f = 0; f < 20; f++)
