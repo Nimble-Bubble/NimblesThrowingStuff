@@ -22,32 +22,28 @@ namespace NimblesThrowingStuff
     public class NimblesWorld : ModSystem
     {
         public static bool downedMorilus;
-        public static int sizeMult = (int)(Math.Round(Main.maxTilesX / 4200f)); //Small = 2; Medium = ~3; Large = 4;
+        public static int sizeMult = (int)(Math.Round(Main.maxTilesX / 4200f)); 
 
         public override void OnWorldLoad()
         {
             sizeMult = (int)(Math.Floor(Main.maxTilesX / 4200f));
             downedMorilus = false;
         }
+        public override void OnWorldUnload()
+        {
+            downedMorilus = false;
+        }
         public override void LoadWorldData(TagCompound tag)
         {
-            IList<string> downed = tag.GetList<string>("downed");
-            downedMorilus = downed.Contains("MorilusMain");
+            downedMorilus = tag.ContainsKey("downedMorilus");
         }
 
-        public override void SaveWorldData(TagCompound tag)/* Edit tag parameter rather than returning new TagCompound */
+        public override void SaveWorldData(TagCompound tag)
         {
-            TagCompound nottag = new TagCompound();
-            var downed = new List<string>();
-            bool obs = false;
-            int pwr = 0;
-            if (downedMorilus) downed.Add("MorilusMain");
-            
-
-            //return new TagCompound {
-            //    {"downed", downed},
-            //};
-            //return nottag;
+            if (downedMorilus)
+            {
+                tag["downedMorilus"] = true;
+            }
         }
         public override void NetSend(BinaryWriter writer)
         {

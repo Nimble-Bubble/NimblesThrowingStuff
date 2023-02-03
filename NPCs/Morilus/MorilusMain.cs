@@ -453,9 +453,9 @@ namespace NimblesThrowingStuff.NPCs.Morilus
             Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, Mod.Find<ModGore>("MorilusGore2").Type, 1f);
             if (!NimblesWorld.downedMorilus)
             {
+                NPC.SetEventFlagCleared(ref NimblesWorld.downedMorilus, -1);
                 Utilities.SpawnOre(ModContent.TileType<ProcellariteOreTile>(), 15E-05, .8f, .999f);
                 Utilities.SpawnOre(ModContent.TileType<ProcellariteOreTile>(), 15E-04, 0f, .1f);
-                NimblesWorld.downedMorilus = true;
                 if (Main.netMode == NetmodeID.SinglePlayer)
                     Main.NewText("The underworld glows with the energy of a storm...", new Color(0, 171, 171));
                 else if (Main.netMode == NetmodeID.Server)
@@ -472,7 +472,6 @@ namespace NimblesThrowingStuff.NPCs.Morilus
         }
         public override void ModifyNPCLoot(NPCLoot npcLoot)
         {
-            //NimblesWorld.downedMorilus = true;
             npcLoot.Add(ItemDropRule.BossBag(ModContent.ItemType<MorilusTreasureBag>()));
             LeadingConditionRule notExpertRule = new LeadingConditionRule(new Conditions.NotExpert());
             notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<MorilusMask>(), 7));
