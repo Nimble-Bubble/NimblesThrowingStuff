@@ -17,7 +17,7 @@ namespace NimblesThrowingStuff.Items.Armor
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-            Tooltip.SetDefault("Increases throwing damage and critical strike chance by 30%");
+            Tooltip.SetDefault("Increases throwing damage by 30% and critical strike chance by 20%");
         }
 
         public override void SetDefaults()
@@ -43,7 +43,7 @@ namespace NimblesThrowingStuff.Items.Armor
         public override void UpdateEquip(Player player)
         {
             player.GetDamage(DamageClass.Throwing) += 0.3f;
-            player.GetCritChance(DamageClass.Throwing) += 30;
+            player.GetCritChance(DamageClass.Throwing) += 20;
         }
 
 

@@ -76,13 +76,8 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                         Main.dust[dust2].scale *= 0.9f;
                     }
                     float bole = 0.3f;
-                    // bole /= 2;
                     movementFactor += bole;
                 }
-                //else 
-                //{
-                //    movementFactor += 1f;
-                //}
             }
 
             Projectile.position += Projectile.velocity * movementFactor;

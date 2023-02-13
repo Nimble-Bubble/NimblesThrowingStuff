@@ -60,13 +60,8 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                 if (projOwner.itemAnimation > projOwner.itemAnimationMax / 2)
                 {
                     float bole = 0.2f;
-                    // bole /= 2;
                     movementFactor += bole;
                 }
-                //else 
-                //{
-                //    movementFactor += 1f;
-                //}
             }
 
             Projectile.position += Projectile.velocity * movementFactor;
@@ -87,24 +82,5 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 
             //In case you're wondering why there's a statDefense boost in here, some lances along the default Ore line (Iron Lance > Paladin Lance > Growling Wyvern > Knight Lance > Ascalon > Spectra Lancea > Luminous Piercer) give flat stat boosts, especially defensive ones.
         }
-        //public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
-        //{
-            //if (Main.player[projectile.owner].velocity.X < 0)
-            //{
-            //    damage -= (int)Main.player[projectile.owner].velocity.X;
-            //}
-            //else
-            //{
-            //    damage += (int)Main.player[projectile.owner].velocity.X;
-            //}
-            //if (Main.player[projectile.owner].velocity.Y < 0)
-            //{
-            //    damage -= (int)Main.player[projectile.owner].velocity.Y;
-            //}
-            //else
-            //{
-            //    damage += (int)Main.player[projectile.owner].velocity.Y;
-            //}
-        //}
     }
 }

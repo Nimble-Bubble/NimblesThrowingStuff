@@ -50,11 +50,11 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 					movementFactor = 3f;  
 					Projectile.netUpdate = true;  
 				}
-				if (projOwner.itemAnimation < projOwner.itemAnimationMax / 3) // Somewhere along the item animation, make sure the spear moves back
+				if (projOwner.itemAnimation < projOwner.itemAnimationMax / 3) 
 				{
 					movementFactor -= 2f;
 				}
-				else // Otherwise, increase the movement factor
+				else 
 				{
 					movementFactor += 1f;
 				}

@@ -53,13 +53,8 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                 if (projOwner.itemAnimation > projOwner.itemAnimationMax / 2)
                 {
                     float bole = 0.2f;
-                    // bole /= 2;
                     movementFactor += bole;
                 }
-                //else 
-                //{
-                //    movementFactor += 1f;
-                //}
             }
 
             Projectile.position += Projectile.velocity * movementFactor;
@@ -75,28 +70,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             {
                 Projectile.rotation -= MathHelper.ToRadians(90f);
             }
-            if (Main.myPlayer == Projectile.owner)
-            {
-                if (Main.player[Projectile.owner].channel)
-                {
-                    //float num1 = Main.player[projectile.owner].inventory[Main.player[projectile.owner].selectedItem].shootSpeed * projectile.scale;
-                    //Vector2 vector2_2 = ownerMountedCenter;
-                    //float num2 = (float)((float)Main.mouseX + Main.screenPosition.X - vector2_2.X);
-                    //float num3 = (float)((float)Main.mouseY + Main.screenPosition.Y - vector2_2.Y);
-                    //if ((float)Main.player[projectile.owner].gravDir == -1.0)
-                    //    num3 = (float)((float)(Main.screenHeight - Main.mouseY) + Main.screenPosition.Y - vector2_2.Y);
-                    //float num4 = (float)Math.Sqrt((float)num2 * (float)num2 + (float)num3 * (float)num3);
-                    //float num5 = (float)Math.Sqrt((float)num2 * (float)num2 + (float)num3 * (float)num3);
-                    //float num6 = num1 / num5;
-                    // float num7 = num2 * num6;
-                    //float num8 = num3 * num6;
-                    //if ((float)num7 != projectile.velocity.X || (float)num8 != projectile.velocity.Y)
-                    //    projectile.netUpdate = true;
-                    //projectile.velocity.X = (float)num7;
-                    //projectile.velocity.Y = (float)num8;
-                }
-            }
-            else
+            if (Main.myPlayer != Projectile.owner)
             {
                 Projectile.Kill();
             }
@@ -105,24 +79,5 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 
             //In case you're wondering why there's a statDefense boost in here, some lances along the default Ore line (Iron Lance > Paladin Lance > Growling Wyvern > Knight Lance > Ascalon > Spectra Lancea > Luminous Piercer) give flat stat boosts, especially defensive ones.
         }
-        //public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
-        //{
-            //if (Main.player[projectile.owner].velocity.X < 0)
-            //{
-            //    damage -= (int)Main.player[projectile.owner].velocity.X;
-            //}
-            //else
-            //{
-            //    damage += (int)Main.player[projectile.owner].velocity.X;
-            //}
-            //if (Main.player[projectile.owner].velocity.Y < 0)
-            //{
-            //    damage -= (int)Main.player[projectile.owner].velocity.Y;
-            //}
-            //else
-            //{
-            //    damage += (int)Main.player[projectile.owner].velocity.Y;
-            //}
-        //}
     }
 }

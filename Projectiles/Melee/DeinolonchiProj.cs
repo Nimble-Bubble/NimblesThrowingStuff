@@ -57,13 +57,8 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                 if (projOwner.itemAnimation > projOwner.itemAnimationMax / 2)
                 {
                     float bole = 0.25f;
-                    // bole /= 2;
                     movementFactor += bole;
                 }
-                //else 
-                //{
-                //    movementFactor += 1f;
-                //}
             }
 
             Projectile.position += Projectile.velocity * movementFactor;
@@ -80,24 +75,5 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                 Projectile.rotation -= MathHelper.ToRadians(90f);
             }
         }
-        //public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
-        //{
-            //if (Main.player[projectile.owner].velocity.X < 0)
-            //{
-            //    damage -= (int)Main.player[projectile.owner].velocity.X;
-            //}
-            //else
-            //{
-            //    damage += (int)Main.player[projectile.owner].velocity.X;
-            //}
-            //if (Main.player[projectile.owner].velocity.Y < 0)
-            //{
-            //    damage -= (int)Main.player[projectile.owner].velocity.Y;
-            //}
-            //else
-            //{
-            //    damage += (int)Main.player[projectile.owner].velocity.Y;
-            //}
-        //}
     }
 }

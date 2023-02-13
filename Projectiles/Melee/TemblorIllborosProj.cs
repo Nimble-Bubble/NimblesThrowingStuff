@@ -56,14 +56,9 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                 }
                 if (projOwner.itemAnimation > projOwner.itemAnimationMax / 2)
                 {
-                    float bole = 0.3f;
-                    // bole /= 2;
+                    float bole = 0.4f;
                     movementFactor += bole;
                 }
-                //else 
-                //{
-                //    movementFactor += 1f;
-                //}
             }
 
             Projectile.position += Projectile.velocity * movementFactor;
