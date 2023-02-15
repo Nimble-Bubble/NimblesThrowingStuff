@@ -1,0 +1,1435 @@
+
+Mods: {
+	NimblesThrowingStuff: {
+		TownNPCMood: {
+			LivingRelic: {
+				Content: Things are fine. All is well.
+				NoHome: Where am I going to put my stuff?
+				LoveSpace: This is such a nice place! What's your place like?
+				FarFromHome: I think I need to get back home...
+				DislikeCrowded: It's a bit crowded in here. I'm not used to being around so many mammals.
+				HateCrowded: It's awfully crowded here...
+				LikeBiome: I love the outside, but I now have to choose between the outside and the inside.
+				LoveBiome: I think I've made my choice between the inside and the outside...
+				DislikeBiome: Normally, I love the outside, but now, I'm not too sure.
+				HateBiome: I think I've made my choice between the inside and the outside...
+				LikeNPC: I think {NPCName} is neat.
+				LoveNPC: Are these kinds of feelings between {NPCName} and I normal?
+				DislikeNPC: I'm not a big fan of {NPCName}...Something about them just seems odd.
+				HateNPC: "{NPCName} keeps trying to deny my ancestors' existence. Not a big fan of that."
+			}
+		}
+
+		Buffs: {
+			AquaBlastBuff: {
+				DisplayName: Aqua Blaster
+				Description: The shiny little things will fight for you
+			}
+
+			CompromisedStructure: {
+				DisplayName: Compromised Structure
+				Description: If it can't fly, now it can.
+			}
+
+			GreekFire: {
+				DisplayName: Greek Fire
+				Description: It burns!
+			}
+
+			GuardHorrorshowShield: {
+				DisplayName: Guard?
+				Description: Nothing can hit you. You can hit nothing. Is all well? All is well.
+			}
+
+			GuardIronShield: {
+				DisplayName: Guard
+				Description: Defense boosted at the cost of reduced mobility
+			}
+
+			HermitaurBoost: {
+				DisplayName: Daimyo's Blessing
+				Description: Endurance increased by 25%
+			}
+
+			HexHammerBuff: {
+				DisplayName: Hexed Hammer
+				Description: The Breaker will fight for you
+			}
+
+			MiniSkyseaGuardianBuff: {
+				DisplayName: Your Sky Sea Guardian
+				Description: It slices stuff. What more can I say?
+			}
+
+			MossHornetBuff: {
+				DisplayName: Mini-Moss Hornet
+				Description: The collaborations of flora and fauna will fight for you
+			}
+
+			SporeballBuff: {
+				DisplayName: Spore Balls
+				Description: The poisonous spore balls will fight for you
+			}
+
+			ViolentClusterBuff: {
+				DisplayName: Violent Chopper
+				Description: Blood Lust Cluster will fight for you
+			}
+		}
+
+		Items: {
+			ArachnidEmblem: {
+				DisplayName: Arachnid Emblem
+				Tooltip: Allows your minions, chelicerates or not, to envenom enemies
+			}
+
+			AvengerWristband: {
+				DisplayName: Avenger Wristband
+				Tooltip:
+					'''
+					Thrown critical strikes cause holy stars to fall down
+					25% increased throwing velocity and 12% increased thrown damage
+					'''
+			}
+
+			ChlorophyteTreaders: {
+				DisplayName: Chlorophyte Treaders
+				Tooltip:
+					'''
+					Allows super fast running and extra mobility on ice
+					20% increased movement speed
+					Provides the ability to walk on water, honey & lava
+					Grants immunity to fire blocks and 7 seconds of immunity to lava
+					Improved, environment-friendly soles allow for mid-air hops and softer landings
+					'''
+			}
+
+			CraterScope: {
+				DisplayName: Crater Scope
+				Tooltip: Right clicks make an explosive misfire
+			}
+
+			DemonClaw: {
+				DisplayName: Demon Claw
+				Tooltip: A strange demonic appendage that increases your throwing speed and velocity by 15%
+			}
+
+			DraconicRelic: {
+				DisplayName: Dorado's Flight
+				Tooltip:
+					'''
+					Allows flight and slow fall
+					Stellar membrane gives these wings powerful flight.
+					'''
+			}
+
+			GuardianEmblem: {
+				DisplayName: Guardian Emblem
+				Tooltip:
+					'''
+					When you stare into it, it stares back.
+					15% increased damage for all classes and 15% increased critical strike chance
+					'''
+			}
+
+			HealthEater: {
+				DisplayName: Health Eater
+				Tooltip: Allows your minions to poison enemies
+			}
+
+			ProcellariteScope: {
+				DisplayName: Procellarite Scope
+				Tooltip: Allows you to move the camera regardless of what you are holding
+			}
+
+			SacredWristband: {
+				DisplayName: Sacred Wristband
+				Tooltip:
+					'''
+					Thrown critical strikes cause holy stars to fall down
+					25% increased throwing velocity
+					'''
+			}
+
+			CarpatusDefender: {
+				DisplayName: Carpatus Defender
+				Tooltip:
+					'''
+					Grants a powerful dash
+					20% increased damage reduction
+					'''
+			}
+
+			HorrorshowShield: {
+				DisplayName: Horrorshow Shield
+				Tooltip:
+					'''
+					Makes you invisible when guarding
+					In this invisible state, you are invincible, but your weapons become much less useful
+					'''
+			}
+
+			IronShield: {
+				DisplayName: Iron Shield
+				Tooltip: Slow when guarding, but provides a nice defense
+			}
+
+			ThrowerEmblem: {
+				DisplayName: Thrower Emblem
+				Tooltip: 15% increased thrown damage
+			}
+
+			AdamantiteHat: {
+				DisplayName: Adamantite Hat
+				Tooltip: Increases thrown damage by 24% and thrown critical strike chance by 8%
+			}
+
+			AdamantiteHood: {
+				DisplayName: Adamantite Hood
+				Tooltip: Increases minion damage by 9% and minion slots by 1
+			}
+
+			BatBoots: {
+				DisplayName: Bat Boots
+				Tooltip: Increases thrown critical strike chance by 6%
+			}
+
+			BatMail: {
+				DisplayName: Bat Mail
+				Tooltip: Increases throwing velocity by 15%
+			}
+
+			BatMask: {
+				DisplayName: Bat Mask
+				Tooltip: Increases throwing damage by 10%
+			}
+
+			ChlorophyteCephalus: {
+				DisplayName: Chlorophyte Cephalus
+				Tooltip: Increases minion damage by 15% and minion slots by 1
+			}
+
+			ChlorophyteHat: {
+				DisplayName: Chlorophyte Hat
+				Tooltip:
+					'''
+					Increases thrown damage by 16% and thrown critical strike chance by 6%
+					Throwing weapons poison and envenom enemies
+					'''
+			}
+
+			CobaltCrown: {
+				DisplayName: Cobalt Crown
+				Tooltip: Increases minion damage by 5%
+			}
+
+			CobaltTopHat: {
+				DisplayName: Cobalt Top Hat
+				Tooltip: Increases thrown critical strike chance by 10%
+			}
+
+			FestiveHelm: {
+				DisplayName: Festive Helm
+				Tooltip: Increases mana by 100 and throwing velocity by 40%
+			}
+
+			FestivePants: {
+				DisplayName: Festive Boots
+				Tooltip: Increases movement speed by 25% and throwing damage by 30%
+			}
+
+			FestiveShirt: {
+				DisplayName: Festive Coat
+				Tooltip: Increases throwing speed by 15% and throwing critical strike chance by 20%
+			}
+
+			FortressBrickboots: {
+				DisplayName: Fortress Brickboots
+				Tooltip: Increases movement speed by 10%
+			}
+
+			FortressHelmet: {
+				DisplayName: Fortress Helmet
+				Tooltip: Increases throwing damage and critical strike chance by 10%
+			}
+
+			FortressPlate: {
+				DisplayName: Fortress Plate
+				Tooltip: Increases throwing velocity and damage by 15%
+			}
+
+			HallowedCap: {
+				DisplayName: Hallowed Cap
+				Tooltip: Increases thrown damage by 23% and thrown critical strike chance by 10%
+			}
+
+			LagiacrusGreaves: {
+				DisplayName: Lagiacrus Greaves
+				Tooltip:
+					'''
+					Increases attack speed by 5%
+					Increases critical strike chance by 3%
+					'''
+			}
+
+			LagiacrusHelm: {
+				DisplayName: Lagiacrus Helm
+				Tooltip:
+					'''
+					Increases attack speed by 5%
+					Increases critical strike chance by 3%
+					'''
+			}
+
+			LagiacrusMail: {
+				DisplayName: Lagiacrus Mail
+				Tooltip:
+					'''
+					Increases attack speed by 5%
+					Increases critical strike chance by 3%
+					'''
+			}
+
+			MathrusGreaves: {
+				DisplayName: Draconic Greaves
+				Tooltip: Increases movement speed and throwing damage by 40%
+			}
+
+			MathrusHelmet: {
+				DisplayName: Draconic Helmet
+				Tooltip: Increases mana by 120 and throwing velocity by 60%
+			}
+
+			MathrusPlate: {
+				DisplayName: Draconic Breastplate
+				Tooltip: Increases throwing speed by 20% and throwing critical strike chance by 25%
+			}
+
+			MythrilHardHat: {
+				DisplayName: Mythril Hard Hat
+				Tooltip: Increases thrown damage and velocity by 15%
+			}
+
+			MythrilHornedHat: {
+				DisplayName: Mythril Horned Hat
+				Tooltip: Increases minion damage by 7% and minion slots by 1
+			}
+
+			OrichalcumHat: {
+				DisplayName: Orichalcum Hat
+				Tooltip: Increases thrown damage by 8% and critical strike chance by 15%
+			}
+
+			OrichalcumHornedHat: {
+				DisplayName: Orichalcum Horned Hat
+				Tooltip: Increases minion damage by 8% and minion slots by 1
+			}
+
+			PalladiumCrown: {
+				DisplayName: Palladium Crown
+				Tooltip: Increases minion damage by 6%
+			}
+
+			PalladiumHat: {
+				DisplayName: Palladium Hat
+				Tooltip: Increases thrown critical strike chance by 7% and thrown damage by 13%
+			}
+
+			ProcellariteCap: {
+				DisplayName: Procellarite Cap
+				Tooltip: Increases throwing damage by 30% and critical strike chance by 20%
+			}
+
+			ProcellariteChestplate: {
+				DisplayName: Procellarite Chestplate
+				Tooltip: Increases damage and critical strike chance by 10% and maximum life by 100
+			}
+
+			ProcellariteHat: {
+				DisplayName: Procellarite Hat
+				Tooltip: Increases magic damage by 30% and critical strike chance by 20%
+			}
+
+			ProcellariteHelmet: {
+				DisplayName: Procellarite Helmet
+				Tooltip: Increases melee damage by 30% and critical strike chance by 20%
+			}
+
+			ProcellariteLeggings: {
+				DisplayName: Procellarite Leggings
+				Tooltip: Increases movement speed by 25% and minion and sentry slots by 2
+			}
+
+			ProcellariteMask: {
+				DisplayName: Procellarite Mask
+				Tooltip: Increases summoning damage by 50% and minion max by 4
+			}
+
+			ProcellariteVisor: {
+				DisplayName: Procellarite Visor
+				Tooltip: Increases ranged damage by 30% and critical strike chance by 20%
+			}
+
+			RathalosGreaves: {
+				DisplayName: Rathalos Greaves
+				Tooltip:
+					'''
+					Increases damage by 5%
+					Grants 2 seconds of lava immunity
+					'''
+			}
+
+			RathalosHelm: {
+				DisplayName: Rathalos Helm
+				Tooltip:
+					'''
+					Increases damage by 5%
+					Grants 1 second of lava immunity
+					'''
+			}
+
+			RathalosMail: {
+				DisplayName: Rathalos Mail
+				Tooltip:
+					'''
+					Increases damage by 5%
+					Grants 3 seconds of lava immunity
+					'''
+			}
+
+			TitaniumHat: {
+				DisplayName: Titanium Hat
+				Tooltip: Increases thrown damage by 21% and thrown critical strike chance by 12%
+			}
+
+			TitaniumHood: {
+				DisplayName: Titanium Hood
+				Tooltip: Increases minion damage by 10% and minion slots by 1
+			}
+
+			ConvincingArtifact: {
+				DisplayName: A More Convincing Artifact
+				Tooltip:
+					'''
+					A precious-looking work of art!
+					Summons Morilus, even if he is present already
+					Use it in space for the best results
+					'''
+			}
+
+			DeceptiveArtifact: {
+				DisplayName: Deceptive Artifact of the Sky's Sea
+				Tooltip:
+					'''
+					A precious-looking work of art, but not quite genuine
+					Provokes the great guardian of the Sky's Sea regardless
+					Use it in space for the best results
+					'''
+			}
+
+			MorilusTreasureBag: {
+				DisplayName: Treasure Bag
+				Tooltip: "{$CommonItemTooltip.RightClickToOpen}"
+			}
+
+			BatFlesh: {
+				DisplayName: Bat Flesh
+				Tooltip: A furry bit of bat skin
+			}
+
+			BeastBone: {
+				DisplayName: Beast Bone
+				Tooltip: Bigger than human bones, but a bit clumsier to work with
+			}
+
+			DoradoFragment: {
+				DisplayName: Dorado Fragment
+				Tooltip: A shard of the Dragon's Head
+			}
+
+			EmptyFlask.DisplayName: Empty Flask
+
+			FestiveCloth: {
+				DisplayName: Festive Cloth
+				Tooltip: A magical fabric taken from the jolly invaders
+			}
+
+			HermitaurShell: {
+				DisplayName: Hermitaur Shell
+				Tooltip:
+					'''
+					This durable, bone-like material makes up the exoskeleton of a Hermitaur.
+					When a large Hermitaur dies, scavengers bring pieces of its shell far away.
+					'''
+			}
+
+			LagiacrusShell: {
+				DisplayName: Shell-Shocker
+				Tooltip:
+					'''
+					Strange crystal protusions on this shell release electricity.
+					It is because of this electricity that this material is highly valued for crafting equipment.
+					'''
+			}
+
+			ProcellariteBar.DisplayName: Procellarite Bar
+
+			RedRathScale: {
+				DisplayName: Vermilion Scale
+				Tooltip: The heat-related properties of this scale make it a must-have for equipment crafting.
+			}
+
+			RoyalFin: {
+				DisplayName: Royal Fin
+				Tooltip: The hide of the sea's live plague is unsurprisingly powerful when it comes to weaponsmithery.
+			}
+
+			ShorebrassBar: {
+				DisplayName: Shorebrass Bar
+				Tooltip: This unusual brass-steel-coral hybrid makes for a surprisingly good alloy.
+			}
+
+			SoulOfTrite: {
+				DisplayName: Soul Of Trite
+				Tooltip: The essence of what lies above
+			}
+
+			KelbiBannerItem.DisplayName: Kelbi Banner
+			MimiclamBannerItem.DisplayName: Clam Banner
+			SmallRathBannerItem.DisplayName: Small Rathwyvern Banner
+
+			HadalShellstone: {
+				DisplayName: Deep Shellstone
+				Tooltip: Formed from a mixture of minerals and remains, this material has a remarkable deep tone to it.
+			}
+
+			ProcellariteBlock.DisplayName: Procellarite Block
+			ProcellariteOre.DisplayName: Procellarite Ore
+
+			MorilusTrophy: {
+				DisplayName: Morilus Trophy
+				Tooltip: A chip of such power could only be encased in the finest of forbidden cheese.
+			}
+
+			HadalShellstoneWall.DisplayName: Hadal Shellstone Wall
+
+			ClawspikePickaxe: {
+				DisplayName: Clawspike Pickaxe
+				Tooltip: Made from Hermitaur materials, this pickaxe is a powerful tool for rapid mining.
+			}
+
+			Crimtroll: {
+				DisplayName: Crimtroll
+				Tooltip: While it's not the most appetizing bait out there, it sure is reliable.
+			}
+
+			Demonnow: {
+				DisplayName: Demonnow
+				Tooltip: While it's not the most appetizing bait out there, it sure is reliable.
+			}
+
+			DoradoHamaxe.DisplayName: Dorado Hamaxe
+			DoradoPickaxe.DisplayName: Dorado Pickaxe
+			MeteoriteDrill.DisplayName: Meteorite Drill
+			ProcellariteHamaxe.DisplayName: Procellarite Hamaxe
+			ProcellaritePickaxe.DisplayName: Procellarite Pickaxe
+
+			ShorebrassLure: {
+				DisplayName: Shorebrass Seabass
+				Tooltip: No, wait--It's at least a B!
+			}
+
+			ShorebrassPickaxe: {
+				DisplayName: Shorebrass Pickaxe
+				Tooltip: This pickaxe is lightweight, yet powerful.
+			}
+
+			LagiacrusMask: {
+				DisplayName: Lagiacrus Mask
+				Tooltip:
+					'''
+					This strange mask resembles the sea's monarch.
+					Perfect for cosplay!
+					'''
+			}
+
+			LivingRelicMask.DisplayName: Living Relic Mask
+			MorilusMask.DisplayName: Morilus Mask
+
+			GuardianBarrier: {
+				DisplayName: Barrier Builder
+				Tooltip:
+					'''
+					Creates two barriers at the position of the cursor that will move opposite of each other
+					Left click will create tall walls that move horizontally
+					Right click will create wide walls that move vertically
+					'''
+			}
+
+			ProcellariteStaff: {
+				DisplayName: Procellarite Staff
+				Tooltip: Creates a big star that explodes into other stars
+			}
+
+			RazorBolt: {
+				DisplayName: Razor Bolt
+				Tooltip: Fires a wheel of rainwater
+			}
+
+			SporeStaff.DisplayName: Spore Staff
+
+			StormShot: {
+				DisplayName: Storm Shot
+				Tooltip: Fires a ball of acid rain
+			}
+
+			ActualLagoonLance: {
+				DisplayName: Laguna Lance
+				Tooltip:
+					'''
+					This water gun-like lance pulls moisture from the air into its chamber.
+					Right click while holding the lance out to fire a high-pressure stream of water.
+					'''
+			}
+
+			Ascalon: {
+				DisplayName: Ascalon
+				Tooltip:
+					'''
+					A masterwork of metalsmithing and machinery.
+					Right click to fire a holy laser beam that does 150% base damage. Guard and right click to charge the laser beams.
+					A single reload gives 1 charge, and you can have up to 5 charges. A single instance of laserfire takes up 2 charges.
+					'''
+			}
+
+			AtlantisGunlance: {
+				DisplayName: Atlantis Gunlance
+				Tooltip:
+					'''
+					From the depths of the abyss comes this feared beast...
+					Right click while holding the gunlance out to fire a shell. Shells do 5/4 of the weapon's base damage.
+					This gunlance holds up to 3 shells. Each reload gives you 1 shell.
+					'''
+			}
+
+			BloodySyringe: {
+				DisplayName: Bloody Syringe
+				Tooltip:
+					'''
+					AB is a universal recipient. O is a universal donor. This is a universal source of pain.
+					Right click while holding the lance out to fire a stream of blood.
+					'''
+			}
+
+			BlueTail: {
+				DisplayName: Blue Tail
+				Tooltip:
+					'''
+					A jeweled Lance at the forefront of fire weapon manufacturing technology.
+					Right click to spew flames from the tip of the lance.
+					'''
+			}
+
+			BoneClawLance: {
+				DisplayName: Bone Claw Lance
+				Tooltip:
+					'''
+					Made from Hermitaur parts, this weapon is more than adequate as a beginner's lance.
+					Critical strikes give you increased endurance for a short period of time.
+					'''
+			}
+
+			CursedDemonLance: {
+				DisplayName: Cursed Demonite Lance
+				Tooltip: Cthulhu's hardened flesh brings out the best in shortswords.
+			}
+
+			DecayedBloodySyringe: {
+				DisplayName: Decayed Bloody Syringe
+				Tooltip:
+					'''
+					AB is a universal recipient. O is a universal donor. This is a universal source of pain.
+					Right click while holding the lance out to fire a stream of ichor.
+					'''
+			}
+
+			DeepBuster: {
+				DisplayName: Deep Buster
+				Tooltip:
+					'''
+					Part-gunlance, part-landshark. It's completely safe and totally original, we swear.
+					Right click while using to shoot. Guard and right click while using to reload.
+					After reloading, you can shoot up to eight times before needing to reload again.
+					'''
+			}
+
+			Deinolonchi: {
+				DisplayName: Deinolonchi
+				Tooltip: The fang-based design of this lance gives it some nostalgic charm
+			}
+
+			DemonLance: {
+				DisplayName: Demonite Lance
+				Tooltip: Cthulhu's hardened flesh brings out the best in shortswords.
+			}
+
+			Estoc: {
+				DisplayName: Estoc
+				Tooltip: Its point is small, and it may be weak, but it leaves an impact on its unfortunate targets.
+			}
+
+			FashionableFragrance: {
+				DisplayName: Fashionable Fragrance
+				Tooltip:
+					'''
+					A lance modeled after a mythical plant. It matches its fashionable exterior with a pleasant odor.
+					...Pleasant enough to you, at least. Right click while attacking to fire a poisonous spore cloud.
+					'''
+			}
+
+			Feathersting: {
+				DisplayName: Feathersting
+				Tooltip:
+					'''
+					Fly with wings of feathers and sting with talons of bone
+					While attacking, you are immune to fall damage
+					'''
+			}
+
+			FlameBlessedBroadsword.DisplayName: Flame-Blessed Broadsword
+
+			FortressBreaker: {
+				DisplayName: Fortress Breaker
+				Tooltip:
+					'''
+					This lance can break through defenses.
+					Critical hits completely ignore defense.
+					'''
+			}
+
+			Fragrance: {
+				DisplayName: Fragrance
+				Tooltip:
+					'''
+					A lance modeled after a flower bud. It matches its cute exterior with a pleasant odor.
+					...Pleasant enough to you, at least. Right click while attacking to fire a damaging spore cloud.
+					'''
+			}
+
+			FrostIcicle: {
+				DisplayName: Frost Icicle
+				Tooltip:
+					'''
+					A metallic lance with an icy edge.
+					Its frostburn-inducing edge ensures the most bang for your buck.
+					'''
+			}
+
+			FuriousFalchion.DisplayName: Furious Falchion
+
+			GrandHalberd: {
+				DisplayName: Grand Halberd
+				Tooltip: Powerful enough to pierce steel.
+			}
+
+			GrowlingWyvern: {
+				DisplayName: Growling Wyvern
+				Tooltip:
+					'''
+					A drill-like lance that pierces into the veins of fiends.
+					May cause bleeding.
+					'''
+			}
+
+			HiveHoncho: {
+				DisplayName: Hive Honcho
+				Tooltip:
+					'''
+					With a stinger like this, the bugs will know you're their boss.
+					Unfortunately for you, they're planning some changes in the command of order, so to speak.
+					Right click to release bees (that each deal one third of base damage) gained from critical strike. 
+					Each critical strike adds 1 bee, and you can have up to 6 bees.
+					'''
+			}
+
+			IlluminatorNoctiluca: {
+				DisplayName: '''"Noctiluca" the Illuminator'''
+				Tooltip:
+					'''
+					In the darkness of the night, "Noctiluca" gave them light.
+					Critical strikes and reloads build up energy
+					Right click to fire an illuminous blast if accumulated energy is high enough
+					'''
+			}
+
+			IronLance: {
+				DisplayName: Iron Lance
+				Tooltip: A heavy lance for sure, but its power makes up for it.
+			}
+
+			KnightLance: {
+				DisplayName: Knight Lance
+				Tooltip:
+					'''
+					Made with valuable ores, this lance can slice and thrust.
+					Right click to swing like a sword.
+					'''
+			}
+
+			Lepidolancea: {
+				DisplayName: Lepidolancea
+				Tooltip:
+					'''
+					Some say that this lance was once used by a bright mind to mold clouds...
+					Right click to send yourself flying in the direction of the lance
+					You will gain a second of invincibility from hitting an enemy
+					'''
+			}
+
+			Longhorn: {
+				DisplayName: Longhorn
+				Tooltip: Rough-hewn, but sturdy.
+			}
+
+			MahoganyStinger: {
+				DisplayName: Mahogany Stinger
+				Tooltip:
+					'''
+					Sting like a bee. Fly...like a bee.
+					Right click to launch yourself in the direction of the lance.
+					Hits may poison enemies.
+					'''
+			}
+
+			PaladinLance: {
+				DisplayName: Paladin Lance
+				Tooltip: A powerful and heavy lance known for its presence on the battlefield.
+			}
+
+			PanthalassicGunlance: {
+				DisplayName: Panthalassic Gunlance
+				Tooltip:
+					'''
+					From an abyss so old that most would call it a niwelnysse, this beast awakens
+					Right click while holding the gunlance out to fire a shell. Shells do 5/4 of the weapon's base damage.
+					The maximum amount of shells for this weapon is 6. Each reload gives you 2 shells.
+					'''
+			}
+
+			ProcellariteBroadsword.DisplayName: Procellarite Broadsword
+			ProcellariteTrident.DisplayName: Procellarite Trident
+
+			RedTail: {
+				DisplayName: Red Tail
+				Tooltip:
+					'''
+					Made to resemble a Rathalos' tail. It's a bit small, but it spits flames.
+					Right click to spew flames from the tip of the lance.
+					'''
+			}
+
+			RobustTusk: {
+				DisplayName: Robust Tusk
+				Tooltip:
+					'''
+					The added leather allows for higher agility
+					Right click to launch yourself in the direction of the lance
+					'''
+			}
+
+			SeaDiver: {
+				DisplayName: Sea Diver
+				Tooltip:
+					'''
+					Part-gun, part-lance, part-shark. It's completely safe, we swear.
+					Right click while using to shoot. Guard and right click while using to reload.
+					After reloading, you can shoot up to six times before needing to reload again.
+					'''
+			}
+
+			ShockLance: {
+				DisplayName: Shock Lance
+				Tooltip:
+					'''
+					High voltage gives this blade an electric touch.
+					Right click to fire an electric beam.
+					'''
+			}
+
+			SkyseaSpinner: {
+				DisplayName: Skysea Spinner
+				Tooltip: A very agile yoyo that rains spikes upon its targets
+			}
+
+			SpectrePiercer: {
+				DisplayName: Spectre Piercer
+				Tooltip:
+					'''
+					This spectral lance is mysterious, yet strong all the same.
+					Critical strikes make you invincible and invisible for a short period of time
+					'''
+			}
+
+			SpikedJavelin: {
+				DisplayName: Spiked Javelin
+				Tooltip:
+					'''
+					This lance is lightweight and easy to craft, which makes it popular among hunters.
+					Right click to throw the lance like a javelin
+					'''
+			}
+
+			StingerSpear: {
+				DisplayName: Stinger Spear
+				Tooltip: Has a chance to poison enemies
+			}
+
+			Superfast: {
+				DisplayName: Superfast
+				Tooltip: A superfast pulsar-like yoyo that attacks relentlessly
+			}
+
+			TemblorIllboros: {
+				DisplayName: Temblor Illboros
+				Tooltip: A simple but powerful lance with no strings attached.
+			}
+
+			TheToothpick.DisplayName: The Toothpick
+
+			TrueAscalon: {
+				DisplayName: True Ascalon
+				Tooltip:
+					'''
+					A true masterwork of metalsmithing and machinery.
+					Right click to fire three holy laser beams that each do half of the weapon's base damage. Guard and right click to charge the laser beams.
+					A single reload gives 4 charges, and you can have up to 12 charges. A single instance of laserfire takes up 3 charges.
+					'''
+			}
+
+			Valhalla: {
+				DisplayName: Valhalla
+				Tooltip:
+					'''
+					Its point is still rather small, but can you really say it's weak anymore? 
+					Causes enemies to bleed upon impact.
+					'''
+			}
+
+			Autoquarian: {
+				DisplayName: Autoquarian
+				Tooltip: Sometimes fires a high-velocity watery arrow
+			}
+
+			BlazeBullet: {
+				DisplayName: Blaze Bullet
+				Tooltip: Sets enemies on fire
+			}
+
+			BlazeDart: {
+				DisplayName: Blaze Dart
+				Tooltip: Sets enemies on fire
+			}
+
+			CopperPistol.DisplayName: Copper Pistol
+			GoldPistol.DisplayName: Gold Pistol
+
+			HealingArrow: {
+				DisplayName: Healing Arrow
+				Tooltip:
+					'''
+					Heals you by a small amount depending on the damage dealt
+					You can't heal more than 5 HP with one arrow
+					'''
+			}
+
+			HermitaurHuntingbow.DisplayName: Hermitaur Hunting Bow
+
+			NecroRepeater: {
+				DisplayName: Necro Repeater
+				Tooltip: A rapidly-firing crossbow
+			}
+
+			PlatinumPistol.DisplayName: Platinum Pistol
+
+			ProcellariteLongbow: {
+				DisplayName: Pain Rain
+				Tooltip: Rains several arrows down from the heavens(?)
+			}
+
+			ProcellariteRepeater.DisplayName: Procellarite Repeater
+
+			Seastring: {
+				DisplayName: Seastring
+				Tooltip: Fires a high-velocity watery arrow
+			}
+
+			SilverPistol.DisplayName: Silver Pistol
+
+			SporeSling: {
+				DisplayName: Spore Sling
+				Tooltip: Fires several stingers along with your arrow
+			}
+
+			TinPistol.DisplayName: Tin Pistol
+			TungstenPistol.DisplayName: Tungsten Pistol
+
+			VoidNuke: {
+				DisplayName: Nuclear Void
+				Tooltip: Fires powerful rockets
+			}
+
+			AquaBlastCore: {
+				DisplayName: Aqua Blaster Core
+				Tooltip: Summons an Aqua Blaster
+			}
+
+			GuardianStaff: {
+				DisplayName: Miniature Guardian Staff
+				Tooltip: Summons a small Guardian of the Sky Sea
+			}
+
+			HexHammerTome: {
+				DisplayName: Hexed Hammer Tome
+				Tooltip: Summons a Breaker
+			}
+
+			MossyHornetStaff: {
+				DisplayName: Mossy Hornet Staff
+				Tooltip: Summons miniature moss hornets that fire stingers
+			}
+
+			SporeballStaff: {
+				DisplayName: Sporeball Staff
+				Tooltip:
+					'''
+					Summons small, but poisonous living spore balls
+					The spore balls will sometimes leave small spores in their path
+					'''
+			}
+
+			ViolentClusterTome: {
+				DisplayName: Violent Chopper Tome
+				Tooltip: Summons a Blood Lust Cluster
+			}
+
+			AccursedFlask.DisplayName: Cursed Flame Throwing Flask
+			AdamantiteMallet.DisplayName: Adamantite Mallet
+
+			Arachknife: {
+				DisplayName: Arachknife
+				Tooltip: This knife sticks to enemies
+			}
+
+			Beemerang.DisplayName: Beemerang
+
+			BloodyPike: {
+				DisplayName: Bloody Pike
+				Tooltip: Turns into a stream of ichor
+			}
+
+			BrimstoneBomb: {
+				DisplayName: Brimstone Bomb
+				Tooltip: Explodes into hellish shrapnel
+			}
+
+			BrokeBonesAxe: {
+				DisplayName: Bluebone Hatchet
+				Tooltip: Bounces around with a chance to break armor
+			}
+
+			ChlorophyteBomb.DisplayName: Chlorophyte Bomb
+			ChlorophyteChakram.DisplayName: Chlorophyte Chakram
+			CobaltShortspear.DisplayName: Cobalt Shortspear
+			CopperKnife.DisplayName: Copper Knife
+
+			CoralKnife: {
+				DisplayName: Coral Knife
+				Tooltip: These knives stick to enemies
+			}
+
+			CosmosCrasher.DisplayName: Cosmos Crasher
+			CrimtaneKnife.DisplayName: Crimtane Knife
+			CrystalFan.DisplayName: Crystal Fan
+			CumulusCrasher.DisplayName: Cumulus Crasher
+			DemoniteKnife.DisplayName: Demonite Knife
+
+			DoradoBomb: {
+				DisplayName: Dragon's Grenade
+				Tooltip: Explodes into a storm of draconic shrapnel
+			}
+
+			DoradoKnives: {
+				DisplayName: Dragon's Fangs
+				Tooltip: Cleave and claw through the toughest hide.
+			}
+
+			DraconicHarvest: {
+				DisplayName: Draconic Harvest
+				Tooltip: Spawns draconic portals that release shrapnel.
+			}
+
+			DreadfulFangs: {
+				DisplayName: Dreadful Fangs
+				Tooltip: Three knives are thrown out per use
+			}
+
+			FestiveEggnog: {
+				DisplayName: Festive Eggnog
+				Tooltip: Explodes into drops o' nog
+			}
+
+			FestiveJavelin: {
+				DisplayName: Festive Javelin
+				Tooltip: Explodes into snowflakes
+			}
+
+			FireballBrew: {
+				DisplayName: Fireball Brew
+				Tooltip: When it breaks, it bursts into brilliant flames
+			}
+
+			ForbiddenSmokeBomb: {
+				DisplayName: Forbidden Smoke Bomb
+				Tooltip: Explodes into a forbidden storm
+			}
+
+			FrostJavelin.DisplayName: Frost Javelin
+			GoldKnife.DisplayName: Gold Knife
+
+			GolemGlove: {
+				DisplayName: Golem's Glove
+				Tooltip: Throws three balls of fire
+			}
+
+			HallowedWaraxe.DisplayName: Hallowed Waraxe
+
+			HellBonesAxe: {
+				DisplayName: Hellbone Hatchet
+				Tooltip: Lights enemies on hellfire
+			}
+
+			IchoredFlask.DisplayName: Ichor Throwing Flask
+			IronKnife.DisplayName: Iron Knife
+			LacusDecapitator.DisplayName: Lacus Decapitator
+			LeadKnife.DisplayName: Lead Knife
+			LihzahrdSpikeKnife.DisplayName: Lihzahrd Spike Knife
+
+			LogicBomb: {
+				DisplayName: Logic Bomb
+				Tooltip: Can confuse enemies with its explosion
+			}
+
+			MartianMiracle.DisplayName: Martian Miracle
+
+			MeteorSpear: {
+				DisplayName: Meteor Spear
+				Tooltip: An extremely agile exploding javelin
+			}
+
+			MoltenKnife.DisplayName: Molten Knife
+			MythrilHatchet.DisplayName: Mythril Hatchet
+
+			NanoMissile: {
+				DisplayName: Nano Missile
+				Tooltip: Are you sure this is legal?
+			}
+
+			NightPiercer: {
+				DisplayName: Night's Piercer
+				Tooltip: A legendary knife with controlled flight
+			}
+
+			ObsidianScalpel.DisplayName: Obsidian Scalpel
+			OrichalcumHatchet.DisplayName: Orichalcum Hatchet
+			PalladiumShortspear.DisplayName: Palladium Shortspear
+			PlatinumKnife.DisplayName: Platinum Knife
+
+			PoseironTrident: {
+				DisplayName: Poseiron's Trident
+				Tooltip: A sea god's three-pronged spear that oils and frostburns foes
+			}
+
+			ProcellariteKnife.DisplayName: Procellarite Knife
+
+			RustyBonesAxe: {
+				DisplayName: Rustbone Hatchet
+				Tooltip: Accelerates beyond perceptions and envenoms enemies for some reason
+			}
+
+			SatelliteSpear.DisplayName: Satellite Spear
+
+			ScavengedKunai: {
+				DisplayName: Scavenged Kunai
+				Tooltip: It's still a bit slimy
+			}
+
+			ShadowflameSpikeBall.DisplayName: Shadowflame Spike Ball
+			ShadowJavelin.DisplayName: Shadow Javelin
+			SilverKnife.DisplayName: Silver Knife
+
+			Skelespear: {
+				DisplayName: Skelespear
+				Tooltip: Turns into a stream of water
+			}
+
+			SnowflakeShuriken.DisplayName: Snowflake Shuriken
+			SpikeKnife.DisplayName: Spike Knife
+
+			SpookySpines: {
+				DisplayName: Macabrazor
+				Tooltip: Hmm...This is familiar...
+			}
+
+			StingerDagger: {
+				DisplayName: Stinger Dagger
+				Tooltip: Has a chance to poison enemies
+			}
+
+			TerraDagger.DisplayName: Terra Dagger
+			ThornBall.DisplayName: Thorn Ball
+
+			ThornyGlove: {
+				DisplayName: Thorny Glove
+				Tooltip: Throws out poisonous seeds
+			}
+
+			TinKnife.DisplayName: Tin Knife
+			TitaniumMallet.DisplayName: Titanium Mallet
+			TrueHallowedWaraxe.DisplayName: True Hallowed Waraxe
+
+			TrueNightPiercer: {
+				DisplayName: True Night's Piercer
+				Tooltip: "'Find your own way to the Knife'"
+			}
+
+			TungstenKnife.DisplayName: Tungsten Knife
+
+			UnholyHandGrenade: {
+				DisplayName: Unholy Hand Grenade
+				Tooltip: Explodes into Greek fireballs
+			}
+
+			VenomousArachknife: {
+				DisplayName: Venomous Arachknife
+				Tooltip: This knife sticks to enemies
+			}
+
+			ViciousHarvest.DisplayName: Vicious Harvest
+			VileHarvest.DisplayName: Vile Harvest
+		}
+
+		NPCs: {
+			Kelbi.DisplayName: Kelbi
+			Mimiclam.DisplayName: Clam
+			SmallRath.DisplayName: Small Rathwyvern
+			MorilusMain.DisplayName: Morilus, the Great Guardian of the Sky's Sea
+			SkySeaGuardian.DisplayName: Sky Sea Guardian
+			SkySeaPrankster.DisplayName: Prankster of the Sky Sea
+			LivingRelic.DisplayName: Living Relic
+		}
+
+		Projectiles: {
+			MorileShooter.DisplayName: Morile Shooter
+			MorileShot.DisplayName: Morile Shot
+			MorilusBigStar.DisplayName: Star Bomb
+			MorilusBolt.DisplayName: Oceanus Bolt
+			MorilusHorizontalWall.DisplayName: Morilus Barrier
+			MorilusRain.DisplayName: Oceanus Rain
+			MorilusStream.DisplayName: Oceanus Stream
+			MorilusVerticalWall.DisplayName: Morilus Barrier
+			RathFireball.DisplayName: Rath Fireball
+			CobaltBolt.DisplayName: Cobalt Bolt
+			MagicBigStar.DisplayName: Star Bomb
+			MagicHorizontalWall.DisplayName: Morilus Barrier
+			MagicVerticalWall.DisplayName: Morilus Barrier
+			PalladiumBolt.DisplayName: Palladium Bolt
+			RazorboltProj.DisplayName: Razorbolt Proj
+			SporeBolt.DisplayName: Spore Bolt
+			StormShotBall.DisplayName: Storm Shot Ball
+			ActualLagoonLanceProj.DisplayName: Actual Lagoon Lance Proj
+			AscalonProj.DisplayName: Ascalon Proj
+			AtlantisGunlanceProj.DisplayName: Atlantis Gunlance Proj
+			AtlantisGunlanceShell.DisplayName: Atlantis Gunlance Shell
+			BloodySyringeBlood.DisplayName: Stream of Blood
+			BloodySyringeProj.DisplayName: Bloody Syringe Proj
+			BlueTailFlames.DisplayName: Blue Tail Flames
+			BlueTailProj.DisplayName: Blue Tail Proj
+			BoneClawLanceProj.DisplayName: Bone Claw Lance Proj
+			CursedDemonLanceProj.DisplayName: Cursed Demon Lance Proj
+			DecayedBloodySyringeProj.DisplayName: Decayed Bloody Syringe Proj
+			DeepBusterProj.DisplayName: Deep Buster Proj
+			DeinolonchiProj.DisplayName: Deinolonchi Proj
+			DemonLanceProj.DisplayName: Demon Lance Proj
+			EstocProj.DisplayName: Estoc Proj
+			FashionableFragranceProj.DisplayName: Fashionable Fragrance Proj
+			FeatherstingProj.DisplayName: Feathersting Proj
+			FlameBlessedBeamProj.DisplayName: Flame Blessed Beam Proj
+			FortressBreakerProj.DisplayName: Fortress Breaker Proj
+			FragranceProj.DisplayName: Fragrance Proj
+			FrostIcicleProj.DisplayName: Frost Icicle Proj
+			FuriousBeam.DisplayName: Furious Beam
+			GrandHalberdProj.DisplayName: Grand Halberd Proj
+			GrowlingWyvernProj.DisplayName: Growling Wyvern Proj
+			HiveHonchoProj.DisplayName: Hive Honcho Proj
+			IlluminatorNoctilucaProj.DisplayName: Illuminator Noctiluca Proj
+			IronLanceProj.DisplayName: Iron Lance Proj
+			KnightLanceProj.DisplayName: Knight Lance Proj
+			LepidolanceaProj.DisplayName: Lepidolancea Proj
+			LonghornProj.DisplayName: Longhorn Proj
+			MahoganyStingerProj.DisplayName: Mahogany Stinger Proj
+			MeteoriteDrillProj.DisplayName: Meteorite Drill Proj
+			PaladinLanceProj.DisplayName: Paladin Lance Proj
+			PanthalassicGunlanceProj.DisplayName: Panthalassic Gunlance Proj
+			PanthalassicGunlanceShell.DisplayName: Panthalassic Gunlance Shell
+			PhantasRayTwo.DisplayName: Phantas Ray Two
+			ProcellariteBroadswordProj.DisplayName: Procellarite Broadsword Proj
+			ProcellariteSmallSwordBeam.DisplayName: Procellarite Small Sword Beam
+			ProcellariteSpikeProj.DisplayName: Procellarite Spike Proj
+			ProcellariteTridentProj.DisplayName: Procellarite Trident
+			RedTailProj.DisplayName: Red Tail Proj
+			RobustTuskProj.DisplayName: Robust Tusk Proj
+			SeaDiverBullet.DisplayName: Sea Diver Bullet
+			SeaDiverProj.DisplayName: Sea Diver Proj
+			ShockLanceProj.DisplayName: Shock Lance Proj
+			SkyseaSpinnerProj.DisplayName: Skysea Spinner Proj
+			SpectrePiercerProj.DisplayName: Spectre Piercer Proj
+			SpikedJavelinProj.DisplayName: Spiked Javelin Proj
+			SpikedJavelinThrown.DisplayName: Spiked Javelin Thrown
+			StingerSpearProj.DisplayName: Stinger Spear
+			SuperfastProj.DisplayName: Superfast Proj
+			TemblorIllborosProj.DisplayName: Temblor Illboros Proj
+			TheToothpickProj.DisplayName: The Toothpick
+			TrueAscalonEcho.DisplayName: True Ascalon Echo
+			TrueAscalonProj.DisplayName: True Ascalon Proj
+			ValhallaProj.DisplayName: Valhalla Proj
+			BlazeBulletProj.DisplayName: Blaze Bullet Proj
+			BlazeDartProj.DisplayName: Blaze Dart Proj
+			HealingArrowProj.DisplayName: Healing Arrow Proj
+			MisfireProj.DisplayName: Misfire Proj
+			ProcellariteShotgunProj.DisplayName: Procellarite Shotgun Proj
+			SeastringArrowProj.DisplayName: Seastring Arrow Proj
+			VoidRocket1.DisplayName: Void Rocket I
+			VoidRocket2.DisplayName: Void Rocket II
+			VoidRocket3.DisplayName: Void Rocket III
+			VoidRocket4.DisplayName: Void Rocket IV
+			AquaBlast.DisplayName: Aqua Blast
+			AquaBlastProj.DisplayName: Aqua Blaster
+			HexHammerProj.DisplayName: Hexed Hammer
+			MiniMossHornetProj.DisplayName: Moss Hornet
+			SkySeaGuardianProj.DisplayName: Your Very Own Guardian Of The Sky Sea
+			SporeballProj.DisplayName: Spore Ball
+			SporeballSpore.DisplayName: Sporeball Spore
+			ViolentClusterProj.DisplayName: Violent Chopper
+			AccursedFlaskProj.DisplayName: Accursed Flask Proj
+			AdamantiteMalletProj.DisplayName: Adamantite Mallet Proj
+			ArachknifeProj.DisplayName: Arachknife Proj
+			BeemerangProj.DisplayName: Beemerang Proj
+			BloodyPikeProj.DisplayName: Bloody Pike Proj
+			BrimstoneBombProj.DisplayName: Brimstone Bomb Proj
+			BrimstoneShrapnel.DisplayName: Brimstone Shrapnel
+			BrokeBonesAxeProj.DisplayName: Broke Bones Axe Proj
+			ChlorophyteBombProj.DisplayName: Chlorophyte Bomb Proj
+			ChlorophyteChakramProj.DisplayName: Chlorophyte Chakram Proj
+			CobaltShortspearProj.DisplayName: Cobalt Shortspear Proj
+			CopperKnifeProj.DisplayName: Copper Knife Proj
+			CoralKnifeProj.DisplayName: Coral Knife Proj
+			CosmosCrasherProj.DisplayName: Cosmos Crasher
+			CrimtaneKnifeProj.DisplayName: Crimtane Knife Proj
+			CrystalKnifeProj.DisplayName: Crystal Knife Proj
+			CumulusCrasherProj.DisplayName: Cumulus Crasher Proj
+			CursedCloud1.DisplayName: Cursed Cloud1
+			CursedCloud2.DisplayName: Cursed Cloud2
+			CursedCloud3.DisplayName: Cursed Cloud3
+			DemoniteKnifeProj.DisplayName: Demonite Knife Proj
+			DoradoBombProj.DisplayName: Dorado Bomb Proj
+			DoradoKniveProj.DisplayName: Dorado Knife
+			DraconicHarvestProj.DisplayName: Draconic Harvest
+			DraconicPortal.DisplayName: Draconic Portal
+			DragonShrapnel.DisplayName: Dragon Shrapnel
+			DreadfulFangsProj.DisplayName: Dreadful Fangs Proj
+			DropONog.DisplayName: Drop O Nog
+			FestiveEggnogProj.DisplayName: Festive Eggnog Proj
+			FestiveJavelinProj.DisplayName: Festive Javelin Proj
+			FestiveSnowflake.DisplayName: Festive Snowflake
+			FireballBrewProj.DisplayName: Fireball Brew Proj
+			ForbiddenSmokeBombExplosion.DisplayName: Forbidden Smoke Bomb Explosion
+			ForbiddenSmokeBombProj.DisplayName: Forbidden Smoke Bomb Proj
+			FrostJavelinProj.DisplayName: Frost Javelin Proj
+			GoldKnifeProj.DisplayName: Gold Knife Proj
+			GolemFireProj.DisplayName: Golem Fire Proj
+			GreekFireballProj.DisplayName: Greek Fireball Proj
+			HallowedWaraxeProj.DisplayName: Hallowed Waraxe Proj
+			HellBonesAxeProj.DisplayName: Hell Bones Axe Proj
+			IchorCloud1.DisplayName: Ichor Cloud1
+			IchorCloud2.DisplayName: Ichor Cloud2
+			IchorCloud3.DisplayName: Ichor Cloud3
+			IchoredFlaskProj.DisplayName: Ichored Flask Proj
+			IronKnifeProj.DisplayName: Iron Knife Proj
+			LacusDecapitatorProj.DisplayName: Lacus Decapitator Proj
+			LacusEcho.DisplayName: Lacus Echo
+			LeadKnifeProj.DisplayName: Lead Knife Proj
+			LihzahrdSpikeKnifeProj.DisplayName: Lihzahrd Spike Knife Proj
+			LogicBombExplosion.DisplayName: Logic Bomb Explosion
+			LogicBombProj.DisplayName: Logic Bomb Proj
+			MartianEcho.DisplayName: Martian Echo
+			MartianMiracleProj.DisplayName: Martian Miracle Proj
+			MeteorSpearExplosion.DisplayName: Meteor Spear Explosion
+			MeteorSpearProj.DisplayName: Meteor Spear Proj
+			MoltenKnifeProj.DisplayName: Molten Knife Proj
+			MythrilHatchetProj.DisplayName: Mythril Hatchet Proj
+			NanoMissileExplosion.DisplayName: Nano Missile Explosion
+			NanoMissileProj.DisplayName: Nano Missile Proj
+			NightPiercerProj.DisplayName: Night Piercer Proj
+			ObsidianScalpelProj.DisplayName: Obsidian Scalpel Proj
+			OrichalcumHatchetProj.DisplayName: Orichalcum Hatchet Proj
+			PalladiumShortspearProj.DisplayName: Palladium Shortspear Proj
+			PiercerEcho.DisplayName: Piercer Echo
+			PlatinumKnifeProj.DisplayName: Platinum Knife Proj
+			PoisonSeedProj.DisplayName: Poison Seed Proj
+			PoseironBubble.DisplayName: Poseiron Bubble
+			PoseironTridentProj.DisplayName: Poseiron Trident Proj
+			ProcellariteKnifeProj.DisplayName: Procellarite Knife Proj
+			RustyBonesAxeProj.DisplayName: Rusty Bones Axe Proj
+			SantankSpikeProj.DisplayName: Santank Spike Proj
+			SatelliteSpearEcho.DisplayName: Satellite Spear Echo
+			SatelliteSpearEchosplosion.DisplayName: Satellite Spear Echosplosion
+			SatelliteSpearProj.DisplayName: Satellite Spear Proj
+			ScavengedKunaiProj.DisplayName: Scavenged Kunai Proj
+			ShadowflameSpikeBallProj.DisplayName: Shadowflame Spike Ball Proj
+			ShadowJavelinProj.DisplayName: Shadow Javelin Proj
+			SilverKnifeProj.DisplayName: Silver Knife Proj
+			SkelespearProj.DisplayName: Skelespear Proj
+			SnowflakeShurikenProj.DisplayName: Snowflake Shuriken Proj
+			SpikeKnifeProj.DisplayName: Spike Knife Proj
+			SpookySpineProj.DisplayName: Spooky Spine Proj
+			StingerDaggerProj.DisplayName: Stinger Dagger Proj
+			TerraDaggerEcho.DisplayName: Terra Dagger Echo
+			TerraDaggerProj.DisplayName: Terra Dagger Proj
+			ThornBallProj.DisplayName: Thorn Ball Proj
+			TinKnifeProj.DisplayName: Tin Knife Proj
+			TitaniumMalletProj.DisplayName: Titanium Mallet Proj
+			TrueHallowedWaraxeProj.DisplayName: True Hallowed Waraxe Proj
+			TrueNightPiercerProj.DisplayName: True Night Piercer Proj
+			TungstenKnifeProj.DisplayName: Tungsten Knife Proj
+			UnholyHandGrenadeProj.DisplayName: Unholy Hand Grenade Proj
+			VenomousArachknifeProj.DisplayName: Venomous Arachknife Proj
+			ViciousHarvestProj.DisplayName: Vicious Harvest Proj
+			VileHarvestProj.DisplayName: Vile Harvest Proj
+			WaraxeEcho.DisplayName: Waraxe Echo
+		}
+
+		Keybinds.Guard.DisplayName: Guard
+
+		Tiles: {
+			KelbiBanner.MapEntry: Kelbi Banner
+			MimiclamBanner.MapEntry: Clam Banner
+			SmallRathBanner.MapEntry: Kelbi Banner
+			HadalShellstoneTile.MapEntry: Deep Shellstone
+			ProcellariteBarTile.MapEntry: Procellarite Bar
+			ProcellariteBlockTile.MapEntry: Procellarite Block
+			ProcellariteOreTile.MapEntry: Procellarite Ore
+			ShorebrassBarTile.MapEntry: Procellarite Bar
+			MorilusTrophyTile.MapEntry: Morilus Trophy
+		}
+	}
+}
