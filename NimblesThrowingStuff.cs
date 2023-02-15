@@ -18,6 +18,7 @@ using NimblesThrowingStuff.Items.Weapons.Summoning;
 using NimblesThrowingStuff.Items.Weapons.Throwing;
 using NimblesThrowingStuff.Items.Placeables.Blocks;
 using NimblesThrowingStuff.Items.Placeables.Furniture;
+using NimblesThrowingStuff.NPCs.Town;
 using static Terraria.ModLoader.ModContent;
 
 namespace NimblesThrowingStuff
@@ -34,18 +35,11 @@ namespace NimblesThrowingStuff
         {
             GoreAutoloadingEnabled = true;
             ContentAutoloadingEnabled = true;
-            //Properties = new ModProperties()
-            // {
-            //    Autoload = true,
-            //    AutoloadSounds = true,
-            //    AutoloadGores = true
-            //};
         }
         public override void Load()
         {
             instance = this;
             MIGuardKey = KeybindLoader.RegisterKeybind(this, "Guard", "Z");
-            //Chances are, a lot of players won't see this message. However, if you do, please note that the wiki is currently incomplete and outdated. You don't need to help, but if you want to, you can do so.
             ModLoader.TryGetMod("Wikithis", out Mod wikithis);
             if (wikithis != null && !Main.dedServ)
             {
@@ -59,28 +53,27 @@ namespace NimblesThrowingStuff
         }
         public override void PostSetupContent()
         {
-        //Mod censusMod = ModLoader.GetMod("Census");
-        //    if(censusMod != null)
-        //    {
-        //     censusMod.Call("TownNPCCondition", Find<ModNPC>("Living Relic").Type, "Defeat the Eye of Cthulhu");   
-        //    }
-        //Mod bossChecklist = ModLoader.GetMod("BossChecklist");
-        //    if(bossChecklist != null)
-        //    {
-        //        bossChecklist.Call(
-        //        "addBoss",
-        //        15f,
-        //        ModContent.NPCType<MorilusMain>(),
-        //        this,
-        //        "$Mods.NimblesThrowingStuff.NPCName.MorilusMain",
-        //        (Func<bool>)(() => NimblesWorld.downedMorilus),
-        //        ModContent.ItemType<DeceptiveArtifact>(),
-        //        new List<int> { ModContent.ItemType<MorilusMask>(), ModContent.ItemType<MorilusTrophy>() },
-        //        new List<int> { ModContent.ItemType<ProcellariteOre>(), ModContent.ItemType<SkyseaSpinner>(), ModContent.ItemType<ProcellariteLongbow>(), ModContent.ItemType<StormShot>(), ModContent.ItemType<LacusDecapitator>(), ModContent.ItemType<GuardianStaff>() },
-        //        "Create a Deceptive Artifact and use it in space",
-        //        "Morilus moves on to what it considers to be its next issue...");
-//
-        //    }
+            ModLoader.TryGetMod("Census", out Mod censusMod);
+            ModLoader.TryGetMod("BossChecklist", out Mod bossChecklist);
+            if (censusMod != null)
+                {
+                    censusMod.Call("TownNPCCondition", Find<ModNPC>("LivingRelic").Type, "Defeat the Eye of Cthulhu");   
+                }
+            if(bossChecklist != null)
+            {
+                bossChecklist.Call(
+                "AddBoss",
+                this,
+                "$Mods.NimblesThrowingStuff.NPCName.MorilusMain",
+                ModContent.NPCType<MorilusMain>(),
+                19f,
+                (Func<bool>)(() => NimblesWorld.downedMorilus),
+                () => true,
+                new List<int> { ModContent.ItemType<MorilusMask>(), ModContent.ItemType<MorilusTrophy>() },
+                 ModContent.ItemType<DeceptiveArtifact>(),
+                "Create a Deceptive Artifact and use it in space",
+                "Morilus no longer detects a threat");
+            }
 
         }
         //private static ModRecipe GetNewRecipe() => new ModRecipe(ModContent.GetInstance<NimblesThrowingStuff>());

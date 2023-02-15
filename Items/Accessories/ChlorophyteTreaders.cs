@@ -48,8 +48,7 @@ namespace NimblesThrowingStuff.Items.Accessories
         public override void AddRecipes() 
         {
 			Recipe recipe = CreateRecipe();
-            recipe.AddIngredient(ItemID.FrostsparkBoots);
-            recipe.AddIngredient(ItemID.LavaWaders);
+            recipe.AddIngredient(ItemID.TerrasparkBoots);
             recipe.AddIngredient(ItemID.ChlorophyteBar, 12);
             recipe.AddIngredient(ItemID.BundleofBalloons);
 			recipe.AddTile(TileID.MythrilAnvil);
