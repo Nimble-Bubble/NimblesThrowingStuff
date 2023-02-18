@@ -13,6 +13,10 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 {
 	public class BoneClawLanceProj: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Bone Claw Lance");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 24;

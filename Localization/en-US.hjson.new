@@ -1216,6 +1216,11 @@ Mods: {
 
 			ViciousHarvest.DisplayName: Vicious Harvest
 			VileHarvest.DisplayName: Vile Harvest
+
+			AquarianLeister: {
+				DisplayName: Aquarian Leister
+				Tooltip: Fires three bubbles in a spread
+			}
 		}
 
 		NPCs: {
@@ -1246,67 +1251,67 @@ Mods: {
 			RazorboltProj.DisplayName: Razorbolt Proj
 			SporeBolt.DisplayName: Spore Bolt
 			StormShotBall.DisplayName: Storm Shot Ball
-			ActualLagoonLanceProj.DisplayName: Actual Lagoon Lance Proj
-			AscalonProj.DisplayName: Ascalon Proj
-			AtlantisGunlanceProj.DisplayName: Atlantis Gunlance Proj
+			ActualLagoonLanceProj.DisplayName: Laguna Lance
+			AscalonProj.DisplayName: Ascalon
+			AtlantisGunlanceProj.DisplayName: Atlantis Gunlance
 			AtlantisGunlanceShell.DisplayName: Atlantis Gunlance Shell
 			BloodySyringeBlood.DisplayName: Stream of Blood
-			BloodySyringeProj.DisplayName: Bloody Syringe Proj
+			BloodySyringeProj.DisplayName: Bloody Syringe
 			BlueTailFlames.DisplayName: Blue Tail Flames
-			BlueTailProj.DisplayName: Blue Tail Proj
-			BoneClawLanceProj.DisplayName: Bone Claw Lance Proj
-			CursedDemonLanceProj.DisplayName: Cursed Demon Lance Proj
-			DecayedBloodySyringeProj.DisplayName: Decayed Bloody Syringe Proj
-			DeepBusterProj.DisplayName: Deep Buster Proj
-			DeinolonchiProj.DisplayName: Deinolonchi Proj
-			DemonLanceProj.DisplayName: Demon Lance Proj
-			EstocProj.DisplayName: Estoc Proj
-			FashionableFragranceProj.DisplayName: Fashionable Fragrance Proj
-			FeatherstingProj.DisplayName: Feathersting Proj
-			FlameBlessedBeamProj.DisplayName: Flame Blessed Beam Proj
-			FortressBreakerProj.DisplayName: Fortress Breaker Proj
-			FragranceProj.DisplayName: Fragrance Proj
-			FrostIcicleProj.DisplayName: Frost Icicle Proj
+			BlueTailProj.DisplayName: Blue Tail
+			BoneClawLanceProj.DisplayName: Bone Claw Lance
+			CursedDemonLanceProj.DisplayName: Cursed Demon Lance
+			DecayedBloodySyringeProj.DisplayName: Decayed Bloody Syringe
+			DeepBusterProj.DisplayName: Deep Buster
+			DeinolonchiProj.DisplayName: Deinolonchi
+			DemonLanceProj.DisplayName: Demon Lance
+			EstocProj.DisplayName: Estoc
+			FashionableFragranceProj.DisplayName: Fashionable Fragrance
+			FeatherstingProj.DisplayName: Feathersting
+			FlameBlessedBeamProj.DisplayName: Flame-Blessed Beam
+			FortressBreakerProj.DisplayName: Fortress Breaker
+			FragranceProj.DisplayName: Fragrance
+			FrostIcicleProj.DisplayName: Frost Icicle
 			FuriousBeam.DisplayName: Furious Beam
-			GrandHalberdProj.DisplayName: Grand Halberd Proj
-			GrowlingWyvernProj.DisplayName: Growling Wyvern Proj
-			HiveHonchoProj.DisplayName: Hive Honcho Proj
-			IlluminatorNoctilucaProj.DisplayName: Illuminator Noctiluca Proj
-			IronLanceProj.DisplayName: Iron Lance Proj
-			KnightLanceProj.DisplayName: Knight Lance Proj
-			LepidolanceaProj.DisplayName: Lepidolancea Proj
-			LonghornProj.DisplayName: Longhorn Proj
-			MahoganyStingerProj.DisplayName: Mahogany Stinger Proj
-			MeteoriteDrillProj.DisplayName: Meteorite Drill Proj
-			PaladinLanceProj.DisplayName: Paladin Lance Proj
-			PanthalassicGunlanceProj.DisplayName: Panthalassic Gunlance Proj
+			GrandHalberdProj.DisplayName: Grand Halberd
+			GrowlingWyvernProj.DisplayName: Growling Wyvern
+			HiveHonchoProj.DisplayName: Hive Honcho
+			IlluminatorNoctilucaProj.DisplayName: Noctiluca
+			IronLanceProj.DisplayName: Iron Lance
+			KnightLanceProj.DisplayName: Knight Lance
+			LepidolanceaProj.DisplayName: Lepidolancea
+			LonghornProj.DisplayName: Longhorn
+			MahoganyStingerProj.DisplayName: Mahogany Stinger
+			MeteoriteDrillProj.DisplayName: Meteorite Drill
+			PaladinLanceProj.DisplayName: Paladin Lance
+			PanthalassicGunlanceProj.DisplayName: Panthalassic Gunlance
 			PanthalassicGunlanceShell.DisplayName: Panthalassic Gunlance Shell
 			PhantasRayTwo.DisplayName: Phantas Ray Two
-			ProcellariteBroadswordProj.DisplayName: Procellarite Broadsword Proj
-			ProcellariteSmallSwordBeam.DisplayName: Procellarite Small Sword Beam
-			ProcellariteSpikeProj.DisplayName: Procellarite Spike Proj
+			ProcellariteBroadswordProj.DisplayName: Procellarite Broadsword Beam
+			ProcellariteSmallSwordBeam.DisplayName: Miniature Procellarite Broadsword Beam
+			ProcellariteSpikeProj.DisplayName: Procellarite Spike
 			ProcellariteTridentProj.DisplayName: Procellarite Trident
-			RedTailProj.DisplayName: Red Tail Proj
-			RobustTuskProj.DisplayName: Robust Tusk Proj
+			RedTailProj.DisplayName: Red Tail
+			RobustTuskProj.DisplayName: Robust Tusk
 			SeaDiverBullet.DisplayName: Sea Diver Bullet
-			SeaDiverProj.DisplayName: Sea Diver Proj
-			ShockLanceProj.DisplayName: Shock Lance Proj
-			SkyseaSpinnerProj.DisplayName: Skysea Spinner Proj
-			SpectrePiercerProj.DisplayName: Spectre Piercer Proj
-			SpikedJavelinProj.DisplayName: Spiked Javelin Proj
-			SpikedJavelinThrown.DisplayName: Spiked Javelin Thrown
+			SeaDiverProj.DisplayName: Sea Diver
+			ShockLanceProj.DisplayName: Shock Lance
+			SkyseaSpinnerProj.DisplayName: Sky-Sea Spinner
+			SpectrePiercerProj.DisplayName: Spectre Piercer
+			SpikedJavelinProj.DisplayName: Spiked Javelin
+			SpikedJavelinThrown.DisplayName: (thrown) Spiked Javelin
 			StingerSpearProj.DisplayName: Stinger Spear
-			SuperfastProj.DisplayName: Superfast Proj
+			SuperfastProj.DisplayName: Superfast
 			TemblorIllborosProj.DisplayName: Temblor Illboros Proj
 			TheToothpickProj.DisplayName: The Toothpick
 			TrueAscalonEcho.DisplayName: True Ascalon Echo
-			TrueAscalonProj.DisplayName: True Ascalon Proj
-			ValhallaProj.DisplayName: Valhalla Proj
+			TrueAscalonProj.DisplayName: True Ascalon
+			ValhallaProj.DisplayName: Valhalla
 			BlazeBulletProj.DisplayName: Blaze Bullet Proj
 			BlazeDartProj.DisplayName: Blaze Dart Proj
 			HealingArrowProj.DisplayName: Healing Arrow Proj
 			MisfireProj.DisplayName: Misfire Proj
-			ProcellariteShotgunProj.DisplayName: Procellarite Shotgun Proj
+			ProcellariteShotgunProj.DisplayName: Bonus Shot
 			SeastringArrowProj.DisplayName: Seastring Arrow Proj
 			VoidRocket1.DisplayName: Void Rocket I
 			VoidRocket2.DisplayName: Void Rocket II
@@ -1416,6 +1421,7 @@ Mods: {
 			ViciousHarvestProj.DisplayName: Vicious Harvest Proj
 			VileHarvestProj.DisplayName: Vile Harvest Proj
 			WaraxeEcho.DisplayName: Waraxe Echo
+			AquarianLeisterProj.DisplayName: Aquarian Leister
 		}
 
 		Keybinds.Guard.DisplayName: Guard

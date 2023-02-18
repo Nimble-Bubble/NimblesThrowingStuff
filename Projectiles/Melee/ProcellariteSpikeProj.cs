@@ -10,7 +10,10 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 {
 	public class ProcellariteSpikeProj : ModProjectile
 	{
-
+		public override void SetStaticDefaults()
+		{
+			DisplayName.SetDefault("Procellarite Spike");
+		}
 		public override void SetDefaults()
 		{
 			Projectile.width = 10;

@@ -11,6 +11,10 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 {
 	public class ProcellariteBroadswordProj: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Procellarite Broadsword Beam");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 38;

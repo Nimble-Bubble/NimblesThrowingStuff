@@ -11,6 +11,10 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 {
 	public class ProcellariteSmallSwordBeam: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Miniature Procellarite Broadsword Beam");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 18;

@@ -15,6 +15,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
         {
             ProjectileID.Sets.YoyosMaximumRange[Projectile.type] = 750f;
             ProjectileID.Sets.YoyosTopSpeed[Projectile.type] = 40f;
+            DisplayName.SetDefault("Sky-Sea Spinner");
         }
         public override void SetDefaults()
         {

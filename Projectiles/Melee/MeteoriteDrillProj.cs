@@ -11,6 +11,10 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 {
 	public class MeteoriteDrillProj: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Meteorite Drill");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 18;

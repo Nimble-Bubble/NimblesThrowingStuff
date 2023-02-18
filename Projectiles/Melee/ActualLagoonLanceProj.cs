@@ -13,6 +13,10 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 	public class ActualLagoonLanceProj: ModProjectile
     {
         private bool hasWatered;
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Laguna Lance");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 32;

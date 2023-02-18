@@ -20,6 +20,10 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             get => Projectile.ai[0];
             set => Projectile.ai[0] = value;
         }
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Noctiluca");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 40;

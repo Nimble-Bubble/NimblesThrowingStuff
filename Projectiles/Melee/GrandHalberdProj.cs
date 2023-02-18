@@ -11,6 +11,10 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 {
 	public class GrandHalberdProj: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Grand Halberd");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 32;

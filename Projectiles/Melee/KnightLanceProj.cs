@@ -12,6 +12,10 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 	
     public class KnightLanceProj: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Knight Lance");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 32;

@@ -13,6 +13,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
     {
         public override void SetStaticDefaults()
         {
+            DisplayName.SetDefault("Superfast");
             ProjectileID.Sets.YoyosMaximumRange[Projectile.type] = 1000f;
             ProjectileID.Sets.YoyosTopSpeed[Projectile.type] = 50f;
         }

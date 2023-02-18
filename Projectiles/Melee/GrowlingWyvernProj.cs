@@ -11,6 +11,10 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 {
 	public class GrowlingWyvernProj: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Growling Wyvern");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 32;

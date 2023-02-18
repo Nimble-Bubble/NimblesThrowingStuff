@@ -12,6 +12,10 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 
     public class FrostIcicleProj : ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Frost Icicle");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 36;

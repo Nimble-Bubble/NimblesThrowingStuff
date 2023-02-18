@@ -13,6 +13,10 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 	public class RobustTuskProj: ModProjectile
     {
         private int robustTuskPower;
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Robust Tusk");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 24;

@@ -11,6 +11,10 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 {
 	public class FortressBreakerProj: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Fortress Breaker");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 32;

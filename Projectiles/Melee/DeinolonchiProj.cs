@@ -11,6 +11,10 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 {
 	public class DeinolonchiProj: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Deinolonchi");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 32;

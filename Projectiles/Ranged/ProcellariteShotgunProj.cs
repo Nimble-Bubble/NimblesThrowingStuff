@@ -13,6 +13,10 @@ namespace NimblesThrowingStuff.Projectiles.Ranged
 {
 	public class ProcellariteShotgunProj: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Bonus Shot");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 18;

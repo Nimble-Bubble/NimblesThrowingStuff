@@ -13,6 +13,10 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 {
 	public class SpectrePiercerProj: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Spectre Piercer");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 32;

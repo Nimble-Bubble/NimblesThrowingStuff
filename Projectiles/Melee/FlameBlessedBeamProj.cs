@@ -11,6 +11,10 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 {
 	public class FlameBlessedBeamProj: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Flame-Blessed Beam");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 44;

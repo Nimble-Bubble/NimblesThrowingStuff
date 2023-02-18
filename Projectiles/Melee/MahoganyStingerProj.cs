@@ -13,6 +13,10 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 	public class MahoganyStingerProj: ModProjectile
     {
         private int mahoganyStingerPower;
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Mahogany Stinger");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 28;

@@ -13,6 +13,10 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 	public class BlueTailProj: ModProjectile
     {
         private int redTailPower;
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Blue Tail");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 40;

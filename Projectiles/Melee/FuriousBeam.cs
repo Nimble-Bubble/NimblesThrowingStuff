@@ -11,6 +11,10 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 {
 	public class FuriousBeam: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Furious Beam");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 36;

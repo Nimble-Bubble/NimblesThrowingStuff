@@ -13,6 +13,10 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 	public class LepidolanceaProj: ModProjectile
     {
         private bool hasFlown;
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Lepidolancea");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 24;
