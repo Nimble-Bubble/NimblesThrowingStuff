@@ -13,6 +13,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class MartianMiracleProj: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Martian Miracle");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 32;

@@ -12,6 +12,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class ShadowJavelinProj: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Shadow Javelin");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 22;

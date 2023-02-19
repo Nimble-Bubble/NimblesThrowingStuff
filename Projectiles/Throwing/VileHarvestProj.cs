@@ -11,6 +11,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class VileHarvestProj: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Vile Harvest");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 32;

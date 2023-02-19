@@ -12,6 +12,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class MartianEcho: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Martian Beam");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 22;

@@ -11,6 +11,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class WaraxeEcho: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Hallowed Waraxe Echo");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 32;

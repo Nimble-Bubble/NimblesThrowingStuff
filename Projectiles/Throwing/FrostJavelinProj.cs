@@ -10,7 +10,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class FrostJavelinProj : ModProjectile
 	{
-
+		public override void SetStaticDefaults()
+		{
+			DisplayName.SetDefault("Frost Javelin");
+		}
 		public override void SetDefaults()
 		{
 			Projectile.width = 22;

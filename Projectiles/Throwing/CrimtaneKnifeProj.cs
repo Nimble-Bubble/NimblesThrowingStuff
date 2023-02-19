@@ -13,6 +13,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class CrimtaneKnifeProj: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Crimtane Knife");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 32;

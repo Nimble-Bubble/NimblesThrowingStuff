@@ -13,6 +13,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class ChlorophyteBombProj: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Chlorophyte Bomb");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 24;

@@ -13,6 +13,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class AdamantiteMalletProj: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Adamantite Mallet");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 36;

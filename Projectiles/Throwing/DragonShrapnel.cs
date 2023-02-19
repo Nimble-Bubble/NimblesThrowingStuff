@@ -12,6 +12,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class DragonShrapnel: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Dragon Shrapnel");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 10;

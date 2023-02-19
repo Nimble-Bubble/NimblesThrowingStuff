@@ -11,6 +11,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class TrueHallowedWaraxeProj: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("True Hallowed Waraxe");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 62;

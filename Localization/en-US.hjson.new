@@ -592,6 +592,11 @@ Mods: {
 					'''
 			}
 
+			AquarianLeister: {
+				DisplayName: Aquarian Leister
+				Tooltip: Fires three bubbles in a spread
+			}
+
 			Ascalon: {
 				DisplayName: Ascalon
 				Tooltip:
@@ -1054,7 +1059,7 @@ Mods: {
 			DemoniteKnife.DisplayName: Demonite Knife
 
 			DoradoBomb: {
-				DisplayName: Dragon's Grenade
+				DisplayName: Stellar Scalestorm
 				Tooltip: Explodes into a storm of draconic shrapnel
 			}
 
@@ -1130,7 +1135,7 @@ Mods: {
 			MythrilHatchet.DisplayName: Mythril Hatchet
 
 			NanoMissile: {
-				DisplayName: Nano Missile
+				DisplayName: Nanite Missile
 				Tooltip: Are you sure this is legal?
 			}
 
@@ -1216,11 +1221,6 @@ Mods: {
 
 			ViciousHarvest.DisplayName: Vicious Harvest
 			VileHarvest.DisplayName: Vile Harvest
-
-			AquarianLeister: {
-				DisplayName: Aquarian Leister
-				Tooltip: Fires three bubbles in a spread
-			}
 		}
 
 		NPCs: {
@@ -1252,6 +1252,7 @@ Mods: {
 			SporeBolt.DisplayName: Spore Bolt
 			StormShotBall.DisplayName: Storm Shot Ball
 			ActualLagoonLanceProj.DisplayName: Laguna Lance
+			AquarianLeisterProj.DisplayName: Aquarian Leister
 			AscalonProj.DisplayName: Ascalon
 			AtlantisGunlanceProj.DisplayName: Atlantis Gunlance
 			AtlantisGunlanceShell.DisplayName: Atlantis Gunlance Shell
@@ -1325,103 +1326,102 @@ Mods: {
 			SporeballProj.DisplayName: Spore Ball
 			SporeballSpore.DisplayName: Sporeball Spore
 			ViolentClusterProj.DisplayName: Violent Chopper
-			AccursedFlaskProj.DisplayName: Accursed Flask Proj
-			AdamantiteMalletProj.DisplayName: Adamantite Mallet Proj
-			ArachknifeProj.DisplayName: Arachknife Proj
-			BeemerangProj.DisplayName: Beemerang Proj
-			BloodyPikeProj.DisplayName: Bloody Pike Proj
-			BrimstoneBombProj.DisplayName: Brimstone Bomb Proj
+			AccursedFlaskProj.DisplayName: Cursed Flame-filled Throwing Flask
+			AdamantiteMalletProj.DisplayName: Adamantite Mallet
+			ArachknifeProj.DisplayName: Arachknife
+			BeemerangProj.DisplayName: Beemerang
+			BloodyPikeProj.DisplayName: Bloody Pike
+			BrimstoneBombProj.DisplayName: Brimstone Bomb
 			BrimstoneShrapnel.DisplayName: Brimstone Shrapnel
-			BrokeBonesAxeProj.DisplayName: Broke Bones Axe Proj
-			ChlorophyteBombProj.DisplayName: Chlorophyte Bomb Proj
-			ChlorophyteChakramProj.DisplayName: Chlorophyte Chakram Proj
-			CobaltShortspearProj.DisplayName: Cobalt Shortspear Proj
-			CopperKnifeProj.DisplayName: Copper Knife Proj
-			CoralKnifeProj.DisplayName: Coral Knife Proj
+			BrokeBonesAxeProj.DisplayName: Broke Bones Axe
+			ChlorophyteBombProj.DisplayName: Chlorophyte Bomb
+			ChlorophyteChakramProj.DisplayName: Chlorophyte Chakram
+			CobaltShortspearProj.DisplayName: Cobalt Shortspear
+			CopperKnifeProj.DisplayName: Copper Knife
+			CoralKnifeProj.DisplayName: Coral Knife
 			CosmosCrasherProj.DisplayName: Cosmos Crasher
-			CrimtaneKnifeProj.DisplayName: Crimtane Knife Proj
-			CrystalKnifeProj.DisplayName: Crystal Knife Proj
-			CumulusCrasherProj.DisplayName: Cumulus Crasher Proj
+			CrimtaneKnifeProj.DisplayName: Crimtane Knife
+			CrystalKnifeProj.DisplayName: Crystal Knife
+			CumulusCrasherProj.DisplayName: Cumulus Crasher
 			CursedCloud1.DisplayName: Cursed Cloud1
 			CursedCloud2.DisplayName: Cursed Cloud2
 			CursedCloud3.DisplayName: Cursed Cloud3
-			DemoniteKnifeProj.DisplayName: Demonite Knife Proj
-			DoradoBombProj.DisplayName: Dorado Bomb Proj
+			DemoniteKnifeProj.DisplayName: Demonite Knife
+			DoradoBombProj.DisplayName: Dragon's Breath
 			DoradoKniveProj.DisplayName: Dorado Knife
 			DraconicHarvestProj.DisplayName: Draconic Harvest
 			DraconicPortal.DisplayName: Draconic Portal
 			DragonShrapnel.DisplayName: Dragon Shrapnel
-			DreadfulFangsProj.DisplayName: Dreadful Fangs Proj
-			DropONog.DisplayName: Drop O Nog
-			FestiveEggnogProj.DisplayName: Festive Eggnog Proj
-			FestiveJavelinProj.DisplayName: Festive Javelin Proj
+			DreadfulFangsProj.DisplayName: Dreadful Fang
+			DropONog.DisplayName: Drop o' Nog
+			FestiveEggnogProj.DisplayName: Festive Eggnog
+			FestiveJavelinProj.DisplayName: Festive Javelin
 			FestiveSnowflake.DisplayName: Festive Snowflake
-			FireballBrewProj.DisplayName: Fireball Brew Proj
-			ForbiddenSmokeBombExplosion.DisplayName: Forbidden Smoke Bomb Explosion
-			ForbiddenSmokeBombProj.DisplayName: Forbidden Smoke Bomb Proj
-			FrostJavelinProj.DisplayName: Frost Javelin Proj
-			GoldKnifeProj.DisplayName: Gold Knife Proj
-			GolemFireProj.DisplayName: Golem Fire Proj
-			GreekFireballProj.DisplayName: Greek Fireball Proj
-			HallowedWaraxeProj.DisplayName: Hallowed Waraxe Proj
-			HellBonesAxeProj.DisplayName: Hell Bones Axe Proj
+			FireballBrewProj.DisplayName: Fireball Brew
+			ForbiddenSmokeBombExplosion.DisplayName: Smokesplosion
+			ForbiddenSmokeBombProj.DisplayName: Forbidden Smoke Bomb
+			FrostJavelinProj.DisplayName: Frost Javelin
+			GoldKnifeProj.DisplayName: Gold Knife
+			GolemFireProj.DisplayName: Golem's Fire
+			GreekFireballProj.DisplayName: Greek Fireball
+			HallowedWaraxeProj.DisplayName: Hallowed Waraxe
+			HellBonesAxeProj.DisplayName: Hell Bones Axe
 			IchorCloud1.DisplayName: Ichor Cloud1
 			IchorCloud2.DisplayName: Ichor Cloud2
 			IchorCloud3.DisplayName: Ichor Cloud3
-			IchoredFlaskProj.DisplayName: Ichored Flask Proj
-			IronKnifeProj.DisplayName: Iron Knife Proj
-			LacusDecapitatorProj.DisplayName: Lacus Decapitator Proj
+			IchoredFlaskProj.DisplayName: Ichor-filled Throwing Flask
+			IronKnifeProj.DisplayName: Iron Knife
+			LacusDecapitatorProj.DisplayName: Lacus Decapitator
 			LacusEcho.DisplayName: Lacus Echo
-			LeadKnifeProj.DisplayName: Lead Knife Proj
-			LihzahrdSpikeKnifeProj.DisplayName: Lihzahrd Spike Knife Proj
-			LogicBombExplosion.DisplayName: Logic Bomb Explosion
-			LogicBombProj.DisplayName: Logic Bomb Proj
-			MartianEcho.DisplayName: Martian Echo
-			MartianMiracleProj.DisplayName: Martian Miracle Proj
-			MeteorSpearExplosion.DisplayName: Meteor Spear Explosion
-			MeteorSpearProj.DisplayName: Meteor Spear Proj
-			MoltenKnifeProj.DisplayName: Molten Knife Proj
-			MythrilHatchetProj.DisplayName: Mythril Hatchet Proj
-			NanoMissileExplosion.DisplayName: Nano Missile Explosion
-			NanoMissileProj.DisplayName: Nano Missile Proj
-			NightPiercerProj.DisplayName: Night Piercer Proj
-			ObsidianScalpelProj.DisplayName: Obsidian Scalpel Proj
-			OrichalcumHatchetProj.DisplayName: Orichalcum Hatchet Proj
-			PalladiumShortspearProj.DisplayName: Palladium Shortspear Proj
-			PiercerEcho.DisplayName: Piercer Echo
-			PlatinumKnifeProj.DisplayName: Platinum Knife Proj
-			PoisonSeedProj.DisplayName: Poison Seed Proj
+			LeadKnifeProj.DisplayName: Lead Knife
+			LihzahrdSpikeKnifeProj.DisplayName: Lihzahrd Spike Knife
+			LogicBombExplosion.DisplayName: Logicsplosion
+			LogicBombProj.DisplayName: Logic Bomb
+			MartianEcho.DisplayName: Martian Beam
+			MartianMiracleProj.DisplayName: Martian Miracle
+			MeteorSpearExplosion.DisplayName: Meteorsplosion
+			MeteorSpearProj.DisplayName: Meteor Spear
+			MoltenKnifeProj.DisplayName: Molten Knife
+			MythrilHatchetProj.DisplayName: Mythril Hatchet
+			NanoMissileExplosion.DisplayName: Nanosplosion
+			NanoMissileProj.DisplayName: Nanite Missile
+			NightPiercerProj.DisplayName: Night's Piercer
+			ObsidianScalpelProj.DisplayName: Obsidian Scalpel
+			OrichalcumHatchetProj.DisplayName: Orichalcum Hatchet
+			PalladiumShortspearProj.DisplayName: Palladium Shortspear
+			PiercerEcho.DisplayName: Night's Beam
+			PlatinumKnifeProj.DisplayName: Platinum Knife
+			PoisonSeedProj.DisplayName: Poison Seed
 			PoseironBubble.DisplayName: Poseiron Bubble
-			PoseironTridentProj.DisplayName: Poseiron Trident Proj
-			ProcellariteKnifeProj.DisplayName: Procellarite Knife Proj
-			RustyBonesAxeProj.DisplayName: Rusty Bones Axe Proj
-			SantankSpikeProj.DisplayName: Santank Spike Proj
+			PoseironTridentProj.DisplayName: Poseiron's Trident
+			ProcellariteKnifeProj.DisplayName: Procellarite Knife
+			RustyBonesAxeProj.DisplayName: Rusty Bones Axe
+			SantankSpikeProj.DisplayName: Santank Spike
 			SatelliteSpearEcho.DisplayName: Satellite Spear Echo
-			SatelliteSpearEchosplosion.DisplayName: Satellite Spear Echosplosion
-			SatelliteSpearProj.DisplayName: Satellite Spear Proj
-			ScavengedKunaiProj.DisplayName: Scavenged Kunai Proj
-			ShadowflameSpikeBallProj.DisplayName: Shadowflame Spike Ball Proj
-			ShadowJavelinProj.DisplayName: Shadow Javelin Proj
-			SilverKnifeProj.DisplayName: Silver Knife Proj
-			SkelespearProj.DisplayName: Skelespear Proj
-			SnowflakeShurikenProj.DisplayName: Snowflake Shuriken Proj
-			SpikeKnifeProj.DisplayName: Spike Knife Proj
-			SpookySpineProj.DisplayName: Spooky Spine Proj
-			StingerDaggerProj.DisplayName: Stinger Dagger Proj
+			SatelliteSpearEchosplosion.DisplayName: Satellitesplosion
+			SatelliteSpearProj.DisplayName: Satellite Spear
+			ScavengedKunaiProj.DisplayName: Scavenged Kunai
+			ShadowflameSpikeBallProj.DisplayName: Shadowflame Spike Ball
+			ShadowJavelinProj.DisplayName: Shadow Javelin
+			SilverKnifeProj.DisplayName: Silver Knife
+			SkelespearProj.DisplayName: Skelespear
+			SnowflakeShurikenProj.DisplayName: Snowflake Shuriken
+			SpikeKnifeProj.DisplayName: Spike Knife
+			SpookySpineProj.DisplayName: Spooky Spine
+			StingerDaggerProj.DisplayName: Stinger Dagger
 			TerraDaggerEcho.DisplayName: Terra Dagger Echo
-			TerraDaggerProj.DisplayName: Terra Dagger Proj
-			ThornBallProj.DisplayName: Thorn Ball Proj
-			TinKnifeProj.DisplayName: Tin Knife Proj
-			TitaniumMalletProj.DisplayName: Titanium Mallet Proj
-			TrueHallowedWaraxeProj.DisplayName: True Hallowed Waraxe Proj
-			TrueNightPiercerProj.DisplayName: True Night Piercer Proj
-			TungstenKnifeProj.DisplayName: Tungsten Knife Proj
-			UnholyHandGrenadeProj.DisplayName: Unholy Hand Grenade Proj
-			VenomousArachknifeProj.DisplayName: Venomous Arachknife Proj
-			ViciousHarvestProj.DisplayName: Vicious Harvest Proj
-			VileHarvestProj.DisplayName: Vile Harvest Proj
-			WaraxeEcho.DisplayName: Waraxe Echo
-			AquarianLeisterProj.DisplayName: Aquarian Leister
+			TerraDaggerProj.DisplayName: Terra Dagger
+			ThornBallProj.DisplayName: Thorn Ball
+			TinKnifeProj.DisplayName: Tin Knife
+			TitaniumMalletProj.DisplayName: Titanium Mallet
+			TrueHallowedWaraxeProj.DisplayName: True Hallowed Waraxe
+			TrueNightPiercerProj.DisplayName: True Night's Piercer
+			TungstenKnifeProj.DisplayName: Tungsten Knife
+			UnholyHandGrenadeProj.DisplayName: Unholy Hand Grenade
+			VenomousArachknifeProj.DisplayName: Venomous Arachknife
+			ViciousHarvestProj.DisplayName: Vicious Harvest
+			VileHarvestProj.DisplayName: Vile Harvest
+			WaraxeEcho.DisplayName: Hallowed Waraxe Echo
 		}
 
 		Keybinds.Guard.DisplayName: Guard

@@ -11,6 +11,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class SantankSpikeProj : ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Santank Spike");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 30;

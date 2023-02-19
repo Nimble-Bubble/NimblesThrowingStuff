@@ -12,6 +12,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class BloodyPikeProj: ModProjectile
     {
+		public override void SetStaticDefaults()
+		{
+			DisplayName.SetDefault("Bloody Pike");
+		}
 		public override void SetDefaults()
 		{
 			Projectile.width = 12;

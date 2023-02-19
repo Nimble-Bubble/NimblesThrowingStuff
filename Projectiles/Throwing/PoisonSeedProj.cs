@@ -12,6 +12,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class PoisonSeedProj: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Poison Seed");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 14;

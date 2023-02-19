@@ -13,6 +13,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class MythrilHatchetProj: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Mythril Hatchet");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 36;

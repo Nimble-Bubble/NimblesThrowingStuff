@@ -11,6 +11,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class ForbiddenSmokeBombExplosion: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Smokesplosion");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 300;

@@ -14,7 +14,11 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 	public class LacusDecapitatorProj: ModProjectile
     {
         public int lacdex = 0;
-        public override void SetDefaults()
+		public override void SetStaticDefaults()
+		{
+			DisplayName.SetDefault("Lacus Decapitator");
+		}
+		public override void SetDefaults()
         {
             Projectile.width = 46;
             Projectile.height = 46;

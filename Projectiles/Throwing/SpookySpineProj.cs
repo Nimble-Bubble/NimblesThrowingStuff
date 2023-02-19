@@ -11,6 +11,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class SpookySpineProj: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Spooky Spine");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 6;

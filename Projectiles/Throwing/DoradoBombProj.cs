@@ -13,6 +13,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class DoradoBombProj: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Dragon's Breath");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 30;

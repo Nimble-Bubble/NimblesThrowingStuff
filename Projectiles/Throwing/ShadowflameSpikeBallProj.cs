@@ -11,6 +11,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class ShadowflameSpikeBallProj : ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Shadowflame Spike Ball");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 14;

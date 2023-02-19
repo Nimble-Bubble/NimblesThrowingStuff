@@ -13,6 +13,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class TitaniumMalletProj: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Titanium Mallet");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 36;

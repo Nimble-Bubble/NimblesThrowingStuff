@@ -13,6 +13,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class UnholyHandGrenadeProj: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Unholy Hand Grenade");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 24;

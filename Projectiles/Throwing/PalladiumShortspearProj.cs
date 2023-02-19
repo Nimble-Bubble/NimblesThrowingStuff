@@ -13,6 +13,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class PalladiumShortspearProj: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Palladium Shortspear");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 32;

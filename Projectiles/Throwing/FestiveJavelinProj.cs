@@ -10,6 +10,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class FestiveJavelinProj : ModProjectile
 	{
+		public override void SetStaticDefaults()
+		{
+			DisplayName.SetDefault("Festive Javelin");
+		}
 
 		public override void SetDefaults()
 		{

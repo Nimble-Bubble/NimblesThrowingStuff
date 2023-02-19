@@ -11,6 +11,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class DropONog: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Drop o' Nog");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 6;

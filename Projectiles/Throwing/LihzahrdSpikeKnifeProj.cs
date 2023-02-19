@@ -13,6 +13,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class LihzahrdSpikeKnifeProj: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Lihzahrd Spike Knife");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 32;

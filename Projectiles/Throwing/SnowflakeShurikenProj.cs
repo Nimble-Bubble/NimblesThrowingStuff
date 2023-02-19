@@ -13,6 +13,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class SnowflakeShurikenProj: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Snowflake Shuriken");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 30;

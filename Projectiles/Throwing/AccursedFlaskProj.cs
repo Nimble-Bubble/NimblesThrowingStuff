@@ -13,6 +13,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class AccursedFlaskProj: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Cursed Flame-filled Throwing Flask");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 18;

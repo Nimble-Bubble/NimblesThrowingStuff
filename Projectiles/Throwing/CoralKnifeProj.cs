@@ -10,7 +10,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class CoralKnifeProj : ModProjectile
 	{
-
+		public override void SetStaticDefaults()
+		{
+			DisplayName.SetDefault("Coral Knife");
+		}
 		public override void SetDefaults()
 		{
 			Projectile.width = 14;

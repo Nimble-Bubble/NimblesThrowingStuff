@@ -12,7 +12,11 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class SkelespearProj: ModProjectile
     {
-        public override void SetDefaults()
+		public override void SetStaticDefaults()
+		{
+			DisplayName.SetDefault("Skelespear");
+		}
+		public override void SetDefaults()
         {
             Projectile.width = 34;
             Projectile.height = 34;

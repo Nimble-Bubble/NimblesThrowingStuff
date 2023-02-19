@@ -13,6 +13,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
     public class CopperKnifeProj : ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Copper Knife");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 24;

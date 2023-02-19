@@ -13,7 +13,11 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class LacusEcho: ModProjectile
     {
-        public override void SetDefaults()
+		public override void SetStaticDefaults()
+		{
+			DisplayName.SetDefault("Lacus Echo");
+		}
+		public override void SetDefaults()
         {
             Projectile.width = 46;
             Projectile.height = 46;

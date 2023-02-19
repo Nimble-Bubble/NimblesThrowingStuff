@@ -14,6 +14,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 	public class PoseironTridentProj: ModProjectile
     {
         private int bub = 0;
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Poseiron's Trident");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 38;

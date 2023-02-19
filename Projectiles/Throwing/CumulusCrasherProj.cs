@@ -12,6 +12,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class CumulusCrasherProj: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Cumulus Crasher");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 18;

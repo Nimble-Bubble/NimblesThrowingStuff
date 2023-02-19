@@ -13,6 +13,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
     public class ScavengedKunaiProj : ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Scavenged Kunai");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 14;

@@ -13,6 +13,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
     public class DreadfulFangsProj : ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Dreadful Fang");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 24;

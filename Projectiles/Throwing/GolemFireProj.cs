@@ -11,6 +11,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class GolemFireProj: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Golem's Fire");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 14;

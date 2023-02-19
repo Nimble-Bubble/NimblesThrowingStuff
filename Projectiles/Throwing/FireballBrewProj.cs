@@ -12,6 +12,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class FireballBrewProj: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Fireball Brew");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 18;

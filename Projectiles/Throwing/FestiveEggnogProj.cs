@@ -12,6 +12,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class FestiveEggnogProj: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Festive Eggnog");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 24;

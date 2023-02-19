@@ -13,6 +13,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class IchoredFlaskProj: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Ichor-filled Throwing Flask");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 18;

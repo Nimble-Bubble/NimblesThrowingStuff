@@ -13,6 +13,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class NightPiercerProj: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Night's Piercer");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 28;

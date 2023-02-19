@@ -14,6 +14,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 	public class TrueNightPiercerProj: ModProjectile
     {
         public int index = 0;
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("True Night's Piercer");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 28;

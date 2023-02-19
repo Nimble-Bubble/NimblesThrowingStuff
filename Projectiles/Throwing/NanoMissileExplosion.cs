@@ -11,6 +11,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class NanoMissileExplosion: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Nanosplosion");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 250;

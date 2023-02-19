@@ -11,6 +11,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class LogicBombExplosion: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Logicsplosion");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 100;

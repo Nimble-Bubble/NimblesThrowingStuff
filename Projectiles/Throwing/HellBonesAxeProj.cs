@@ -13,6 +13,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class HellBonesAxeProj: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Hell Bones Axe");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 30;

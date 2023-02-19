@@ -10,7 +10,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class ArachknifeProj : ModProjectile
 	{
-
+		public override void SetStaticDefaults()
+		{
+			DisplayName.SetDefault("Arachknife");
+		}
 		public override void SetDefaults()
 		{
 			Projectile.width = 18;

@@ -12,7 +12,11 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class ChlorophyteChakramProj: ModProjectile
     {
-        private int index = 0; 
+        private int index = 0;
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Chlorophyte Chakram");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 36;

@@ -13,6 +13,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class LogicBombProj: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Logic Bomb");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 26;

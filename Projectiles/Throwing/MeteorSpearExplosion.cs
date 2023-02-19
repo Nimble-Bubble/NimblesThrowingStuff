@@ -11,6 +11,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class MeteorSpearExplosion: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Meteorsplosion");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 250;

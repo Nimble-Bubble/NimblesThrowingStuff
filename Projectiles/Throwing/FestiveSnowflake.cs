@@ -11,6 +11,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class FestiveSnowflake : ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Festive Snowflake");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 22;

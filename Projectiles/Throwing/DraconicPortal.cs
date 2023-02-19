@@ -11,7 +11,11 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class DraconicPortal: ModProjectile
     {
-        private int index = 0; 
+        private int index = 0;
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Draconic Portal");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 36;

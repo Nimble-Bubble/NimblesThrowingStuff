@@ -14,6 +14,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 	public class TerraDaggerProj: ModProjectile
     {
         public int tindex = 0;
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Terra Dagger");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 26;

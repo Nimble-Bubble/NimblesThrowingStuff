@@ -13,6 +13,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class CobaltShortspearProj: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Cobalt Shortspear");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 32;

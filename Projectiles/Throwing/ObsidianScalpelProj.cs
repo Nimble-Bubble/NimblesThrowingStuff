@@ -13,6 +13,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class ObsidianScalpelProj: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Obsidian Scalpel");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 28;

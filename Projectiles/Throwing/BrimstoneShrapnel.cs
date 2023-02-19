@@ -11,6 +11,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class BrimstoneShrapnel: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Brimstone Shrapnel");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 12;

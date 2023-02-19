@@ -11,6 +11,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class TerraDaggerEcho: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Terra Dagger Echo");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 14;

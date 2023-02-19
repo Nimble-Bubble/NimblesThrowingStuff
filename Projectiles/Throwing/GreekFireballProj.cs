@@ -11,6 +11,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class GreekFireballProj: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Greek Fireball");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 14;

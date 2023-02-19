@@ -11,6 +11,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class BeemerangProj: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Beemerang");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 16;

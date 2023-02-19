@@ -11,6 +11,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class ThornBallProj : ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Thorn Ball");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 18;

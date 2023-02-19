@@ -10,7 +10,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			DisplayName.SetDefault("Dragon's Grenade");
+			DisplayName.SetDefault("Stellar Scalestorm");
          Tooltip.SetDefault("Explodes into a storm of draconic shrapnel");   
         }
 

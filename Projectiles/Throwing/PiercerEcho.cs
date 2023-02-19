@@ -11,6 +11,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class PiercerEcho: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Night's Beam");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 24;

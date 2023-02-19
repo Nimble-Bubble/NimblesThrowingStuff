@@ -13,6 +13,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class OrichalcumHatchetProj: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Orichalcum Hatchet");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 36;
