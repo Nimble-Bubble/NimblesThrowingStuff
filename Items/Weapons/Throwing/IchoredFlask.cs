@@ -10,7 +10,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 		public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 99;
-			DisplayName.SetDefault("Ichor Throwing Flask");
+			DisplayName.SetDefault("Ichor-filled Throwing Flask");
 		}
 		public override void SetDefaults() 
 		{

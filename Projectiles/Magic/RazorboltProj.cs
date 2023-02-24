@@ -13,6 +13,7 @@ namespace NimblesThrowingStuff.Projectiles.Magic
     {
         public override void SetStaticDefaults()
         {
+            DisplayName.SetDefault("Razorbolt");
             Main.projFrames[Projectile.type] = 3;
             ProjectileID.Sets.TrailCacheLength[Projectile.type] = 10;
             ProjectileID.Sets.TrailingMode[Projectile.type] = 0;

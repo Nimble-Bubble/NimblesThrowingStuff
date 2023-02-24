@@ -1017,7 +1017,7 @@ Mods: {
 				Tooltip: Summons a Blood Lust Cluster
 			}
 
-			AccursedFlask.DisplayName: Cursed Flame Throwing Flask
+			AccursedFlask.DisplayName: Cursed Flame-filled Throwing Flask
 			AdamantiteMallet.DisplayName: Adamantite Mallet
 
 			Arachknife: {
@@ -1113,7 +1113,7 @@ Mods: {
 				Tooltip: Lights enemies on hellfire
 			}
 
-			IchoredFlask.DisplayName: Ichor Throwing Flask
+			IchoredFlask.DisplayName: Ichor-filled Throwing Flask
 			IronKnife.DisplayName: Iron Knife
 			LacusDecapitator.DisplayName: Lacus Decapitator
 			LeadKnife.DisplayName: Lead Knife
@@ -1194,7 +1194,7 @@ Mods: {
 			ThornBall.DisplayName: Thorn Ball
 
 			ThornyGlove: {
-				DisplayName: Thorny Glove
+				DisplayName: Thorned Glove
 				Tooltip: Throws out poisonous seeds
 			}
 
@@ -1248,7 +1248,7 @@ Mods: {
 			MagicHorizontalWall.DisplayName: Morilus Barrier
 			MagicVerticalWall.DisplayName: Morilus Barrier
 			PalladiumBolt.DisplayName: Palladium Bolt
-			RazorboltProj.DisplayName: Razorbolt Proj
+			RazorboltProj.DisplayName: Razorbolt
 			SporeBolt.DisplayName: Spore Bolt
 			StormShotBall.DisplayName: Storm Shot Ball
 			ActualLagoonLanceProj.DisplayName: Laguna Lance
@@ -1308,12 +1308,12 @@ Mods: {
 			TrueAscalonEcho.DisplayName: True Ascalon Echo
 			TrueAscalonProj.DisplayName: True Ascalon
 			ValhallaProj.DisplayName: Valhalla
-			BlazeBulletProj.DisplayName: Blaze Bullet Proj
-			BlazeDartProj.DisplayName: Blaze Dart Proj
-			HealingArrowProj.DisplayName: Healing Arrow Proj
-			MisfireProj.DisplayName: Misfire Proj
+			BlazeBulletProj.DisplayName: Blaze Bullet
+			BlazeDartProj.DisplayName: Blaze Dart
+			HealingArrowProj.DisplayName: Healing Arrow
+			MisfireProj.DisplayName: Misfire
 			ProcellariteShotgunProj.DisplayName: Bonus Shot
-			SeastringArrowProj.DisplayName: Seastring Arrow Proj
+			SeastringArrowProj.DisplayName: Aquarrow
 			VoidRocket1.DisplayName: Void Rocket I
 			VoidRocket2.DisplayName: Void Rocket II
 			VoidRocket3.DisplayName: Void Rocket III

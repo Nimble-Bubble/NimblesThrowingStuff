@@ -12,6 +12,10 @@ namespace NimblesThrowingStuff.Projectiles.Ranged
 {
 	public class BlazeBulletProj: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Blaze Bullet");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 2;

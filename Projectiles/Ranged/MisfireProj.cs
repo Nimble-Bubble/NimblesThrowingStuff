@@ -13,6 +13,10 @@ namespace NimblesThrowingStuff.Projectiles.Ranged
 {
 	public class MisfireProj: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Misfire");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 200;

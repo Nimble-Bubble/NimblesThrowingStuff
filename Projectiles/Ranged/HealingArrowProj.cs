@@ -13,6 +13,10 @@ namespace NimblesThrowingStuff.Projectiles.Ranged
 {
 	public class HealingArrowProj: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Healing Arrow");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 14;

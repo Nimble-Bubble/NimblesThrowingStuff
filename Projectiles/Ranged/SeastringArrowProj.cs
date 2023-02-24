@@ -13,6 +13,10 @@ namespace NimblesThrowingStuff.Projectiles.Ranged
 {
 	public class SeastringArrowProj: ModProjectile
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Aquarrow");
+        }
         public override void SetDefaults()
         {
             Projectile.width = 14;
