@@ -9,8 +9,10 @@ using Terraria.ModLoader;
 using Terraria.WorldBuilding;
 using Terraria.GameContent.Generation;
 using Terraria.ModLoader.IO;
+using Terraria.DataStructures;
 using Microsoft.Xna.Framework;
 using NimblesThrowingStuff.Buffs;
+using NimblesThrowingStuff.Items.Materials;
 using Terraria.Utilities;
 using Terraria.GameInput;
 
@@ -98,6 +100,14 @@ namespace NimblesThrowingStuff
                         Player.AddBuff(Mod.Find<ModBuff>("GuardHorrorshowShield").Type, 2);
                         break;
                 }
+            }
+        }
+        public override void CatchFish(FishingAttempt attempt, ref int itemDrop, ref int npcSpawn, ref AdvancedPopupRequest sonar, ref Vector2 sonarPosition)
+        {
+            if (Player.ZoneBeach && NPC.downedBoss2 && attempt.uncommon && Main.rand.NextBool(3))
+            {
+                itemDrop = Mod.Find<ModItem>("LagiacrusShell").Type;
+                return;
             }
         }
         public override void Hurt(bool pvp, bool quiet, double damage, int hitDirection, bool crit, int cooldownCounter)

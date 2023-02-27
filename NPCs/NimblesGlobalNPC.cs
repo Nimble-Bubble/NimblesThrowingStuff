@@ -43,6 +43,18 @@ namespace NimblesThrowingStuff.NPCs
 				}
 				npc.lifeRegen -= 10;
 			}
+			if (npc.HasBuff(BuffID.Electrified))
+            {
+				if (npc.lifeRegen > 0)
+				{
+					npc.lifeRegen = 0;
+				}
+				if (npc.velocity.X != 0)
+                {
+					npc.lifeRegen -= 24;
+				}
+				npc.lifeRegen -= 8;
+			}
 			if (compromise)
 			{
 				if (npc.boss)
