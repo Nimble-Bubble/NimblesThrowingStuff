@@ -10,30 +10,29 @@ using Terraria.GameContent.Creative;
 
 namespace NimblesThrowingStuff.Items.Weapons.Melee
 {
-	public class AquarianLeister : ModItem
+	public class AquarianWatercutter : ModItem
 	{
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("Fires three bubbles in a spread");
+			Tooltip.SetDefault("Fires a jet of water upon hitting a target");
         }
         public override void SetDefaults() {
-			Item.damage = 75;
-			Item.useStyle = 5;
-			Item.useAnimation = 22;
-			Item.useTime = 22;
-			Item.knockBack = 5f;
-			Item.width = 36;
-			Item.height = 36;
-			Item.shoot = ModContent.ProjectileType<AquarianLeisterProj>();
-            Item.shootSpeed = 7.25f;
+			Item.damage = 90;
+			Item.useStyle = 1;
+			Item.useAnimation = 32;
+			Item.useTime = 32;
+			Item.knockBack = 6.5f;
+			Item.width = 80;
+			Item.height = 80;
 			Item.rare = ItemRarityID.Yellow;
-            Item.noUseGraphic = true;
-            Item.noMelee = true;
+            Item.noUseGraphic = false;
+            Item.noMelee = false;
 			Item.value = Item.buyPrice(0, 27, 50, 0);
             Item.DamageType = DamageClass.Melee;
-			Item.UseSound = SoundID.Item1;
+			Item.UseSound = SoundID.Item81;
 			Item.autoReuse = true;
+			Item.scale = 1.2f;
 		}
 		public override void AddRecipes()
 		{

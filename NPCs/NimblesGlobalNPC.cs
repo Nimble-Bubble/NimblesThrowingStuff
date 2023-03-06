@@ -96,7 +96,7 @@ namespace NimblesThrowingStuff.NPCs
 					}
 					break;
 				case 368:
-					if (NPC.downedMoonlord && Main.moonPhase % 2 == 0)
+					if (NPC.downedMoonlord && (Main.moonPhase + 1) % 2 == 0)
 					{
 						shop.item[nextSlot].SetDefaults(ItemType<Superfast>());
 						nextSlot++;
