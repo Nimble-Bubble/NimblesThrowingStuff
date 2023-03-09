@@ -583,6 +583,11 @@ Mods: {
 				Tooltip: Fires a ball of acid rain
 			}
 
+			Tritifier: {
+				DisplayName: Tritifier
+				Tooltip: Fires a bolt of trite that wears out enemies' defenses
+			}
+
 			ActualLagoonLance: {
 				DisplayName: Laguna Lance
 				Tooltip:
@@ -595,6 +600,11 @@ Mods: {
 			AquarianLeister: {
 				DisplayName: Aquarian Leister
 				Tooltip: Fires three bubbles in a spread
+			}
+
+			AquarianWatercutter: {
+				DisplayName: Aquarian Watercutter
+				Tooltip: Fires a jet of water upon hitting a target
 			}
 
 			Ascalon: {
@@ -983,6 +993,20 @@ Mods: {
 				Tooltip: Fires powerful rockets
 			}
 
+			VoltArrow: {
+				DisplayName: Volt Arrow
+				Tooltip: Has a chance to electrify a target
+			}
+
+			Voltsender: {
+				DisplayName: Voltsender
+				Tooltip:
+					'''
+					Made from supple Lagiacrus parts, the coils on this bow do wonders for arrow velocity.
+					Turns arrows into volt arrows which have a chance to electrify targets.
+					'''
+			}
+
 			AquaBlastCore: {
 				DisplayName: Aqua Blaster Core
 				Tooltip: Summons an Aqua Blaster
@@ -1221,6 +1245,15 @@ Mods: {
 
 			ViciousHarvest.DisplayName: Vicious Harvest
 			VileHarvest.DisplayName: Vile Harvest
+
+			WhirlpoolWhammer: {
+				DisplayName: Whirlpool Whammer
+				Tooltip:
+					'''
+					Designed to mimic the whirlpools that Lagiacri use to hunt their prey
+					Has a chance to electrify targets
+					'''
+			}
 		}
 
 		NPCs: {
@@ -1251,6 +1284,7 @@ Mods: {
 			RazorboltProj.DisplayName: Razorbolt
 			SporeBolt.DisplayName: Spore Bolt
 			StormShotBall.DisplayName: Storm Shot Ball
+			TritifyingShot.DisplayName: Tritifying Shot
 			ActualLagoonLanceProj.DisplayName: Laguna Lance
 			AquarianLeisterProj.DisplayName: Aquarian Leister
 			AscalonProj.DisplayName: Ascalon
@@ -1318,6 +1352,7 @@ Mods: {
 			VoidRocket2.DisplayName: Void Rocket II
 			VoidRocket3.DisplayName: Void Rocket III
 			VoidRocket4.DisplayName: Void Rocket IV
+			VoltArrowProj.DisplayName: Volt Arrow
 			AquaBlast.DisplayName: Aqua Blast
 			AquaBlastProj.DisplayName: Aqua Blaster
 			HexHammerProj.DisplayName: Hexed Hammer
@@ -1422,6 +1457,7 @@ Mods: {
 			ViciousHarvestProj.DisplayName: Vicious Harvest
 			VileHarvestProj.DisplayName: Vile Harvest
 			WaraxeEcho.DisplayName: Hallowed Waraxe Echo
+			WhirlpoolWhammerProj.DisplayName: Whirlpool Whammer
 		}
 
 		Keybinds.Guard.DisplayName: Guard
