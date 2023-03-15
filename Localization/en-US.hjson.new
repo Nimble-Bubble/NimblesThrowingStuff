@@ -791,6 +791,15 @@ Mods: {
 					'''
 			}
 
+			LagiacrusBlade: {
+				DisplayName: Lagiacrus Blade
+				Tooltip:
+					'''
+					A greatsword made using Lagiacrus materials.
+					Danger: High voltage! Electricity still flows through Lagiacrus shell when separated from its source.
+					'''
+			}
+
 			Lepidolancea: {
 				DisplayName: Lepidolancea
 				Tooltip:
@@ -843,12 +852,30 @@ Mods: {
 					'''
 			}
 
+			RedWing: {
+				DisplayName: Red Wing
+				Tooltip:
+					'''
+					A greatsword designed to resemble a Rathalos' wing.
+					Incendiary powder on the blade ignites targets on contact.
+					'''
+			}
+
 			RobustTusk: {
 				DisplayName: Robust Tusk
 				Tooltip:
 					'''
 					The added leather allows for higher agility
 					Right click to launch yourself in the direction of the lance
+					'''
+			}
+
+			ScissorGunlance: {
+				DisplayName: Scissor Gunlance
+				Tooltip:
+					'''
+					Made from improved Hermitaur parts, this gunlance is admirable for its versatility.
+					Critical strikes give you increased endurance for a short period of time.
 					'''
 			}
 
@@ -972,6 +999,15 @@ Mods: {
 			}
 
 			ProcellariteRepeater.DisplayName: Procellarite Repeater
+
+			ProminenceBow: {
+				DisplayName: Prominence Bow
+				Tooltip:
+					'''
+					This marvel of technology can slice through shell and tear through flesh
+					Combustible rathwyvern powder gives regular arrows fiery power
+					'''
+			}
 
 			Seastring: {
 				DisplayName: Seastring
@@ -1328,6 +1364,7 @@ Mods: {
 			ProcellariteTridentProj.DisplayName: Procellarite Trident
 			RedTailProj.DisplayName: Red Tail
 			RobustTuskProj.DisplayName: Robust Tusk
+			ScissorGunlanceProj.DisplayName: Scissor Gunlance
 			SeaDiverBullet.DisplayName: Sea Diver Bullet
 			SeaDiverProj.DisplayName: Sea Diver
 			ShockLanceProj.DisplayName: Shock Lance
@@ -1458,6 +1495,7 @@ Mods: {
 			VileHarvestProj.DisplayName: Vile Harvest
 			WaraxeEcho.DisplayName: Hallowed Waraxe Echo
 			WhirlpoolWhammerProj.DisplayName: Whirlpool Whammer
+			ScissorGunlanceShell.DisplayName: Scissor Gunlance Shell
 		}
 
 		Keybinds.Guard.DisplayName: Guard
