@@ -44,18 +44,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
         public override void PostDraw(Color lightColor)
 		{
 			Texture2D texture = Mod.Assets.Request<Texture2D>("Projectiles/Throwing/CosmosCrasherProj_Glow").Value;
-			Main.EntitySpriteDraw
-			(
-				texture,
-				Projectile.position,
-				new Rectangle(0, 0, texture.Width, texture.Height),
-				Color.Cyan,
-				Projectile.rotation,
-				texture.Size() * 0.5f,
-				Projectile.scale,
-				SpriteEffects.None,
-				0
-			);
+			Main.EntitySpriteDraw(texture, Projectile.position, new Rectangle(0, 0, texture.Width, texture.Height), Color.Cyan, Projectile.rotation, texture.Size() * 0.5f, Projectile.scale, SpriteEffects.None, 0);
 		}
     }
 }

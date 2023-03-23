@@ -8,6 +8,7 @@ using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.Enums;
 using NimblesThrowingStuff.Items.Weapons.Throwing;
+using NimblesThrowingStuff.Dusts;
 
 namespace NimblesThrowingStuff.Projectiles.Throwing
 {
@@ -52,30 +53,17 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
         public override void AI()
         {
             ++lacdex;
-            Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 174,
-                            Projectile.velocity.X * 0.1f, Projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
-            if (lacdex >= 20)
+			Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, ModContent.DustType<ProcellariteStarDust>(), Projectile.velocity.RotatedByRandom(MathHelper.ToRadians(10)).X * 0.1f, Projectile.velocity.RotatedByRandom(MathHelper.ToRadians(10)).Y * 0.1f, 0, new Color(), 0.75f);
+			if (lacdex >= 20)
                     {
-                        Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, Projectile.velocity.X, Projectile.velocity.Y,
-                            Mod.Find<ModProjectile>("LacusEcho").Type, Projectile.damage / 2, 5f, Projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
+                        Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, Projectile.velocity.X, Projectile.velocity.Y, Mod.Find<ModProjectile>("LacusEcho").Type, Projectile.damage / 2, 5f, Projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
                 lacdex = 0;
                     }
         }
         public override void PostDraw(Color lightColor)
 		{
 			Texture2D texture = Mod.Assets.Request<Texture2D>("Projectiles/Throwing/LacusDecapitatorProj_Glow").Value;
-			Main.EntitySpriteDraw
-			(
-				texture,
-				Projectile.position,
-				new Rectangle(0, 0, texture.Width, texture.Height),
-				Color.Yellow,
-				Projectile.rotation,
-				texture.Size() * 0.5f,
-				Projectile.scale,
-				SpriteEffects.None,
-				0
-			);
+			Main.EntitySpriteDraw(texture, Projectile.position, new Rectangle(0, 0, texture.Width, texture.Height), Color.Yellow, Projectile.rotation, texture.Size() * 0.5f, Projectile.scale, SpriteEffects.None, 0);
 		}
     }
 }

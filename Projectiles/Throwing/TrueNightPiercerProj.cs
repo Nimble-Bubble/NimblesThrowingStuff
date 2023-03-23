@@ -54,34 +54,20 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
         public override void AI()
         {
             ++index;
-            Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 272,
-                            Projectile.velocity.X * 0.1f, Projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
+            Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 272, Projectile.velocity.X * 0.1f, Projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
             if (index >= 30)
                     {
-                        var vector2 = new Vector2((float) Main.rand.Next(-100, 101),
-                            (float) Main.rand.Next(-100, 101));
+                        var vector2 = new Vector2((float) Main.rand.Next(-100, 101), (float) Main.rand.Next(-100, 101));
                         vector2.Normalize();
                         vector2 *= (float) Main.rand.Next(10, 201) * 0.05f;
-                        Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, vector2.X, vector2.Y,
-                            Mod.Find<ModProjectile>("PiercerEcho").Type, Projectile.damage, 0.75f, Projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
+                        Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, vector2.X, vector2.Y, Mod.Find<ModProjectile>("PiercerEcho").Type, Projectile.damage, 0.75f, Projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
                 index = 0;
                     }
         }
         public override void PostDraw(Color lightColor)
 		{
 			Texture2D texture = Mod.Assets.Request<Texture2D>("Projectiles/Throwing/TrueNightPiercerProj_Glow").Value;
-            Main.EntitySpriteDraw
-            (
-				texture,
-				Projectile.position,
-				new Rectangle(0, 0, texture.Width, texture.Height),
-				Color.Green,
-				Projectile.rotation,
-				texture.Size() * 0.5f,
-				Projectile.scale,
-				SpriteEffects.None,
-				0
-			);
+            Main.EntitySpriteDraw(texture, Projectile.position, new Rectangle(0, 0, texture.Width, texture.Height), Color.Green, Projectile.rotation, texture.Size() * 0.5f, Projectile.scale, SpriteEffects.None, 0);
 		}
     }
 }

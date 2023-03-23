@@ -32,24 +32,12 @@ namespace NimblesThrowingStuff.Projectiles.Melee
         }
         public override void AI() 
         {
-            Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 174,
-                            Projectile.velocity.X * 0.1f, Projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
+            Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 174, Projectile.velocity.X * 0.1f, Projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
         }
         public override void PostDraw(Color lightColor)
 		{
 			Texture2D texture = Mod.Assets.Request<Texture2D>("Projectiles/Melee/FuriousBeam_Glow").Value;
-			Main.EntitySpriteDraw
-			(
-				texture,
-				Projectile.position,
-				new Rectangle(0, 0, texture.Width, texture.Height),
-				Color.Orange,
-				Projectile.rotation,
-				texture.Size() * 0.5f,
-				Projectile.scale,
-				SpriteEffects.None,
-				0
-			);
+			Main.EntitySpriteDraw(texture, Projectile.position, new Rectangle(0, 0, texture.Width, texture.Height), Color.Orange, Projectile.rotation, texture.Size() * 0.5f, Projectile.scale, SpriteEffects.None, 0);
 		}
         public override void OnHitNPC (NPC target, int damage, float knockback, bool crit)
         {

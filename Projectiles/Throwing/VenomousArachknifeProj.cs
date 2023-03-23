@@ -23,7 +23,6 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
             Projectile.localNPCHitCooldown = 10;
 			Projectile.DamageType = DamageClass.Throwing;
 			Projectile.penetrate = 10;
-			Projectile.hide = true;
             Projectile.extraUpdates = 1;
 		}
 		public override bool TileCollideStyle(ref int width, ref int height, ref bool fallThrough, ref Vector2 hitboxCenterFrac)

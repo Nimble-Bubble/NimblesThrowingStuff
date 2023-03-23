@@ -33,8 +33,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
         }
         public override void AI()
         {
-            Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 35,
-                            Projectile.velocity.X * 0.1f, Projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
+         Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 35, Projectile.velocity.X * 0.1f, Projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
          if (Projectile.penetrate <= 1 || Projectile.timeLeft <= 3)
          {
             Projectile.aiStyle = 16;
@@ -48,12 +47,11 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
         }
         public override void Kill(int timeLeft) 
         {
-                        Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.position.X, Projectile.position.Y, 0, 0,
-                            Mod.Find<ModProjectile>("NanoMissileExplosion").Type, Projectile.damage, 10f, Projectile.owner, 0.0f, 0.0f);
+            Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.position.X, Projectile.position.Y, 0, 0, Mod.Find<ModProjectile>("NanoMissileExplosion").Type, Projectile.damage, 10f, Projectile.owner, 0.0f, 0.0f);
             Projectile.position = Projectile.Center;
             Projectile.width = 250;
             Projectile.height = 250;
-             Projectile.Center = Projectile.position;
+            Projectile.Center = Projectile.position;
             
             Projectile.aiStyle = 16;
             SoundEngine.PlaySound(SoundID.Item14, Projectile.position);

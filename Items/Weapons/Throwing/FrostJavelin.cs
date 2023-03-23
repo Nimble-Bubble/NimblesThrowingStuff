@@ -24,10 +24,9 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
 			Item.shoot = Mod.Find<ModProjectile>("FrostJavelinProj").Type;
-			Item.shootSpeed = 10f;
+			Item.shootSpeed = 13f;
             Item.mana = 12;
 		}
-
 		public override void AddRecipes() 
 		{
 			Recipe recipe = CreateRecipe();

@@ -17,7 +17,8 @@ namespace NimblesThrowingStuff.Items.Armor
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-            Tooltip.SetDefault("Increases throwing damage by 30% and critical strike chance by 20%");
+            Tooltip.SetDefault("Increases throwing damage by 30% and critical strike chance by 20%"
+                +"\nThe wings on this hat may have been used to boost flight at one point, but they are merely decorative now.");
         }
 
         public override void SetDefaults()

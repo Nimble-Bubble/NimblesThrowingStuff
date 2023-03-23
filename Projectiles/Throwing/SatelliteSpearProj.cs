@@ -47,8 +47,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
         }
         public override void Kill(int timeLeft) 
         {
-                        Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.position.X, Projectile.position.Y, 0, 0,
-                            Mod.Find<ModProjectile>("SatelliteSpearEchosplosion").Type, Projectile.damage * 2, 10f, Projectile.owner, 0.0f, 0.0f);
+                        Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.position.X, Projectile.position.Y, 0, 0, Mod.Find<ModProjectile>("SatelliteSpearEchosplosion").Type, Projectile.damage * 2, 10f, Projectile.owner, 0.0f, 0.0f);
             Projectile.position = Projectile.Center;
             Projectile.width = 250;
             Projectile.height = 250;
@@ -67,19 +66,8 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
         }
         public override void PostDraw(Color lightColor)
 		{
-			Texture2D texture = ModContent.Request<Texture2D>("Projectiles/Throwing/SatelliteSpearProj_Glow").Value;
-            Main.EntitySpriteDraw
-            (
-				texture,
-				Projectile.position,
-				new Rectangle(0, 0, texture.Width, texture.Height),
-				Color.SeaGreen,
-				Projectile.rotation,
-				texture.Size() * 0.5f,
-				Projectile.scale,
-				SpriteEffects.None,
-				0
-			);
+			Texture2D texture = Mod.Assets.Request<Texture2D>("Projectiles/Throwing/SatelliteSpearProj_Glow").Value;
+            Main.EntitySpriteDraw(texture, Projectile.position, new Rectangle(0, 0, texture.Width, texture.Height), Color.SeaGreen, Projectile.rotation, texture.Size() * 0.5f, Projectile.scale, SpriteEffects.None, 0);
 		}
     }
 }

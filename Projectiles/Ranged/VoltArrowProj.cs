@@ -46,8 +46,7 @@ namespace NimblesThrowingStuff.Projectiles.Ranged
         {
             SoundEngine.PlaySound(SoundID.Dig, Projectile.position);
                     for (int index = 0; index < 10; index++)
-                        Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 226,
-                            Projectile.velocity.X * 0.1f, Projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
+                        Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 226, Projectile.velocity.X * 0.1f, Projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
             if (Main.rand.NextBool(10))
             {
                 Item.NewItem(Projectile.GetSource_FromThis(), Projectile.getRect(), ModContent.ItemType<VoltArrow>());
@@ -56,18 +55,7 @@ namespace NimblesThrowingStuff.Projectiles.Ranged
         public override void PostDraw(Color lightColor)
         {
             Texture2D texture = Mod.Assets.Request<Texture2D>("Projectiles/Ranged/VoltArrowProj_Glow").Value;
-            Main.EntitySpriteDraw
-            (
-                texture,
-                Projectile.position,
-                new Rectangle(0, 0, texture.Width, texture.Height),
-                Color.Cyan,
-                Projectile.rotation,
-                texture.Size() * 0.5f,
-                Projectile.scale,
-                SpriteEffects.None,
-                0
-            );
+            Main.EntitySpriteDraw(texture, Projectile.position, new Rectangle(0, 0, texture.Width, texture.Height), Color.Cyan, Projectile.rotation, texture.Size() * 0.5f, Projectile.scale, SpriteEffects.None, 0);
         }
     }
 }

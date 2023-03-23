@@ -16,7 +16,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 			Tooltip.SetDefault("Made from improved Hermitaur parts, this gunlance is admirable for its versatility."
-				+"\nCritical strikes give you increased endurance for a short period of time.");
+				+"\nGuard and right click while attacking to load shells. These shells can be fired if you right click while attacking."
+				+"\nCritical strikes from shells give you increased endurance for a short period of time.");;
         }
         public override void SetDefaults() {
 			Item.damage = 46;

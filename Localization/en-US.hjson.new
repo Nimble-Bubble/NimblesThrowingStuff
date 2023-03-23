@@ -337,7 +337,11 @@ Mods: {
 
 			ProcellariteCap: {
 				DisplayName: Procellarite Cap
-				Tooltip: Increases throwing damage by 30% and critical strike chance by 20%
+				Tooltip:
+					'''
+					Increases throwing damage by 30% and critical strike chance by 20%
+					The wings on this hat may have been used to boost flight at one point, but they are merely decorative now.
+					'''
 			}
 
 			ProcellariteChestplate: {
@@ -347,12 +351,20 @@ Mods: {
 
 			ProcellariteHat: {
 				DisplayName: Procellarite Hat
-				Tooltip: Increases magic damage by 30% and critical strike chance by 20%
+				Tooltip:
+					'''
+					Increases magic damage by 30% and critical strike chance by 20%
+					The design of this hat brings up thoughts of whimsical witchcraft.
+					'''
 			}
 
 			ProcellariteHelmet: {
 				DisplayName: Procellarite Helmet
-				Tooltip: Increases melee damage by 30% and critical strike chance by 20%
+				Tooltip:
+					'''
+					Increases melee damage by 30% and critical strike chance by 20%
+					The Y-shaped hole on this helmet is good for vision and communication, but it leaves a vulnerability.
+					'''
 			}
 
 			ProcellariteLeggings: {
@@ -362,12 +374,20 @@ Mods: {
 
 			ProcellariteMask: {
 				DisplayName: Procellarite Mask
-				Tooltip: Increases summoning damage by 50% and minion max by 4
+				Tooltip:
+					'''
+					Increases summoning damage by 50% and minion max by 4
+					This mask appears to be inspired by an endemic animal, but you're not entirely sure what lies up there...
+					'''
 			}
 
 			ProcellariteVisor: {
 				DisplayName: Procellarite Visor
-				Tooltip: Increases ranged damage by 30% and critical strike chance by 20%
+				Tooltip:
+					'''
+					Increases ranged damage by 30% and critical strike chance by 20%
+					While the glass-like layer is worse than pure solid Procellarite for durability, its sensory benefits are undeniable.
+					'''
 			}
 
 			RathalosGreaves: {
@@ -875,7 +895,8 @@ Mods: {
 				Tooltip:
 					'''
 					Made from improved Hermitaur parts, this gunlance is admirable for its versatility.
-					Critical strikes give you increased endurance for a short period of time.
+					Guard and right click while attacking to load shells. These shells can be fired if you right click while attacking.
+					Critical strikes from shells give you increased endurance for a short period of time.
 					'''
 			}
 
@@ -1365,6 +1386,7 @@ Mods: {
 			RedTailProj.DisplayName: Red Tail
 			RobustTuskProj.DisplayName: Robust Tusk
 			ScissorGunlanceProj.DisplayName: Scissor Gunlance
+			ScissorGunlanceShell.DisplayName: Scissor Gunlance Shell
 			SeaDiverBullet.DisplayName: Sea Diver Bullet
 			SeaDiverProj.DisplayName: Sea Diver
 			ShockLanceProj.DisplayName: Shock Lance
@@ -1495,7 +1517,6 @@ Mods: {
 			VileHarvestProj.DisplayName: Vile Harvest
 			WaraxeEcho.DisplayName: Hallowed Waraxe Echo
 			WhirlpoolWhammerProj.DisplayName: Whirlpool Whammer
-			ScissorGunlanceShell.DisplayName: Scissor Gunlance Shell
 		}
 
 		Keybinds.Guard.DisplayName: Guard
