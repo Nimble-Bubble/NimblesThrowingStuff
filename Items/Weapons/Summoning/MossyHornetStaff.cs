@@ -46,7 +46,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Summoning
 		public override void AddRecipes()
 		{
 			Recipe recipe = CreateRecipe();
-			recipe.AddIngredient(1006, 12); //modded materials
+			recipe.AddIngredient(1006, 12);
 			recipe.AddIngredient(2364, 1);
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.Register();
