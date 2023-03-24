@@ -10,12 +10,11 @@ using Terraria.Enums;
 
 namespace NimblesThrowingStuff.Projectiles.Melee
 {
-	public class RedTailProj: ModProjectile
+	public class AcrusLanceProj: ModProjectile
     {
-        private int redTailPower;
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Red Tail");
+            DisplayName.SetDefault("Acrus Lance");
         }
         public override void SetDefaults()
         {
@@ -30,24 +29,24 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             Projectile.aiStyle = 19;
             Projectile.timeLeft = 40;
             Projectile.extraUpdates = 0;
-            Projectile.scale = 1.2f;
+            Projectile.scale = 1f;
         }
         public override void ModifyHitNPC(NPC target, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)
         {
             for (int f = 0; f < 3; f++)
             {
-                int fireIndex = Dust.NewDust(new Vector2(target.position.X, target.position.Y), target.width, target.height, 6, 0f, 0f, 100, default(Color), 2f);
-                Main.dust[fireIndex].velocity *= 6f;
+                int zapIndex = Dust.NewDust(new Vector2(target.position.X, target.position.Y), target.width, target.height, 226, 0f, 0f, 100, default(Color), 1f);
+                Main.dust[zapIndex].velocity *= 6f;
             }
-            if (Main.rand.NextBool(4) && !target.buffImmune[BuffID.OnFire])
+            if (Main.rand.NextBool(10) && !target.buffImmune[BuffID.Electrified])
             {
                 for (int f = 0; f < 12; f++)
                 {
-                    int fireIndex2 = Dust.NewDust(new Vector2(target.position.X, target.position.Y), target.width, target.height, 6, 0f, 0f, 100, default(Color), 3f);
-                    Main.dust[fireIndex2].velocity *= 8f;
+                    int zapIndex2 = Dust.NewDust(new Vector2(target.position.X, target.position.Y), target.width, target.height, 226, 0f, 0f, 100, default(Color), 1.25f);
+                    Main.dust[zapIndex2].velocity *= 8f;
                 }
-                SoundEngine.PlaySound(SoundID.Item88);
-                target.AddBuff(BuffID.OnFire, 300);
+                SoundEngine.PlaySound(SoundID.Item94);
+                target.AddBuff(BuffID.Electrified, 450);
             }
         }
         public float movementFactor
@@ -97,25 +96,6 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             if (Main.myPlayer != Projectile.owner)
             {
                 Projectile.Kill();
-            }
-            --redTailPower;
-            if (redTailPower < 0)
-            {
-                redTailPower = 0;
-            }
-            if (Main.mouseRight)
-            {
-                if (redTailPower == 0)
-                {
-                    int throwFlames = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, Projectile.velocity.X / 3, Projectile.velocity.Y / 3, ProjectileID.Flames, Projectile.damage / 2, Projectile.knockBack / 2, Projectile.owner);
-                    Main.projectile[throwFlames].DamageType = DamageClass.Melee;
-                   SoundEngine.PlaySound(SoundID.Item34);
-                    redTailPower += 60;
-                }
-                else
-                {
-                    //Main.PlaySound(SoundID.Item16);
-                }
             }
         }
     }

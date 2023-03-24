@@ -112,13 +112,18 @@ namespace NimblesThrowingStuff.NPCs.Town
                 NPC.velocity.X += NPC.direction * 0.095f;
             }
         }
-        public override List<string> SetNPCNameList()/* tModPorter Suggestion: Return a list of names */
+        public override List<string> SetNPCNameList()
         {
             return new List<string>() { 
                 "Jimmy Bay", 
-                "Oliver Raptor", 
+                "Ollie Raptor", 
                 "Andy Wyliei",  
-                "Albert Gorgo" 
+                "Albert Gorgo",
+                "Jax Artor",
+                "Jean Epanterias",
+                "Bolong Shore",
+                "Sam Juanasaurus",
+                "Shelly Nomanisan"
             };
                 
 		}
