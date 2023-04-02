@@ -99,6 +99,9 @@ namespace NimblesThrowingStuff
                     case 2:
                         Player.AddBuff(Mod.Find<ModBuff>("GuardHorrorshowShield").Type, 2);
                         break;
+                    case 4:
+                        Player.AddBuff(Mod.Find<ModBuff>("GuardStinguard").Type, 2);
+                        break;
                 }
             }
         }
@@ -204,6 +207,14 @@ namespace NimblesThrowingStuff
                     case 3:
                         Player.statDefense += 50;
                         Player.statDefense += guardBonus;
+                        break;
+                    case 4:
+                        Player.thorns = 1f;
+                        Lighting.AddLight(Player.Center, Color.Lime.ToVector3() * 0.5f);
+                        if (Main.rand.NextBool(20))
+                        {
+                            Dust.NewDust(Player.position, Player.width, Player.height, 44, Player.velocity.RotatedByRandom(MathHelper.ToDegrees(120)).X * 0.5f, Player.velocity.RotatedByRandom(MathHelper.ToDegrees(120)).Y * 0.5f, 0, default(Color), 0.5f);
+                        }
                         break;
                 }
     }
