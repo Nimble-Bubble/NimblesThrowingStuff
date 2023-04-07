@@ -122,7 +122,7 @@ namespace NimblesThrowingStuff
                 //    damage = 0;
                 //}
                 quiet = true;
-                SoundEngine.PlaySound(new SoundStyle("Sounds/Item/GuardMetalMedium"));
+                SoundEngine.PlaySound(new SoundStyle("NimblesThrowingStuff/Sounds/Item/GuardMetalMedium"));
                 cooldownCounter += 40;
             }
         }

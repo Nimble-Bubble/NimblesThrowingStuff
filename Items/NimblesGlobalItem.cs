@@ -178,6 +178,10 @@ namespace NimblesThrowingStuff.Items
             recipe.AddTile(TileID.Tables);
             recipe.AddTile(TileID.Chairs);
             recipe.Register();
+            recipe = Recipe.Create(ItemID.Leather, 1);
+            recipe.AddIngredient(ItemID.Vertebrae, 5);
+            recipe.AddTile(TileID.WorkBenches);
+            recipe.Register();
         }
     }
 }

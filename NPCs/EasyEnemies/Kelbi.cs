@@ -16,7 +16,7 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
 		public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Kelbi");
-            Main.npcFrameCount[NPC.type] = 9;
+            Main.npcFrameCount[NPC.type] = 11;
 		}
 
 		public override void SetDefaults()
@@ -130,19 +130,19 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
             NPC.frameCounter++;
             if (NPC.ai[1] >= 300 && NPC.ai[1] <= 960 && NPC.life == NPC.lifeMax)
             {
-                if (NPC.frameCounter < 15)
+                if (NPC.frameCounter < 12)
                 {
                     NPC.frame.Y = 1 * frameHeight;
                 }
-                else if (NPC.frameCounter < 30)
+                else if (NPC.frameCounter < 24)
                 {
                     NPC.frame.Y = 2 * frameHeight;
                 }
-                else if (NPC.frameCounter < 45)
+                else if (NPC.frameCounter < 36)
                 {
                     NPC.frame.Y = 3 * frameHeight;
                 }
-                else if (NPC.frameCounter < 60)
+                else if (NPC.frameCounter < 48)
                 {
                     NPC.frame.Y = 4 * frameHeight;
                 }
@@ -174,7 +174,26 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
             }
             else
             {
-                NPC.frame.Y = 0;
+                if (NPC.frameCounter < 100)
+                {
+                    NPC.frame.Y = 0;
+                }
+                else if (NPC.frameCounter < 150)
+                {
+                    NPC.frame.Y = 9 * frameHeight;
+                }
+                else if (NPC.frameCounter < 200)
+                {
+                    NPC.frame.Y = 10 * frameHeight;
+                }
+                else if (NPC.frameCounter < 250)
+                {
+                    NPC.frame.Y = 9 * frameHeight;
+                }
+                else
+                {
+                    NPC.frameCounter = 0;
+                }
             }
         }
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
