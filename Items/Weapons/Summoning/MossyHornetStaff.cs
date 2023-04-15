@@ -33,7 +33,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Summoning
 			Item.rare = 7;
 			Item.UseSound = SoundID.Item8;
 			Item.noMelee = true;
-			Item.DamageType = DamageClass.Summon;;
+			Item.DamageType = DamageClass.Summon;
 			Item.buffType = ModContent.BuffType<MossHornetBuff>();
 			Item.shoot = ModContent.ProjectileType<MiniMossHornetProj>();
 		}
