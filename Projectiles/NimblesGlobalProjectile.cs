@@ -77,5 +77,20 @@ namespace NimblesThrowingStuff.Items
                 projectile.localNPCHitCooldown = 10;
             }
         }
+        public override void ModifyHitNPC(Projectile projectile, NPC target, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)
+        {
+            if (projectile.type >= 404 && projectile.type <= 410 && projectile.type != 406 || projectile.type == 239 || projectile.type == 22 || projectile.type == 26 || projectile.type == 27)
+            {
+                target.AddBuff(BuffID.Wet, 300);
+            }
+            if (projectile.type == 451 || projectile.type == 459 || projectile.type == 440)
+            {
+                target.AddBuff(BuffID.Electrified, 240);
+            }
+            if (projectile.type == 461 || projectile.type == 443)
+            {
+                target.AddBuff(BuffID.Electrified, 450);
+            }
+        }
     }
 }

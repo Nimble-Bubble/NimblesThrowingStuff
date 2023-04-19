@@ -27,6 +27,14 @@ namespace NimblesThrowingStuff.NPCs
 		}
 		public override void UpdateLifeRegen(NPC npc, ref int damage)
 		{
+			if (npc.HasBuff(BuffID.Wet))
+			{
+				if (npc.HasBuff(BuffID.OnFire3))
+                {
+					npc.lifeRegen += 10;
+                }
+				npc.buffImmune[BuffID.OnFire] = true;
+			}
 			if (greek)
 			{
 				if (npc.lifeRegen > 0)
@@ -45,6 +53,10 @@ namespace NimblesThrowingStuff.NPCs
 			}
 			if (npc.HasBuff(BuffID.Electrified))
             {
+				if (npc.HasBuff(BuffID.Wet))
+                {
+					npc.lifeRegen *= 2;
+                }
 				if (npc.lifeRegen > 0)
 				{
 					npc.lifeRegen = 0;

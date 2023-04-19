@@ -40,6 +40,7 @@ namespace NimblesThrowingStuff
         public bool rathalosOnFire;
         public bool rangeMisfire;
         public int whichShield;
+        public int whichGuardSound;
         public bool guardState;
         public int guardBonus;
         public bool compromise;
@@ -68,6 +69,7 @@ namespace NimblesThrowingStuff
         miniLocal = false;
         rathalosOnFire = false;
         whichShield = 0;
+        whichGuardSound = 0;
         rangeMisfire = false;
         guardState = false;
         guardBonus = 0;
@@ -122,8 +124,23 @@ namespace NimblesThrowingStuff
                 //    damage = 0;
                 //}
                 quiet = true;
-                SoundEngine.PlaySound(new SoundStyle("NimblesThrowingStuff/Sounds/Item/GuardMetalMedium"));
                 cooldownCounter += 40;
+                switch (whichGuardSound)
+                {
+                    case 0:
+                        SoundEngine.PlaySound(new SoundStyle("NimblesThrowingStuff/Sounds/Item/GuardMetalMedium"));
+                        break;
+                    case 1:
+                        SoundEngine.PlaySound(new SoundStyle("NimblesThrowingStuff/Sounds/Item/GuardMetalMedium"));
+                        break;
+                    case 2:
+                        SoundEngine.PlaySound(new SoundStyle("NimblesThrowingStuff/Sounds/Item/GuardMetalLight"));
+                        break;
+                    case 3:
+                        SoundEngine.PlaySound(new SoundStyle("NimblesThrowingStuff/Sounds/Item/GuardMetalHeavy"));
+                        break;
+                }
+                
             }
         }
         public override void PostHurt(bool pvp, bool quiet, double damage, int hitDirection, bool crit, int cooldownCounter) {

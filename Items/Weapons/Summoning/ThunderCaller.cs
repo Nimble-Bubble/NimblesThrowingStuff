@@ -39,7 +39,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Summoning
 			Item.noUseGraphic = true;
 			Item.shoot = ModContent.ProjectileType<ThunderCallerProj>();
 			Item.shootSpeed = 8f;
-			Item.channel = true;
 		}
 		public override void AddRecipes()
 		{

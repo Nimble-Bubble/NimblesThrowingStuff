@@ -11,7 +11,7 @@ using Terraria.GameContent.Creative;
 
 namespace NimblesThrowingStuff.Items.Accessories.Shields
 {
-    //[AutoloadEquip(EquipType.Shield)]
+    [AutoloadEquip(EquipType.Shield)]
     public class Stinguard : ModItem
     {
         
