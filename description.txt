@@ -12,6 +12,7 @@ To add onto that, a new NPC dedicated to the Throwing class has been added. A "l
 With the new items added to the Throwing class, you will most likely be able to get from the start of the game to the end much like any other class, though balance might become an issue.
 
 0.3.2 expands further on the new content of 0.3.1, with further additions to weapon trees along with more shields.
+For now, we will call the post-Moon Lord phase "Extra-Hardmode" or "Extramode", though this may change.
 
 Credits:
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
+using Terraria.Audio;
 using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.Enums;
@@ -27,7 +28,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
             Projectile.friendly = true;
             Projectile.DamageType = DamageClass.Throwing;
             Projectile.extraUpdates = 1;
-            Projectile.timeLeft = 150;
+            Projectile.timeLeft = 300;
         }
 		public override bool TileCollideStyle(ref int width, ref int height, ref bool fallThrough, ref Vector2 hitboxCenterFrac)
 		{
@@ -132,13 +133,13 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 			}
 			Projectile.rotation =
 				Projectile.velocity.ToRotation() +
-				MathHelper.ToRadians(90f);
+				MathHelper.ToRadians(135f);
 		}
 
 		private void StickyAI()
 		{
 			Projectile.ignoreWater = true; 
-            Projectile.alpha += 10;
+            Projectile.alpha += 3;
 			Projectile.tileCollide = false; 
 			const int aiFactor = 3; 
 			Projectile.localAI[0] += 1f;
@@ -164,11 +165,12 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 		}
         public override void Kill(int timeLeft)
         {
-        for (int wd = 0; wd < 10; wd++)
-        {
-            Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 33,
-                            Projectile.velocity.X * 0.1f, Projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
-                            }
-        }
+			for (int wd = 0; wd < 10; wd++)
+			{
+				Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 33, Projectile.velocity.X * 0.1f, Projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
+				Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 10, Projectile.velocity.X * 0.1f, Projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
+			}
+				
+		}
     }
 }
