@@ -93,6 +93,13 @@ namespace NimblesThrowingStuff.NPCs
 			Player player = Main.player[Main.myPlayer];
 			switch (type)
 			{
+				case 17:
+					if (NPC.downedBoss1 && (Main.moonPhase + 1) % 4 == 0)
+                    {
+						shop.item[nextSlot].SetDefaults(ItemType<GreenQurupecoFeather>());
+						nextSlot++;
+					}
+					break;
 				case 19:
 					if (NPC.downedBoss2 && !Main.dayTime || Main.hardMode)
 					{

@@ -39,10 +39,25 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 		}
         public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
 		{
-			
-			if (type == ProjectileID.RocketI || type == ProjectileID.RocketII || type == ProjectileID.RocketIII || type == ProjectileID.RocketIV  || type >= 617 && type <= 712)
+			if (type == ProjectileID.RocketI)
+            {
+				Item.shoot = ModContent.ProjectileType<VoidRocket1>();
+            }
+			if (type == ProjectileID.RocketII)
 			{
-				type = ProjectileID.VortexBeaterRocket;
+				Item.shoot = ModContent.ProjectileType<VoidRocket2>();
+			}
+			if (type == ProjectileID.RocketIII)
+			{
+				Item.shoot = ModContent.ProjectileType<VoidRocket3>();
+			}
+			if (type == ProjectileID.RocketIV)
+            {
+				Item.shoot = ModContent.ProjectileType<VoidRocket4>();
+            }				
+			else if (type >= 617 && type <= 712)
+			{
+				Item.shoot = ProjectileID.VortexBeaterRocket;
 			}
 		}
 		public override void AddRecipes()

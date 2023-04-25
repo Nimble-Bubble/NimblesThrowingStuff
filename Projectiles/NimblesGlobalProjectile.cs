@@ -20,6 +20,11 @@ namespace NimblesThrowingStuff.Items
         public override void SetDefaults(Projectile projectile)
         {
             Player player = Main.player[projectile.owner];
+            if (projectile.type >= 390 || projectile.type <= 392)
+            {
+                projectile.usesLocalNPCImmunity = true;
+                projectile.localNPCHitCooldown = 24;
+            }
         }
         public override void OnHitNPC(Projectile projectile, NPC target, int damage, float knockback, bool crit)
         {
