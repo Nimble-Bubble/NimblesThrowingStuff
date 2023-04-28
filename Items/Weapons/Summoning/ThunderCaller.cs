@@ -40,12 +40,12 @@ namespace NimblesThrowingStuff.Items.Weapons.Summoning
 			Item.shoot = ModContent.ProjectileType<ThunderCallerProj>();
 			Item.shootSpeed = 8f;
 		}
-		public override void AddRecipes()
+		/* public override void AddRecipes()
 		{
 			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ModContent.ItemType<LagiacrusShell>(), 12);
 			recipe.AddTile(TileID.Anvils);
 			recipe.Register();
-		}
+		} */
 	}
 }

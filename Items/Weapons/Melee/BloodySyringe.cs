@@ -14,14 +14,13 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("AB is a universal recipient. O is a universal donor. This is a universal source of pain."
-				+"\nRight click while holding the lance out to fire a stream of blood.");
+			Tooltip.SetDefault("AB is a universal recipient. O is a universal donor. This is a universal source of pain.");
         }
         public override void SetDefaults() {
-			Item.damage = 18;
+			Item.damage = 20;
 			Item.useStyle = ItemUseStyleID.Shoot;
-			Item.useAnimation = 24;
-			Item.useTime = 24;
+			Item.useAnimation = 26;
+			Item.useTime = 26;
 			Item.knockBack = 6f;
 			Item.width = 20;
 			Item.height = 20;

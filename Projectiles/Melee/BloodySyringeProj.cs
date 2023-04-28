@@ -12,7 +12,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 {
 	public class BloodySyringeProj: ModProjectile
     {
-        private bool hasBlooded;
+        //private bool hasBlooded;
         public float movementFactor
         {
             get => Projectile.ai[0];
@@ -37,7 +37,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             Projectile.extraUpdates = 0;
             Projectile.scale = 1.1f;
             Projectile.ownerHitCheck = true;
-            hasBlooded = false;
+            //hasBlooded = false;
         }
         public override void AI()
         {
@@ -82,12 +82,12 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             {
                 Projectile.Kill();
             }
-            if (Main.mouseRight && !hasBlooded)
+            /* if (Main.mouseRight && !hasBlooded)
             {
                     Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.velocity, ModContent.ProjectileType<BloodySyringeBlood>(), Projectile.damage / 3, 1.5f, Projectile.owner); 
                     SoundEngine.PlaySound(SoundID.Item21);
                     hasBlooded = true;
-            }
+            } */
         }
     }
 }
