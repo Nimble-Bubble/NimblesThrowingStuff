@@ -143,8 +143,12 @@ namespace NimblesThrowingStuff
                 
             }
         }
-        public override void PostHurt(bool pvp, bool quiet, double damage, int hitDirection, bool crit, int cooldownCounter) {
-            
+        public override void PostHurt(bool pvp, bool quiet, double damage, int hitDirection, bool crit, int cooldownCounter) 
+        {
+            if (compromise)
+            {
+                Player.velocity *= new Vector2(2, 2);
+            }
                 if (canSanta)
          {
           Projectile.NewProjectile(Player.GetSource_FromThis(), Player.Center.X, Player.Center.Y, 0, -10,
