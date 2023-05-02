@@ -33,6 +33,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Summoning
 			Item.UseSound = SoundID.Item8;
 			Item.noMelee = true;
 			Item.noUseGraphic = true;
+			Item.autoReuse = true;
 			Item.DamageType = DamageClass.Summon;
 			Item.shoot = ModContent.ProjectileType<StardustWhipProj>();
 			Item.shootSpeed = 6f;

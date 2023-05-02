@@ -20,5 +20,17 @@ namespace NimblesThrowingStuff.Items.Materials
 			Item.value = Item.buyPrice(0, 4, 0, 0);
 			Item.rare = 8;
         }
+		public override void AddRecipes()
+		{
+			Recipe recipe = Recipe.Create(ItemID.Present, 10);
+			recipe.AddIngredient(this);
+			recipe.AddTile(TileID.Loom);
+			recipe.Register();
+			Recipe recipe2 = Recipe.Create(ItemID.GoodieBag, 15);
+			recipe2.AddIngredient(ItemID.SpookyWood, 2);
+			recipe2.AddIngredient(this);
+			recipe2.AddTile(TileID.WorkBenches);
+			recipe2.Register();
+		}
 	}
 }

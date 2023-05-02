@@ -116,7 +116,10 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
         {
             if (NPC.life <= 0)
             {
-
+                for (int indexd = 0; indexd < 10; indexd++)
+                {
+                    Dust.NewDust(new Vector2(NPC.position.X, NPC.position.Y), NPC.width, NPC.height, 5, NPC.velocity.X, NPC.velocity.Y, 0, default(Color), 0.75f);
+                }
                 Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, Mod.Find<ModGore>("KelbiHead").Type, 1f);
                 for (int index = 0; index < 4; index++)
                 {
