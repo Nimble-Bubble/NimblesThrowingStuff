@@ -15,6 +15,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 			DisplayName.SetDefault("Flame-Blessed Broadsword");
+			Tooltip.SetDefault("Fires a flaming sword beam");
         }
         public override void SetDefaults() {
 			Item.damage = 32;

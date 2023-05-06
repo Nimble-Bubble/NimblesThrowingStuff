@@ -34,6 +34,13 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
 		}
+		public override void MeleeEffects(Player player, Rectangle hitbox)
+		{
+			if (Main.rand.NextBool(7))
+			{
+				int dust = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, 226);
+			}
+		}
 		public override void OnHitNPC(Player player, NPC target, int damage, float knockBack, bool crit)
         {
 			for (int f = 0; f < 3; f++)

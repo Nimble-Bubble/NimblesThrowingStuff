@@ -16,7 +16,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 			Tooltip.SetDefault("Sting like a bee. Fly...like a bee."
 				+"\nRight click to launch yourself in the direction of the lance."
-				+"\nHits may poison enemies.");
+				+"\nHits may poison enemies, especially when launched.");
         }
         public override void SetDefaults() {
 			Item.damage = 22;
@@ -33,15 +33,15 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
             Item.DamageType = DamageClass.Melee;
 			Item.channel = true;
             Item.shoot = ModContent.ProjectileType<MahoganyStingerProj>();
-            Item.shootSpeed = 9f;
+            Item.shootSpeed = 10f;
 			Item.UseSound = SoundID.Item1;
 		}
 		public override void AddRecipes()
 		{
 			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.RichMahogany, 12);
-			recipe.AddIngredient(ItemID.JungleSpores, 12);
-			recipe.AddIngredient(ItemID.Stinger, 3);
+			recipe.AddIngredient(ItemID.Stinger, 8);
+			recipe.AddIngredient(ItemID.JungleSpores, 8);
 			recipe.AddIngredient(ModContent.ItemType<RobustTusk>());
 			recipe.AddTile(TileID.Anvils);
 			recipe.Register();

@@ -6,6 +6,7 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.Enums;
+using Terraria.Audio;
 using NimblesThrowingStuff.Dusts;
 
 namespace NimblesThrowingStuff.Projectiles.Melee
@@ -23,21 +24,18 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             Projectile.usesLocalNPCImmunity = true;
             Projectile.localNPCHitCooldown = 10;
             Projectile.tileCollide = false;
-            Projectile.penetrate = 2;
+            Projectile.penetrate = 1;
             Projectile.friendly = true;
             Projectile.DamageType = DamageClass.Melee;
             Projectile.light = 0.5f;
             Projectile.alpha = 0;
             Projectile.aiStyle = 1;
-            Projectile.timeLeft = 30;
+            Projectile.timeLeft = 60;
             Projectile.extraUpdates = 1;
         }
         public override void AI() 
         {
-            if (Main.rand.NextBool(10))
-            {
-                Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, ModContent.DustType<ProcellariteStarDust>(), Projectile.velocity.RotatedByRandom(MathHelper.ToRadians(10)).X * 0.1f, Projectile.velocity.RotatedByRandom(MathHelper.ToRadians(10)).Y * 0.1f, 0, new Color(), 0.75f);
-            }
+                Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, ModContent.DustType<ProcellariteStarDust>(), Projectile.velocity.RotatedByRandom(MathHelper.ToRadians(10)).X * 0.1f, Projectile.velocity.RotatedByRandom(MathHelper.ToRadians(10)).Y * 0.1f, 0, new Color(), 1f); 
         }
         public override void PostDraw(Color lightColor)
 		{
@@ -53,9 +51,10 @@ namespace NimblesThrowingStuff.Projectiles.Melee
         }
         public override void Kill(int timeLeft)
         {
-            for (int furbroaddust = 0; furbroaddust < 10; furbroaddust++)
+            SoundEngine.PlaySound(SoundID.Item74);
+            for (int furbroaddust = 0; furbroaddust < 25; furbroaddust++)
             {
-                Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, ModContent.DustType<ProcellariteStarDust>(), Projectile.velocity.RotatedByRandom(MathHelper.ToRadians(10)).X * 0.1f, Projectile.velocity.RotatedByRandom(MathHelper.ToRadians(10)).Y * 0.1f, 0, new Color(), 0.75f);
+                Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, ModContent.DustType<ProcellariteStarDust>(), Projectile.velocity.RotatedByRandom(MathHelper.ToRadians(30)).X * 0.1f, Projectile.velocity.RotatedByRandom(MathHelper.ToRadians(30)).Y * 0.1f, 0, new Color(), 1.5f);
             }
             int smallprobeam1 = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.velocity, ModContent.ProjectileType<ProcellariteSmallSwordBeam>(), Projectile.damage / 2, Projectile.knockBack, Projectile.owner);
             int smallprobeam2 = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.velocity.RotatedBy(MathHelper.ToRadians(10)), ModContent.ProjectileType<ProcellariteSmallSwordBeam>(), Projectile.damage / 2, Projectile.knockBack, Projectile.owner);

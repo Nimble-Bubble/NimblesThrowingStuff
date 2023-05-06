@@ -13,6 +13,8 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 	public class MahoganyStingerProj: ModProjectile
     {
         private int mahoganyStingerPower;
+        private bool hasLaunched;
+        private bool autoPoison;
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Mahogany Stinger");
@@ -31,12 +33,18 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             Projectile.timeLeft = 18000;
             Projectile.extraUpdates = 0;
             Projectile.scale = 1f;
+            hasLaunched = false;
+            autoPoison = false;
         }
         public override void ModifyHitNPC(NPC target, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)
         {
-            if (Main.rand.NextBool(5))
+            if (autoPoison)
             {
-                target.AddBuff(BuffID.Poisoned, 300);
+                target.AddBuff(BuffID.Poisoned, 480);
+            }
+            else if (Main.rand.NextBool(5))
+            {
+                target.AddBuff(BuffID.Poisoned, 240);
             }
         }
         public float movementFactor
@@ -91,17 +99,23 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             if (mahoganyStingerPower < 0)
             {
                 mahoganyStingerPower = 0;
+                autoPoison = false;
             }
-            if (mahoganyStingerPower >= 40)
+            if (mahoganyStingerPower >= 20)
             {
+                autoPoison = true;
                 Main.player[Projectile.owner].immune = true;
             }
             if (Main.mouseRight)
             {
-                if (mahoganyStingerPower == 0)
+                if (mahoganyStingerPower == 0 && !hasLaunched)
                 {
-                    Main.player[Projectile.owner].velocity.X += Projectile.velocity.X * 1f;
-                    Main.player[Projectile.owner].velocity.Y += Projectile.velocity.Y * 1f;
+                    for (int sdu = 0; sdu < 20; sdu++)
+                    {
+                        int doSporeDust = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, 40, Projectile.velocity.RotatedByRandom(MathHelper.ToDegrees(60)).X * -0.5f, Projectile.velocity.RotatedByRandom(MathHelper.ToDegrees(60)).Y * -0.5f, 0, default(Color), 1.25f);
+                    }
+                    hasLaunched = true;
+                    Main.player[Projectile.owner].velocity = Projectile.velocity;
                     SoundEngine.PlaySound(SoundID.Item60);
                     mahoganyStingerPower += 60;
                 }

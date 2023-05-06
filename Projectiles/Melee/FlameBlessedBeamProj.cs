@@ -17,8 +17,8 @@ namespace NimblesThrowingStuff.Projectiles.Melee
         }
         public override void SetDefaults()
         {
-            Projectile.width = 44;
-            Projectile.height = 44;
+            Projectile.width = 60;
+            Projectile.height = 60;
             Projectile.usesLocalNPCImmunity = true;
             Projectile.localNPCHitCooldown = 10;
             Projectile.tileCollide = false;
@@ -28,6 +28,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             Projectile.light = 0.5f;
             Projectile.aiStyle = 27;
             Projectile.timeLeft = 600;
+            Projectile.scale = 1.3f;
         }
         public override void AI()
         {
