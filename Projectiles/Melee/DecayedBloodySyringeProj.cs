@@ -42,6 +42,12 @@ namespace NimblesThrowingStuff.Projectiles.Melee
         public override void AI()
         {
             Player projOwner = Main.player[Projectile.owner];
+            if (projOwner.GetModPlayer<NimblesPlayer>().currentShells > 3)
+            {
+                Gore.NewGore(Projectile.GetSource_FromThis(), Projectile.position, Projectile.velocity, Mod.Find<ModGore>("ShellFlying").Type, 1f);
+                SoundEngine.PlaySound(SoundID.Item42);
+                projOwner.GetModPlayer<NimblesPlayer>().currentShells = 3;
+            }
 
             Vector2 ownerMountedCenter = projOwner.RotatedRelativePoint(projOwner.MountedCenter, true);
             Projectile.direction = projOwner.direction;

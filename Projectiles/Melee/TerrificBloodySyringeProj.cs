@@ -10,7 +10,7 @@ using Terraria.Enums;
 
 namespace NimblesThrowingStuff.Projectiles.Melee
 {
-	public class CursedDemonLanceProj: ModProjectile
+	public class TerrificBloodySyringeProj: ModProjectile
     {
         private bool hasShelled;
         public float movementFactor
@@ -20,12 +20,12 @@ namespace NimblesThrowingStuff.Projectiles.Melee
         }
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Cursed Demon Lance");
+            DisplayName.SetDefault("Decayed Bloody Syringe");
         }
         public override void SetDefaults()
         {
-            Projectile.width = 32;
-            Projectile.height = 32;
+            Projectile.width = 40;
+            Projectile.height = 40;
             Projectile.usesLocalNPCImmunity = true;
             Projectile.localNPCHitCooldown = 10;
             Projectile.tileCollide = false;
@@ -35,18 +35,18 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             Projectile.aiStyle = 19;
             Projectile.timeLeft = 18000;
             Projectile.extraUpdates = 0;
-            Projectile.scale = 1.1f;
+            Projectile.scale = 1.25f;
             Projectile.ownerHitCheck = true;
             hasShelled = false;
         }
         public override void AI()
         {
             Player projOwner = Main.player[Projectile.owner];
-            if (projOwner.GetModPlayer<NimblesPlayer>().currentShells > 3)
+            if (projOwner.GetModPlayer<NimblesPlayer>().currentShells > 5)
             {
                 Gore.NewGore(Projectile.GetSource_FromThis(), Projectile.position, Projectile.velocity, Mod.Find<ModGore>("ShellFlying").Type, 1f);
                 SoundEngine.PlaySound(SoundID.Item42);
-                projOwner.GetModPlayer<NimblesPlayer>().currentShells = 3;
+                projOwner.GetModPlayer<NimblesPlayer>().currentShells = 5;
             }
 
             Vector2 ownerMountedCenter = projOwner.RotatedRelativePoint(projOwner.MountedCenter, true);
@@ -66,7 +66,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                 }
                 if (projOwner.itemAnimation > projOwner.itemAnimationMax / 2)
                 {
-                    float bole = 0.35f;
+                    float bole = 0.4f;
                     movementFactor += bole;
                 }
             }
@@ -110,14 +110,14 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                 {
                     if (projOwner.GetModPlayer<NimblesPlayer>().currentShells > 0)
                     {
-                        var doTheFireThing = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.velocity * new Vector2(1.5f, 1.5f), ProjectileID.CursedFlameFriendly, Projectile.damage / 2, 1.5f, Projectile.owner);
-                        Main.projectile[doTheFireThing].DamageType = DamageClass.Melee;
+                        var doTheIchorThing = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.velocity, ProjectileID.GoldenShowerFriendly, Projectile.damage, 1.5f, Projectile.owner);
+                        Main.projectile[doTheIchorThing].DamageType = DamageClass.Melee;
                         SoundEngine.PlaySound(SoundID.Item38);
                         projOwner.velocity.X -= Projectile.velocity.X / 3;
                         projOwner.velocity.Y -= Projectile.velocity.Y / 3;
                         for (int f = 0; f < 20; f++)
                         {
-                            int fireIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 75, 0f, 0f, 100, default(Color), 3f);
+                            int fireIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 170, 0f, 0f, 100, default(Color), 1.5f);
                             Main.dust[fireIndex].velocity *= 6f;
                         }
                         for (int s = 0; s < 5; s++)
@@ -140,10 +140,10 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                     }
                 }
             }
-            Lighting.AddLight(Projectile.Center, Color.Purple.ToVector3() * 0.75f);
+            Lighting.AddLight(Projectile.Center, Color.Red.ToVector3() * 0.75f);
             if (Main.rand.NextBool(3))
             {
-                Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 75, Projectile.velocity.X * 0.375f, Projectile.velocity.Y * 0.375f, 0, default(Color), 1.5f);
+                Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 170, Projectile.velocity.X * 0.375f, Projectile.velocity.Y * 0.375f, 0, default(Color), 0.75f);
             }
         }
     }
