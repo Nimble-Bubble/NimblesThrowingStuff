@@ -12,7 +12,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 {
 	public class CursedDemonLanceProj: ModProjectile
     {
-        private bool hasBlooded;
+        private bool hasShelled;
         public float movementFactor
         {
             get => Projectile.ai[0];
@@ -37,7 +37,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             Projectile.extraUpdates = 0;
             Projectile.scale = 1.1f;
             Projectile.ownerHitCheck = true;
-            hasBlooded = false;
+            hasShelled = false;
         }
         public override void AI()
         {
@@ -60,7 +60,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                 }
                 if (projOwner.itemAnimation > projOwner.itemAnimationMax / 2)
                 {
-                    float bole = 0.3f;
+                    float bole = 0.35f;
                     movementFactor += bole;
                 }
             }
@@ -82,12 +82,62 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             {
                 Projectile.Kill();
             }
-            if (Main.mouseRight && !hasBlooded)
+            if (Main.mouseRight && !hasShelled)
             {
-                    var doTheFireThing = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.velocity * new Vector2(2, 2), ProjectileID.CursedFlameFriendly, Projectile.damage / 2, 1.5f, Projectile.owner);
-                Main.projectile[doTheFireThing].DamageType = DamageClass.Melee;
-                SoundEngine.PlaySound(SoundID.Item20);
-                    hasBlooded = true;
+                if (NimblesThrowingStuff.MIGuardKey.Current)
+                {
+                    Projectile.damage = 0;
+                    projOwner.GetModPlayer<NimblesPlayer>().currentShells += 5;
+                    if (projOwner.GetModPlayer<NimblesPlayer>().currentShells <= 0)
+                    {
+                        projOwner.GetModPlayer<NimblesPlayer>().currentShells = 1;
+                    }
+                    for (int f = 0; f < 5; f++)
+                    {
+                        int smokeIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 31, 0f, 0f, 100, default(Color), 2f);
+                        Main.dust[smokeIndex].velocity *= 1.4f;
+                    }
+                    SoundEngine.PlaySound(new SoundStyle("NimblesThrowingStuff/Sounds/Item/GunlanceReload"));
+                    hasShelled = true;
+                }
+                else
+                {
+                    if (projOwner.GetModPlayer<NimblesPlayer>().currentShells > 0)
+                    {
+                        var doTheFireThing = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.velocity * new Vector2(1.5f, 1.5f), ProjectileID.CursedFlameFriendly, Projectile.damage / 2, 1.5f, Projectile.owner);
+                        Main.projectile[doTheFireThing].DamageType = DamageClass.Melee;
+                        SoundEngine.PlaySound(SoundID.Item38);
+                        projOwner.velocity.X -= Projectile.velocity.X / 3;
+                        projOwner.velocity.Y -= Projectile.velocity.Y / 3;
+                        for (int f = 0; f < 20; f++)
+                        {
+                            int fireIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 75, 0f, 0f, 100, default(Color), 3f);
+                            Main.dust[fireIndex].velocity *= 6f;
+                        }
+                        for (int s = 0; s < 5; s++)
+                        {
+                            int smokeIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 31, 0f, 0f, 100, default(Color), 2f);
+                            Main.dust[smokeIndex].velocity *= 2f;
+                        }
+                        hasShelled = true;
+                        projOwner.GetModPlayer<NimblesPlayer>().currentShells -= 1;
+                    }
+                    else
+                    {
+                        SoundEngine.PlaySound(SoundID.Item16);
+                        hasShelled = true;
+                    }
+                    for (int s = 0; s < 5; s++)
+                    {
+                        int smokeIndex2 = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 31, 0f, 0f, 100, default(Color), 2f);
+                        Main.dust[smokeIndex2].velocity *= 1.4f;
+                    }
+                }
+            }
+            Lighting.AddLight(Projectile.Center, Color.Purple.ToVector3() * 0.75f);
+            if (Main.rand.NextBool(3))
+            {
+                Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 75, Projectile.velocity.X * 0.375f, Projectile.velocity.Y * 0.375f, 0, default(Color), 1.5f);
             }
         }
     }

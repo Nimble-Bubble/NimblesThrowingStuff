@@ -88,6 +88,11 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                     SoundEngine.PlaySound(SoundID.Item21);
                     hasBlooded = true;
             } */
+            Lighting.AddLight(Projectile.Center, Color.Red.ToVector3() * 0.5f);
+            if (Main.rand.NextBool(4))
+            {
+                Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 10, Projectile.velocity.X * 0.25f, Projectile.velocity.Y * 0.25f, 0, Color.Red, 0.75f);
+            }
         }
     }
 }

@@ -114,13 +114,18 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                     if (projOwner.GetModPlayer<NimblesPlayer>().currentShells > 0)
                     {
                         Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.velocity, ModContent.ProjectileType<PecoTeepeeShell>(), Projectile.damage / 3, 5f, Projectile.owner);
-                        SoundEngine.PlaySound(SoundID.Item38);
+                        SoundEngine.PlaySound(new SoundStyle("NimblesThrowingStuff/Sounds/Item/GunlanceShellPeco"));
                         projOwner.velocity.X -= Projectile.velocity.X / 5;
                         projOwner.velocity.Y -= Projectile.velocity.Y / 5;
                         for (int f = 0; f < 20; f++)
                         {
                             int fireIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 6, 0f, 0f, 100, default(Color), 3f);
-                            Main.dust[fireIndex].velocity *= 8f;
+                            Main.dust[fireIndex].velocity *= 6f;
+                        }
+                        for (int s = 0; s < 5; s++)
+                        {
+                            int smokeIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 31, 0f, 0f, 100, default(Color), 2f);
+                            Main.dust[smokeIndex].velocity *= 2f;
                         }
                         hasShelled = true;
                         projOwner.GetModPlayer<NimblesPlayer>().currentShells -= 1;
@@ -132,8 +137,8 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                     }
                     for (int s = 0; s < 5; s++)
                     {
-                        int smokeIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 31, 0f, 0f, 100, default(Color), 2f);
-                        Main.dust[smokeIndex].velocity *= 1.4f;
+                        int smokeIndex2 = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 31, 0f, 0f, 100, default(Color), 2f);
+                        Main.dust[smokeIndex2].velocity *= 1.4f;
                     }
                 }
             }
@@ -142,6 +147,10 @@ namespace NimblesThrowingStuff.Projectiles.Melee
         {
             if (crit)
             {
+                for (int fi = 0; fi < 10; fi++)
+                {
+                    int fireIndex2 = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 6, 0f, 0f, 100, default(Color), 3f);
+                }
                 target.AddBuff(BuffID.OnFire, 120);
             }
         }

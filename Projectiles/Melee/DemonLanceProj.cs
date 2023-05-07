@@ -79,6 +79,11 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             {
                 Projectile.Kill();
             }
+            Lighting.AddLight(Projectile.Center, Color.Purple.ToVector3() * 0.5f);
+            if (Main.rand.NextBool(4))
+            {
+                Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 10, Projectile.velocity.X * 0.25f, Projectile.velocity.Y * 0.25f, 0, Color.Purple, 0.75f);
+            }
         }
     }
 }

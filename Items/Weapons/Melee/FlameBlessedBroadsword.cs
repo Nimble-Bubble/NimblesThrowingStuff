@@ -3,6 +3,8 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using Terraria.Audio;
 using System;
 using NimblesThrowingStuff.Projectiles.Melee;
 using Terraria.GameContent.Creative;
@@ -38,6 +40,24 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			if (Main.rand.NextBool(3)) 
             {
 				int dust = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, 6);
+			}
+		}
+		public override void OnHitNPC(Player player, NPC target, int damage, float knockBack, bool crit)
+		{
+			for (int f = 0; f < 3; f++)
+			{
+				int fireIndex = Dust.NewDust(new Vector2(target.position.X, target.position.Y), target.width, target.height, 6, 0f, 0f, 100, default(Color), 2f);
+				Main.dust[fireIndex].velocity *= 4f;
+			}
+			if (Main.rand.NextBool(3) && !target.buffImmune[BuffID.OnFire])
+			{
+				for (int f = 0; f < 9; f++)
+				{
+					int fireIndex2 = Dust.NewDust(new Vector2(target.position.X, target.position.Y), target.width, target.height, 6, 0f, 0f, 100, default(Color), 3f);
+					Main.dust[fireIndex2].velocity *= 6f;
+				}
+				SoundEngine.PlaySound(SoundID.Item88);
+				target.AddBuff(BuffID.OnFire, 240);
 			}
 		}
 		public override void AddRecipes()
