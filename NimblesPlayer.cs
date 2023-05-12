@@ -13,6 +13,7 @@ using Terraria.DataStructures;
 using Microsoft.Xna.Framework;
 using NimblesThrowingStuff.Buffs;
 using NimblesThrowingStuff.Items.Materials;
+using NimblesThrowingStuff.Items.Consumables;
 using Terraria.Utilities;
 using Terraria.GameInput;
 
@@ -159,7 +160,6 @@ namespace NimblesThrowingStuff
                             Mod.Find<ModProjectile>("SantankSpikeProj").Type, 100, 5f, Main.myPlayer, 0.0f, (float) Main.rand.Next(0, 45)); 
          }
         }
-        
         public override float UseTimeMultiplier(Item item)
         {
             float speed = base.UseTimeMultiplier(item);

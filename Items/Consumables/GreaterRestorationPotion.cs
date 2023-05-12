@@ -20,7 +20,9 @@ namespace NimblesThrowingStuff.Items.Consumables
 		public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 30;
-			Tooltip.SetDefault("Reduced potion cooldown");
+			Tooltip.SetDefault("Reduced potion cooldown"
+				+"\nDoesn't work that well with quick keys at the moment" +
+				"\nUse it manually if you have to");
 		}
 
 		public override void SetDefaults()
@@ -30,16 +32,14 @@ namespace NimblesThrowingStuff.Items.Consumables
 			Item.maxStack = 9999;
 			Item.value = Item.buyPrice(0, 0, 60, 0);
 			Item.rare = 5;
-			Item.useStyle = 1;
+			Item.useStyle = 9;
 			Item.useTime = 17;
 			Item.useAnimation = 17;
 			Item.useTurn = true;
 			Item.autoReuse = false;
 			Item.consumable = true;
-			Item.useStyle = 2;
 			Item.UseSound = SoundID.Item3;
 			Item.buffType = BuffID.PotionSickness;
-			Item.potion = true;
 			Item.healMana = 270;
 			Item.healLife = 135;
 		}
@@ -47,7 +47,7 @@ namespace NimblesThrowingStuff.Items.Consumables
 		{
 			return !player.HasBuff(BuffID.PotionSickness);
 		}
-		public override bool? UseItem(Player player)
+		public override void OnConsumeItem(Player player)
 		{
 			if (player.pStone)
 			{
@@ -57,8 +57,6 @@ namespace NimblesThrowingStuff.Items.Consumables
 			{
 				player.AddBuff(Item.buffType, 2700);
 			}
-
-			return true;
 		}
 		public override void AddRecipes()
 		{

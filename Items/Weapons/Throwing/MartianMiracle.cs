@@ -10,16 +10,19 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 		public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+			Tooltip.SetDefault("A miracle of Martian technology, this remote dagger can tear throught the night sky"
+				+"\nUpon hitting an enemy, there is a chance for a sword beam to appear"
+				+"\nHold right click to ignore tile collision");
 		}
 		public override void SetDefaults() 
 		{
-			Item.damage = 52;
+			Item.damage = 78;
 			Item.DamageType = DamageClass.Throwing;
 			Item.width = 24;
 			Item.height = 24;
 			Item.useTime = 15;
 			Item.useAnimation = 15;
-			Item.useStyle = 1;
+			Item.useStyle = 5;
 			Item.knockBack = 8f;
             Item.noMelee = true;
             Item.noUseGraphic = true;
