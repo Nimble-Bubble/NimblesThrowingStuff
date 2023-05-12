@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 		public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("Powerful enough to pierce steel.");
+			Tooltip.SetDefault("Made from incredibly powerful bone, this lance is powerful enough to pierce steel.");
 		}
 		public override void SetDefaults()
 		{
@@ -42,7 +42,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 		{
 			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ModContent.ItemType<TemblorIllboros>(), 1);
-			recipe.AddIngredient(ItemID.BoneFeather, 1);
+			recipe.AddIngredient(ModContent.ItemType<GrandBone>(), 8);
 			recipe.AddIngredient(ItemID.LunarBar, 12);
 			recipe.AddTile(TileID.LunarCraftingStation);
 			recipe.Register();
