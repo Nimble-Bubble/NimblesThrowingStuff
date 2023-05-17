@@ -12,7 +12,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 {
 	public class BlueTailProj: ModProjectile
     {
-        private int redTailPower;
+        private bool flamesThrown;
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Blue Tail");
@@ -31,12 +31,25 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             Projectile.timeLeft = 40;
             Projectile.extraUpdates = 0;
             Projectile.scale = 1.2f;
+            flamesThrown = false;
         }
         public override void ModifyHitNPC(NPC target, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)
         {
-            if (Main.rand.NextBool(4))
+            for (int f = 0; f < 3; f++)
             {
-                target.AddBuff(BuffID.Frostburn2, 300);
+                int fireIndex = Dust.NewDust(new Vector2(target.position.X, target.position.Y), target.width, target.height, 59, 0f, 0f, 100, default(Color), 2f);
+                Main.dust[fireIndex].velocity *= 6f;
+            }
+            if (Main.rand.NextBool(4) && !target.buffImmune[BuffID.Frostburn2])
+            {
+                for (int f = 0; f < 12; f++)
+                {
+                    int fireIndex2 = Dust.NewDust(new Vector2(target.position.X, target.position.Y), target.width, target.height, 59, 0f, 0f, 100, default(Color), 3f);
+                    Main.dust[fireIndex2].velocity *= 8f;   
+                }
+                flamesThrown = false;
+                SoundEngine.PlaySound(SoundID.Item88);
+                target.AddBuff(BuffID.Frostburn2, 360);
             }
         }
         public float movementFactor
@@ -47,7 +60,6 @@ namespace NimblesThrowingStuff.Projectiles.Melee
         public override void AI()
         {
             Player projOwner = Main.player[Projectile.owner];
-
             Vector2 ownerMountedCenter = projOwner.RotatedRelativePoint(projOwner.MountedCenter, true);
             Projectile.direction = projOwner.direction;
             projOwner.heldProj = Projectile.whoAmI;
@@ -55,7 +67,6 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             Projectile.timeLeft = projOwner.itemAnimation;
             Projectile.position.X = ownerMountedCenter.X - (float)(Projectile.width / 2);
             Projectile.position.Y = ownerMountedCenter.Y - (float)(Projectile.height / 2);
-
             if (!projOwner.frozen)
             {
                 if (movementFactor == 0f)
@@ -69,14 +80,12 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                     movementFactor += bole;
                 }
             }
-
             Projectile.position += Projectile.velocity * movementFactor;
 
             if (projOwner.itemAnimation == 0)
             {
                 Projectile.Kill();
             }
-
             Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.ToRadians(135f);
 
             if (Projectile.spriteDirection == -1)
@@ -87,15 +96,15 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             {
                 Projectile.Kill();
             }
-            --redTailPower;
-            if (redTailPower < 0)
-            {
-                redTailPower = 0;
-            }
             if (Main.mouseRight)
             {
-                if (redTailPower == 0)
+                if (!flamesThrown)
                 {
+                    for (int f = 0; f < 12; f++)
+                    {
+                        int fireIndex3 = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 59, 0f, 0f, 100, default(Color), 2f);
+                        Main.dust[fireIndex3].velocity *= 6f;
+                    }
                     int throwFlames = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, Projectile.velocity.X / 3, Projectile.velocity.Y / 3, Mod.Find<ModProjectile>("BlueTailFlames").Type, Projectile.damage / 2, Projectile.knockBack / 2, Projectile.owner);
                    SoundEngine.PlaySound(SoundID.Item34);
                     int throwFlames2 = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, Projectile.velocity.X / 5, Projectile.velocity.Y / 5, Mod.Find<ModProjectile>("BlueTailFlames").Type, Projectile.damage / 2, Projectile.knockBack / 2, Projectile.owner);
@@ -104,11 +113,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                     int throwFlames3 = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, Projectile.velocity.X / 5, Projectile.velocity.Y / 5, Mod.Find<ModProjectile>("BlueTailFlames").Type, Projectile.damage / 2, Projectile.knockBack / 2, Projectile.owner);
                     SoundEngine.PlaySound(SoundID.Item34);
                     Main.projectile[throwFlames3].velocity.RotatedBy(MathHelper.ToRadians(-5));
-                    redTailPower += 60;
-                }
-                else
-                {
-                    //Main.PlaySound(SoundID.Item16);
+                    flamesThrown = true;
                 }
             }
         }

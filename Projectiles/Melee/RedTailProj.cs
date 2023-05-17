@@ -12,7 +12,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 {
 	public class RedTailProj: ModProjectile
     {
-        private int redTailPower;
+        private bool flamesThrown;
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Red Tail");
@@ -31,6 +31,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             Projectile.timeLeft = 40;
             Projectile.extraUpdates = 0;
             Projectile.scale = 1.2f;
+            flamesThrown = false;
         }
         public override void ModifyHitNPC(NPC target, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)
         {
@@ -66,7 +67,6 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             Projectile.timeLeft = projOwner.itemAnimation;
             Projectile.position.X = ownerMountedCenter.X - (float)(Projectile.width / 2);
             Projectile.position.Y = ownerMountedCenter.Y - (float)(Projectile.height / 2);
-
             if (!projOwner.frozen)
             {
                 if (movementFactor == 0f)
@@ -80,16 +80,12 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                     movementFactor += bole;
                 }
             }
-
             Projectile.position += Projectile.velocity * movementFactor;
-
             if (projOwner.itemAnimation == 0)
             {
                 Projectile.Kill();
             }
-
             Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.ToRadians(135f);
-
             if (Projectile.spriteDirection == -1)
             {
                 Projectile.rotation -= MathHelper.ToRadians(90f);
@@ -98,23 +94,19 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             {
                 Projectile.Kill();
             }
-            --redTailPower;
-            if (redTailPower < 0)
-            {
-                redTailPower = 0;
-            }
             if (Main.mouseRight)
             {
-                if (redTailPower == 0)
+                if (!flamesThrown)
                 {
                     int throwFlames = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, Projectile.velocity.X / 3, Projectile.velocity.Y / 3, ProjectileID.Flames, Projectile.damage / 2, Projectile.knockBack / 2, Projectile.owner);
                     Main.projectile[throwFlames].DamageType = DamageClass.Melee;
                    SoundEngine.PlaySound(SoundID.Item34);
-                    redTailPower += 60;
-                }
-                else
-                {
-                    //Main.PlaySound(SoundID.Item16);
+                    for (int f = 0; f < 12; f++)
+                    {
+                        int fireIndex3 = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 6, 0f, 0f, 100, default(Color), 2f);
+                        Main.dust[fireIndex3].velocity *= 6f;
+                    }
+                    flamesThrown = true;
                 }
             }
         }

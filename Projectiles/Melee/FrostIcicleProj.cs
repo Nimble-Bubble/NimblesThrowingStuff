@@ -47,9 +47,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             Projectile.timeLeft = projOwner.itemAnimation;
             Projectile.position.X = ownerMountedCenter.X - (float)(Projectile.width / 2);
             Projectile.position.Y = ownerMountedCenter.Y - (float)(Projectile.height / 2);
-            Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 137,
-                            Projectile.velocity.X * 0.1f, Projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
-
+            
             if (!projOwner.frozen)
             {
                 if (movementFactor == 0f)
@@ -59,8 +57,15 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                 }
                 if (projOwner.itemAnimation > projOwner.itemAnimationMax / 2)
                 {
+                    Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 137, Projectile.velocity.X * 0.1f, Projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
+
                     float bole = 0.3f;
                     movementFactor += bole;
+                }
+                else
+                {
+                    int staticdust = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 137, Projectile.velocity.X * 0.05f, Projectile.velocity.Y * 0.05f, 0, new Color(), 0.75f);
+                    Main.dust[staticdust].velocity = Main.dust[staticdust].velocity.RotatedByRandom(MathHelper.ToDegrees(360));
                 }
             }
             else
