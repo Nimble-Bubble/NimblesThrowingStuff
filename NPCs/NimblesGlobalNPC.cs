@@ -195,10 +195,6 @@ namespace NimblesThrowingStuff.NPCs
 			{
 				npcLoot.Add(ItemDropRule.Common(ItemType<BatFlesh>(), 3, 1, 3));
 			}
-			if (npc.type == 43)
-			{
-				npcLoot.Add(ItemDropRule.Common(ItemType<HealthEater>(), 15));
-			}
 			if (npc.type == NPCID.BigMimicHallow)
 			{
 				npcLoot.Add(ItemDropRule.Common(ItemType<SacredWristband>(), 4));

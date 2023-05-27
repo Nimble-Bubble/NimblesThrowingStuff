@@ -12,6 +12,7 @@ using Terraria.ModLoader.IO;
 using Terraria.DataStructures;
 using Microsoft.Xna.Framework;
 using NimblesThrowingStuff.Buffs;
+using NimblesThrowingStuff.Dusts;
 using NimblesThrowingStuff.Items.Materials;
 using NimblesThrowingStuff.Items.Consumables;
 using Terraria.Utilities;
@@ -212,10 +213,9 @@ namespace NimblesThrowingStuff
           switch (whichShield)
                 {
                     case 1:
-                        Player.statDefense += 10;
-                        Player.statDefense += guardBonus;
+                        Player.statDefense += 10 + guardBonus;
                         Player.moveSpeed /= 2;
-                        if (Main.rand.NextBool(6))
+                        if (Main.rand.NextBool(3))
                         {
                             Dust.NewDust(Player.position, Player.width, Player.height, 43, Player.velocity.X + Main.rand.Next(-3, 4), Player.velocity.Y + Main.rand.Next(-3, 4), 0, new Color (255, 255, 255));
                         }
@@ -223,16 +223,26 @@ namespace NimblesThrowingStuff
                     case 2:
                         Player.immune = true;
                         Player.invis = true;
-                        Player.GetDamage(DamageClass.Generic) /= 10;
+                        Player.statDefense += guardBonus;
+                        Player.GetDamage(DamageClass.Generic) /= 4;
+                        universalSpeed = 0.25f;
+                        if (Main.rand.NextBool(6))
+                        {
+                            Dust.NewDust(Player.position, Player.width, Player.height, 43, Player.velocity.X + Main.rand.Next(-3, 4), Player.velocity.Y + Main.rand.Next(-3, 4), 0, new Color(255, 255, 255));
+                        }
                         break;
                     case 3:
-                        Player.statDefense += 50;
-                        Player.statDefense += guardBonus;
+                        Player.statDefense += 50 + guardBonus;
+                        if (Main.rand.NextBool(6))
+                        {
+                            Dust.NewDust(Player.position, Player.width, Player.height, 43, Player.velocity.X + Main.rand.Next(-3, 4), Player.velocity.Y + Main.rand.Next(-3, 4), ModContent.DustType<ProcellariteStarDust>(), new Color(255, 255, 255));
+                        }
                         break;
                     case 4:
+                        Player.statDefense += guardBonus;
                         Player.thorns = 1f;
                         Lighting.AddLight(Player.Center, Color.Lime.ToVector3() * 0.5f);
-                        if (Main.rand.NextBool(20))
+                        if (Main.rand.NextBool(6))
                         {
                             Dust.NewDust(Player.position, Player.width, Player.height, 44, Player.velocity.RotatedByRandom(MathHelper.ToDegrees(120)).X * 0.5f, Player.velocity.RotatedByRandom(MathHelper.ToDegrees(120)).Y * 0.5f, 0, default(Color), 0.5f);
                         }

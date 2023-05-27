@@ -14,14 +14,15 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 		public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("Its point is still rather small, but can you really say it's weak anymore? \nCauses enemies to bleed upon impact.");
+			Tooltip.SetDefault("A mystical spear first forged by the Elder of the Forest."
+							 + "\nCauses enemies to bleed upon impact.");
 		}
 		public override void SetDefaults()
 		{
 			Item.damage = 41;
 			Item.useStyle = ItemUseStyleID.Shoot;
-			Item.useAnimation = 19;
-			Item.useTime = 19;
+			Item.useAnimation = 15;
+			Item.useTime = 15;
 			Item.knockBack = 9f;
 			Item.width = 20;
 			Item.height = 20;
@@ -42,8 +43,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ModContent.ItemType<Estoc>(), 1);
 			recipe.AddRecipeGroup(nameof(ItemID.AdamantiteBar), 12);
-			recipe.AddIngredient(ItemID.UnicornHorn, 3);
-			recipe.AddIngredient(ItemID.CrystalShard, 12);
+			recipe.AddIngredient(ItemID.UnicornHorn, 6);
+			recipe.AddIngredient(ItemID.CrystalShard, 15);
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.Register();
 		}

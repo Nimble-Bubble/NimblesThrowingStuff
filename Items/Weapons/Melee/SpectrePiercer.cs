@@ -16,15 +16,16 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 			Tooltip.SetDefault("This spectral lance is mysterious, yet strong all the same."
+				+"\nCuriously, strikes seem not to push enemies, as if the lance was not there at all."
 				+"\nCritical strikes make you invincible and invisible for a short period of time");
 		}
 		public override void SetDefaults()
 		{
-			Item.damage = 70;
+			Item.damage = 75;
 			Item.useStyle = ItemUseStyleID.Shoot;
-			Item.useAnimation = 21;
-			Item.useTime = 21;
-			Item.knockBack = 7f;
+			Item.useAnimation = 18;
+			Item.useTime = 18;
+			Item.knockBack = 0f;
 			Item.width = 76;
 			Item.height = 76;
 			Item.noUseGraphic = true;
@@ -37,7 +38,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			Item.shootSpeed = 14f;
 			Item.autoReuse = true;
 			Item.UseSound = SoundID.Item1;
-			Item.scale = 1.14f;
 		}
 		public override void AddRecipes()
 		{
