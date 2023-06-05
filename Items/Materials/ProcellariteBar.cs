@@ -20,7 +20,7 @@ namespace NimblesThrowingStuff.Items.Materials
 			Item.useTime = 6;
 			Item.useAnimation = 12;
 			Item.useStyle = 1;
-			Item.value = Item.buyPrice(0, 10, 0, 0);
+			Item.value = Item.buyPrice(0, 17, 50, 0);
 			Item.rare = 11;
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;

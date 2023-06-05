@@ -126,6 +126,13 @@ namespace NimblesThrowingStuff.NPCs.Town
                     return "A bit of natural cooling never hurt.";
                 }
             }
+            if (Main.LocalPlayer.ZoneDesert)
+            {
+                if (Main.rand.NextBool(6))
+                {
+                    return "Have you heard of liquid nitrogen cooling? I think it would grant me some relief from this heat.";
+                }
+            }
             if (Main.LocalPlayer.ZoneJungle)
             {
                 if (Main.rand.NextBool(10))
@@ -144,7 +151,7 @@ namespace NimblesThrowingStuff.NPCs.Town
                 }
                 else if (Main.hardMode && Main.rand.NextBool(8))
                 {
-                    return "Transcendental inversion! Transcendental inversion!";
+                    return "Transcendental inversion! Transcendental inversion! \nSorry, I've just been picking up odd frequencies lately.";
                 }
             }
             if (Main.raining && Main.rand.Next(5) == 0)
@@ -162,9 +169,16 @@ namespace NimblesThrowingStuff.NPCs.Town
                     return "A good name for this town would be \"Biodiversington.\" It emphasizes the biodiversity of the surrounding area.";
                 }
             }
-            if (NimblesWorld.downedMorilus)
+            if (NimblesWorld.downedMorilus && Main.rand.NextBool(10))
             {
-                return "All the people in the big city call me \"Weirdpants\".";
+                if (Main.rand.NextBool(5))
+                {
+                    return "All the people in the big city are profoundly disturbed.";
+                }
+                else
+                {
+                    return "All the people in the big city call me \"Weirdpants\".";
+                }
             }
             //if (BirthdayParty.PartyIsUp && Main.rand.Next(4))
             //{
@@ -177,7 +191,7 @@ namespace NimblesThrowingStuff.NPCs.Town
                 case 2:
                     return "My lottery functions aren't working so great today. Just your luck.";
                 case 3:
-                    return "People think my kind is extinct. I guess they haven't looked far enough yet.";
+                    return "What're ya buying?";
                 case 4:
                     return "I remember when two men dug up only a man. The news spread through our system like plasmastorms on the crust of Glyrrinum";
                 case 5:

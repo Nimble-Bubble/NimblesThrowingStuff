@@ -19,7 +19,7 @@ namespace NimblesThrowingStuff.Items.Placeables.Blocks
 			Item.useTime = 6;
 			Item.useAnimation = 12;
 			Item.useStyle = 1;
-			Item.value = Item.buyPrice(0, 2, 0, 0);
+			Item.value = Item.buyPrice(0, 3, 0, 0);
 			Item.rare = 11;
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
