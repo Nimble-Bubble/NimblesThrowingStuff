@@ -16,17 +16,17 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 			DisplayName.SetDefault("Laguna Lance");
-			Tooltip.SetDefault("This water gun-like lance pulls moisture from the air into its chamber."
+			Tooltip.SetDefault("This lance resembles a water gun in its function, but its origins are shrouded in mystery."
 				+"\nRight click while holding the lance out to fire a high-pressure stream of water.");
         }
         public override void SetDefaults() {
-			Item.damage = 21;
+			Item.damage = 24;
 			Item.useStyle = ItemUseStyleID.Shoot;
-			Item.useAnimation = 17;
-			Item.useTime = 17;
+			Item.useAnimation = 16;
+			Item.useTime = 16;
 			Item.knockBack = 3.5f;
-			Item.width = 20;
-			Item.height = 20;
+			Item.width = 64;
+			Item.height = 64;
 			Item.noUseGraphic = true;
 			Item.noMelee = true;
 			Item.rare = ItemRarityID.Orange;

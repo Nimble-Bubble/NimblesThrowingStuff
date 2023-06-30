@@ -19,13 +19,13 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 				+"\nRight click to spew flames from the tip of the lance.");
         }
         public override void SetDefaults() {
-			Item.damage = 26;
+			Item.damage = 32;
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.useAnimation = 32;
 			Item.useTime = 32;
-			Item.knockBack = 7f;
-			Item.width = 20;
-			Item.height = 20;
+			Item.knockBack = 6f;
+			Item.width = 72;
+			Item.height = 72;
 			Item.noUseGraphic = true;
 			Item.noMelee = true;
 			Item.rare = ItemRarityID.Orange;

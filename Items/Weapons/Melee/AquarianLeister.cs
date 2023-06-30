@@ -23,8 +23,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			Item.useAnimation = 22;
 			Item.useTime = 22;
 			Item.knockBack = 5f;
-			Item.width = 36;
-			Item.height = 36;
+			Item.width = 50;
+			Item.height = 50;
 			Item.shoot = ModContent.ProjectileType<AquarianLeisterProj>();
             Item.shootSpeed = 7.25f;
 			Item.rare = ItemRarityID.Yellow;

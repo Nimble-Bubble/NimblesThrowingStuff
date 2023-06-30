@@ -40,6 +40,11 @@ namespace NimblesThrowingStuff.Items.Accessories
             recipe.AddIngredient(ModContent.ItemType<RoyalFin>(), 8);
             recipe.AddTile(TileID.MythrilAnvil);
             recipe.Register();
+            recipe = CreateRecipe();
+            recipe.AddIngredient(4007);
+            recipe.AddIngredient(ModContent.ItemType<RoyalFin>(), 8);
+            recipe.AddTile(TileID.MythrilAnvil);
+            recipe.Register();
         }
     }
 }
