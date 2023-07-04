@@ -29,6 +29,10 @@ namespace NimblesThrowingStuff.Projectiles.Ranged
             Projectile.aiStyle = 0;
             Projectile.extraUpdates = 2;
         }
+        public override void AI()
+        {
+            Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.ToRadians(90);
+        }
         public override void OnHitNPC (NPC target, int damage, float knockback, bool crit)
         {
             target.AddBuff(BuffID.OnFire, 60);

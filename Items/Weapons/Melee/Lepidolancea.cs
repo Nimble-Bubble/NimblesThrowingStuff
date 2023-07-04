@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 		public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("Some say that this lance was once used by a bright mind to mold clouds..."
+			Tooltip.SetDefault("Some say that this lance was once used by a bright mind to shape the clouds..."
 				+"\nRight click to send yourself flying in the direction of the lance"
 				+"\nYou will gain a second of invincibility from hitting an enemy");
 		}
@@ -44,6 +44,12 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 		{
 			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ModContent.ItemType<SpikedJavelin>(), 1);
+			recipe.AddIngredient(ItemID.ButterflyDust, 3);
+			recipe.AddIngredient(ItemID.TatteredBeeWing, 1);
+			recipe.AddTile(TileID.MythrilAnvil);
+			recipe.Register();
+			recipe = CreateRecipe();
+			recipe.AddIngredient(ModContent.ItemType<HiveHoncho>(), 1);
 			recipe.AddIngredient(ItemID.ButterflyDust, 3);
 			recipe.AddIngredient(ItemID.TatteredBeeWing, 1);
 			recipe.AddTile(TileID.MythrilAnvil);
