@@ -12,7 +12,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 	{
 		public override void SetStaticDefaults()
         {
-			DisplayName.SetDefault("Hermitaur Hunting Bow");
+			// DisplayName.SetDefault("Hermitaur Hunting Bow");
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 		public override void SetDefaults()

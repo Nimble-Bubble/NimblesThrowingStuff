@@ -9,7 +9,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Aquarian Leister");
+			// DisplayName.SetDefault("Aquarian Leister");
 		}
 		private bool hasBubbled;
 		public override void SetDefaults()

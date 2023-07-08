@@ -16,11 +16,11 @@ namespace NimblesThrowingStuff.Items.Accessories
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-            Tooltip.SetDefault("Allows super fast running and extra mobility on ice"
+            /* Tooltip.SetDefault("Allows super fast running and extra mobility on ice"
             + "\n20% increased movement speed"
             + "\nProvides the ability to walk on water, honey & lava"
             + "\nGrants immunity to fire blocks and lava damage"
-            + "\nImproved, environment-friendly soles allow for mid-air hops and softer landings");
+            + "\nImproved, environment-friendly soles allow for mid-air hops and softer landings"); */
         }
         public override void SetDefaults()
         {

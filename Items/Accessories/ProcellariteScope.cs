@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Items.Accessories
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-            Tooltip.SetDefault("Allows you to move the camera regardless of what you are holding");
+            // Tooltip.SetDefault("Allows you to move the camera regardless of what you are holding");
         }
         public override void SetDefaults()
         {

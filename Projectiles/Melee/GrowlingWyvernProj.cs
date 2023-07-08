@@ -13,7 +13,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Growling Wyvern");
+            // DisplayName.SetDefault("Growling Wyvern");
         }
         public override void SetDefaults()
         {
@@ -30,7 +30,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             Projectile.extraUpdates = 0;
             Projectile.scale = 1f;
         }
-        public override void ModifyHitNPC(NPC target, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)
+        public override void ModifyHitNPC(NPC target, ref NPC.HitModifiers modifiers)
         {
             if (Main.rand.NextBool(3))
             {

@@ -16,8 +16,8 @@ namespace NimblesThrowingStuff.Items.Armor
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-            DisplayName.SetDefault("Mythril Horned Hat");
-                Tooltip.SetDefault("Increases minion damage by 7% and minion slots by 1");
+            // DisplayName.SetDefault("Mythril Horned Hat");
+                // Tooltip.SetDefault("Increases minion damage by 7% and minion slots by 1");
         }
 
         public override void SetDefaults()

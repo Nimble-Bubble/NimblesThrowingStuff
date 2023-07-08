@@ -13,7 +13,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Flame-Blessed Beam");
+            // DisplayName.SetDefault("Flame-Blessed Beam");
         }
         public override void SetDefaults()
         {
@@ -35,7 +35,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.ToRadians(45);
             Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 6, Projectile.velocity.X * 0.1f, Projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
         }
-        public override void OnHitNPC (NPC target, int damage, float knockback, bool crit)
+        public override void OnHitNPC (NPC target, NPC.HitInfo hit, int damageDone)
         {
 			target.AddBuff(24, 300);
         }

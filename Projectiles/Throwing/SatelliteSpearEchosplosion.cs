@@ -13,7 +13,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Satellitesplosion");
+            // DisplayName.SetDefault("Satellitesplosion");
         }
         public override void SetDefaults()
         {

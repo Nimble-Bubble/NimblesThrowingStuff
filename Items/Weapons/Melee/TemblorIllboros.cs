@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 		public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("A simple but powerful lance with no strings attached.");
+			// Tooltip.SetDefault("A simple but powerful lance with no strings attached.");
 		}
 		public override void SetDefaults()
 		{

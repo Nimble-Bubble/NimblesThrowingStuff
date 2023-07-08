@@ -14,7 +14,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("A very agile yoyo that rains spikes upon its targets");
+			// Tooltip.SetDefault("A very agile yoyo that rains spikes upon its targets");
 			ItemID.Sets.Yoyo[Item.type] = true;
 			ItemID.Sets.GamepadExtraRange[Item.type] = 50;
 			ItemID.Sets.GamepadSmartQuickReach[Item.type] = true;

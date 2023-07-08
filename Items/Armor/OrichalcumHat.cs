@@ -16,8 +16,8 @@ namespace NimblesThrowingStuff.Items.Armor
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-            DisplayName.SetDefault("Orichalcum Hat");
-                Tooltip.SetDefault("Increases thrown damage by 8% and critical strike chance by 15%");
+            // DisplayName.SetDefault("Orichalcum Hat");
+                // Tooltip.SetDefault("Increases thrown damage by 8% and critical strike chance by 15%");
         }
 
         public override void SetDefaults()

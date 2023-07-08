@@ -11,7 +11,7 @@ namespace NimblesThrowingStuff.Items.Materials
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 100;
-			Tooltip.SetDefault("A shard of the Dragon's Head");
+			// Tooltip.SetDefault("A shard of the Dragon's Head");
             ItemID.Sets.ItemIconPulse[Item.type] = true;
             ItemID.Sets.ItemNoGravity[Item.type] = true;
         }

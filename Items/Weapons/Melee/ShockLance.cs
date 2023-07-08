@@ -14,9 +14,9 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 		public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			DisplayName.SetDefault("Shock Lance");
-			Tooltip.SetDefault("High voltage gives this blade an electric touch."
-				+"\nRight click to fire an electric beam.");
+			// DisplayName.SetDefault("Shock Lance");
+			/* Tooltip.SetDefault("High voltage gives this blade an electric touch."
+				+"\nRight click to fire an electric beam."); */
 		}
 		public override void SetDefaults()
 		{

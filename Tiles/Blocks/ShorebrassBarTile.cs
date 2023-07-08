@@ -2,6 +2,7 @@ using NimblesThrowingStuff.Items.Materials;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 namespace NimblesThrowingStuff.Tiles.Blocks
@@ -15,10 +16,10 @@ namespace NimblesThrowingStuff.Tiles.Blocks
             Main.tileSolid[Type] = true;
             Main.tileBlockLight[Type] = false;
             Main.tileMergeDirt[Type] = false;
-            ItemDrop = ModContent.ItemType<ShorebrassBar>();
+            ItemDrop/* tModPorter Note: Removed. Tiles and walls will drop the item which places them automatically. Use RegisterItemDrop to alter the automatic drop if necessary. */ = ModContent.ItemType<ShorebrassBar>();
             TileObjectData.newTile.StyleWrapLimit = 18;
-            ModTranslation name = CreateMapEntryName();
-            name.SetDefault("Procellarite Bar");
+            LocalizedText name = CreateMapEntryName();
+            // name.SetDefault("Procellarite Bar");
             AddMapEntry(new Color(0, 200, 185), name);
             MineResist = 1.5f;
             MinPick = 65;

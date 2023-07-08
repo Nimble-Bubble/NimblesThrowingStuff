@@ -12,8 +12,8 @@ namespace NimblesThrowingStuff.Buffs
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Mini-Moss Hornet");
-			Description.SetDefault("The collaborations of flora and fauna will fight for you");
+			// DisplayName.SetDefault("Mini-Moss Hornet");
+			// Description.SetDefault("The collaborations of flora and fauna will fight for you");
 			Main.buffNoSave[Type] = true;
 			Main.buffNoTimeDisplay[Type] = true;
 		}

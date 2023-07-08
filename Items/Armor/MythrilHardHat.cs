@@ -16,8 +16,8 @@ namespace NimblesThrowingStuff.Items.Armor
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-            DisplayName.SetDefault("Mythril Hard Hat");
-                Tooltip.SetDefault("Increases thrown damage and velocity by 15%");
+            // DisplayName.SetDefault("Mythril Hard Hat");
+                // Tooltip.SetDefault("Increases thrown damage and velocity by 15%");
         }
 
         public override void SetDefaults()

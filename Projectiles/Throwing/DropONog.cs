@@ -13,7 +13,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Drop o' Nog");
+            // DisplayName.SetDefault("Drop o' Nog");
         }
         public override void SetDefaults()
         {

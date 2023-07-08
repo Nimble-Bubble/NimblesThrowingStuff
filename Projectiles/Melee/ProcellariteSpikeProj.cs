@@ -12,7 +12,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Procellarite Spike");
+			// DisplayName.SetDefault("Procellarite Spike");
 		}
 		public override void SetDefaults()
 		{
@@ -73,7 +73,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 		private const int MAX_STICKY_JAVELINS = 3; 
 		private readonly Point[] _stickingJavelins = new Point[MAX_STICKY_JAVELINS]; 
 
-		public override void ModifyHitNPC(NPC target, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)
+		public override void ModifyHitNPC(NPC target, ref NPC.HitModifiers modifiers)
 		{
 			IsStickingToTarget = true; 
 			TargetWhoAmI = target.whoAmI; 

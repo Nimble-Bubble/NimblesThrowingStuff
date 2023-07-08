@@ -10,7 +10,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 99;
-			Tooltip.SetDefault("An extremely agile exploding javelin");   
+			// Tooltip.SetDefault("An extremely agile exploding javelin");   
         }
 
 		public override void SetDefaults() 

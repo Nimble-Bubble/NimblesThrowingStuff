@@ -16,7 +16,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Lacus Echo");
+			// DisplayName.SetDefault("Lacus Echo");
 		}
 		public override void SetDefaults()
         {

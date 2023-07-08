@@ -15,9 +15,9 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("With a stinger like this, the bugs will know you're their boss."
+			/* Tooltip.SetDefault("With a stinger like this, the bugs will know you're their boss."
 				+"\nUnfortunately for you, they're planning some changes in the command of order, so to speak."
-				+"\nRight click to release bees (that each deal one third of base damage) gained from critical strike. \nEach critical strike adds 1 bee, and you can have up to 6 bees.");
+				+"\nRight click to release bees (that each deal one third of base damage) gained from critical strike. \nEach critical strike adds 1 bee, and you can have up to 6 bees."); */
         }
         public override void SetDefaults() {
 			Item.damage = 27;

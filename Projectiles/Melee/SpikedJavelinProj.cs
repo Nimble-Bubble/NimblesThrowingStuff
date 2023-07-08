@@ -14,7 +14,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Spiked Javelin");
+            // DisplayName.SetDefault("Spiked Javelin");
         }
         public override void SetDefaults()
         {

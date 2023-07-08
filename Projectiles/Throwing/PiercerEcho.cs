@@ -13,7 +13,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Night's Beam");
+            // DisplayName.SetDefault("Night's Beam");
         }
         public override void SetDefaults()
         {
@@ -29,7 +29,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
             Projectile.aiStyle = 27;
             AIType = 157;
         }
-        public override void OnHitNPC (NPC target, int damage, float knockback, bool crit)
+        public override void OnHitNPC (NPC target, NPC.HitInfo hit, int damageDone)
         {
 			target.AddBuff(39, 420);
         }

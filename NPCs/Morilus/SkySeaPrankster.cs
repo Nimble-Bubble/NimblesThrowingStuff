@@ -11,7 +11,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
     {
 		public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Prankster of the Sky Sea");
+            // DisplayName.SetDefault("Prankster of the Sky Sea");
             Main.npcFrameCount[NPC.type] = 4;
 		}
 

@@ -9,7 +9,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Stinger Spear");
+			// DisplayName.SetDefault("Stinger Spear");
 		}
 
 		public override void SetDefaults()
@@ -33,7 +33,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 			get => Projectile.ai[0];
 			set => Projectile.ai[0] = value;
 		}
-		public override void ModifyHitNPC(NPC target, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)
+		public override void ModifyHitNPC(NPC target, ref NPC.HitModifiers modifiers)
 		{
 			if (Main.rand.NextBool(3))
 			{

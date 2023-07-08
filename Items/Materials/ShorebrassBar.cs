@@ -12,7 +12,7 @@ namespace NimblesThrowingStuff.Items.Materials
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 25;
-			Tooltip.SetDefault("This unusual brass-steel-coral hybrid makes for a surprisingly good alloy.");
+			// Tooltip.SetDefault("This unusual brass-steel-coral hybrid makes for a surprisingly good alloy.");
         }
         public override void SetDefaults() 
 		{

@@ -17,8 +17,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("A greatsword designed to resemble a Rathalos' wing."
-				+"\nIncendiary powder on the blade ignites targets on contact.");
+			/* Tooltip.SetDefault("A greatsword designed to resemble a Rathalos' wing."
+				+"\nIncendiary powder on the blade ignites targets on contact."); */
         }
         public override void SetDefaults() {
 			Item.damage = 34;
@@ -35,7 +35,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			Item.autoReuse = true;
 			Item.scale = 1.15f;
 		}
-		public override void OnHitNPC(Player player, NPC target, int damage, float knockBack, bool crit)
+		public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
         {
 			for (int f = 0; f < 3; f++)
 			{

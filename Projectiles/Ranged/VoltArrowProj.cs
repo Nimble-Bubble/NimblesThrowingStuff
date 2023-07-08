@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Projectiles.Ranged
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Volt Arrow");
+            // DisplayName.SetDefault("Volt Arrow");
         }
         public override void SetDefaults()
         {
@@ -35,7 +35,7 @@ namespace NimblesThrowingStuff.Projectiles.Ranged
         {
             Lighting.AddLight(Projectile.Center, Color.Cyan.ToVector3() * 0.75f);
         }
-        public override void OnHitNPC (NPC target, int damage, float knockback, bool crit)
+        public override void OnHitNPC (NPC target, NPC.HitInfo hit, int damageDone)
         {
             if (Main.rand.NextBool(8))
             {

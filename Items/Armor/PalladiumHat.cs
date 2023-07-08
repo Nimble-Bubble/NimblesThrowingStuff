@@ -16,8 +16,8 @@ namespace NimblesThrowingStuff.Items.Armor
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-            DisplayName.SetDefault("Palladium Hat");
-                Tooltip.SetDefault("Increases thrown critical strike chance by 7% and thrown damage by 13%");
+            // DisplayName.SetDefault("Palladium Hat");
+                // Tooltip.SetDefault("Increases thrown critical strike chance by 7% and thrown damage by 13%");
         }
 
         public override void SetDefaults()

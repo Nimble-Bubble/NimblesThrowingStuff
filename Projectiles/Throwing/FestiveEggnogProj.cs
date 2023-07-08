@@ -14,7 +14,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Festive Eggnog");
+            // DisplayName.SetDefault("Festive Eggnog");
         }
         public override void SetDefaults()
         {
@@ -28,7 +28,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
             Projectile.aiStyle = 68;
             Projectile.penetrate = 1;
         }
-        public override void OnHitNPC (NPC target, int damage, float knockback, bool crit)
+        public override void OnHitNPC (NPC target, NPC.HitInfo hit, int damageDone)
         {
 			target.AddBuff(BuffID.Frostburn, 240);
         }

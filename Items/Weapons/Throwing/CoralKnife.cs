@@ -10,7 +10,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 99;
-			Tooltip.SetDefault("These knives stick to enemies");   
+			// Tooltip.SetDefault("These knives stick to enemies");   
         }
 		public override void SetDefaults() 
 		{

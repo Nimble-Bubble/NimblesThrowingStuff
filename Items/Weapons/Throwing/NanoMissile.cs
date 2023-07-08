@@ -10,8 +10,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			DisplayName.SetDefault("Nanite Missile");
-			Tooltip.SetDefault("Are you sure this is legal?");   
+			// DisplayName.SetDefault("Nanite Missile");
+			// Tooltip.SetDefault("Are you sure this is legal?");   
         }
 
 		public override void SetDefaults() 

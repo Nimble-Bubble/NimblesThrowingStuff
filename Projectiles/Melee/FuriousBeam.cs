@@ -13,7 +13,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Furious Beam");
+            // DisplayName.SetDefault("Furious Beam");
         }
         public override void SetDefaults()
         {
@@ -39,7 +39,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 			Texture2D texture = Mod.Assets.Request<Texture2D>("Projectiles/Melee/FuriousBeam_Glow").Value;
 			Main.EntitySpriteDraw(texture, Projectile.position, new Rectangle(0, 0, texture.Width, texture.Height), Color.Orange, Projectile.rotation, texture.Size() * 0.5f, Projectile.scale, SpriteEffects.None, 0);
 		}
-        public override void OnHitNPC (NPC target, int damage, float knockback, bool crit)
+        public override void OnHitNPC (NPC target, NPC.HitInfo hit, int damageDone)
         {
 			target.AddBuff(189, 750);
             int splode = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, 0, 0,

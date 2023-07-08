@@ -15,8 +15,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("The added leather allows for higher agility"
-				+"\nRight click to launch yourself in the direction of the lance");
+			/* Tooltip.SetDefault("The added leather allows for higher agility"
+				+"\nRight click to launch yourself in the direction of the lance"); */
         }
         public override void SetDefaults() {
 			Item.damage = 17;

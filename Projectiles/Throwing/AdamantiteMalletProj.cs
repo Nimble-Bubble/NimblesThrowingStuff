@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Adamantite Mallet");
+            // DisplayName.SetDefault("Adamantite Mallet");
         }
         public override void SetDefaults()
         {

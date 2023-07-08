@@ -14,7 +14,7 @@ namespace NimblesThrowingStuff.Projectiles.Ranged
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Shroomite Bullet");
+            // DisplayName.SetDefault("Shroomite Bullet");
         }
         public override void SetDefaults()
         {
@@ -54,7 +54,7 @@ namespace NimblesThrowingStuff.Projectiles.Ranged
                 Main.dust[dust1].scale *= 2f;
             }
         }
-        public override void OnHitNPC (NPC target, int damage, float knockback, bool crit)
+        public override void OnHitNPC (NPC target, NPC.HitInfo hit, int damageDone)
         {
             if (Projectile.penetrate <= 0) 
             { 

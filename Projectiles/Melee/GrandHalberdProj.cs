@@ -13,7 +13,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Grand Halberd");
+            // DisplayName.SetDefault("Grand Halberd");
         }
         public override void SetDefaults()
         {

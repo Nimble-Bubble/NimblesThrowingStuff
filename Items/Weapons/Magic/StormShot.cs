@@ -11,7 +11,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Magic
         public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("Fires a ball of acid rain");
+			// Tooltip.SetDefault("Fires a ball of acid rain");
             Item.staff[Item.type] = false;
 		}
 		public override void SetDefaults() 

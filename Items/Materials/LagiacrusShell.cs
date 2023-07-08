@@ -10,9 +10,9 @@ namespace NimblesThrowingStuff.Items.Materials
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 25;
-			DisplayName.SetDefault("Shell-Shocker");
-			Tooltip.SetDefault("Strange crystal protusions on this shell release electricity."
-				+"\nIt is because of this electricity that this material is highly valued for crafting equipment.");
+			// DisplayName.SetDefault("Shell-Shocker");
+			/* Tooltip.SetDefault("Strange crystal protusions on this shell release electricity."
+				+"\nIt is because of this electricity that this material is highly valued for crafting equipment."); */
         }
 		public override void SetDefaults()
         {

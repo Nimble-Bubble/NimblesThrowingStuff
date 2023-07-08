@@ -26,7 +26,7 @@ namespace NimblesThrowingStuff.Items
                 projectile.localNPCHitCooldown = 24;
             }
         }
-        public override void OnHitNPC(Projectile projectile, NPC target, int damage, float knockback, bool crit)
+        public override void OnHitNPC(Projectile projectile, NPC target, NPC.HitInfo hit, int damageDone)
         {
             Player player = Main.player[projectile.owner];
             if (crit && player.GetModPlayer<NimblesPlayer>().sacredWrist && projectile.CountsAsClass(DamageClass.Throwing) && projectile.type != 92 && !projectile.npcProj)
@@ -82,7 +82,7 @@ namespace NimblesThrowingStuff.Items
                 projectile.localNPCHitCooldown = 10;
             }
         }
-        public override void ModifyHitNPC(Projectile projectile, NPC target, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)
+        public override void ModifyHitNPC(Projectile projectile, NPC target, ref NPC.HitModifiers modifiers)
         {
             if (projectile.type >= 404 && projectile.type <= 410 && projectile.type != 406 || projectile.type == 239 || projectile.type == 22 || projectile.type == 26 || projectile.type == 27)
             {

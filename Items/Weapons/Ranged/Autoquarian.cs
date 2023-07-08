@@ -14,7 +14,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 		public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("Sometimes fires a high-velocity watery arrow");
+			// Tooltip.SetDefault("Sometimes fires a high-velocity watery arrow");
 		}
 
 		public override void SetDefaults()

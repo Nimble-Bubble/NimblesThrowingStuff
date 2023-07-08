@@ -23,7 +23,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
         }
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Deep Buster");
+            // DisplayName.SetDefault("Deep Buster");
         }
         public override void SetDefaults()
         {

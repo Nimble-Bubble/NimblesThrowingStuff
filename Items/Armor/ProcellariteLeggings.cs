@@ -17,8 +17,8 @@ namespace NimblesThrowingStuff.Items.Armor
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-            DisplayName.SetDefault("Procellarite Leggings");
-                Tooltip.SetDefault("Increases movement speed by 25% and minion and sentry slots by 2");
+            // DisplayName.SetDefault("Procellarite Leggings");
+                // Tooltip.SetDefault("Increases movement speed by 25% and minion and sentry slots by 2");
         }
 
         public override void SetDefaults()

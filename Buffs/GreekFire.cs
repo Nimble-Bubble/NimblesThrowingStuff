@@ -8,8 +8,8 @@ namespace NimblesThrowingStuff.Buffs
 	public class GreekFire : ModBuff
 	{
 		public override void SetStaticDefaults() {
-			DisplayName.SetDefault("Greek Fire");
-			Description.SetDefault("It burns!");
+			// DisplayName.SetDefault("Greek Fire");
+			// Description.SetDefault("It burns!");
 			Main.debuff[Type] = true;
 			Main.pvpBuff[Type] = true;
 			Main.buffNoSave[Type] = true;

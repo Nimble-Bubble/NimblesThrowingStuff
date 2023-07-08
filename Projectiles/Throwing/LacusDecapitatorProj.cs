@@ -17,7 +17,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
         public int lacdex = 0;
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Lacus Decapitator");
+			// DisplayName.SetDefault("Lacus Decapitator");
 		}
 		public override void SetDefaults()
         {

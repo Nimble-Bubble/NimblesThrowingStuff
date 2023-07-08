@@ -22,7 +22,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
         }
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Chlorophyte Greatlance");
+            // DisplayName.SetDefault("Chlorophyte Greatlance");
         }
         public override void SetDefaults()
         {

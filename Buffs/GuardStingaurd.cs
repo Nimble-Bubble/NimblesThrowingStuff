@@ -12,8 +12,8 @@ namespace NimblesThrowingStuff.Buffs
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Guard");
-			Description.SetDefault("Enemy contact damage will be reflected");
+			// DisplayName.SetDefault("Guard");
+			// Description.SetDefault("Enemy contact damage will be reflected");
 			Main.buffNoSave[Type] = true;
 			Main.buffNoTimeDisplay[Type] = true;
 		}

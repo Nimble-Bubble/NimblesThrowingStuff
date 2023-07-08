@@ -13,7 +13,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Beemerang");
+            // DisplayName.SetDefault("Beemerang");
         }
         public override void SetDefaults()
         {
@@ -29,7 +29,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
             Projectile.penetrate = -1;
             Projectile.extraUpdates = 1;
         }
-        public override void OnHitNPC (NPC target, int damage, float knockback, bool crit)
+        public override void OnHitNPC (NPC target, NPC.HitInfo hit, int damageDone)
         {
 			if (Main.player[Projectile.owner].strongBees == true && Main.rand.NextBool(3))
                 {

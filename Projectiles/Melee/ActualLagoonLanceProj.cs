@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
         private bool hasWatered;
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Laguna Lance");
+            // DisplayName.SetDefault("Laguna Lance");
         }
         public override void SetDefaults()
         {

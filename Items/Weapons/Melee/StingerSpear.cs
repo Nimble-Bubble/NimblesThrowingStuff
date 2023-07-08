@@ -14,7 +14,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("Has a chance to poison enemies");
+			// Tooltip.SetDefault("Has a chance to poison enemies");
         }
         public override void SetDefaults() {
 			Item.damage = 24;

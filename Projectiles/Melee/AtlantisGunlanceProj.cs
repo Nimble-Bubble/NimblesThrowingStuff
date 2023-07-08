@@ -22,7 +22,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
         }
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Atlantis Gunlance");
+            // DisplayName.SetDefault("Atlantis Gunlance");
         }
         public override void SetDefaults()
         {

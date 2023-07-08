@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Ichor-filled Throwing Flask");
+            // DisplayName.SetDefault("Ichor-filled Throwing Flask");
         }
         public override void SetDefaults()
         {

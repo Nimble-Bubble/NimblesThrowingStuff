@@ -15,9 +15,9 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 		public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("A grand lance born from earth"
+			/* Tooltip.SetDefault("A grand lance born from earth"
 				+"\nRight click to fire spores if charges are available."
-				+ "\nGuard and right click to recharge. You can hold up to 6 charges.");
+				+ "\nGuard and right click to recharge. You can hold up to 6 charges."); */
 		}
 		public override void SetDefaults()
 		{

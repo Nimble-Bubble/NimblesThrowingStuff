@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
     {
 		public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Kelbi");
+            // DisplayName.SetDefault("Kelbi");
             Main.npcFrameCount[NPC.type] = 11;
 		}
 
@@ -112,7 +112,7 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
                 NPC.velocity.Y -= 0.25f;
             }
         }
-        public override void HitEffect(int hitDirection, double damage)
+        public override void HitEffect(NPC.HitInfo hit)
         {
             if (NPC.life <= 0)
             {

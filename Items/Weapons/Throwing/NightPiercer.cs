@@ -10,8 +10,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			DisplayName.SetDefault("Night's Piercer");
-         Tooltip.SetDefault("A legendary knife with controlled flight");   
+			// DisplayName.SetDefault("Night's Piercer");
+         // Tooltip.SetDefault("A legendary knife with controlled flight");   
         }
 
 		public override void SetDefaults() 

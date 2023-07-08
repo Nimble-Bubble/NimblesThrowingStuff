@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Logic Bomb");
+            // DisplayName.SetDefault("Logic Bomb");
         }
         public override void SetDefaults()
         {

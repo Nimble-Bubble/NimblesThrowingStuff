@@ -13,7 +13,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Thorn Ball");
+            // DisplayName.SetDefault("Thorn Ball");
         }
         public override void SetDefaults()
         {
@@ -27,7 +27,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
             Projectile.aiStyle = 14;
             Projectile.penetrate = 6;
         }
-        public override void OnHitNPC (NPC target, int damage, float knockback, bool crit)
+        public override void OnHitNPC (NPC target, NPC.HitInfo hit, int damageDone)
         {
 			target.AddBuff(BuffID.Poisoned, 300);
         }

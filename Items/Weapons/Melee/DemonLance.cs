@@ -14,8 +14,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			DisplayName.SetDefault("Demonite Lance");
-			Tooltip.SetDefault("Cthulhu's hardened flesh brings out the best in shortswords.");
+			// DisplayName.SetDefault("Demonite Lance");
+			// Tooltip.SetDefault("Cthulhu's hardened flesh brings out the best in shortswords.");
         }
         public override void SetDefaults() {
 			Item.damage = 16;

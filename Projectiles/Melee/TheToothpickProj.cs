@@ -9,7 +9,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("The Toothpick");
+			// DisplayName.SetDefault("The Toothpick");
 		}
 
 		public override void SetDefaults()

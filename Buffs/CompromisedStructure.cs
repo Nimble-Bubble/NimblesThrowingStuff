@@ -8,8 +8,8 @@ namespace NimblesThrowingStuff.Buffs
 	public class CompromisedStructure : ModBuff
 	{
 		public override void SetStaticDefaults() {
-			DisplayName.SetDefault("Compromised Structure");
-			Description.SetDefault("If it can't fly, now it can.");
+			// DisplayName.SetDefault("Compromised Structure");
+			// Description.SetDefault("If it can't fly, now it can.");
 			Main.debuff[Type] = true;
 			Main.pvpBuff[Type] = true;
 			Main.buffNoSave[Type] = true;

@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Dreadful Fang");
+            // DisplayName.SetDefault("Dreadful Fang");
         }
         public override void SetDefaults()
         {

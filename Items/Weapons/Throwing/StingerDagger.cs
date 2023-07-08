@@ -10,7 +10,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("Has a chance to poison enemies");   
+			// Tooltip.SetDefault("Has a chance to poison enemies");   
         }
 
 		public override void SetDefaults() 

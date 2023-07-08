@@ -20,9 +20,9 @@ namespace NimblesThrowingStuff.Items.Consumables
 		public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 30;
-			Tooltip.SetDefault("Reduced potion cooldown"
+			/* Tooltip.SetDefault("Reduced potion cooldown"
 				+"\nDoesn't work that well with quick keys at the moment" +
-				"\nUse it manually if you have to");
+				"\nUse it manually if you have to"); */
 		}
 
 		public override void SetDefaults()

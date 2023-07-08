@@ -11,8 +11,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			DisplayName.SetDefault("Dragon's Fangs");
-         Tooltip.SetDefault("Cleave and claw through the toughest hide.");   
+			// DisplayName.SetDefault("Dragon's Fangs");
+         // Tooltip.SetDefault("Cleave and claw through the toughest hide.");   
         }
 
 		public override void SetDefaults() 

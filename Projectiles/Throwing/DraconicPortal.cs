@@ -14,7 +14,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
         private int index = 0;
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Draconic Portal");
+            // DisplayName.SetDefault("Draconic Portal");
         }
         public override void SetDefaults()
         {

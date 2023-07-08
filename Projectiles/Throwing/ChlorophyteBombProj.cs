@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Chlorophyte Bomb");
+            // DisplayName.SetDefault("Chlorophyte Bomb");
         }
         public override void SetDefaults()
         {

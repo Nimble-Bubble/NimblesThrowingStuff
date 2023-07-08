@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Projectiles.Ranged
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Aquarrow");
+            // DisplayName.SetDefault("Aquarrow");
         }
         public override void SetDefaults()
         {
@@ -30,7 +30,7 @@ namespace NimblesThrowingStuff.Projectiles.Ranged
             Projectile.aiStyle = 1;
             Projectile.extraUpdates = 1;
         }
-        public override void OnHitNPC (NPC target, int damage, float knockback, bool crit)
+        public override void OnHitNPC (NPC target, NPC.HitInfo hit, int damageDone)
         {
             Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 33,
                             Projectile.velocity.X * 0.1f, Projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);

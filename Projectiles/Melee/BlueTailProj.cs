@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
         private bool flamesThrown;
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Blue Tail");
+            // DisplayName.SetDefault("Blue Tail");
         }
         public override void SetDefaults()
         {
@@ -33,7 +33,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             Projectile.scale = 1.2f;
             flamesThrown = false;
         }
-        public override void ModifyHitNPC(NPC target, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)
+        public override void ModifyHitNPC(NPC target, ref NPC.HitModifiers modifiers)
         {
             for (int f = 0; f < 3; f++)
             {

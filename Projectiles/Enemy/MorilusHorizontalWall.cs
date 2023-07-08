@@ -12,7 +12,7 @@ namespace NimblesThrowingStuff.Projectiles.Enemy
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Morilus Barrier");
+            // DisplayName.SetDefault("Morilus Barrier");
         }
 
         public override void SetDefaults()

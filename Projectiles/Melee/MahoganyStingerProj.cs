@@ -17,7 +17,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
         private bool autoPoison;
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Mahogany Stinger");
+            // DisplayName.SetDefault("Mahogany Stinger");
         }
         public override void SetDefaults()
         {
@@ -36,7 +36,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             hasLaunched = false;
             autoPoison = false;
         }
-        public override void ModifyHitNPC(NPC target, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)
+        public override void ModifyHitNPC(NPC target, ref NPC.HitModifiers modifiers)
         {
             if (autoPoison)
             {

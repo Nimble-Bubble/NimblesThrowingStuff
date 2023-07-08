@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Procellarite Broadsword Beam");
+            // DisplayName.SetDefault("Procellarite Broadsword Beam");
         }
         public override void SetDefaults()
         {
@@ -42,7 +42,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 			Texture2D texture = Mod.Assets.Request<Texture2D>("Projectiles/Melee/ProcellariteBroadswordProj_Glow").Value;
             Main.EntitySpriteDraw(texture, Projectile.position, new Rectangle(0, 0, texture.Width, texture.Height), Color.Yellow, Projectile.rotation, texture.Size() * 0.5f, Projectile.scale, SpriteEffects.None, 0);
 		}
-        public override void OnHitNPC (NPC target, int damage, float knockback, bool crit)
+        public override void OnHitNPC (NPC target, NPC.HitInfo hit, int damageDone)
         {
             for (int furbroaddust = 0; furbroaddust < 10; furbroaddust++)
             {

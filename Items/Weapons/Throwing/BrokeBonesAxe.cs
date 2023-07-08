@@ -10,8 +10,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 99;
-			DisplayName.SetDefault("Bluebone Hatchet");
-            Tooltip.SetDefault("Bounces around with a chance to break armor");
+			// DisplayName.SetDefault("Bluebone Hatchet");
+            // Tooltip.SetDefault("Bounces around with a chance to break armor");
         }
 
 		public override void SetDefaults() 

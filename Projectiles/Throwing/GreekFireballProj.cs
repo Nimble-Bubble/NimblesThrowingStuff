@@ -13,7 +13,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Greek Fireball");
+            // DisplayName.SetDefault("Greek Fireball");
         }
         public override void SetDefaults()
         {
@@ -30,7 +30,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
             Projectile.extraUpdates = 1;
             AIType = 15;
         }
-        public override void OnHitNPC (NPC target, int damage, float knockback, bool crit)
+        public override void OnHitNPC (NPC target, NPC.HitInfo hit, int damageDone)
         {
 			target.AddBuff(Mod.Find<ModBuff>("GreekFire").Type, 120);
         }

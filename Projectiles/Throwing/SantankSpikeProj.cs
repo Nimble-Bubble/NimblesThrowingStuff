@@ -13,7 +13,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Santank Spike");
+            // DisplayName.SetDefault("Santank Spike");
         }
         public override void SetDefaults()
         {

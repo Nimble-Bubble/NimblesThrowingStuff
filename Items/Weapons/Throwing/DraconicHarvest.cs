@@ -11,7 +11,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("Spawns draconic portals that release shrapnel.");   
+			// Tooltip.SetDefault("Spawns draconic portals that release shrapnel.");   
         }
 		public override void SetDefaults() 
 		{

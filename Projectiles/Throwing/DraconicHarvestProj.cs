@@ -14,7 +14,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         private int index = 0; 
         public override void SetStaticDefaults() {
-			DisplayName.SetDefault("Draconic Harvest");     
+			// DisplayName.SetDefault("Draconic Harvest");     
 			ProjectileID.Sets.TrailCacheLength[Projectile.type] = 10;    
 			ProjectileID.Sets.TrailingMode[Projectile.type] = 0;        
 		}

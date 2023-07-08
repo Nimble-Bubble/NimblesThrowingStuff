@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
         private int robustTuskPower;
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Robust Tusk");
+            // DisplayName.SetDefault("Robust Tusk");
         }
         public override void SetDefaults()
         {
@@ -97,7 +97,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             }
         }
 
-        public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
+        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
             robustTuskPower += damage;
         }

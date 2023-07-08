@@ -9,7 +9,7 @@ namespace NimblesThrowingStuff.Items.Materials
 	{
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("A magical fabric taken from the jolly invaders");
+            // Tooltip.SetDefault("A magical fabric taken from the jolly invaders");
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 50;
 		}
 		public override void SetDefaults()

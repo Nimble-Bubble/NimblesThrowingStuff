@@ -13,8 +13,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 		public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("Fires four bullets at a time"
-				+"\nRegular bullets are turned to chlorophyte bullets");
+			/* Tooltip.SetDefault("Fires four bullets at a time"
+				+"\nRegular bullets are turned to chlorophyte bullets"); */
 		}
 		public override void SetDefaults()
 		{

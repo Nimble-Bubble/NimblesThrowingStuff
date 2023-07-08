@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
         {
             ProjectileID.Sets.YoyosMaximumRange[Projectile.type] = 750f;
             ProjectileID.Sets.YoyosTopSpeed[Projectile.type] = 40f;
-            DisplayName.SetDefault("Sky-Sea Spinner");
+            // DisplayName.SetDefault("Sky-Sea Spinner");
         }
         public override void SetDefaults()
         {
@@ -47,7 +47,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 				0
 			);
 		}
-        public override void OnHitNPC (NPC target, int damage, float knockback, bool crit)
+        public override void OnHitNPC (NPC target, NPC.HitInfo hit, int damageDone)
         {
             Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.position.X + Main.rand.Next(-1, 2), Projectile.position.Y - 1000, Main.rand.Next(-1, 2), Main.rand.Next(5, 9), ModContent.ProjectileType<ProcellariteSpikeProj>(), Projectile.damage / 3, Projectile.knockBack, Projectile.owner);
         }

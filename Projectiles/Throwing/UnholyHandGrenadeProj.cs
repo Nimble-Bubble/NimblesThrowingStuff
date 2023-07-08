@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Unholy Hand Grenade");
+            // DisplayName.SetDefault("Unholy Hand Grenade");
         }
         public override void SetDefaults()
         {

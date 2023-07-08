@@ -14,7 +14,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Knight Lance");
+            // DisplayName.SetDefault("Knight Lance");
         }
         public override void SetDefaults()
         {

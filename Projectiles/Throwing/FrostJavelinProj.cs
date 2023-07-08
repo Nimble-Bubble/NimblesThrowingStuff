@@ -12,7 +12,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Frost Javelin");
+			// DisplayName.SetDefault("Frost Javelin");
 		}
 		public override void SetDefaults()
 		{
@@ -43,7 +43,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 				usePos -= rotVector * 8f;
 			}
 		}
-		public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
+		public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
 		{
 			target.AddBuff(BuffID.Frostburn2, 240);
 		}

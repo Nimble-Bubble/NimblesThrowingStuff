@@ -14,7 +14,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 	public class CosmosCrasherProj: ModProjectile
     {
         public override void SetStaticDefaults() {
-			DisplayName.SetDefault("Cosmos Crasher");     
+			// DisplayName.SetDefault("Cosmos Crasher");     
 			ProjectileID.Sets.TrailCacheLength[Projectile.type] = 10;    
 			ProjectileID.Sets.TrailingMode[Projectile.type] = 0;        
 		}

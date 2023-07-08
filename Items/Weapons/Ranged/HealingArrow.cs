@@ -11,8 +11,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 		public override void SetStaticDefaults() 
 		{ 
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 99;
-			Tooltip.SetDefault("Heals you by a small amount depending on the damage dealt"
-				+"\nYou can't heal more than 5 HP with one arrow");
+			/* Tooltip.SetDefault("Heals you by a small amount depending on the damage dealt"
+				+"\nYou can't heal more than 5 HP with one arrow"); */
 		}
 		public override void SetDefaults() {
 			Item.damage = 7;

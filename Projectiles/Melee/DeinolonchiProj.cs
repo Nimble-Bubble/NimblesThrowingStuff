@@ -13,7 +13,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Deinolonchi");
+            // DisplayName.SetDefault("Deinolonchi");
         }
         public override void SetDefaults()
         {
@@ -30,7 +30,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             Projectile.extraUpdates = 0;
             Projectile.scale = 1.2f;
         }
-        public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
+        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
                 target.AddBuff(169, 900);
         }

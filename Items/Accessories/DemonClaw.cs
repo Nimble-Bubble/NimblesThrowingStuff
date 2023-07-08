@@ -15,8 +15,8 @@ namespace NimblesThrowingStuff.Items.Accessories
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-            Tooltip.SetDefault("A demonic appendage with curious properties"
-                +"\nIncreases throwing speed (both use time and velocity) by 15%");
+            /* Tooltip.SetDefault("A demonic appendage with curious properties"
+                +"\nIncreases throwing speed (both use time and velocity) by 15%"); */
         }
         public override void SetDefaults()
         {

@@ -17,8 +17,8 @@ namespace NimblesThrowingStuff.Items.Armor
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-            Tooltip.SetDefault("Increases damage by 5%"
-                +"\nGrants 1 second of lava immunity");
+            /* Tooltip.SetDefault("Increases damage by 5%"
+                +"\nGrants 1 second of lava immunity"); */
         }
 
         public override void SetDefaults()

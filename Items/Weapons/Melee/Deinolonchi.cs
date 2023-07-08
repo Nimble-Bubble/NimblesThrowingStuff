@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("The fang-based design of this lance gives it some nostalgic charm");
+			// Tooltip.SetDefault("The fang-based design of this lance gives it some nostalgic charm");
         }
         public override void SetDefaults() {
 			Item.damage = 29;

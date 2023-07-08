@@ -11,7 +11,7 @@ namespace NimblesThrowingStuff.Items.Placeables.Blocks
 		public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 100;
-			Tooltip.SetDefault("A sturdy building material");
+			// Tooltip.SetDefault("A sturdy building material");
 		}
 		public override void SetDefaults() 
 		{

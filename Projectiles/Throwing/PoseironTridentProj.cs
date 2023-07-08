@@ -16,7 +16,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
         private int bub = 0;
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Poseiron's Trident");
+            // DisplayName.SetDefault("Poseiron's Trident");
         }
         public override void SetDefaults()
         {
@@ -33,7 +33,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
             Projectile.ignoreWater = true;
             Projectile.timeLeft = 150;
         }
-        public override void OnHitNPC (NPC target, int damage, float knockback, bool crit)
+        public override void OnHitNPC (NPC target, NPC.HitInfo hit, int damageDone)
         {
 			target.AddBuff(209, 300);
             target.AddBuff(44, 450);

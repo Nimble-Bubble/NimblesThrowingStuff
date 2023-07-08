@@ -22,7 +22,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
         }
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Panthalassic Gunlance");
+            // DisplayName.SetDefault("Panthalassic Gunlance");
         }
         public override void SetDefaults()
         {

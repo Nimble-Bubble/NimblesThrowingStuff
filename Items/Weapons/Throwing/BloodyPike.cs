@@ -11,7 +11,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("Turns into a stream of ichor");   
+			// Tooltip.SetDefault("Turns into a stream of ichor");   
         }
 		public override void SetDefaults() 
 		{

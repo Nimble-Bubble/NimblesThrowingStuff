@@ -11,7 +11,7 @@ namespace NimblesThrowingStuff.Items.Placeables.Banners
         public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			DisplayName.SetDefault("Clam Banner");
+			// DisplayName.SetDefault("Clam Banner");
 		}
 		public override void SetDefaults() 
 		{

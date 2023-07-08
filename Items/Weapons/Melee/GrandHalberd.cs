@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 		public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("Made from incredibly powerful bone, this lance is powerful enough to pierce steel.");
+			// Tooltip.SetDefault("Made from incredibly powerful bone, this lance is powerful enough to pierce steel.");
 		}
 		public override void SetDefaults()
 		{

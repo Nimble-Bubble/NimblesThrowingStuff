@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Night's Piercer");
+            // DisplayName.SetDefault("Night's Piercer");
         }
         public override void SetDefaults()
         {

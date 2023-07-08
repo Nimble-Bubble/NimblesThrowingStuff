@@ -11,7 +11,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-         Tooltip.SetDefault("Three knives are thrown out per use");   
+         // Tooltip.SetDefault("Three knives are thrown out per use");   
         }
 
 		public override void SetDefaults() 

@@ -39,7 +39,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
         private bool moveNormally;
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Morilus, the Great Guardian of the Sky's Sea");
+            // DisplayName.SetDefault("Morilus, the Great Guardian of the Sky's Sea");
             Main.npcFrameCount[NPC.type] = 5;
         }
 
@@ -416,7 +416,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
             return (float)Math.Sqrt(mag.X * mag.X + mag.Y * mag.Y);
         }
 
-        public override void ScaleExpertStats(int numPlayers, float bossLifeScale)
+        public override void ApplyDifficultyAndPlayerScaling(int numPlayers, float balance, float bossAdjustment)/* tModPorter Note: bossLifeScale -> balance (bossAdjustment is different, see the docs for details) */
         {
             NPC.lifeMax = (int)(NPC.lifeMax * 0.75f * bossLifeScale);
             NPC.damage = 220;

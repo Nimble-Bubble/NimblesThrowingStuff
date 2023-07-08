@@ -12,7 +12,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 		public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("A rapidly-firing crossbow");
+			// Tooltip.SetDefault("A rapidly-firing crossbow");
 		}
 
 		public override void SetDefaults()

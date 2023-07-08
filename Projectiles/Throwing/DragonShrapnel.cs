@@ -14,7 +14,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Dragon Shrapnel");
+            // DisplayName.SetDefault("Dragon Shrapnel");
         }
         public override void SetDefaults()
         {
@@ -43,7 +43,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
             }
             return false;
         }
-        public override void OnHitNPC (NPC target, int damage, float knockback, bool crit)
+        public override void OnHitNPC (NPC target, NPC.HitInfo hit, int damageDone)
         {
             if (Main.rand.NextBool(5))
             {

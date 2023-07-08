@@ -13,8 +13,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 		public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			DisplayName.SetDefault("Pain Rain");
-			Tooltip.SetDefault("Rains several arrows down from the heavens(?)");
+			// DisplayName.SetDefault("Pain Rain");
+			// Tooltip.SetDefault("Rains several arrows down from the heavens(?)");
 		}
 
 		public override void SetDefaults()

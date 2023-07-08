@@ -11,7 +11,7 @@ namespace NimblesThrowingStuff.Projectiles.Summoning
 	public class MiniMossHornetProj : ModProjectile
 	{
 		public override void SetStaticDefaults() {
-			DisplayName.SetDefault("Moss Hornet");
+			// DisplayName.SetDefault("Moss Hornet");
 			Main.projFrames[Projectile.type] = 3;
 			ProjectileID.Sets.MinionTargettingFeature[Projectile.type] = true;
 			Main.projPet[Projectile.type] = true;

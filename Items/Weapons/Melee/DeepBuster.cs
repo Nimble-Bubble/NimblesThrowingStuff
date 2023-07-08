@@ -14,9 +14,9 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("Part-gunlance, part-landshark. It's completely safe and totally original, we swear."
+			/* Tooltip.SetDefault("Part-gunlance, part-landshark. It's completely safe and totally original, we swear."
 				+"\nRight click while using to shoot. Guard and right click while using to reload."
-				+"\nAfter reloading, you can shoot up to eight times before needing to reload again.");
+				+"\nAfter reloading, you can shoot up to eight times before needing to reload again."); */
         }
         public override void SetDefaults() {
 			Item.damage = 33;

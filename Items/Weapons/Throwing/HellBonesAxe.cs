@@ -10,8 +10,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 99;
-			DisplayName.SetDefault("Hellbone Hatchet");
-            Tooltip.SetDefault("Lights enemies on hellfire");
+			// DisplayName.SetDefault("Hellbone Hatchet");
+            // Tooltip.SetDefault("Lights enemies on hellfire");
         }
 
 		public override void SetDefaults() 

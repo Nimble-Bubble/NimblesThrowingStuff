@@ -13,7 +13,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Whirlpool Whammer");
+            // DisplayName.SetDefault("Whirlpool Whammer");
         }
         public override void SetDefaults()
         {
@@ -31,7 +31,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
         {
                 Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width * 2, Projectile.height * 2, 226, 0f, 0f, 100, default(Color), 0.5f);
         }
-        public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
+        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
             if (Main.rand.NextBool(3))
             {

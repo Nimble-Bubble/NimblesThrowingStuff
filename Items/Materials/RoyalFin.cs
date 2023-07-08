@@ -10,7 +10,7 @@ namespace NimblesThrowingStuff.Items.Materials
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 25;
-			Tooltip.SetDefault("The hide of the sea's live plague is unsurprisingly powerful when it comes to weaponsmithery.");
+			// Tooltip.SetDefault("The hide of the sea's live plague is unsurprisingly powerful when it comes to weaponsmithery.");
         }
 		public override void SetDefaults()
         {

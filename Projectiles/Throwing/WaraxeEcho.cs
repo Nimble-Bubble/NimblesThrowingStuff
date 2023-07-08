@@ -13,7 +13,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Hallowed Waraxe Echo");
+            // DisplayName.SetDefault("Hallowed Waraxe Echo");
         }
         public override void SetDefaults()
         {

@@ -16,8 +16,8 @@ namespace NimblesThrowingStuff.Items.Armor
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-            DisplayName.SetDefault("Adamantite Hat");
-                Tooltip.SetDefault("Increases thrown damage by 24% and thrown critical strike chance by 8%");
+            // DisplayName.SetDefault("Adamantite Hat");
+                // Tooltip.SetDefault("Increases thrown damage by 24% and thrown critical strike chance by 8%");
         }
 
         public override void SetDefaults()

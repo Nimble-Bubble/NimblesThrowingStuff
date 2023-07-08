@@ -11,8 +11,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			DisplayName.SetDefault("Thorned Glove");
-			Tooltip.SetDefault("Throws out poisonous seeds");   
+			// DisplayName.SetDefault("Thorned Glove");
+			// Tooltip.SetDefault("Throws out poisonous seeds");   
         }
 
 		public override void SetDefaults() 

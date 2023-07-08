@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Mythril Hatchet");
+            // DisplayName.SetDefault("Mythril Hatchet");
         }
         public override void SetDefaults()
         {

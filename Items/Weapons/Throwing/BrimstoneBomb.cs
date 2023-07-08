@@ -11,7 +11,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("Explodes into hellish shrapnel");   
+			// Tooltip.SetDefault("Explodes into hellish shrapnel");   
         }
 		public override void SetDefaults() 
 		{

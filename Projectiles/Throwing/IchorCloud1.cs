@@ -20,7 +20,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
             Projectile.usesLocalNPCImmunity = true;
             Projectile.localNPCHitCooldown = 60;
         }
-        public override void OnHitNPC (NPC target, int damage, float knockback, bool crit)
+        public override void OnHitNPC (NPC target, NPC.HitInfo hit, int damageDone)
         {
 			target.AddBuff(69, 120);
         }

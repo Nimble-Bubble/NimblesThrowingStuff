@@ -11,7 +11,7 @@ namespace NimblesThrowingStuff.Projectiles.Summoning
 	{
 		private int shootSporeCounter;
 		public override void SetStaticDefaults() {
-			DisplayName.SetDefault("Spore Ball");
+			// DisplayName.SetDefault("Spore Ball");
 			Main.projFrames[Projectile.type] = 4;
 			ProjectileID.Sets.MinionTargettingFeature[Projectile.type] = true;
 			Main.projPet[Projectile.type] = true;
@@ -165,7 +165,7 @@ namespace NimblesThrowingStuff.Projectiles.Summoning
                 Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, 44, Projectile.velocity.RotatedByRandom(MathHelper.ToDegrees(120)).X * 0.5f, Projectile.velocity.RotatedByRandom(MathHelper.ToDegrees(120)).Y * 0.5f, 0, default(Color), 0.5f);
             }
 		}
-        public override void OnHitNPC (NPC target, int damage, float knockback, bool crit)
+        public override void OnHitNPC (NPC target, NPC.HitInfo hit, int damageDone)
         {
 			for (int m = 0; m < 5; m++)
 			{

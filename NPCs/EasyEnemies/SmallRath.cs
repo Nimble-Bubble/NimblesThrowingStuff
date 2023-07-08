@@ -28,7 +28,7 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
         SoundStyle SmallRathFireNoise = new SoundStyle("NimblesThrowingStuff/Sounds/Item/SmallRathFire");
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Small Rathwyvern");
+            // DisplayName.SetDefault("Small Rathwyvern");
             Main.npcFrameCount[NPC.type] = 10;
         }
 
@@ -162,7 +162,7 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
             }
             return true;
         }
-        public override void ScaleExpertStats(int numPlayers, float bossLifeScale)
+        public override void ApplyDifficultyAndPlayerScaling(int numPlayers, float balance, float bossAdjustment)/* tModPorter Note: bossLifeScale -> balance (bossAdjustment is different, see the docs for details) */
         {
             NPC.lifeMax = 200;
             NPC.damage = 50;

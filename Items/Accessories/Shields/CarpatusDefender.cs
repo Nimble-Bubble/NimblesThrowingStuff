@@ -16,8 +16,8 @@ namespace NimblesThrowingStuff.Items.Accessories.Shields
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-            Tooltip.SetDefault("Grants a powerful dash"
-                              +"\n20% increased damage reduction");
+            /* Tooltip.SetDefault("Grants a powerful dash"
+                              +"\n20% increased damage reduction"); */
         }
         public override void SetDefaults()
         {

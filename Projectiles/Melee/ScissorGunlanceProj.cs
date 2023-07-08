@@ -22,7 +22,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
         }
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Scissor Gunlance");
+            // DisplayName.SetDefault("Scissor Gunlance");
         }
         public override void SetDefaults()
         {

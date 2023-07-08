@@ -18,7 +18,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
         }
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Longhorn");
+            // DisplayName.SetDefault("Longhorn");
         }
         public override void SetDefaults()
         {

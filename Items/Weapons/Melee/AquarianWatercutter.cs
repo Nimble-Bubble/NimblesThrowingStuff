@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("Fires a jet of water upon hitting a target");
+			// Tooltip.SetDefault("Fires a jet of water upon hitting a target");
         }
         public override void SetDefaults() {
 			Item.damage = 90;
@@ -34,7 +34,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			Item.autoReuse = true;
 			Item.scale = 1.2f;
 		}
-		public override void OnHitNPC(Player player, NPC target, int damage, float knockBack, bool crit)
+		public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
 		{
 			int FireWaterOnHit = Projectile.NewProjectile(Item.GetSource_FromThis(), target.position.X, target.position.Y, target.velocity.X * player.GetAttackSpeed(DamageClass.Melee), target.velocity.Y * player.GetAttackSpeed(DamageClass.Melee), ProjectileID.WaterStream, (Item.damage / 4) * 3, Item.knockBack, player.whoAmI);
 			Main.projectile[FireWaterOnHit].DamageType = DamageClass.Melee;

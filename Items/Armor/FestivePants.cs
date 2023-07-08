@@ -17,8 +17,8 @@ namespace NimblesThrowingStuff.Items.Armor
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-            DisplayName.SetDefault("Festive Boots");
-                Tooltip.SetDefault("Increases movement speed by 25% and throwing damage by 30%");
+            // DisplayName.SetDefault("Festive Boots");
+                // Tooltip.SetDefault("Increases movement speed by 25% and throwing damage by 30%");
         }
 
         public override void SetDefaults()

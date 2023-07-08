@@ -29,7 +29,7 @@ namespace NimblesThrowingStuff.NPCs.Town
 
 		public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Living Relic");
+            // DisplayName.SetDefault("Living Relic");
             Main.npcFrameCount[NPC.type] = 25;
 			NPCID.Sets.ExtraFramesCount[NPC.type] = 5;
 			NPCID.Sets.AttackFrameCount[NPC.type] = 4;
@@ -59,7 +59,7 @@ namespace NimblesThrowingStuff.NPCs.Town
 			NPC.knockBackResist = 0.25f;
             AnimationType = NPCID.Merchant;
         }
-        public override bool CanTownNPCSpawn(int numTownNPCs, int money)
+        public override bool CanTownNPCSpawn(int numTownNPCs)/* tModPorter Suggestion: Copy the implementation of NPC.SpawnAllowed_Merchant in vanilla if you to count money, and be sure to set a flag when unlocked, so you don't count every tick. */
         {
             return NPC.downedBoss1;
         }
@@ -233,7 +233,7 @@ namespace NimblesThrowingStuff.NPCs.Town
 			button = Language.GetTextValue("LegacyInterface.28");
 		}
 
-		public override void OnChatButtonClicked(bool firstButton, ref bool shop)
+		public override void OnChatButtonClicked(bool firstButton, ref string shopName)
 		{
 			if (firstButton)
 			{
@@ -241,7 +241,7 @@ namespace NimblesThrowingStuff.NPCs.Town
 			}
 		}
 
-		public override void SetupShop(Chest shop, ref int nextSlot)
+		public override void ModifyActiveShop(string shopName, Item[] items)
 		{
             shop.item[nextSlot].SetDefaults(ItemID.ThrowingKnife);
 			nextSlot++;

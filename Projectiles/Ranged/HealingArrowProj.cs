@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Projectiles.Ranged
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Healing Arrow");
+            // DisplayName.SetDefault("Healing Arrow");
         }
         public override void SetDefaults()
         {
@@ -29,7 +29,7 @@ namespace NimblesThrowingStuff.Projectiles.Ranged
             Projectile.arrow = true;
             Projectile.aiStyle = 1;
         }
-        public override void OnHitNPC (NPC target, int damage, float knockback, bool crit)
+        public override void OnHitNPC (NPC target, NPC.HitInfo hit, int damageDone)
         {
             int gamungo = damage / 50;
             if (gamungo > 5)

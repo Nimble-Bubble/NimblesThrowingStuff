@@ -18,7 +18,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
         }
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Feathersting");
+            // DisplayName.SetDefault("Feathersting");
         }
         public override void SetDefaults()
         {

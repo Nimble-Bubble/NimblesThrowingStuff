@@ -15,10 +15,10 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("A gunlance covered in vivid Qurupeco feathers. The lighter inside allows for blazing strikes."
+			/* Tooltip.SetDefault("A gunlance covered in vivid Qurupeco feathers. The lighter inside allows for blazing strikes."
 				+"\nRight click while using to blast. Guard and right click while using to reload."
 				+"\nAfter reloading, you can blast up to five times before needing to reload again."
-				+"\nSorry about the placeholder. I haven't made a Qurupeco palette yet.");
+				+"\nSorry about the placeholder. I haven't made a Qurupeco palette yet."); */
         }
         public override void SetDefaults() {
 			Item.damage = 22;

@@ -13,7 +13,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Meteorite Drill");
+            // DisplayName.SetDefault("Meteorite Drill");
         }
         public override void SetDefaults()
         {

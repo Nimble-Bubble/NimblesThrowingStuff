@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Brimstone Bomb");
+            // DisplayName.SetDefault("Brimstone Bomb");
         }
         public override void SetDefaults()
         {

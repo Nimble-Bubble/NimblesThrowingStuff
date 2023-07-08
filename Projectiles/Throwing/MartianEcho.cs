@@ -14,7 +14,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Martian Beam");
+            // DisplayName.SetDefault("Martian Beam");
         }
         public override void SetDefaults()
         {

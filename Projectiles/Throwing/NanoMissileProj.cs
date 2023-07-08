@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Nanite Missile");
+            // DisplayName.SetDefault("Nanite Missile");
         }
         public override void SetDefaults()
         {

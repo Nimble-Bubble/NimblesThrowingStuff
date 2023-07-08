@@ -20,11 +20,11 @@ namespace NimblesThrowingStuff.Items.Consumables
 		public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 3;
-			DisplayName.SetDefault("A More Convincing Artifact");
+			// DisplayName.SetDefault("A More Convincing Artifact");
             ItemID.Sets.SortingPriorityBossSpawns[Item.type] = 13;
-			Tooltip.SetDefault("A precious-looking work of art!"
+			/* Tooltip.SetDefault("A precious-looking work of art!"
 				+"\nSummons Morilus, even if he is present already"
-				+"\nUse it in space for the best results");
+				+"\nUse it in space for the best results"); */
 		}
 
 		public override void SetDefaults()

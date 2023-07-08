@@ -22,7 +22,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
         }
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("True Ascalon");
+            // DisplayName.SetDefault("True Ascalon");
         }
         public override void SetDefaults()
         {

@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Satellite Spear");
+            // DisplayName.SetDefault("Satellite Spear");
         }
         public override void SetDefaults()
         {

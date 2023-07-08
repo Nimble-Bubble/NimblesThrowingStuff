@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
         {
             ProjectileID.Sets.YoyosMaximumRange[Projectile.type] = 300f;
             ProjectileID.Sets.YoyosTopSpeed[Projectile.type] = 16f;
-            DisplayName.SetDefault("Space Spinner");
+            // DisplayName.SetDefault("Space Spinner");
         }
         public override void SetDefaults()
         {
@@ -31,7 +31,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             Projectile.aiStyle = 99;
             Projectile.extraUpdates = 1;
         }
-        public override void OnHitNPC (NPC target, int damage, float knockback, bool crit)
+        public override void OnHitNPC (NPC target, NPC.HitInfo hit, int damageDone)
         {
             if (crit)
                 {

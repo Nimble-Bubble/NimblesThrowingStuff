@@ -13,7 +13,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Festive Snowflake");
+            // DisplayName.SetDefault("Festive Snowflake");
         }
         public override void SetDefaults()
         {

@@ -13,7 +13,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Brimstone Shrapnel");
+            // DisplayName.SetDefault("Brimstone Shrapnel");
         }
         public override void SetDefaults()
         {
@@ -28,7 +28,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
             Projectile.aiStyle = 2;
             Projectile.extraUpdates = 1;
         }
-        public override void OnHitNPC (NPC target, int damage, float knockback, bool crit)
+        public override void OnHitNPC (NPC target, NPC.HitInfo hit, int damageDone)
         {
             if (Main.rand.NextBool(5))
             {

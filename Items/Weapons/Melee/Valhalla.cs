@@ -14,8 +14,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 		public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("A mystical spear first forged by the Elder of the Forest."
-							 + "\nCauses enemies to bleed upon impact.");
+			/* Tooltip.SetDefault("A mystical spear first forged by the Elder of the Forest."
+							 + "\nCauses enemies to bleed upon impact."); */
 		}
 		public override void SetDefaults()
 		{

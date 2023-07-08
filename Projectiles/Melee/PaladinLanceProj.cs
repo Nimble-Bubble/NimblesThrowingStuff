@@ -14,7 +14,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Paladin Lance");
+            // DisplayName.SetDefault("Paladin Lance");
         }
         public override void SetDefaults()
         {

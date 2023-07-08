@@ -10,9 +10,9 @@ namespace NimblesThrowingStuff.Items.Materials
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 25;
-			DisplayName.SetDefault("Heavy Grandbone");
-			Tooltip.SetDefault("This bone is like an ant in its strength."
-				+"\nJust a few of these bones can be enough to hold a structure.");
+			// DisplayName.SetDefault("Heavy Grandbone");
+			/* Tooltip.SetDefault("This bone is like an ant in its strength."
+				+"\nJust a few of these bones can be enough to hold a structure."); */
         }
 		public override void SetDefaults()
         {

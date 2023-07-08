@@ -12,7 +12,7 @@ namespace NimblesThrowingStuff.Projectiles.Enemy
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Oceanus Stream");
+            // DisplayName.SetDefault("Oceanus Stream");
         }
 
         public override void SetDefaults()

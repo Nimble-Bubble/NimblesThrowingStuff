@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Scavenged Kunai");
+            // DisplayName.SetDefault("Scavenged Kunai");
         }
         public override void SetDefaults()
         {

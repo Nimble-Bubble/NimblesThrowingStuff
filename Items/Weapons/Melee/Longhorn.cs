@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("Rough-hewn, but sturdy.");
+			// Tooltip.SetDefault("Rough-hewn, but sturdy.");
         }
         public override void SetDefaults() {
 			Item.damage = 10;

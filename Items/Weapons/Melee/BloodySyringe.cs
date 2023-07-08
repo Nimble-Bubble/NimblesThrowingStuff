@@ -14,7 +14,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("AB is a universal recipient. O is a universal donor. This is a universal source of pain.");
+			// Tooltip.SetDefault("AB is a universal recipient. O is a universal donor. This is a universal source of pain.");
         }
         public override void SetDefaults() {
 			Item.damage = 20;

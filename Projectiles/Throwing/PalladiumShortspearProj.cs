@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Palladium Shortspear");
+            // DisplayName.SetDefault("Palladium Shortspear");
         }
         public override void SetDefaults()
         {

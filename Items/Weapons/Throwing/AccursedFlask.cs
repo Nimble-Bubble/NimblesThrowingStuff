@@ -12,7 +12,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 		public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 99;
-			DisplayName.SetDefault("Cursed Flame-filled Throwing Flask");
+			// DisplayName.SetDefault("Cursed Flame-filled Throwing Flask");
 		}
 		public override void SetDefaults() 
 		{

@@ -13,7 +13,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 			//DisplayName.SetDefault("Enchanted Yari");
-			Tooltip.SetDefault("Turns into a stream of water");   
+			// Tooltip.SetDefault("Turns into a stream of water");   
         }
 
 		public override void SetDefaults() 

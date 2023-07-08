@@ -17,9 +17,9 @@ namespace NimblesThrowingStuff.Items.Accessories
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-            DisplayName.SetDefault("Dorado's Flight");
-            Tooltip.SetDefault("Allows flight and slow fall"
-            + "\nStellar membrane gives these wings powerful flight.");
+            // DisplayName.SetDefault("Dorado's Flight");
+            /* Tooltip.SetDefault("Allows flight and slow fall"
+            + "\nStellar membrane gives these wings powerful flight."); */
         }
         public override void SetDefaults()
         {

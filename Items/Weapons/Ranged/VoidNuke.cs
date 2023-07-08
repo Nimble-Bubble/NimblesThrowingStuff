@@ -13,9 +13,9 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Nuclear Void");
+			// DisplayName.SetDefault("Nuclear Void");
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("Fires powerful rockets");
+			// Tooltip.SetDefault("Fires powerful rockets");
 		}
 
 		public override void SetDefaults()

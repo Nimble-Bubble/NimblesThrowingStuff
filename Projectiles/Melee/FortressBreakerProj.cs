@@ -13,7 +13,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Fortress Breaker");
+            // DisplayName.SetDefault("Fortress Breaker");
         }
         public override void SetDefaults()
         {
@@ -76,7 +76,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             }
             //Might put a custom debuff here when the custom debuff in question is done
         }
-        public override void ModifyHitNPC(NPC target, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)
+        public override void ModifyHitNPC(NPC target, ref NPC.HitModifiers modifiers)
         {
             if (crit)
             {

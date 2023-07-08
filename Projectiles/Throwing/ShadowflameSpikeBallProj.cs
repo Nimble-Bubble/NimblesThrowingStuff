@@ -13,7 +13,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Shadowflame Spike Ball");
+            // DisplayName.SetDefault("Shadowflame Spike Ball");
         }
         public override void SetDefaults()
         {
@@ -35,7 +35,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 			}
             
         }
-        public override void OnHitNPC (NPC target, int damage, float knockback, bool crit)
+        public override void OnHitNPC (NPC target, NPC.HitInfo hit, int damageDone)
         {
 			target.AddBuff(BuffID.ShadowFlame, 150);
         }

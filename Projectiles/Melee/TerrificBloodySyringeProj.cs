@@ -20,7 +20,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
         }
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Decayed Bloody Syringe");
+            // DisplayName.SetDefault("Decayed Bloody Syringe");
         }
         public override void SetDefaults()
         {

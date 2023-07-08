@@ -26,7 +26,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             Projectile.extraUpdates = 0;
             Projectile.scale = 1.25f;
         }
-        public override void ModifyHitNPC(NPC target, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)
+        public override void ModifyHitNPC(NPC target, ref NPC.HitModifiers modifiers)
         {
                 target.AddBuff(BuffID.Oiled, 600);
         }

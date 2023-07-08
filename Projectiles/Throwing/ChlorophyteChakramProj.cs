@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
         private int index = 0;
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Chlorophyte Chakram");
+            // DisplayName.SetDefault("Chlorophyte Chakram");
         }
         public override void SetDefaults()
         {

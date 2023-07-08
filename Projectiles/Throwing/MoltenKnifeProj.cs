@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Molten Knife");
+            // DisplayName.SetDefault("Molten Knife");
         }
         public override void SetDefaults()
         {
@@ -29,7 +29,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
             Projectile.DamageType = DamageClass.Throwing;
             Projectile.aiStyle = 2;
         }
-        public override void OnHitNPC (NPC target, int damage, float knockback, bool crit)
+        public override void OnHitNPC (NPC target, NPC.HitInfo hit, int damageDone)
         {
 
             target.AddBuff(24, 150);

@@ -16,7 +16,7 @@ namespace NimblesThrowingStuff.Projectiles.Summoning
 	public class StardustWhipProj : ModProjectile
 	{
 		public override void SetStaticDefaults() {
-			DisplayName.SetDefault("Milkyway Cleaver");
+			// DisplayName.SetDefault("Milkyway Cleaver");
 			ProjectileID.Sets.IsAWhip[Type] = true;
 		}
 

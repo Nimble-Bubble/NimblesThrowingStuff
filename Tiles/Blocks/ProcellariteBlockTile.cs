@@ -2,6 +2,7 @@ using NimblesThrowingStuff.Items.Placeables.Blocks;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 namespace NimblesThrowingStuff.Tiles.Blocks
 {
@@ -15,9 +16,9 @@ namespace NimblesThrowingStuff.Tiles.Blocks
             Main.tileBlockLight[Type] = true;
             Main.tileMergeDirt[Type] = true;
 
-            ItemDrop = ModContent.ItemType<ProcellariteBlock>();
-            ModTranslation name = CreateMapEntryName();
-            name.SetDefault("Procellarite Block");
+            ItemDrop/* tModPorter Note: Removed. Tiles and walls will drop the item which places them automatically. Use RegisterItemDrop to alter the automatic drop if necessary. */ = ModContent.ItemType<ProcellariteBlock>();
+            LocalizedText name = CreateMapEntryName();
+            // name.SetDefault("Procellarite Block");
             AddMapEntry(new Color(0, 200, 185), name);
             MineResist = 2f;
             MinPick = 225;

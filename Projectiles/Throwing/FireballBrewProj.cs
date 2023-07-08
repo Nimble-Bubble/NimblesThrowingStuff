@@ -14,7 +14,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Fireball Brew");
+            // DisplayName.SetDefault("Fireball Brew");
         }
         public override void SetDefaults()
         {

@@ -12,7 +12,7 @@ namespace NimblesThrowingStuff.Items.Tools
 		public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("This pickaxe is lightweight, yet powerful.");
+			// Tooltip.SetDefault("This pickaxe is lightweight, yet powerful.");
 		}
 		public override void SetDefaults() 
 		{

@@ -13,7 +13,7 @@ namespace NimblesThrowingStuff.Projectiles.Enemy
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Oceanus Bolt");
+            // DisplayName.SetDefault("Oceanus Bolt");
         }
 
         public override void SetDefaults()

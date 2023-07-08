@@ -1,6 +1,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 using Terraria.ID;
@@ -23,8 +24,8 @@ namespace NimblesThrowingStuff.Tiles.Banners
             TileObjectData.addTile(Type);
             TileID.Sets.DisableSmartCursor[Type] = true;
 
-            ModTranslation name = CreateMapEntryName();
-			name.SetDefault("Clam Banner");
+            LocalizedText name = CreateMapEntryName();
+			// name.SetDefault("Clam Banner");
             AddMapEntry(new Color(132, 132, 88), name); 
         }
  

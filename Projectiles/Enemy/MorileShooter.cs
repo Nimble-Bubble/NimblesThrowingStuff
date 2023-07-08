@@ -12,7 +12,7 @@ namespace NimblesThrowingStuff.Projectiles.Enemy
         private Player player;
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Morile Shooter");
+            // DisplayName.SetDefault("Morile Shooter");
         }
 
         public override void SetDefaults()

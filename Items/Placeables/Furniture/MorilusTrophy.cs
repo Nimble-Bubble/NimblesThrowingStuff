@@ -11,7 +11,7 @@ namespace NimblesThrowingStuff.Items.Placeables.Furniture
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 3;
-			Tooltip.SetDefault("A chip of such power could only be encased in the finest of forbidden cheese.");
+			// Tooltip.SetDefault("A chip of such power could only be encased in the finest of forbidden cheese.");
         }
         public override void SetDefaults() 
 		{

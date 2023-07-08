@@ -15,8 +15,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("This lance can break through defenses."
-				+"\nCritical hits completely ignore defense.");
+			/* Tooltip.SetDefault("This lance can break through defenses."
+				+"\nCritical hits completely ignore defense."); */
         }
         public override void SetDefaults() {
 			Item.damage = 27;

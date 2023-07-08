@@ -13,9 +13,9 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 	{
         public override void SetStaticDefaults()
         {
-			DisplayName.SetDefault("The Meteormaker");
+			// DisplayName.SetDefault("The Meteormaker");
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("Rains meteors from the sky on critical strikes");
+			// Tooltip.SetDefault("Rains meteors from the sky on critical strikes");
 			ItemID.Sets.Yoyo[Item.type] = true;
 			ItemID.Sets.GamepadExtraRange[Item.type] = 50;
 			ItemID.Sets.GamepadSmartQuickReach[Item.type] = true;

@@ -14,8 +14,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Summoning
         public override void SetStaticDefaults() 
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			DisplayName.SetDefault("Milkyway Cleaver"); 
-			Tooltip.SetDefault("Born from stardust, this whip can tear through brasts and worlds alike");
+			// DisplayName.SetDefault("Milkyway Cleaver"); 
+			// Tooltip.SetDefault("Born from stardust, this whip can tear through brasts and worlds alike");
             Item.staff[Item.type] = true;
             ItemID.Sets.GamepadWholeScreenUseRange[Item.type] = true; 
 			ItemID.Sets.LockOnIgnoresCollision[Item.type] = true;

@@ -11,7 +11,7 @@ namespace NimblesThrowingStuff.Projectiles.Enemy
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Star Bomb");
+            // DisplayName.SetDefault("Star Bomb");
         }
 
         public override void SetDefaults()

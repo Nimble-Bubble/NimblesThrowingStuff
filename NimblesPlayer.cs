@@ -117,7 +117,7 @@ namespace NimblesThrowingStuff
                 return;
             }
         }
-        public override void Hurt(bool pvp, bool quiet, double damage, int hitDirection, bool crit, int cooldownCounter)
+        public override void OnHurt(Player.HurtInfo info)
         {
             if (NimblesThrowingStuff.MIGuardKey.Current && whichShield >= 1)
             {
@@ -145,7 +145,7 @@ namespace NimblesThrowingStuff
                 
             }
         }
-        public override void PostHurt(bool pvp, bool quiet, double damage, int hitDirection, bool crit, int cooldownCounter) 
+        public override void PostHurt(Player.HurtInfo info) 
         {
             if (compromise)
             {

@@ -12,7 +12,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 		public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("Fires several stingers along with your arrow");
+			// Tooltip.SetDefault("Fires several stingers along with your arrow");
 		}
 		public override void SetDefaults()
 		{

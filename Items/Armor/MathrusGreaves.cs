@@ -17,8 +17,8 @@ namespace NimblesThrowingStuff.Items.Armor
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-            DisplayName.SetDefault("Draconic Greaves");
-                Tooltip.SetDefault("Increases movement speed and throwing damage by 40%");
+            // DisplayName.SetDefault("Draconic Greaves");
+                // Tooltip.SetDefault("Increases movement speed and throwing damage by 40%");
         }
 
         public override void SetDefaults()

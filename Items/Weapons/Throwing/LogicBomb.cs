@@ -11,7 +11,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("Can confuse enemies with its explosion");   
+			// Tooltip.SetDefault("Can confuse enemies with its explosion");   
         }
 		public override void SetDefaults() 
 		{

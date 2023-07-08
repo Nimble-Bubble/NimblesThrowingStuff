@@ -1,6 +1,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.ObjectData;
@@ -22,8 +23,8 @@ namespace NimblesThrowingStuff.Tiles.Banners
             TileObjectData.newTile.StyleWrapLimit = 111;
             TileObjectData.addTile(Type);
             TileID.Sets.DisableSmartCursor[Type] = true;
-            ModTranslation name = CreateMapEntryName();
-			name.SetDefault("Kelbi Banner");
+            LocalizedText name = CreateMapEntryName();
+			// name.SetDefault("Kelbi Banner");
             AddMapEntry(new Color(68, 181, 154), name); 
         }
  

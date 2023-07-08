@@ -10,8 +10,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 99;
-			DisplayName.SetDefault("Rustbone Hatchet");
-            Tooltip.SetDefault("Accelerates beyond perceptions and envenoms enemies for some reason");
+			// DisplayName.SetDefault("Rustbone Hatchet");
+            // Tooltip.SetDefault("Accelerates beyond perceptions and envenoms enemies for some reason");
         }
 
 		public override void SetDefaults() 

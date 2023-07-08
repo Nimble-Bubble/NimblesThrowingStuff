@@ -18,7 +18,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
         }
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Valhalla");
+            // DisplayName.SetDefault("Valhalla");
         }
         public override void SetDefaults()
         {
@@ -137,7 +137,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                 Projectile.Kill();
             }
         }
-        public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
+        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
             target.AddBuff(344, 300);
             target.AddBuff(BuffID.Bleeding, 600);

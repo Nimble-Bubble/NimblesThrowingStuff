@@ -16,8 +16,8 @@ namespace NimblesThrowingStuff.Items.Armor
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-            DisplayName.SetDefault("Titanium Hat");
-                Tooltip.SetDefault("Increases thrown damage by 21% and thrown critical strike chance by 12%");
+            // DisplayName.SetDefault("Titanium Hat");
+                // Tooltip.SetDefault("Increases thrown damage by 21% and thrown critical strike chance by 12%");
         }
 
         public override void SetDefaults()

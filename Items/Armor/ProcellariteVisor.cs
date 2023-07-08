@@ -17,8 +17,8 @@ namespace NimblesThrowingStuff.Items.Armor
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-            Tooltip.SetDefault("Increases ranged damage by 30% and critical strike chance by 20%"
-                +"\nWhile the glass-like layer is worse than pure solid Procellarite for durability, its sensory benefits are undeniable.");
+            /* Tooltip.SetDefault("Increases ranged damage by 30% and critical strike chance by 20%"
+                +"\nWhile the glass-like layer is worse than pure solid Procellarite for durability, its sensory benefits are undeniable."); */
         }
 
         public override void SetDefaults()

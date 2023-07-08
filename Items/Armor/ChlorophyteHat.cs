@@ -16,9 +16,9 @@ namespace NimblesThrowingStuff.Items.Armor
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-            DisplayName.SetDefault("Chlorophyte Hat");
-                Tooltip.SetDefault("Increases thrown damage by 16% and thrown critical strike chance by 6%"
-                                +"\nThrowing weapons poison and envenom enemies");
+            // DisplayName.SetDefault("Chlorophyte Hat");
+                /* Tooltip.SetDefault("Increases thrown damage by 16% and thrown critical strike chance by 6%"
+                                +"\nThrowing weapons poison and envenom enemies"); */
         }
 
         public override void SetDefaults()

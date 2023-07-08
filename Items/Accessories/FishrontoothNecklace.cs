@@ -17,8 +17,8 @@ namespace NimblesThrowingStuff.Items.Accessories
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-            Tooltip.SetDefault("Look into the mind's eye"
-                              +"\n+30 armor penetration");
+            /* Tooltip.SetDefault("Look into the mind's eye"
+                              +"\n+30 armor penetration"); */
         }
         public override void SetDefaults()
         {

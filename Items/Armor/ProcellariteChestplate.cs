@@ -17,8 +17,8 @@ namespace NimblesThrowingStuff.Items.Armor
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-            DisplayName.SetDefault("Procellarite Chestplate");
-                Tooltip.SetDefault("Increases damage and critical strike chance by 10% and maximum life by 100");
+            // DisplayName.SetDefault("Procellarite Chestplate");
+                // Tooltip.SetDefault("Increases damage and critical strike chance by 10% and maximum life by 100");
         }
 
         public override void SetDefaults()

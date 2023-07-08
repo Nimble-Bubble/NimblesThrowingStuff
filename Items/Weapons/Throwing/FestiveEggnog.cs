@@ -10,7 +10,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("Explodes into drops o' nog");   
+			// Tooltip.SetDefault("Explodes into drops o' nog");   
         }
 
 		public override void SetDefaults() 

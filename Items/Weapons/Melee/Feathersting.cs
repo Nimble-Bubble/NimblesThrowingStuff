@@ -15,8 +15,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("Fly with wings of feathers and sting with talons of bone"
-				+"\nWhile attacking, you are immune to fall damage");
+			/* Tooltip.SetDefault("Fly with wings of feathers and sting with talons of bone"
+				+"\nWhile attacking, you are immune to fall damage"); */
         }
         public override void SetDefaults() {
 			Item.damage = 12;

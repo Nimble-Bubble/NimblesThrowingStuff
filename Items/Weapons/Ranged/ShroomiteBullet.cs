@@ -12,7 +12,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 99;
-			Tooltip.SetDefault("Bounces on impact");
+			// Tooltip.SetDefault("Bounces on impact");
         }
         public override void SetDefaults() {
 			Item.damage = 15;

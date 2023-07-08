@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Orichalcum Hatchet");
+            // DisplayName.SetDefault("Orichalcum Hatchet");
         }
         public override void SetDefaults()
         {

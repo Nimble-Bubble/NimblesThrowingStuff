@@ -15,9 +15,9 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 		public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			DisplayName.SetDefault("Growling Wyvern");
-			Tooltip.SetDefault("A drill-like lance that pierces into the veins of fiends."
-				+"\nMay cause bleeding.");
+			// DisplayName.SetDefault("Growling Wyvern");
+			/* Tooltip.SetDefault("A drill-like lance that pierces into the veins of fiends."
+				+"\nMay cause bleeding."); */
 		}
 		public override void SetDefaults()
 		{

@@ -18,7 +18,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
         }
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Estoc");
+            // DisplayName.SetDefault("Estoc");
         }
         public override void SetDefaults()
         {
@@ -79,7 +79,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                 Projectile.Kill();
             }
         }
-        public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
+        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
             if (crit)
             {

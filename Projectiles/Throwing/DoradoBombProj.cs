@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Dragon's Breath");
+            // DisplayName.SetDefault("Dragon's Breath");
         }
         public override void SetDefaults()
         {

@@ -15,9 +15,9 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 		public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("This spectral lance is mysterious, yet strong all the same."
+			/* Tooltip.SetDefault("This spectral lance is mysterious, yet strong all the same."
 				+"\nCuriously, strikes seem not to push enemies, as if the lance was not there at all."
-				+"\nCritical strikes make you invincible and invisible for a short period of time");
+				+"\nCritical strikes make you invincible and invisible for a short period of time"); */
 		}
 		public override void SetDefaults()
 		{

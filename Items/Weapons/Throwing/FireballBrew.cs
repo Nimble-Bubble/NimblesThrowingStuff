@@ -11,7 +11,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 		public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("When it breaks, it bursts into brilliant flames");
+			// Tooltip.SetDefault("When it breaks, it bursts into brilliant flames");
 		}
 		public override void SetDefaults() 
 		{

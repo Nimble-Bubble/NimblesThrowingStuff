@@ -15,9 +15,9 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("From an abyss so old that most would call it a niwelnysse, this beast awakens"
+			/* Tooltip.SetDefault("From an abyss so old that most would call it a niwelnysse, this beast awakens"
 				+"\nRight click while holding the gunlance out to fire a shell. Shells do 5/4 of the weapon's base damage."
-				+"\nThe maximum amount of shells for this weapon is 6. Each reload gives you 2 shells.");
+				+"\nThe maximum amount of shells for this weapon is 6. Each reload gives you 2 shells."); */
         }
         public override void SetDefaults() {
 			Item.damage = 160;

@@ -11,7 +11,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Stream of Blood");
+            // DisplayName.SetDefault("Stream of Blood");
         }
 
         public override void SetDefaults()

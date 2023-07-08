@@ -14,7 +14,7 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
     {
 		public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Clam");
+            // DisplayName.SetDefault("Clam");
             Main.npcFrameCount[NPC.type] = 6;
 		}
 

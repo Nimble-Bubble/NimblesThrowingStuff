@@ -17,7 +17,7 @@ namespace NimblesThrowingStuff.Items.Armor
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-            Tooltip.SetDefault("Increases mana by 100 and throwing velocity by 40%");
+            // Tooltip.SetDefault("Increases mana by 100 and throwing velocity by 40%");
         }
 
         public override void SetDefaults()

@@ -13,7 +13,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Logicsplosion");
+            // DisplayName.SetDefault("Logicsplosion");
         }
         public override void SetDefaults()
         {
@@ -30,7 +30,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
             Projectile.aiStyle = 1;
             Projectile.alpha = 255;
         }
-        public override void OnHitNPC (NPC target, int damage, float knockback, bool crit)
+        public override void OnHitNPC (NPC target, NPC.HitInfo hit, int damageDone)
         {
             target.AddBuff(31, 750);
         }

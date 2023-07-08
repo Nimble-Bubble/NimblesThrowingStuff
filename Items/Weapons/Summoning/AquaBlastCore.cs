@@ -15,8 +15,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Summoning
         public override void SetStaticDefaults() 
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			DisplayName.SetDefault("Aqua Blaster Core"); 
-			Tooltip.SetDefault("Summons an Aqua Blaster");
+			// DisplayName.SetDefault("Aqua Blaster Core"); 
+			// Tooltip.SetDefault("Summons an Aqua Blaster");
             Item.staff[Item.type] = true;
             ItemID.Sets.GamepadWholeScreenUseRange[Item.type] = true; 
 			ItemID.Sets.LockOnIgnoresCollision[Item.type] = true;

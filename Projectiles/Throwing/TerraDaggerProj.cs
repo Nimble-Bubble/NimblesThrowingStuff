@@ -16,7 +16,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
         public int tindex = 0;
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Terra Dagger");
+            // DisplayName.SetDefault("Terra Dagger");
         }
         public override void SetDefaults()
         {

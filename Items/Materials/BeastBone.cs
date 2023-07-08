@@ -10,7 +10,7 @@ namespace NimblesThrowingStuff.Items.Materials
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 25;
-			Tooltip.SetDefault("Bigger than human bones, but a bit clumsier to work with");
+			// Tooltip.SetDefault("Bigger than human bones, but a bit clumsier to work with");
         }
 		public override void SetDefaults()
         {

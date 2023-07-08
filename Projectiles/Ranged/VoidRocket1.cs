@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Projectiles.Ranged
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Void Rocket I");
+            // DisplayName.SetDefault("Void Rocket I");
             Main.projFrames[Projectile.type] = 2;
             ProjectileID.Sets.CultistIsResistantTo[Projectile.type] = false;
         }

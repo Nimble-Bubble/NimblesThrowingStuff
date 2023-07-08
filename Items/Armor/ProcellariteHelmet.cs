@@ -17,8 +17,8 @@ namespace NimblesThrowingStuff.Items.Armor
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-            Tooltip.SetDefault("Increases melee damage by 30% and critical strike chance by 20%"
-                +"\nThe Y-shaped hole on this helmet is good for vision and communication, but it leaves a vulnerability.");
+            /* Tooltip.SetDefault("Increases melee damage by 30% and critical strike chance by 20%"
+                +"\nThe Y-shaped hole on this helmet is good for vision and communication, but it leaves a vulnerability."); */
         }
 
         public override void SetDefaults()

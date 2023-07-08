@@ -14,8 +14,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 		public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("This marvel of technology can slice through shell and tear through flesh"
-				+ "\nCombustible rathwyvern powder gives regular arrows fiery power");
+			/* Tooltip.SetDefault("This marvel of technology can slice through shell and tear through flesh"
+				+ "\nCombustible rathwyvern powder gives regular arrows fiery power"); */
 		}
 
 		public override void SetDefaults()

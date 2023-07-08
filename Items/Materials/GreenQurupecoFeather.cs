@@ -10,9 +10,9 @@ namespace NimblesThrowingStuff.Items.Materials
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 25;
-			DisplayName.SetDefault("Vivid Bicolor Feather");
-			Tooltip.SetDefault("These brilliant feathers freeze and get wet easily, but they are surprisingly fire-resistant."
-				+"\nThey are said to come from a 'siren bird' which lures in fools and leaves them alight.");
+			// DisplayName.SetDefault("Vivid Bicolor Feather");
+			/* Tooltip.SetDefault("These brilliant feathers freeze and get wet easily, but they are surprisingly fire-resistant."
+				+"\nThey are said to come from a 'siren bird' which lures in fools and leaves them alight."); */
         }
 		public override void SetDefaults()
         {

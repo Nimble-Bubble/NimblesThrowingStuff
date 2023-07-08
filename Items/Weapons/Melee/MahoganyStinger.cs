@@ -14,9 +14,9 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("Sting like a bee. Fly...like a bee."
+			/* Tooltip.SetDefault("Sting like a bee. Fly...like a bee."
 				+"\nRight click to launch yourself in the direction of the lance."
-				+"\nHits may poison enemies, especially when launched.");
+				+"\nHits may poison enemies, especially when launched."); */
         }
         public override void SetDefaults() {
 			Item.damage = 22;

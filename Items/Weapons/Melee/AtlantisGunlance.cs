@@ -15,9 +15,9 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("From the depths of the abyss comes this feared beast..."
+			/* Tooltip.SetDefault("From the depths of the abyss comes this feared beast..."
 				+"\nRight click while holding the gunlance out to fire a shell. Shells do 125% of the weapon's base damage."
-				+"\nThis gunlance holds up to 3 shells. Each reload gives you 1 shell.");
+				+"\nThis gunlance holds up to 3 shells. Each reload gives you 1 shell."); */
         }
         public override void SetDefaults() {
 			Item.damage = 90;

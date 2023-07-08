@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Cobalt Shortspear");
+            // DisplayName.SetDefault("Cobalt Shortspear");
         }
         public override void SetDefaults()
         {

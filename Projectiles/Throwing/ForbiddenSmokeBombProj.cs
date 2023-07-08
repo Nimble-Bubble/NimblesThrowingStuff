@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Forbidden Smoke Bomb");
+            // DisplayName.SetDefault("Forbidden Smoke Bomb");
         }
         public override void SetDefaults()
         {

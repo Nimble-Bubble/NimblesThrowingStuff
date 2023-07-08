@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("Fires three bubbles in a spread");
+			// Tooltip.SetDefault("Fires three bubbles in a spread");
         }
         public override void SetDefaults() {
 			Item.damage = 75;

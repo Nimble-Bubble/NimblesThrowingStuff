@@ -14,10 +14,10 @@ namespace NimblesThrowingStuff.Items.Weapons.Magic
         public override void SetStaticDefaults() 
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			DisplayName.SetDefault("Barrier Builder"); 
-			Tooltip.SetDefault("Creates two barriers at the position of the cursor that will move opposite of each other"
+			// DisplayName.SetDefault("Barrier Builder"); 
+			/* Tooltip.SetDefault("Creates two barriers at the position of the cursor that will move opposite of each other"
 				+"\nLeft click will create tall walls that move horizontally"
-				+"\nRight click will create wide walls that move vertically");
+				+"\nRight click will create wide walls that move vertically"); */
             Item.staff[Item.type] = true;
             ItemID.Sets.GamepadWholeScreenUseRange[Item.type] = true; 
 			ItemID.Sets.LockOnIgnoresCollision[Item.type] = true;

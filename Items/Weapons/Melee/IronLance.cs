@@ -14,8 +14,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			DisplayName.SetDefault("Iron Lance");
-			Tooltip.SetDefault("A heavy lance for sure, but its power makes up for it.");
+			// DisplayName.SetDefault("Iron Lance");
+			// Tooltip.SetDefault("A heavy lance for sure, but its power makes up for it.");
         }
         public override void SetDefaults() {
 			Item.damage = 12;

@@ -11,8 +11,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			DisplayName.SetDefault("Macabrazor");
-         Tooltip.SetDefault("Hmm...This is familiar...");   
+			// DisplayName.SetDefault("Macabrazor");
+         // Tooltip.SetDefault("Hmm...This is familiar...");   
             Item.staff[Item.type] = true;
         }
 

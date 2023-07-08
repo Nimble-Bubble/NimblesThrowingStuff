@@ -23,7 +23,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
         }
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Sea Diver");
+            // DisplayName.SetDefault("Sea Diver");
         }
         public override void SetDefaults()
         {

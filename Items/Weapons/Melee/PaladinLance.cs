@@ -14,8 +14,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 		public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			DisplayName.SetDefault("Paladin Lance");
-			Tooltip.SetDefault("A powerful and heavy lance known for its presence on the battlefield.");
+			// DisplayName.SetDefault("Paladin Lance");
+			// Tooltip.SetDefault("A powerful and heavy lance known for its presence on the battlefield.");
 		}
 		public override void SetDefaults()
 		{

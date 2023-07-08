@@ -17,8 +17,8 @@ namespace NimblesThrowingStuff.Items.Armor
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-            DisplayName.SetDefault("Draconic Helmet");
-                Tooltip.SetDefault("Increases mana by 120 and throwing velocity by 60%");
+            // DisplayName.SetDefault("Draconic Helmet");
+                // Tooltip.SetDefault("Increases mana by 120 and throwing velocity by 60%");
         }
 
         public override void SetDefaults()

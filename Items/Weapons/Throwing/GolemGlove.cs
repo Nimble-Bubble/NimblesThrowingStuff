@@ -11,8 +11,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			DisplayName.SetDefault("Golem's Glove");
-         Tooltip.SetDefault("Throws three balls of fire");   
+			// DisplayName.SetDefault("Golem's Glove");
+         // Tooltip.SetDefault("Throws three balls of fire");   
         }
 
 		public override void SetDefaults() 

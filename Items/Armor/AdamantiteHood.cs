@@ -16,7 +16,7 @@ namespace NimblesThrowingStuff.Items.Armor
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-            Tooltip.SetDefault("Increases minion damage by 9% and minion slots by 1");
+            // Tooltip.SetDefault("Increases minion damage by 9% and minion slots by 1");
         }
 
         public override void SetDefaults()

@@ -15,8 +15,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("A lance modeled after a flower bud. It matches its cute exterior with a pleasant odor."
-				+"\n...Pleasant enough to you, at least. Right click while attacking to fire a damaging spore cloud.");
+			/* Tooltip.SetDefault("A lance modeled after a flower bud. It matches its cute exterior with a pleasant odor."
+				+"\n...Pleasant enough to you, at least. Right click while attacking to fire a damaging spore cloud."); */
         }
         public override void SetDefaults() {
 			Item.damage = 23;

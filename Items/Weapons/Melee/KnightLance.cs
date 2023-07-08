@@ -15,8 +15,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 		public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("Made with valuable ores, this lance can slice and thrust."
-				+"\nRight click to swing like a sword.");
+			/* Tooltip.SetDefault("Made with valuable ores, this lance can slice and thrust."
+				+"\nRight click to swing like a sword."); */
 		}
 		public override void SetDefaults()
 		{

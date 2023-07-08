@@ -15,9 +15,9 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 		public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("A true masterwork of metalsmithing and machinery."
+			/* Tooltip.SetDefault("A true masterwork of metalsmithing and machinery."
 				+"\nRight click to fire three holy laser beams that each do half of the weapon's base damage. Guard and right click to charge the laser beams."
-				+ "\nA single reload gives 4 charges, and you can have up to 12 charges. A single instance of laserfire takes up 3 charges.");
+				+ "\nA single reload gives 4 charges, and you can have up to 12 charges. A single instance of laserfire takes up 3 charges."); */
 		}
 		public override void SetDefaults()
 		{

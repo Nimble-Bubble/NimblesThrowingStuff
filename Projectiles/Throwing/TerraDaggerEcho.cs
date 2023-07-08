@@ -13,7 +13,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Terra Dagger Echo");
+            // DisplayName.SetDefault("Terra Dagger Echo");
         }
         public override void SetDefaults()
         {

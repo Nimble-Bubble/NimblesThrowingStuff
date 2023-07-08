@@ -14,7 +14,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Cumulus Crasher");
+            // DisplayName.SetDefault("Cumulus Crasher");
         }
         public override void SetDefaults()
         {

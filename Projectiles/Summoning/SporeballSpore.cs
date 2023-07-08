@@ -31,7 +31,7 @@ namespace NimblesThrowingStuff.Projectiles.Summoning
             Projectile.velocity.Y *= 0.95f;
             Projectile.scale *= 0.95f;
         }
-        public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
+        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
             target.AddBuff(BuffID.Poisoned, 60);
         }

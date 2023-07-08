@@ -16,8 +16,8 @@ namespace NimblesThrowingStuff.Items.Armor
     {
         public override void SetStaticDefaults()
         {
-                Tooltip.SetDefault("Increases summoning damage by 50% and minion max by 4"
-                    +"\nThis mask appears to be inspired by an endemic animal, but you're not entirely sure what lies up there...");
+                /* Tooltip.SetDefault("Increases summoning damage by 50% and minion max by 4"
+                    +"\nThis mask appears to be inspired by an endemic animal, but you're not entirely sure what lies up there..."); */
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

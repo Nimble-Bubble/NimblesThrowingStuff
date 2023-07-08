@@ -8,8 +8,8 @@ namespace NimblesThrowingStuff.Buffs
 	public class HermitaurBoost : ModBuff
 	{
 		public override void SetStaticDefaults() {
-			DisplayName.SetDefault("Daimyo's Blessing");
-			Description.SetDefault("Endurance increased by 25%");
+			// DisplayName.SetDefault("Daimyo's Blessing");
+			// Description.SetDefault("Endurance increased by 25%");
 			Main.debuff[Type] = true;
 			Main.pvpBuff[Type] = true;
 			Main.buffNoSave[Type] = true;

@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Items.Accessories
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-            Tooltip.SetDefault("15% increased thrown damage");
+            // Tooltip.SetDefault("15% increased thrown damage");
         }
         public override void SetDefaults()
         {

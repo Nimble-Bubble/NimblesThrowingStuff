@@ -10,7 +10,7 @@ namespace NimblesThrowingStuff.Items.Materials
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 25;
-			Tooltip.SetDefault("A furry bit of bat skin");
+			// Tooltip.SetDefault("A furry bit of bat skin");
         }
 		public override void SetDefaults()
         {

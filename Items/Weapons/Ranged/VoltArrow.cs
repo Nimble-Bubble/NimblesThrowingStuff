@@ -12,7 +12,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 		public override void SetStaticDefaults() 
 		{ 
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 99;
-			Tooltip.SetDefault("Has a chance to electrify a target");
+			// Tooltip.SetDefault("Has a chance to electrify a target");
 		}
 		public override void SetDefaults() {
 			Item.damage = 12;

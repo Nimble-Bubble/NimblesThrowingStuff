@@ -18,8 +18,8 @@ namespace NimblesThrowingStuff.Items.Accessories.Shields
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-            Tooltip.SetDefault("The stinger stabs enemies on contact when guarding"
-                +"\nSting damage is equal to damage taken by the user");
+            /* Tooltip.SetDefault("The stinger stabs enemies on contact when guarding"
+                +"\nSting damage is equal to damage taken by the user"); */
         }
         public override void SetDefaults()
         {

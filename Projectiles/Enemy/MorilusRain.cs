@@ -11,7 +11,7 @@ namespace NimblesThrowingStuff.Projectiles.Enemy
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Oceanus Rain");
+            // DisplayName.SetDefault("Oceanus Rain");
         }
 
         public override void SetDefaults()

@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Spike Knife");
+            // DisplayName.SetDefault("Spike Knife");
         }
         public override void SetDefaults()
         {

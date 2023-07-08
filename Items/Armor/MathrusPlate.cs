@@ -17,8 +17,8 @@ namespace NimblesThrowingStuff.Items.Armor
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-            DisplayName.SetDefault("Draconic Breastplate");
-                Tooltip.SetDefault("Increases throwing speed by 20% and throwing critical strike chance by 25%");
+            // DisplayName.SetDefault("Draconic Breastplate");
+                // Tooltip.SetDefault("Increases throwing speed by 20% and throwing critical strike chance by 25%");
         }
 
         public override void SetDefaults()

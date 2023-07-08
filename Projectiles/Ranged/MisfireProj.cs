@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Projectiles.Ranged
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Misfire");
+            // DisplayName.SetDefault("Misfire");
         }
         public override void SetDefaults()
         {

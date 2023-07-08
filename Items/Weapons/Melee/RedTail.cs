@@ -15,8 +15,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("Made to resemble a Rathalos' tail. It's a bit small, but it spits flames."
-				+"\nRight click to spew flames from the tip of the lance.");
+			/* Tooltip.SetDefault("Made to resemble a Rathalos' tail. It's a bit small, but it spits flames."
+				+"\nRight click to spew flames from the tip of the lance."); */
         }
         public override void SetDefaults() {
 			Item.damage = 32;

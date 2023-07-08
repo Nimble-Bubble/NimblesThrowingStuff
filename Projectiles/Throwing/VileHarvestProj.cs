@@ -13,7 +13,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Vile Harvest");
+            // DisplayName.SetDefault("Vile Harvest");
         }
         public override void SetDefaults()
         {

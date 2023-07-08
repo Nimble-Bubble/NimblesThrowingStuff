@@ -14,7 +14,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Shadow Javelin");
+            // DisplayName.SetDefault("Shadow Javelin");
         }
         public override void SetDefaults()
         {
@@ -35,7 +35,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
                 Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, 272, Main.rand.Next(2, 3), Main.rand.Next(2, 3), 0, default(Color), 0.75f);
             }
         }
-        public override void OnHitNPC (NPC target, int damage, float knockback, bool crit)
+        public override void OnHitNPC (NPC target, NPC.HitInfo hit, int damageDone)
         {
             if (Main.rand.NextBool(3))
             {

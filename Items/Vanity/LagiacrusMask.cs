@@ -16,8 +16,8 @@ namespace NimblesThrowingStuff.Items.Vanity
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-            Tooltip.SetDefault("This strange mask resembles the sea's monarch."
-                +"\nPerfect for cosplay!");
+            /* Tooltip.SetDefault("This strange mask resembles the sea's monarch."
+                +"\nPerfect for cosplay!"); */
         }
         public override void SetDefaults()
         {

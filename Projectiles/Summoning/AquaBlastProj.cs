@@ -11,7 +11,7 @@ namespace NimblesThrowingStuff.Projectiles.Summoning
 	public class AquaBlastProj : ModProjectile
 	{
 		public override void SetStaticDefaults() {
-			DisplayName.SetDefault("Aqua Blaster");
+			// DisplayName.SetDefault("Aqua Blaster");
 			ProjectileID.Sets.MinionTargettingFeature[Projectile.type] = true;
 			Main.projPet[Projectile.type] = true;
 			ProjectileID.Sets.MinionSacrificable[Projectile.type] = true;

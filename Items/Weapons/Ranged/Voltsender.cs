@@ -14,8 +14,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 		public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("Made from supple Lagiacrus parts, the coils on this bow do wonders for arrow velocity."
-				+"\nTurns arrows into volt arrows which have a chance to electrify targets.");
+			/* Tooltip.SetDefault("Made from supple Lagiacrus parts, the coils on this bow do wonders for arrow velocity."
+				+"\nTurns arrows into volt arrows which have a chance to electrify targets."); */
 		}
 
 		public override void SetDefaults()

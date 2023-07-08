@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Titanium Mallet");
+            // DisplayName.SetDefault("Titanium Mallet");
         }
         public override void SetDefaults()
         {

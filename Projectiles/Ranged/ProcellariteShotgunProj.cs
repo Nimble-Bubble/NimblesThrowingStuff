@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Projectiles.Ranged
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Bonus Shot");
+            // DisplayName.SetDefault("Bonus Shot");
         }
         public override void SetDefaults()
         {

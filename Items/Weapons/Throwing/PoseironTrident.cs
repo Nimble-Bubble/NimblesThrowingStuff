@@ -10,8 +10,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			DisplayName.SetDefault("Poseiron's Trident");
-         Tooltip.SetDefault("A sea god's three-pronged spear that oils and frostburns foes");   
+			// DisplayName.SetDefault("Poseiron's Trident");
+         // Tooltip.SetDefault("A sea god's three-pronged spear that oils and frostburns foes");   
         }
 
 		public override void SetDefaults() 

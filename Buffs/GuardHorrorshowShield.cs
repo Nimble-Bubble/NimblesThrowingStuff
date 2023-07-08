@@ -12,8 +12,8 @@ namespace NimblesThrowingStuff.Buffs
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Guard?");
-			Description.SetDefault("Nothing can hit you. You can hit nothing. Is all well? All is well.");
+			// DisplayName.SetDefault("Guard?");
+			// Description.SetDefault("Nothing can hit you. You can hit nothing. Is all well? All is well.");
 			Main.buffNoSave[Type] = true;
 			Main.buffNoTimeDisplay[Type] = true;
 		}

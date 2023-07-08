@@ -21,7 +21,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
         }
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Fashionable Fragrance");
+            // DisplayName.SetDefault("Fashionable Fragrance");
         }
         public override void SetDefaults()
         {

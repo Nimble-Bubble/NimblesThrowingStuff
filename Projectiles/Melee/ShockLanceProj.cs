@@ -20,7 +20,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
         }
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Shock Lance");
+            // DisplayName.SetDefault("Shock Lance");
         }
         public override void SetDefaults()
         {

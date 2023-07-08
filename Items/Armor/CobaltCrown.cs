@@ -16,8 +16,8 @@ namespace NimblesThrowingStuff.Items.Armor
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-            DisplayName.SetDefault("Cobalt Crown");
-                Tooltip.SetDefault("Increases minion damage by 5%");
+            // DisplayName.SetDefault("Cobalt Crown");
+                // Tooltip.SetDefault("Increases minion damage by 5%");
             ArmorIDs.Head.Sets.DrawHatHair[Item.headSlot] = true;
         }
 

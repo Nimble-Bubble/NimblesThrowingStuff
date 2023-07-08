@@ -17,8 +17,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("A greatsword made using Lagiacrus materials."
-				+"\nDanger: High voltage! Electricity still flows through Lagiacrus shell when separated from its source.");
+			/* Tooltip.SetDefault("A greatsword made using Lagiacrus materials."
+				+"\nDanger: High voltage! Electricity still flows through Lagiacrus shell when separated from its source."); */
         }
         public override void SetDefaults() {
 			Item.damage = 28;
@@ -41,7 +41,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 				int dust = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, 226);
 			}
 		}
-		public override void OnHitNPC(Player player, NPC target, int damage, float knockBack, bool crit)
+		public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
         {
 			for (int f = 0; f < 3; f++)
 			{

@@ -88,7 +88,7 @@ namespace NimblesThrowingStuff.NPCs
             }
 
 		}
-		public override void SetupShop(int type, Chest shop, ref int nextSlot)
+		public override void ModifyActiveShop(NPC npc, string shopName, Item[] items)
 		{
 			Player player = Main.player[Main.myPlayer];
 			switch (type)

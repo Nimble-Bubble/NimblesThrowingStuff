@@ -15,9 +15,9 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			DisplayName.SetDefault("Hermit's Touch");
-			Tooltip.SetDefault("Made from Hermitaur parts, this weapon is more than adequate as a beginner's lance."
-				+"\nCritical strikes give you increased endurance for a short period of time.");
+			// DisplayName.SetDefault("Hermit's Touch");
+			/* Tooltip.SetDefault("Made from Hermitaur parts, this weapon is more than adequate as a beginner's lance."
+				+"\nCritical strikes give you increased endurance for a short period of time."); */
         }
         public override void SetDefaults() {
 			Item.damage = 26;

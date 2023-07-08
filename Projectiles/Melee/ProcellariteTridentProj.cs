@@ -10,7 +10,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Procellarite Trident");
+			// DisplayName.SetDefault("Procellarite Trident");
 		}
 
 		public override void SetDefaults()

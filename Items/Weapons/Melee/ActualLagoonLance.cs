@@ -15,9 +15,9 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			DisplayName.SetDefault("Laguna Lance");
-			Tooltip.SetDefault("This lance resembles a water gun in its function, but its origins are shrouded in mystery."
-				+"\nRight click while holding the lance out to fire a high-pressure stream of water.");
+			// DisplayName.SetDefault("Laguna Lance");
+			/* Tooltip.SetDefault("This lance resembles a water gun in its function, but its origins are shrouded in mystery."
+				+"\nRight click while holding the lance out to fire a high-pressure stream of water."); */
         }
         public override void SetDefaults() {
 			Item.damage = 24;

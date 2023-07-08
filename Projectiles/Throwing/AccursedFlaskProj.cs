@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Cursed Flame-filled Throwing Flask");
+            // DisplayName.SetDefault("Cursed Flame-filled Throwing Flask");
         }
         public override void SetDefaults()
         {

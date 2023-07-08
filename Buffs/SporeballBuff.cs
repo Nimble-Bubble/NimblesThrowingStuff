@@ -12,8 +12,8 @@ namespace NimblesThrowingStuff.Buffs
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Spore Balls");
-			Description.SetDefault("The poisonous spore balls will fight for you");
+			// DisplayName.SetDefault("Spore Balls");
+			// Description.SetDefault("The poisonous spore balls will fight for you");
 			Main.buffNoSave[Type] = true;
 			Main.buffNoTimeDisplay[Type] = true;
 		}

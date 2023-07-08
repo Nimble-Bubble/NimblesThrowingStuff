@@ -12,7 +12,7 @@ namespace NimblesThrowingStuff.Items.Tools
 		public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("Made from Hermitaur materials, this pickaxe is a powerful tool for rapid mining.");
+			// Tooltip.SetDefault("Made from Hermitaur materials, this pickaxe is a powerful tool for rapid mining.");
 		}
 		public override void SetDefaults() 
 		{

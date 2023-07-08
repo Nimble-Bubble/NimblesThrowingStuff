@@ -15,8 +15,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 		public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("A metallic lance with an icy edge."
-				+"\nIts frostburn-inducing edge ensures the most bang for your buck.");
+			/* Tooltip.SetDefault("A metallic lance with an icy edge."
+				+"\nIts frostburn-inducing edge ensures the most bang for your buck."); */
 		}
 		public override void SetDefaults()
 		{
