@@ -31,7 +31,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
         }
         public override void OnHitNPC (NPC target, NPC.HitInfo hit, int damageDone)
         {
-			if (crit == true)
+			if (hit.Crit == true)
             {
             Main.player[Projectile.owner].AddBuff(1, 600);
             }

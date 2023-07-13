@@ -57,12 +57,12 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 		private const int MAX_STICKY_JAVELINS = 8; 
 		private readonly Point[] _stickingJavelins = new Point[MAX_STICKY_JAVELINS]; 
 
-		public override void ModifyHitNPC(NPC target, ref NPC.HitModifiers modifiers)
+		public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
 		{
         if (Projectile.damage > 1)
         {
-            Main.player[Projectile.owner].HealEffect(damage / 40);   
-            Main.player[Projectile.owner].statLife += damage / 40;
+            Main.player[Projectile.owner].HealEffect(damageDone / 40);   
+            Main.player[Projectile.owner].statLife += damageDone / 40;
             int stream = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, Projectile.velocity.X, Projectile.velocity.Y,
             280, Projectile.damage, 3.5f, Projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
             Main.projectile[stream].DamageType = DamageClass.Throwing;

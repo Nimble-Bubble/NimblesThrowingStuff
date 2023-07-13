@@ -88,41 +88,24 @@ namespace NimblesThrowingStuff.NPCs
             }
 
 		}
-		public override void ModifyActiveShop(NPC npc, string shopName, Item[] items)
+		public override void ModifyShop(NPCShop shop)
 		{
-			Player player = Main.player[Main.myPlayer];
-			switch (type)
-			{
-				case 17:
-					if (NPC.downedBoss1 && (Main.moonPhase + 1) % 4 == 0)
-                    {
-						shop.item[nextSlot].SetDefaults(ItemType<GreenQurupecoFeather>());
-						nextSlot++;
-					}
-					break;
-				case 19:
-					if (NPC.downedBoss2 && !Main.dayTime || Main.hardMode)
-					{
-						shop.item[nextSlot].SetDefaults(ItemType<HealingArrow>());
-						nextSlot++;
-					}
-					break;
-				case 209:
-					if (Main.hardMode)
-					{
-						shop.item[nextSlot].SetDefaults(ItemType<NanoMissile>());
-						nextSlot++;
-					}
-					break;
-				case 368:
-					if (NPC.downedMoonlord && (Main.moonPhase + 1) % 2 == 0)
-					{
-						shop.item[nextSlot].SetDefaults(ItemType<Superfast>());
-						nextSlot++;
-					}
-					break;
-
-			}
+				Player player = Main.player[Main.myPlayer];
+				switch (shop.NpcType)
+				{
+					case 17:
+						shop.Add<GreenQurupecoFeather>(Condition.MoonPhases04, Condition.DownedEyeOfCthulhu);
+						break;
+					case 19:
+						shop.Add<HealingArrow>(Condition.DownedEowOrBoc, Condition.TimeNight);
+						break;
+					case 209:
+						shop.Add<NanoMissile>();
+						break;
+					case 368:
+						shop.Add<Superfast>(Condition.DownedMoonLord, Condition.MoonPhasesOdd);
+						break;
+				}
 		}
 		public override void OnKill(NPC npc)
 		{

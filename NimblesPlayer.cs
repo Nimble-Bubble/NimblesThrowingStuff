@@ -125,8 +125,6 @@ namespace NimblesThrowingStuff
                 //{
                 //    damage = 0;
                 //}
-                quiet = true;
-                cooldownCounter += 40;
                 switch (whichGuardSound)
                 {
                     case 0:

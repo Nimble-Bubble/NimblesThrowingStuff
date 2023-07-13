@@ -16,7 +16,7 @@ namespace NimblesThrowingStuff.Tiles.Blocks
             Main.tileSolid[Type] = true;
             Main.tileBlockLight[Type] = false;
             Main.tileMergeDirt[Type] = false;
-            ItemDrop/* tModPorter Note: Removed. Tiles and walls will drop the item which places them automatically. Use RegisterItemDrop to alter the automatic drop if necessary. */ = ModContent.ItemType<ProcellariteBar>();
+            RegisterItemDrop(ModContent.ItemType<ProcellariteBar>());
             TileObjectData.newTile.StyleWrapLimit = 18;
             LocalizedText name = CreateMapEntryName();
             // name.SetDefault("Procellarite Bar");

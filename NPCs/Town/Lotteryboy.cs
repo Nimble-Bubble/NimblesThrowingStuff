@@ -7,6 +7,8 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.Social;
+using NimblesThrowingStuff.Items.Materials;
+using NimblesThrowingStuff.Items.Placeables.Blocks;
 
 namespace NimblesThrowingStuff.NPCs.Town
 {
@@ -208,18 +210,26 @@ namespace NimblesThrowingStuff.NPCs.Town
 		{
 			button = Language.GetTextValue("LegacyInterface.28");
 		}
-
-		public override void OnChatButtonClicked(bool firstButton, ref string shopName)
+        public const string ShopName = "Wares";
+		public override void OnChatButtonClicked(bool firstButton, ref string shop)
 		{
 			if (firstButton)
 			{
-				shop = true;
+				shop = ShopName;
 			}
 		}
 
-		public override void ModifyActiveShop(string shopName, Item[] items)
+		public override void AddShops()
 		{
-            shop.item[nextSlot].SetDefaults(ItemID.LunarOre);
+            var LotteryWares = new NPCShop(NPC.type, ShopName);
+            LotteryWares.Add(ItemID.LunarOre);
+            LotteryWares.Add(ItemID.FragmentSolar);
+            LotteryWares.Add(ItemID.FragmentVortex);
+            LotteryWares.Add(ItemID.FragmentNebula);
+            LotteryWares.Add(ItemID.FragmentStardust);
+            LotteryWares.Add<ProcellariteOre>(new Condition("Mods.NimblesThrowingStuff.Conditions.DownedMorilus", () => NimblesWorld.downedMorilus));
+            LotteryWares.Register();
+            /* shop.item[nextSlot].SetDefaults(ItemID.LunarOre);
 			nextSlot++;
             shop.item[nextSlot].SetDefaults(ItemID.FragmentSolar);
             nextSlot++;
@@ -233,7 +243,7 @@ namespace NimblesThrowingStuff.NPCs.Town
             {
                 shop.item[nextSlot].SetDefaults(Mod.Find<ModItem>("ProcellariteOre").Type);
                 nextSlot++;
-            }
+            } */
         }
 
 		public override void OnKill()

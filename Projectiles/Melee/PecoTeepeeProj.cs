@@ -145,7 +145,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
         }
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
-            if (crit)
+            if (hit.Crit)
             {
                 for (int fi = 0; fi < 10; fi++)
                 {

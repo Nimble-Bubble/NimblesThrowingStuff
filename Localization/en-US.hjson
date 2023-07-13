@@ -1,40 +1,39 @@
-
 Mods: {
 	NimblesThrowingStuff: {
 		TownNPCMood: {
 			LivingRelic: {
-				Content: "Things are fine. All is well."
-				NoHome: "Where am I going to put my stuff?"
-				LoveSpace: "This is such a nice place! What's your place like?"
-				FarFromHome: "I think I need to get back home..."
-				DislikeCrowded: "It's a bit crowded in here. I'm not used to being around so many mammals."
-				HateCrowded: "It's awfully crowded here..."
-				LikeBiome: "I love the outside, but I now have to choose between the outside and the inside."
-				LoveBiome: "I think I've made my choice between the inside and the outside..."
-				DislikeBiome: "Normally, I love the outside, but now, I'm not too sure."
-				HateBiome: "I think I've made my choice between the inside and the outside..."
-				LikeNPC: "I think {NPCName} is neat."
-				LoveNPC: "Are these kinds of feelings between {NPCName} and I normal?"
-				DislikeNPC: "I'm not a big fan of {NPCName}...Something about them just seems odd."
+				Content: Things are fine. All is well.
+				NoHome: Where am I going to put my stuff?
+				LoveSpace: This is such a nice place! What's your place like?
+				FarFromHome: I think I need to get back home...
+				DislikeCrowded: It's a bit crowded in here. I'm not used to being around so many mammals.
+				HateCrowded: It's awfully crowded here...
+				LikeBiome: I love the outside, but I now have to choose between the outside and the inside.
+				LoveBiome: I think I've made my choice between the inside and the outside...
+				DislikeBiome: Normally, I love the outside, but now, I'm not too sure.
+				HateBiome: I think I've made my choice between the inside and the outside...
+				LikeNPC: I think {NPCName} is neat.
+				LoveNPC: Are these kinds of feelings between {NPCName} and I normal?
+				DislikeNPC: I'm not a big fan of {NPCName}...Something about them just seems odd.
 				HateNPC: "{NPCName} keeps trying to deny my ancestors' existence. Not a big fan of that."
 			}
-			Lotteryboy: {
-        Content: "All systems in check."
-        NoHome: "No available housing detected nearby."
-        LoveSpace: "This open space is quite nice."
-        FarFromHome: "I think I need to get back home..."
-        DislikeCrowded: "Being around this many people is rather bothersome."
-        HateCrowded: "Being around this many people is a pain."
-        LikeBiome: "Thanks for putting me in such ideal conditions."
-        LoveBiome: "I love it out here!"
-        DislikeBiome: "These aren't ideal conditions for a machine such as myself to be running in."
-        HateBiome: "Why here of all places?"
-        LikeNPC: "{NPCName} is a good user."
-        LoveNPC: "As a quest-giving robot, I am not designed to love. {NPCName} has managed to overcome this barrier."
-        DislikeNPC: "{NPCName} doesn't seem to be much of a fair user."
-        HateNPC: "{NPCName} stole one of my capacitors. It's enough to make me blow a fuse."
-      }
 
+			Lotteryboy: {
+				Content: All systems in check.
+				NoHome: No available housing detected nearby.
+				LoveSpace: This open space is quite nice.
+				FarFromHome: I think I need to get back home...
+				DislikeCrowded: Being around this many people is rather bothersome.
+				HateCrowded: Being around this many people is a pain.
+				LikeBiome: Thanks for putting me in such ideal conditions.
+				LoveBiome: I love it out here!
+				DislikeBiome: These aren't ideal conditions for a machine such as myself to be running in.
+				HateBiome: Why here of all places?
+				LikeNPC: "{NPCName} is a good user."
+				LoveNPC: As a quest-giving robot, I am not designed to love. {NPCName} has managed to overcome this barrier.
+				DislikeNPC: "{NPCName} doesn't seem to be much of a fair user."
+				HateNPC: "{NPCName} stole one of my capacitors. It's enough to make me blow a fuse."
+			}
 		}
 
 		Buffs: {
@@ -91,6 +90,16 @@ Mods: {
 			ViolentClusterBuff: {
 				DisplayName: Violent Chopper
 				Description: Blood Lust Cluster will fight for you
+			}
+
+			GuardStinguard: {
+				DisplayName: Guard Stinguard
+				Description: Mods.NimblesThrowingStuff.Buffs.GuardStinguard.Description
+			}
+
+			NoFallDamageNonPotion: {
+				DisplayName: No Fall Damage Non Potion
+				Description: Mods.NimblesThrowingStuff.Buffs.NoFallDamageNonPotion.Description
 			}
 		}
 
@@ -484,7 +493,10 @@ Mods: {
 				Tooltip: A shard of the Dragon's Head
 			}
 
-			EmptyFlask.DisplayName: Empty Flask
+			EmptyFlask: {
+				DisplayName: Empty Flask
+				Tooltip: ""
+			}
 
 			FestiveCloth: {
 				DisplayName: Festive Cloth
@@ -509,7 +521,10 @@ Mods: {
 					'''
 			}
 
-			ProcellariteBar.DisplayName: Procellarite Bar
+			ProcellariteBar: {
+				DisplayName: Procellarite Bar
+				Tooltip: ""
+			}
 
 			RedRathScale: {
 				DisplayName: Vermilion Scale
@@ -531,24 +546,45 @@ Mods: {
 				Tooltip: The essence of what lies above
 			}
 
-			KelbiBannerItem.DisplayName: Kelbi Banner
-			MimiclamBannerItem.DisplayName: Clam Banner
-			SmallRathBannerItem.DisplayName: Small Rathwyvern Banner
+			KelbiBannerItem: {
+				DisplayName: Kelbi Banner
+				Tooltip: ""
+			}
+
+			MimiclamBannerItem: {
+				DisplayName: Clam Banner
+				Tooltip: ""
+			}
+
+			SmallRathBannerItem: {
+				DisplayName: Small Rathwyvern Banner
+				Tooltip: ""
+			}
 
 			HadalShellstone: {
 				DisplayName: Deep Shellstone
 				Tooltip: Formed from a mixture of minerals and remains, this material has a remarkable deep tone to it.
 			}
 
-			ProcellariteBlock.DisplayName: Procellarite Block
-			ProcellariteOre.DisplayName: Procellarite Ore
+			ProcellariteBlock: {
+				DisplayName: Procellarite Block
+				Tooltip: ""
+			}
+
+			ProcellariteOre: {
+				DisplayName: Procellarite Ore
+				Tooltip: ""
+			}
 
 			MorilusTrophy: {
 				DisplayName: Morilus Trophy
 				Tooltip: A chip of such power could only be encased in the finest of forbidden cheese.
 			}
 
-			HadalShellstoneWall.DisplayName: Hadal Shellstone Wall
+			HadalShellstoneWall: {
+				DisplayName: Hadal Shellstone Wall
+				Tooltip: ""
+			}
 
 			ClawspikePickaxe: {
 				DisplayName: Clawspike Pickaxe
@@ -565,11 +601,30 @@ Mods: {
 				Tooltip: While it's not the most appetizing bait out there, it sure is reliable.
 			}
 
-			DoradoHamaxe.DisplayName: Dorado Hamaxe
-			DoradoPickaxe.DisplayName: Dorado Pickaxe
-			MeteoriteDrill.DisplayName: Meteorite Drill
-			ProcellariteHamaxe.DisplayName: Procellarite Hamaxe
-			ProcellaritePickaxe.DisplayName: Procellarite Pickaxe
+			DoradoHamaxe: {
+				DisplayName: Dorado Hamaxe
+				Tooltip: ""
+			}
+
+			DoradoPickaxe: {
+				DisplayName: Dorado Pickaxe
+				Tooltip: ""
+			}
+
+			MeteoriteDrill: {
+				DisplayName: Meteorite Drill
+				Tooltip: ""
+			}
+
+			ProcellariteHamaxe: {
+				DisplayName: Procellarite Hamaxe
+				Tooltip: ""
+			}
+
+			ProcellaritePickaxe: {
+				DisplayName: Procellarite Pickaxe
+				Tooltip: ""
+			}
 
 			ShorebrassLure: {
 				DisplayName: Shorebrass Seabass
@@ -590,8 +645,15 @@ Mods: {
 					'''
 			}
 
-			LivingRelicMask.DisplayName: Living Relic Mask
-			MorilusMask.DisplayName: Morilus Mask
+			LivingRelicMask: {
+				DisplayName: Living Relic Mask
+				Tooltip: ""
+			}
+
+			MorilusMask: {
+				DisplayName: Morilus Mask
+				Tooltip: ""
+			}
 
 			GuardianBarrier: {
 				DisplayName: Barrier Builder
@@ -613,7 +675,10 @@ Mods: {
 				Tooltip: Fires a wheel of rainwater
 			}
 
-			SporeStaff.DisplayName: Spore Staff
+			SporeStaff: {
+				DisplayName: Spore Staff
+				Tooltip: ""
+			}
 
 			StormShot: {
 				DisplayName: Storm Shot
@@ -748,7 +813,10 @@ Mods: {
 					'''
 			}
 
-			FlameBlessedBroadsword.DisplayName: Flame-Blessed Broadsword
+			FlameBlessedBroadsword: {
+				DisplayName: Flame-Blessed Broadsword
+				Tooltip: ""
+			}
 
 			FortressBreaker: {
 				DisplayName: Fortress Breaker
@@ -777,7 +845,10 @@ Mods: {
 					'''
 			}
 
-			FuriousFalchion.DisplayName: Furious Falchion
+			FuriousFalchion: {
+				DisplayName: Furious Falchion
+				Tooltip: ""
+			}
 
 			GrandHalberd: {
 				DisplayName: Grand Halberd
@@ -877,8 +948,15 @@ Mods: {
 					'''
 			}
 
-			ProcellariteBroadsword.DisplayName: Procellarite Broadsword
-			ProcellariteTrident.DisplayName: Procellarite Trident
+			ProcellariteBroadsword: {
+				DisplayName: Procellarite Broadsword
+				Tooltip: ""
+			}
+
+			ProcellariteTrident: {
+				DisplayName: Procellarite Trident
+				Tooltip: ""
+			}
 
 			RedTail: {
 				DisplayName: Red Tail
@@ -974,7 +1052,10 @@ Mods: {
 				Tooltip: A simple but powerful lance with no strings attached.
 			}
 
-			TheToothpick.DisplayName: The Toothpick
+			TheToothpick: {
+				DisplayName: The Toothpick
+				Tooltip: ""
+			}
 
 			TrueAscalon: {
 				DisplayName: True Ascalon
@@ -1010,8 +1091,15 @@ Mods: {
 				Tooltip: Sets enemies on fire
 			}
 
-			CopperPistol.DisplayName: Copper Pistol
-			GoldPistol.DisplayName: Gold Pistol
+			CopperPistol: {
+				DisplayName: Copper Pistol
+				Tooltip: ""
+			}
+
+			GoldPistol: {
+				DisplayName: Gold Pistol
+				Tooltip: ""
+			}
 
 			HealingArrow: {
 				DisplayName: Healing Arrow
@@ -1022,21 +1110,30 @@ Mods: {
 					'''
 			}
 
-			HermitaurHuntingbow.DisplayName: Hermitaur Hunting Bow
+			HermitaurHuntingbow: {
+				DisplayName: Hermitaur Hunting Bow
+				Tooltip: ""
+			}
 
 			NecroRepeater: {
 				DisplayName: Necro Repeater
 				Tooltip: A rapidly-firing crossbow
 			}
 
-			PlatinumPistol.DisplayName: Platinum Pistol
+			PlatinumPistol: {
+				DisplayName: Platinum Pistol
+				Tooltip: ""
+			}
 
 			ProcellariteLongbow: {
 				DisplayName: Pain Rain
 				Tooltip: Rains several arrows down from the heavens(?)
 			}
 
-			ProcellariteRepeater.DisplayName: Procellarite Repeater
+			ProcellariteRepeater: {
+				DisplayName: Procellarite Repeater
+				Tooltip: ""
+			}
 
 			ProminenceBow: {
 				DisplayName: Prominence Bow
@@ -1052,15 +1149,25 @@ Mods: {
 				Tooltip: Fires a high-velocity watery arrow
 			}
 
-			SilverPistol.DisplayName: Silver Pistol
+			SilverPistol: {
+				DisplayName: Silver Pistol
+				Tooltip: ""
+			}
 
 			SporeSling: {
 				DisplayName: Spore Sling
 				Tooltip: Fires several stingers along with your arrow
 			}
 
-			TinPistol.DisplayName: Tin Pistol
-			TungstenPistol.DisplayName: Tungsten Pistol
+			TinPistol: {
+				DisplayName: Tin Pistol
+				Tooltip: ""
+			}
+
+			TungstenPistol: {
+				DisplayName: Tungsten Pistol
+				Tooltip: ""
+			}
 
 			VoidNuke: {
 				DisplayName: Nuclear Void
@@ -1115,15 +1222,25 @@ Mods: {
 				Tooltip: Summons a Blood Lust Cluster
 			}
 
-			AccursedFlask.DisplayName: Cursed Flame-filled Throwing Flask
-			AdamantiteMallet.DisplayName: Adamantite Mallet
+			AccursedFlask: {
+				DisplayName: Cursed Flame-filled Throwing Flask
+				Tooltip: ""
+			}
+
+			AdamantiteMallet: {
+				DisplayName: Adamantite Mallet
+				Tooltip: ""
+			}
 
 			Arachknife: {
 				DisplayName: Arachknife
 				Tooltip: This knife sticks to enemies
 			}
 
-			Beemerang.DisplayName: Beemerang
+			Beemerang: {
+				DisplayName: Beemerang
+				Tooltip: ""
+			}
 
 			BloodyPike: {
 				DisplayName: Bloody Pike
@@ -1140,20 +1257,48 @@ Mods: {
 				Tooltip: Bounces around with a chance to break armor
 			}
 
-			ChlorophyteBomb.DisplayName: Chlorophyte Bomb
-			ChlorophyteChakram.DisplayName: Chlorophyte Chakram
-			CobaltShortspear.DisplayName: Cobalt Shortspear
-			CopperKnife.DisplayName: Copper Knife
+			ChlorophyteBomb: {
+				DisplayName: Chlorophyte Bomb
+				Tooltip: ""
+			}
+
+			ChlorophyteChakram: {
+				DisplayName: Chlorophyte Chakram
+				Tooltip: ""
+			}
+
+			CobaltShortspear: {
+				DisplayName: Cobalt Shortspear
+				Tooltip: ""
+			}
+
+			CopperKnife: {
+				DisplayName: Copper Knife
+				Tooltip: ""
+			}
 
 			CoralKnife: {
 				DisplayName: Coral Knife
 				Tooltip: These knives stick to enemies
 			}
 
-			CosmosCrasher.DisplayName: Cosmos Crasher
+			CosmosCrasher: {
+				DisplayName: Cosmos Crasher
+				Tooltip: ""
+			}
+
 			CrimtaneKnife.DisplayName: Crimtane Knife
-			CrystalFan.DisplayName: Crystal Fan
-			CumulusCrasher.DisplayName: Cumulus Crasher
+
+			CrystalFan: {
+				DisplayName: Crystal Fan
+				Tooltip: ""
+			}
+
+			CumulusCrasher: {
+				DisplayName: Cumulus Crasher
+				Tooltip: ""
+			}
+
 			DemoniteKnife.DisplayName: Demonite Knife
 
 			DoradoBomb: {
@@ -1196,41 +1341,80 @@ Mods: {
 				Tooltip: Explodes into a forbidden storm
 			}
 
-			FrostJavelin.DisplayName: Frost Javelin
-			GoldKnife.DisplayName: Gold Knife
+			FrostJavelin: {
+				DisplayName: Frost Javelin
+				Tooltip: ""
+			}
+
+			GoldKnife: {
+				DisplayName: Gold Knife
+				Tooltip: ""
+			}
 
 			GolemGlove: {
 				DisplayName: Golem's Glove
 				Tooltip: Throws three balls of fire
 			}
 
-			HallowedWaraxe.DisplayName: Hallowed Waraxe
+			HallowedWaraxe: {
+				DisplayName: Hallowed Waraxe
+				Tooltip: ""
+			}
 
 			HellBonesAxe: {
 				DisplayName: Hellbone Hatchet
 				Tooltip: Lights enemies on hellfire
 			}
 
-			IchoredFlask.DisplayName: Ichor-filled Throwing Flask
-			IronKnife.DisplayName: Iron Knife
-			LacusDecapitator.DisplayName: Lacus Decapitator
-			LeadKnife.DisplayName: Lead Knife
-			LihzahrdSpikeKnife.DisplayName: Lihzahrd Spike Knife
+			IchoredFlask: {
+				DisplayName: Ichor-filled Throwing Flask
+				Tooltip: ""
+			}
+
+			IronKnife: {
+				DisplayName: Iron Knife
+				Tooltip: ""
+			}
+
+			LacusDecapitator: {
+				DisplayName: Lacus Decapitator
+				Tooltip: ""
+			}
+
+			LeadKnife: {
+				DisplayName: Lead Knife
+				Tooltip: ""
+			}
+
+			LihzahrdSpikeKnife: {
+				DisplayName: Lihzahrd Spike Knife
+				Tooltip: ""
+			}
 
 			LogicBomb: {
 				DisplayName: Logic Bomb
 				Tooltip: Can confuse enemies with its explosion
 			}
 
-			MartianMiracle.DisplayName: Martian Miracle
+			MartianMiracle: {
+				DisplayName: Martian Miracle
+				Tooltip: ""
+			}
 
 			MeteorSpear: {
 				DisplayName: Meteor Spear
 				Tooltip: An extremely agile exploding javelin
 			}
 
-			MoltenKnife.DisplayName: Molten Knife
-			MythrilHatchet.DisplayName: Mythril Hatchet
+			MoltenKnife: {
+				DisplayName: Molten Knife
+				Tooltip: ""
+			}
+
+			MythrilHatchet: {
+				DisplayName: Mythril Hatchet
+				Tooltip: ""
+			}
 
 			NanoMissile: {
 				DisplayName: Nanite Missile
@@ -1242,41 +1426,80 @@ Mods: {
 				Tooltip: A legendary knife with controlled flight
 			}
 
-			ObsidianScalpel.DisplayName: Obsidian Scalpel
-			OrichalcumHatchet.DisplayName: Orichalcum Hatchet
-			PalladiumShortspear.DisplayName: Palladium Shortspear
-			PlatinumKnife.DisplayName: Platinum Knife
+			ObsidianScalpel: {
+				DisplayName: Obsidian Scalpel
+				Tooltip: ""
+			}
+
+			OrichalcumHatchet: {
+				DisplayName: Orichalcum Hatchet
+				Tooltip: ""
+			}
+
+			PalladiumShortspear: {
+				DisplayName: Palladium Shortspear
+				Tooltip: ""
+			}
+
+			PlatinumKnife: {
+				DisplayName: Platinum Knife
+				Tooltip: ""
+			}
 
 			PoseironTrident: {
 				DisplayName: Poseiron's Trident
 				Tooltip: A sea god's three-pronged spear that oils and frostburns foes
 			}
 
-			ProcellariteKnife.DisplayName: Procellarite Knife
+			ProcellariteKnife: {
+				DisplayName: Procellarite Knife
+				Tooltip: ""
+			}
 
 			RustyBonesAxe: {
 				DisplayName: Rustbone Hatchet
 				Tooltip: Accelerates beyond perceptions and envenoms enemies for some reason
 			}
 
-			SatelliteSpear.DisplayName: Satellite Spear
+			SatelliteSpear: {
+				DisplayName: Satellite Spear
+				Tooltip: ""
+			}
 
 			ScavengedKunai: {
 				DisplayName: Scavenged Kunai
 				Tooltip: It's still a bit slimy
 			}
 
-			ShadowflameSpikeBall.DisplayName: Shadowflame Spike Ball
-			ShadowJavelin.DisplayName: Shadow Javelin
-			SilverKnife.DisplayName: Silver Knife
+			ShadowflameSpikeBall: {
+				DisplayName: Shadowflame Spike Ball
+				Tooltip: ""
+			}
+
+			ShadowJavelin: {
+				DisplayName: Shadow Javelin
+				Tooltip: ""
+			}
+
+			SilverKnife: {
+				DisplayName: Silver Knife
+				Tooltip: ""
+			}
 
 			Skelespear: {
 				DisplayName: Skelespear
 				Tooltip: Turns into a stream of water
 			}
 
-			SnowflakeShuriken.DisplayName: Snowflake Shuriken
-			SpikeKnife.DisplayName: Spike Knife
+			SnowflakeShuriken: {
+				DisplayName: Snowflake Shuriken
+				Tooltip: ""
+			}
+
+			SpikeKnife: {
+				DisplayName: Spike Knife
+				Tooltip: ""
+			}
 
 			SpookySpines: {
 				DisplayName: Macabrazor
@@ -1288,24 +1511,45 @@ Mods: {
 				Tooltip: Has a chance to poison enemies
 			}
 
-			TerraDagger.DisplayName: Terra Dagger
-			ThornBall.DisplayName: Thorn Ball
+			TerraDagger: {
+				DisplayName: Terra Dagger
+				Tooltip: ""
+			}
+
+			ThornBall: {
+				DisplayName: Thorn Ball
+				Tooltip: ""
+			}
 
 			ThornyGlove: {
 				DisplayName: Thorned Glove
 				Tooltip: Throws out poisonous seeds
 			}
 
-			TinKnife.DisplayName: Tin Knife
-			TitaniumMallet.DisplayName: Titanium Mallet
-			TrueHallowedWaraxe.DisplayName: True Hallowed Waraxe
+			TinKnife: {
+				DisplayName: Tin Knife
+				Tooltip: ""
+			}
+
+			TitaniumMallet: {
+				DisplayName: Titanium Mallet
+				Tooltip: ""
+			}
+
+			TrueHallowedWaraxe: {
+				DisplayName: True Hallowed Waraxe
+				Tooltip: ""
+			}
 
 			TrueNightPiercer: {
 				DisplayName: True Night's Piercer
 				Tooltip: "'Find your own way to the Knife'"
 			}
 
-			TungstenKnife.DisplayName: Tungsten Knife
+			TungstenKnife: {
+				DisplayName: Tungsten Knife
+				Tooltip: ""
+			}
 
 			UnholyHandGrenade: {
 				DisplayName: Unholy Hand Grenade
@@ -1317,8 +1561,15 @@ Mods: {
 				Tooltip: This knife sticks to enemies
 			}
 
-			ViciousHarvest.DisplayName: Vicious Harvest
-			VileHarvest.DisplayName: Vile Harvest
+			ViciousHarvest: {
+				DisplayName: Vicious Harvest
+				Tooltip: ""
+			}
+
+			VileHarvest: {
+				DisplayName: Vile Harvest
+				Tooltip: ""
+			}
 
 			WhirlpoolWhammer: {
 				DisplayName: Whirlpool Whammer
@@ -1327,6 +1578,91 @@ Mods: {
 					Designed to mimic the whirlpools that Lagiacri use to hunt their prey
 					Has a chance to electrify targets
 					'''
+			}
+
+			FishrontoothNecklace: {
+				DisplayName: Fishrontooth Necklace
+				Tooltip: ""
+			}
+
+			Stinguard: {
+				DisplayName: Stinguard
+				Tooltip: ""
+			}
+
+			GreaterRestorationPotion: {
+				DisplayName: Greater Restoration Potion
+				Tooltip: ""
+			}
+
+			EssenceOfBalance: {
+				DisplayName: Essence Of Balance
+				Tooltip: ""
+			}
+
+			GrandBone: {
+				DisplayName: Grand Bone
+				Tooltip: ""
+			}
+
+			GreenQurupecoFeather: {
+				DisplayName: Green Qurupeco Feather
+				Tooltip: ""
+			}
+
+			SteelBeam: {
+				DisplayName: Steel Beam
+				Tooltip: ""
+			}
+
+			GlidingBlaze: {
+				DisplayName: Gliding Blaze
+				Tooltip: ""
+			}
+
+			AcrusLance: {
+				DisplayName: Acrus Lance
+				Tooltip: ""
+			}
+
+			ChlorophyteGreatlance: {
+				DisplayName: Chlorophyte Greatlance
+				Tooltip: ""
+			}
+
+			PecoTeepee: {
+				DisplayName: Peco Teepee
+				Tooltip: ""
+			}
+
+			ShroomiteBroadsword: {
+				DisplayName: Shroomite Broadsword
+				Tooltip: ""
+			}
+
+			SpaceSpinner: {
+				DisplayName: Space Spinner
+				Tooltip: ""
+			}
+
+			TerrificBloodySyringe: {
+				DisplayName: Terrific Bloody Syringe
+				Tooltip: ""
+			}
+
+			ShroomiteBullet: {
+				DisplayName: Shroomite Bullet
+				Tooltip: ""
+			}
+
+			ShroomiteShot: {
+				DisplayName: Shroomite Shot
+				Tooltip: ""
+			}
+
+			StardustWhip: {
+				DisplayName: Stardust Whip
+				Tooltip: ""
 			}
 		}
 
@@ -1337,7 +1673,43 @@ Mods: {
 			MorilusMain.DisplayName: Morilus, the Great Guardian of the Sky's Sea
 			SkySeaGuardian.DisplayName: Sky Sea Guardian
 			SkySeaPrankster.DisplayName: Prankster of the Sky Sea
-			LivingRelic.DisplayName: Living Relic
+
+			LivingRelic: {
+				DisplayName: Living Relic
+				Census.SpawnCondition: Defeat the Eye of Cthulhu
+
+				TownNPCMood: {
+					Content: "{$Mods.NimblesThrowingStuff.TownNPCMood.LivingRelic.Content}"
+					NoHome: "{$Mods.NimblesThrowingStuff.TownNPCMood.LivingRelic.NoHome}"
+					FarFromHome: "{$Mods.NimblesThrowingStuff.TownNPCMood.LivingRelic.FarFromHome}"
+					LoveSpace: "{$Mods.NimblesThrowingStuff.TownNPCMood.LivingRelic.LoveSpace}"
+					DislikeCrowded: "{$Mods.NimblesThrowingStuff.TownNPCMood.LivingRelic.DislikeCrowded}"
+					HateCrowded: "{$Mods.NimblesThrowingStuff.TownNPCMood.LivingRelic.HateCrowded}"
+					LoveBiome: "{$Mods.NimblesThrowingStuff.TownNPCMood.LivingRelic.LoveBiome}"
+					DislikeBiome: "{$Mods.NimblesThrowingStuff.TownNPCMood.LivingRelic.DislikeBiome}"
+					LikeNPC_Princess: I like {NPCName}.
+					Princess_LovesNPC: I like {NPCName}.
+				}
+			}
+
+			Lotteryboy: {
+				DisplayName: Lotteryboy
+
+				TownNPCMood: {
+					Content: "{$Mods.NimblesThrowingStuff.TownNPCMood.Lotteryboy.Content}"
+					NoHome: "{$Mods.NimblesThrowingStuff.TownNPCMood.Lotteryboy.NoHome}"
+					FarFromHome: "{$Mods.NimblesThrowingStuff.TownNPCMood.Lotteryboy.FarFromHome}"
+					LoveSpace: "{$Mods.NimblesThrowingStuff.TownNPCMood.Lotteryboy.LoveSpace}"
+					DislikeCrowded: "{$Mods.NimblesThrowingStuff.TownNPCMood.Lotteryboy.DislikeCrowded}"
+					HateCrowded: "{$Mods.NimblesThrowingStuff.TownNPCMood.Lotteryboy.HateCrowded}"
+					LikeBiome: "{$Mods.NimblesThrowingStuff.TownNPCMood.Lotteryboy.LikeBiome}"
+					DislikeBiome: "{$Mods.NimblesThrowingStuff.TownNPCMood.Lotteryboy.DislikeBiome}"
+					LikeNPC_Princess: I like {NPCName}.
+					Princess_LovesNPC: I like {NPCName}.
+				}
+
+				Census.SpawnCondition: Conditions unknown
+			}
 		}
 
 		Projectiles: {
@@ -1534,6 +1906,16 @@ Mods: {
 			VileHarvestProj.DisplayName: Vile Harvest
 			WaraxeEcho.DisplayName: Hallowed Waraxe Echo
 			WhirlpoolWhammerProj.DisplayName: Whirlpool Whammer
+			GlidingBlazeProj.DisplayName: Gliding Blaze Proj
+			AcrusLanceProj.DisplayName: Acrus Lance Proj
+			ChlorophyteGreatlanceProj.DisplayName: Chlorophyte Greatlance Proj
+			PecoTeepeeProj.DisplayName: Peco Teepee Proj
+			PecoTeepeeShell.DisplayName: Peco Teepee Shell
+			ShroomiteSporeCloud.DisplayName: Shroomite Spore Cloud
+			SpaceSpinnerProj.DisplayName: Space Spinner Proj
+			TerrificBloodySyringeProj.DisplayName: Terrific Bloody Syringe Proj
+			ShroomiteBulletProj.DisplayName: Shroomite Bullet Proj
+			StardustWhipProj.DisplayName: Stardust Whip Proj
 		}
 
 		Keybinds.Guard.DisplayName: Guard
@@ -1548,6 +1930,9 @@ Mods: {
 			ProcellariteOreTile.MapEntry: Procellarite Ore
 			ShorebrassBarTile.MapEntry: Procellarite Bar
 			MorilusTrophyTile.MapEntry: Morilus Trophy
+			SteelBeamTile.MapEntry: Steel Beam Tile
 		}
+
+		Conditions.DownedMorilus: Mods.NimblesThrowingStuff.Conditions.DownedMorilus
 	}
 }

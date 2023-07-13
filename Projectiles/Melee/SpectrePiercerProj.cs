@@ -85,7 +85,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
-            if (crit)
+            if (hit.Crit)
             {
                 Main.player[Projectile.owner].AddBuff(59, 150);
                 Main.player[Projectile.owner].AddBuff(10, 150);

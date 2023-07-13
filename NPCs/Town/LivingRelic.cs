@@ -233,17 +233,18 @@ namespace NimblesThrowingStuff.NPCs.Town
 			button = Language.GetTextValue("LegacyInterface.28");
 		}
 
-		public override void OnChatButtonClicked(bool firstButton, ref string shopName)
+		public override void OnChatButtonClicked(bool firstButton, ref string shop)
 		{
 			if (firstButton)
 			{
-				shop = true;
+				shop = RelicShopName;
 			}
 		}
+        public const string RelicShopName = "Shop";
 
-		public override void ModifyActiveShop(string shopName, Item[] items)
+		public override void AddShops()
 		{
-            shop.item[nextSlot].SetDefaults(ItemID.ThrowingKnife);
+            /* shop.item[nextSlot].SetDefaults(ItemID.ThrowingKnife);
 			nextSlot++;
             shop.item[nextSlot].SetDefaults(ItemID.PoisonedKnife);
 			nextSlot++;
@@ -290,7 +291,7 @@ namespace NimblesThrowingStuff.NPCs.Town
             {
                 shop.item[nextSlot].SetDefaults(Mod.Find<ModItem>("ConvincingArtifact").Type);
                 nextSlot++;
-            }
+            } */
         }
 
 		public override void OnKill()

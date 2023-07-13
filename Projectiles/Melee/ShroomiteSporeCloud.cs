@@ -51,14 +51,14 @@ namespace NimblesThrowingStuff.Projectiles.Melee
         }
         public override void OnHitNPC (NPC target, NPC.HitInfo hit, int damageDone)
         {
-			if (crit)
+			if (hit.Crit)
             {
-                if (damage < 50)
+                if (damageDone < 50)
                 {
-                    damage = 50;
+                    damageDone = 50;
                 }
-                Main.player[Projectile.owner].HealEffect(damage / 50);
-                Main.player[Projectile.owner].statLife += damage / 50;
+                Main.player[Projectile.owner].HealEffect(damageDone / 50);
+                Main.player[Projectile.owner].statLife += damageDone / 50;
             }
         }
     }

@@ -99,7 +99,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
-            robustTuskPower += damage;
+            robustTuskPower += damageDone;
         }
     }
 }

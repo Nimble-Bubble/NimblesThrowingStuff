@@ -47,12 +47,9 @@ namespace NimblesThrowingStuff.Projectiles.Magic
                 Main.dust[fireIndex].velocity *= 3f;
             }
         }
-        public override void ModifyHitNPC(NPC target, ref NPC.HitModifiers modifiers)
-        {
-            damage += (int)(GlidingBlazeMultiplier / 2);
-        }
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
+            damageDone += (int)(GlidingBlazeMultiplier / 2);
             for (int fd = 0; fd < 10; fd++)
             {
                 Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 6, Projectile.velocity.X * 0.5f, Projectile.velocity.Y * 0.5f, 0, new Color(), 0.75f);

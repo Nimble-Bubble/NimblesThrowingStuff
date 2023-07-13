@@ -117,7 +117,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
             Player projOwner = Main.player[Projectile.owner];
-            if (crit)
+            if (hit.Crit)
             {
                 projOwner.GetModPlayer<NimblesPlayer>().currentShells += 1;
                 if (projOwner.GetModPlayer<NimblesPlayer>().currentShells <= 0)

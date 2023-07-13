@@ -29,7 +29,7 @@ namespace NimblesThrowingStuff.Items
         public override void OnHitNPC(Projectile projectile, NPC target, NPC.HitInfo hit, int damageDone)
         {
             Player player = Main.player[projectile.owner];
-            if (crit && player.GetModPlayer<NimblesPlayer>().sacredWrist && projectile.CountsAsClass(DamageClass.Throwing) && projectile.type != 92 && !projectile.npcProj)
+            if (hit.Crit && player.GetModPlayer<NimblesPlayer>().sacredWrist && projectile.CountsAsClass(DamageClass.Throwing) && projectile.type != 92 && !projectile.npcProj)
             {
                 int star = Projectile.NewProjectile(projectile.GetSource_FromThis(), projectile.Center - new Vector2 (0, 1000), new Vector2 (0 + Main.rand.Next(-2, 3), 20),
                             92, projectile.damage / 2, 1f, projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
@@ -37,10 +37,10 @@ namespace NimblesThrowingStuff.Items
                 Main.projectile[star].usesLocalNPCImmunity = true;
             Main.projectile[star].localNPCHitCooldown = 10;
             }
-            if (crit == true && player.GetModPlayer<NimblesPlayer>().thrownHeal && projectile.CountsAsClass(DamageClass.Throwing) && Main.rand.NextBool(10) && !projectile.npcProj)
+            if (hit.Crit == true && player.GetModPlayer<NimblesPlayer>().thrownHeal && projectile.CountsAsClass(DamageClass.Throwing) && Main.rand.NextBool(10) && !projectile.npcProj)
             {
-                player.HealEffect(damage / 100);
-                player.statLife += damage / 100;
+                player.HealEffect(damageDone / 100);
+                player.statLife += damageDone / 100;
             }
             if (player.GetModPlayer<NimblesPlayer>().chloroThrow && projectile.CountsAsClass(DamageClass.Throwing) && !projectile.npcProj)
             {

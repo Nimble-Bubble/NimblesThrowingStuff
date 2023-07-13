@@ -76,15 +76,15 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             }
             //Might put a custom debuff here when the custom debuff in question is done
         }
-        public override void ModifyHitNPC(NPC target, ref NPC.HitModifiers modifiers)
+        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
-            if (crit)
+            if (hit.Crit)
             {
-                damage += target.defense;
+                damageDone += target.defense;
             }
             else
             {
-                damage += target.defense / 4;
+                damageDone += target.defense / 4;
             }
         }
     }

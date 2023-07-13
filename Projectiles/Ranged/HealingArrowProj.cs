@@ -31,7 +31,7 @@ namespace NimblesThrowingStuff.Projectiles.Ranged
         }
         public override void OnHitNPC (NPC target, NPC.HitInfo hit, int damageDone)
         {
-            int gamungo = damage / 50;
+            int gamungo = damageDone / 50;
             if (gamungo > 5)
             {
                 gamungo = 5;

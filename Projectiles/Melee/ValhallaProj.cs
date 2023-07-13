@@ -141,9 +141,9 @@ namespace NimblesThrowingStuff.Projectiles.Melee
         {
             target.AddBuff(344, 300);
             target.AddBuff(BuffID.Bleeding, 600);
-            if (crit)
+            if (hit.Crit)
             {
-                knockback *= 10;
+                hit.Knockback *= 10;
             }
         }
     }

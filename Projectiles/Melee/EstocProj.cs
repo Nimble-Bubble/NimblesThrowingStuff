@@ -81,9 +81,9 @@ namespace NimblesThrowingStuff.Projectiles.Melee
         }
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
-            if (crit)
+            if (hit.Crit)
             {
-                knockback *= 10;
+                hit.Knockback *= 10;
             }
         }
     }

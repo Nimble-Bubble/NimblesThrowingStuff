@@ -73,46 +73,43 @@ namespace NimblesThrowingStuff.Items
                 }
             }
         }
-        public override void OpenVanillaBag(string context, Player player, int arg)
+        public override void ModifyItemLoot(Item item, ItemLoot itemLoot)
         {
-            if (context == "bossBag") 
+            Player player = Main.player[Main.myPlayer];
+            if (item.type == ItemID.KingSlimeBossBag && Main.rand.NextBool(4))
             {
-                if (arg == ItemID.KingSlimeBossBag && Main.rand.NextBool(4))
-                {
-                    player.QuickSpawnItem(player.GetSource_FromThis(), ItemType<ScavengedKunai>(), 1);
-                }
-                if (arg == ItemID.QueenBeeBossBag && Main.rand.NextBool(3))
-                {
+                player.QuickSpawnItem(player.GetSource_FromThis(), ItemType<ScavengedKunai>(), 1);
+            }
+            if (item.type == ItemID.QueenBeeBossBag && Main.rand.NextBool(3))
+            {
                 player.QuickSpawnItem(player.GetSource_FromThis(), ItemType<Beemerang>(), 1);
-                }
-                if (arg == ItemID.WallOfFleshBossBag && Main.rand.NextBool(6))
-                {
+            }
+            if (item.type == ItemID.WallOfFleshBossBag && Main.rand.NextBool(6))
+            {
                 player.QuickSpawnItem(player.GetSource_FromThis(), ItemType<ThrowerEmblem>(), 1);
-                }
-                if (arg == ItemID.PlanteraBossBag && Main.rand.NextBool(3))
-                {
+            }
+            if (item.type == ItemID.PlanteraBossBag && Main.rand.NextBool(3))
+            {
                 player.QuickSpawnItem(player.GetSource_FromThis(), ItemType<ThornyGlove>(), 1);
-                }
-                if (arg == ItemID.GolemBossBag && Main.rand.NextBool(4))
-                {
+            }
+            if (item.type == ItemID.GolemBossBag && Main.rand.NextBool(4))
+            {
                 player.QuickSpawnItem(player.GetSource_FromThis(), ItemType<GolemGlove>(), 1);
-                }
-            if (arg == ItemID.FishronBossBag)
-                {
+            }
+            if (item.type == ItemID.FishronBossBag)
+            {
                 player.QuickSpawnItem(player.GetSource_FromThis(), ItemType<RoyalFin>(), Main.rand.Next(10, 15));
-                    if (Main.rand.NextBool(4))
-                    {
-                        player.QuickSpawnItem(player.GetSource_FromThis(), ItemType<PoseironTrident>(), 1);
-                    }
-                }
-                if (arg == ItemID.MoonLordBossBag && Main.rand.NextBool(5))
+                if (Main.rand.NextBool(4))
                 {
-                player.QuickSpawnItem(player.GetSource_FromThis(), ItemType<CosmosCrasher>(), 1);
-                player.QuickSpawnItem(player.GetSource_FromThis(), ItemType<SatelliteSpear>(), 1);
+                    player.QuickSpawnItem(player.GetSource_FromThis(), ItemType<PoseironTrident>(), 1);
                 }
             }
-            
-         }
+            if (item.type == ItemID.MoonLordBossBag && Main.rand.NextBool(5))
+            {
+                player.QuickSpawnItem(player.GetSource_FromThis(), ItemType<CosmosCrasher>(), 1);
+                player.QuickSpawnItem(player.GetSource_FromThis(), ItemType<SatelliteSpear>(), 1);
+            }
+        }
         public override void AddRecipes()
         {
             Recipe recipe = Recipe.Create(ItemID.Muramasa);
