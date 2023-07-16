@@ -13,6 +13,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 	public class BloodySyringeProj: ModProjectile
     {
         //private bool hasBlooded;
+        private int zamboni;
         public float movementFactor
         {
             get => Projectile.ai[0];
@@ -24,8 +25,8 @@ namespace NimblesThrowingStuff.Projectiles.Melee
         }
         public override void SetDefaults()
         {
-            Projectile.width = 20;
-            Projectile.height = 20;
+            Projectile.width = 24;
+            Projectile.height = 24;
             Projectile.usesLocalNPCImmunity = true;
             Projectile.localNPCHitCooldown = 20;
             Projectile.tileCollide = false;
@@ -35,9 +36,10 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             Projectile.aiStyle = 19;
             Projectile.timeLeft = 18000;
             Projectile.extraUpdates = 0;
-            Projectile.scale = 1.1f;
+            Projectile.scale = 1.25f;
             Projectile.ownerHitCheck = true;
             //hasBlooded = false;
+            zamboni = 1;
         }
         public override void AI()
         {
@@ -65,7 +67,8 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                 }
             }
 
-            Projectile.position += Projectile.velocity * movementFactor;
+            ++zamboni;
+            Projectile.position += Projectile.velocity * ((movementFactor * 6) / zamboni);
 
             if (projOwner.itemAnimation == 0)
             {

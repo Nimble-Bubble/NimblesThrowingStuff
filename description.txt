@@ -13,6 +13,7 @@ With the new items added to the Throwing class, you will most likely be able to 
 
 0.3.2 expands further on the new content of 0.3.1, with further additions to weapon trees along with more shields.
 For now, we will call the post-Moon Lord phase "Extra-Hardmode" or "Extramode", though this may change.
+Also, we've made it over to 1.4.4! That's worth saying something, right?
 
 Credits:
 

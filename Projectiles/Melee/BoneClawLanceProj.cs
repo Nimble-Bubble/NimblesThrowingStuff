@@ -13,6 +13,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 {
 	public class BoneClawLanceProj: ModProjectile
     {
+        private int zamboni;
         public override void SetStaticDefaults()
         {
             // DisplayName.SetDefault("Bone Claw Lance");
@@ -31,6 +32,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             Projectile.timeLeft = 18000;
             Projectile.extraUpdates = 0;
             Projectile.scale = 1.1f;
+            zamboni = 1;
         }
         public float movementFactor
         {
@@ -63,7 +65,8 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                 }
             }
 
-            Projectile.position += Projectile.velocity * movementFactor;
+            ++zamboni;
+            Projectile.position += Projectile.velocity * ((movementFactor * 6) / zamboni);
 
             if (projOwner.itemAnimation == 0)
             {

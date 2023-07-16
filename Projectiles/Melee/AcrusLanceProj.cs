@@ -12,6 +12,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 {
 	public class AcrusLanceProj: ModProjectile
     {
+        private int zamboni;
         public override void SetStaticDefaults()
         {
             // DisplayName.SetDefault("Acrus Lance");
@@ -30,6 +31,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             Projectile.timeLeft = 40;
             Projectile.extraUpdates = 0;
             Projectile.scale = 1f;
+            zamboni = 1;
         }
         public override void ModifyHitNPC(NPC target, ref NPC.HitModifiers modifiers)
         {
@@ -79,8 +81,8 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                     movementFactor += bole;
                 }
             }
-
-            Projectile.position += Projectile.velocity * movementFactor;
+            ++zamboni;
+            Projectile.position += Projectile.velocity * ((movementFactor * 6) / zamboni);
 
             if (projOwner.itemAnimation == 0)
             {

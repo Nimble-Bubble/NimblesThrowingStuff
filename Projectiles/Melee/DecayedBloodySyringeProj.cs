@@ -13,6 +13,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 	public class DecayedBloodySyringeProj: ModProjectile
     {
         private bool hasShelled;
+        private int zamboni;
         public float movementFactor
         {
             get => Projectile.ai[0];
@@ -38,6 +39,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             Projectile.scale = 1.1f;
             Projectile.ownerHitCheck = true;
             hasShelled = false;
+            zamboni = 1;
         }
         public override void AI()
         {
@@ -71,7 +73,8 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                 }
             }
 
-            Projectile.position += Projectile.velocity * movementFactor;
+            ++zamboni;
+            Projectile.position += Projectile.velocity * ((movementFactor * 6) / zamboni);
 
             if (projOwner.itemAnimation == 0)
             {

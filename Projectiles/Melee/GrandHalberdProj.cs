@@ -11,6 +11,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 {
 	public class GrandHalberdProj: ModProjectile
     {
+        private int zamboni;
         public override void SetStaticDefaults()
         {
             // DisplayName.SetDefault("Grand Halberd");
@@ -30,6 +31,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             Projectile.extraUpdates = 0;
             Projectile.scale = 1.25f;
             Projectile.ArmorPenetration = 50;
+            zamboni = 1;
         }
         public float movementFactor
         {
@@ -67,7 +69,8 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                 //}
             }
 
-            Projectile.position += Projectile.velocity * movementFactor;
+            ++zamboni;
+            Projectile.position += Projectile.velocity * ((movementFactor * 6) / zamboni);
 
             if (projOwner.itemAnimation == 0)
             {

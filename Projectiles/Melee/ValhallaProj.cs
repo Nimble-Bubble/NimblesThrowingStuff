@@ -11,6 +11,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 {
 	public class ValhallaProj: ModProjectile
     {
+        private int zamboni;
         public float movementFactor
         {
             get => Projectile.ai[0];
@@ -34,6 +35,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             Projectile.timeLeft = 18000;
             Projectile.extraUpdates = 0;
             Projectile.scale = 1f;
+            zamboni = 1;
         }
         public override void AI()
         {
@@ -84,7 +86,8 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                 }
             }
 
-            Projectile.position += Projectile.velocity * movementFactor;
+            ++zamboni;
+            Projectile.position += Projectile.velocity * ((movementFactor * 6) / zamboni);
             int dust5 = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 69,
                             Projectile.velocity.X * 0.1f, Projectile.velocity.Y * 0.1f, 100, new Color(), 1f);
             if (Main.rand.Next(3) != 0)

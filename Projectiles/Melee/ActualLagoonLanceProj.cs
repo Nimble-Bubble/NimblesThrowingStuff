@@ -13,6 +13,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 	public class ActualLagoonLanceProj: ModProjectile
     {
         private bool hasWatered;
+        private int zamboni;
         public override void SetStaticDefaults()
         {
             // DisplayName.SetDefault("Laguna Lance");
@@ -33,6 +34,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             Projectile.scale = 1.1f;
             Projectile.hide = true;
             Projectile.ownerHitCheck = true;
+            zamboni = 1;
         }
         public float movementFactor
         {
@@ -65,7 +67,8 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                 }
             }
 
-            Projectile.position += Projectile.velocity * movementFactor;
+            ++zamboni;
+            Projectile.position += Projectile.velocity * ((movementFactor * 6) / zamboni);
 
             if (projOwner.itemAnimation == 0)
             {

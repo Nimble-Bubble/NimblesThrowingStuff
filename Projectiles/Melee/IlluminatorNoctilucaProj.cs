@@ -13,6 +13,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 {
     public class IlluminatorNoctilucaProj : ModProjectile
     {
+        private int zamboni;
         private bool hasShelled;
         private int currentShellsLocal;
         public float movementFactor
@@ -40,6 +41,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             Projectile.scale = 1.1f;
             Projectile.ownerHitCheck = true;
             hasShelled = false;
+            zamboni = 1;
         }
         public override void AI()
         {
@@ -74,7 +76,8 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                 }
             }
 
-            Projectile.position += Projectile.velocity * movementFactor;
+            ++zamboni;
+            Projectile.position += Projectile.velocity * ((movementFactor * 6) / zamboni);
 
             if (projOwner.itemAnimation == 0)
             {

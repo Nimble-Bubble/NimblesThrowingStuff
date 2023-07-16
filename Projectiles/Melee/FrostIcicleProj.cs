@@ -12,6 +12,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 
     public class FrostIcicleProj : ModProjectile
     {
+        private int zamboni;
         public override void SetStaticDefaults()
         {
             // DisplayName.SetDefault("Frost Icicle");
@@ -30,6 +31,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             Projectile.timeLeft = 40;
             Projectile.extraUpdates = 0;
             Projectile.scale = 1.1f;
+            zamboni = 1;
         }
         public float movementFactor
         {
@@ -73,7 +75,8 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                 projOwner.immune = true;
             }
 
-            Projectile.position += Projectile.velocity * movementFactor;
+            ++zamboni;
+            Projectile.position += Projectile.velocity * ((movementFactor * 6) / zamboni);
 
             if (projOwner.itemAnimation == 0)
             {

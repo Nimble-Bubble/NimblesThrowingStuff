@@ -11,6 +11,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 {
 	public class LonghornProj: ModProjectile
     {
+        private int zamboni;
         public float movementFactor
         {
             get => Projectile.ai[0];
@@ -34,6 +35,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             Projectile.timeLeft = 18000;
             Projectile.extraUpdates = 0;
             Projectile.scale = 1f;
+            zamboni = 1;
         }
         public override void AI()
         {
@@ -57,14 +59,11 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                 if (projOwner.itemAnimation > projOwner.itemAnimationMax / 2) 
                 {
                     float bole = 0.2f;
-                    // bole /= 2;
                     movementFactor += bole;
                 }
-                //else 
-                //{
-                //    movementFactor += 1f;
-                //}
             }
+            ++zamboni;
+            Projectile.position += Projectile.velocity * ((movementFactor * 6) / zamboni);
 
             Projectile.position += Projectile.velocity * movementFactor;
 

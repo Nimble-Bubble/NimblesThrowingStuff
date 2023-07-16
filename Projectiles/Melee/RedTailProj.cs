@@ -12,6 +12,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 {
 	public class RedTailProj: ModProjectile
     {
+        private int zamboni;
         private bool flamesThrown;
         public override void SetStaticDefaults()
         {
@@ -32,6 +33,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             Projectile.extraUpdates = 0;
             Projectile.scale = 1.2f;
             flamesThrown = false;
+            zamboni = 1;
         }
         public override void ModifyHitNPC(NPC target, ref NPC.HitModifiers modifiers)
         {
@@ -80,7 +82,8 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                     movementFactor += bole;
                 }
             }
-            Projectile.position += Projectile.velocity * movementFactor;
+            ++zamboni;
+            Projectile.position += Projectile.velocity * ((movementFactor * 6) / zamboni);
             if (projOwner.itemAnimation == 0)
             {
                 Projectile.Kill();

@@ -15,6 +15,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
     {
         private bool hasShelled;
         private int currentShellsLocal;
+        private int zamboni;
         //SoundStyle HecklerShot = new SoundStyle("NimblesThrowingStuff/Sounds/Item/HecklerShot");
         public float movementFactor
         {
@@ -41,6 +42,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             Projectile.scale = 1f;
             Projectile.ownerHitCheck = true;
             hasShelled = false;
+            zamboni = 1;
         }
         public override void AI()
         {
@@ -75,7 +77,8 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                 }
             }
 
-            Projectile.position += Projectile.velocity * movementFactor;
+            ++zamboni;
+            Projectile.position += Projectile.velocity * ((movementFactor * 6) / zamboni);
 
             if (projOwner.itemAnimation == 0)
             {

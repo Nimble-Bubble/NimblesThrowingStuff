@@ -8,6 +8,7 @@ using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.Enums;
 using NimblesThrowingStuff.Items;
+using NimblesThrowingStuff.Projectiles.Throwing;
 
 namespace NimblesThrowingStuff.Projectiles.Melee
 {
@@ -15,6 +16,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
     {
         private bool hasShelled;
         private int currentShellsLocal;
+        private int zamboni;
         public float movementFactor
         {
             get => Projectile.ai[0];
@@ -40,6 +42,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             Projectile.scale = 1.2f;
             Projectile.ownerHitCheck = true;
             hasShelled = false;
+            zamboni = 1;
         }
         public override void AI()
         {
@@ -64,7 +67,6 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             {
                 if (movementFactor == 0f)
                 {
-                    movementFactor = 3f;
                     Projectile.netUpdate = true;
                 }
                 if (projOwner.itemAnimation > projOwner.itemAnimationMax / 2)
@@ -72,10 +74,9 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                     float bole = 0.35f;
                     movementFactor += bole;
                 }
+                ++zamboni;
+                Projectile.position += Projectile.velocity * ((movementFactor * 6) / zamboni);
             }
-
-            Projectile.position += Projectile.velocity * movementFactor;
-
             if (projOwner.itemAnimation == 0)
             {
                 Projectile.Kill();
