@@ -756,6 +756,11 @@ Mods: {
 					'''
 			}
 
+			CrystallineParadise: {
+				DisplayName: Crystalline Paradise
+				Tooltip: Contrary to its name, this long lance's tip is sure to bring great pain to anything it contacts.
+			}
+
 			CursedDemonLance: {
 				DisplayName: Cursed Demonite Lance
 				Tooltip: Cthulhu's hardened flesh brings out the best in shortswords.
@@ -1741,6 +1746,7 @@ Mods: {
 			BlueTailFlames.DisplayName: Blue Tail Flames
 			BlueTailProj.DisplayName: Blue Tail
 			BoneClawLanceProj.DisplayName: Bone Claw Lance
+			CrystallineParadiseProj.DisplayName: Crystalline Paradise
 			CursedDemonLanceProj.DisplayName: Cursed Demon Lance
 			DecayedBloodySyringeProj.DisplayName: Decayed Bloody Syringe
 			DeepBusterProj.DisplayName: Deep Buster

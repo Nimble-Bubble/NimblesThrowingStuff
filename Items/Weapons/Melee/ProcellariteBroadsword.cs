@@ -17,14 +17,14 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 		public override void SetDefaults() {
-			Item.damage = 240;
+			Item.damage = 220;
 			Item.useStyle = ItemUseStyleID.Swing;
 			Item.useAnimation = 21;
 			Item.useTime = 21;
 			Item.knockBack = 8f;
-			Item.width = 90;
-			Item.height = 90;
-			Item.scale = 1.5f;
+			Item.width = 120;
+			Item.height = 120;
+			Item.scale = 1.15f;
 			Item.rare = ItemRarityID.Purple;
 			Item.value = Item.buyPrice(1, 0, 0, 0);
             Item.DamageType = DamageClass.Melee;
