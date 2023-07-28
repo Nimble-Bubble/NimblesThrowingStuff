@@ -109,6 +109,8 @@ namespace NimblesThrowingStuff
             RecipeGroup.RegisterGroup(nameof(ItemID.AdamantiteBar), Adamantgroup);
             RecipeGroup EvilTomeIngredients = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Debuff-causing substance that can be obtained from an Evil Biome in Hardmode", ItemID.CursedFlames, ItemID.Ichor);
             RecipeGroup.RegisterGroup(nameof(ItemID.CursedFlames), EvilTomeIngredients);
+            RecipeGroup AnyStringAccessory = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.RainbowString)}", ItemID.WhiteString, ItemID.RedString, ItemID.OrangeString, ItemID.YellowString, ItemID.LimeString, ItemID.GreenString, ItemID.TealString, ItemID.CyanString, ItemID.SkyBlueString, ItemID.BlueString, ItemID.PurpleString, ItemID.VioletString, ItemID.PinkString, ItemID.BrownString, ItemID.BlackString, ItemID.RainbowString);
+            RecipeGroup.RegisterGroup(nameof(ItemID.RainbowString), AnyStringAccessory);
         }
 	}
 }

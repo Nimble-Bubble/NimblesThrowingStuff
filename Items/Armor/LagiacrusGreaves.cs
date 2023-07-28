@@ -47,11 +47,11 @@ namespace NimblesThrowingStuff.Items.Armor
         }
         public override void AddRecipes()
         {
-            Recipe r = CreateRecipe();
-            r.AddIngredient(ItemID.BeeWax, 10);
-            r.AddIngredient(ModContent.ItemType<LagiacrusShell>(), 8);
-            r.AddTile(16);
-            r.Register();
+            Recipe recipe = CreateRecipe();
+            recipe.AddIngredient(ItemID.BeeWax, 10);
+            recipe.AddIngredient(ModContent.ItemType<LagiacrusShell>(), 8);
+            recipe.AddTile(TileID.Anvils);
+            recipe.Register();
         }
     }
 }

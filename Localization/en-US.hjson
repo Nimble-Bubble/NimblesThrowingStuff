@@ -1669,6 +1669,11 @@ Mods: {
 				DisplayName: Stardust Whip
 				Tooltip: ""
 			}
+
+			MakluvaHood: {
+				DisplayName: Makluva Hood
+				Tooltip: ""
+			}
 		}
 
 		NPCs: {

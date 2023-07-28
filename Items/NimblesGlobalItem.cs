@@ -179,6 +179,11 @@ namespace NimblesThrowingStuff.Items
             recipe.AddIngredient(ItemID.Vertebrae, 5);
             recipe.AddTile(TileID.WorkBenches);
             recipe.Register();
+            recipe = Recipe.Create(ItemID.LavaFishingHook, 1);
+            recipe.AddIngredient(ItemID.HellstoneBar, 8);
+            recipe.AddIngredient(ItemID.Seashell, 1);
+            recipe.AddTile(TileID.Hellforge);
+            recipe.Register();
         }
     }
 }

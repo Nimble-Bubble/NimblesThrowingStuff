@@ -11,35 +11,39 @@ using Terraria.GameContent.Creative;
 
 namespace NimblesThrowingStuff.Items.Armor
 {
-    [AutoloadEquip(EquipType.Body)]
-    public class LagiacrusMail : ModItem
+    [AutoloadEquip(EquipType.Head)]
+    public class MakluvaHood : ModItem
     {
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-            /* Tooltip.SetDefault("Increases attack speed by 5%"
-                +"\nIncreases critical strike chance by 3%"); */
+            // Tooltip.SetDefault("Increases throwing damage by 10%");
         }
 
         public override void SetDefaults()
         {
             Item.width = 30;
             Item.height = 32;
-            Item.value = 36000;
-            Item.rare = 3;
-            Item.defense = 8; 
+            Item.value = 11750;
+            Item.rare = 2;
+            Item.defense = 5; // The Defence value for this piece of armour.
         }
         public override void UpdateEquip(Player player)
         {
-            var modPlayer = player.GetModPlayer<NimblesPlayer>();
-            modPlayer.universalSpeed += 0.05f;
-            player.GetCritChance(DamageClass.Generic) += 3;
+            player.gills = true;
         }
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
-            recipe.AddIngredient(ItemID.BeeWax, 12);
-            recipe.AddIngredient(ModContent.ItemType<LagiacrusShell>(), 10);
+            recipe.AddIngredient(ItemID.Salmon, 3);
+            recipe.AddIngredient(ItemID.RedSnapper, 6);
+            recipe.AddIngredient(ItemID.ShadowScale, 6);
+            recipe.AddTile(TileID.Anvils);
+            recipe.Register();
+            recipe = CreateRecipe();
+            recipe.AddIngredient(ItemID.Salmon, 3);
+            recipe.AddIngredient(ItemID.RedSnapper, 6);
+            recipe.AddIngredient(ItemID.TissueSample, 6);
             recipe.AddTile(TileID.Anvils);
             recipe.Register();
         }
