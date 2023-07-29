@@ -11,8 +11,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 		public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			/* Tooltip.SetDefault("Designed to mimic the whirlpools that Lagiacri use to hunt their prey"
-				+"\nHas a chance to electrify targets"); */
 		}
 		public override void SetDefaults() 
 		{

@@ -40,13 +40,10 @@ namespace NimblesThrowingStuff.Projectiles.Summoning
 
 			if (Main.rand.NextBool(20))
             {
-				int launchFlowInvader = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.position, Projectile.velocity * new Vector2(1.25f, 1.25f), ProjectileID.StardustJellyfishSmall, Projectile.damage / 2, Projectile.knockBack / 2, Main.myPlayer, 0.0f, (float)Main.rand.Next(0, 45));
-				Main.projectile[launchFlowInvader].hostile = false;
-				Main.projectile[launchFlowInvader].friendly = true;
-				Main.projectile[launchFlowInvader].DamageType = DamageClass.Summon;
+				int launchCellShot = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.position, Projectile.velocity * new Vector2(1.25f, 1.25f), ProjectileID.StardustCellMinionShot, Projectile.damage / 2, Projectile.knockBack / 2, Main.myPlayer, 0.0f, (float)Main.rand.Next(0, 45));
 			} 
-			// StardustJellyfishSmall flies towards the player regardless of firing velocity
-			// May have to replace that vanilla projectile with a custom one
+			//This used to be the Flow Invader projectile, but that didn't work out too well
+			//It launched towards the player instead of in the direction of the whip
 			/* #region Active check
                 int num1 = Projectile.type == ModContent.ProjectileType<MiniMossHornetProj>() ? 1 : 0;
 			if (!player.active) {

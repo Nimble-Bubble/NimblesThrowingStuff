@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Summoning
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 			// DisplayName.SetDefault("Milkyway Cleaver"); 
-			// Tooltip.SetDefault("Born from stardust, this whip can tear through brasts and worlds alike");
+			// Tooltip.SetDefault("Born from stardust, this whip can tear through voids and worlds alike");
             Item.staff[Item.type] = true;
             ItemID.Sets.GamepadWholeScreenUseRange[Item.type] = true; 
 			ItemID.Sets.LockOnIgnoresCollision[Item.type] = true;
@@ -42,12 +42,12 @@ namespace NimblesThrowingStuff.Items.Weapons.Summoning
         {
 			return true;
         }
-		/* public override void AddRecipes()
+		public override void AddRecipes()
 		{
 			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.FragmentStardust, 18);
 			recipe.AddTile(TileID.LunarCraftingStation);
 			recipe.Register();
-		} */
+		}
 	}
 }

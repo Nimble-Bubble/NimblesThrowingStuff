@@ -1548,7 +1548,7 @@ Mods: {
 
 			TrueNightPiercer: {
 				DisplayName: True Night's Piercer
-				Tooltip: "'Find your own way to the Knife'"
+				Tooltip: Find your own way to the Knife
 			}
 
 			TungstenKnife: {
@@ -1580,7 +1580,7 @@ Mods: {
 				DisplayName: Whirlpool Whammer
 				Tooltip:
 					'''
-					Designed to mimic the whirlpools that Lagiacri use to hunt their prey
+					Designed to mimic the whirlpools that lagiacri use to hunt their prey
 					Has a chance to electrify targets
 					'''
 			}
@@ -1611,8 +1611,8 @@ Mods: {
 			}
 
 			GreenQurupecoFeather: {
-				DisplayName: Green Qurupeco Feather
-				Tooltip: ""
+				DisplayName: Verdant Siren's Feather
+				Tooltip: These brilliant feathers freeze and get wet easily, but they are surprisingly fire-resistant.
 			}
 
 			SteelBeam: {
@@ -1666,13 +1666,13 @@ Mods: {
 			}
 
 			StardustWhip: {
-				DisplayName: Stardust Whip
-				Tooltip: ""
+				DisplayName: Milkyway Cleaver
+				Tooltip: Born from stardust, this whip can tear through voids and worlds alike
 			}
 
 			MakluvaHood: {
 				DisplayName: Makluva Hood
-				Tooltip: ""
+				Tooltip: This soft, gilled hood allows for underwater breathing
 			}
 		}
 
