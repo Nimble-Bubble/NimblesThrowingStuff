@@ -24,7 +24,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			Item.width = 80;
 			Item.height = 80;
 			Item.scale = 1.6f;
-			Item.rare = 10;
+			Item.rare = ItemRarityID.Red;
 			Item.value = Item.buyPrice(0, 50, 0, 0);
             Item.DamageType = DamageClass.Melee;
             Item.shoot = ModContent.ProjectileType<FuriousBeam>();

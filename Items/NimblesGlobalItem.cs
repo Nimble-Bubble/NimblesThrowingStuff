@@ -104,6 +104,10 @@ namespace NimblesThrowingStuff.Items
                     player.QuickSpawnItem(player.GetSource_FromThis(), ItemType<PoseironTrident>(), 1);
                 }
             }
+            if (item.type == ItemID.BossBagBetsy && Main.rand.NextBool(4))
+            {
+                player.QuickSpawnItem(player.GetSource_FromThis(), ItemType<EtherianChakram>(), 1);
+            }    
             if (item.type == ItemID.MoonLordBossBag && Main.rand.NextBool(5))
             {
                 player.QuickSpawnItem(player.GetSource_FromThis(), ItemType<CosmosCrasher>(), 1);

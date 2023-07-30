@@ -21,22 +21,22 @@ namespace NimblesThrowingStuff.Items.Weapons.Summoning
 			ItemID.Sets.LockOnIgnoresCollision[Item.type] = true;
 		}
 		public override void SetDefaults() {
-			Item.damage = 95;
+			Item.damage = 225;
 			Item.knockBack = 6f;
 			Item.width = 32;
 			Item.height = 32;
-			Item.useTime = 20;
-			Item.useAnimation = 20;
+			Item.useTime = 24;
+			Item.useAnimation = 24;
 			Item.useStyle = 1;
 			Item.value = Item.buyPrice(0, 50, 0, 0);
-			Item.rare = ItemRarityID.Cyan;
+			Item.rare = ItemRarityID.Red;
 			Item.UseSound = SoundID.Item8;
 			Item.noMelee = true;
 			Item.noUseGraphic = true;
 			Item.autoReuse = true;
 			Item.DamageType = DamageClass.Summon;
 			Item.shoot = ModContent.ProjectileType<StardustWhipProj>();
-			Item.shootSpeed = 6f;
+			Item.shootSpeed = 10f;
 		}
 		public override bool MeleePrefix()
         {

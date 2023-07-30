@@ -1674,6 +1674,11 @@ Mods: {
 				DisplayName: Terrific Bloody Syringe
 				Tooltip: ""
 			}
+
+			EtherianChakram: {
+				DisplayName: Etherian Chakram
+				Tooltip: ""
+			}
 		}
 
 		NPCs: {
@@ -1927,6 +1932,7 @@ Mods: {
 			TerrificBloodySyringeProj.DisplayName: Terrific Bloody Syringe Proj
 			ShroomiteBulletProj.DisplayName: Shroomite Bullet Proj
 			StardustWhipProj.DisplayName: Stardust Whip Proj
+			EtherianChakramProj.DisplayName: Etherian Chakram Proj
 		}
 
 		Keybinds.Guard.DisplayName: Guard
