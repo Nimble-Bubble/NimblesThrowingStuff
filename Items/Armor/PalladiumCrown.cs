@@ -48,10 +48,10 @@ namespace NimblesThrowingStuff.Items.Armor
         }
         public override void AddRecipes()
         {
-            Recipe r = CreateRecipe();
-            r.AddIngredient(1184, 12);
-            r.AddTile(16);
-            r.Register();
+            Recipe recipe = CreateRecipe();
+            recipe.AddIngredient(1184, 12);
+            recipe.AddTile(16);
+            recipe.Register();
         }
     }
 }

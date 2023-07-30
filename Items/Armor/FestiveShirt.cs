@@ -39,10 +39,10 @@ namespace NimblesThrowingStuff.Items.Armor
 
         public override void AddRecipes()
         {
-            Recipe r = CreateRecipe();
-            r.AddIngredient(ModContent.ItemType<FestiveCloth>(), 24);
-            r.AddTile(134);
-            r.Register();
+            Recipe recipe = CreateRecipe();
+            recipe.AddIngredient(ModContent.ItemType<FestiveCloth>(), 24);
+            recipe.AddTile(134);
+            recipe.Register();
         }
     }
 }

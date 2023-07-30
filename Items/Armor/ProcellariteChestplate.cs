@@ -40,10 +40,10 @@ namespace NimblesThrowingStuff.Items.Armor
 
         public override void AddRecipes()
         {
-            Recipe r = CreateRecipe();
-            r.AddIngredient(ModContent.ItemType<ProcellariteBar>(), 24);
-            r.AddTile(TileID.LunarCraftingStation);
-            r.Register();
+            Recipe recipe = CreateRecipe();
+            recipe.AddIngredient(ModContent.ItemType<ProcellariteBar>(), 24);
+            recipe.AddTile(TileID.LunarCraftingStation);
+            recipe.Register();
         }
     }
 }

@@ -52,11 +52,11 @@ namespace NimblesThrowingStuff.Items.Armor
 
         public override void AddRecipes()
         {
-            Recipe r = CreateRecipe();
-            r.AddIngredient(ModContent.ItemType<DoradoFragment>(), 12);
-            r.AddIngredient(3467, 8);
-            r.AddTile(TileID.LunarCraftingStation);
-            r.Register();
+            Recipe recipe = CreateRecipe();
+            recipe.AddIngredient(ModContent.ItemType<DoradoFragment>(), 12);
+            recipe.AddIngredient(3467, 8);
+            recipe.AddTile(TileID.LunarCraftingStation);
+            recipe.Register();
         }
     }
 }

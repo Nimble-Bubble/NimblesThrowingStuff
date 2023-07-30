@@ -36,11 +36,11 @@ namespace NimblesThrowingStuff.Items.Armor
         }
         public override void AddRecipes()
         {
-            Recipe r = CreateRecipe();
-            r.AddIngredient(ItemID.HellstoneBar, 8);
-            r.AddIngredient(ModContent.ItemType<RedRathScale>(), 8);
-            r.AddTile(16);
-            r.Register();
+            Recipe recipe = CreateRecipe();
+            recipe.AddIngredient(ItemID.HellstoneBar, 8);
+            recipe.AddIngredient(ModContent.ItemType<RedRathScale>(), 8);
+            recipe.AddTile(16);
+            recipe.Register();
         }
     }
 }

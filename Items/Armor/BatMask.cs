@@ -34,11 +34,11 @@ namespace NimblesThrowingStuff.Items.Armor
         }
         public override void AddRecipes()
         {
-            Recipe r = CreateRecipe();
-            r.AddRecipeGroup(nameof(ItemID.GoldBar), 8);
-            r.AddIngredient(ModContent.ItemType<BatFlesh>(), 6);
-            r.AddTile(16);
-            r.Register();
+            Recipe recipe = CreateRecipe();
+            recipe.AddRecipeGroup(nameof(ItemID.GoldBar), 8);
+            recipe.AddIngredient(ModContent.ItemType<BatFlesh>(), 6);
+            recipe.AddTile(16);
+            recipe.Register();
         }
     }
 }

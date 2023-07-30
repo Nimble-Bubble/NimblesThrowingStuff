@@ -44,24 +44,6 @@ namespace NimblesThrowingStuff.Projectiles.Summoning
 			} 
 			//This used to be the Flow Invader projectile, but that didn't work out too well
 			//It launched towards the player instead of in the direction of the whip
-			/* #region Active check
-                int num1 = Projectile.type == ModContent.ProjectileType<MiniMossHornetProj>() ? 1 : 0;
-			if (!player.active) {
-				player.ClearBuff(Mod.Find<ModBuff>("MossHornetBuff").Type);
-			}
-			if (player.HasBuff(Mod.Find<ModBuff>("MossHornetBuff").Type)) {
-				Projectile.timeLeft = 2;
-			}
-             if (num1 == 0)
-             {
-        return;
-             }
-            player.AddBuff(ModContent.BuffType<MossHornetBuff>(), 18000, true);
-			#endregion
-                
-			#region Animation and visuals
-			Lighting.AddLight(Projectile.Center, Color.Green.ToVector3() * 0.75f);
-			#endregion */
 		}
 		private void DrawLine(List<Vector2> list)
 		{

@@ -316,6 +316,11 @@ Mods: {
 					'''
 			}
 
+			MakluvaHood: {
+				DisplayName: Makluva Hood
+				Tooltip: This soft, gilled hood allows for underwater breathing
+			}
+
 			MathrusGreaves: {
 				DisplayName: Draconic Greaves
 				Tooltip: Increases movement speed and throwing damage by 40%
@@ -480,7 +485,7 @@ Mods: {
 
 			BatFlesh: {
 				DisplayName: Bat Flesh
-				Tooltip: A furry bit of bat skin
+				Tooltip: A hairy bit of bat skin
 			}
 
 			BeastBone: {
@@ -507,8 +512,8 @@ Mods: {
 				DisplayName: Hermitaur Shell
 				Tooltip:
 					'''
-					This durable, bone-like material makes up the exoskeleton of a Hermitaur.
-					When a large Hermitaur dies, scavengers bring pieces of its shell far away.
+					This durable, bone-like material makes up the exoskeleton of a hermitaur.
+					When a large hermitaur dies, scavengers bring pieces of its shell far away.
 					'''
 			}
 
@@ -516,7 +521,7 @@ Mods: {
 				DisplayName: Shell-Shocker
 				Tooltip:
 					'''
-					Strange crystal protusions on this shell release electricity.
+					Strange crystal protusions on this shell can store release electricity.
 					It is because of this electricity that this material is highly valued for crafting equipment.
 					'''
 			}
@@ -647,12 +652,12 @@ Mods: {
 
 			LivingRelicMask: {
 				DisplayName: Living Relic Mask
-				Tooltip: ""
+				Tooltip: Like a specimen of lost times
 			}
 
 			MorilusMask: {
 				DisplayName: Morilus Mask
-				Tooltip: ""
+				Tooltip: Resembles a strange, living machine of war
 			}
 
 			GuardianBarrier: {
@@ -677,7 +682,7 @@ Mods: {
 
 			SporeStaff: {
 				DisplayName: Spore Staff
-				Tooltip: ""
+				Tooltip: Spews a poisonous cloud that spreads out over time
 			}
 
 			StormShot: {
@@ -743,7 +748,7 @@ Mods: {
 				Tooltip:
 					'''
 					A jeweled Lance at the forefront of fire weapon manufacturing technology.
-					Right click to spew flames from the tip of the lance.
+					Right click to spew azure flames from the tip of the lance.
 					'''
 			}
 
@@ -758,7 +763,7 @@ Mods: {
 
 			CrystallineParadise: {
 				DisplayName: Crystalline Paradise
-				Tooltip: Contrary to its name, this long lance's tip is sure to bring great pain to anything it contacts.
+				Tooltip: Contrary to its name, this long lance's tip is sure to bring suffering to anything it contacts.
 			}
 
 			CursedDemonLance: {
@@ -1019,6 +1024,11 @@ Mods: {
 					'''
 			}
 
+			ShroomiteBroadsword: {
+				DisplayName: Shroomite Broadsword
+				Tooltip: ""
+			}
+
 			SkyseaSpinner: {
 				DisplayName: Skysea Spinner
 				Tooltip: A very agile yoyo that rains spikes upon its targets
@@ -1154,6 +1164,16 @@ Mods: {
 				Tooltip: Fires a high-velocity watery arrow
 			}
 
+			ShroomiteBullet: {
+				DisplayName: Shroomite Bullet
+				Tooltip: ""
+			}
+
+			ShroomiteShot: {
+				DisplayName: Shroomite Shot
+				Tooltip: ""
+			}
+
 			SilverPistol: {
 				DisplayName: Silver Pistol
 				Tooltip: ""
@@ -1220,6 +1240,11 @@ Mods: {
 					Summons small, but poisonous living spore balls
 					The spore balls will sometimes leave small spores in their path
 					'''
+			}
+
+			StardustWhip: {
+				DisplayName: Milkyway Cleaver
+				Tooltip: Born from stardust, this whip can tear through voids and worlds alike
 			}
 
 			ViolentClusterTome: {
@@ -1640,11 +1665,6 @@ Mods: {
 				Tooltip: ""
 			}
 
-			ShroomiteBroadsword: {
-				DisplayName: Shroomite Broadsword
-				Tooltip: ""
-			}
-
 			SpaceSpinner: {
 				DisplayName: Space Spinner
 				Tooltip: ""
@@ -1653,26 +1673,6 @@ Mods: {
 			TerrificBloodySyringe: {
 				DisplayName: Terrific Bloody Syringe
 				Tooltip: ""
-			}
-
-			ShroomiteBullet: {
-				DisplayName: Shroomite Bullet
-				Tooltip: ""
-			}
-
-			ShroomiteShot: {
-				DisplayName: Shroomite Shot
-				Tooltip: ""
-			}
-
-			StardustWhip: {
-				DisplayName: Milkyway Cleaver
-				Tooltip: Born from stardust, this whip can tear through voids and worlds alike
-			}
-
-			MakluvaHood: {
-				DisplayName: Makluva Hood
-				Tooltip: This soft, gilled hood allows for underwater breathing
 			}
 		}
 
