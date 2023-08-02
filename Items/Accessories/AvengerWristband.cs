@@ -29,7 +29,18 @@ namespace NimblesThrowingStuff.Items.Accessories
             Item.rare = 6;
             Item.expert = false;
         }
-
+        public override bool CanEquipAccessory(Player player, int slot, bool modded)
+        {
+            var modPlayer = player.GetModPlayer<NimblesPlayer>();
+            if (modPlayer.sacredWrist)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        } 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             player.GetModPlayer<NimblesPlayer>().sacredWrist = true;

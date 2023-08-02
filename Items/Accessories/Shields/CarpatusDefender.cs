@@ -29,7 +29,18 @@ namespace NimblesThrowingStuff.Items.Accessories.Shields
             Item.defense = 10;
             Item.expert = false;
         }
-
+        /* public override bool CanEquipAccessory(Player player, int slot)
+        {
+            var modPlayer = player.GetModPlayer<NimblesPlayer>();
+            if (modPlayer.whichShield >= 1)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        } */
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             player.dash = 3;

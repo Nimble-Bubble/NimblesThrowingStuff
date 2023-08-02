@@ -52,12 +52,12 @@ Mods: {
 				Description: It burns!
 			}
 
-			GuardHorrorshowShield: {
+			GuardHorrorshow: {
 				DisplayName: Guard?
 				Description: Nothing can hit you. You can hit nothing. Is all well? All is well.
 			}
 
-			GuardIronShield: {
+			GuardIron: {
 				DisplayName: Guard
 				Description: Defense boosted at the cost of reduced mobility
 			}
@@ -105,6 +105,11 @@ Mods: {
 			GuardCarpatus: {
 				DisplayName: Guard
 				Description: Protected by the spirit of the sky's sea
+			}
+
+			GuardWyvernshell: {
+				DisplayName: Guard
+				Description: In your element, heat
 			}
 		}
 
@@ -203,6 +208,11 @@ Mods: {
 			IronShield: {
 				DisplayName: Iron Shield
 				Tooltip: Slow when guarding, but provides a nice defense
+			}
+
+			WyvernshellShield: {
+				DisplayName: Caudal Clipeus
+				Tooltip: Made from a Rathalos tail, this shield keeps the heat easy
 			}
 
 			ThrowerEmblem: {

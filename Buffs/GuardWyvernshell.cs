@@ -8,12 +8,12 @@ using static Terraria.ModLoader.ModContent;
 
 namespace NimblesThrowingStuff.Buffs
 {
-    public class GuardHorrorshowShield : ModBuff
+    public class GuardWyvernshell : ModBuff
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Guard?");
-			// Description.SetDefault("Nothing can hit you. You can hit nothing. Is all well? All is well.");
+			// DisplayName.SetDefault("Guard");
+			// Description.SetDefault("Enemy contact damage will be reflected");
 			Main.buffNoSave[Type] = true;
 			Main.buffNoTimeDisplay[Type] = true;
 		}

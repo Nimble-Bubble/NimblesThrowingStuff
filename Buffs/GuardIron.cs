@@ -8,7 +8,7 @@ using static Terraria.ModLoader.ModContent;
 
 namespace NimblesThrowingStuff.Buffs
 {
-    public class GuardIronShield : ModBuff
+    public class GuardIron : ModBuff
 	{
 		public override void SetStaticDefaults()
 		{

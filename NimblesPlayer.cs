@@ -98,16 +98,19 @@ namespace NimblesThrowingStuff
                 switch (whichShield)
                 {
                     case 1:
-                        Player.AddBuff(Mod.Find<ModBuff>("GuardIronShield").Type, 2);
+                        Player.AddBuff(Mod.Find<ModBuff>("GuardIron").Type, 2);
                     break;
                     case 2:
-                        Player.AddBuff(Mod.Find<ModBuff>("GuardHorrorshowShield").Type, 2);
+                        Player.AddBuff(Mod.Find<ModBuff>("GuardHorrorshow").Type, 2);
                         break;
                     case 3:
                         Player.AddBuff(Mod.Find<ModBuff>("GuardCarpatus").Type, 2);
                         break;
                     case 4:
                         Player.AddBuff(Mod.Find<ModBuff>("GuardStinguard").Type, 2);
+                        break;
+                    case 5:
+                        Player.AddBuff(Mod.Find<ModBuff>("GuardWyvernshell").Type, 2);
                         break;
                 }
             }
@@ -246,6 +249,15 @@ namespace NimblesThrowingStuff
                         if (Main.rand.NextBool(6))
                         {
                             Dust.NewDust(Player.position, Player.width, Player.height, 44, Player.velocity.RotatedByRandom(MathHelper.ToDegrees(120)).X * 0.5f, Player.velocity.RotatedByRandom(MathHelper.ToDegrees(120)).Y * 0.5f, 0, default(Color), 0.5f);
+                        }
+                        break;
+                    case 5:
+                        Player.statDefense += 4 + (guardBonus * 2);
+                        Player.buffImmune[BuffID.OnFire] = true;
+                        Lighting.AddLight(Player.Center, Color.Red.ToVector3() * 0.5f);
+                        if (Main.rand.NextBool(6))
+                        {
+                            Dust.NewDust(Player.position, Player.width, Player.height, 6, Player.velocity.RotatedByRandom(MathHelper.ToDegrees(120)).X * 0.5f, Player.velocity.RotatedByRandom(MathHelper.ToDegrees(120)).Y * 0.5f, 0, default(Color), 0.5f);
                         }
                         break;
                 }

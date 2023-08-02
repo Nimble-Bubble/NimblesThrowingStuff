@@ -30,18 +30,18 @@ namespace NimblesThrowingStuff.Items.Accessories.Shields
             Item.rare = 2;
             Item.defense = 3;
         }
-        //public override bool CanEquipAccessory(Player player, int slot)
-        //{
-        //    var modPlayer = player.GetModPlayer<NimblesPlayer>();
-        //    if (modPlayer.whichShield >= 1)
-        //    {
-        //        return false;
-        //    }
-        //    else
-        //    {
-        //        return true;
-        //    }
-        //}
+        /* public override bool CanEquipAccessory(Player player, int slot)
+        {
+            var modPlayer = player.GetModPlayer<NimblesPlayer>();
+            if (modPlayer.whichShield >= 1)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        } */
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             var modPlayer = player.GetModPlayer<NimblesPlayer>();

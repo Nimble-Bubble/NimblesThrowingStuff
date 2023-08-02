@@ -8,8 +8,8 @@ namespace NimblesThrowingStuff.Dusts
     {
         public override bool Update(Dust dust)
         {
-            dust.velocity.X *= 0.8f;
-            dust.velocity.Y *= 0.8f;
+            dust.velocity.X *= 0.9f;
+            dust.velocity.Y *= 0.9f;
             Lighting.AddLight(dust.position, 0, 0.5f, 1);
             return true;
         }
