@@ -25,7 +25,7 @@ namespace NimblesThrowingStuff.Items.Accessories.Shields
             Item.width = 30;
             Item.height = 30;
             Item.value = Item.value = Item.buyPrice(1, 50, 0, 0);
-            Item.rare = 10;
+            Item.rare = ItemRarityID.Red;
             Item.defense = 10;
             Item.expert = false;
         }

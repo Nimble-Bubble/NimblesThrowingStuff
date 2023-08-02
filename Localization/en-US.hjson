@@ -93,13 +93,18 @@ Mods: {
 			}
 
 			GuardStinguard: {
-				DisplayName: Guard Stinguard
-				Description: Mods.NimblesThrowingStuff.Buffs.GuardStinguard.Description
+				DisplayName: Guard
+				Description: Put a thorn in your enemy's foot
 			}
 
 			NoFallDamageNonPotion: {
-				DisplayName: No Fall Damage Non Potion
-				Description: Mods.NimblesThrowingStuff.Buffs.NoFallDamageNonPotion.Description
+				DisplayName: From Any Height
+				Description: You can fall without fear
+			}
+
+			GuardCarpatus: {
+				DisplayName: Guard
+				Description: Protected by the spirit of the sky's sea
 			}
 		}
 

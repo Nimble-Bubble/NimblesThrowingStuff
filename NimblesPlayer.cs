@@ -103,6 +103,9 @@ namespace NimblesThrowingStuff
                     case 2:
                         Player.AddBuff(Mod.Find<ModBuff>("GuardHorrorshowShield").Type, 2);
                         break;
+                    case 3:
+                        Player.AddBuff(Mod.Find<ModBuff>("GuardCarpatus").Type, 2);
+                        break;
                     case 4:
                         Player.AddBuff(Mod.Find<ModBuff>("GuardStinguard").Type, 2);
                         break;
@@ -223,17 +226,17 @@ namespace NimblesThrowingStuff
                         Player.invis = true;
                         Player.statDefense += guardBonus;
                         Player.GetDamage(DamageClass.Generic) /= 4;
-                        universalSpeed = 0.25f;
+                        universalSpeed /= 4;
                         if (Main.rand.NextBool(6))
                         {
                             Dust.NewDust(Player.position, Player.width, Player.height, 43, Player.velocity.X + Main.rand.Next(-3, 4), Player.velocity.Y + Main.rand.Next(-3, 4), 0, new Color(255, 255, 255));
                         }
                         break;
                     case 3:
-                        Player.statDefense += 50 + guardBonus;
+                        Player.statDefense += 50 + (guardBonus * 2);
                         if (Main.rand.NextBool(6))
                         {
-                            Dust.NewDust(Player.position, Player.width, Player.height, 43, Player.velocity.X + Main.rand.Next(-3, 4), Player.velocity.Y + Main.rand.Next(-3, 4), ModContent.DustType<ProcellariteStarDust>(), new Color(255, 255, 255));
+                            Dust.NewDust(Player.position, Player.width, Player.height, ModContent.DustType<ProcellariteStarDust>(), Player.velocity.X + Main.rand.Next(-3, 4), Player.velocity.Y + Main.rand.Next(-3, 4), ModContent.DustType<ProcellariteStarDust>(), new Color(255, 255, 255));
                         }
                         break;
                     case 4:
