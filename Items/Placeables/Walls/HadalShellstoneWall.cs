@@ -19,7 +19,7 @@ namespace NimblesThrowingStuff.Items.Placeables.Walls
 			Item.useAnimation = 15;
 			Item.useStyle = 1;
 			Item.value = Item.buyPrice(0, 0, 0, 12);
-			Item.rare = 0;
+			Item.rare = ItemRarityID.White;
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
             Item.createWall = Mod.Find<ModWall>("HadalShellstoneWallTile").Type;

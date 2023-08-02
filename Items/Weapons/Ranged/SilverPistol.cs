@@ -22,7 +22,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 			Item.useAnimation = 31;
 			Item.useStyle = 5;
 			Item.value = Item.buyPrice(0, 1, 60, 0);
-			Item.rare = 1;
+			Item.rare = ItemRarityID.Blue;
 			Item.noMelee = true;
 			Item.useAmmo = AmmoID.Bullet;
 			Item.UseSound = SoundID.Item11;

@@ -33,7 +33,7 @@ namespace NimblesThrowingStuff.Items.Consumables
 			Item.height = 14;
 			Item.maxStack = 99;
 			Item.value = Item.buyPrice(0, 25, 0, 0);
-			Item.rare = 10;
+			Item.rare = ItemRarityID.Red;
 			Item.useStyle = 1;
 			Item.useTime = 60;
 			Item.useAnimation = 60;

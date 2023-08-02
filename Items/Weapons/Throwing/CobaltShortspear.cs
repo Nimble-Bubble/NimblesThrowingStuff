@@ -24,7 +24,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
             Item.noMelee = true;
             Item.noUseGraphic = true;
 			Item.value = Item.buyPrice(0, 0, 7, 0);
-			Item.rare = 4;
+			Item.rare = ItemRarityID.LightRed;
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
 			Item.shoot = Mod.Find<ModProjectile>("CobaltShortspearProj").Type;

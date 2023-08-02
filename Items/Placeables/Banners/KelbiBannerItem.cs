@@ -21,7 +21,7 @@ namespace NimblesThrowingStuff.Items.Placeables.Banners
 			Item.useAnimation = 20;
 			Item.useStyle = 1;
 			Item.value = Item.buyPrice(0, 0, 10, 0);
-			Item.rare = 1;
+			Item.rare = ItemRarityID.Blue;
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
             Item.useTurn = true;

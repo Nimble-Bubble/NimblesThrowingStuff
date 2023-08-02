@@ -26,7 +26,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
             Item.noMelee = true;
             Item.noUseGraphic = true;
 			Item.value = Item.buyPrice(0, 18, 75, 0);
-			Item.rare = 6;
+			Item.rare = ItemRarityID.LightPurple;
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
 			Item.shoot = ModContent.ProjectileType<BloodyPikeProj>();

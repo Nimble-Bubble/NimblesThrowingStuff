@@ -22,7 +22,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 			Item.useAnimation = 25;
 			Item.useStyle = 1;
 			Item.value = Item.buyPrice(1, 25, 0, 0);
-			Item.rare = 10;
+			Item.rare = ItemRarityID.Red;
 			Item.noMelee = true;
             Item.noUseGraphic = true;
 			Item.mana = 30;

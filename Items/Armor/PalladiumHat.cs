@@ -25,7 +25,7 @@ namespace NimblesThrowingStuff.Items.Armor
             Item.width = 30;
             Item.height = 32;
             Item.value = 75000;
-            Item.rare = 4;
+            Item.rare = ItemRarityID.LightRed;
             Item.defense = 7; // The Defence value for this piece of armour.
         }
 

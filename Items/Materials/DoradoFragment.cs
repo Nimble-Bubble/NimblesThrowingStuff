@@ -21,7 +21,7 @@ namespace NimblesThrowingStuff.Items.Materials
 			Item.height = 14;
 			Item.maxStack = 9999;
 			Item.value = Item.buyPrice(0, 1, 50, 0);
-			Item.rare = 9;
+			Item.rare = ItemRarityID.Cyan;
         }
 	}
 }

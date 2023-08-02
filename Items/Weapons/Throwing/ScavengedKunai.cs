@@ -26,7 +26,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
             Item.noMelee = true;
             Item.noUseGraphic = true;
 			Item.value = Item.buyPrice(0, 3, 50, 0);
-			Item.rare = 1;
+			Item.rare = ItemRarityID.Blue;
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
 			Item.shoot = Mod.Find<ModProjectile>("ScavengedKunaiProj").Type;

@@ -23,7 +23,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 			Item.consumable = true;             
 			Item.knockBack = 3.5f;
 			Item.value = 45;
-			Item.rare = 1;
+			Item.rare = ItemRarityID.Blue;
 			Item.shoot = ModContent.ProjectileType<HealingArrowProj>();   
 			Item.shootSpeed = 4f;                  
 			Item.ammo = AmmoID.Arrow;              

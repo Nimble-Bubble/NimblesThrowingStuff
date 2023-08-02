@@ -26,7 +26,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Magic
 			Item.knockBack = 2f;
             Item.noMelee = true;
 			Item.value = Item.buyPrice(0, 2, 70, 0);
-			Item.rare = 2;
+			Item.rare = ItemRarityID.Green;
 			Item.UseSound = SoundID.Item43;
 			Item.autoReuse = true;
 			Item.shoot = ModContent.ProjectileType<SporeBolt>();

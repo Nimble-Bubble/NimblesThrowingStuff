@@ -24,7 +24,7 @@ namespace NimblesThrowingStuff.Items.Accessories
             Item.width = 30;
             Item.height = 30;
             Item.value = Item.value = Item.buyPrice(0, 7, 50, 0);
-            Item.rare = 3;
+            Item.rare = ItemRarityID.Orange;
             Item.expert = false;
         }
 

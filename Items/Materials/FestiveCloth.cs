@@ -18,7 +18,7 @@ namespace NimblesThrowingStuff.Items.Materials
 			Item.height = 14;
 			Item.maxStack = 9999;
 			Item.value = Item.buyPrice(0, 4, 0, 0);
-			Item.rare = 8;
+			Item.rare = ItemRarityID.Yellow;
         }
 		public override void AddRecipes()
 		{

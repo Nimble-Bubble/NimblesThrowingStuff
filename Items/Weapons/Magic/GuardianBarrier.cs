@@ -32,7 +32,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Magic
 			Item.useAnimation = 30;
 			Item.useStyle = 1;
 			Item.value = Item.buyPrice(0, 75, 0, 0);
-			Item.rare = 10;
+			Item.rare = ItemRarityID.Red;
 			Item.UseSound = SoundID.Item8;
 			Item.noMelee = true;
 			Item.DamageType = DamageClass.Magic;

@@ -39,7 +39,7 @@ namespace NimblesThrowingStuff.Items.Consumables
             Item.consumable = true;
             Item.width = 32;
             Item.height = 32;
-            Item.rare = 9;
+            Item.rare = ItemRarityID.Cyan;
             Item.expert = true;
         }
         public override bool CanRightClick()

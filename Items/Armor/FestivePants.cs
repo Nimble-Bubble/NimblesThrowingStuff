@@ -26,7 +26,7 @@ namespace NimblesThrowingStuff.Items.Armor
             Item.width = 30;
             Item.height = 32;
             Item.value = 750000;
-            Item.rare = 8;
+            Item.rare = ItemRarityID.Yellow;
             Item.defense = 16; // The Defence value for this piece of armour.
         }
         public override void UpdateEquip(Player player)

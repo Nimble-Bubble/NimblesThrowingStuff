@@ -19,7 +19,7 @@ namespace NimblesThrowingStuff.Items.Tools
 			Item.width = 48;
 			Item.height = 48;
 			Item.value = Item.buyPrice(0, 7, 50, 0);
-			Item.rare = 1;
+			Item.rare = ItemRarityID.Blue;
             Item.bait = 15;
 			Item.consumable = false;
 			Item.maxStack = 1;

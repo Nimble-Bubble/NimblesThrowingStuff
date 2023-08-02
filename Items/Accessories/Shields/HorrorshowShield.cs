@@ -26,10 +26,10 @@ namespace NimblesThrowingStuff.Items.Accessories.Shields
             Item.width = 26;
             Item.height = 26;
             Item.value = Item.value = Item.buyPrice(0, 50, 0, 0);
-            Item.rare = 7;
+            Item.rare = ItemRarityID.Lime;
             Item.defense = 5;
         }
-        /* public override bool CanEquipAccessory(Player player, int slot)
+        public override bool CanEquipAccessory(Player player, int slot, bool modded)
         {
             var modPlayer = player.GetModPlayer<NimblesPlayer>();
             if (modPlayer.whichShield >= 1)
@@ -40,7 +40,7 @@ namespace NimblesThrowingStuff.Items.Accessories.Shields
             {
                 return true;
             }
-        } */
+        }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             var modPlayer = player.GetModPlayer<NimblesPlayer>();

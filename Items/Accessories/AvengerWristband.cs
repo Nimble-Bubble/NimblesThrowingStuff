@@ -26,7 +26,7 @@ namespace NimblesThrowingStuff.Items.Accessories
             Item.width = 30;
             Item.height = 30;
             Item.value = Item.buyPrice(0, 25, 0, 0);
-            Item.rare = 6;
+            Item.rare = ItemRarityID.LightPurple;
             Item.expert = false;
         }
         public override bool CanEquipAccessory(Player player, int slot, bool modded)

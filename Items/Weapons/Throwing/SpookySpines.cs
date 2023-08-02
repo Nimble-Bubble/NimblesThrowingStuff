@@ -29,7 +29,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
             Item.noMelee = true;
             Item.noUseGraphic = false;
 			Item.value = Item.buyPrice(0, 45, 0, 0);
-			Item.rare = 8;
+			Item.rare = ItemRarityID.Yellow;
 			Item.UseSound = SoundID.Item5;
 			Item.autoReuse = true;
 			Item.shoot = Mod.Find<ModProjectile>("SpookySpineProj").Type;

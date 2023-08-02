@@ -24,7 +24,7 @@ namespace NimblesThrowingStuff.Items.Tools
 			Item.useStyle = 1;
 			Item.knockBack = 6f;
 			Item.value = Item.buyPrice(0, 50, 0, 0);
-			Item.rare = 11;
+			Item.rare = ItemRarityID.Purple;
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
             Item.pick = 300;

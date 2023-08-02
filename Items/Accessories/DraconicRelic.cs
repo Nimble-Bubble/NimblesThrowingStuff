@@ -27,7 +27,7 @@ namespace NimblesThrowingStuff.Items.Accessories
             Item.width = 22;
             Item.height = 22;
             Item.value = Item.value = Item.buyPrice(0, 50, 0, 0);
-            Item.rare = 10;
+            Item.rare = ItemRarityID.Red;
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {

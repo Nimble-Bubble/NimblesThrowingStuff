@@ -26,7 +26,7 @@ namespace NimblesThrowingStuff.Items.Accessories.Shields
             Item.width = 26;
             Item.height = 26;
             Item.value = Item.value = Item.buyPrice(0, 1, 25, 0);
-            Item.rare = 0;
+            Item.rare = ItemRarityID.White;
             Item.defense = 2;
         }
         /* public override bool CanEquipAccessory(Player player, int slot)

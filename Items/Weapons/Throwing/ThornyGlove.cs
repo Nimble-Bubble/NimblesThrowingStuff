@@ -28,7 +28,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
             Item.noMelee = true;
             Item.noUseGraphic = true;
 			Item.value = Item.buyPrice(0, 36, 0, 0);
-			Item.rare = 7;
+			Item.rare = ItemRarityID.Lime;
 			Item.UseSound = SoundID.Item5;
 			Item.autoReuse = true;
 			Item.shoot = Mod.Find<ModProjectile>("PoisonSeedProj").Type;

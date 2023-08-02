@@ -27,7 +27,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Magic
 			Item.knockBack = 6f;
             Item.noMelee = true;
 			Item.value = Item.buyPrice(0, 5, 40, 0);
-			Item.rare = 3;
+			Item.rare = ItemRarityID.Orange;
 			Item.UseSound = SoundID.Item45;
 			Item.autoReuse = true;
 			Item.shoot = ModContent.ProjectileType<GlidingBlazeProj>();

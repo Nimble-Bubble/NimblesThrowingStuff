@@ -21,7 +21,7 @@ namespace NimblesThrowingStuff.Items.Materials
 			Item.useAnimation = 12;
 			Item.useStyle = 1;
 			Item.value = Item.buyPrice(0, 17, 50, 0);
-			Item.rare = 11;
+			Item.rare = ItemRarityID.Purple;
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
             Item.useTurn = true;

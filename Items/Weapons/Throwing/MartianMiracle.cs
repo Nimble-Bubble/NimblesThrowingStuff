@@ -27,7 +27,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
             Item.noMelee = true;
             Item.noUseGraphic = true;
 			Item.value = Item.buyPrice(0, 75, 0, 0);
-			Item.rare = 9;
+			Item.rare = ItemRarityID.Cyan;
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = false;
 			Item.shoot = Mod.Find<ModProjectile>("MartianMiracleProj").Type;
