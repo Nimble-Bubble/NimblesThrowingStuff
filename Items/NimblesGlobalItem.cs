@@ -171,6 +171,12 @@ namespace NimblesThrowingStuff.Items
             recipe.AddTile(TileID.Tables);
             recipe.AddTile(TileID.Chairs);
             recipe.Register();
+            recipe = Recipe.Create(ItemID.DepthMeter, 1);
+            recipe.AddRecipeGroup("IronBar", 20);
+            recipe.AddRecipeGroup(nameof(ItemID.GoldBar), 5);
+            recipe.AddIngredient(ModContent.ItemType<BatFlesh>(), 5);
+            recipe.AddTile(TileID.HeavyWorkBench);
+            recipe.Register();
             recipe = Recipe.Create(ItemID.Compass, 1);
             recipe.AddRecipeGroup("IronBar", 20);
             recipe.AddRecipeGroup(nameof(ItemID.GoldBar), 10);
@@ -178,6 +184,13 @@ namespace NimblesThrowingStuff.Items
             recipe.AddIngredient(ItemID.GraniteBlock, 25);
             recipe.AddTile(TileID.Tables);
             recipe.AddTile(TileID.Chairs);
+            recipe.Register();
+            recipe = Recipe.Create(ItemID.Compass, 1);
+            recipe.AddRecipeGroup("IronBar", 20);
+            recipe.AddRecipeGroup(nameof(ItemID.GoldBar), 10);
+            recipe.AddIngredient(ItemID.MarbleBlock, 25);
+            recipe.AddIngredient(ItemID.GraniteBlock, 25);
+            recipe.AddTile(TileID.HeavyWorkBench);
             recipe.Register();
             recipe = Recipe.Create(ItemID.Leather, 1);
             recipe.AddIngredient(ItemID.Vertebrae, 5);
@@ -187,6 +200,10 @@ namespace NimblesThrowingStuff.Items
             recipe.AddIngredient(ItemID.HellstoneBar, 8);
             recipe.AddIngredient(ItemID.Seashell, 1);
             recipe.AddTile(TileID.Hellforge);
+            recipe.Register();
+            recipe = Recipe.Create(ItemID.AngelStatue, 1);
+            recipe.AddIngredient(ItemID.StoneBlock, 50);
+            recipe.AddTile(TileID.HeavyWorkBench);
             recipe.Register();
         }
     }

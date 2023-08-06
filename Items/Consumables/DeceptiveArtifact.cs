@@ -49,21 +49,24 @@ namespace NimblesThrowingStuff.Items.Consumables
 		public override bool? UseItem(Player player)
 		{
 			NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<MorilusMain>());
-            //NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<SkySeaGuardian>());
-            //NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<SkySeaGuardian>());
-            //NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<SkySeaGuardian>());
-            //NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<SkySeaGuardian>());
+            /* NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<SkySeaGuardian>());
+            NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<SkySeaGuardian>());
+            NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<SkySeaGuardian>());
+            NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<SkySeaGuardian>()); */
 			SoundEngine.PlaySound(SoundID.Roar);
 
 			return true;
 		}
 		public override void AddRecipes()
 		{
+			//Morilus is rather subpar at the moment, so this crafting recipe has been made somewhat obtuse.
 			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.LunarBar, 10);
 			recipe.AddIngredient(ModContent.ItemType<SoulOfTrite>(), 6);
-			recipe.AddIngredient(575, 6);
-            recipe.AddIngredient(824, 250);
+			recipe.AddIngredient(ItemID.SoulofFlight, 6);
+            recipe.AddIngredient(ItemID.SunplateBlock, 250);
+			recipe.AddIngredient(ItemID.PenguinBanner);
+			recipe.AddIngredient(ItemID.AngelStatue, 99);
 			recipe.AddTile(TileID.LunarCraftingStation);
 			recipe.Register();
 		}
