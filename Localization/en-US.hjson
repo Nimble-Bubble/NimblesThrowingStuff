@@ -159,6 +159,11 @@ Mods: {
 					'''
 			}
 
+			FishrontoothNecklace: {
+				DisplayName: Fishrontooth Necklace
+				Tooltip: ""
+			}
+
 			GuardianEmblem: {
 				DisplayName: Guardian Emblem
 				Tooltip:
@@ -208,6 +213,11 @@ Mods: {
 			IronShield: {
 				DisplayName: Iron Shield
 				Tooltip: Slow when guarding, but provides a nice defense
+			}
+
+			Stinguard: {
+				DisplayName: Stinguard
+				Tooltip: ""
 			}
 
 			WyvernshellShield: {
@@ -493,6 +503,11 @@ Mods: {
 					'''
 			}
 
+			GreaterRestorationPotion: {
+				DisplayName: Greater Restoration Potion
+				Tooltip: ""
+			}
+
 			MorilusTreasureBag: {
 				DisplayName: Treasure Bag
 				Tooltip: "{$CommonItemTooltip.RightClickToOpen}"
@@ -518,9 +533,24 @@ Mods: {
 				Tooltip: ""
 			}
 
+			EssenceOfBalance: {
+				DisplayName: Essence Of Balance
+				Tooltip: ""
+			}
+
 			FestiveCloth: {
 				DisplayName: Festive Cloth
 				Tooltip: A magical fabric taken from the jolly invaders
+			}
+
+			GrandBone: {
+				DisplayName: Grand Bone
+				Tooltip: ""
+			}
+
+			GreenQurupecoFeather: {
+				DisplayName: Verdant Siren's Feather
+				Tooltip: These brilliant feathers freeze and get wet easily, but they are surprisingly fire-resistant.
 			}
 
 			HermitaurShell: {
@@ -593,6 +623,11 @@ Mods: {
 
 			ProcellariteOre: {
 				DisplayName: Procellarite Ore
+				Tooltip: ""
+			}
+
+			SteelBeam: {
+				DisplayName: Steel Beam
 				Tooltip: ""
 			}
 
@@ -675,6 +710,11 @@ Mods: {
 				Tooltip: Resembles a strange, living machine of war
 			}
 
+			GlidingBlaze: {
+				DisplayName: Gliding Blaze
+				Tooltip: ""
+			}
+
 			GuardianBarrier: {
 				DisplayName: Barrier Builder
 				Tooltip:
@@ -708,6 +748,11 @@ Mods: {
 			Tritifier: {
 				DisplayName: Tritifier
 				Tooltip: Fires a bolt of trite that wears out enemies' defenses
+			}
+
+			AcrusLance: {
+				DisplayName: Acrus Lance
+				Tooltip: ""
 			}
 
 			ActualLagoonLance: {
@@ -774,6 +819,11 @@ Mods: {
 					Made from Hermitaur parts, this weapon is more than adequate as a beginner's lance.
 					Critical strikes give you increased endurance for a short period of time.
 					'''
+			}
+
+			ChlorophyteGreatlance: {
+				DisplayName: Chlorophyte Greatlance
+				Tooltip: ""
 			}
 
 			CrystallineParadise: {
@@ -973,6 +1023,11 @@ Mods: {
 					'''
 			}
 
+			PecoTeepee: {
+				DisplayName: Peco Teepee
+				Tooltip: ""
+			}
+
 			ProcellariteBroadsword: {
 				DisplayName: Procellarite Broadsword
 				Tooltip: ""
@@ -1049,6 +1104,11 @@ Mods: {
 				Tooltip: A very agile yoyo that rains spikes upon its targets
 			}
 
+			SpaceSpinner: {
+				DisplayName: Space Spinner
+				Tooltip: ""
+			}
+
 			SpectrePiercer: {
 				DisplayName: Spectre Piercer
 				Tooltip:
@@ -1080,6 +1140,11 @@ Mods: {
 			TemblorIllboros: {
 				DisplayName: Temblor Illboros
 				Tooltip: A simple but powerful lance with no strings attached.
+			}
+
+			TerrificBloodySyringe: {
+				DisplayName: Terrific Bloody Syringe
+				Tooltip: ""
 			}
 
 			TheToothpick: {
@@ -1366,6 +1431,11 @@ Mods: {
 				Tooltip: Three knives are thrown out per use
 			}
 
+			EtherianChakram: {
+				DisplayName: Etherian Chakram
+				Tooltip: ""
+			}
+
 			FestiveEggnog: {
 				DisplayName: Festive Eggnog
 				Tooltip: Explodes into drops o' nog
@@ -1624,76 +1694,6 @@ Mods: {
 					Has a chance to electrify targets
 					'''
 			}
-
-			FishrontoothNecklace: {
-				DisplayName: Fishrontooth Necklace
-				Tooltip: ""
-			}
-
-			Stinguard: {
-				DisplayName: Stinguard
-				Tooltip: ""
-			}
-
-			GreaterRestorationPotion: {
-				DisplayName: Greater Restoration Potion
-				Tooltip: ""
-			}
-
-			EssenceOfBalance: {
-				DisplayName: Essence Of Balance
-				Tooltip: ""
-			}
-
-			GrandBone: {
-				DisplayName: Grand Bone
-				Tooltip: ""
-			}
-
-			GreenQurupecoFeather: {
-				DisplayName: Verdant Siren's Feather
-				Tooltip: These brilliant feathers freeze and get wet easily, but they are surprisingly fire-resistant.
-			}
-
-			SteelBeam: {
-				DisplayName: Steel Beam
-				Tooltip: ""
-			}
-
-			GlidingBlaze: {
-				DisplayName: Gliding Blaze
-				Tooltip: ""
-			}
-
-			AcrusLance: {
-				DisplayName: Acrus Lance
-				Tooltip: ""
-			}
-
-			ChlorophyteGreatlance: {
-				DisplayName: Chlorophyte Greatlance
-				Tooltip: ""
-			}
-
-			PecoTeepee: {
-				DisplayName: Peco Teepee
-				Tooltip: ""
-			}
-
-			SpaceSpinner: {
-				DisplayName: Space Spinner
-				Tooltip: ""
-			}
-
-			TerrificBloodySyringe: {
-				DisplayName: Terrific Bloody Syringe
-				Tooltip: ""
-			}
-
-			EtherianChakram: {
-				DisplayName: Etherian Chakram
-				Tooltip: ""
-			}
 		}
 
 		NPCs: {
@@ -1937,17 +1937,17 @@ Mods: {
 			VileHarvestProj.DisplayName: Vile Harvest
 			WaraxeEcho.DisplayName: Hallowed Waraxe Echo
 			WhirlpoolWhammerProj.DisplayName: Whirlpool Whammer
-			GlidingBlazeProj.DisplayName: Gliding Blaze Proj
-			AcrusLanceProj.DisplayName: Acrus Lance Proj
-			ChlorophyteGreatlanceProj.DisplayName: Chlorophyte Greatlance Proj
-			PecoTeepeeProj.DisplayName: Peco Teepee Proj
+			GlidingBlazeProj.DisplayName: Gliding Blaze
+			AcrusLanceProj.DisplayName: Acrus Lance
+			ChlorophyteGreatlanceProj.DisplayName: Chlorophyte Greatlance
+			PecoTeepeeProj.DisplayName: Peco Teepee
 			PecoTeepeeShell.DisplayName: Peco Teepee Shell
 			ShroomiteSporeCloud.DisplayName: Shroomite Spore Cloud
-			SpaceSpinnerProj.DisplayName: Space Spinner Proj
-			TerrificBloodySyringeProj.DisplayName: Terrific Bloody Syringe Proj
-			ShroomiteBulletProj.DisplayName: Shroomite Bullet Proj
-			StardustWhipProj.DisplayName: Stardust Whip Proj
-			EtherianChakramProj.DisplayName: Etherian Chakram Proj
+			SpaceSpinnerProj.DisplayName: Space Spinner
+			TerrificBloodySyringeProj.DisplayName: Terrific Bloody Syringe
+			ShroomiteBulletProj.DisplayName: Shroomite Bullet
+			StardustWhipProj.DisplayName: Stardust Whip
+			EtherianChakramProj.DisplayName: Etherian Chakram
 		}
 
 		Keybinds.Guard.DisplayName: Guard
