@@ -122,6 +122,20 @@ namespace NimblesThrowingStuff
                 itemDrop = Mod.Find<ModItem>("LagiacrusShell").Type;
                 return;
             }
+            if (Player.ZoneCorrupt || Player.ZoneCrimson)
+            {
+                if (attempt.common && Main.rand.NextBool(4))
+                {
+                    itemDrop = Mod.Find<ModItem>("BeastBone").Type;
+                    return;
+                }
+                if (attempt.uncommon && Main.rand.NextBool(3) && NPC.downedMoonlord)
+                {
+                    itemDrop = Mod.Find<ModItem>("GrandBone").Type;
+                    return;
+                }
+                // return;
+            }
         }
         public override void OnHurt(Player.HurtInfo info)
         {
