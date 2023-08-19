@@ -25,6 +25,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 			Projectile.DamageType = DamageClass.Throwing;
 			Projectile.penetrate = 2;
 			Projectile.hide = true;
+			Projectile.alpha = 0;
 		}
 		public override bool TileCollideStyle(ref int width, ref int height, ref bool fallThrough, ref Vector2 hitboxCenterFrac)
 		{
@@ -43,9 +44,9 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 
 		public override void Kill(int timeLeft)
 		{
-			SoundEngine.PlaySound(SoundID.Dig, Projectile.position); 
-			Vector2 usePos = Projectile.position; 
-			Vector2 rotVector = (Projectile.rotation - MathHelper.ToRadians(90f)).ToRotationVector2(); 
+			SoundEngine.PlaySound(SoundID.Dig, Projectile.position);
+			Vector2 usePos = Projectile.position;
+			Vector2 rotVector = (Projectile.rotation - MathHelper.ToRadians(90f)).ToRotationVector2();
 			usePos += rotVector * 16f;
 			const int NUM_DUSTS = 5;
 			for (int i = 0; i < NUM_DUSTS; i++)
@@ -57,23 +58,12 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 				dust.noGravity = true;
 				usePos -= rotVector * 8f;
 			}
-			// The following section will probably be optimized at some point
-            Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, 0, -20,
-                            Mod.Find<ModProjectile>("FestiveSnowflake").Type, Projectile.damage / 4, 1f, Projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
-            Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, 20, -20,
-                            Mod.Find<ModProjectile>("FestiveSnowflake").Type, Projectile.damage / 4, 1f, Projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
-            Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, 20, 0,
-                            Mod.Find<ModProjectile>("FestiveSnowflake").Type, Projectile.damage / 4, 1f, Projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
-            Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, 20, 20,
-                            Mod.Find<ModProjectile>("FestiveSnowflake").Type, Projectile.damage / 4, 1f, Projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
-            Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, 0, 20,
-                            Mod.Find<ModProjectile>("FestiveSnowflake").Type, Projectile.damage / 4, 1f, Projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
-            Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, -20, 20,
-                            Mod.Find<ModProjectile>("FestiveSnowflake").Type, Projectile.damage / 4, 1f, Projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
-            Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, -20, 0,
-                            Mod.Find<ModProjectile>("FestiveSnowflake").Type, Projectile.damage / 4, 1f, Projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
-            Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, -20, -20,
-                            Mod.Find<ModProjectile>("FestiveSnowflake").Type, Projectile.damage / 4, 1f, Projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
+			for (int sn = 0; sn < 8; sn++)
+			{ 
+			int owflake = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, 0, -20,
+							Mod.Find<ModProjectile>("FestiveSnowflake").Type, Projectile.damage / 4, 1f, Projectile.owner, 0.0f, (float)Main.rand.Next(-45, 1));
+				Main.projectile[owflake].velocity.RotatedBy(MathHelper.ToDegrees(45));
+			}
 		}
 		public bool IsStickingToTarget
 		{
@@ -134,28 +124,12 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 			}
 		}
 		private const int MAX_TICKS = 4;
-		private const int ALPHA_REDUCTION = 25;
 		int deathCount = 0;
 		public override void AI()
 		{
-			UpdateAlpha();
 			if (IsStickingToTarget) StickyAI();
 			else NormalAI();
 		}
-
-		private void UpdateAlpha()
-		{
-			if (Projectile.alpha > 0)
-			{
-				Projectile.alpha -= ALPHA_REDUCTION;
-			}
-
-			if (Projectile.alpha < 0)
-			{
-				Projectile.alpha = 0;
-			}
-		}
-
 		private void NormalAI()
 		{
 			TargetWhoAmI++;

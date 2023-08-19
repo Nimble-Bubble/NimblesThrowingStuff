@@ -31,6 +31,11 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             Projectile.aiStyle = 99;
             Projectile.extraUpdates = 1;
         }
+        public override bool TileCollideStyle(ref int width, ref int height, ref bool fallThrough, ref Vector2 hitboxCenterFrac)
+        {
+            width = height = 16;
+            return true;
+        }
         public override void OnHitNPC (NPC target, NPC.HitInfo hit, int damageDone)
         {
             if (hit.Crit)
@@ -38,6 +43,6 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                     int meteorstrike = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.position.X + Main.rand.Next(-1, 2), Projectile.position.Y - 1000, Main.rand.Next(-1, 2), Main.rand.Next(5, 9), 424 + Main.rand.Next(3), Projectile.damage, Projectile.knockBack * 2, Projectile.owner);
                     Main.projectile[meteorstrike].DamageType = DamageClass.Melee;
                 }
-            }
+        }
     }
 }

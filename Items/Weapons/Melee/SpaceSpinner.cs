@@ -23,15 +23,15 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
         public override void SetDefaults() {
 			Item.damage = 17;
 			Item.useStyle = ItemUseStyleID.Shoot;
-			Item.useAnimation = 6;
-			Item.useTime = 6;
-			Item.knockBack = 3f;
+			Item.useAnimation = 8;
+			Item.useTime = 8;
+			Item.knockBack = 3.5f;
 			Item.width = 24;
 			Item.height = 24;
 			Item.noUseGraphic = true;
 			Item.noMelee = true;
 			Item.rare = ItemRarityID.Green;
-			Item.value = Item.buyPrice(0, 0, 3, 0);
+			Item.value = Item.buyPrice(0, 4, 0, 0);
             Item.DamageType = DamageClass.Melee;
 			Item.channel = true;
             Item.shoot = ModContent.ProjectileType<SpaceSpinnerProj>();

@@ -15,12 +15,12 @@ namespace NimblesThrowingStuff.Items.Tools
 		}
 		public override void SetDefaults() 
 		{
-			Item.damage = 13;
+			Item.damage = 14;
 			Item.DamageType = DamageClass.Melee;
 			Item.width = 48;
 			Item.height = 48;
-			Item.useTime = 14;
-			Item.useAnimation = 14;
+			Item.useTime = 12;
+			Item.useAnimation = 12;
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.knockBack = 3.5f;
 			Item.value = Item.buyPrice(0, 1, 50, 0);
@@ -30,9 +30,9 @@ namespace NimblesThrowingStuff.Items.Tools
 			Item.autoReuse = true;
 			Item.noMelee = true;
 			Item.noUseGraphic = true;
-            Item.pick = 64;
+            Item.pick = 80;
 			Item.shoot = ModContent.ProjectileType<MeteoriteDrillProj>();
-			Item.shootSpeed = 30;
+			Item.shootSpeed = 30f;
 		}
         public override void AddRecipes() 
 		{

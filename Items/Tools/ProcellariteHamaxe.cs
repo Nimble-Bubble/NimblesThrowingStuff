@@ -27,7 +27,7 @@ namespace NimblesThrowingStuff.Items.Tools
 			Item.rare = ItemRarityID.Purple;
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
-            Item.axe = 40;
+            Item.axe = 250;
             Item.hammer = 125;
             Item.tileBoost += 6;
 		}

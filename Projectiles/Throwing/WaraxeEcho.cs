@@ -17,15 +17,23 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
         }
         public override void SetDefaults()
         {
-            Projectile.width = 32;
-            Projectile.height = 32;
+            Projectile.width = 56;
+            Projectile.height = 56;
             Projectile.tileCollide = true;
             Projectile.maxPenetrate = -1;
             Projectile.friendly = true;
             Projectile.DamageType = DamageClass.Throwing;
-            Projectile.aiStyle = 3;
+            Projectile.aiStyle = 30;
             Projectile.penetrate = -1;
-            Projectile.extraUpdates = 1;
+            Projectile.tileCollide = false;
+            Projectile.timeLeft = 150;
+        }
+        public override void AI()
+        {
+            if (Projectile.timeLeft < 90)
+            {
+                Projectile.alpha += 3;
+            }    
         }
     }
 }
