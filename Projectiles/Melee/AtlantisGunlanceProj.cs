@@ -57,6 +57,11 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             Projectile.GetGlobalProjectile<NimblesGlobalProjectile>().maxShells = 3 + projOwner.GetModPlayer<NimblesPlayer>().bonusShells;
             if (projOwner.GetModPlayer<NimblesPlayer>().currentShells > 3)
             {
+                for (int s = 0; s < 10; s++)
+                {
+                    int smokeIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.Cloud, 0f, 0f, 100, default(Color), 2f);
+                    Main.dust[smokeIndex].velocity *= 2f;
+                }
                 Gore.NewGore(Projectile.GetSource_FromThis(), Projectile.position, Projectile.velocity, Mod.Find<ModGore>("ShellFlying").Type, 1f);
                 SoundEngine.PlaySound(SoundID.Item42);
                 projOwner.GetModPlayer<NimblesPlayer>().currentShells = 3;
@@ -106,8 +111,10 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                     }
                     for (int f = 0; f < 5; f++)
                     {
-                        int fireIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 59, 0f, 0f, 100, default(Color), 3f);
+                        int fireIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.BlueFlare, 0f, 0f, 100, default(Color), 3f);
                         Main.dust[fireIndex].velocity *= 4f;
+                        int smokeIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.Cloud, 0f, 0f, 100, default(Color), 2f);
+                        Main.dust[smokeIndex].velocity *= 1.4f;
                     }
                     SoundEngine.PlaySound(new SoundStyle("NimblesThrowingStuff/Sounds/Item/GunlanceReload"));
                     hasShelled = true;
@@ -116,13 +123,13 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                 {
                     if (projOwner.GetModPlayer<NimblesPlayer>().currentShells > 0)
                     {
-                        Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.velocity, ModContent.ProjectileType<AtlantisGunlanceShell>(), (Projectile.damage / 4) * 5, 1.5f, Projectile.owner);
+                        Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.velocity, ModContent.ProjectileType<AtlantisGunlanceShell>(), (Projectile.damage / 2) * 3, 1.5f, Projectile.owner);
                         SoundEngine.PlaySound(SoundID.Item38);
                         projOwner.velocity.X -= Projectile.velocity.X / 5;
                         projOwner.velocity.Y -= Projectile.velocity.Y / 5;
                         for (int f = 0; f < 20; f++)
                         {
-                            int fireIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 59, 0f, 0f, 100, default(Color), 3f);
+                            int fireIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.BlueFlare, 0f, 0f, 100, default(Color), 3f);
                             Main.dust[fireIndex].velocity *= 8f;
                         }
                         hasShelled = true;
@@ -135,7 +142,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                     }
                     for (int s = 0; s < 5; s++)
                     {
-                        int smokeIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 31, 0f, 0f, 100, default(Color), 2f);
+                        int smokeIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.Cloud, 0f, 0f, 100, default(Color), 2f);
                         Main.dust[smokeIndex].velocity *= 1.4f;
                     }
                 }

@@ -37,6 +37,19 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             Projectile.scale = 1.1f;
             zamboni = 1;
         }
+        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
+        {
+            for (int s = 0; s < 5; s++)
+            {
+                if (hit.Crit)
+                    {
+                    int smokeIndex2 = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.Cloud, 0f, 0f, 100, default(Color), 2f);
+                    Main.dust[smokeIndex2].velocity *= 2f;
+                    }
+                int smokeIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.Cloud, 0f, 0f, 100, default(Color), 2f);
+                Main.dust[smokeIndex].velocity *= 1.2f;
+            }
+        }
         public override void AI()
         {
             Player projOwner = Main.player[Projectile.owner];

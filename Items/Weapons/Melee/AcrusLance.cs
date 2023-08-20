@@ -18,7 +18,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			// Tooltip.SetDefault("A fearsome lance made from Lagiacrus materials. Jolts its prey with electricity.");
         }
         public override void SetDefaults() {
-			Item.damage = 22;
+			Item.damage = 26;
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.useAnimation = 22;
 			Item.useTime = 22;

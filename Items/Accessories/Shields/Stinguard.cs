@@ -30,7 +30,7 @@ namespace NimblesThrowingStuff.Items.Accessories.Shields
             Item.rare = ItemRarityID.Green;
             Item.defense = 3;
         }
-        /* public override bool CanEquipAccessory(Player player, int slot)
+        public override bool CanEquipAccessory(Player player, int slot, bool modded)
         {
             var modPlayer = player.GetModPlayer<NimblesPlayer>();
             if (modPlayer.whichShield >= 1)
@@ -41,7 +41,7 @@ namespace NimblesThrowingStuff.Items.Accessories.Shields
             {
                 return true;
             }
-        } */
+        }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             var modPlayer = player.GetModPlayer<NimblesPlayer>();

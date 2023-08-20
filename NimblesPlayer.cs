@@ -112,6 +112,9 @@ namespace NimblesThrowingStuff
                     case 5:
                         Player.AddBuff(Mod.Find<ModBuff>("GuardWyvernshell").Type, 2);
                         break;
+                    case 6:
+                        Player.AddBuff(Mod.Find<ModBuff>("GuardSightbringer").Type, 2);
+                        break;
                 }
             }
         }
@@ -272,6 +275,14 @@ namespace NimblesThrowingStuff
                         if (Main.rand.NextBool(6))
                         {
                             Dust.NewDust(Player.position, Player.width, Player.height, 6, Player.velocity.RotatedByRandom(MathHelper.ToDegrees(120)).X * 0.5f, Player.velocity.RotatedByRandom(MathHelper.ToDegrees(120)).Y * 0.5f, 0, default(Color), 0.5f);
+                        }
+                        break;
+                    case 6:
+                        Player.statDefense += guardBonus;
+                        Lighting.AddLight(Player.Center, Color.White.ToVector3() * 0.8f);
+                        if (Main.rand.NextBool(3))
+                        {
+                            Dust.NewDust(Player.position, Player.width, Player.height, 43, Player.velocity.X + Main.rand.Next(-3, 4), Player.velocity.Y + Main.rand.Next(-3, 4), 0, new Color(255, 255, 255));
                         }
                         break;
                 }

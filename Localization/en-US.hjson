@@ -111,6 +111,11 @@ Mods: {
 				DisplayName: Guard
 				Description: In your element, heat
 			}
+
+			GuardSightbringer: {
+				DisplayName: Sightbringings
+				Description: You can see traps and treasure
+			}
 		}
 
 		Items: {
@@ -1721,6 +1726,11 @@ Mods: {
 					Designed to mimic the whirlpools that lagiacri use to hunt their prey
 					Has a chance to electrify targets
 					'''
+			}
+
+			Sightbringer: {
+				DisplayName: Sightbringer
+				Tooltip: Hold the Guard button to see traps and treasure
 			}
 		}
 

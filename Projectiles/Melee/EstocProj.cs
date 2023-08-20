@@ -88,6 +88,16 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             {
                 hit.Knockback *= 10;
             }
+            for (int s = 0; s < 5; s++)
+            {
+                if (hit.Crit)
+                {
+                    int smokeIndex2 = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.GemDiamond, 0f, 0f, 100, default(Color), 2f);
+                    Main.dust[smokeIndex2].velocity *= 2f;
+                }
+                int smokeIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.GemDiamond, 0f, 0f, 100, default(Color), 2f);
+                Main.dust[smokeIndex].velocity *= 1.2f;
+            }
         }
     }
 }
