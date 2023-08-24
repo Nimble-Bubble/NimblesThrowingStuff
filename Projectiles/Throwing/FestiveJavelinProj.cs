@@ -10,6 +10,9 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 {
 	public class FestiveJavelinProj : ModProjectile
 	{
+		private int snowrot;
+		private Vector2 snowvel;
+		private float hitmul;
 		public override void SetStaticDefaults()
 		{
 			// DisplayName.SetDefault("Festive Javelin");
@@ -23,10 +26,12 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
             Projectile.usesLocalNPCImmunity = true;
             Projectile.localNPCHitCooldown = 60;
 			Projectile.DamageType = DamageClass.Throwing;
-			Projectile.penetrate = 2;
-			Projectile.hide = true;
+			Projectile.penetrate = 5;
 			Projectile.alpha = 0;
-		}
+			snowrot = 0;
+            snowvel = new Vector2(0, -20);
+			hitmul = 0.25f;
+        }
 		public override bool TileCollideStyle(ref int width, ref int height, ref bool fallThrough, ref Vector2 hitboxCenterFrac)
 		{
 			width = height = 10; 
@@ -59,10 +64,12 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 				usePos -= rotVector * 8f;
 			}
 			for (int sn = 0; sn < 8; sn++)
-			{ 
-			int owflake = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, 0, -20,
-							Mod.Find<ModProjectile>("FestiveSnowflake").Type, Projectile.damage / 4, 1f, Projectile.owner, 0.0f, (float)Main.rand.Next(-45, 1));
-				Main.projectile[owflake].velocity.RotatedBy(MathHelper.ToDegrees(45));
+			{
+                snowrot += 45;
+				snowvel.RotatedByRandom(MathHelper.ToDegrees(360));
+                int owflake = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, Main.rand.Next(-50, 50), Main.rand.Next(-50, 50),
+							Mod.Find<ModProjectile>("FestiveSnowflake").Type, (int)(Projectile.damage * hitmul), 1f, Projectile.owner, 0.0f, (float)Main.rand.Next(-45, 1));
+				
 			}
 		}
 		public bool IsStickingToTarget
@@ -88,6 +95,8 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 				0.75f; 
 			Projectile.netUpdate = true; 
 			UpdateStickyJavelins(target);
+			Projectile.damage /= 2;
+			hitmul *= 2.5f;
 		}
 		private void UpdateStickyJavelins(NPC target)
 		{
@@ -134,14 +143,14 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 		{
 			TargetWhoAmI++;
 			deathCount++;
-            if (deathCount >= 100)
+            if (deathCount >= 600)
             {
 				Projectile.Kill();
 			}
 			if (TargetWhoAmI >= MAX_TICKS)
 			{
 				const float velXmult = 0.98f; 
-				const float velYmult = 0.14f; 
+				const float velYmult = 0.20f; 
 				TargetWhoAmI = MAX_TICKS; 
 				Projectile.velocity.X *= velXmult;
 				Projectile.velocity.Y += velYmult;

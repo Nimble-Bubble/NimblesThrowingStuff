@@ -30,7 +30,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
 			Item.shoot = Mod.Find<ModProjectile>("FestiveJavelinProj").Type;
-			Item.shootSpeed = 15f;
+			Item.shootSpeed = 24f;
             Item.mana = 13;
 		}
 

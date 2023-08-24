@@ -32,7 +32,6 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             Projectile.timeLeft = 20;
             Projectile.extraUpdates = 0;
             Projectile.scale = 1.1f;
-            Projectile.hide = true;
             Projectile.ownerHitCheck = true;
             zamboni = 1;
         }
