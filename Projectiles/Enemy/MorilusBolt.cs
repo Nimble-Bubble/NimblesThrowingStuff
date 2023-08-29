@@ -6,6 +6,7 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
 using NimblesThrowingStuff.Dusts;
+using NimblesThrowingStuff.Projectiles.Throwing;
 
 namespace NimblesThrowingStuff.Projectiles.Enemy
 {
@@ -25,7 +26,7 @@ namespace NimblesThrowingStuff.Projectiles.Enemy
             Projectile.maxPenetrate = 10;
             Projectile.light = 1f;
             Projectile.alpha = 255;
-            Projectile.timeLeft = 200;
+            Projectile.timeLeft = 120;
             //Projectile.extraUpdates = 1;
         }
         public override void AI()
@@ -55,7 +56,17 @@ namespace NimblesThrowingStuff.Projectiles.Enemy
                 Main.dust[dust2].scale *= 0.9f;
             }
             Projectile.rotation += 10;
-            //Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<ProcellariteWaterDust>(), Main.rand.Next(-3, 2), Main.rand.Next(-3, 2), 0, default, Main.rand.NextFloat(0.5f, 1.5f));
+            Projectile.velocity.X *= 0.985f;
+            Projectile.velocity.Y *= 0.985f;
+        }
+        public override void Kill(int timeLeft)
+        {
+            int stream1 = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.velocity.RotatedBy(MathHelper.ToRadians(15)) * new Vector2(1.5f, 1.5f),
+                            ModContent.ProjectileType<MorilusStream>(), Projectile.damage / 2, 5f, Projectile.owner, 0.0f, (float)1);
+            int stream2 = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.velocity * new Vector2 (2f, 2f),
+                           ModContent.ProjectileType<MorilusStream>(), Projectile.damage / 2, 5f, Projectile.owner, 0.0f, (float)1);
+            int stream3 = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.velocity.RotatedBy(MathHelper.ToRadians(345)) * new Vector2(1.5f, 1.5f),
+                           ModContent.ProjectileType<MorilusStream>(), Projectile.damage / 2, 5f, Projectile.owner, 0.0f, (float)1);
         }
     }
 }

@@ -36,12 +36,14 @@ namespace NimblesThrowingStuff.Projectiles.Summoning
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
             Main.player[Projectile.owner].MinionAttackTargetNPC = target.whoAmI;
+			target.AddBuff(BuffID.BetsysCurse, 600);
+			//Faux whip debuff
         }
         public override void AI() 
         {
 			Player player = Main.player[Projectile.owner];
 
-			if (Main.rand.NextBool(20))
+			if (Main.rand.NextBool(10))
             {
 				int launchCellShot = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.position, Projectile.velocity * new Vector2(1.25f, 1.25f), ProjectileID.StardustCellMinionShot, Projectile.damage / 2, Projectile.knockBack / 2, Main.myPlayer, 0.0f, (float)Main.rand.Next(0, 45));
 			} 
