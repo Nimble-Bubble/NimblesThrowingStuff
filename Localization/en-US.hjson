@@ -1129,7 +1129,7 @@ Mods: {
 
 			ShroomiteBroadsword: {
 				DisplayName: Shroomite Broadsword
-				Tooltip: ""
+				Tooltip: Spreads spore clouds on use
 			}
 
 			SkyseaSpinner: {
@@ -1139,7 +1139,7 @@ Mods: {
 
 			SpaceSpinner: {
 				DisplayName: Space Spinner
-				Tooltip: ""
+				Tooltip: Critical strikes bring meteors down from the sky
 			}
 
 			SpectrePiercer: {
@@ -1177,7 +1177,12 @@ Mods: {
 
 			TerrificBloodySyringe: {
 				DisplayName: Terrific Bloody Syringe
-				Tooltip: ""
+				Tooltip:
+					'''
+					Right click to fire a stream of ichor
+					Guard and right click to reload
+					Up to five shots can be held at a time
+					'''
 			}
 
 			TheToothpick: {
@@ -1732,6 +1737,16 @@ Mods: {
 				DisplayName: Sightbringer
 				Tooltip: Hold the Guard button to see traps and treasure
 			}
+
+			HorrificDemonLance: {
+				DisplayName: Horrific Demon Lance
+				Tooltip:
+					'''
+					Right click to fire cursed flames
+					Guard and right click to reload
+					Up to eight shots can be held at a time
+					'''
+			}
 		}
 
 		NPCs: {
@@ -1986,6 +2001,7 @@ Mods: {
 			ShroomiteBulletProj.DisplayName: Shroomite Bullet
 			StardustWhipProj.DisplayName: Stardust Whip
 			EtherianChakramProj.DisplayName: Etherian Chakram
+			HorrificDemonLanceProj.DisplayName: Horrific Demon Lance Proj
 		}
 
 		Keybinds.Guard.DisplayName: Guard

@@ -39,9 +39,9 @@ namespace NimblesThrowingStuff.Projectiles.Enemy
                 Main.dust[dust1].noGravity = true;
                 Main.dust[dust1].scale *= 2f;
                 Dust lungado = Main.dust[dust1];
-                lungado.velocity.X = lungado.velocity.X * 1.5f;
+                lungado.velocity.X *= 1.5f;
                 Dust gadolun = Main.dust[dust1];
-                gadolun.velocity.Y = gadolun.velocity.Y * 1.5f;
+                gadolun.velocity.Y *= 1.5f;
             }
             else
             {
@@ -61,11 +61,17 @@ namespace NimblesThrowingStuff.Projectiles.Enemy
         }
         public override void Kill(int timeLeft)
         {
-            int stream1 = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.velocity.RotatedBy(MathHelper.ToRadians(15)) * new Vector2(1.5f, 1.5f),
+            for (int dustcount = 0; dustcount > 15; dustcount++)
+            {
+                int dust2 = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, ModContent.DustType<ProcellariteBrightWaterDust>(),
+                            Projectile.velocity.X * 0.2f, Projectile.velocity.Y * 0.2f, 100, new Color(), 1f);
+                Main.dust[dust2].velocity.RotatedByRandom(MathHelper.ToRadians(360));
+            }
+            int stream1 = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.velocity.RotatedBy(MathHelper.ToRadians(15)) * new Vector2(3f, 3f),
                             ModContent.ProjectileType<MorilusStream>(), Projectile.damage / 2, 5f, Projectile.owner, 0.0f, (float)1);
-            int stream2 = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.velocity * new Vector2 (2f, 2f),
+            int stream2 = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.velocity * new Vector2 (4f, 4f),
                            ModContent.ProjectileType<MorilusStream>(), Projectile.damage / 2, 5f, Projectile.owner, 0.0f, (float)1);
-            int stream3 = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.velocity.RotatedBy(MathHelper.ToRadians(345)) * new Vector2(1.5f, 1.5f),
+            int stream3 = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.velocity.RotatedBy(MathHelper.ToRadians(345)) * new Vector2(3f, 3f),
                            ModContent.ProjectileType<MorilusStream>(), Projectile.damage / 2, 5f, Projectile.owner, 0.0f, (float)1);
         }
     }
