@@ -156,7 +156,7 @@ namespace NimblesThrowingStuff.NPCs.Town
                     return "Transcendental inversion! Transcendental inversion! \nSorry, I've just been picking up odd frequencies lately.";
                 }
             }
-            if (Main.raining && Main.rand.Next(5) == 0)
+            if (Main.raining && Main.rand.NextBool(5))
             {
                 return "You're telling me a shrimp fried this rice?";
             }
@@ -195,7 +195,7 @@ namespace NimblesThrowingStuff.NPCs.Town
                 case 3:
                     return "What're ya buying?";
                 case 4:
-                    return "I remember when two men dug up only a man. The news spread through our system like plasmastorms on the crust of Glyrrinum";
+                    return "I remember when two men dug up only a man. The news spread through our system like plasmastorms on the crust of Glyrrinum.";
                 case 5:
                     return "This planet seems to be filled with places built for wheels and not legs. I feel that this is inconvenient for you.";
                 case 6:
@@ -229,44 +229,29 @@ namespace NimblesThrowingStuff.NPCs.Town
             LotteryWares.Add(ItemID.FragmentStardust);
             LotteryWares.Add<ProcellariteOre>(new Condition("Mods.NimblesThrowingStuff.Conditions.DownedMorilus", () => NimblesWorld.downedMorilus));
             LotteryWares.Register();
-            /* shop.item[nextSlot].SetDefaults(ItemID.LunarOre);
-			nextSlot++;
-            shop.item[nextSlot].SetDefaults(ItemID.FragmentSolar);
-            nextSlot++;
-            shop.item[nextSlot].SetDefaults(ItemID.FragmentVortex);
-            nextSlot++;
-            shop.item[nextSlot].SetDefaults(ItemID.FragmentNebula);
-            nextSlot++;
-            shop.item[nextSlot].SetDefaults(ItemID.FragmentStardust);
-            nextSlot++;
-            if (NimblesWorld.downedMorilus)
-            {
-                shop.item[nextSlot].SetDefaults(Mod.Find<ModItem>("ProcellariteOre").Type);
-                nextSlot++;
-            } */
         }
 
 		public override void OnKill()
 		{
-            Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, Mod.Find<ModGore>("Gores/LivingRelicHeadGore").Type, 1);
+            
         }
 
 		public override void TownNPCAttackStrength(ref int damage, ref float knockback)
 		{
-			damage = 20;
-			knockback = 2;
+			damage = 100;
+			knockback = 5;
 		}
 
 		public override void TownNPCAttackCooldown(ref int cooldown, ref int randExtraCooldown)
 		{
-			cooldown = 10;
-			randExtraCooldown = 10;
+			cooldown = 4;
+			randExtraCooldown = 0;
 		}
 
 		public override void TownNPCAttackProj(ref int projType, ref int attackDelay)
 		{
-			projType = ProjectileID.BoneDagger;
-			attackDelay = 5;
+			projType = ProjectileID.PurpleLaser;
+			attackDelay = 4;
 		}
 
 		public override void TownNPCAttackProjSpeed(ref float multiplier, ref float gravityCorrection, ref float randomOffset)

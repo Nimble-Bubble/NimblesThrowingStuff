@@ -36,7 +36,7 @@ namespace NimblesThrowingStuff.Projectiles.Enemy
                 Projectile.velocity.Y = 10;
             }
             Projectile.rotation += 10;
-            Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<ProcellariteWaterDust>(), Projectile.velocity.X * 0.1f, Projectile.velocity.Y * 0.1f, 0, default, Main.rand.NextFloat(0.5f, 1.5f));
+            Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<ProcellariteWaterDust>(), Projectile.velocity.X * 0.05f, Projectile.velocity.Y * 0.05f, 0, default, Main.rand.NextFloat(1f, 3f));
         }
     }
 }

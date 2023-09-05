@@ -449,8 +449,8 @@ namespace NimblesThrowingStuff.NPCs.Morilus
         }
         public override void OnKill()
         {
-            Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, Mod.Find<ModGore>("MorilusGore1").Type, 1f);
-            Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, Mod.Find<ModGore>("MorilusGore2").Type, 1f);
+            Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity.RotatedByRandom(MathHelper.ToRadians(360)), Mod.Find<ModGore>("MorilusGore1").Type, 1f);
+            Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity.RotatedByRandom(MathHelper.ToRadians(360)), Mod.Find<ModGore>("MorilusGore2").Type, 1f);
             if (!NimblesWorld.downedMorilus)
             {
                 NPC.SetEventFlagCleared(ref NimblesWorld.downedMorilus, -1);
