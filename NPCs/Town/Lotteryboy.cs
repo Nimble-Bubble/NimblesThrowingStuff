@@ -49,8 +49,8 @@ namespace NimblesThrowingStuff.NPCs.Town
 			NPC.damage = 50;
 			NPC.defense = 250;
 			NPC.lifeMax = 2500;
-			NPC.HitSound = SoundID.NPCHit1;
-			NPC.DeathSound = SoundID.NPCDeath1;
+			NPC.HitSound = SoundID.NPCHit42;
+			NPC.DeathSound = SoundID.NPCDeath44;
 			NPC.knockBackResist = 0.25f;
             AnimationType = NPCID.Merchant;
         }
@@ -233,9 +233,12 @@ namespace NimblesThrowingStuff.NPCs.Town
 
 		public override void OnKill()
 		{
-            
+            for (int f = 0; f < 20; f++)
+            {
+                int lottoDust = Dust.NewDust(new Vector2(NPC.position.X, NPC.position.Y), NPC.width * 2, NPC.height * 2, 6, 0f, 0f, 100, default(Color), 3f);
+                Main.dust[lottoDust].velocity *= 2f;
+            }
         }
-
 		public override void TownNPCAttackStrength(ref int damage, ref float knockback)
 		{
 			damage = 100;

@@ -42,7 +42,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ModContent.ItemType<ProcellariteBar>(), 12);
 			recipe.AddIngredient(ModContent.ItemType<AtlantisGunlance>());
-			recipe.AddTile(TileID.MythrilAnvil);
+			recipe.AddTile(TileID.LunarCraftingStation);
 			recipe.Register();
 		}
 	}
