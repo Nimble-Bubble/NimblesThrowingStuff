@@ -116,6 +116,11 @@ Mods: {
 				DisplayName: Sightbringings
 				Description: You can see traps and treasure
 			}
+
+			GuardWhirlpool: {
+				DisplayName: Guard Whirlpool
+				Description: Mods.NimblesThrowingStuff.Buffs.GuardWhirlpool.Description
+			}
 		}
 
 		Items: {
@@ -222,6 +227,11 @@ Mods: {
 			IronShield: {
 				DisplayName: Iron Shield
 				Tooltip: Slow when guarding, but provides a nice defense
+			}
+
+			Sightbringer: {
+				DisplayName: Sightbringer
+				Tooltip: Hold the Guard button to see traps and treasure
 			}
 
 			Stinguard: {
@@ -983,6 +993,16 @@ Mods: {
 					'''
 			}
 
+			HorrificDemonLance: {
+				DisplayName: Horrific Demon Lance
+				Tooltip:
+					'''
+					Right click to fire cursed flames
+					Guard and right click to reload
+					Up to eight shots can be held at a time
+					'''
+			}
+
 			IlluminatorNoctiluca: {
 				DisplayName: '''"Noctiluca" the Illuminator'''
 				Tooltip:
@@ -1226,6 +1246,11 @@ Mods: {
 
 			CopperPistol: {
 				DisplayName: Copper Pistol
+				Tooltip: ""
+			}
+
+			EltanineWave: {
+				DisplayName: Eltanine Wave
 				Tooltip: ""
 			}
 
@@ -1733,23 +1758,8 @@ Mods: {
 					'''
 			}
 
-			Sightbringer: {
-				DisplayName: Sightbringer
-				Tooltip: Hold the Guard button to see traps and treasure
-			}
-
-			HorrificDemonLance: {
-				DisplayName: Horrific Demon Lance
-				Tooltip:
-					'''
-					Right click to fire cursed flames
-					Guard and right click to reload
-					Up to eight shots can be held at a time
-					'''
-			}
-
-			EltanineWave: {
-				DisplayName: Eltanine Wave
+			WandsworthWhirlpool: {
+				DisplayName: Wandsworth Whirlpool
 				Tooltip: ""
 			}
 		}

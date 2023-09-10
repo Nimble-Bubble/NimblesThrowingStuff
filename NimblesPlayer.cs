@@ -91,10 +91,10 @@ namespace NimblesThrowingStuff
         {
             if (NimblesThrowingStuff.MIGuardKey.Current)
             {
-                if (whichShield >= 1)
+                /* if (whichShield >= 1)
                 {
                     Dust.NewDust(Player.position, Player.width, Player.height, 43, Main.rand.Next(-3, 2), Main.rand.Next(-3, 2), 0, default, 1);
-                }
+                } */
                 switch (whichShield)
                 {
                     case 1:
@@ -114,6 +114,9 @@ namespace NimblesThrowingStuff
                         break;
                     case 6:
                         Player.AddBuff(Mod.Find<ModBuff>("GuardSightbringer").Type, 2);
+                        break;
+                    case 7:
+                        Player.AddBuff(Mod.Find<ModBuff>("GuardWhirlpool").Type, 2);
                         break;
                 }
             }
@@ -285,6 +288,15 @@ namespace NimblesThrowingStuff
                             Dust.NewDust(Player.position, Player.width, Player.height, 43, Player.velocity.X + Main.rand.Next(-3, 4), Player.velocity.Y + Main.rand.Next(-3, 4), 0, new Color(255, 255, 255));
                         }
                         break;
+                    case 7:
+                        Player.statDefense += 4 + guardBonus;
+                        Player.buffImmune[BuffID.Electrified] = true;
+                        if (Main.rand.NextBool(3))
+                        {
+                            Dust.NewDust(Player.position, Player.width, Player.height, DustID.Electric, Player.velocity.X + Main.rand.Next(-3, 4), Player.velocity.Y + Main.rand.Next(-3, 4), 0, new Color(255, 255, 255));
+                        }
+                        break;
+
                 }
     }
     if (greek)
