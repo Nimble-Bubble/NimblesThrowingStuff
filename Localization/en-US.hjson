@@ -118,8 +118,13 @@ Mods: {
 			}
 
 			GuardWhirlpool: {
-				DisplayName: Guard Whirlpool
-				Description: Mods.NimblesThrowingStuff.Buffs.GuardWhirlpool.Description
+				DisplayName: Guard
+				Description: Protected by the sea
+			}
+
+			GuardianPotionBuff: {
+				DisplayName: Guardian
+				Description: Guard power boosted by 25
 			}
 		}
 
@@ -237,6 +242,11 @@ Mods: {
 			Stinguard: {
 				DisplayName: Stinguard
 				Tooltip: ""
+			}
+
+			WandsworthWhirlpool: {
+				DisplayName: Wandsworth Whirlpool
+				Tooltip: Made from Lagiacrus shell, this shield ensures oceanic protection
 			}
 
 			WyvernshellShield: {
@@ -525,6 +535,16 @@ Mods: {
 			GreaterRestorationPotion: {
 				DisplayName: Greater Restoration Potion
 				Tooltip: ""
+			}
+
+			GuardianPotion: {
+				DisplayName: Guardian Potion
+				Tooltip:
+					'''
+					Empowers your guarding abilities
+					Guard bonus increased by 25
+					8 minute duration
+					'''
 			}
 
 			MorilusTreasureBag: {
@@ -1756,11 +1776,6 @@ Mods: {
 					Designed to mimic the whirlpools that lagiacri use to hunt their prey
 					Has a chance to electrify targets
 					'''
-			}
-
-			WandsworthWhirlpool: {
-				DisplayName: Wandsworth Whirlpool
-				Tooltip: ""
 			}
 		}
 

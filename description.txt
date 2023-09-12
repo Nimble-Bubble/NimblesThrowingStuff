@@ -15,6 +15,7 @@ With the new items added to the Throwing class, you will most likely be able to 
 For now, we will call the post-Moon Lord phase "Extra-Hardmode" or "Extramode", though this may change.
 Also, we've made it over to 1.4.4! That's worth saying something, right? Expect an update for 2023.08 support too.
 
+
 Credits:
 
 Nimble - Director, Programmer, Spriter, Conceptualizer
