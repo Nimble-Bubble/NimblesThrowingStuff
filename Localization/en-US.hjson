@@ -773,6 +773,11 @@ Mods: {
 				Tooltip: Resembles a strange, living machine of war
 			}
 
+			BubbleJackhammer: {
+				DisplayName: Bubble Jackhammer
+				Tooltip: ""
+			}
+
 			GlidingBlaze: {
 				DisplayName: Gliding Blaze
 				Tooltip: ""

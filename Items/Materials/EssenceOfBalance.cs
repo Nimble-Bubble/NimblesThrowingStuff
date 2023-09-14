@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Items.Materials
 							"\nThe dueling plagues put down their malice"+
 							"\nAnd thus, spirits were born anew:" +
 							"\nThe essence of conflict and balance"); */
-			Main.RegisterItemAnimation(Item.type, new DrawAnimationVertical(5, 4));
+			Main.RegisterItemAnimation(Item.type, new DrawAnimationVertical(5, 8));
 			ItemID.Sets.AnimatesAsSoul[Item.type] = true;
 			ItemID.Sets.ItemIconPulse[Item.type] = true;
             ItemID.Sets.ItemNoGravity[Item.type] = true;
