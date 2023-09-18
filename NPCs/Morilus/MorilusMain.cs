@@ -24,6 +24,7 @@ using NimblesThrowingStuff.Items.Weapons.Summoning;
 using NimblesThrowingStuff.Items.Weapons.Throwing;
 using Terraria.GameContent.Bestiary;
 using Terraria.GameContent.ItemDropRules;
+using NimblesThrowingStuff.Dusts;
 
 namespace NimblesThrowingStuff.NPCs.Morilus
 {
@@ -32,11 +33,13 @@ namespace NimblesThrowingStuff.NPCs.Morilus
     {
         private Player player;
         private float speed;
+        private int boost;
         private int bigStarHealth;
         private Vector2 whereToOrbit;
         private bool sleepy;
         private bool doFunkyAnimationThing;
         private bool moveNormally;
+        private bool hasDropped;
         public override void SetStaticDefaults()
         {
             // DisplayName.SetDefault("Morilus, the Great Guardian of the Sky's Sea");
@@ -46,7 +49,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
         public override void SetDefaults()
         {
             NPC.lifeMax = 250000;
-            NPC.damage = 140;
+            NPC.damage = 150;
             NPC.defense = 80;
             NPC.knockBackResist = 0f;
             NPC.width = 100;
@@ -127,6 +130,11 @@ namespace NimblesThrowingStuff.NPCs.Morilus
                 }
              if (NPC.ai[1] >= 120 && NPC.ai[1] <= 130)
              {
+                    if (Main.rand.NextBool(6) && NPC.ai[2] < 1200)
+                        {
+                        NPC.ai[2] = 1350;
+                    }
+                    hasDropped = false;
             if (NPC.life >= NPC.lifeMax / 2)
             {
                         if (Main.rand.NextBool(4) && NPC.ai[3] <= 4950)
@@ -169,9 +177,10 @@ namespace NimblesThrowingStuff.NPCs.Morilus
             }
             if (NPC.ai[1] >= 140 && NPC.ai[1] <= 220)
             {
-                if (NPC.ai[1] % 30 == 0 && NPC.life >= NPC.lifeMax / 2 || NPC.ai[1] % 20 == 0 && NPC.life <= NPC.lifeMax / 2)
+                if (NPC.ai[1] % 30 == 0 && !hasDropped || NPC.ai[1] % 30 == 0 && NPC.life <= NPC.lifeMax / 2)
                 {
-                NPC.NewNPC(NPC.GetSource_FromThis(), (int)NPC.Center.X + 20, (int)NPC.Center.Y, ModContent.NPCType<SkySeaPrankster>());
+                NPC.NewNPC(NPC.GetSource_FromThis(), (int)NPC.Center.X + 20, (int)NPC.Center.Y, ModContent.NPCType<SkySeaSoldier>());
+                        hasDropped = true;
                 }
                 if (NPC.ai[1] >= 200)
                 {    
@@ -290,10 +299,35 @@ namespace NimblesThrowingStuff.NPCs.Morilus
                 {
                     NPC.ai[2] = Main.rand.Next(0, 30);
                 }
-                if (NPC.ai[2] >= 610)
+                if (NPC.ai[2] >= 610 && NPC.ai[2] < 1200)
                 {
                     NPC.ai[2] = 0;
                 }
+                if (NPC.ai[2] >= 1200 && NPC.ai[2] <= 1500)
+                {
+                    NPC.velocity *= new Vector2(0.5f, 0.5f);
+                    Dust.NewDust(NPC.position, NPC.width, NPC.height, ModContent.DustType<ProcellariteStarDust>(), Main.rand.Next(-2, 1), Main.rand.Next(-2, 1), 0, default, Main.rand.NextFloat(0.5f, 1.5f));
+                }
+                if (NPC.ai[2] >= 1500 && NPC.ai[2] <= 2400)
+                {
+                    boost = 4;
+                    Dust.NewDust(NPC.position, NPC.width, NPC.height, ModContent.DustType<ProcellariteStarDust>(), Main.rand.Next(-2, 1), Main.rand.Next(-2, 1), 0, default, Main.rand.NextFloat(0.5f, 1.5f));
+                }
+                if (NPC.ai[2] < 1500)
+                {
+                    boost = 0;
+                }
+                if (NPC.ai[2] > 2400)
+                {
+                    boost = 0;
+                    for (int s = 0; s < 20; s++)
+                    {
+                        int smokeIndex = Dust.NewDust(new Vector2(NPC.position.X, NPC.position.Y), NPC.width, NPC.height, DustID.Cloud, 0f, 0f, 100, default(Color), 2f);
+                        Main.dust[smokeIndex].velocity *= 1.4f;
+                    }
+                    NPC.ai[2] = 0;
+                }
+
                     if (NPC.ai[3] >= 4950 && NPC.ai[3] <= 9000)
                     {
                         moveNormally = false;
@@ -386,7 +420,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
             float bwingawee = NPC.lifeMax / 4;
             if (!NPC.AnyNPCs(ModContent.NPCType<SkySeaGuardian>()))
             {
-                speed = 8f + enoughinposition - (NPC.life / bwingawee);
+                speed = 8f + boost + enoughinposition - (NPC.life / bwingawee);
                 NPC.defense = 80;
             }
             else
@@ -394,7 +428,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
                 speed = 1f;
                 NPC.defense = 1000;
             }
-            Vector2 moveTo = player.Center;
+            Vector2 moveTo = player.Center + offset;
             Vector2 move = moveTo - NPC.Center;
             float magnitude = Magnitude(move);
             if (magnitude > speed)

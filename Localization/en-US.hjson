@@ -664,11 +664,6 @@ Mods: {
 				Tooltip: Weakens Kelbis in the vicinity
 			}
 
-			MimiclamBannerItem: {
-				DisplayName: Clam Banner
-				Tooltip: Weakens clams in the vicinity
-			}
-
 			SmallRathBannerItem: {
 				DisplayName: Small Rathwyvern Banner
 				Tooltip: Weakens small rathwyverns (but not large ones) in the vicinity
@@ -1786,10 +1781,9 @@ Mods: {
 
 		NPCs: {
 			Kelbi.DisplayName: Kelbi
-			Mimiclam.DisplayName: Clam
 			SmallRath.DisplayName: Small Rathwyvern
 			MorilusMain.DisplayName: Morilus, the Great Guardian of the Sky's Sea
-			SkySeaGuardian.DisplayName: Sky Sea Guardian
+			SkySeaGuardian.DisplayName: Lesser Guardian of the Sky Sea
 			SkySeaPrankster.DisplayName: Prankster of the Sky Sea
 
 			LivingRelic: {
@@ -1812,6 +1806,7 @@ Mods: {
 
 			Lotteryboy: {
 				DisplayName: Lotteryboy
+				Census.SpawnCondition: Conditions unknown
 
 				TownNPCMood: {
 					Content: "{$Mods.NimblesThrowingStuff.TownNPCMood.Lotteryboy.Content}"
@@ -1825,9 +1820,9 @@ Mods: {
 					LikeNPC_Princess: I like {NPCName}.
 					Princess_LovesNPC: I like {NPCName}.
 				}
-
-				Census.SpawnCondition: Conditions unknown
 			}
+
+			SkySeaSoldier.DisplayName: Sky Sea Soldier
 		}
 
 		Projectiles: {
@@ -2043,7 +2038,6 @@ Mods: {
 
 		Tiles: {
 			KelbiBanner.MapEntry: Kelbi Banner
-			MimiclamBanner.MapEntry: Clam Banner
 			SmallRathBanner.MapEntry: Kelbi Banner
 			HadalShellstoneTile.MapEntry: Deep Shellstone
 			ProcellariteBarTile.MapEntry: Procellarite Bar

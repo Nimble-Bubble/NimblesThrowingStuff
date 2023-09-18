@@ -11,7 +11,7 @@ namespace NimblesThrowingStuff.Dusts
             dust.velocity.X *= 0.9f;
             dust.velocity.Y *= 0.9f;
             dust.scale *= 0.975f;
-            Lighting.AddLight(dust.position, 1, 0.9f, 0.45f);
+            Lighting.AddLight(dust.position, 1.1f, 1f, 0.5f);
             return true;
         }
     }
