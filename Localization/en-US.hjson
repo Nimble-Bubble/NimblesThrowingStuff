@@ -1556,7 +1556,7 @@ Mods: {
 
 			HallowedWaraxe: {
 				DisplayName: Hallowed Waraxe
-				Tooltip: ""
+				Tooltip: A hatchet of myth
 			}
 
 			HellBonesAxe: {
@@ -1656,7 +1656,7 @@ Mods: {
 
 			RustyBonesAxe: {
 				DisplayName: Rustbone Hatchet
-				Tooltip: Accelerates beyond perceptions and envenoms enemies for some reason
+				Tooltip: Sickens enemies and accelerates upon hit
 			}
 
 			SatelliteSpear: {
@@ -1711,17 +1711,21 @@ Mods: {
 
 			TerraDagger: {
 				DisplayName: Terra Dagger
-				Tooltip: ""
+				Tooltip: A knife of true legend with controlled flight
 			}
 
 			ThornBall: {
 				DisplayName: Thorn Ball
-				Tooltip: ""
+				Tooltip: May poison enemies
 			}
 
 			ThornyGlove: {
 				DisplayName: Thorned Glove
-				Tooltip: Throws out poisonous seeds
+				Tooltip:
+					'''
+					Throws out poisonous seeds
+					These seeds may also inflict enemies with venom
+					'''
 			}
 
 			TinKnife: {
@@ -1736,7 +1740,7 @@ Mods: {
 
 			TrueHallowedWaraxe: {
 				DisplayName: True Hallowed Waraxe
-				Tooltip: ""
+				Tooltip: A refined hatchet of myth
 			}
 
 			TrueNightPiercer: {

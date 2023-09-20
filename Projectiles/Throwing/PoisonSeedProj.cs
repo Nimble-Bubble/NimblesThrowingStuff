@@ -38,7 +38,14 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
         }
         public override void OnHitNPC (NPC target, NPC.HitInfo hit, int damageDone)
         {
-			target.AddBuff(BuffID.Poisoned, 300);
+            if (Main.rand.NextBool(4))
+            {
+                target.AddBuff(BuffID.Venom, 300);
+            }
+			else
+            {
+                target.AddBuff(BuffID.Poisoned, 450);
+            }
         }
         public override void Kill(int timeLeft) 
         {
