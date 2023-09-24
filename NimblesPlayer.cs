@@ -175,15 +175,14 @@ namespace NimblesThrowingStuff
             {
                 Player.velocity *= new Vector2(2, 2);
             }
-                if (canSanta)
-         {
-          Projectile.NewProjectile(Player.GetSource_FromThis(), Player.Center.X, Player.Center.Y, 0, -10,
-                            Mod.Find<ModProjectile>("SantankSpikeProj").Type, 100, 5f, Main.myPlayer, 0.0f, (float) Main.rand.Next(0, 45)); 
-             Projectile.NewProjectile(Player.GetSource_FromThis(), Player.Center.X, Player.Center.Y, -5, -10,
-                            Mod.Find<ModProjectile>("SantankSpikeProj").Type, 100, 5f, Main.myPlayer, 0.0f, (float) Main.rand.Next(0, 45)); 
-             Projectile.NewProjectile(Player.GetSource_FromThis(), Player.Center.X, Player.Center.Y, 5, -10,
-                            Mod.Find<ModProjectile>("SantankSpikeProj").Type, 100, 5f, Main.myPlayer, 0.0f, (float) Main.rand.Next(0, 45)); 
-         }
+            if (canSanta)
+                {
+                    int spikeball1 = Projectile.NewProjectile(Player.GetSource_FromThis(), Player.Center.X, Player.Center.Y, 0, -10, Mod.Find<ModProjectile>("SantankSpikeProj").Type, 100, 5f, Main.myPlayer, 0.0f, (float) Main.rand.Next(0, 45));
+                        Main.projectile[spikeball1].velocity.RotatedBy(MathHelper.ToRadians(330f));
+                    int spikeball2 = Projectile.NewProjectile(Player.GetSource_FromThis(), Player.Center.X, Player.Center.Y, 0, -10, Mod.Find<ModProjectile>("SantankSpikeProj").Type, 100, 5f, Main.myPlayer, 0.0f, (float) Main.rand.Next(0, 45)); 
+                    int spikeball3 = Projectile.NewProjectile(Player.GetSource_FromThis(), Player.Center.X, Player.Center.Y, 0, -10, Mod.Find<ModProjectile>("SantankSpikeProj").Type, 100, 5f, Main.myPlayer, 0.0f, (float) Main.rand.Next(0, 45));
+                        Main.projectile[spikeball3].velocity.RotatedBy(MathHelper.ToRadians(30f));
+                }
         }
         public override float UseTimeMultiplier(Item item)
         {

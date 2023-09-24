@@ -247,7 +247,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
             }
             if (NPC.ai[1] >= 450 && NPC.ai[1] <= 800)
             {
-            if (NPC.ai[1] % 2 == 0)
+            if (NPC.ai[1] % 3 == 0)
             {
             float Speed3 = 4f;
                 int Damage3 = 70;
@@ -256,7 +256,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
                 Damage3 = 110;
                 }
                 int Type3 = ModContent.ProjectileType<MorilusRain>();
-                int num55 = Projectile.NewProjectile(NPC.GetSource_FromThis(), NPC.position.X + Main.rand.Next(-750, 751), NPC.position.Y - 750, 0, Speed3, Type3, Damage3, 0f, 0);
+                int num55 = Projectile.NewProjectile(NPC.GetSource_FromThis(), NPC.position.X + Main.rand.Next(-1000, 1001), NPC.position.Y - 750, Main.rand.NextFloat(-2.5f, 2.5f), 1f, Type3, Damage3, 0f, 0);
             }
             if (NPC.ai[1] >= 650 && NPC.life >= NPC.lifeMax / 4 || NPC.ai[1] >= 750)
             {
@@ -310,15 +310,29 @@ namespace NimblesThrowingStuff.NPCs.Morilus
                 }
                 if (NPC.ai[2] >= 1500 && NPC.ai[2] <= 2400)
                 {
+                    if (NPC.ai[2] % 60 == 0 && Main.rand.NextBool(10) && NPC.ai[3] < 5400)
+                    {
+                        if (Main.rand.NextBool(2))
+                        {
+                            NPC.ai[3] = 7200;
+                        }
+                        else
+                        {
+                            NPC.ai[3] = 5400;
+                        }
+                    }
+                    NPC.knockBackResist = 0.2f;
                     boost = 4;
                     Dust.NewDust(NPC.position, NPC.width, NPC.height, ModContent.DustType<ProcellariteStarDust>(), Main.rand.Next(-2, 1), Main.rand.Next(-2, 1), 0, default, Main.rand.NextFloat(0.5f, 1.5f));
                 }
                 if (NPC.ai[2] < 1500)
                 {
+                    NPC.knockBackResist = 0f;
                     boost = 0;
                 }
                 if (NPC.ai[2] > 2400)
                 {
+                    NPC.knockBackResist = 0f;
                     boost = 0;
                     for (int s = 0; s < 20; s++)
                     {
