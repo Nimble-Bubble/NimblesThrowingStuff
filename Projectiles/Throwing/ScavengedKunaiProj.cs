@@ -30,7 +30,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
             Projectile.aiStyle = 1;
             Projectile.extraUpdates = 1;
         }
-        public override void Kill(int timeLeft)
+        public override void OnKill(int timeLeft)
         {
             SoundEngine.PlaySound(SoundID.Dig, Projectile.position);
             for (int index = 0; index < 10; index++)

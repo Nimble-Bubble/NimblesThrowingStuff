@@ -32,7 +32,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
             Projectile.timeLeft = 600;
             AIType = 30;
         }
-        public override void Kill(int timeLeft) 
+        public override void OnKill(int timeLeft) 
         {
             for (int s = 0; s < 30; s++) {
 				int smokeIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width * 2, Projectile.height * 2, 31, 0f, 0f, 100, default(Color), 2f);

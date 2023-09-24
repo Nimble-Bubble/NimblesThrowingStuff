@@ -34,7 +34,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
         {
             Projectile.rotation += 0.5f * (float)Projectile.direction;
         }
-        public override void Kill(int timeLeft) 
+        public override void OnKill(int timeLeft) 
         {
             SoundEngine.PlaySound(SoundID.Dig, Projectile.position);
                     for (int index = 0; index < 10; index++)

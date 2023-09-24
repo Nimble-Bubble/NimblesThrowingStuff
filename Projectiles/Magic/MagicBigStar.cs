@@ -35,7 +35,7 @@ namespace NimblesThrowingStuff.Projectiles.Magic
             Projectile.velocity.X *= 0.975f;
             Projectile.velocity.Y *= 0.975f;
         }
-        public override void Kill(int timeLeft)
+        public override void OnKill(int timeLeft)
         {
             for (int starSpawn = 0; starSpawn < 8; starSpawn++)
             {

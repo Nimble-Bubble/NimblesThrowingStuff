@@ -27,7 +27,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 			Projectile.alpha = 0;
 			Projectile.aiStyle = 1;
 		}
-		public override void Kill(int timeLeft)
+		public override void OnKill(int timeLeft)
 		{
 			SoundEngine.PlaySound(SoundID.Dig, Projectile.position); 
 			Vector2 usePos = Projectile.position; 

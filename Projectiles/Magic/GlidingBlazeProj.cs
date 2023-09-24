@@ -38,7 +38,7 @@ namespace NimblesThrowingStuff.Projectiles.Magic
             Projectile.rotation += MathHelper.ToRadians(18 + GlidingBlazeMultiplier * 2);
             Projectile.velocity *= new Vector2((GlidingBlazeMultiplier + 90) / 100, (GlidingBlazeMultiplier + 90) / 100);
         }
-        public override void Kill(int timeLeft)
+        public override void OnKill(int timeLeft)
         {
             SoundEngine.PlaySound(SoundID.Item14);
             for (int kfd = 0; kfd < 15; kfd++)

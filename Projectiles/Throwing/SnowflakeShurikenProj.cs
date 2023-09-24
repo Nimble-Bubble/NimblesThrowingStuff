@@ -39,7 +39,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
         {
             target.AddBuff(BuffID.Frostburn2, 450);
         }
-        public override void Kill(int timeLeft) 
+        public override void OnKill(int timeLeft) 
         {
             SoundEngine.PlaySound(SoundID.Shatter, Projectile.position);
                     for (int index = 0; index < 10; index++)

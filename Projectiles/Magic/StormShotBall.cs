@@ -24,7 +24,7 @@ namespace NimblesThrowingStuff.Projectiles.Magic
             Projectile.timeLeft = 300;
             Projectile.tileCollide = false;
         }
-        public override void Kill(int timeLeft) 
+        public override void OnKill(int timeLeft) 
         {
             SoundEngine.PlaySound(SoundID.Splash, Projectile.position);
                     for (int index = 0; index < 10; index++)

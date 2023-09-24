@@ -31,7 +31,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
             Projectile.timeLeft = 60;
             AIType = 30;
         }
-        public override void Kill(int timeLeft) 
+        public override void OnKill(int timeLeft) 
         {
             for (int s = 0; s < 30; s++)
             {

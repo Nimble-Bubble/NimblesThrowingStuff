@@ -37,7 +37,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
             target.AddBuff(153, 150);
             target.AddBuff(209, 150);
         }
-        public override void Kill(int timeLeft) 
+        public override void OnKill(int timeLeft) 
         {
             SoundEngine.PlaySound(SoundID.Dig, Projectile.position);
                     for (int index = 0; index < 10; index++)

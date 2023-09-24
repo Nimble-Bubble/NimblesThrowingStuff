@@ -59,7 +59,7 @@ namespace NimblesThrowingStuff.Projectiles.Enemy
             Projectile.velocity.X *= 0.985f;
             Projectile.velocity.Y *= 0.985f;
         }
-        public override void Kill(int timeLeft)
+        public override void OnKill(int timeLeft)
         {
             for (int dustcount = 0; dustcount > 15; dustcount++)
             {

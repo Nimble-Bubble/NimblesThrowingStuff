@@ -40,9 +40,9 @@ namespace NimblesThrowingStuff.Items.Accessories
             player.fireWalk = true;
             player.waterWalk = true;
             player.iceSkate = true;
-            player.hasJumpOption_Sandstorm = true;
-            player.hasJumpOption_Blizzard = true;
-            player.hasJumpOption_Cloud = true;
+            player.GetJumpState(ExtraJump.SandstormInABottle).Enable();
+            player.GetJumpState(ExtraJump.BlizzardInABottle).Enable();
+            player.GetJumpState(ExtraJump.CloudInABottle).Enable();
             player.jumpBoost = true;
             player.noFallDmg = true;
         }

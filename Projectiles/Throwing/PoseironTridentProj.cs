@@ -57,7 +57,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
              bub = 0;
          }
         }
-        public override void Kill(int timeLeft) 
+        public override void OnKill(int timeLeft) 
         {
             SoundEngine.PlaySound(SoundID.Dig, Projectile.position);
         }

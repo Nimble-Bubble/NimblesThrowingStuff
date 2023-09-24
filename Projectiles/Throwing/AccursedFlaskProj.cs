@@ -30,7 +30,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
             Projectile.aiStyle = 2;
             Projectile.extraUpdates = 0;
         }
-        public override void Kill(int timeLeft) 
+        public override void OnKill(int timeLeft) 
         {
             SoundEngine.PlaySound(SoundID.Item107, Projectile.position);
                 Gore.NewGore(Projectile.GetSource_FromThis(), Projectile.Center, -Projectile.oldVelocity * 0.2f, 704, 1f);

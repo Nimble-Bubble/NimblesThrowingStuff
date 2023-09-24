@@ -39,7 +39,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
                         Color.Tan, 1f);
             Lighting.AddLight(Projectile.Center, Color.Tan.ToVector3() * 0.5f);
         }
-        public override void Kill(int timeLeft) 
+        public override void OnKill(int timeLeft) 
         {
                 SoundEngine.PlaySound(SoundID.Shatter, Projectile.position);
                 var vector2 = new Vector2(20f, 20f);

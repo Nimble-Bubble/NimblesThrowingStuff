@@ -35,7 +35,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
 			Texture2D texture = Mod.Assets.Request<Texture2D>("Projectiles/Throwing/GolemFireProj_Glow").Value;
             Main.EntitySpriteDraw(texture, Projectile.position, new Rectangle(0, 0, texture.Width, texture.Height), Color.Yellow, Projectile.rotation, texture.Size() * 0.5f, Projectile.scale, SpriteEffects.None, 0);
 		}
-        public override void Kill(int timeLeft)
+        public override void OnKill(int timeLeft)
         {
             for (int i = 0; i < 10; i++)
             {

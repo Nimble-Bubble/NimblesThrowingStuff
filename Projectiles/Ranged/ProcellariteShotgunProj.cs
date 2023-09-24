@@ -32,7 +32,7 @@ namespace NimblesThrowingStuff.Projectiles.Ranged
         {
             Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.ToRadians(90);
         }
-        public override void Kill(int timeLeft) 
+        public override void OnKill(int timeLeft) 
         {
             SoundEngine.PlaySound(SoundID.Shatter, Projectile.position);
                     for (int index = 0; index < 10; index++)

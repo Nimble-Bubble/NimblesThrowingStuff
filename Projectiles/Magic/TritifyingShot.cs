@@ -35,7 +35,7 @@ namespace NimblesThrowingStuff.Projectiles.Magic
                 Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<ProcellariteStarDust>(), (float)Projectile.velocity.X / 5, (float)Projectile.velocity.Y / 5, 0, default(Color), 0.75f);
             }
         }
-        public override void Kill(int timeLeft) 
+        public override void OnKill(int timeLeft) 
         {
             SoundEngine.PlaySound(SoundID.Item38, Projectile.position);
                     for (int index = 0; index < 10; index++)

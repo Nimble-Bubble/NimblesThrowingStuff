@@ -34,7 +34,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
             Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 6, Projectile.velocity.X * 0.1f, Projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
             Lighting.AddLight(Projectile.Center, Color.Orange.ToVector3() * 0.5f);
         }
-        public override void Kill(int timeLeft) 
+        public override void OnKill(int timeLeft) 
         {
             for (int f = 0; f < 30; f++)
             {

@@ -41,7 +41,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
              Projectile.timeLeft -= 500;
          }
         }
-        public override void Kill(int timeLeft) 
+        public override void OnKill(int timeLeft) 
         {
                         Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.position.X, Projectile.position.Y, 0, 0, Mod.Find<ModProjectile>("SatelliteSpearEchosplosion").Type, Projectile.damage, 10f, Projectile.owner, 0.0f, 0.0f);
             Projectile.position = Projectile.Center;

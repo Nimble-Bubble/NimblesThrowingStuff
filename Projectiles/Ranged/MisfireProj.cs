@@ -31,7 +31,7 @@ namespace NimblesThrowingStuff.Projectiles.Ranged
             Projectile.aiStyle = 1;
             Projectile.timeLeft = 1;
         }
-        public override void Kill(int timeLeft) 
+        public override void OnKill(int timeLeft) 
         {
             for (int s = 0; s < 10; s++)
             {

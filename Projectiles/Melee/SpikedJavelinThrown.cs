@@ -156,7 +156,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 				Projectile.Kill();
 			}
 		}
-        public override void Kill(int timeLeft)
+        public override void OnKill(int timeLeft)
         {
         for (int wd = 0; wd < 10; wd++)
         {

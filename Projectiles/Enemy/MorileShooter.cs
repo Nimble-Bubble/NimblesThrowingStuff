@@ -30,7 +30,7 @@ namespace NimblesThrowingStuff.Projectiles.Enemy
             Projectile.velocity.X *= 0.9f;
             Projectile.velocity.Y *= 0.9f;
         }
-        public override void Kill(int timeLeft)
+        public override void OnKill(int timeLeft)
         {
             Vector2 vector8 = new Vector2(Projectile.position.X + (Projectile.width / 2), Projectile.position.Y + (Projectile.height / 2));
             float rotation = (float)Math.Atan2(vector8.Y - (player.position.Y + (player.height * 0.5f)), vector8.X - (player.position.X + (player.width * 0.5f)));

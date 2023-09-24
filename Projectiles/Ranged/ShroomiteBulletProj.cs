@@ -68,7 +68,7 @@ namespace NimblesThrowingStuff.Projectiles.Ranged
             }
             Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 41, Projectile.velocity.X * 0.1f, Projectile.velocity.Y * 0.1f, 0, new Color(), 1f);
         }
-        public override void Kill(int timeLeft) 
+        public override void OnKill(int timeLeft) 
         {
             SoundEngine.PlaySound(SoundID.Item14, Projectile.position);
                     for (int index = 0; index < 10; index++)

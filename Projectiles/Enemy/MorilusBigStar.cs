@@ -33,7 +33,7 @@ namespace NimblesThrowingStuff.Projectiles.Enemy
             Projectile.velocity.X *= 0.95f;
             Projectile.velocity.Y *= 0.95f;
         }
-        public override void Kill(int timeLeft)
+        public override void OnKill(int timeLeft)
         {
             for (int starSpawn = 0; starSpawn < 8; starSpawn++)
             {
