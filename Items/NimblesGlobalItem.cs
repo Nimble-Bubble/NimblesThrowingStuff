@@ -56,21 +56,31 @@ namespace NimblesThrowingStuff.Items
         public override void UpdateEquip(Item item, Player player)
         {
             var modPlayer = player.GetModPlayer<NimblesPlayer>();
-            if (item.type == 686)
+            if (item.type >= ItemID.ApprenticeScarf && item.type <= ItemID.MonkBelt)
+            {
+                modPlayer.whichShield = 8;
+            }
+            if (item.type == ItemID.FrostLeggings)
             {
                 modPlayer.rangedSpeed += 0.1f;
             }
-            if (item.type == 1865 || item.type == 899 && Main.dayTime || item.type == 900 && !Main.dayTime || item.type == 3110 || item.type == 2277 || item.type == 4984)
+            if (item.type == ItemID.CelestialStone || item.type == ItemID.SunStone && Main.dayTime || item.type == ItemID.MoonStone && !Main.dayTime || item.type == ItemID.CelestialShell || item.type == ItemID.Gi || item.type == ItemID.CrystalNinjaLeggings)
             {
                 modPlayer.rangedSpeed += 0.1f;
                 modPlayer.magicSpeed += 0.1f;
                 modPlayer.thrownSpeed += 0.1f;
-                if (item.type == 3110 && !Main.dayTime)
+                if (item.type == ItemID.CelestialShell && !Main.dayTime)
                 {
                     modPlayer.rangedSpeed += 0.051f;
                     modPlayer.magicSpeed += 0.051f;
                     modPlayer.thrownSpeed += 0.051f;
                 }
+            }
+            if (item.type == ItemID.MoonCharm && !Main.dayTime || item.type == ItemID.MoonShell && !Main.dayTime)
+            {
+                modPlayer.rangedSpeed += 0.051f;
+                modPlayer.magicSpeed += 0.051f;
+                modPlayer.thrownSpeed += 0.051f;
             }
         }
         public override void ModifyItemLoot(Item item, ItemLoot itemLoot)
