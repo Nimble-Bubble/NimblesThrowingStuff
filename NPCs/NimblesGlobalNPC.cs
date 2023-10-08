@@ -102,6 +102,9 @@ namespace NimblesThrowingStuff.NPCs
 					case 209:
 						shop.Add<NanoMissile>();
 						break;
+					case 229:
+						shop.Add(new Item(ItemID.ExplosiveBunny));
+						break;
 					case 368:
 						shop.Add<Superfast>(Condition.DownedMoonLord, Condition.MoonPhasesOdd);
 						break;
@@ -124,7 +127,8 @@ namespace NimblesThrowingStuff.NPCs
 		public override void ModifyNPCLoot(NPC npc, NPCLoot npcLoot)
 		{
 			LeadingConditionRule notExpertRule = new LeadingConditionRule(new Conditions.NotExpert());
-			//Now, a lot of this could theoretically be done through switch instead, but I'll settle with this for now
+            LeadingConditionRule CrimsonRule = new LeadingConditionRule(new Conditions.IsCrimsonAndNotExpert());
+            //Now, a lot of this could theoretically be done through switch instead, but I'll settle with this for now
             if (npc.type == NPCID.Crab)
             {
                 npcLoot.Add(ItemDropRule.Common(ItemType<HermitaurShell>(), 2));
@@ -198,6 +202,11 @@ namespace NimblesThrowingStuff.NPCs
                 notExpertRule.OnSuccess(ItemDropRule.Common(ItemType<ScavengedKunai>(), 5));
                 npcLoot.Add(notExpertRule);
             }
+			if (npc.type == NPCID.EyeofCthulhu)
+			{
+				CrimsonRule.OnSuccess(ItemDropRule.Common(ItemType<HealingArrow>(), 1, 20, 50));
+				npcLoot.Add(CrimsonRule);
+			}
             if (npc.type == NPCID.QueenBee)
             {
                 notExpertRule.OnSuccess(ItemDropRule.Common(ItemType<Beemerang>(), 4));

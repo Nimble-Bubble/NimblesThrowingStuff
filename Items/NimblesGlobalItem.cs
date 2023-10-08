@@ -1,4 +1,5 @@
 using NimblesThrowingStuff.Items.Accessories;
+using NimblesThrowingStuff.Items.Weapons.Ranged;
 using NimblesThrowingStuff.Items.Weapons.Throwing;
 using NimblesThrowingStuff.Projectiles.Ranged;
 using Microsoft.Xna.Framework;
@@ -66,21 +67,18 @@ namespace NimblesThrowingStuff.Items
             }
             if (item.type == ItemID.CelestialStone || item.type == ItemID.SunStone && Main.dayTime || item.type == ItemID.MoonStone && !Main.dayTime || item.type == ItemID.CelestialShell || item.type == ItemID.Gi || item.type == ItemID.CrystalNinjaLeggings)
             {
-                modPlayer.rangedSpeed += 0.1f;
-                modPlayer.magicSpeed += 0.1f;
-                modPlayer.thrownSpeed += 0.1f;
+                player.GetAttackSpeed(DamageClass.Melee) -= 0.1f;
+                modPlayer.universalSpeed += 0.1f;
                 if (item.type == ItemID.CelestialShell && !Main.dayTime)
                 {
-                    modPlayer.rangedSpeed += 0.051f;
-                    modPlayer.magicSpeed += 0.051f;
-                    modPlayer.thrownSpeed += 0.051f;
+                    player.GetAttackSpeed(DamageClass.Melee) -= 0.051f;
+                    modPlayer.universalSpeed += 0.051f;
                 }
             }
             if (item.type == ItemID.MoonCharm && !Main.dayTime || item.type == ItemID.MoonShell && !Main.dayTime)
             {
-                modPlayer.rangedSpeed += 0.051f;
-                modPlayer.magicSpeed += 0.051f;
-                modPlayer.thrownSpeed += 0.051f;
+                player.GetAttackSpeed(DamageClass.Melee) -= 0.051f;
+                modPlayer.universalSpeed += 0.051f;
             }
         }
         public override void ModifyItemLoot(Item item, ItemLoot itemLoot)
@@ -90,11 +88,15 @@ namespace NimblesThrowingStuff.Items
             {
                 player.QuickSpawnItem(player.GetSource_FromThis(), ItemType<ScavengedKunai>(), 1);
             }
+            if (item.type == ItemID.EyeOfCthulhuBossBag && Main.ActiveWorldFileData.HasCrimson || item.type == ItemID.EyeOfCthulhuBossBag && WorldGen.crimson)
+            {
+                player.QuickSpawnItem(player.GetSource_FromThis(), ItemType<HealingArrow>(), Main.rand.Next(20, 50));
+            }
             if (item.type == ItemID.QueenBeeBossBag && Main.rand.NextBool(3))
             {
                 player.QuickSpawnItem(player.GetSource_FromThis(), ItemType<Beemerang>(), 1);
             }
-            if (item.type == ItemID.WallOfFleshBossBag && Main.rand.NextBool(6))
+            if (item.type == ItemID.WallOfFleshBossBag && Main.rand.NextBool(4))
             {
                 player.QuickSpawnItem(player.GetSource_FromThis(), ItemType<ThrowerEmblem>(), 1);
             }

@@ -147,10 +147,10 @@ namespace NimblesThrowingStuff
         {
             if (NimblesThrowingStuff.MIGuardKey.Current && whichShield >= 1)
             {
-                //if (damage <= player.statDefense)
-                //{
-                //    damage = 0;
-                //}
+                if (info.Damage <= Player.statDefense)
+                {
+                    info.SoundDisabled = true;
+                }
                 switch (whichGuardSound)
                 {
                     case 0:
@@ -295,7 +295,9 @@ namespace NimblesThrowingStuff
                             Dust.NewDust(Player.position, Player.width, Player.height, DustID.Electric, Player.velocity.X + Main.rand.Next(-3, 4), Player.velocity.Y + Main.rand.Next(-3, 4), 0, new Color(255, 255, 255));
                         }
                         break;
-
+                    case 8:
+                        Player.statDefense += 5 + (guardBonus * 2);
+                        break;
                 }
     }
     if (greek)
