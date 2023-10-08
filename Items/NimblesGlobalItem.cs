@@ -9,6 +9,7 @@ using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 using NimblesThrowingStuff.Items.Materials;
 using Terraria.DataStructures;
+using Terraria.GameContent.ItemDropRules;
 
 namespace NimblesThrowingStuff.Items
 {
@@ -84,46 +85,45 @@ namespace NimblesThrowingStuff.Items
         public override void ModifyItemLoot(Item item, ItemLoot itemLoot)
         {
             Player player = Main.player[Main.myPlayer];
-            if (item.type == ItemID.KingSlimeBossBag && Main.rand.NextBool(4))
+            //This is what is done in patches
+            Conditions.IsCrimson conditionIsCrimson = new Conditions.IsCrimson();
+            if (item.type == ItemID.KingSlimeBossBag)
             {
-                player.QuickSpawnItem(player.GetSource_FromThis(), ItemType<ScavengedKunai>(), 1);
+                itemLoot.Add(ItemDropRule.Common(ItemType<ScavengedKunai>(), 4));
             }
-            if (item.type == ItemID.EyeOfCthulhuBossBag && Main.ActiveWorldFileData.HasCrimson || item.type == ItemID.EyeOfCthulhuBossBag && WorldGen.crimson)
+            if (item.type == ItemID.EyeOfCthulhuBossBag)
             {
-                player.QuickSpawnItem(player.GetSource_FromThis(), ItemType<HealingArrow>(), Main.rand.Next(20, 50));
+                itemLoot.Add(ItemDropRule.ByCondition(conditionIsCrimson, ItemType<HealingArrow>(), 1, 20, 50));
             }
-            if (item.type == ItemID.QueenBeeBossBag && Main.rand.NextBool(3))
+            if (item.type == ItemID.QueenBeeBossBag)
             {
-                player.QuickSpawnItem(player.GetSource_FromThis(), ItemType<Beemerang>(), 1);
+                itemLoot.Add(ItemDropRule.Common(ItemType<Beemerang>(), 3));
             }
-            if (item.type == ItemID.WallOfFleshBossBag && Main.rand.NextBool(4))
+            if (item.type == ItemID.WallOfFleshBossBag)
             {
-                player.QuickSpawnItem(player.GetSource_FromThis(), ItemType<ThrowerEmblem>(), 1);
+                itemLoot.Add(ItemDropRule.Common(ItemType<ThrowerEmblem>(), 4));
             }
-            if (item.type == ItemID.PlanteraBossBag && Main.rand.NextBool(3))
+            if (item.type == ItemID.PlanteraBossBag)
             {
-                player.QuickSpawnItem(player.GetSource_FromThis(), ItemType<ThornyGlove>(), 1);
+                itemLoot.Add(ItemDropRule.Common(ItemType<ThornyGlove>(), 3));
             }
-            if (item.type == ItemID.GolemBossBag && Main.rand.NextBool(4))
+            if (item.type == ItemID.GolemBossBag)
             {
-                player.QuickSpawnItem(player.GetSource_FromThis(), ItemType<GolemGlove>(), 1);
+                itemLoot.Add(ItemDropRule.Common(ItemType<GolemGlove>(), 4));
             }
             if (item.type == ItemID.FishronBossBag)
             {
-                player.QuickSpawnItem(player.GetSource_FromThis(), ItemType<RoyalFin>(), Main.rand.Next(10, 15));
-                if (Main.rand.NextBool(4))
-                {
-                    player.QuickSpawnItem(player.GetSource_FromThis(), ItemType<PoseironTrident>(), 1);
-                }
+                itemLoot.Add(ItemDropRule.Common(ItemType<RoyalFin>(), 1, 10, 15));
+                itemLoot.Add(ItemDropRule.Common(ItemType<PoseironTrident>(), 4));
             }
-            if (item.type == ItemID.BossBagBetsy && Main.rand.NextBool(4))
+            if (item.type == ItemID.BossBagBetsy)
             {
-                player.QuickSpawnItem(player.GetSource_FromThis(), ItemType<EtherianChakram>(), 1);
+                itemLoot.Add(ItemDropRule.Common(ItemType<EtherianChakram>(), 4));
             }    
-            if (item.type == ItemID.MoonLordBossBag && Main.rand.NextBool(5))
+            if (item.type == ItemID.MoonLordBossBag)
             {
-                player.QuickSpawnItem(player.GetSource_FromThis(), ItemType<CosmosCrasher>(), 1);
-                player.QuickSpawnItem(player.GetSource_FromThis(), ItemType<SatelliteSpear>(), 1);
+                itemLoot.Add(ItemDropRule.Common(ItemType<CosmosCrasher>(), 5));
+                itemLoot.Add(ItemDropRule.Common(ItemType<SatelliteSpear>(), 5));
             }
         }
         public override void AddRecipes()
