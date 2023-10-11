@@ -50,11 +50,11 @@ namespace NimblesThrowingStuff.Items.Consumables
         {
             itemLoot.Add(ItemDropRule.CoinsBasedOnNPCValue(ModContent.NPCType<MorilusMain>()));
             itemLoot.Add(ItemDropRule.Common(Mod.Find<ModItem>("CarpatusDefender").Type, 3));
-            itemLoot.Add(ItemDropRule.Common(Mod.Find<ModItem>("ProcellariteScope").Type, 1));
+            itemLoot.Add(ItemDropRule.NotScalingWithLuck(Mod.Find<ModItem>("ProcellariteScope").Type, 1));
             itemLoot.Add(ItemDropRule.OneFromOptions(1, Mod.Find<ModItem>("SkyseaSpinner").Type, Mod.Find<ModItem>("ProcellariteLongbow").Type, Mod.Find<ModItem>("GuardianStaff").Type, Mod.Find<ModItem>("StormShot").Type, Mod.Find<ModItem>("LacusDecapitator").Type));
             itemLoot.Add(ItemDropRule.Common(Mod.Find<ModItem>("SoulOfTrite").Type, 1, 16, 25));
-            itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<MorilusMask>(), 7));
-            itemLoot.Add(ItemDropRule.Common(Mod.Find<ModItem>("MorilusTrophy").Type, 5));
+            itemLoot.Add(ItemDropRule.NotScalingWithLuck(ModContent.ItemType<MorilusMask>(), 7));
+            itemLoot.Add(ItemDropRule.NotScalingWithLuck(Mod.Find<ModItem>("MorilusTrophy").Type, 5));
         }
     }
 }

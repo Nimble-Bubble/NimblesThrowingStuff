@@ -29,12 +29,34 @@ namespace NimblesThrowingStuff.NPCs
 		{
 			if (npc.HasBuff(BuffID.Wet))
 			{
-				if (npc.HasBuff(BuffID.OnFire3))
+                if (npc.HasBuff(BuffID.OnFire))
+                {
+                    npc.lifeRegen += 8;
+                }
+                if (npc.HasBuff(BuffID.OnFire3))
                 {
 					npc.lifeRegen += 10;
                 }
-				npc.buffImmune[BuffID.OnFire] = true;
-			}
+				if (npc.HasBuff(BuffID.Frostburn) || npc.HasBuff(BuffID.Frostburn2))
+				{
+					npc.lifeRegen *= 2;
+				}
+            }
+			if (npc.HasBuff(BuffID.Slimed))
+			{
+                if (npc.HasBuff(BuffID.OnFire))
+                {
+                    npc.lifeRegen -= 8;
+                }
+                if (npc.HasBuff(BuffID.OnFire3))
+                {
+                    npc.lifeRegen -= 24;
+                }
+                if (npc.HasBuff(BuffID.CursedInferno))
+                {
+                    npc.lifeRegen -= 16;
+                }
+            }
 			if (greek)
 			{
 				if (npc.lifeRegen > 0)
@@ -67,16 +89,9 @@ namespace NimblesThrowingStuff.NPCs
 				}
 				npc.lifeRegen -= 8;
 			}
-			if (compromise)
+			if (compromise && !npc.boss)
 			{
-				if (npc.boss)
-				{
-					// Do nothing
-				}
-				else
-				{
-					npc.knockBackResist += 0.25f;
-				}
+                npc.knockBackResist += 0.25f;
 			}
 			if (drowndebuff)
             {
