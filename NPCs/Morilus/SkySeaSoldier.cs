@@ -1,4 +1,5 @@
 using Microsoft.Xna.Framework;
+using NimblesThrowingStuff.Dusts;
 using NimblesThrowingStuff.Projectiles.Enemy;
 using System;
 using Terraria;
@@ -14,7 +15,6 @@ namespace NimblesThrowingStuff.NPCs.Morilus
         private Player player;
         private float speed;
         private Vector2 whereToOrbit;
-        private bool moveNormally;
         public override void SetStaticDefaults()
         {
             // DisplayName.SetDefault("Prankster of the Sky Sea");
@@ -28,59 +28,48 @@ namespace NimblesThrowingStuff.NPCs.Morilus
 			NPC.aiStyle = -1;
 			NPC.damage = 120;
 			NPC.defense = 40;
-			NPC.lifeMax = 1250;
+			NPC.lifeMax = 750;
 			NPC.HitSound = SoundID.NPCHit3;
 			NPC.DeathSound = SoundID.NPCDeath3;
 			NPC.knockBackResist = 0.5f;
         }
         public override void AI()
         {
+            Dust.NewDust(NPC.position, NPC.width, NPC.height, ModContent.DustType<ProcellariteStarDust>(), Main.rand.Next(-1, 2), Main.rand.Next(-1, 2), 0, default, Main.rand.NextFloat(0.5f, 1.5f));
 
             Target();
 
             DespawnHandler();
-                if (moveNormally)
-                {
-                    Move(new Vector2(Main.rand.Next(-100, 101), Main.rand.Next(-100, 101)));
-                }
+            Move(new Vector2(Main.rand.Next(-100, 101), Main.rand.Next(-100, 101)));
 
-                Vector2 vector8 = new Vector2(NPC.position.X + (NPC.width / 2), NPC.position.Y + (NPC.height / 2));
+            Vector2 vector8 = new Vector2(NPC.position.X + (NPC.width / 2), NPC.position.Y + (NPC.height / 2));
 
-                NPC.ai[1]++;
-                NPC.ai[2]++;
-                NPC.ai[3] += 5;
-                if (NPC.ai[1] >= 120 && NPC.ai[1] <= 130)
+            NPC.ai[1]++;
+            NPC.ai[2]++;
+            if (NPC.ai[1] >= 120 && NPC.ai[1] <= 130)
+            {
+                int MoriAttack1 = Main.rand.Next(2);
+                switch (MoriAttack1)
                 {
-                        if (Main.rand.NextBool(4) && NPC.ai[3] <= 4950)
-                        {
-                            NPC.ai[3] = Main.rand.Next(4950, 5250);
-                        }
-                        int MoriAttack1 = Main.rand.Next(2);
-                        switch (MoriAttack1)
-                        {
-                            case 0:
-                                NPC.ai[1] = 140;
-                                break;
-                            case 1:
-                                NPC.ai[1] = 230;
-                                break;
-                        }
+                    case 0:
+                        NPC.ai[1] = 140;
+                        break;
+                    case 1:
+                        NPC.ai[1] = 230;
+                        break;
                 }
-                if (NPC.ai[1] >= 140 && NPC.ai[1] <= 220)
+            }
+            if (NPC.ai[1] >= 140 && NPC.ai[1] <= 220)
+            {
+                if (NPC.ai[1] % 20 == 0)
                 {
-                    if (NPC.ai[1] % 20 == 0)
-                    {
-                    float Speed1 = 8f;
-                    int damage1 = 100;
+                    float Speed1 = 11f;
+                    int damage1 = 90;
                     int type1 = ModContent.ProjectileType<MorileShot>();
                     SoundEngine.PlaySound(SoundID.Item11, NPC.position);
                     float rotation1 = (float)Math.Atan2(vector8.Y - (player.position.Y + (player.height * 0.5f)), vector8.X - (player.position.X + (player.width * 0.5f)));
-                    for (int spaldaedal = 0 + Main.rand.Next(6); spaldaedal < 10; spaldaedal++)
-                        {   
-                            int num54 = Projectile.NewProjectile(NPC.GetSource_FromThis(), vector8.X, vector8.Y, (float)((Math.Cos(rotation1) * Speed1) * -1) + Main.rand.Next(-3, 4), (float)((Math.Sin(rotation1) * Speed1) * -1) + Main.rand.Next(-3, 4), type1, damage1, 0f, 0);
-                        }
-                    }
-                if (NPC.ai[1] >= 200)
+                    int num54 = Projectile.NewProjectile(NPC.GetSource_FromThis(), vector8.X, vector8.Y, (float)((Math.Cos(rotation1) * Speed1) * -1) + Main.rand.Next(-3, 4), (float)((Math.Sin(rotation1) * Speed1) * -1) + Main.rand.Next(-3, 4), type1, damage1, 0f, 0);
+                    if (NPC.ai[1] >= 200)
                     {
                         NPC.ai[1] = 0;
                     }
@@ -90,61 +79,22 @@ namespace NimblesThrowingStuff.NPCs.Morilus
                     if (NPC.ai[1] % 30 == 0)
                     {
                         float Speed1 = 10f;
-                        int damage1 = 120;
+                        int damage1 = 90;
                         int type1 = ModContent.ProjectileType<MorilusBolt>();
                         SoundEngine.PlaySound(SoundID.Item11, NPC.position);
                         float rotation1 = (float)Math.Atan2(vector8.Y - (player.position.Y + (player.height * 0.5f)), vector8.X - (player.position.X + (player.width * 0.5f)));
-                        for (int spaldaedal = 0 + Main.rand.Next(6); spaldaedal < 10; spaldaedal++)
-                            {
-                                int num54 = Projectile.NewProjectile(NPC.GetSource_FromThis(), vector8.X, vector8.Y, (float)((Math.Cos(rotation1) * Speed1) * -1) + Main.rand.Next(-3, 4), (float)((Math.Sin(rotation1) * Speed1) * -1) + Main.rand.Next(-3, 4), type1, damage1, 0f, 0);
-                            }
+                        int num54 = Projectile.NewProjectile(NPC.GetSource_FromThis(), vector8.X, vector8.Y, (float)((Math.Cos(rotation1) * Speed1) * -1) + Main.rand.Next(-3, 4), (float)((Math.Sin(rotation1) * Speed1) * -1) + Main.rand.Next(-3, 4), type1, damage1, 0f, 0);
                     }
                     if (NPC.ai[1] >= 290)
                     {
                         NPC.ai[1] = 0;
                     }
                 }
-                if (NPC.ai[3] >= 4950 && NPC.ai[3] <= 9000)
-                {
-                    moveNormally = false;
-                    if (NPC.ai[3] >= 4950 && NPC.ai[3] <= 5400)
-                    {
-                        whereToOrbit = new Vector2(0, -400);
-                        Move(whereToOrbit);
-                    }
-                    if (NPC.ai[3] >= 5400 && NPC.ai[3] <= 7200)
-                    {
-                        whereToOrbit.RotatedBy(MathHelper.ToRadians(5f));
-                        if (NPC.ai[3] >= 6000 && Main.rand.NextBool(2))
-                        {
-                            NPC.ai[3] += Main.rand.Next(1200, 4200);
-                        }
-                    }
-                    if (NPC.ai[3] >= 7200 && NPC.ai[3] <= 9000)
-                    {
-                        Move(whereToOrbit);
-                        if (Main.expertMode)
-                        {
-                            whereToOrbit.RotatedBy(MathHelper.ToRadians(-0.75f));
-                        }
-                        else
-                        {
-                            whereToOrbit.RotatedBy(MathHelper.ToRadians(-0.5f));
-                        }
-                        if (NPC.ai[3] >= 6000 && Main.rand.NextBool(2))
-                        {
-                            NPC.ai[3] += Main.rand.Next(1200, 4200);
-                        }
-                    }
-                }
-                if (NPC.ai[3] <= 4949 || NPC.ai[3] >= 9000)
-                {
-                    moveNormally = true;
-                    if (NPC.ai[3] >= 9000)
-                    {
-                        NPC.ai[3] = Main.rand.Next(0, 4800);
-                    }
-                }
+            }
+            if (NPC.ai[1] >= 330 || NPC.ai[1] <= -1)
+            {
+                NPC.ai[1] = 0;
+            }
         }
         private void Target()
         {
@@ -169,8 +119,8 @@ namespace NimblesThrowingStuff.NPCs.Morilus
         }
         private void Move(Vector2 offset)
         {
-            float bwingawee = NPC.lifeMax / 10;
-            speed = 20f - (NPC.life / bwingawee);
+            float bwingawee = NPC.lifeMax / 6;
+            speed = 10f - (NPC.life / bwingawee);
             Vector2 moveTo = player.Center;
             Vector2 move = moveTo - NPC.Center;
             float magnitude = Magnitude(move);
@@ -222,7 +172,11 @@ namespace NimblesThrowingStuff.NPCs.Morilus
         }
 		public override void OnKill()
 		{
-			Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity.RotatedBy(MathHelper.ToRadians(90f)), Mod.Find<ModGore>("SkySeaPranksterGore2").Type, 1f);
+            for (int io = 0; io < 25; io++)
+            {
+                Dust.NewDust(NPC.position, NPC.width, NPC.height, ModContent.DustType<ProcellariteStarDust>(), Main.rand.Next(-5, 6), Main.rand.Next(-5, 6), 0, default, Main.rand.NextFloat(0.5f, 1.5f));
+            }
+            Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity.RotatedBy(MathHelper.ToRadians(90f)), Mod.Find<ModGore>("SkySeaPranksterGore2").Type, 1f);
 			Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity, Mod.Find<ModGore>("SkySeaPranksterGore1").Type, 1f);
 			Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity * new Vector2(-1, -1), Mod.Find<ModGore>("SkySeaPranksterGore1").Type, 1f);
 		}

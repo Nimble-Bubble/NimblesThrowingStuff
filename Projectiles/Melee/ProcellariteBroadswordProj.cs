@@ -54,7 +54,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             SoundEngine.PlaySound(SoundID.Item74);
             for (int furbroaddust = 0; furbroaddust < 25; furbroaddust++)
             {
-                Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, ModContent.DustType<ProcellariteStarDust>(), Projectile.velocity.RotatedByRandom(MathHelper.ToRadians(30)).X * 0.1f, Projectile.velocity.RotatedByRandom(MathHelper.ToRadians(30)).Y * 0.1f, 0, new Color(), 1.5f);
+                Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, ModContent.DustType<ProcellariteStarDust>(), Projectile.velocity.RotatedByRandom(MathHelper.ToRadians(30)).X * 2f, Projectile.velocity.RotatedByRandom(MathHelper.ToRadians(30)).Y * 2f, 0, new Color(), 1.5f);
             }
             int smallprobeam1 = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.velocity, ModContent.ProjectileType<ProcellariteSmallSwordBeam>(), Projectile.damage / 2, Projectile.knockBack, Projectile.owner);
             int smallprobeam2 = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.velocity.RotatedBy(MathHelper.ToRadians(10)), ModContent.ProjectileType<ProcellariteSmallSwordBeam>(), Projectile.damage / 2, Projectile.knockBack, Projectile.owner);

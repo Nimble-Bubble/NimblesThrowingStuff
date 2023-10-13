@@ -19,7 +19,7 @@ namespace NimblesThrowingStuff.Projectiles.Enemy
         {
             Projectile.width = 12;
             Projectile.height = 12;
-            Projectile.aiStyle = 1;
+            Projectile.aiStyle = 0;
             Projectile.hostile = true;
             Projectile.maxPenetrate = 1;
             Projectile.tileCollide = false;
@@ -28,6 +28,7 @@ namespace NimblesThrowingStuff.Projectiles.Enemy
         }
         public override void AI()
         {
+            Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.ToRadians(90f);
             Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<ProcellariteStarDust>(), Main.rand.Next(-2, 1), Main.rand.Next(-2, 1), 0, default, Main.rand.NextFloat(0.5f, 1.5f));
         }
         public override void OnKill(int timeLeft)
