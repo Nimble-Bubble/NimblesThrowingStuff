@@ -9,7 +9,6 @@ namespace NimblesThrowingStuff.Projectiles.Summoning
 	public class SkySeaGuardianProj : ModProjectile
 	{
 		public override void SetStaticDefaults() {
-			// DisplayName.SetDefault("Your Very Own Guardian Of The Sky Sea");
 			Main.projFrames[Projectile.type] = 1;
 			ProjectileID.Sets.MinionTargettingFeature[Projectile.type] = true;
 			Main.projPet[Projectile.type] = true;

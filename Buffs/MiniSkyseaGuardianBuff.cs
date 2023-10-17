@@ -12,8 +12,6 @@ namespace NimblesThrowingStuff.Buffs
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Your Sky Sea Guardian");
-			// Description.SetDefault("It slices stuff. What more can I say?");
 			Main.buffNoSave[Type] = true;
 			Main.buffNoTimeDisplay[Type] = true;
 		}

@@ -73,7 +73,7 @@ Mods: {
 			}
 
 			MiniSkyseaGuardianBuff: {
-				DisplayName: Your Sky Sea Guardian
+				DisplayName: Your Sky-Sea Guardian
 				Description: It's rather self-explanatory
 			}
 
@@ -1212,7 +1212,7 @@ Mods: {
 			}
 
 			SkyseaSpinner: {
-				DisplayName: Skysea Spinner
+				DisplayName: Sky-Sea Spinner
 				Tooltip: A very agile yoyo that rains spikes upon its targets
 			}
 
@@ -1422,7 +1422,7 @@ Mods: {
 
 			GuardianStaff: {
 				DisplayName: Miniature Guardian Staff
-				Tooltip: Summons a small Guardian of the Sky Sea
+				Tooltip: Summons a small Guardian of the Sky-Sea
 			}
 
 			HexHammerTome: {
@@ -1832,9 +1832,9 @@ Mods: {
 		NPCs: {
 			Kelbi.DisplayName: Kelbi
 			SmallRath.DisplayName: Small Rathwyvern
-			MorilusMain.DisplayName: Morilus, the Great Guardian of the Sky's Sea
-			SkySeaGuardian.DisplayName: Lesser Guardian of the Sky Sea
-			SkySeaPrankster.DisplayName: Prankster of the Sky Sea
+			MorilusMain.DisplayName: Morilus, the Great Guardian of the Sky-Sea
+			SkySeaGuardian.DisplayName: Lesser Guardian of the Sky-Sea
+			SkySeaSoldier.DisplayName: Sky-Sea Soldier
 
 			LivingRelic: {
 				DisplayName: Living Relic
@@ -1871,8 +1871,6 @@ Mods: {
 					Princess_LovesNPC: I like {NPCName}.
 				}
 			}
-
-			SkySeaSoldier.DisplayName: Sky Sea Soldier
 		}
 
 		Projectiles: {
@@ -1969,7 +1967,7 @@ Mods: {
 			AquaBlastProj.DisplayName: Aqua Blaster
 			HexHammerProj.DisplayName: Hexed Hammer
 			MiniMossHornetProj.DisplayName: Moss Hornet
-			SkySeaGuardianProj.DisplayName: Your Very Own Guardian Of The Sky Sea
+			SkySeaGuardianProj.DisplayName: Your Very Own Guardian Of The Sky-Sea
 			SporeballProj.DisplayName: Spore Ball
 			SporeballSpore.DisplayName: Sporeball Spore
 			ViolentClusterProj.DisplayName: Violent Chopper
