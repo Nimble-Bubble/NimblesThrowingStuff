@@ -325,6 +325,18 @@ namespace NimblesThrowingStuff
                 Player.lifeRegenTime = 0;
                 Player.lifeRegen -= 14;
             }
+    if (Player.HasBuff(BuffID.BeetleEndurance1))
+            {
+                guardBonus += 15;
+            }
+            if (Player.HasBuff(BuffID.BeetleEndurance2))
+            {
+                guardBonus += 30;
+            }
+            if (Player.HasBuff(BuffID.BeetleEndurance3))
+            {
+                guardBonus += 45;
+            }
         }
     }
 }

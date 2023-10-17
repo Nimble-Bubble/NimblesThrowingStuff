@@ -129,11 +129,6 @@ Mods: {
 		}
 
 		Items: {
-			ArachnidEmblem: {
-				DisplayName: Arachnid Emblem
-				Tooltip: Allows your minions, chelicerates or not, to envenom enemies
-			}
-
 			AvengerWristband: {
 				DisplayName: Avenger Wristband
 				Tooltip:
@@ -157,7 +152,11 @@ Mods: {
 
 			CraterScope: {
 				DisplayName: Crater Scope
-				Tooltip: Right clicks make an explosive misfire
+				Tooltip:
+					'''
+					Right clicking with a ranged weapon makes an explosive misfire
+					This misfire does not directly harm you, but instead sends you flying opposite the direction you point your weapon
+					'''
 			}
 
 			DemonClaw: {
@@ -170,7 +169,7 @@ Mods: {
 				Tooltip:
 					'''
 					Allows flight and slow fall
-					Stellar membrane gives these wings powerful flight.
+					Stellar membrane gives these draconic wings powerful flight.
 					'''
 			}
 
@@ -190,7 +189,7 @@ Mods: {
 
 			HealthEater: {
 				DisplayName: Health Eater
-				Tooltip: Allows your minions to poison enemies
+				Tooltip: Gives your minions and sentries a chance to poison enemies
 			}
 
 			ProcellariteScope: {
@@ -236,7 +235,11 @@ Mods: {
 
 			Sightbringer: {
 				DisplayName: Sightbringer
-				Tooltip: Hold the Guard button to see traps and treasure
+				Tooltip:
+					'''
+					While not a strong shield, it is still valuable for its protection
+					Hold the Guard button to see traps and treasure
+					'''
 			}
 
 			Stinguard: {
@@ -325,17 +328,29 @@ Mods: {
 
 			FortressBrickboots: {
 				DisplayName: Fortress Brickboots
-				Tooltip: Increases movement speed by 10%
+				Tooltip:
+					'''
+					Increases movement speed by 10%
+					+2 extra defense upon guarding
+					'''
 			}
 
 			FortressHelmet: {
 				DisplayName: Fortress Helmet
-				Tooltip: Increases throwing damage and critical strike chance by 10%
+				Tooltip:
+					'''
+					Increases throwing damage and critical strike chance by 10%
+					+3 extra defense upon guarding
+					'''
 			}
 
 			FortressPlate: {
 				DisplayName: Fortress Plate
-				Tooltip: Increases throwing velocity and damage by 15%
+				Tooltip:
+					'''
+					Increases throwing velocity and damage by 15%
+					+5 extra defense upon guarding
+					'''
 			}
 
 			HallowedCap: {

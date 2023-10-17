@@ -31,7 +31,9 @@ namespace NimblesThrowingStuff.Items.Armor
         }
         public override void UpdateEquip(Player player)
         {
+            var modPlayer = player.GetModPlayer<NimblesPlayer>();
             player.moveSpeed += 0.1f;
+            modPlayer.guardBonus += 2;
         }
         public override bool IsArmorSet(Item head, Item body, Item legs)
         {

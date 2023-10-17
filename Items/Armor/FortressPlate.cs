@@ -30,8 +30,10 @@ namespace NimblesThrowingStuff.Items.Armor
         }
         public override void UpdateEquip(Player player)
         {
+            var modPlayer = player.GetModPlayer<NimblesPlayer>();
             player.ThrownVelocity += 0.15f;
             player.GetDamage(DamageClass.Throwing) += 0.15f;
+            modPlayer.guardBonus += 5;
         }
         public override void AddRecipes()
         {
