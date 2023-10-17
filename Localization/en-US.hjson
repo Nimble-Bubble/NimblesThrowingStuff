@@ -651,7 +651,11 @@ Mods: {
 
 			ShorebrassBar: {
 				DisplayName: Shorebrass Bar
-				Tooltip: This unusual brass-steel-coral hybrid makes for a surprisingly good alloy.
+				Tooltip:
+					'''
+					This unusual brass-steel-coral hybrid makes for a surprisingly good alloy
+					Said to have been used by oceanic soldiers who now reside in the dungeon
+					'''
 			}
 
 			SoulOfTrite: {
@@ -691,7 +695,7 @@ Mods: {
 
 			MorilusTrophy: {
 				DisplayName: Morilus Trophy
-				Tooltip: A chip of such power could only be encased in the finest of forbidden cheese.
+				Tooltip: A chip of such power could only be encased in the finest of its own flesh.
 			}
 
 			HadalShellstoneWall: {
@@ -706,12 +710,20 @@ Mods: {
 
 			Crimtroll: {
 				DisplayName: Crimtroll
-				Tooltip: While it's not the most appetizing bait out there, it sure is reliable.
+				Tooltip:
+					'''
+					While it's not the most appetizing bait out there, it sure is reliable.
+					Not consumed upon use
+					'''
 			}
 
 			Demonnow: {
 				DisplayName: Demonnow
-				Tooltip: While it's not the most appetizing bait out there, it sure is reliable.
+				Tooltip:
+					'''
+					While it's not the most appetizing bait out there, it sure is reliable.
+					Not consumed upon use
+					'''
 			}
 
 			DoradoHamaxe: {
@@ -726,7 +738,7 @@ Mods: {
 
 			MeteoriteDrill: {
 				DisplayName: Meteorite Drill
-				Tooltip: ""
+				Tooltip: A slow, but reliable power-tool
 			}
 
 			ProcellariteHamaxe: {
@@ -741,7 +753,7 @@ Mods: {
 
 			ShorebrassLure: {
 				DisplayName: Shorebrass Seabass
-				Tooltip: No, wait--It's at least a B!
+				Tooltip: No, wait--It's at least a C+!
 			}
 
 			ShorebrassPickaxe: {
@@ -760,17 +772,25 @@ Mods: {
 
 			LivingRelicMask: {
 				DisplayName: Living Relic Mask
-				Tooltip: Like a specimen of lost times
+				Tooltip:
+					'''
+					Like a specimen of lost times
+					Perfect for cosplay?
+					'''
 			}
 
 			MorilusMask: {
 				DisplayName: Morilus Mask
-				Tooltip: Resembles a strange, living machine of war
+				Tooltip:
+					'''
+					Resembles a strange, living machine of war
+					Perfect for cosplay!
+					'''
 			}
 
 			BubbleJackhammer: {
 				DisplayName: Bubble Jackhammer
-				Tooltip: ""
+				Tooltip: Sprays harmful bubbles
 			}
 
 			GlidingBlaze: {
@@ -903,7 +923,8 @@ Mods: {
 				DisplayName: Decayed Bloody Syringe
 				Tooltip:
 					'''
-					AB is a universal recipient. O is a universal donor. This is a universal source of pain.
+					AB is a universal recipient. O is a universal donor. 
+					This is a universal source of pain.
 					Right click while holding the lance out to fire a stream of ichor.
 					'''
 			}
@@ -912,8 +933,10 @@ Mods: {
 				DisplayName: Deep Buster
 				Tooltip:
 					'''
-					Part-gunlance, part-landshark. It's completely safe and totally original, we swear.
-					Right click while using to shoot. Guard and right click while using to reload.
+					Part-gunlance, part-landshark. 
+					It's completely safe and totally original, we swear.
+					Right click while using to shoot. 
+					Guard and right click while using to reload.
 					After reloading, you can shoot up to eight times before needing to reload again.
 					'''
 			}
@@ -938,7 +961,8 @@ Mods: {
 				Tooltip:
 					'''
 					A lance modeled after a mythical plant. It matches its fashionable exterior with a pleasant odor.
-					...Pleasant enough to you, at least. Right click while attacking to fire a poisonous spore cloud.
+					...Pleasant enough to you, at least. 
+					Right click while attacking to fire a poisonous spore cloud.
 					'''
 			}
 
@@ -1035,15 +1059,19 @@ Mods: {
 
 			IronLance: {
 				DisplayName: Iron Lance
-				Tooltip: A heavy lance for sure, but its power makes up for it.
+				Tooltip:
+					'''
+					A basic, but effective lance design.
+					Its weight is balanced by its power.
+					'''
 			}
 
 			KnightLance: {
 				DisplayName: Knight Lance
 				Tooltip:
 					'''
-					Made with valuable ores, this lance can slice and thrust.
-					Right click to swing like a sword.
+					Made with valuable ores, this lance can slice and thrust
+					Right click to swing like a sword
 					'''
 			}
 
@@ -1051,7 +1079,7 @@ Mods: {
 				DisplayName: Lagiacrus Blade
 				Tooltip:
 					'''
-					A greatsword made using Lagiacrus materials.
+					A greatsword made using Lagiacrus materials
 					Danger: High voltage! Electricity still flows through Lagiacrus shell when separated from its source.
 					'''
 			}
@@ -1068,7 +1096,7 @@ Mods: {
 
 			Longhorn: {
 				DisplayName: Longhorn
-				Tooltip: Rough-hewn, but sturdy.
+				Tooltip: Rough-hewn, but sturdy
 			}
 
 			MahoganyStinger: {
@@ -1076,8 +1104,8 @@ Mods: {
 				Tooltip:
 					'''
 					Sting like a bee. Fly...like a bee.
-					Right click to launch yourself in the direction of the lance.
-					Hits may poison enemies.
+					Right click to launch yourself in the direction of the lance
+					Hits may poison enemies
 					'''
 			}
 
@@ -1091,19 +1119,30 @@ Mods: {
 				Tooltip:
 					'''
 					From an abyss so old that most would call it a niwelnysse, this beast awakens
-					Right click while holding the gunlance out to fire a shell. Shells do 5/4 of the weapon's base damage.
-					The maximum amount of shells for this weapon is 6. Each reload gives you 2 shells.
+					Right click while holding the gunlance out to fire a shell
+					Shells do 5/4 of the weapon's base damage
+					The maximum amount of shells for this weapon is 6 
+					Each reload gives you 2 shells
 					'''
 			}
 
 			PecoTeepee: {
 				DisplayName: Peco Teepee
-				Tooltip: ""
+				Tooltip:
+					'''
+					Made from vibrant feathers, this gunlance gives its shells 
+					Right click while using to fire a shell
+					Guard and right click to reload
+					'''
 			}
 
 			ProcellariteBroadsword: {
 				DisplayName: Procellarite Broadsword
-				Tooltip: ""
+				Tooltip:
+					'''
+					Fires a sword beam on use
+					After impact or a small amount of time, this beam splits into a spread of three smaller beams
+					'''
 			}
 
 			ProcellariteTrident: {
@@ -1271,7 +1310,7 @@ Mods: {
 
 			EltanineWave: {
 				DisplayName: Eltanine Wave
-				Tooltip: ""
+				Tooltip: Fires a spread of high-velocity arrows
 			}
 
 			GoldPistol: {
@@ -1305,7 +1344,7 @@ Mods: {
 
 			ProcellariteLongbow: {
 				DisplayName: Pain Rain
-				Tooltip: Rains several arrows down from the heavens(?)
+				Tooltip: Rains several arrows down from the heavens
 			}
 
 			ProcellariteRepeater: {
@@ -1417,7 +1456,7 @@ Mods: {
 
 			AccursedFlask: {
 				DisplayName: Cursed Flame-filled Throwing Flask
-				Tooltip: ""
+				Tooltip: Explodes into clouds of cursed fire
 			}
 
 			AdamantiteMallet: {
@@ -1432,7 +1471,7 @@ Mods: {
 
 			Beemerang: {
 				DisplayName: Beemerang
-				Tooltip: ""
+				Tooltip: Spawns bees on contact
 			}
 
 			BloodyPike: {
@@ -1452,12 +1491,12 @@ Mods: {
 
 			ChlorophyteBomb: {
 				DisplayName: Chlorophyte Bomb
-				Tooltip: ""
+				Tooltip: Bursts into toxic clouds
 			}
 
 			ChlorophyteChakram: {
 				DisplayName: Chlorophyte Chakram
-				Tooltip: ""
+				Tooltip: Spews toxic spore clouds
 			}
 
 			CobaltShortspear: {
@@ -1492,7 +1531,10 @@ Mods: {
 				Tooltip: ""
 			}
 
-			DemoniteKnife.DisplayName: Demonite Knife
+			DemoniteKnife: {
+				DisplayName: Demonite Knife
+				Tooltip: ""
+			}
 
 			DoradoBomb: {
 				DisplayName: Stellar Scalestorm
@@ -1566,7 +1608,7 @@ Mods: {
 
 			IchoredFlask: {
 				DisplayName: Ichor-filled Throwing Flask
-				Tooltip: ""
+				Tooltip: Explodes into clouds of weakening ichor
 			}
 
 			IronKnife: {
@@ -1646,7 +1688,11 @@ Mods: {
 
 			PoseironTrident: {
 				DisplayName: Poseiron's Trident
-				Tooltip: A sea god's three-pronged spear that oils and frostburns foes
+				Tooltip:
+					'''
+					The weapon of an old marine god, thought to be lost
+					Summons bubbles that seek out targets
+					'''
 			}
 
 			ProcellariteKnife: {
@@ -1685,7 +1731,7 @@ Mods: {
 			}
 
 			Skelespear: {
-				DisplayName: Skelespear
+				DisplayName: Streaodous
 				Tooltip: Turns into a stream of water
 			}
 
