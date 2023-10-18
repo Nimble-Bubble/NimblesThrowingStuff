@@ -1866,6 +1866,7 @@ Mods: {
 					DislikeBiome: "{$Mods.NimblesThrowingStuff.TownNPCMood.LivingRelic.DislikeBiome}"
 					LikeNPC_Princess: I like {NPCName}.
 					Princess_LovesNPC: I like {NPCName}.
+					LoveNPC: "{$Mods.NimblesThrowingStuff.TownNPCMood.LivingRelic.LoveNPC}"
 				}
 			}
 

@@ -1,4 +1,8 @@
 using Microsoft.Xna.Framework;
+using NimblesThrowingStuff.Items.Placeables.Blocks;
+using NimblesThrowingStuff.Items.Weapons.Throwing;
+using NimblesThrowingStuff.Items.Materials;
+using NimblesThrowingStuff.Items.Consumables;
 using System;
 using System.Collections.Generic;
 using Terraria;
@@ -20,13 +24,6 @@ namespace NimblesThrowingStuff.NPCs.Town
 				return "NimblesThrowingStuff/NPCs/Town/LivingRelic";
 			}
 		}
-
-		//public override void Load()
-		//{
-		//	name = "Living Relic";
-		//	base.Load();
-		//}
-
 		public override void SetStaticDefaults()
         {
             // DisplayName.SetDefault("Living Relic");
@@ -39,6 +36,7 @@ namespace NimblesThrowingStuff.NPCs.Town
 			NPCID.Sets.AttackAverageChance[NPC.type] = 20;
 			NPCID.Sets.HatOffsetY[NPC.type] = -2000000;
             NPC.Happiness
+                .SetNPCAffection(NPCID.TaxCollector, AffectionLevel.Love)
                 .SetBiomeAffection<DesertBiome>(AffectionLevel.Love)
                 .SetBiomeAffection<SnowBiome>(AffectionLevel.Dislike)
                 ;
@@ -143,9 +141,9 @@ namespace NimblesThrowingStuff.NPCs.Town
             }
             if (Main.bloodMoon)
             {
-                if (Main.raining && Main.rand.Next(4) == 0 && NPC.position.Y / 16 <= Main.worldSurface)
+                if (Main.raining && Main.rand.NextBool(4) && NPC.position.Y / 16 <= Main.worldSurface)
                 {
-                    return "So the moon is guilty of something...";
+                    return "So the moon IS guilty of something...";
                 }
                 else
                 {
@@ -206,10 +204,6 @@ namespace NimblesThrowingStuff.NPCs.Town
             {
                 return "I heard that you defeated that \"Morilus\" guy. Someone with weird pants told me to sell this artifact to you. I think those two things are related?";
             }
-            //if (BirthdayParty.PartyIsUp && Main.rand.Next(4))
-            //{
-            //    return "I'm not really sure how to celebrate this kind of thing...";
-            //}
             switch (Main.rand.Next(6))
             {
                 case 1:
@@ -240,10 +234,22 @@ namespace NimblesThrowingStuff.NPCs.Town
 				shop = RelicShopName;
 			}
 		}
-        public const string RelicShopName = "Shop";
+        public const string RelicShopName = "The Relic's Relics";
 
 		public override void AddShops()
 		{
+            var RelicsRelics = new NPCShop(NPC.type, RelicShopName);
+            RelicsRelics.Add(ItemID.DesertFossil, Condition.DownedEowOrBoc);
+            RelicsRelics.Add(ItemID.Bone, Condition.DownedSkeletron);
+            RelicsRelics.Add(ItemID.ThrowingKnife);
+            RelicsRelics.Add(ItemID.PoisonedKnife, Condition.DownedQueenBee);
+            RelicsRelics.Add(ItemID.BoneDagger, Condition.DownedEowOrBoc);
+            RelicsRelics.Add(ModContent.ItemType<SpikeKnife>(), Condition.DownedSkeletron);
+            RelicsRelics.Add(ItemID.Shuriken);
+            RelicsRelics.Add(ItemID.Javelin);
+            RelicsRelics.Add(ItemID.BoneJavelin, Condition.DownedEowOrBoc);
+            RelicsRelics.Add<ConvincingArtifact>(new Condition("Mods.NimblesThrowingStuff.Conditions.DownedMorilus", () => NimblesWorld.downedMorilus));
+            RelicsRelics.Register();
             /* shop.item[nextSlot].SetDefaults(ItemID.ThrowingKnife);
 			nextSlot++;
             shop.item[nextSlot].SetDefaults(ItemID.PoisonedKnife);

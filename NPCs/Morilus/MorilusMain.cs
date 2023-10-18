@@ -505,9 +505,9 @@ namespace NimblesThrowingStuff.NPCs.Morilus
                 Utilities.SpawnOre(ModContent.TileType<ProcellariteOreTile>(), 15E-05, .8f, .999f);
                 Utilities.SpawnOre(ModContent.TileType<ProcellariteOreTile>(), 15E-04, 0f, .1f);
                 if (Main.netMode == NetmodeID.SinglePlayer)
-                    Main.NewText("The underworld glows with the energy of a storm...", new Color(0, 171, 171));
+                    Main.NewText("The clouds glow with the energy of a hellish storm...", new Color(0, 171, 171));
                 else if (Main.netMode == NetmodeID.Server)
-                    ChatHelper.BroadcastChatMessage(NetworkText.FromKey("The underworld glows with the energy of a storm..."), new Color(0, 171, 171));
+                    ChatHelper.BroadcastChatMessage(NetworkText.FromKey("The clouds glow with the energy of a hellish storm..."), new Color(0, 171, 171));
             }
         }
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
@@ -515,7 +515,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Sky,
-                new FlavorTextBestiaryInfoElement("This strange ocular automaton serves as the protector of a place called the Sky's Sea.")
+                new FlavorTextBestiaryInfoElement("This strange ocular automaton serves as the protector of a place called the Sky-Sea.")
             });
         }
         public override void ModifyNPCLoot(NPCLoot npcLoot)
