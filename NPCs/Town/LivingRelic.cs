@@ -239,8 +239,10 @@ namespace NimblesThrowingStuff.NPCs.Town
 		public override void AddShops()
 		{
             var RelicsRelics = new NPCShop(NPC.type, RelicShopName);
+            RelicsRelics.Add(ModContent.ItemType<DoradoFragment>(), Condition.DownedCultist);
             RelicsRelics.Add(ItemID.DesertFossil, Condition.DownedEowOrBoc);
             RelicsRelics.Add(ItemID.Bone, Condition.DownedSkeletron);
+            RelicsRelics.Add(ModContent.ItemType<EmptyFlask>(), Condition.BloodMoonOrHardmode);
             RelicsRelics.Add(ItemID.ThrowingKnife);
             RelicsRelics.Add(ItemID.PoisonedKnife, Condition.DownedQueenBee);
             RelicsRelics.Add(ItemID.BoneDagger, Condition.DownedEowOrBoc);
