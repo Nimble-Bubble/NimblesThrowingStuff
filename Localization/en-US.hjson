@@ -1842,6 +1842,11 @@ Mods: {
 					Has a chance to electrify targets
 					'''
 			}
+
+			SkySeaSoldierBannerItem: {
+				DisplayName: Sky-Sea Soldier Banner
+				Tooltip: ""
+			}
 		}
 
 		NPCs: {
@@ -2110,6 +2115,7 @@ Mods: {
 			ShorebrassBarTile.MapEntry: Procellarite Bar
 			MorilusTrophyTile.MapEntry: Morilus Trophy
 			SteelBeamTile.MapEntry: Steel Beam Tile
+			SkySeaSoldierBanner.MapEntry: Sky-Sea Soldier Banner
 		}
 
 		Conditions.DownedMorilus: Mods.NimblesThrowingStuff.Conditions.DownedMorilus

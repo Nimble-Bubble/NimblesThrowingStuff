@@ -28,9 +28,14 @@ namespace NimblesThrowingStuff.NPCs.Morilus
 			NPC.damage = 120;
 			NPC.defense = 40;
 			NPC.lifeMax = 750;
-			NPC.HitSound = SoundID.NPCHit3;
+            NPC.lavaImmune = true;
+            NPC.HitSound = SoundID.NPCHit3;
 			NPC.DeathSound = SoundID.NPCDeath3;
 			NPC.knockBackResist = 0.5f;
+            NPC.value = 5000f;
+            NPC.buffImmune[31] = true;
+            Banner = NPC.type;
+            BannerItem = Mod.Find<ModItem>("SkySeaSoldierBannerItem").Type;
         }
         public override void AI()
         {

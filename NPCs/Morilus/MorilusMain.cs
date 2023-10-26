@@ -55,7 +55,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
             NPC.width = 100;
             NPC.height = 100;
             NPC.value = 1000000f;
-            NPC.npcSlots = 5f;
+            NPC.npcSlots = 10f;
             NPC.boss = true;
             NPC.lavaImmune = true;
             NPC.onFire = false;
