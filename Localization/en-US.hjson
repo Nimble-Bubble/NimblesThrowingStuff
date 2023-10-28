@@ -126,6 +126,11 @@ Mods: {
 				DisplayName: Guardian
 				Description: Guard power boosted by 25
 			}
+
+			MiniCreeperBuff: {
+				DisplayName: Miniature Creeper
+				Description: The Creeper(s) will fight for you
+			}
 		}
 
 		Items: {
@@ -1847,6 +1852,15 @@ Mods: {
 				DisplayName: Sky-Sea Soldier Banner
 				Tooltip: ""
 			}
+
+			MiniCreeperStaff: {
+				DisplayName: Creeper Creator
+				Tooltip:
+					'''
+					Spawns a miniature Creeper
+					This creeper will float around you and towards targets
+					'''
+			}
 		}
 
 		NPCs: {
@@ -2100,7 +2114,8 @@ Mods: {
 			ShroomiteBulletProj.DisplayName: Shroomite Bullet
 			StardustWhipProj.DisplayName: Stardust Whip
 			EtherianChakramProj.DisplayName: Etherian Chakram
-			HorrificDemonLanceProj.DisplayName: Horrific Demon Lance Proj
+			HorrificDemonLanceProj.DisplayName: Horrific Demon Lance
+			MiniCreeperProj.DisplayName: Mini-Creeper
 		}
 
 		Keybinds.Guard.DisplayName: Guard
