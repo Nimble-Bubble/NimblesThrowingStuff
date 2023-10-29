@@ -5,6 +5,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using NimblesThrowingStuff.Buffs;
+using Terraria.Audio;
 
 namespace NimblesThrowingStuff.Projectiles.Summoning
 {
@@ -161,12 +162,13 @@ namespace NimblesThrowingStuff.Projectiles.Summoning
 				aquablastcd += 1;
                 if (aquablastcd >= 40)
                 {
+				SoundEngine.PlaySound(SoundID.Item21);
                 Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, 0, 0, 27, Projectile.damage, 3f, Projectile.owner, 0.0f, (float) Main.rand.Next(-45, 1));
                 aquablastcd = 0;
                 }
 			}
 			else {
-            aquablastcd = 0;
+            aquablastcd = 40;
             }
             #endregion
 

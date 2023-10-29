@@ -1,6 +1,7 @@
 using Microsoft.Xna.Framework;
 using System;
 using Terraria;
+using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -50,16 +51,26 @@ namespace NimblesThrowingStuff.Projectiles.Summoning
 
 			#region General behavior
 			Vector2 idlePosition = player.Center;
-			idlePosition.Y -= 48f;
+			idlePosition.Y -= 24f;
 			float minionPositionOffsetX = (10 + Projectile.minionPos * 40) * -player.direction;
 			idlePosition.X += minionPositionOffsetX;
 			Vector2 vectorToIdlePosition = idlePosition - Projectile.Center;
 			float distanceToIdlePosition = vectorToIdlePosition.Length();
-			if (Main.myPlayer == player.whoAmI && distanceToIdlePosition > 5000f) {
+			if (Main.myPlayer == player.whoAmI && distanceToIdlePosition > 1000f) {
+				SoundEngine.PlaySound(SoundID.NPCDeath13, Projectile.position);
+				for (int z = 0; z < 10; z++)
+				{
+                    Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 5, Projectile.velocity.X * 0.1f, Projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
+                }
 				Projectile.position = idlePosition;
 				Projectile.velocity *= 0.25f;
 				Projectile.netUpdate = true;
-			}
+				for (int zedilla = 0; zedilla < 10; zedilla++)
+				{
+                    Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 5, Projectile.velocity.X * 0.1f, Projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
+                }
+                SoundEngine.PlaySound(SoundID.NPCDeath13, Projectile.position);
+            }
 			float overlapVelocity = 0.1f;
 			for (int i = 0; i < Main.maxProjectiles; i++) {
 				Projectile other = Main.projectile[i];
