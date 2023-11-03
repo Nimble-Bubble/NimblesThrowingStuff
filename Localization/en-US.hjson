@@ -39,7 +39,7 @@ Mods: {
 		Buffs: {
 			AquaBlastBuff: {
 				DisplayName: Aqua Blaster
-				Description: The shiny little things will fight for you
+				Description: The hydraulic automatons will fight for you
 			}
 
 			CompromisedStructure: {
@@ -129,7 +129,7 @@ Mods: {
 
 			MiniCreeperBuff: {
 				DisplayName: Miniature Creeper
-				Description: The Creeper(s) will fight for you
+				Description: The Creepers will fight for you
 			}
 		}
 
@@ -190,11 +190,6 @@ Mods: {
 					When you stare into it, it stares back.
 					15% increased damage for all classes and 15% increased critical strike chance
 					'''
-			}
-
-			HealthEater: {
-				DisplayName: Health Eater
-				Tooltip: Gives your minions and sentries a chance to poison enemies
 			}
 
 			ProcellariteScope: {
@@ -1883,8 +1878,8 @@ Mods: {
 					HateCrowded: "{$Mods.NimblesThrowingStuff.TownNPCMood.LivingRelic.HateCrowded}"
 					LoveBiome: "{$Mods.NimblesThrowingStuff.TownNPCMood.LivingRelic.LoveBiome}"
 					DislikeBiome: "{$Mods.NimblesThrowingStuff.TownNPCMood.LivingRelic.DislikeBiome}"
-					LikeNPC_Princess: I like {NPCName}.
-					Princess_LovesNPC: I like {NPCName}.
+					LikeNPC_Princess: I think {NPCName} is brainwashing us into being happy.
+					Princess_LovesNPC: I think I've said too much about {NPCName}.
 					LoveNPC: "{$Mods.NimblesThrowingStuff.TownNPCMood.LivingRelic.LoveNPC}"
 				}
 			}
@@ -1902,8 +1897,8 @@ Mods: {
 					HateCrowded: "{$Mods.NimblesThrowingStuff.TownNPCMood.Lotteryboy.HateCrowded}"
 					LikeBiome: "{$Mods.NimblesThrowingStuff.TownNPCMood.Lotteryboy.LikeBiome}"
 					DislikeBiome: "{$Mods.NimblesThrowingStuff.TownNPCMood.Lotteryboy.DislikeBiome}"
-					LikeNPC_Princess: I like {NPCName}.
-					Princess_LovesNPC: I like {NPCName}.
+					LikeNPC_Princess: For some reason, {NPCName} seems to fill everything around her with joy. Even the plants seem to sing along! I thought that was only something that was something that only happened on screens!
+					Princess_LovesNPC: If you've spent any money on {NPCName}'s wares, a lot of it has gone back to me.
 				}
 			}
 		}
@@ -2002,7 +1997,7 @@ Mods: {
 			AquaBlastProj.DisplayName: Aqua Blaster
 			HexHammerProj.DisplayName: Hexed Hammer
 			MiniMossHornetProj.DisplayName: Moss Hornet
-			SkySeaGuardianProj.DisplayName: Your Very Own Guardian Of The Sky-Sea
+			SkySeaGuardianProj.DisplayName: Sharp Sky-Sea Guardian
 			SporeballProj.DisplayName: Spore Ball
 			SporeballSpore.DisplayName: Sporeball Spore
 			ViolentClusterProj.DisplayName: Violent Chopper
@@ -2023,9 +2018,9 @@ Mods: {
 			CrimtaneKnifeProj.DisplayName: Crimtane Knife
 			CrystalKnifeProj.DisplayName: Crystal Knife
 			CumulusCrasherProj.DisplayName: Cumulus Crasher
-			CursedCloud1.DisplayName: Cursed Cloud1
-			CursedCloud2.DisplayName: Cursed Cloud2
-			CursedCloud3.DisplayName: Cursed Cloud3
+			CursedCloud1.DisplayName: Cursed Cloud
+			CursedCloud2.DisplayName: Cursed Cloud
+			CursedCloud3.DisplayName: Cursed Cloud
 			DemoniteKnifeProj.DisplayName: Demonite Knife
 			DoradoBombProj.DisplayName: Dragon's Breath
 			DoradoKniveProj.DisplayName: Dorado Knife
@@ -2046,9 +2041,9 @@ Mods: {
 			GreekFireballProj.DisplayName: Greek Fireball
 			HallowedWaraxeProj.DisplayName: Hallowed Waraxe
 			HellBonesAxeProj.DisplayName: Hell Bones Axe
-			IchorCloud1.DisplayName: Ichor Cloud1
-			IchorCloud2.DisplayName: Ichor Cloud2
-			IchorCloud3.DisplayName: Ichor Cloud3
+			IchorCloud1.DisplayName: Ichor Cloud
+			IchorCloud2.DisplayName: Ichor Cloud
+			IchorCloud3.DisplayName: Ichor Cloud
 			IchoredFlaskProj.DisplayName: Ichor-filled Throwing Flask
 			IronKnifeProj.DisplayName: Iron Knife
 			LacusDecapitatorProj.DisplayName: Lacus Decapitator
