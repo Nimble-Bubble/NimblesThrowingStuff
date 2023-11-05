@@ -118,6 +118,27 @@ namespace NimblesThrowingStuff
                     case 7:
                         Player.AddBuff(Mod.Find<ModBuff>("GuardWhirlpool").Type, 2);
                         break;
+                    case 8:
+                        Player.AddBuff(Mod.Find<ModBuff>("GuardIron").Type, 2);
+                        break;
+                    case 9:
+                        Player.AddBuff(Mod.Find<ModBuff>("GuardIron").Type, 2);
+                        break;
+                    case 10:
+                        Player.AddBuff(Mod.Find<ModBuff>("GuardIron").Type, 2);
+                        break;
+                    case 11:
+                        Player.AddBuff(Mod.Find<ModBuff>("GuardIron").Type, 2);
+                        break;
+                    case 12:
+                        Player.AddBuff(Mod.Find<ModBuff>("GuardIron").Type, 2);
+                        break;
+                    case 13:
+                        Player.AddBuff(Mod.Find<ModBuff>("GuardIron").Type, 2);
+                        break;
+                    case 14:
+                        Player.AddBuff(Mod.Find<ModBuff>("GuardIron").Type, 2);
+                        break;
                 }
             }
         }
@@ -164,6 +185,15 @@ namespace NimblesThrowingStuff
                         break;
                     case 3:
                         SoundEngine.PlaySound(new SoundStyle("NimblesThrowingStuff/Sounds/Item/GuardMetalHeavy"));
+                        break;
+                    case 4:
+                        SoundEngine.PlaySound(new SoundStyle("NimblesThrowingStuff/Sounds/Item/GuardMagicMetalMedium"));
+                        break;
+                    case 5:
+                        SoundEngine.PlaySound(new SoundStyle("NimblesThrowingStuff/Sounds/Item/GuardMagicMetalLight"));
+                        break;
+                    case 6:
+                        SoundEngine.PlaySound(new SoundStyle("NimblesThrowingStuff/Sounds/Item/GuardMagicMetalHeavy"));
                         break;
                 }
                 
@@ -297,6 +327,55 @@ namespace NimblesThrowingStuff
                         break;
                     case 8:
                         Player.statDefense += 5 + (guardBonus * 2);
+                        break;
+                    case 9:
+                        Player.statDefense += 4 + (guardBonus);
+                        if (Main.rand.NextBool(3))
+                        {
+                            Dust.NewDust(Player.position, Player.width, Player.height, DustID.Cobalt, Player.velocity.X + Main.rand.Next(-3, 4), Player.velocity.Y + Main.rand.Next(-3, 4), 0, new Color(255, 255, 255));
+                        }
+                        break;
+                    case 10:
+                        Player.statDefense += 8 + (guardBonus * 2);
+                        if (Main.rand.NextBool(3))
+                        {
+                            Dust.NewDust(Player.position, Player.width, Player.height, DustID.Obsidian, Player.velocity.X + Main.rand.Next(-3, 4), Player.velocity.Y + Main.rand.Next(-3, 4), 0, new Color(255, 255, 255));
+                        }
+                        if (Main.rand.NextBool(10))
+                        {
+                            Dust.NewDust(Player.position, Player.width, Player.height, DustID.Smoke, Player.velocity.X + Main.rand.Next(-3, 4), Player.velocity.Y + Main.rand.Next(-3, 4), 0, new Color(255, 255, 255));
+                        }
+                        break;
+                    case 11:
+                        Player.statDefense += 16 + (guardBonus * 4);
+                        if (Main.rand.NextBool(3))
+                        {
+                            Dust.NewDust(Player.position, Player.width, Player.height, DustID.RainbowTorch, Player.velocity.X + Main.rand.Next(-3, 4), Player.velocity.Y + Main.rand.Next(-3, 4), 0, new Color(255, 255, 255));
+                        }
+                        break;
+                    case 12:
+                        Player.statDefense += 10 + (guardBonus * 2);
+                        Player.endurance += 0.15f;
+                        if (Main.rand.NextBool(3))
+                        {
+                            Dust.NewDust(Player.position, Player.width, Player.height, DustID.Enchanted_Gold, Player.velocity.X + Main.rand.Next(-3, 4), Player.velocity.Y + Main.rand.Next(-3, 4), 0, new Color(255, 255, 255));
+                        }
+                        break;
+                    case 13:
+                        Player.statDefense += 10 + (guardBonus * 3);
+                        Player.endurance += 0.2f;
+                        if (Main.rand.NextBool(3))
+                        {
+                            Dust.NewDust(Player.position, Player.width, Player.height, DustID.Blood, Player.velocity.X + Main.rand.Next(-3, 4), Player.velocity.Y + Main.rand.Next(-3, 4), 0, new Color(255, 255, 255));
+                        }
+                        break;
+                    case 14:
+                        Player.statDefense += 10 + (guardBonus * 2);
+                        Player.endurance += 0.25f;
+                        if (Main.rand.NextBool(3))
+                        {
+                            Dust.NewDust(Player.position, Player.width, Player.height, DustID.Ice, Player.velocity.X + Main.rand.Next(-3, 4), Player.velocity.Y + Main.rand.Next(-3, 4), 0, new Color(255, 255, 255));
+                        }
                         break;
                 }
     }

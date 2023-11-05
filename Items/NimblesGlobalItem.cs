@@ -61,6 +61,37 @@ namespace NimblesThrowingStuff.Items
             if (item.type >= ItemID.ApprenticeScarf && item.type <= ItemID.MonkBelt)
             {
                 modPlayer.whichShield = 8;
+                modPlayer.whichGuardSound = 5;
+            }
+            if (item.type == ItemID.CobaltShield)
+            {
+                modPlayer.whichShield = 9;
+                modPlayer.whichGuardSound = 1;
+            }
+            if (item.type == ItemID.ObsidianShield)
+            {
+                modPlayer.whichShield = 10;
+                modPlayer.whichGuardSound = 1;
+            }
+            if (item.type == ItemID.AnkhShield)
+            {
+                modPlayer.whichShield = 11;
+                modPlayer.whichGuardSound = 4;
+            }
+            if (item.type == ItemID.PaladinsShield)
+            {
+                modPlayer.whichShield = 12;
+                modPlayer.whichGuardSound = 6;
+            }
+            if (item.type == ItemID.HeroShield)
+            {
+                modPlayer.whichShield = 13;
+                modPlayer.whichGuardSound = 6;
+            }
+            if (item.type == ItemID.FrozenShield)
+            {
+                modPlayer.whichShield = 14;
+                modPlayer.whichGuardSound = 6;
             }
             if (item.type == ItemID.FrostLeggings)
             {

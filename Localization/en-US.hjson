@@ -131,6 +131,11 @@ Mods: {
 				DisplayName: Miniature Creeper
 				Description: The Creepers will fight for you
 			}
+
+			GuardShorebrass: {
+				DisplayName: Guard Shorebrass
+				Description: Mods.NimblesThrowingStuff.Buffs.GuardShorebrass.Description
+			}
 		}
 
 		Items: {
