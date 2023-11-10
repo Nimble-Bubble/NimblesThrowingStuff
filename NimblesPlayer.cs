@@ -266,7 +266,7 @@ namespace NimblesThrowingStuff
           switch (whichShield)
                 {
                     case 1:
-                        Player.statDefense += 10 + guardBonus;
+                        Player.statDefense += 5 + guardBonus;
                         Player.moveSpeed /= 2;
                         if (Main.rand.NextBool(3))
                         {
@@ -375,6 +375,14 @@ namespace NimblesThrowingStuff
                         if (Main.rand.NextBool(3))
                         {
                             Dust.NewDust(Player.position, Player.width, Player.height, DustID.Ice, Player.velocity.X + Main.rand.Next(-3, 4), Player.velocity.Y + Main.rand.Next(-3, 4), 0, new Color(255, 255, 255));
+                        }
+                        break;
+                    case 15:
+                        Player.statDefense += 10 + (guardBonus * 2);
+                        Player.moveSpeed /= 2;
+                        if (Main.rand.NextBool(3))
+                        {
+                            Dust.NewDust(Player.position, Player.width, Player.height, 43, Player.velocity.X + Main.rand.Next(-3, 4), Player.velocity.Y + Main.rand.Next(-3, 4), 0, new Color(255, 255, 255));
                         }
                         break;
                 }

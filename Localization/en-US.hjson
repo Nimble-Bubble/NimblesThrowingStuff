@@ -136,6 +136,11 @@ Mods: {
 				DisplayName: Guard Shorebrass
 				Description: Mods.NimblesThrowingStuff.Buffs.GuardShorebrass.Description
 			}
+
+			GuardGate: {
+				DisplayName: Guard Gate
+				Description: Mods.NimblesThrowingStuff.Buffs.GuardGate.Description
+			}
 		}
 
 		Items: {
@@ -1860,6 +1865,16 @@ Mods: {
 					Spawns a miniature Creeper
 					This creeper will float around you and towards targets
 					'''
+			}
+
+			GateguardShield: {
+				DisplayName: Gateguard Shield
+				Tooltip: ""
+			}
+
+			ProtogenVisor: {
+				DisplayName: Protogen Visor
+				Tooltip: ""
 			}
 		}
 
