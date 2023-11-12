@@ -228,6 +228,15 @@ Mods: {
 					20% increased damage reduction
 					'''
 			}
+			
+			GateguardShield: {
+				DisplayName: Rampart Shield
+				Tooltip: 
+				'''
+				A shield often used by guards and paladins
+				Guarding slows you down, but reduces damage
+				'''
+			}
 
 			HorrorshowShield: {
 				DisplayName: Horrorshow Shield
@@ -498,6 +507,16 @@ Mods: {
 					Increases ranged damage by 30% and critical strike chance by 20%
 					While the glass-like layer is worse than pure solid Procellarite for durability, its sensory benefits are undeniable.
 					'''
+			}
+			
+			ProtogenVisor: {
+				DisplayName: Protogen Visor
+				Tooltip: 
+				'''
+				A replica of a protogen's visor.
+				As protogens are often sent out to distant planets for exploration, 
+				The senses are heightened and protected from disablement
+				'''
 			}
 
 			RathalosGreaves: {
@@ -1867,15 +1886,6 @@ Mods: {
 					'''
 			}
 
-			GateguardShield: {
-				DisplayName: Gateguard Shield
-				Tooltip: ""
-			}
-
-			ProtogenVisor: {
-				DisplayName: Protogen Visor
-				Tooltip: ""
-			}
 		}
 
 		NPCs: {

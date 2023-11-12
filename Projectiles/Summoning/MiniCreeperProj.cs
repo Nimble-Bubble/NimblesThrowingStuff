@@ -65,6 +65,7 @@ namespace NimblesThrowingStuff.Projectiles.Summoning
 				Projectile.position = idlePosition;
 				Projectile.velocity *= 0.25f;
 				Projectile.netUpdate = true;
+				Projectile.ai[0] = 0f;
 				for (int zedilla = 0; zedilla < 10; zedilla++)
 				{
                     Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 5, Projectile.velocity.X * 0.1f, Projectile.velocity.Y * 0.1f, 0, new Color(), 0.75f);
