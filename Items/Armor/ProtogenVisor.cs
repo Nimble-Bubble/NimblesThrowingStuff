@@ -7,6 +7,8 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
 using NimblesThrowingStuff.Items.Materials;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using Terraria.GameContent.Creative;
 
 namespace NimblesThrowingStuff.Items.Armor
@@ -17,8 +19,6 @@ namespace NimblesThrowingStuff.Items.Armor
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-            /* Tooltip.SetDefault("Increases attack speed by 5%"
-                +"\nIncreases critical strike chance by 3%"); */
         }
 
         public override void SetDefaults()
@@ -35,6 +35,7 @@ namespace NimblesThrowingStuff.Items.Armor
             modPlayer.guardBonus += 10;
             player.dangerSense = true;
             player.findTreasure = true;
+            Lighting.AddLight(player.MountedCenter, Color.White.ToVector3());
         }
         public override void AddRecipes()
         {

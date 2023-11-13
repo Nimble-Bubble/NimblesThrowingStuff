@@ -153,6 +153,17 @@ Mods: {
 					'''
 			}
 
+			
+			BreathingPack: {
+				DisplayName: Breathing Enviro Protection Pack
+				Tooltip: 
+				'''
+				A basic environmental protection pack, common in extraterrestrial exploration
+				Produces fresh air, allowing one to breathe in airless environments
+				These environments include liquids, granular materials, and outer space
+				'''
+			}
+
 			ChlorophyteTreaders: {
 				DisplayName: Chlorophyte Treaders
 				Tooltip:
@@ -228,14 +239,14 @@ Mods: {
 					20% increased damage reduction
 					'''
 			}
-			
+
 			GateguardShield: {
 				DisplayName: Rampart Shield
-				Tooltip: 
-				'''
-				A shield often used by guards and paladins
-				Guarding slows you down, but reduces damage
-				'''
+				Tooltip:
+					'''
+					A shield often used by guards and paladins
+					Guarding slows you down, but reduces damage
+					'''
 			}
 
 			HorrorshowShield: {
@@ -508,15 +519,16 @@ Mods: {
 					While the glass-like layer is worse than pure solid Procellarite for durability, its sensory benefits are undeniable.
 					'''
 			}
-			
+
 			ProtogenVisor: {
 				DisplayName: Protogen Visor
-				Tooltip: 
-				'''
-				A replica of a protogen's visor.
-				As protogens are often sent out to distant planets for exploration, 
-				The senses are heightened and protected from disablement
-				'''
+				Tooltip:
+					'''
+					A replica of a protogen's visor.
+					As protogens are often sent out to distant planets for exploration, 
+					The senses are heightened and protected from disablement
+					The design on the visor produces a noticeable glow
+					'''
 			}
 
 			RathalosGreaves: {
