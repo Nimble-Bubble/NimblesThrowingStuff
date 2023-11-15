@@ -20,8 +20,8 @@ namespace NimblesThrowingStuff.Items.Accessories
         public override void SetDefaults()
         {
             Item.accessory = true;
-            Item.width = 22;
-            Item.height = 22;
+            Item.width = 28;
+            Item.height = 28;
             Item.value = Item.buyPrice(0, 50, 0, 0);
             Item.rare = ItemRarityID.Red;
             Item.expert = true;

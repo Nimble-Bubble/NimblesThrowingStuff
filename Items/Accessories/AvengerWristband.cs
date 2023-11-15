@@ -23,8 +23,8 @@ namespace NimblesThrowingStuff.Items.Accessories
         public override void SetDefaults()
         {
             Item.accessory = true;
-            Item.width = 30;
-            Item.height = 30;
+            Item.width = 28;
+            Item.height = 20;
             Item.value = Item.buyPrice(0, 25, 0, 0);
             Item.rare = ItemRarityID.LightPurple;
             Item.expert = false;
@@ -51,9 +51,14 @@ namespace NimblesThrowingStuff.Items.Accessories
 		{
 			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ModContent.ItemType<SacredWristband>()); 
-            recipe.AddIngredient(935, 1);
-			recipe.AddTile(114);
+            recipe.AddIngredient(ItemID.AvengerEmblem, 1);
+			recipe.AddTile(TileID.TinkerersWorkbench);
 			recipe.Register();
-		}
+            recipe = CreateRecipe();
+            recipe.AddIngredient(ModContent.ItemType<SacredWristband>());
+            recipe.AddIngredient(ItemID.AvengerEmblem, 1);
+            recipe.AddTile(TileID.MythrilAnvil);
+            recipe.Register();
+        }
     }
 }

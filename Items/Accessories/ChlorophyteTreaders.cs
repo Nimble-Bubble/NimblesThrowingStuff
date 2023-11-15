@@ -25,8 +25,8 @@ namespace NimblesThrowingStuff.Items.Accessories
         public override void SetDefaults()
         {
             Item.accessory = true;
-            Item.width = 22;
-            Item.height = 22;
+            Item.width = 32;
+            Item.height = 32;
             Item.value = Item.value = Item.buyPrice(0, 50, 0, 0);
             Item.rare = ItemRarityID.Yellow;
         }
@@ -54,6 +54,12 @@ namespace NimblesThrowingStuff.Items.Accessories
             recipe.AddIngredient(ItemID.BundleofBalloons);
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.Register();
-		}
+            recipe = CreateRecipe();
+            recipe.AddIngredient(ItemID.TerrasparkBoots);
+            recipe.AddIngredient(ItemID.ChlorophyteBar, 12);
+            recipe.AddIngredient(ItemID.BundleofBalloons);
+            recipe.AddTile(TileID.TinkerersWorkbench);
+            recipe.Register();
+        }
     }
 }

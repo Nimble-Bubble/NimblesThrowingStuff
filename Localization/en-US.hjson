@@ -153,15 +153,14 @@ Mods: {
 					'''
 			}
 
-			
 			BreathingPack: {
 				DisplayName: Breathing Enviro Protection Pack
-				Tooltip: 
-				'''
-				A basic environmental protection pack, common in extraterrestrial exploration
-				Produces fresh air, allowing one to breathe in airless environments
-				These environments include liquids, granular materials, and outer space
-				'''
+				Tooltip:
+					'''
+					A basic environmental protection pack, common in extraterrestrial exploration
+					Produces fresh air, allowing one to breathe in airless environments
+					These environments include liquids, granular materials, and outer space
+					'''
 			}
 
 			ChlorophyteTreaders: {
@@ -1897,13 +1896,22 @@ Mods: {
 					This creeper will float around you and towards targets
 					'''
 			}
-
 		}
 
 		NPCs: {
 			Kelbi.DisplayName: Kelbi
 			SmallRath.DisplayName: Small Rathwyvern
-			MorilusMain.DisplayName: Morilus, the Great Guardian of the Sky-Sea
+
+			MorilusMain: {
+				DisplayName: Morilus, the Great Guardian of the Sky-Sea
+
+				BossChecklistIntegration: {
+					DespawnMessage: Morilus no longer detects a threat
+					SpawnInfo: Create a Deceptive Artifact and use it in space
+					EntryName: "{$Mods.NimblesThrowingStuff.NPCName.MorilusMain}"
+				}
+			}
+
 			SkySeaGuardian.DisplayName: Lesser Guardian of the Sky-Sea
 			SkySeaSoldier.DisplayName: Sky-Sea Soldier
 

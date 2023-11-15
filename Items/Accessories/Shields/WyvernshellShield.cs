@@ -25,8 +25,8 @@ namespace NimblesThrowingStuff.Items.Accessories.Shields
         public override void SetDefaults()
         {
             Item.accessory = true;
-            Item.width = 26;
-            Item.height = 26;
+            Item.width = 46;
+            Item.height = 44;
             Item.value = Item.value = Item.buyPrice(0, 5, 40, 0);
             Item.rare = ItemRarityID.Orange;
             Item.defense = 4;

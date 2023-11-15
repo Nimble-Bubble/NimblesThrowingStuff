@@ -23,11 +23,11 @@ namespace NimblesThrowingStuff.Items.Accessories.Shields
         public override void SetDefaults()
         {
             Item.accessory = true;
-            Item.width = 26;
-            Item.height = 26;
+            Item.width = 46;
+            Item.height = 40;
             Item.value = Item.value = Item.buyPrice(0, 50, 0, 0);
             Item.rare = ItemRarityID.Lime;
-            Item.defense = 5;
+            Item.defense = 6;
         }
         public override bool CanEquipAccessory(Player player, int slot, bool modded)
         {

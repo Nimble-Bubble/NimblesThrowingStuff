@@ -288,7 +288,7 @@ namespace NimblesThrowingStuff
                         Player.statDefense += 50 + (guardBonus * 2);
                         if (Main.rand.NextBool(6))
                         {
-                            Dust.NewDust(Player.position, Player.width, Player.height, ModContent.DustType<ProcellariteStarDust>(), Player.velocity.X + Main.rand.Next(-3, 4), Player.velocity.Y + Main.rand.Next(-3, 4), ModContent.DustType<ProcellariteStarDust>(), new Color(255, 255, 255));
+                            Dust.NewDust(Player.position, Player.width, Player.height, ModContent.DustType<ProcellariteStarDust>(), Player.velocity.X + Main.rand.Next(-3, 4), Player.velocity.Y + Main.rand.Next(-3, 4), ModContent.DustType<ProcellariteStarDust>(), default(Color));
                         }
                         break;
                     case 4:
@@ -332,25 +332,25 @@ namespace NimblesThrowingStuff
                         Player.statDefense += 4 + (guardBonus);
                         if (Main.rand.NextBool(3))
                         {
-                            Dust.NewDust(Player.position, Player.width, Player.height, DustID.Cobalt, Player.velocity.X + Main.rand.Next(-3, 4), Player.velocity.Y + Main.rand.Next(-3, 4), 0, new Color(255, 255, 255));
+                            Dust.NewDust(Player.position, Player.width, Player.height, DustID.Cobalt, Player.velocity.X + Main.rand.Next(-3, 4), Player.velocity.Y + Main.rand.Next(-3, 4), 0, default(Color));
                         }
                         break;
                     case 10:
                         Player.statDefense += 8 + (guardBonus * 2);
                         if (Main.rand.NextBool(3))
                         {
-                            Dust.NewDust(Player.position, Player.width, Player.height, DustID.Obsidian, Player.velocity.X + Main.rand.Next(-3, 4), Player.velocity.Y + Main.rand.Next(-3, 4), 0, new Color(255, 255, 255));
+                            Dust.NewDust(Player.position, Player.width, Player.height, DustID.Obsidian, Player.velocity.X + Main.rand.Next(-3, 4), Player.velocity.Y + Main.rand.Next(-3, 4), 0, default(Color));
                         }
                         if (Main.rand.NextBool(10))
                         {
-                            Dust.NewDust(Player.position, Player.width, Player.height, DustID.Smoke, Player.velocity.X + Main.rand.Next(-3, 4), Player.velocity.Y + Main.rand.Next(-3, 4), 0, new Color(255, 255, 255));
+                            Dust.NewDust(Player.position, Player.width, Player.height, DustID.Smoke, Player.velocity.X + Main.rand.Next(-3, 4), Player.velocity.Y + Main.rand.Next(-3, 4), 0, default(Color));
                         }
                         break;
                     case 11:
                         Player.statDefense += 16 + (guardBonus * 4);
                         if (Main.rand.NextBool(3))
                         {
-                            Dust.NewDust(Player.position, Player.width, Player.height, DustID.RainbowTorch, Player.velocity.X + Main.rand.Next(-3, 4), Player.velocity.Y + Main.rand.Next(-3, 4), 0, new Color(255, 255, 255));
+                            Dust.NewDust(Player.position, Player.width, Player.height, DustID.RainbowTorch, Player.velocity.X + Main.rand.Next(-3, 4), Player.velocity.Y + Main.rand.Next(-3, 4), 0, default(Color));
                         }
                         break;
                     case 12:
@@ -358,7 +358,7 @@ namespace NimblesThrowingStuff
                         Player.endurance += 0.15f;
                         if (Main.rand.NextBool(3))
                         {
-                            Dust.NewDust(Player.position, Player.width, Player.height, DustID.Enchanted_Gold, Player.velocity.X + Main.rand.Next(-3, 4), Player.velocity.Y + Main.rand.Next(-3, 4), 0, new Color(255, 255, 255));
+                            Dust.NewDust(Player.position, Player.width, Player.height, DustID.Gold, Player.velocity.X + Main.rand.Next(-3, 4), Player.velocity.Y + Main.rand.Next(-3, 4), 0, default(Color));
                         }
                         break;
                     case 13:
@@ -366,7 +366,7 @@ namespace NimblesThrowingStuff
                         Player.endurance += 0.2f;
                         if (Main.rand.NextBool(3))
                         {
-                            Dust.NewDust(Player.position, Player.width, Player.height, DustID.Blood, Player.velocity.X + Main.rand.Next(-3, 4), Player.velocity.Y + Main.rand.Next(-3, 4), 0, new Color(255, 255, 255));
+                            Dust.NewDust(Player.position, Player.width, Player.height, DustID.Blood, Player.velocity.X + Main.rand.Next(-3, 4), Player.velocity.Y + Main.rand.Next(-3, 4), 0, default(Color));
                         }
                         break;
                     case 14:
@@ -374,7 +374,7 @@ namespace NimblesThrowingStuff
                         Player.endurance += 0.25f;
                         if (Main.rand.NextBool(3))
                         {
-                            Dust.NewDust(Player.position, Player.width, Player.height, DustID.Ice, Player.velocity.X + Main.rand.Next(-3, 4), Player.velocity.Y + Main.rand.Next(-3, 4), 0, new Color(255, 255, 255));
+                            Dust.NewDust(Player.position, Player.width, Player.height, DustID.Ice, Player.velocity.X + Main.rand.Next(-3, 4), Player.velocity.Y + Main.rand.Next(-3, 4), 0, default(Color));
                         }
                         break;
                     case 15:
