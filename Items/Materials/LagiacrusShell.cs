@@ -16,8 +16,8 @@ namespace NimblesThrowingStuff.Items.Materials
         }
 		public override void SetDefaults()
         {
-			Item.width = 18;
-			Item.height = 18;
+			Item.width = 32;
+			Item.height = 32;
 			Item.maxStack = 9999;
 			Item.value = Item.buyPrice(0, 0, 43, 50);
 			Item.rare = ItemRarityID.Green;

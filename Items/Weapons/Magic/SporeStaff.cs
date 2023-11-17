@@ -18,8 +18,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Magic
 		{
 			Item.damage = 16;
 			Item.DamageType = DamageClass.Magic;
-			Item.width = 24;
-			Item.height = 24;
+			Item.width = 40;
+			Item.height = 40;
 			Item.useTime = 28;
 			Item.useAnimation = 28;
 			Item.useStyle = 5;
@@ -37,8 +37,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Magic
 		public override void AddRecipes() 
 		{
 			Recipe recipe = CreateRecipe();
-			recipe.AddIngredient(331, 12);
-            recipe.AddIngredient(209, 12);
+			recipe.AddIngredient(ItemID.JungleSpores, 12);
+            recipe.AddIngredient(ItemID.Stinger, 8);
 			recipe.AddTile(TileID.Anvils);
 			recipe.Register();
 		}

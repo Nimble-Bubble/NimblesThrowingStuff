@@ -14,8 +14,8 @@ namespace NimblesThrowingStuff.Items.Placeables.Blocks
 		}
 		public override void SetDefaults() 
 		{
-			Item.width = 28;
-			Item.height = 28;
+			Item.width = 22;
+			Item.height = 22;
 			Item.useTime = 6;
 			Item.useAnimation = 12;
 			Item.useStyle = 1;
@@ -26,7 +26,7 @@ namespace NimblesThrowingStuff.Items.Placeables.Blocks
             Item.useTurn = true;
             Item.createTile = ModContent.TileType<ProcellariteOreTile>();
             Item.consumable = true;
-            Item.maxStack = 999;
+            Item.maxStack = 9999;
 		}
 	}
 }

@@ -17,8 +17,8 @@ namespace NimblesThrowingStuff.Items.Tools
 		{
 			Item.damage = 14;
 			Item.DamageType = DamageClass.Melee;
-			Item.width = 48;
-			Item.height = 48;
+			Item.width = 50;
+			Item.height = 18;
 			Item.useTime = 12;
 			Item.useAnimation = 12;
 			Item.useStyle = ItemUseStyleID.Shoot;

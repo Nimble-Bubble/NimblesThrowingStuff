@@ -17,8 +17,8 @@ namespace NimblesThrowingStuff.Items.Placeables.Banners
 		{
 			Item.width = 10;
 			Item.height = 24;
-			Item.useTime = 20;
-			Item.useAnimation = 20;
+			Item.useTime = 15;
+			Item.useAnimation = 15;
 			Item.useStyle = 1;
 			Item.value = Item.buyPrice(0, 0, 10, 0);
 			Item.rare = ItemRarityID.Blue;
@@ -27,6 +27,7 @@ namespace NimblesThrowingStuff.Items.Placeables.Banners
             Item.useTurn = true;
             Item.createTile = ModContent.TileType<SkySeaSoldierBanner>();
             Item.consumable = true;
+			Item.noUseGraphic = true;
             Item.maxStack = 9999;
 		}
 	}

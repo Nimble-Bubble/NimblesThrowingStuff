@@ -16,8 +16,8 @@ namespace NimblesThrowingStuff.Items.Placeables.Blocks
         }
         public override void SetDefaults() 
 		{
-			Item.width = 28;
-			Item.height = 28;
+			Item.width = 16;
+			Item.height = 16;
 			Item.useTime = 6;
 			Item.useAnimation = 12;
 			Item.useStyle = 1;

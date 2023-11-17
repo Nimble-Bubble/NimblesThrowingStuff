@@ -19,8 +19,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Magic
 		{
 			Item.damage = 113;
 			Item.DamageType = DamageClass.Magic;
-			Item.width = 24;
-			Item.height = 24;
+			Item.width = 28;
+			Item.height = 30;
 			Item.useTime = 16;
 			Item.useAnimation = 16;
 			Item.useStyle = 5;
@@ -39,7 +39,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Magic
 			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ModContent.ItemType<SoulOfTrite>(), 12);
 			recipe.AddIngredient(ItemID.SpellTome);
-			recipe.AddTile(101);
+			recipe.AddTile(TileID.Bookcases);
 			recipe.Register();
 		}
 	}

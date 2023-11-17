@@ -15,7 +15,7 @@ namespace NimblesThrowingStuff.Items.Placeables.Furniture
         }
         public override void SetDefaults() 
 		{
-			Item.width = 28;
+			Item.width = 24;
 			Item.height = 28;
 			Item.useTime = 6;
 			Item.useAnimation = 12;

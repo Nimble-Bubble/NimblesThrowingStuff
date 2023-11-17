@@ -14,10 +14,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Magic
         public override void SetStaticDefaults() 
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			// DisplayName.SetDefault("Barrier Builder"); 
-			/* Tooltip.SetDefault("Creates two barriers at the position of the cursor that will move opposite of each other"
-				+"\nLeft click will create tall walls that move horizontally"
-				+"\nRight click will create wide walls that move vertically"); */
             Item.staff[Item.type] = true;
             ItemID.Sets.GamepadWholeScreenUseRange[Item.type] = true; 
 			ItemID.Sets.LockOnIgnoresCollision[Item.type] = true;
@@ -26,15 +22,15 @@ namespace NimblesThrowingStuff.Items.Weapons.Magic
 			Item.damage = 125;
 			Item.knockBack = 8f;
 			Item.mana = 12;
-			Item.width = 32;
-			Item.height = 32;
+			Item.width = 50;
+			Item.height = 50;
 			Item.useTime = 30;
 			Item.useAnimation = 30;
 			Item.useStyle = 1;
 			Item.value = Item.buyPrice(0, 75, 0, 0);
 			Item.rare = ItemRarityID.Red;
 			Item.UseSound = SoundID.Item8;
-			Item.noMelee = true;
+			Item.noMelee = false;
 			Item.DamageType = DamageClass.Magic;
 			Item.shoot = ModContent.ProjectileType<MagicHorizontalWall>();
 			Item.autoReuse = true;

@@ -20,35 +20,26 @@ namespace NimblesThrowingStuff.Items.Consumables
 		public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 3;
-			// DisplayName.SetDefault("A More Convincing Artifact");
             ItemID.Sets.SortingPriorityBossSpawns[Item.type] = 13;
-			/* Tooltip.SetDefault("A precious-looking work of art!"
-				+"\nSummons Morilus, even if he is present already"
-				+"\nUse it in space for the best results"); */
 		}
 
 		public override void SetDefaults()
 		{
-			Item.width = 14;
-			Item.height = 14;
+			Item.width = 48;
+			Item.height = 48;
 			Item.maxStack = 9999;
 			Item.value = Item.buyPrice(0, 25, 0, 0);
 			Item.rare = ItemRarityID.Red;
-			Item.useStyle = 1;
+			Item.useStyle = ItemUseStyleID.HoldUp;
 			Item.useTime = 60;
 			Item.useAnimation = 60;
 			Item.useTurn = true;
 			Item.autoReuse = false;
 			Item.consumable = true;
-			Item.useStyle = 4;
 		}
 		public override bool? UseItem(Player player)
 		{
 			NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<MorilusMain>());
-            //NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<SkySeaGuardian>());
-            //NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<SkySeaGuardian>());
-            //NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<SkySeaGuardian>());
-            //NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<SkySeaGuardian>());
 			SoundEngine.PlaySound(SoundID.Roar);
 
 			return true;
@@ -59,7 +50,7 @@ namespace NimblesThrowingStuff.Items.Consumables
 			if (FargosMutant != null)
 			{
 				Recipe recipe = CreateRecipe();
-				recipe.AddIngredient(ModContent.ItemType<DeceptiveArtifact>(), 6);
+				recipe.AddIngredient(ModContent.ItemType<DeceptiveArtifact>(), 10);
 				recipe.AddTile(TileID.WorkBenches);
 				recipe.Register();
 			}

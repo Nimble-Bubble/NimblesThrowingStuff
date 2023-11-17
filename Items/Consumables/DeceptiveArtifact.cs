@@ -29,18 +29,17 @@ namespace NimblesThrowingStuff.Items.Consumables
 
 		public override void SetDefaults()
 		{
-			Item.width = 14;
-			Item.height = 14;
+			Item.width = 48;
+			Item.height = 48;
 			Item.maxStack = 99;
 			Item.value = Item.buyPrice(0, 25, 0, 0);
 			Item.rare = ItemRarityID.Red;
-			Item.useStyle = 1;
+			Item.useStyle = ItemUseStyleID.HoldUp;
 			Item.useTime = 60;
 			Item.useAnimation = 60;
 			Item.useTurn = true;
 			Item.autoReuse = false;
 			Item.consumable = true;
-			Item.useStyle = 4;
 		}
 		public override bool CanUseItem(Player player)
 		{
@@ -49,24 +48,17 @@ namespace NimblesThrowingStuff.Items.Consumables
 		public override bool? UseItem(Player player)
 		{
 			NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<MorilusMain>());
-            /* NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<SkySeaGuardian>());
-            NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<SkySeaGuardian>());
-            NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<SkySeaGuardian>());
-            NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<SkySeaGuardian>()); */
 			SoundEngine.PlaySound(SoundID.Roar);
 
 			return true;
 		}
 		public override void AddRecipes()
 		{
-			//Morilus is rather subpar at the moment, so this crafting recipe has been made somewhat obtuse.
 			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.LunarBar, 10);
 			recipe.AddIngredient(ModContent.ItemType<SoulOfTrite>(), 6);
 			recipe.AddIngredient(ItemID.SoulofFlight, 6);
             recipe.AddIngredient(ItemID.SunplateBlock, 250);
-			recipe.AddIngredient(ItemID.PenguinBanner);
-			recipe.AddIngredient(ItemID.AngelStatue, 99);
 			recipe.AddTile(TileID.LunarCraftingStation);
 			recipe.Register();
 		}

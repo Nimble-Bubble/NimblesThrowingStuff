@@ -17,7 +17,7 @@ namespace NimblesThrowingStuff.Items.Tools
 		public override void SetDefaults() 
 		{
 			Item.width = 48;
-			Item.height = 48;
+			Item.height = 26;
 			Item.value = Item.buyPrice(0, 7, 50, 0);
 			Item.rare = ItemRarityID.Blue;
             Item.bait = 15;

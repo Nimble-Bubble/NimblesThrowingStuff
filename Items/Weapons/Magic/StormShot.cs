@@ -18,8 +18,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Magic
 		{
 			Item.damage = 170;
 			Item.DamageType = DamageClass.Magic;
-			Item.width = 24;
-			Item.height = 24;
+			Item.width = 42;
+			Item.height = 30;
 			Item.useTime = 11;
 			Item.useAnimation = 11;
 			Item.useStyle = 5;

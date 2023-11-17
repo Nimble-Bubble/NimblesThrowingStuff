@@ -19,8 +19,8 @@ namespace NimblesThrowingStuff.Items.Vanity
         }
         public override void SetDefaults()
         {
-            Item.width = 30;
-            Item.height = 32;
+            Item.width = 32;
+            Item.height = 28;
             Item.value = 37500;
             Item.rare = ItemRarityID.Blue;
             Item.vanity = true;

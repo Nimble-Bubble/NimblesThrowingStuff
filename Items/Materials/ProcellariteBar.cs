@@ -15,8 +15,8 @@ namespace NimblesThrowingStuff.Items.Materials
 		}
 		public override void SetDefaults() 
 		{
-			Item.width = 28;
-			Item.height = 28;
+			Item.width = 30;
+			Item.height = 24;
 			Item.useTime = 6;
 			Item.useAnimation = 12;
 			Item.useStyle = 1;

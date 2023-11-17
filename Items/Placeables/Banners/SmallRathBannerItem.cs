@@ -15,10 +15,10 @@ namespace NimblesThrowingStuff.Items.Placeables.Banners
 		}
 		public override void SetDefaults() 
 		{
-			Item.width = 28;
-			Item.height = 28;
-			Item.useTime = 20;
-			Item.useAnimation = 20;
+			Item.width = 10;
+			Item.height = 24;
+			Item.useTime = 15;
+			Item.useAnimation = 15;
 			Item.useStyle = 1;
 			Item.value = Item.buyPrice(0, 0, 10, 0);
 			Item.rare = ItemRarityID.Blue;
@@ -28,6 +28,7 @@ namespace NimblesThrowingStuff.Items.Placeables.Banners
             Item.createTile = ModContent.TileType<SmallRathBanner>();
             Item.consumable = true;
             Item.maxStack = 9999;
+			Item.noUseGraphic = true;
 		}
 	}
 }
