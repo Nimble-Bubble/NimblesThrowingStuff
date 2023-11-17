@@ -23,8 +23,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Summoning
 		public override void SetDefaults() {
 			Item.damage = 225;
 			Item.knockBack = 6f;
-			Item.width = 32;
-			Item.height = 32;
+			Item.width = 62;
+			Item.height = 56;
 			Item.useTime = 24;
 			Item.useAnimation = 24;
 			Item.useStyle = 1;

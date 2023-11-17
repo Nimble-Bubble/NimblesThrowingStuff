@@ -25,8 +25,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Summoning
 			Item.damage = 25;
 			Item.knockBack = 4f;
 			Item.mana = 11;
-			Item.width = 32;
-			Item.height = 32;
+			Item.width = 42;
+			Item.height = 42;
 			Item.useTime = 30;
 			Item.useAnimation = 30;
 			Item.useStyle = 5;

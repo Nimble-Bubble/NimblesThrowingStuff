@@ -21,8 +21,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			Item.useAnimation = 22;
 			Item.useTime = 22;
 			Item.knockBack = 4f;
-			Item.width = 36;
-			Item.height = 36;
+			Item.width = 48;
+			Item.height = 48;
 			Item.shoot = ModContent.ProjectileType<TheToothpickProj>();
             Item.shootSpeed = 4.5f;
 			Item.rare = ItemRarityID.Blue;

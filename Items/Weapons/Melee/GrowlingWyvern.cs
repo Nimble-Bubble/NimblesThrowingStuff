@@ -26,8 +26,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			Item.useAnimation = 32;
 			Item.useTime = 32;
 			Item.knockBack = 6.5f;
-			Item.width = 20;
-			Item.height = 20;
+			Item.width = 64;
+			Item.height = 64;
 			Item.noUseGraphic = true;
 			Item.noMelee = true;
 			Item.rare = ItemRarityID.Orange;

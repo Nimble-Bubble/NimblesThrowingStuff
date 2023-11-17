@@ -23,8 +23,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Summoning
 			Item.damage = 20;
 			Item.knockBack = 4f;
 			Item.mana = 8;
-			Item.width = 32;
-			Item.height = 32;
+			Item.width = 64;
+			Item.height = 64;
 			Item.useTime = 30;
 			Item.useAnimation = 30;
 			Item.useStyle = 5;
@@ -44,11 +44,11 @@ namespace NimblesThrowingStuff.Items.Weapons.Summoning
 		}
 		public override void AddRecipes()
 		{
-			Recipe recipe = CreateRecipe();
+			/* Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.CrimtaneBar, 12);
 			recipe.AddIngredient(ItemID.TissueSample, 18);
 			recipe.AddTile(TileID.Anvils);
-			recipe.Register();
+			recipe.Register(); */
 		}
 	}
 }

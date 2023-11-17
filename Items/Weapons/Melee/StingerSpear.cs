@@ -22,8 +22,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			Item.useAnimation = 38;
 			Item.useTime = 38;
 			Item.knockBack = 5.5f;
-			Item.width = 36;
-			Item.height = 36;
+			Item.width = 64;
+			Item.height = 64;
 			Item.shoot = ModContent.ProjectileType<StingerSpearProj>();
             Item.shootSpeed = 3.25f;
 			Item.rare = ItemRarityID.Green;

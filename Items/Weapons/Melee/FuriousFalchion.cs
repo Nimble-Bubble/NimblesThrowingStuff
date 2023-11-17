@@ -30,6 +30,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
             Item.shoot = ModContent.ProjectileType<FuriousBeam>();
             Item.shootSpeed = 6f;
 			Item.UseSound = SoundID.Item1;
+			Item.autoReuse = true;
 		}
         public override void MeleeEffects(Player player, Rectangle hitbox) 
         {

@@ -17,8 +17,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 		{
 			Item.damage = 42;
 			Item.DamageType = DamageClass.Throwing;
-			Item.width = 24;
-			Item.height = 24;
+			Item.width = 38;
+			Item.height = 38;
 			Item.useTime = 16;
 			Item.useAnimation = 16;
 			Item.useStyle = 1;

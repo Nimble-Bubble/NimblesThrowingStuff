@@ -21,8 +21,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 		public override void SetDefaults()
 		{
 			Item.damage = 33;
-			Item.width = 40;
-			Item.height = 40;
+			Item.width = 24;
+			Item.height = 76;
 			Item.useTime = 28;
 			Item.useAnimation = 28;
 			Item.useStyle = ItemUseStyleID.Shoot;

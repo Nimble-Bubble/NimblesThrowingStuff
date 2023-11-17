@@ -17,8 +17,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
         public override void SetDefaults() {
 			Item.damage = 11;
 			Item.DamageType = DamageClass.Ranged;
-			Item.width = 8;
-			Item.height = 8;
+			Item.width = 14;
+			Item.height = 28;
 			Item.maxStack = 9999;
 			Item.consumable = true;             //You need to set the item consumable so that the ammo would automatically consumed
 			Item.knockBack = 3f;

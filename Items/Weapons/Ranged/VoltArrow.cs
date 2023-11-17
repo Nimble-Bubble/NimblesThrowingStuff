@@ -17,8 +17,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 		public override void SetDefaults() {
 			Item.damage = 12;
 			Item.DamageType = DamageClass.Ranged;
-			Item.width = 8;
-			Item.height = 8;
+			Item.width = 14;
+			Item.height = 38;
 			Item.maxStack = 9999;
 			Item.consumable = true;             
 			Item.knockBack = 2f;
