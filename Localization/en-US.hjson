@@ -1900,7 +1900,7 @@ Mods: {
 
 		NPCs: {
 			Kelbi.DisplayName: Kelbi
-			SmallRath.DisplayName: Small Rathwyvern
+			SmallRathwyvern.DisplayName: Small Rathwyvern
 
 			MorilusMain: {
 				DisplayName: Morilus, the Great Guardian of the Sky-Sea
@@ -2167,7 +2167,7 @@ Mods: {
 
 		Tiles: {
 			KelbiBanner.MapEntry: Kelbi Banner
-			SmallRathBanner.MapEntry: Kelbi Banner
+			SmallRathBanner.MapEntry: Small Rathwyvern Banner
 			HadalShellstoneTile.MapEntry: Deep Shellstone
 			ProcellariteBarTile.MapEntry: Procellarite Bar
 			ProcellariteBlockTile.MapEntry: Procellarite Block

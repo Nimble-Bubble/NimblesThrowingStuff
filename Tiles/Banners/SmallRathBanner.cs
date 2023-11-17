@@ -38,7 +38,7 @@ namespace NimblesThrowingStuff.Tiles.Banners
             if (closer)          
             {
                 Player player = Main.LocalPlayer;
-                Main.SceneMetrics.NPCBannerBuff[Mod.Find<ModNPC>("SmallRath").Type] = true;	
+                Main.SceneMetrics.NPCBannerBuff[Mod.Find<ModNPC>("SmallRathwyvern").Type] = true;	
                 Main.SceneMetrics.hasBanner = true;
             }
         }

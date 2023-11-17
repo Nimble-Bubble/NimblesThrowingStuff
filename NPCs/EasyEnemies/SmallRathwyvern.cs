@@ -18,7 +18,7 @@ using Terraria.GameContent.ItemDropRules;
 
 namespace NimblesThrowingStuff.NPCs.EasyEnemies
 {
-    public class SmallRath : ModNPC
+    public class SmallRathwyvern : ModNPC
     {
         private Player player;
         private float speed;
