@@ -24,7 +24,7 @@ namespace NimblesThrowingStuff.Items.Armor
         public override void SetDefaults()
         {
             Item.width = 30;
-            Item.height = 32;
+            Item.height = 22;
             Item.value = 1000000;
             Item.rare = ItemRarityID.Yellow;
             Item.defense = 20; // The Defence value for this piece of armour.
