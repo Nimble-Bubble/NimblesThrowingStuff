@@ -177,6 +177,15 @@ namespace NimblesThrowingStuff.NPCs.Morilus
             }
             if (NPC.ai[1] >= 140 && NPC.ai[1] <= 220)
             {
+                    //planned: give Morilus more than one minion
+                    //One idea for a minion: Something like the barrier attack, but with an NPC
+                    //The NPCs spawned would, slow down from an initial fast velocity and, after a few seconds, spawn some more destructible NPCS out in a perpendicular direction
+                    //Another idea: Grid fire minion, spawn in one direction
+                    //Fire cardinal, then fire diagonal
+                    //Maybe fire a laser every few cycles
+                    //Third idea: Rocket-like NPC, approaches the player in short bursts of speed
+                    //Morilus would cycle through spawning these NPCs through a roll of variable
+                    //One or two minions might be locked behind an HP gate
                 if (NPC.ai[1] % 30 == 0 && !hasDropped || NPC.ai[1] % 30 == 0 && NPC.life <= NPC.lifeMax / 2)
                 {
                 NPC.NewNPC(NPC.GetSource_FromThis(), (int)NPC.Center.X + 20, (int)NPC.Center.Y, ModContent.NPCType<SkySeaSoldier>());

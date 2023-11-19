@@ -850,7 +850,11 @@ Mods: {
 
 			GlidingBlaze: {
 				DisplayName: Gliding Blaze
-				Tooltip: ""
+				Tooltip:
+					'''
+					Fires a small fireball
+					The fireball starts slow, but speeds up over time
+					'''
 			}
 
 			GuardianBarrier: {
@@ -2024,7 +2028,7 @@ Mods: {
 			SkyseaSpinnerProj.DisplayName: Sky-Sea Spinner
 			SpectrePiercerProj.DisplayName: Spectre Piercer
 			SpikedJavelinProj.DisplayName: Spiked Javelin
-			SpikedJavelinThrown.DisplayName: (thrown) Spiked Javelin
+			SpikedJavelinThrown.DisplayName: Spiked Javelin
 			StingerSpearProj.DisplayName: Stinger Spear
 			SuperfastProj.DisplayName: Superfast
 			TemblorIllborosProj.DisplayName: Temblor Illboros
@@ -2178,6 +2182,6 @@ Mods: {
 			SkySeaSoldierBanner.MapEntry: Sky-Sea Soldier Banner
 		}
 
-		Conditions.DownedMorilus: Mods.NimblesThrowingStuff.Conditions.DownedMorilus
+		Conditions.DownedMorilus: Morilus Defeated
 	}
 }
