@@ -19,8 +19,8 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
         }
         public override void SetDefaults()
         {
-            Projectile.width = 36;
-            Projectile.height = 36;
+            Projectile.width = 38;
+            Projectile.height = 38;
             Projectile.usesLocalNPCImmunity = true;
             Projectile.localNPCHitCooldown = 10;
             Projectile.tileCollide = true;
