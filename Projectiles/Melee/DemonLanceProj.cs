@@ -38,6 +38,10 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             Projectile.ownerHitCheck = true;
             zamboni = 1;
         }
+        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
+        {
+            Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.position, Projectile.velocity, ProjectileID.LightsBane, Projectile.damage / 2, Projectile.knockBack / 2);
+        }
         public override void AI()
         {
             Player projOwner = Main.player[Projectile.owner];
@@ -65,7 +69,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             }
 
             ++zamboni;
-            Projectile.position += Projectile.velocity * ((movementFactor * 6) / zamboni);
+            Projectile.position += Projectile.velocity * ((movementFactor * 8) / zamboni);
 
             if (projOwner.itemAnimation == 0)
             {
