@@ -31,7 +31,11 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
         }
         public override void OnHitNPC (NPC target, NPC.HitInfo hit, int damageDone)
         {
-			if (hit.Crit == true)
+            if (Main.rand.NextBool(6) || hit.Crit)
+            {
+                target.AddBuff(BuffID.Bleeding, 300);
+            }
+			if (hit.Crit)
             {
             Main.player[Projectile.owner].AddBuff(1, 600);
             }

@@ -1602,12 +1602,16 @@ Mods: {
 
 			DoradoKnives: {
 				DisplayName: Dragon's Fangs
-				Tooltip: Cleave and claw through the toughest hide.
+				Tooltip:
+					'''
+					Cleave and claw through the toughest hide
+					Steals a bit of life
+					'''
 			}
 
 			DraconicHarvest: {
 				DisplayName: Draconic Harvest
-				Tooltip: Spawns draconic portals that release shrapnel.
+				Tooltip: Spawns draconic portals that release shrapnel
 			}
 
 			DreadfulFangs: {
@@ -1651,7 +1655,7 @@ Mods: {
 			}
 
 			GolemGlove: {
-				DisplayName: Golem's Glove
+				DisplayName: Golem Gauntlet
 				Tooltip: Throws three balls of fire
 			}
 
@@ -1732,7 +1736,11 @@ Mods: {
 
 			OrichalcumHatchet: {
 				DisplayName: Orichalcum Hatchet
-				Tooltip: ""
+				Tooltip:
+					'''
+					Obsidian makes for a very fine blade
+					May inflict bleeding on targets
+					'''
 			}
 
 			PalladiumShortspear: {
@@ -1910,7 +1918,7 @@ Mods: {
 				DisplayName: Morilus, the Great Guardian of the Sky-Sea
 
 				BossChecklistIntegration: {
-					DespawnMessage: Morilus no longer detects a threat
+					DespawnMessage: Morilus no longer detects a threat...
 					SpawnInfo: Create a Deceptive Artifact and use it in space
 					EntryName: "{$Mods.NimblesThrowingStuff.NPCName.MorilusMain}"
 				}
@@ -1980,7 +1988,7 @@ Mods: {
 			AquarianLeisterProj.DisplayName: Aquarian Leister
 			AscalonProj.DisplayName: Ascalon
 			AtlantisGunlanceProj.DisplayName: Atlantis Gunlance
-			AtlantisGunlanceShell.DisplayName: Atlantis Gunlance Shell
+			AtlantisGunlanceShell.DisplayName: Atlantis Gunlance
 			BloodySyringeBlood.DisplayName: Stream of Blood
 			BloodySyringeProj.DisplayName: Bloody Syringe
 			BlueTailFlames.DisplayName: Blue Tail Flames
@@ -2012,10 +2020,10 @@ Mods: {
 			MeteoriteDrillProj.DisplayName: Meteorite Drill
 			PaladinLanceProj.DisplayName: Paladin Lance
 			PanthalassicGunlanceProj.DisplayName: Panthalassic Gunlance
-			PanthalassicGunlanceShell.DisplayName: Panthalassic Gunlance Shell
+			PanthalassicGunlanceShell.DisplayName: Panthalassic Gunlance
 			PhantasRayTwo.DisplayName: Phantas Ray Two
-			ProcellariteBroadswordProj.DisplayName: Procellarite Broadsword Beam
-			ProcellariteSmallSwordBeam.DisplayName: Miniature Procellarite Broadsword Beam
+			ProcellariteBroadswordProj.DisplayName: Procellarite Beamsword
+			ProcellariteSmallSwordBeam.DisplayName: Miniature Procellarite Beamsword
 			ProcellariteSpikeProj.DisplayName: Procellarite Spike
 			ProcellariteTridentProj.DisplayName: Procellarite Trident
 			RedTailProj.DisplayName: Red Tail
@@ -2082,7 +2090,7 @@ Mods: {
 			DraconicPortal.DisplayName: Draconic Portal
 			DragonShrapnel.DisplayName: Dragon Shrapnel
 			DreadfulFangsProj.DisplayName: Dreadful Fang
-			DropONog.DisplayName: Drop o' Nog
+			DropONog.DisplayName: Festive Eggnog
 			FestiveEggnogProj.DisplayName: Festive Eggnog
 			FestiveJavelinProj.DisplayName: Festive Javelin
 			FestiveSnowflake.DisplayName: Festive Snowflake
@@ -2091,7 +2099,7 @@ Mods: {
 			ForbiddenSmokeBombProj.DisplayName: Forbidden Smoke Bomb
 			FrostJavelinProj.DisplayName: Frost Javelin
 			GoldKnifeProj.DisplayName: Gold Knife
-			GolemFireProj.DisplayName: Golem's Fire
+			GolemFireProj.DisplayName: Golem Gauntlet
 			GreekFireballProj.DisplayName: Greek Fireball
 			HallowedWaraxeProj.DisplayName: Hallowed Waraxe
 			HellBonesAxeProj.DisplayName: Hell Bones Axe
@@ -2126,7 +2134,7 @@ Mods: {
 			ProcellariteKnifeProj.DisplayName: Procellarite Knife
 			RustyBonesAxeProj.DisplayName: Rusty Bones Axe
 			SantankSpikeProj.DisplayName: Santank Spike
-			SatelliteSpearEcho.DisplayName: Satellite Spear Echo
+			SatelliteSpearEcho.DisplayName: Satellite Spear
 			SatelliteSpearEchosplosion.DisplayName: Satellitesplosion
 			SatelliteSpearProj.DisplayName: Satellite Spear
 			ScavengedKunaiProj.DisplayName: Scavenged Kunai
@@ -2138,7 +2146,7 @@ Mods: {
 			SpikeKnifeProj.DisplayName: Spike Knife
 			SpookySpineProj.DisplayName: Spooky Spine
 			StingerDaggerProj.DisplayName: Stinger Dagger
-			TerraDaggerEcho.DisplayName: Terra Dagger Echo
+			TerraDaggerEcho.DisplayName: Terra Dagger
 			TerraDaggerProj.DisplayName: Terra Dagger
 			ThornBallProj.DisplayName: Thorn Ball
 			TinKnifeProj.DisplayName: Tin Knife
@@ -2156,7 +2164,7 @@ Mods: {
 			AcrusLanceProj.DisplayName: Acrus Lance
 			ChlorophyteGreatlanceProj.DisplayName: Chlorophyte Greatlance
 			PecoTeepeeProj.DisplayName: Peco Teepee
-			PecoTeepeeShell.DisplayName: Peco Teepee Shell
+			PecoTeepeeShell.DisplayName: Peco Teepee
 			ShroomiteSporeCloud.DisplayName: Shroomite Spore Cloud
 			SpaceSpinnerProj.DisplayName: Space Spinner
 			TerrificBloodySyringeProj.DisplayName: Terrific Bloody Syringe
