@@ -718,6 +718,11 @@ Mods: {
 				Tooltip: Weakens Kelbis in the vicinity
 			}
 
+			SkySeaSoldierBannerItem: {
+				DisplayName: Sky-Sea Soldier Banner
+				Tooltip: ""
+			}
+
 			SmallRathBannerItem: {
 				DisplayName: Small Rathwyvern Banner
 				Tooltip: Weakens small rathwyverns (but not large ones) in the vicinity
@@ -1888,11 +1893,6 @@ Mods: {
 					Designed to mimic the whirlpools that lagiacri use to hunt their prey
 					Has a chance to electrify targets
 					'''
-			}
-
-			SkySeaSoldierBannerItem: {
-				DisplayName: Sky-Sea Soldier Banner
-				Tooltip: ""
 			}
 		}
 

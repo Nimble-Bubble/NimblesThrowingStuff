@@ -112,13 +112,19 @@ namespace NimblesThrowingStuff.NPCs
 						shop.Add<GreenQurupecoFeather>(Condition.MoonPhases04, Condition.DownedEyeOfCthulhu);
 						break;
 					case 19:
-						shop.Add<HealingArrow>(Condition.DownedEowOrBoc, Condition.TimeNight);
-						break;
-					case 209:
+						shop.Add<HealingArrow>(Condition.PreHardmode, Condition.DownedEowOrBoc, Condition.TimeNight);
+                        shop.Add<HealingArrow>(Condition.Hardmode);
+                        break;
+                    //In earlier versions of Terraria, the Explosive Bunny was sold by the Pirate
+                    //In fact, in earlier builds, the Explosive Bunny was given back to the Pirate
+                    //However, I have decided to give the Explosive Bunny to the Demolitionist instead
+                    //This is mostly to make that shop seem less empty
+                    case 38:
+                        shop.Add(new Item(ItemID.ExplosiveBunny));
+                        shop.Add(new Item(ItemID.Detonator));
+                        break;
+                    case 209:
 						shop.Add<NanoMissile>();
-						break;
-					case 229:
-						shop.Add(new Item(ItemID.ExplosiveBunny));
 						break;
 					case 368:
 						shop.Add<Superfast>(Condition.DownedMoonLord, Condition.MoonPhasesOdd);

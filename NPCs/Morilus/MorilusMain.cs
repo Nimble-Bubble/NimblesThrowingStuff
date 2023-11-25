@@ -42,7 +42,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
         private bool hasDropped;
         public override void SetStaticDefaults()
         {
-            // DisplayName.SetDefault("Morilus, the Great Guardian of the Sky's Sea");
+            // DisplayName.SetDefault("Morilus, the Great Guardian of the Sky-Sea");
             Main.npcFrameCount[NPC.type] = 5;
         }
 
@@ -52,8 +52,8 @@ namespace NimblesThrowingStuff.NPCs.Morilus
             NPC.damage = 150;
             NPC.defense = 80;
             NPC.knockBackResist = 0f;
-            NPC.width = 100;
-            NPC.height = 100;
+            NPC.width = 80;
+            NPC.height = 80;
             NPC.value = 1000000f;
             NPC.npcSlots = 10f;
             NPC.boss = true;
@@ -66,15 +66,26 @@ namespace NimblesThrowingStuff.NPCs.Morilus
             NPC.DeathSound = SoundID.NPCDeath3;
             Music = MusicID.Boss4;
             NPC.buffImmune[31] = true;
-            NPC.scale = 1.3f;
+            NPC.scale = 1f;
         }
-        
+        public override bool PreAI()
+        {
+            //In Calamity, the Boss Effects (or Boss Zen) status effect is applied here
+
+
+            return true;
+        }
         public override void AI()
         {
         
             Target();
 
             DespawnHandler();
+            //Sky-Sea Guardians were meant to be a bit of a pre-boss phase
+            //Can't really think of a good example of this in Terraria, but there are similar things
+            //Something similar would be the Rune of Kos bosses between the first and second phases of the Devourer of Gods
+            //Morilus itself was meant to be a bit of a surprise after beating the Sky-Sea Guardians
+            //I guess the Wiki would've spoiled that
             if (!NPC.AnyNPCs(ModContent.NPCType<SkySeaGuardian>()))
         {
         sleepy = false;

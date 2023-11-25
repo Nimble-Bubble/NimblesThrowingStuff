@@ -58,6 +58,7 @@ namespace NimblesThrowingStuff.Items
         public override void UpdateEquip(Item item, Player player)
         {
             var modPlayer = player.GetModPlayer<NimblesPlayer>();
+            #region Vanilla shields
             if (item.type >= ItemID.ApprenticeScarf && item.type <= ItemID.MonkBelt)
             {
                 modPlayer.whichShield = 8;
@@ -93,6 +94,8 @@ namespace NimblesThrowingStuff.Items
                 modPlayer.whichShield = 14;
                 modPlayer.whichGuardSound = 6;
             }
+            #endregion
+            #region Attack speed
             if (item.type == ItemID.FrostLeggings)
             {
                 modPlayer.rangedSpeed += 0.1f;
@@ -112,6 +115,7 @@ namespace NimblesThrowingStuff.Items
                 player.GetAttackSpeed(DamageClass.Melee) -= 0.051f;
                 modPlayer.universalSpeed += 0.051f;
             }
+            #endregion
         }
         public override void ModifyItemLoot(Item item, ItemLoot itemLoot)
         {
@@ -159,6 +163,7 @@ namespace NimblesThrowingStuff.Items
         }
         public override void AddRecipes()
         {
+            #region Shorebrass
             Recipe recipe = Recipe.Create(ItemID.Muramasa);
             recipe.AddIngredient(ModContent.ItemType<ShorebrassBar>(), 12);
             recipe.AddIngredient(ItemID.GoldenKey, 2);
@@ -203,6 +208,7 @@ namespace NimblesThrowingStuff.Items
             recipe.AddIngredient(ItemID.GoldenKey, 2);
             recipe.AddTile(TileID.Anvils);
             recipe.Register();
+            #endregion
             recipe = Recipe.Create(ItemID.MusketBall, 50);
             recipe.AddRecipeGroup("IronBar");
             recipe.AddTile(TileID.Anvils);
