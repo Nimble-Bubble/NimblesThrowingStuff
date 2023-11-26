@@ -64,7 +64,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
             }
 
             ++zamboni;
-            Projectile.position += Projectile.velocity * ((movementFactor * 6) / zamboni);
+            Projectile.position += Projectile.velocity * ((movementFactor * 10) / zamboni);
 
             if (projOwner.itemAnimation == 0)
             {

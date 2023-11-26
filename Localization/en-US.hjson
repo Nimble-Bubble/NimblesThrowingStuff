@@ -1310,7 +1310,11 @@ Mods: {
 
 			TemblorIllboros: {
 				DisplayName: Temblor Illboros
-				Tooltip: A simple but powerful lance with no strings attached.
+				Tooltip:
+					'''
+					A lance so heavy that it creates tremors
+					Right click to use as a sword
+					'''
 			}
 
 			TerrificBloodySyringe: {
