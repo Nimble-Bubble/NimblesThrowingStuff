@@ -2162,6 +2162,7 @@ Mods: {
 			StardustWhipProj.DisplayName: Stardust Whip
 			EtherianChakramProj.DisplayName: Etherian Chakram
 			HorrificDemonLanceProj.DisplayName: Horrific Demon Lance
+			MeteorRocketLaunched.DisplayName: Meteor Rocket Launched
 		}
 
 		Keybinds.Guard.DisplayName: Guard
