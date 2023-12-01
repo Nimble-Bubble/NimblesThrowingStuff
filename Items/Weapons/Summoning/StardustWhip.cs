@@ -42,12 +42,12 @@ namespace NimblesThrowingStuff.Items.Weapons.Summoning
         {
 			return true;
         }
-		public override void AddRecipes()
+		/* public override void AddRecipes()
 		{
 			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.FragmentStardust, 18);
 			recipe.AddTile(TileID.LunarCraftingStation);
 			recipe.Register();
-		}
+		} */
 	}
 }

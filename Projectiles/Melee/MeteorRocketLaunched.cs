@@ -12,10 +12,6 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 {
 	public class MeteorRocketLaunched: ModProjectile
     {
-		public override void SetStaticDefaults()
-		{
-			// DisplayName.SetDefault("(thrown) Spiked Javelin");
-		}
 		public override void SetDefaults()
 		{
 			Projectile.width = 30;
