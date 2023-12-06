@@ -214,7 +214,7 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
         }
         public override void ModifyNPCLoot(NPCLoot npcLoot)
         {
-            npcLoot.Add(ItemDropRule.Common(Mod.Find<ModItem>("BeastBone").Type, 3));
+            npcLoot.Add(ItemDropRule.Common(Mod.Find<ModItem>("BeastBone").Type, 2));
         }
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
         {

@@ -149,7 +149,7 @@ Mods: {
 			}
 
 			BreathingPack: {
-				DisplayName: Breathing Enviro Protection Pack
+				DisplayName: Breathing EPP
 				Tooltip:
 					'''
 					A basic environmental protection pack, common in extraterrestrial exploration
@@ -2061,7 +2061,7 @@ Mods: {
 			HexHammerProj.DisplayName: Hexed Hammer
 			MiniMossHornetProj.DisplayName: Moss Hornet
 			SkySeaGuardianProj.DisplayName: Sharp Sky-Sea Guardian
-			SporeballProj.DisplayName: Spore Ball
+			SporeballProj.DisplayName: Sporeball
 			SporeballSpore.DisplayName: Sporeball Spore
 			StardustWhipProj.DisplayName: Stardust Whip
 			ViolentClusterProj.DisplayName: Violent Chopper
@@ -2119,7 +2119,7 @@ Mods: {
 			LogicBombProj.DisplayName: Logic Bomb
 			MartianEcho.DisplayName: Martian Beam
 			MartianMiracleProj.DisplayName: Martian Miracle
-			MeteorSpearExplosion.DisplayName: Meteorsplosion
+			MeteorSpearExplosion.DisplayName: Meteor Spear
 			MeteorSpearProj.DisplayName: Meteor Spear
 			MoltenKnifeProj.DisplayName: Molten Knife
 			MythrilHatchetProj.DisplayName: Mythril Hatchet

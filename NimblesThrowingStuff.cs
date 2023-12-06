@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -43,7 +44,7 @@ namespace NimblesThrowingStuff
             ModLoader.TryGetMod("Wikithis", out Mod wikithis);
             if (wikithis != null && !Main.dedServ)
             {
-                wikithis.Call("AddModURL", this, "https://terrariamods.fandom.com/wiki/Magnumiactus/{}");
+                wikithis.Call("AddModURL", this, "https://terrariamods.wiki.gg/wiki/Magnumiactus/{}");
             }
         }
         public override void Unload()
@@ -62,17 +63,17 @@ namespace NimblesThrowingStuff
             if(bossChecklist != null)
             {
                 bossChecklist.Call(
-                "AddBoss",
+                "LogBoss",
                 this,
-                "$Mods.NimblesThrowingStuff.NPCName.MorilusMain",
-                ModContent.NPCType<MorilusMain>(),
+                nameof(MorilusMain),
                 19f,
-                (Func<bool>)(() => NimblesWorld.downedMorilus),
-                () => true,
-                new List<int> { ModContent.ItemType<MorilusMask>(), ModContent.ItemType<MorilusTrophy>() },
-                 ModContent.ItemType<DeceptiveArtifact>(),
-                "Create a Deceptive Artifact and use it in space",
-                "Morilus no longer detects a threat");
+                () => NimblesWorld.downedMorilus,
+                ModContent.NPCType<MorilusMain>(),
+                new Dictionary<string, object>() { 
+                    ["spawnItems"] = ModContent.ItemType<DeceptiveArtifact>(),
+                    ["collectibles"] = new List<int>() { ModContent.ItemType<MorilusMask>(), ModContent.ItemType<MorilusTrophy>() }
+                }
+                );
             }
 
         }
