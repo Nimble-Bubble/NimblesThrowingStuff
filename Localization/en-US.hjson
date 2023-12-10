@@ -3,7 +3,7 @@ Mods: {
 		TownNPCMood: {
 			LivingRelic: {
 				Content: Things are fine. All is well.
-				NoHome: Where am I going to put my stuff?
+				NoHome: I think I need a place to put all my equipment...
 				LoveSpace: This is such a nice place! What's your place like?
 				FarFromHome: I think I need to get back home...
 				DislikeCrowded: It's a bit crowded in here. I'm not used to being around so many mammals.
@@ -11,11 +11,11 @@ Mods: {
 				LikeBiome: I love the outside, but I now have to choose between the outside and the inside.
 				LoveBiome: I think I've made my choice between the inside and the outside...
 				DislikeBiome: Normally, I love the outside, but now, I'm not too sure.
-				HateBiome: I think I've made my choice between the inside and the outside...
+				HateBiome: What have I done to deserve this?
 				LikeNPC: I think {NPCName} is neat.
 				LoveNPC: Are these kinds of feelings between {NPCName} and I normal?
 				DislikeNPC: I'm not a big fan of {NPCName}...Something about them just seems odd.
-				HateNPC: "{NPCName} keeps trying to deny my ancestors' existence. Not a big fan of that."
+				HateNPC: "{NPCName} keeps trying to deny my ancestors' existence."
 			}
 
 			Lotteryboy: {
@@ -568,7 +568,9 @@ Mods: {
 					'''
 					A precious-looking work of art!
 					Summons Morilus, even if he is present already
+					Fighting multiple Great Guardians may prove to be a challenge
 					Use it in space for the best results
+					However, given this item's purpose, you might as well use it elsewhere
 					'''
 			}
 
@@ -584,7 +586,7 @@ Mods: {
 
 			GreaterRestorationPotion: {
 				DisplayName: Greater Restoration Potion
-				Tooltip: ""
+				Tooltip: A powerful mixture of both health and mana restoration
 			}
 
 			GuardianPotion: {
@@ -720,7 +722,12 @@ Mods: {
 
 			SkySeaSoldierBannerItem: {
 				DisplayName: Sky-Sea Soldier Banner
-				Tooltip: ""
+				Tooltip:
+					'''
+					The automatons from the Sky-Sea are known to have a primitive system of emotions.
+					This leads to them being weakened by the possibility of defeat.
+					The rumored Great Guardian, however, is immune to this weakness.
+					'''
 			}
 
 			SmallRathBannerItem: {
@@ -808,7 +815,11 @@ Mods: {
 
 			ShorebrassLure: {
 				DisplayName: Shorebrass Seabass
-				Tooltip: No, wait--It's at least a C+!
+				Tooltip:
+					'''
+					No, wait--It's at least a C+!
+					Not consumed upon use
+					'''
 			}
 
 			ShorebrassPickaxe: {

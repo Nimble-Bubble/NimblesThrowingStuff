@@ -58,14 +58,15 @@ namespace NimblesThrowingStuff
             ModLoader.TryGetMod("BossChecklist", out Mod bossChecklist);
             if (censusMod != null)
                 {
-                    censusMod.Call("TownNPCCondition", Find<ModNPC>("LivingRelic").Type, "Defeat the Eye of Cthulhu");   
+                    censusMod.Call("TownNPCCondition", Find<ModNPC>("LivingRelic").Type, "Defeat the Eye of Cthulhu"); 
+                    censusMod.Call("TownNPCCondition", Find<ModNPC>("Lotteryboy").Type, "Defeat the Moon Lord");     
                 }
             if(bossChecklist != null)
             {
                 bossChecklist.Call(
                 "LogBoss",
                 this,
-                nameof(MorilusMain),
+                "Morilus",
                 19f,
                 () => NimblesWorld.downedMorilus,
                 ModContent.NPCType<MorilusMain>(),

@@ -20,11 +20,7 @@ namespace NimblesThrowingStuff.Items.Consumables
 		public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 3;
-			// DisplayName.SetDefault("Deceptive Artifact of the Sky's Sea");
             ItemID.Sets.SortingPriorityBossSpawns[Item.type] = 13;
-			/* Tooltip.SetDefault("A precious-looking work of art, but not quite genuine"
-				+"\nProvokes the great guardian of the Sky's Sea regardless"
-				+"\nUse it in space for the best results"); */
 		}
 
 		public override void SetDefaults()

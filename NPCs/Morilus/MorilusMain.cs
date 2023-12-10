@@ -519,6 +519,7 @@ namespace NimblesThrowingStuff.NPCs.Morilus
         {
             Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity.RotatedByRandom(MathHelper.ToRadians(360)), Mod.Find<ModGore>("MorilusGore1").Type, 1f);
             Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity.RotatedByRandom(MathHelper.ToRadians(360)), Mod.Find<ModGore>("MorilusGore2").Type, 1f);
+            Gore.NewGore(NPC.GetSource_FromThis(), NPC.position, NPC.velocity.RotatedByRandom(MathHelper.ToRadians(360)), Mod.Find<ModGore>("MorilusGore3").Type, 1f);
             if (!NimblesWorld.downedMorilus)
             {
                 NPC.SetEventFlagCleared(ref NimblesWorld.downedMorilus, -1);
@@ -541,12 +542,11 @@ namespace NimblesThrowingStuff.NPCs.Morilus
         public override void ModifyNPCLoot(NPCLoot npcLoot)
         {
             npcLoot.Add(ItemDropRule.BossBag(ModContent.ItemType<MorilusTreasureBag>()));
+            npcLoot.Add(ItemDropRule.Common(Mod.Find<ModItem>("MorilusTrophy").Type, 10));
             LeadingConditionRule notExpertRule = new LeadingConditionRule(new Conditions.NotExpert());
             notExpertRule.OnSuccess(ItemDropRule.Common(ModContent.ItemType<MorilusMask>(), 7));
-            notExpertRule.OnSuccess(ItemDropRule.Common(Mod.Find<ModItem>("MorilusTrophy").Type, 5));
             notExpertRule.OnSuccess(ItemDropRule.Common(Mod.Find<ModItem>("CarpatusDefender").Type, 4));
             notExpertRule.OnSuccess(ItemDropRule.OneFromOptions(1, Mod.Find<ModItem>("SkyseaSpinner").Type, Mod.Find<ModItem>("ProcellariteLongbow").Type, Mod.Find<ModItem>("GuardianStaff").Type, Mod.Find<ModItem>("StormShot").Type, Mod.Find<ModItem>("LacusDecapitator").Type));
-            //notExpertRule.OnSuccess(ItemDropRule.OneFromOptions(2, ModContent.ItemType<SkyseaSpinner>(), ModContent.ItemType<ProcellariteLongbow>(), ModContent.ItemType<StormShot>(), ModContent.ItemType<GuardianStaff>(), ModContent.ItemType<LacusDecapitator>()));
             notExpertRule.OnSuccess(ItemDropRule.Common(Mod.Find<ModItem>("SoulOfTrite").Type, 1, 12, 20));
             npcLoot.Add(notExpertRule);
         }

@@ -20,9 +20,6 @@ namespace NimblesThrowingStuff.Items.Consumables
 		public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 30;
-			/* Tooltip.SetDefault("Reduced potion cooldown"
-				+"\nDoesn't work that well with quick keys at the moment" +
-				"\nUse it manually if you have to"); */
 		}
 
 		public override void SetDefaults()
@@ -65,6 +62,11 @@ namespace NimblesThrowingStuff.Items.Consumables
 			recipe.AddIngredient(ItemID.SoulofNight, 2);
 			recipe.AddIngredient(ItemID.SoulofLight, 2);
 			recipe.AddTile(13);
+			recipe.Register();
+			recipe = CreateRecipe();
+			recipe.AddIngredient(ItemID.RestorationPotion);
+			recipe.AddIngredient(ItemID.Honeyfin);
+			recipe.AddTile(355);
 			recipe.Register();
 		}
 	}
