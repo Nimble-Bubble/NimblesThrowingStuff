@@ -1909,6 +1909,11 @@ Mods: {
 					Has a chance to electrify targets
 					'''
 			}
+
+			MeteorRocket: {
+				Tooltip: ""
+				DisplayName: Meteor Rocket
+			}
 		}
 
 		NPCs: {
@@ -2174,6 +2179,7 @@ Mods: {
 			VileHarvestProj.DisplayName: Vile Harvest
 			WaraxeEcho.DisplayName: Hallowed Waraxe Echo
 			WhirlpoolWhammerProj.DisplayName: Whirlpool Whammer
+			MeteorRocketProj.DisplayName: Meteor Rocket Proj
 		}
 
 		Keybinds.Guard.DisplayName: Guard

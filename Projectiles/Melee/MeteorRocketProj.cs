@@ -11,7 +11,7 @@ using NimblesThrowingStuff.Items;
 
 namespace NimblesThrowingStuff.Projectiles.Melee
 {
-    public class PecoTeepeeProj : ModProjectile
+    public class MeteorRocketProj : ModProjectile
     {
         private int zamboni;
         private bool hasShelled;
@@ -112,10 +112,10 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                 {
                     if (projOwner.GetModPlayer<NimblesPlayer>().currentShells > 0)
                     {
-                        Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.velocity, ModContent.ProjectileType<PecoTeepeeShell>(), Projectile.damage / 3, 5f, Projectile.owner);
-                        SoundEngine.PlaySound(new SoundStyle("NimblesThrowingStuff/Sounds/Item/GunlanceShellPeco"));
-                        projOwner.velocity.X -= Projectile.velocity.X / 5;
-                        projOwner.velocity.Y -= Projectile.velocity.Y / 5;
+                        Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.velocity * new Vector2(2, 2), ModContent.ProjectileType<MeteorRocketLaunched>(), Projectile.damage, 5f, Projectile.owner);
+                        SoundEngine.PlaySound(SoundID.Item89, Projectile.position);
+                        projOwner.velocity.X -= Projectile.velocity.X;
+                        projOwner.velocity.Y -= Projectile.velocity.Y;
                         for (int f = 0; f < 20; f++)
                         {
                             int fireIndex = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 6, 0f, 0f, 100, default(Color), 3f);
@@ -127,6 +127,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                             Main.dust[smokeIndex].velocity *= 2f;
                         }
                         hasShelled = true;
+                        Projectile.alpha = 255;
                         projOwner.GetModPlayer<NimblesPlayer>().currentShells -= 1;
                     }
                     else
@@ -150,7 +151,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
                 {
                     int fireIndex2 = Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 6, 0f, 0f, 100, default(Color), 3f);
                 }
-                target.AddBuff(BuffID.OnFire, 120);
+                target.AddBuff(BuffID.OnFire, 240);
             }
         }
     }
