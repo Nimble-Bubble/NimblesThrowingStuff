@@ -1911,7 +1911,11 @@ Mods: {
 			}
 
 			MeteorRocket: {
-				Tooltip: ""
+				Tooltip:
+					'''
+					Can be launched while in use with a right click
+					Must be loaded with Guard and right click to launch
+					'''
 				DisplayName: Meteor Rocket
 			}
 		}
