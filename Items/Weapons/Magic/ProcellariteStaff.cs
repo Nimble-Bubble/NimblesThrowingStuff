@@ -11,7 +11,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Magic
         public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			// Tooltip.SetDefault("Creates a big star that explodes into other stars");
             Item.staff[Item.type] = true;
 		}
 		public override void SetDefaults() 
@@ -26,7 +25,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Magic
 			Item.knockBack = 4f;
             Item.noMelee = true;
 			Item.value = Item.buyPrice(1, 0, 0, 0);
-			Item.rare = ItemRarityID.Purple;
+			Item.rare = ItemRarityID.Red;
 			Item.UseSound = SoundID.Item9;
 			Item.autoReuse = true;
 			Item.shoot = ModContent.ProjectileType<MagicBigStar>();

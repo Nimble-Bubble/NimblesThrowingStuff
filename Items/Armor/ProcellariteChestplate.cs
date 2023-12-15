@@ -32,12 +32,11 @@ namespace NimblesThrowingStuff.Items.Armor
         public override void UpdateEquip(Player player)
         {
             var modPlayer = player.GetModPlayer<NimblesPlayer>();
+            modPlayer.guardBonus += 20;
             player.GetDamage(DamageClass.Generic) += 0.1f;
             player.GetCritChance(DamageClass.Generic) += 10;
             player.statLifeMax2 += 100;
         }
-
-
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
