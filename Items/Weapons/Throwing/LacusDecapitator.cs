@@ -26,7 +26,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
             Item.noMelee = true;
             Item.noUseGraphic = true;
 			Item.value = Item.buyPrice(1, 0, 0, 0);
-			Item.rare = ItemRarityID.Purple;
+			Item.rare = ItemRarityID.Red;
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
 			Item.shoot = ModContent.ProjectileType<LacusDecapitatorProj>();

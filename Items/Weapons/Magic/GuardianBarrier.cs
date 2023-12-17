@@ -6,6 +6,7 @@ using Terraria.ModLoader;
 using NimblesThrowingStuff.Projectiles.Magic;
 using Terraria.GameContent.Creative;
 using NimblesThrowingStuff.Items.Materials;
+using NimblesThrowingStuff.Tiles.Furniture;
 
 namespace NimblesThrowingStuff.Items.Weapons.Magic
 {
@@ -59,7 +60,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Magic
 		{
 			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ModContent.ItemType<ProcellariteBar>(), 12); 
-			recipe.AddTile(TileID.LunarCraftingStation);
+			recipe.AddTile(ModContent.TileType<ProcellaritePressTile>());
 			recipe.Register();
 		}
 	}

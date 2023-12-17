@@ -7,6 +7,7 @@ using NimblesThrowingStuff.Items.Materials;
 using Terraria.GameContent.Creative;
 using NimblesThrowingStuff.Items.Weapons.Melee;
 using CsvHelper.TypeConversion;
+using NimblesThrowingStuff.Tiles.Furniture;
 //using System.Numerics;
 
 namespace NimblesThrowingStuff.Items.Weapons.Ranged
@@ -65,7 +66,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
             Recipe recipe = CreateRecipe();
             recipe.AddIngredient(ModContent.ItemType<ProcellariteBar>(), 12);
             recipe.AddIngredient(ItemID.Tsunami);
-            recipe.AddTile(TileID.LunarCraftingStation);
+            recipe.AddTile(ModContent.TileType<ProcellaritePressTile>());
             recipe.Register();
         }
     }

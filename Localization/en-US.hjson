@@ -760,6 +760,16 @@ Mods: {
 				Tooltip: A chip of such power could only be encased in the finest of its own flesh.
 			}
 
+			ProcellaritePress: {
+				DisplayName: Procellarite Press
+				Tooltip:
+					'''
+					To these lands, the summit of metallurgy
+					To those beyond, the start of the trail
+					Serves as an advanced forge and anvil
+					'''
+			}
+
 			HadalShellstoneWall: {
 				DisplayName: Hadal Shellstone Wall
 				Tooltip: ""
@@ -1917,11 +1927,6 @@ Mods: {
 					Must be loaded with Guard and right click to launch
 					'''
 				DisplayName: Meteor Rocket
-			}
-
-			ProcellaritePress: {
-				DisplayName: Procellarite Press
-				Tooltip: ""
 			}
 		}
 

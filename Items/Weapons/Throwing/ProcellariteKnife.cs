@@ -3,6 +3,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 using Terraria.GameContent.Creative;
+using NimblesThrowingStuff.Tiles.Furniture;
 
 namespace NimblesThrowingStuff.Items.Weapons.Throwing
 {
@@ -25,7 +26,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
             Item.noMelee = true;
             Item.noUseGraphic = true;
 			Item.value = Item.buyPrice(1, 0, 0, 0);
-			Item.rare = ItemRarityID.Purple;
+			Item.rare = ItemRarityID.Red;
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
 			Item.shoot = Mod.Find<ModProjectile>("ProcellariteKnifeProj").Type;
@@ -41,7 +42,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 		{
 			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(Mod.Find<ModItem>("ProcellariteBar").Type, 10);
-			recipe.AddTile(TileID.LunarCraftingStation);
+			recipe.AddTile(ModContent.TileType<ProcellaritePressTile>());
 			recipe.Register();
 		}
 	}

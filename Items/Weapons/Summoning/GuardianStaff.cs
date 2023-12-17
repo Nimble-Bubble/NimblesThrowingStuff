@@ -28,7 +28,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Summoning
 			Item.useAnimation = 20;
 			Item.useStyle = 5;
 			Item.value = Item.buyPrice(1, 0, 0, 0);
-			Item.rare = ItemRarityID.Purple;
+			Item.rare = ItemRarityID.Red;
 			Item.UseSound = SoundID.Item21;
 			Item.noMelee = true;
 			Item.DamageType = DamageClass.Summon;;

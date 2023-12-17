@@ -7,6 +7,7 @@ using System;
 using NimblesThrowingStuff.Projectiles.Melee;
 using NimblesThrowingStuff.Items.Materials;
 using Terraria.GameContent.Creative;
+using NimblesThrowingStuff.Tiles.Furniture;
 
 namespace NimblesThrowingStuff.Items.Weapons.Melee
 {
@@ -42,7 +43,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ModContent.ItemType<ProcellariteBar>(), 12);
 			recipe.AddIngredient(ModContent.ItemType<AtlantisGunlance>());
-			recipe.AddTile(TileID.LunarCraftingStation);
+			recipe.AddTile(ModContent.TileType<ProcellaritePressTile>());
 			recipe.Register();
 		}
 	}

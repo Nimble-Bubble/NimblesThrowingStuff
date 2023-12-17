@@ -21,7 +21,7 @@ namespace NimblesThrowingStuff.Items.Placeables.Furniture
 			Item.useAnimation = 12;
 			Item.useStyle = 1;
 			Item.value = Item.buyPrice(0, 50, 0, 0);
-			Item.rare = ItemRarityID.Red;
+			Item.rare = ItemRarityID.Cyan;
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
             Item.useTurn = true;

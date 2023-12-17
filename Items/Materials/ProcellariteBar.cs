@@ -4,6 +4,7 @@ using Terraria.ModLoader;
 using NimblesThrowingStuff.Items.Placeables.Blocks;
 using NimblesThrowingStuff.Tiles.Blocks;
 using Terraria.GameContent.Creative;
+using NimblesThrowingStuff.Tiles.Furniture;
 
 namespace NimblesThrowingStuff.Items.Materials
 {
@@ -21,7 +22,7 @@ namespace NimblesThrowingStuff.Items.Materials
 			Item.useAnimation = 12;
 			Item.useStyle = 1;
 			Item.value = Item.buyPrice(0, 17, 50, 0);
-			Item.rare = ItemRarityID.Purple;
+			Item.rare = ItemRarityID.Cyan;
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
             Item.useTurn = true;
@@ -33,7 +34,7 @@ namespace NimblesThrowingStuff.Items.Materials
 		{
 			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ModContent.ItemType<ProcellariteOre>(), 5);
-			recipe.AddTile(TileID.LunarCraftingStation);
+			recipe.AddTile(ModContent.TileType<ProcellaritePressTile>());
 			recipe.Register();
 		}
 	}

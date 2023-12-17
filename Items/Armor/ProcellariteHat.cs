@@ -8,6 +8,7 @@ using Terraria.ModLoader;
 using Terraria.ID;
 using NimblesThrowingStuff.Items.Materials;
 using Terraria.GameContent.Creative;
+using NimblesThrowingStuff.Tiles.Furniture;
 
 namespace NimblesThrowingStuff.Items.Armor
 {
@@ -26,7 +27,7 @@ namespace NimblesThrowingStuff.Items.Armor
             Item.width = 34;
             Item.height = 24;
             Item.value = 500000;
-            Item.rare = ItemRarityID.Purple;
+            Item.rare = ItemRarityID.Red;
             Item.defense = 14; 
         }
 
@@ -52,7 +53,7 @@ namespace NimblesThrowingStuff.Items.Armor
         {
             Recipe recipe = CreateRecipe();
             recipe.AddIngredient(ModContent.ItemType<ProcellariteBar>(), 12);
-            recipe.AddTile(TileID.LunarCraftingStation);
+            recipe.AddTile(ModContent.TileType<ProcellaritePressTile>());
             recipe.Register();
         }
     }
