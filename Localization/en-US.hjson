@@ -421,7 +421,11 @@ Mods: {
 
 			MathrusHelmet: {
 				DisplayName: Draconic Helmet
-				Tooltip: Increases mana by 120 and throwing velocity by 60%
+				Tooltip: 
+				'''
+				Forged in honor of a legendary dragon whose strength could not be matched
+				Increases mana by 120 and throwing velocity by 60%
+				'''
 			}
 
 			MathrusPlate: {
@@ -706,7 +710,7 @@ Mods: {
 				Tooltip:
 					'''
 					This unusual brass-steel-coral hybrid makes for a surprisingly good alloy
-					Said to have been used by oceanic soldiers who now reside in the dungeon
+					Said to have been used by marine warriors who now reside in the dungeon
 					'''
 			}
 
