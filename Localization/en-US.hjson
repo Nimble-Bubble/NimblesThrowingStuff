@@ -189,12 +189,12 @@ Mods: {
 				Tooltip:
 					'''
 					Allows flight and slow fall
-					Stellar membrane gives these draconic wings powerful flight.
+					Stellar membrane gives these draconic wings powerful flight
 					'''
 			}
 
 			FishrontoothNecklace: {
-				DisplayName: Fishrontooth Necklace
+				DisplayName: Fishron-tooth Necklace
 				Tooltip: Increases armor penetration by 30
 			}
 
@@ -268,7 +268,11 @@ Mods: {
 
 			Stinguard: {
 				DisplayName: Stinguard
-				Tooltip: ""
+				Tooltip: 
+				'''
+				The stinger on the front explains itself
+				Enemy contact damage will be reflected while guarding
+				'''
 			}
 
 			WandsworthWhirlpool: {
@@ -474,7 +478,11 @@ Mods: {
 
 			ProcellariteChestplate: {
 				DisplayName: Procellarite Chestplate
-				Tooltip: Increases damage and critical strike chance by 10% and maximum life by 100
+				Tooltip: 
+				'''
+				Increases damage and critical strike chance by 10% and maximum life by 100
+				The alloy of Procellarite is believed to have a kind of life to it
+				'''
 			}
 
 			ProcellariteHat: {
@@ -491,7 +499,7 @@ Mods: {
 				Tooltip:
 					'''
 					Increases melee damage by 30% and critical strike chance by 20%
-					The Y-shaped hole on this helmet is good for vision and communication, but it leaves a vulnerability.
+					The Y-shaped hole on this helmet is good for vision and communication, but it still leaves a vulnerability.
 					'''
 			}
 
