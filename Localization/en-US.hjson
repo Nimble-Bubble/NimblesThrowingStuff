@@ -472,6 +472,7 @@ Mods: {
 				Tooltip:
 					'''
 					Increases throwing damage by 30% and critical strike chance by 20%
+					The alloy of Procellarite is believed to have a kind of life to it
 					The wings on this hat may have been used to boost flight at one point, but they are merely decorative now.
 					'''
 			}
@@ -490,7 +491,8 @@ Mods: {
 				Tooltip:
 					'''
 					Increases magic damage by 30% and critical strike chance by 20%
-					The design of this hat brings up thoughts of whimsical witchcraft.
+					The alloy of Procellarite is believed to have a kind of life to it
+					The design of this hat brings up thoughts of whimsical witchcraft
 					'''
 			}
 
@@ -499,13 +501,19 @@ Mods: {
 				Tooltip:
 					'''
 					Increases melee damage by 30% and critical strike chance by 20%
+					The alloy of Procellarite is believed to have a kind of life to it
 					The Y-shaped hole on this helmet is good for vision and communication, but it still leaves a vulnerability.
 					'''
 			}
 
 			ProcellariteLeggings: {
 				DisplayName: Procellarite Leggings
-				Tooltip: Increases movement speed by 25% and minion and sentry slots by 2
+				Tooltip: 
+				'''
+				Increases movement speed by 25% and minion and sentry slots by 2
+				The alloy of Procellarite is believed to have a kind of life to it
+				The bottoms shift their shape to adapt to the terrain
+				'''
 			}
 
 			ProcellariteMask: {
@@ -513,6 +521,7 @@ Mods: {
 				Tooltip:
 					'''
 					Increases summoning damage by 50% and minion max by 4
+					The alloy of Procellarite is believed to have a kind of life to it
 					This mask appears to be inspired by an endemic animal, but you're not entirely sure what lies up there...
 					'''
 			}
@@ -522,6 +531,7 @@ Mods: {
 				Tooltip:
 					'''
 					Increases ranged damage by 30% and critical strike chance by 20%
+					The alloy of Procellarite is believed to have a kind of life to it
 					While the glass-like layer is worse than pure solid Procellarite for durability, its sensory benefits are undeniable.
 					'''
 			}
@@ -530,7 +540,7 @@ Mods: {
 				DisplayName: Protogen Visor
 				Tooltip:
 					'''
-					A replica of a protogen's visor.
+					A replica of a protogen's visor
 					As protogens are often sent out to distant planets for exploration, 
 					The senses are heightened and protected from disablement
 					The design on the visor produces a noticeable glow
@@ -699,7 +709,9 @@ Mods: {
 				Tooltip:
 					'''
 					Born from the tides of the sky's sea, this metal is renowned for its potential
+					The alloy of Procellarite is additionally believed to have a kind of life to it
 					At high speeds, it leaves quite a shocking impact
+					At rest, its life becomes noticeable
 					'''
 			}
 
@@ -902,7 +914,11 @@ Mods: {
 
 			ProcellariteStaff: {
 				DisplayName: Procellarite Staff
-				Tooltip: Creates a big star that explodes into other stars
+				Tooltip:
+				''' 
+				Creates a big star that explodes into other stars
+				The alloy of Procellarite is believed to have a kind of life to it
+				'''
 			}
 
 			RazorBolt: {
@@ -1201,6 +1217,15 @@ Mods: {
 					'''
 			}
 
+			MeteorRocket: {
+				Tooltip:
+					'''
+					Can be launched while in use with a right click
+					Must be loaded with Guard and right click to launch
+					'''
+				DisplayName: Meteor Rocket
+			}
+
 			PaladinLance: {
 				DisplayName: Paladin Lance
 				Tooltip: A powerful and heavy lance known for its presence on the battlefield.
@@ -1239,7 +1264,12 @@ Mods: {
 
 			ProcellariteTrident: {
 				DisplayName: Procellarite Trident
-				Tooltip: ""
+				Tooltip: 
+				'''
+				The alloy of Procellarite is believed to have a kind of life to it
+				Polearms are quite common in the Sky-Sea, serving as personal and professional weapons
+				This model of trident used to see lots of use before projectile-firing hybrids came in
+				'''
 			}
 
 			RedTail: {
@@ -1369,7 +1399,7 @@ Mods: {
 				DisplayName: True Ascalon
 				Tooltip:
 					'''
-					A true masterwork of metalsmithing and machinery.
+					A true masterwork of metalsmithing and machinery
 					Right click to fire three holy laser beams that each do half of the weapon's base damage. Guard and right click to charge the laser beams.
 					A single reload gives 4 charges, and you can have up to 12 charges. A single instance of laserfire takes up 3 charges.
 					'''
@@ -1718,7 +1748,11 @@ Mods: {
 
 			LacusDecapitator: {
 				DisplayName: Lacus Decapitator
-				Tooltip: ""
+				Tooltip: 
+				'''
+				The alloy of Procellarite is believed to have a kind of life to it
+				Creates echoes in its path
+				'''
 			}
 
 			LeadKnife: {
@@ -1801,7 +1835,11 @@ Mods: {
 
 			ProcellariteKnife: {
 				DisplayName: Procellarite Knife
-				Tooltip: ""
+				Tooltip: 
+				'''
+				The alloy of Procellarite is believed to have a kind of life to it
+				Despite its size, this knife is quite light
+				'''
 			}
 
 			RustyBonesAxe: {
@@ -1811,7 +1849,11 @@ Mods: {
 
 			SatelliteSpear: {
 				DisplayName: Satellite Spear
-				Tooltip: ""
+				Tooltip: 
+				'''
+				The power of a satellite condensed into a relatively portable weapon
+				Explodes on impact
+				'''
 			}
 
 			ScavengedKunai: {
@@ -1895,7 +1937,11 @@ Mods: {
 
 			TrueNightPiercer: {
 				DisplayName: True Night's Piercer
-				Tooltip: Find your own way to the Knife
+				Tooltip: 
+				'''
+				Creates echoes that fly out
+				Find your own way to the Knife
+				'''
 			}
 
 			TungstenKnife: {
@@ -1910,7 +1956,11 @@ Mods: {
 
 			VenomousArachknife: {
 				DisplayName: Venomous Arachknife
-				Tooltip: This knife sticks to enemies
+				Tooltip: 
+				'''
+				This knife sticks to enemies
+				Additionally, it envenoms those same enemies
+				'''
 			}
 
 			ViciousHarvest: {
@@ -1932,14 +1982,6 @@ Mods: {
 					'''
 			}
 
-			MeteorRocket: {
-				Tooltip:
-					'''
-					Can be launched while in use with a right click
-					Must be loaded with Guard and right click to launch
-					'''
-				DisplayName: Meteor Rocket
-			}
 		}
 
 		NPCs: {
