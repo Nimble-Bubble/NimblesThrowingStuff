@@ -32,6 +32,7 @@ namespace NimblesThrowingStuff.Items
             if (item.type == ItemID.SWATHelmet)
             {
                 item.defense = 20;
+                item.vanity = false;
             }
         }
         public override bool CanRightClick(Item item)
