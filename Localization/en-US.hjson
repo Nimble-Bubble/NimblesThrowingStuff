@@ -268,11 +268,11 @@ Mods: {
 
 			Stinguard: {
 				DisplayName: Stinguard
-				Tooltip: 
-				'''
-				The stinger on the front explains itself
-				Enemy contact damage will be reflected while guarding
-				'''
+				Tooltip:
+					'''
+					The stinger on the front explains itself
+					Enemy contact damage will be reflected while guarding
+					'''
 			}
 
 			WandsworthWhirlpool: {
@@ -425,11 +425,11 @@ Mods: {
 
 			MathrusHelmet: {
 				DisplayName: Draconic Helmet
-				Tooltip: 
-				'''
-				Forged in honor of a legendary dragon whose strength could not be matched
-				Increases mana by 120 and throwing velocity by 60%
-				'''
+				Tooltip:
+					'''
+					Forged in honor of a legendary dragon whose strength could not be matched
+					Increases mana by 120 and throwing velocity by 60%
+					'''
 			}
 
 			MathrusPlate: {
@@ -479,11 +479,11 @@ Mods: {
 
 			ProcellariteChestplate: {
 				DisplayName: Procellarite Chestplate
-				Tooltip: 
-				'''
-				Increases damage and critical strike chance by 10% and maximum life by 100
-				The alloy of Procellarite is believed to have a kind of life to it
-				'''
+				Tooltip:
+					'''
+					Increases damage and critical strike chance by 10% and maximum life by 100
+					The alloy of Procellarite is believed to have a kind of life to it
+					'''
 			}
 
 			ProcellariteHat: {
@@ -508,12 +508,12 @@ Mods: {
 
 			ProcellariteLeggings: {
 				DisplayName: Procellarite Leggings
-				Tooltip: 
-				'''
-				Increases movement speed by 25% and minion and sentry slots by 2
-				The alloy of Procellarite is believed to have a kind of life to it
-				The bottoms shift their shape to adapt to the terrain
-				'''
+				Tooltip:
+					'''
+					Increases movement speed by 25% and minion and sentry slots by 2
+					The alloy of Procellarite is believed to have a kind of life to it
+					The bottoms shift their shape to adapt to the terrain
+					'''
 			}
 
 			ProcellariteMask: {
@@ -915,10 +915,10 @@ Mods: {
 			ProcellariteStaff: {
 				DisplayName: Procellarite Staff
 				Tooltip:
-				''' 
-				Creates a big star that explodes into other stars
-				The alloy of Procellarite is believed to have a kind of life to it
-				'''
+					'''
+					Creates a big star that explodes into other stars
+					The alloy of Procellarite is believed to have a kind of life to it
+					'''
 			}
 
 			RazorBolt: {
@@ -1264,12 +1264,12 @@ Mods: {
 
 			ProcellariteTrident: {
 				DisplayName: Procellarite Trident
-				Tooltip: 
-				'''
-				The alloy of Procellarite is believed to have a kind of life to it
-				Polearms are quite common in the Sky-Sea, serving as personal and professional weapons
-				This model of trident used to see lots of use before projectile-firing hybrids came in
-				'''
+				Tooltip:
+					'''
+					The alloy of Procellarite is believed to have a kind of life to it
+					Polearms are quite common in the Sky-Sea, serving as personal and professional weapons
+					This model of trident used to see lots of use before projectile-firing hybrids came in
+					'''
 			}
 
 			RedTail: {
@@ -1748,11 +1748,11 @@ Mods: {
 
 			LacusDecapitator: {
 				DisplayName: Lacus Decapitator
-				Tooltip: 
-				'''
-				The alloy of Procellarite is believed to have a kind of life to it
-				Creates echoes in its path
-				'''
+				Tooltip:
+					'''
+					The alloy of Procellarite is believed to have a kind of life to it
+					Creates echoes in its path
+					'''
 			}
 
 			LeadKnife: {
@@ -1835,11 +1835,11 @@ Mods: {
 
 			ProcellariteKnife: {
 				DisplayName: Procellarite Knife
-				Tooltip: 
-				'''
-				The alloy of Procellarite is believed to have a kind of life to it
-				Despite its size, this knife is quite light
-				'''
+				Tooltip:
+					'''
+					The alloy of Procellarite is believed to have a kind of life to it
+					Despite its size, this knife is quite light
+					'''
 			}
 
 			RustyBonesAxe: {
@@ -1849,11 +1849,11 @@ Mods: {
 
 			SatelliteSpear: {
 				DisplayName: Satellite Spear
-				Tooltip: 
-				'''
-				The power of a satellite condensed into a relatively portable weapon
-				Explodes on impact
-				'''
+				Tooltip:
+					'''
+					The power of a satellite condensed into a relatively portable weapon
+					Explodes on impact
+					'''
 			}
 
 			ScavengedKunai: {
@@ -1937,11 +1937,11 @@ Mods: {
 
 			TrueNightPiercer: {
 				DisplayName: True Night's Piercer
-				Tooltip: 
-				'''
-				Creates echoes that fly out
-				Find your own way to the Knife
-				'''
+				Tooltip:
+					'''
+					Creates echoes that fly out
+					Find your own way to the Knife
+					'''
 			}
 
 			TungstenKnife: {
@@ -1956,11 +1956,11 @@ Mods: {
 
 			VenomousArachknife: {
 				DisplayName: Venomous Arachknife
-				Tooltip: 
-				'''
-				This knife sticks to enemies
-				Additionally, it envenoms those same enemies
-				'''
+				Tooltip:
+					'''
+					This knife sticks to enemies
+					Additionally, it envenoms those same enemies
+					'''
 			}
 
 			ViciousHarvest: {
@@ -1981,7 +1981,6 @@ Mods: {
 					Has a chance to electrify targets
 					'''
 			}
-
 		}
 
 		NPCs: {
