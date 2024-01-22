@@ -29,6 +29,10 @@ namespace NimblesThrowingStuff.Items
             {
                 item.pick = 65;
             }
+            if (item.type == ItemID.SWATHelmet)
+            {
+                item.defense = 20;
+            }
         }
         public override bool CanRightClick(Item item)
         {
@@ -114,6 +118,14 @@ namespace NimblesThrowingStuff.Items
             {
                 player.GetAttackSpeed(DamageClass.Melee) -= 0.051f;
                 modPlayer.universalSpeed += 0.051f;
+            }
+            #endregion
+            #region Miscellaneous
+            if (item.type == ItemID.SWATHelmet)
+            {
+                player.buffImmune[BuffID.Darkness] = true;
+                player.buffImmune[BuffID.Blackout] = true;
+                player.buffImmune[BuffID.Obstructed] = true;
             }
             #endregion
         }
