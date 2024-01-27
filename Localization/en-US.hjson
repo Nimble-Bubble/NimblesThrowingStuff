@@ -839,12 +839,23 @@ Mods: {
 
 			ProcellariteHamaxe: {
 				DisplayName: Procellarite Hamaxe
-				Tooltip: ""
+				Tooltip:
+					'''
+					On the Sky-Sea, there exists a kind of tree-like plant known as the steelstem.
+					Its stem is comparable in strength to some of the strongest metals beneath the surface.
+					Sky-seafarers often resorted to explosives when tools with a more specific target failed.
+					Obviously, this changed when the secret of Procellarite had been cracked.
+					'''
 			}
 
 			ProcellaritePickaxe: {
 				DisplayName: Procellarite Pickaxe
-				Tooltip: ""
+				Tooltip:
+					'''
+					Procellarite is one of the strongest materials known to man.
+					Little exists that can break the ore of Procellarite, perhaps due to its properties of life.
+					However, an exception could be made for explosives.
+					'''
 			}
 
 			ShorebrassLure: {
@@ -1061,7 +1072,11 @@ Mods: {
 
 			Estoc: {
 				DisplayName: Estoc
-				Tooltip: Its point is small, and it may be weak, but it leaves an impact on its unfortunate targets.
+				Tooltip:
+					'''
+					Its point is small, and it may be weak from a damage standpoint, but it leaves an impact like no other.
+					Its knockback keeps enemies at bay.
+					'''
 			}
 
 			FashionableFragrance: {

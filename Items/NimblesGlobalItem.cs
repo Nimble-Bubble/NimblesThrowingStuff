@@ -107,17 +107,17 @@ namespace NimblesThrowingStuff.Items
             }
             if (item.type == ItemID.CelestialStone || item.type == ItemID.SunStone && Main.dayTime || item.type == ItemID.MoonStone && !Main.dayTime || item.type == ItemID.CelestialShell || item.type == ItemID.Gi || item.type == ItemID.CrystalNinjaLeggings)
             {
-                player.GetAttackSpeed(DamageClass.Melee) -= 0.1f;
+                player.GetAttackSpeed(DamageClass.Melee) -= 0.001f;
                 modPlayer.universalSpeed += 0.1f;
                 if (item.type == ItemID.CelestialShell && !Main.dayTime)
                 {
-                    player.GetAttackSpeed(DamageClass.Melee) -= 0.051f;
+                    player.GetAttackSpeed(DamageClass.Melee) -= 0.001f;
                     modPlayer.universalSpeed += 0.051f;
                 }
             }
             if (item.type == ItemID.MoonCharm && !Main.dayTime || item.type == ItemID.MoonShell && !Main.dayTime)
             {
-                player.GetAttackSpeed(DamageClass.Melee) -= 0.051f;
+                player.GetAttackSpeed(DamageClass.Melee) -= 0.001f;
                 modPlayer.universalSpeed += 0.051f;
             }
             #endregion
@@ -261,6 +261,7 @@ namespace NimblesThrowingStuff.Items
             recipe = Recipe.Create(ItemID.LavaFishingHook, 1);
             recipe.AddIngredient(ItemID.HellstoneBar, 8);
             recipe.AddIngredient(ItemID.Seashell, 1);
+            recipe.AddIngredient(ItemID.Hook, 1);
             recipe.AddTile(TileID.Hellforge);
             recipe.Register();
             recipe = Recipe.Create(ItemID.AngelStatue, 1);
