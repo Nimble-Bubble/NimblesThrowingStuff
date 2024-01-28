@@ -14,7 +14,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 		public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			// Tooltip.SetDefault("Its point is small, and it may be weak, but it leaves an impact on its unfortunate targets.");
 		}
 		public override void SetDefaults()
 		{

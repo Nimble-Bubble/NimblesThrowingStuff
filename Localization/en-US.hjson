@@ -771,7 +771,11 @@ Mods: {
 
 			ProcellariteOre: {
 				DisplayName: Procellarite Ore
-				Tooltip: ""
+				Tooltip:
+					'''
+					The alloy of procellarite is believed to have a kind of life to it
+					It is found in this alloy form naturally
+					'''
 			}
 
 			SteelBeam: {
@@ -824,12 +828,20 @@ Mods: {
 
 			DoradoHamaxe: {
 				DisplayName: Dorado Hamaxe
-				Tooltip: ""
+				Tooltip:
+					'''
+					The dragon finds itself in a golden land
+					Its wings have blades that carve with ease
+					'''
 			}
 
 			DoradoPickaxe: {
 				DisplayName: Dorado Pickaxe
-				Tooltip: ""
+				Tooltip:
+					'''
+					The dragon finds itself in a sea of gold
+					Its piercing claws leave it at ease
+					'''
 			}
 
 			MeteoriteDrill: {
@@ -954,7 +966,11 @@ Mods: {
 
 			AcrusLance: {
 				DisplayName: Acrus Lance
-				Tooltip: ""
+				Tooltip:
+					'''
+					A fearsome Lance made from the flesh of a regal leviathan
+					Has a chance to jolt its prey with electricity
+					'''
 			}
 
 			ActualLagoonLance: {
