@@ -62,44 +62,9 @@ Mods: {
 				Description: Defense boosted at the cost of reduced mobility
 			}
 
-			HermitaurBoost: {
-				DisplayName: Daimyo's Blessing
-				Description: Endurance increased by 25%
-			}
-
-			HexHammerBuff: {
-				DisplayName: Hexed Hammer
-				Description: The Breaker will fight for you
-			}
-
-			MiniSkyseaGuardianBuff: {
-				DisplayName: Your Sky-Sea Guardian
-				Description: It's rather self-explanatory
-			}
-
-			MossHornetBuff: {
-				DisplayName: Mini-Moss Hornet
-				Description: The collaborations of flora and fauna will fight for you
-			}
-
-			SporeballBuff: {
-				DisplayName: Spore Balls
-				Description: The poisonous spore balls will fight for you
-			}
-
-			ViolentClusterBuff: {
-				DisplayName: Violent Chopper
-				Description: Blood Lust Cluster will fight for you
-			}
-
 			GuardStinguard: {
 				DisplayName: Guard
 				Description: Put a thorn in your enemy's foot
-			}
-
-			NoFallDamageNonPotion: {
-				DisplayName: From Any Height
-				Description: You can fall without fear
 			}
 
 			GuardCarpatus: {
@@ -128,13 +93,48 @@ Mods: {
 			}
 
 			GuardShorebrass: {
-				DisplayName: Guard Shorebrass
-				Description: Mods.NimblesThrowingStuff.Buffs.GuardShorebrass.Description
+				DisplayName: Guard
+				Description: Defense boosted
 			}
 
 			GuardGate: {
-				DisplayName: Guard Gate
-				Description: Mods.NimblesThrowingStuff.Buffs.GuardGate.Description
+				DisplayName: Guard
+				Description: Defense boosted
+			}
+
+			HermitaurBoost: {
+				DisplayName: Daimyo's Blessing
+				Description: Endurance increased by 25%
+			}
+
+			HexHammerBuff: {
+				DisplayName: Hexed Hammer
+				Description: The Breaker will fight for you
+			}
+
+			MiniSkyseaGuardianBuff: {
+				DisplayName: Your Sky-Sea Guardian
+				Description: It's rather self-explanatory
+			}
+
+			MossHornetBuff: {
+				DisplayName: Mini-Moss Hornet
+				Description: The collaborations of flora and fauna will fight for you
+			}
+
+			NoFallDamageNonPotion: {
+				DisplayName: From Any Height
+				Description: You can fall without fear
+			}
+
+			SporeballBuff: {
+				DisplayName: Spore Balls
+				Description: The poisonous spore balls will fight for you
+			}
+
+			ViolentClusterBuff: {
+				DisplayName: Violent Chopper
+				Description: Blood Lust Cluster will fight for you
 			}
 		}
 
@@ -761,12 +761,20 @@ Mods: {
 
 			HadalShellstone: {
 				DisplayName: Deep Shellstone
-				Tooltip: Formed from a mixture of minerals and remains, this material has a remarkable deep tone to it.
+				Tooltip:
+					'''
+					Formed from a mixture of minerals and remains, this material has a remarkable deep tone to it.
+					Though it is unrelated to the underworld, it is still called 'hadal' by some for the depth at which it arises.
+					'''
 			}
 
 			ProcellariteBlock: {
 				DisplayName: Procellarite Block
-				Tooltip: ""
+				Tooltip:
+					'''
+					The alloy of procellarite is believed to have a kind of life to it
+					This life makes itself clear through the bright design of this building material
+					'''
 			}
 
 			ProcellariteOre: {
@@ -774,13 +782,17 @@ Mods: {
 				Tooltip:
 					'''
 					The alloy of procellarite is believed to have a kind of life to it
-					It is found in this alloy form naturally
+					It is found in this alloy-like form naturally
 					'''
 			}
 
 			SteelBeam: {
 				DisplayName: Steel Beam
-				Tooltip: ""
+				Tooltip:
+					'''
+					A fairly sturdy material for frames
+					Does not count as a column
+					'''
 			}
 
 			MorilusTrophy: {
@@ -799,8 +811,12 @@ Mods: {
 			}
 
 			HadalShellstoneWall: {
-				DisplayName: Hadal Shellstone Wall
-				Tooltip: ""
+				DisplayName: Deep Shellstone Wall
+				Tooltip:
+					'''
+					Formed from a mixture of minerals and remains, this material has a remarkable deep tone to it.
+					Though it is unrelated to the underworld, it is still called 'hadal' by some for the depth at which it arises.
+					'''
 			}
 
 			ClawspikePickaxe: {
