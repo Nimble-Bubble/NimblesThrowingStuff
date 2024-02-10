@@ -623,7 +623,11 @@ Mods: {
 
 			MorilusTreasureBag: {
 				DisplayName: Treasure Bag
-				Tooltip: "{$CommonItemTooltip.RightClickToOpen}"
+				Tooltip: 
+				'''
+				Contains valuable Sky-Sea treasures
+				{$CommonItemTooltip.RightClickToOpen}
+				'''
 			}
 
 			BatFlesh: {
@@ -1294,7 +1298,7 @@ Mods: {
 				DisplayName: Peco Teepee
 				Tooltip:
 					'''
-					Made from vibrant feathers, this gunlance gives its shells 
+					Made with vibrant feathers, this gunlance gives its shells a fierier flair
 					Right click while using to fire a shell
 					Guard and right click to reload
 					'''
@@ -1692,7 +1696,10 @@ Mods: {
 				Tooltip: ""
 			}
 
-			CrimtaneKnife.DisplayName: Crimtane Knife
+			CrimtaneKnife: {
+				DisplayName: Crimtane Knife
+				Tooltip: ""
+			}
 
 			CrystalFan: {
 				DisplayName: Crystal Fan
@@ -1875,7 +1882,7 @@ Mods: {
 				DisplayName: Poseiron's Trident
 				Tooltip:
 					'''
-					The weapon of an old marine god, thought to be lost
+					The weapon of an old god of the sea, thought to be lost
 					Summons bubbles that seek out targets
 					'''
 			}
