@@ -33,7 +33,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 			Recipe recipe = CreateRecipe(50);
 			recipe.AddIngredient(40, 50);
             recipe.AddIngredient(ModContent.ItemType<LagiacrusShell>(), 1);
-			recipe.AddTile(TileID.Anvils);
+			//recipe.AddTile(TileID.Anvils);
+			//Ammo usually isn't crafted at a station
 			recipe.Register();
 		}
 	}

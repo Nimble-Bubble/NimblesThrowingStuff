@@ -33,7 +33,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 			Recipe recipe = CreateRecipe(100);
 			recipe.AddIngredient(ModContent.ItemType<RedRathScale>(), 1);
             recipe.AddIngredient(ItemID.HellstoneBar, 1);
-			recipe.AddTile(TileID.Anvils);
 			recipe.Register();
 		}
 	}

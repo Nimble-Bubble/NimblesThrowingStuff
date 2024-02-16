@@ -33,7 +33,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 			Recipe recipe = CreateRecipe(50);
 			recipe.AddIngredient(ModContent.ItemType<RedRathScale>(), 1);
             recipe.AddIngredient(ItemID.MusketBall, 50);
-			recipe.AddTile(TileID.Anvils);
 			recipe.Register();
 		}
 	}

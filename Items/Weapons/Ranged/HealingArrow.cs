@@ -33,7 +33,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 			Recipe recipe = CreateRecipe(5);
 			recipe.AddIngredient(40, 5);
             recipe.AddIngredient(1330);
-			recipe.AddTile(TileID.Anvils);
 			recipe.Register();
 		}
 	}
