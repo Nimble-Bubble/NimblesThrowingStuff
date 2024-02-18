@@ -1538,6 +1538,15 @@ Mods: {
 					'''
 			}
 
+			SeaDart: {
+				DisplayName: Sea Dart
+				Tooltip:
+					'''
+					Shorebrass is rumored to have magical properties
+					Splits into two darts
+					'''
+			}
+
 			Seastring: {
 				DisplayName: Seastring
 				Tooltip: Fires a high-velocity watery arrow
@@ -1957,7 +1966,11 @@ Mods: {
 
 			TerraDagger: {
 				DisplayName: Terra Dagger
-				Tooltip: A knife of true legend with controlled flight
+				Tooltip:
+					'''
+					A knife of true legend with controlled flight
+					Find your own way to the knife
+					'''
 			}
 
 			ThornBall: {
@@ -2301,6 +2314,7 @@ Mods: {
 			WaraxeEcho.DisplayName: Hallowed Waraxe Echo
 			WhirlpoolWhammerProj.DisplayName: Whirlpool Whammer
 			MeteorRocketProj.DisplayName: Meteor Rocket Proj
+			SeaDartProj.DisplayName: Sea Dart Proj
 		}
 
 		Keybinds.Guard.DisplayName: Guard
