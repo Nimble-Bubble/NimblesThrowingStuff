@@ -1465,6 +1465,15 @@ Mods: {
 					'''
 			}
 
+			Autolantis: {
+				DisplayName: Autolantis
+				Tooltip:
+					'''
+					Fires an additional high-velocity watery arrow
+					Has a chance to fire yet another high-velocity watery arrow
+					'''
+			}
+
 			Autoquarian: {
 				DisplayName: Autoquarian
 				Tooltip: Sometimes fires a high-velocity watery arrow
