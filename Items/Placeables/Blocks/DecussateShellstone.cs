@@ -6,7 +6,7 @@ using Terraria.GameContent.Creative;
 
 namespace NimblesThrowingStuff.Items.Placeables.Blocks
 {
-	public class HadalShellstone : ModItem
+	public class DecussateShellstone : ModItem
 	{
         public override void SetStaticDefaults()
         {
@@ -19,12 +19,12 @@ namespace NimblesThrowingStuff.Items.Placeables.Blocks
 			Item.useTime = 6;
 			Item.useAnimation = 12;
 			Item.useStyle = 1;
-			Item.value = Item.buyPrice(0, 0, 2, 50);
+			Item.value = Item.buyPrice(0, 0, 7, 50);
 			Item.rare = ItemRarityID.LightPurple;
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
             Item.useTurn = true;
-            Item.createTile = ModContent.TileType<HadalShellstoneTile>();
+            Item.createTile = ModContent.TileType<DecussateShellstoneTile>();
             Item.consumable = true;
             Item.maxStack = 9999;
 		}

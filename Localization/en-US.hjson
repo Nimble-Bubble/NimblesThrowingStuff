@@ -763,6 +763,15 @@ Mods: {
 				Tooltip: Weakens small rathwyverns (but not large ones) in the vicinity
 			}
 
+			DecussateShellstone: {
+				DisplayName: Decussate Shellstone
+				Tooltip:
+					'''
+					Formed from a mixture of minerals and remains, this material has a remarkable deep tone to it.
+					It is named for the X-like pattern it commonly forms.
+					'''
+			}
+
 			HadalShellstone: {
 				DisplayName: Deep Shellstone
 				Tooltip:
@@ -2331,6 +2340,7 @@ Mods: {
 		Tiles: {
 			KelbiBanner.MapEntry: Kelbi Banner
 			SmallRathBanner.MapEntry: Small Rathwyvern Banner
+			DecussateShellstoneTile.MapEntry: Decussate Shellstone
 			HadalShellstoneTile.MapEntry: Deep Shellstone
 			ProcellariteBarTile.MapEntry: Procellarite Bar
 			ProcellariteBlockTile.MapEntry: Procellarite Block
