@@ -913,6 +913,16 @@ Mods: {
 				Tooltip: This pickaxe is lightweight, yet powerful.
 			}
 
+			CorvidToureMask: {
+				DisplayName: Toure Mask
+				Tooltip:
+					'''
+					A mask resembling a corvid
+					Called toures, turreys, tori, or scavengers
+					Perfect for cosplay?		
+					'''
+			}
+
 			LagiacrusMask: {
 				DisplayName: Lagiacrus Mask
 				Tooltip:
