@@ -1624,7 +1624,7 @@ Mods: {
 				DisplayName: Voltsender
 				Tooltip:
 					'''
-					Made from supple Lagiacrus parts, the coils on this bow do wonders for arrow velocity.
+					Made from Lagiacrus parts, the coils on this bow do wonders for arrow velocity.
 					Turns arrows into volt arrows which have a chance to electrify targets.
 					'''
 			}
@@ -1639,11 +1639,6 @@ Mods: {
 				Tooltip: Summons a small Guardian of the Sky-Sea
 			}
 
-			HexHammerTome: {
-				DisplayName: Hexed Hammer Tome
-				Tooltip: Summons a Breaker
-			}
-
 			MossyHornetStaff: {
 				DisplayName: Mossy Hornet Staff
 				Tooltip: Summons miniature moss hornets that fire stingers
@@ -1654,18 +1649,13 @@ Mods: {
 				Tooltip:
 					'''
 					Summons small, but poisonous living spore balls
-					The spore balls will sometimes leave small spores in their path
+					The spore balls will sometimes leave small, damaging spores in their path
 					'''
 			}
 
 			StardustWhip: {
 				DisplayName: Milkyway Cleaver
 				Tooltip: Born from stardust, this whip can tear through voids and worlds alike
-			}
-
-			ViolentClusterTome: {
-				DisplayName: Violent Chopper Tome
-				Tooltip: Summons a Blood Lust Cluster
 			}
 
 			AccursedFlask: {
@@ -1889,11 +1879,6 @@ Mods: {
 			NightPiercer: {
 				DisplayName: Night's Piercer
 				Tooltip: A legendary knife with controlled flight
-			}
-
-			ObsidianScalpel: {
-				DisplayName: Obsidian Scalpel
-				Tooltip: ""
 			}
 
 			OrichalcumHatchet: {
