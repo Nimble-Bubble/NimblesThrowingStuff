@@ -300,6 +300,15 @@ Mods: {
 				Tooltip: Increases minion damage by 9% and minion slots by 1
 			}
 
+			AzureRathalosHelm: {
+				DisplayName: Rath Soul Helm
+				Tooltip:
+					'''
+					Increases damage by 10%
+					Grants lava immunity
+					'''
+			}
+
 			BatBoots: {
 				DisplayName: Bat Boots
 				Tooltip: Increases thrown critical strike chance by 6%
@@ -2289,7 +2298,6 @@ Mods: {
 			NanoMissileExplosion.DisplayName: Nanosplosion
 			NanoMissileProj.DisplayName: Nanite Missile
 			NightPiercerProj.DisplayName: Night's Piercer
-			ObsidianScalpelProj.DisplayName: Obsidian Scalpel
 			OrichalcumHatchetProj.DisplayName: Orichalcum Hatchet
 			PalladiumShortspearProj.DisplayName: Palladium Shortspear
 			PiercerEcho.DisplayName: Night's Beam
