@@ -1087,6 +1087,15 @@ Mods: {
 					'''
 			}
 
+			Chainslaughter: {
+				DisplayName: Chainslaughter
+				Tooltip:
+					'''
+					A mechanical longsword born of an artisan's bold spirit
+					Its rotating blade may leave a shock
+					'''
+			}
+
 			ChlorophyteGreatlance: {
 				DisplayName: Chlorophyte Greatlance
 				Tooltip: ""
