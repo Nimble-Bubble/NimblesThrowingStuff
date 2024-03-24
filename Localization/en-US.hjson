@@ -127,6 +127,11 @@ Mods: {
 				Description: You can fall without fear
 			}
 
+			RailcannonCooldown: {
+				DisplayName: Railcannon Cooldown
+				Description: Did you pay attention to your positioning?
+			}
+
 			SporeballBuff: {
 				DisplayName: Spore Balls
 				Description: The poisonous spore balls will fight for you
@@ -1016,7 +1021,7 @@ Mods: {
 				DisplayName: Acrus Lance
 				Tooltip:
 					'''
-					A fearsome Lance made from the flesh of a regal leviathan
+					A fearsome lance made from the flesh of a regal leviathan
 					Has a chance to jolt its prey with electricity
 					'''
 			}
@@ -1529,6 +1534,15 @@ Mods: {
 			CopperPistol: {
 				DisplayName: Copper Pistol
 				Tooltip: ""
+			}
+
+			ElectricRailcannon: {
+				DisplayName: Electric Railcannon
+				Tooltip:
+					'''
+					Fires a high-damage electric beam
+					After use, it takes 16 seconds to cool down
+					'''
 			}
 
 			EltanineWave: {

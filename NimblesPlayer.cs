@@ -49,6 +49,7 @@ namespace NimblesThrowingStuff
         public bool drownDebuff;
         public int currentShells;
         public int bonusShells;
+        public bool railcannonCooldown;
         
         public override void ResetEffects()
         {
@@ -78,6 +79,7 @@ namespace NimblesThrowingStuff
         drownDebuff = false;
             //currentShells = 0;
             bonusShells = 0;
+        railcannonCooldown = false;
         }
         public override void UpdateDead()
         {
