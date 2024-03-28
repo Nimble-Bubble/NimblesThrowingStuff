@@ -9,6 +9,7 @@ using NimblesThrowingStuff.Items.Weapons.Melee;
 using CsvHelper.TypeConversion;
 using NimblesThrowingStuff.Tiles.Furniture;
 using NimblesThrowingStuff.Buffs;
+using NimblesThrowingStuff.Projectiles.Ranged;
 //using System.Numerics;
 
 namespace NimblesThrowingStuff.Items.Weapons.Ranged
@@ -31,8 +32,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 			Item.value = Item.buyPrice(40, 0, 0, 0);
 			Item.rare = ItemRarityID.Yellow;
 			Item.noMelee = true;
-			Item.UseSound = SoundID.Item5;
-			Item.shoot = ProjectileID.ShadowBeamFriendly;
+			Item.UseSound = SoundID.Zombie104;
+			Item.shoot = ModContent.ProjectileType<ElectricRailcannonProj>();
             Item.knockBack = 8f;
 			Item.shootSpeed = 5f;
 			Item.DamageType = DamageClass.Ranged;
