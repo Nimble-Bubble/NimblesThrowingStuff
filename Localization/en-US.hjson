@@ -1541,7 +1541,8 @@ Mods: {
 				Tooltip:
 					'''
 					Fires a high-damage electric beam
-					After use, it takes 16 seconds to cool down
+					After use, it takes quite a bit of time to cool down
+					The cooldown time is 16 seconds by default and is affected by ranged and universal attack speed
 					'''
 			}
 

@@ -23,7 +23,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 
 		public override void SetDefaults()
 		{
-			Item.damage = 640;
+			Item.damage = 800;
 			Item.width = 64;
 			Item.height = 32;
 			Item.useTime = 60;
@@ -46,8 +46,10 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
         }
 		public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback) 
         {
-			int cooldownTime = 960;
-			player.AddBuff(Item.buffType, cooldownTime);
+			var modPlayer = player.GetModPlayer<NimblesPlayer>();
+			int cooldownTime1 = (int) (960 / modPlayer.rangedSpeed);
+			int cooldownTime2 = (int) (cooldownTime1 / modPlayer.universalSpeed);
+			player.AddBuff(Item.buffType, cooldownTime2);
 		}
         public override void AddRecipes()
         {
