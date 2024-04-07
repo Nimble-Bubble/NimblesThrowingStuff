@@ -15,7 +15,6 @@ namespace NimblesThrowingStuff.Items.Accessories
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-            // Tooltip.SetDefault("Right clicks make an explosive misfire");
         }
         public override void SetDefaults()
         {

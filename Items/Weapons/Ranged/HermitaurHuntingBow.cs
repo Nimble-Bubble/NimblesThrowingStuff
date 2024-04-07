@@ -5,11 +5,13 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
 using NimblesThrowingStuff.Items.Materials;
+using Terraria.DataStructures;
 
 namespace NimblesThrowingStuff.Items.Weapons.Ranged
 {
 	public class HermitaurHuntingbow : ModItem
 	{
+		private bool penAdd;
 		public override void SetStaticDefaults()
         {
 			// DisplayName.SetDefault("Hermitaur Hunting Bow");
@@ -17,7 +19,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 		}
 		public override void SetDefaults()
 		{
-			Item.damage = 20;
+			Item.damage = 22;
 			Item.width = 34;
 			Item.height = 54;
 			Item.useTime = 32;
@@ -33,6 +35,17 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 			Item.shootSpeed = 9f;
 			Item.DamageType = DamageClass.Ranged;
 			Item.autoReuse = true;
+			penAdd = false;
+		}
+		public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+		{
+			int penetrateArrow = Projectile.NewProjectile(Item.GetSource_FromThis(), position, velocity, type, damage, knockback, Main.myPlayer);
+			if (!penAdd && Main.projectile[penetrateArrow].penetrate >= 1)
+			{
+			Main.projectile[penetrateArrow].penetrate += 2;
+			//penAdd = true;
+			}
+			return false;
 		}
 		public override void AddRecipes()
 		{

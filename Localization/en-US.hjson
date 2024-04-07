@@ -1566,8 +1566,12 @@ Mods: {
 			}
 
 			HermitaurHuntingbow: {
-				DisplayName: Hermitaur Hunting Bow
-				Tooltip: ""
+				DisplayName: Daimyo's Warbow
+				Tooltip:
+					'''
+					Modeled on Hermitaur pincers
+					Fired arrows can pierce through two more enemies than usual
+					'''
 			}
 
 			NecroRepeater: {
