@@ -1106,6 +1106,15 @@ Mods: {
 				Tooltip: ""
 			}
 
+			CogSpear: {
+				DisplayName: Cog Spear
+				Tooltip:
+					'''
+					A famed design in the east sea
+					Ignites enemies upon a critical strike
+					'''
+			}
+
 			CrystallineParadise: {
 				DisplayName: Crystalline Paradise
 				Tooltip: Contrary to its name, this long lance's tip is sure to bring suffering to anything it contacts.
@@ -2365,6 +2374,7 @@ Mods: {
 			WhirlpoolWhammerProj.DisplayName: Whirlpool Whammer
 			MeteorRocketProj.DisplayName: Meteor Rocket
 			SeaDartProj.DisplayName: Sea Dart
+			CogSpearProj.DisplayName: Cog Spear Proj
 		}
 
 		Keybinds.Guard.DisplayName: Guard
