@@ -10,7 +10,6 @@ using CsvHelper.TypeConversion;
 using NimblesThrowingStuff.Tiles.Furniture;
 using NimblesThrowingStuff.Buffs;
 using NimblesThrowingStuff.Projectiles.Ranged;
-//using System.Numerics;
 
 namespace NimblesThrowingStuff.Items.Weapons.Ranged
 {

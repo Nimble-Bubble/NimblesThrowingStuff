@@ -1103,7 +1103,13 @@ Mods: {
 
 			ChlorophyteGreatlance: {
 				DisplayName: Chlorophyte Greatlance
-				Tooltip: ""
+				Tooltip:
+					'''
+					A large lance with a natural design
+					Right click to fire a shell with a poisonous cloud
+					Guard and right click to charge
+					Up to six shells can be held at one time
+					'''
 			}
 
 			CogSpear: {

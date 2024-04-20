@@ -14,7 +14,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 		private bool penAdd;
 		public override void SetStaticDefaults()
         {
-			// DisplayName.SetDefault("Hermitaur Hunting Bow");
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 		public override void SetDefaults()
@@ -43,7 +42,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 			if (!penAdd && Main.projectile[penetrateArrow].penetrate >= 1)
 			{
 			Main.projectile[penetrateArrow].penetrate += 2;
-			//penAdd = true;
 			}
 			return false;
 		}
