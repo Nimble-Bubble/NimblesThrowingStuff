@@ -426,6 +426,30 @@ namespace NimblesThrowingStuff
             {
                 guardBonus += 45;
             }
+            if (Player.HasBuff(BuffID.Ironskin))
+            {
+                guardBonus += 8;
+            }
+            if (Player.HasBuff(BuffID.WellFed))
+            {
+                guardBonus += 4;
+            }
+            if (Player.HasBuff(BuffID.WellFed2))
+            {
+                guardBonus += 6;
+            }
+            if (Player.HasBuff(BuffID.WellFed3))
+            {
+                guardBonus += 8;
+            }
+            if (Player.HasBuff(BuffID.CatBast))
+            {
+                guardBonus += 10;
+            }
+            if (Player.HasBuff(BuffID.DryadsWard))
+            {
+                guardBonus += 8;
+            }
         }
     }
 }

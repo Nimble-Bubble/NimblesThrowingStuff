@@ -59,22 +59,39 @@ Mods: {
 
 			GuardIron: {
 				DisplayName: Guard
-				Description: Defense boosted at the cost of reduced mobility
+				Description:
+					'''
+					Defense boosted by 5 + your guard bonus 
+					Movement speed halved
+					'''
 			}
 
 			GuardStinguard: {
 				DisplayName: Guard
-				Description: Put a thorn in your enemy's foot
+				Description:
+					'''
+					Put a thorn in your enemy's foot
+					Defense boosted by guard bonus
+					'''
 			}
 
 			GuardCarpatus: {
 				DisplayName: Guard
-				Description: Protected by the spirit of the sky's sea
+				Description:
+					'''
+					Protected by the spirit of the sky's sea
+					Defense boosted by 50 + twice your guard bonus
+					'''
 			}
 
 			GuardWyvernshell: {
 				DisplayName: Guard
-				Description: In your element, heat
+				Description:
+					'''
+					Like the apex of the valleys
+					Defense boosted by 4 + twice your guard bonus
+					You are immune to standard fire
+					'''
 			}
 
 			GuardSightbringer: {
@@ -84,7 +101,12 @@ Mods: {
 
 			GuardWhirlpool: {
 				DisplayName: Guard
-				Description: Protected by the sea
+				Description:
+					'''
+					Like the apex of the seas
+					Defense boosted by 4 + your guard bonus
+					You are immune to electrification
+					'''
 			}
 
 			GuardianPotionBuff: {
