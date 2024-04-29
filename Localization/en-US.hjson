@@ -332,7 +332,25 @@ Mods: {
 				Tooltip:
 					'''
 					Increases damage by 10%
-					Grants lava immunity
+					Grants immunity to lava
+					'''
+			}
+
+			AzureRathalosGreaves: {
+				DisplayName: Rath Soul Greaves
+				Tooltip:
+					'''
+					Increases damage by 13%
+					Grants immunity to lava
+					'''
+			}
+
+			AzureRathalosMail: {
+				DisplayName: Rath Soul Mail
+				Tooltip:
+					'''
+					Increases damage by 17%
+					Grants immunity to lava
 					'''
 			}
 
