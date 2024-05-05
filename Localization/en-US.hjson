@@ -2153,6 +2153,15 @@ Mods: {
 					Has a chance to electrify targets
 					'''
 			}
+
+			ThousandLands: {
+				DisplayName: Thousand Lands
+				Tooltip: 
+				'''
+				Fires bullets at incredible speeds
+				Penetration power is boosted for regular ammo
+				'''
+			}
 		}
 
 		NPCs: {
