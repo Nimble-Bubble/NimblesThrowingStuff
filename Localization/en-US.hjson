@@ -1692,6 +1692,15 @@ Mods: {
 				Tooltip: Fires several stingers along with your arrow
 			}
 
+			StanDartNailgun: {
+				DisplayName: Dart-Based Nailgun
+				Tooltip:
+					'''
+					Uses darts and seeds instead of nails
+					Fires nails (or darts) rapidly
+					'''
+			}
+
 			TinPistol: {
 				DisplayName: Tin Pistol
 				Tooltip: ""
@@ -2156,11 +2165,11 @@ Mods: {
 
 			ThousandLands: {
 				DisplayName: Thousand Lands
-				Tooltip: 
-				'''
-				Fires bullets at incredible speeds
-				Penetration power is boosted for regular ammo
-				'''
+				Tooltip:
+					'''
+					Fires bullets at incredible speeds
+					Penetration power is boosted for regular ammo
+					'''
 			}
 		}
 
