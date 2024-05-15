@@ -7,7 +7,7 @@ using Terraria.Audio;
 using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.Enums;
-using NimblesThrowingStuff.Items.Weapons.Ranged;
+using NimblesThrowingStuff.Items.Weapons.Ranged.Ammo;
 
 namespace NimblesThrowingStuff.Projectiles.Ranged
 {

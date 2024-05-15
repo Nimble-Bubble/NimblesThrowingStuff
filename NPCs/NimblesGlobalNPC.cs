@@ -2,6 +2,7 @@ using NimblesThrowingStuff.Items.Accessories;
 using NimblesThrowingStuff.Items.Materials;
 using NimblesThrowingStuff.Items.Weapons.Throwing;
 using NimblesThrowingStuff.Items.Weapons.Ranged;
+using NimblesThrowingStuff.Items.Weapons.Ranged.Ammo;
 using NimblesThrowingStuff.Items.Weapons.Melee;
 using NimblesThrowingStuff.Buffs;
 using Microsoft.Xna.Framework;

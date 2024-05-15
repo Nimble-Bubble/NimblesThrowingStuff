@@ -8,6 +8,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 using NimblesThrowingStuff.Items.Materials;
+using NimblesThrowingStuff.Items.Weapons.Ranged.Ammo;
 using Terraria.DataStructures;
 using Terraria.GameContent.ItemDropRules;
 

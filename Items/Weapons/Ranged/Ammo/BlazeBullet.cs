@@ -5,7 +5,7 @@ using NimblesThrowingStuff.Projectiles.Ranged;
 using NimblesThrowingStuff.Items.Materials;
 using Terraria.GameContent.Creative;
 
-namespace NimblesThrowingStuff.Items.Weapons.Ranged
+namespace NimblesThrowingStuff.Items.Weapons.Ranged.Ammo
 {
 	public class BlazeBullet : ModItem
 	{

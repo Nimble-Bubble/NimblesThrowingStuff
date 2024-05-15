@@ -1674,7 +1674,12 @@ Mods: {
 
 			ShroomiteBullet: {
 				DisplayName: Shroomite Bullet
-				Tooltip: ""
+				Tooltip:
+					'''
+					Bounces off of walls and enemies
+					Can bounce up to ten times
+					Bounces reverse velocity
+					'''
 			}
 
 			ShroomiteShot: {
