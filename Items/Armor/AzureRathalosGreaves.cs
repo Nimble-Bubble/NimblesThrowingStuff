@@ -44,7 +44,7 @@ namespace NimblesThrowingStuff.Items.Armor
                 +"\nAdditionally, your critical strike chance is increased by 16%";
             player.lavaImmune = true;
             player.GetCritChance(DamageClass.Generic) += 16;
-            player.GetModPlayer<NimblesPlayer>().rathalosOnFire = true;
+            player.GetModPlayer<NimblesPlayer>().rathalosOnFire3 = true;
         }
         public override void AddRecipes()
         {

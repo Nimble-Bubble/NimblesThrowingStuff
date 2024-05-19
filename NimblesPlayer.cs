@@ -40,6 +40,7 @@ namespace NimblesThrowingStuff
         public bool miniGreek;
         public bool miniLocal;
         public bool rathalosOnFire;
+        public bool rathalosOnFire3;
         public bool rangeMisfire;
         public int whichShield;
         public int whichGuardSound;
@@ -71,6 +72,7 @@ namespace NimblesThrowingStuff
         miniGreek = false;
         miniLocal = false;
         rathalosOnFire = false;
+        rathalosOnFire3 = false;
         whichShield = 0;
         whichGuardSound = 0;
         rangeMisfire = false;

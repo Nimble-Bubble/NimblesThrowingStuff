@@ -26,18 +26,18 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 			Item.value = Item.buyPrice(1, 0, 0, 0);
 			Item.rare = ItemRarityID.Yellow;
 			Item.UseSound = SoundID.Item1;
-			Item.autoReuse = false;
+			Item.autoReuse = true;
 			Item.shoot = Mod.Find<ModProjectile>("TerraDaggerProj").Type;
 			Item.shootSpeed = 22.5f;
-            Item.mana = 50;
-            Item.channel = true;
+            Item.mana = 20;
+            Item.channel = false;
 		}
 		public override void AddRecipes() 
 		{
 			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(Mod.Find<ModItem>("TrueHallowedWaraxe").Type);
             recipe.AddIngredient(Mod.Find<ModItem>("TrueNightPiercer").Type);
-			recipe.AddIngredient(1570);
+			recipe.AddIngredient(ItemID.BrokenHeroSword);
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.Register();
 		}

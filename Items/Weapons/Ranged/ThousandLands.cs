@@ -51,12 +51,12 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 		}
 		public override void AddRecipes()
 		{
-			Recipe recipe = CreateRecipe();
+			/* Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.Musket);
 			recipe.AddIngredient(ItemID.SniperRifle);
 			recipe.AddIngredient(ItemID.MoltenFury, 2);
 			recipe.AddTile(ModContent.TileType<ProcellaritePressTile>());
-			recipe.Register();
+			recipe.Register(); */
 		}
         public override Vector2? HoldoutOffset()
 		{

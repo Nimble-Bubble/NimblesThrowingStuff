@@ -82,7 +82,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 		}
         public override void AddRecipes()
 		{
-			Recipe recipe = CreateRecipe();
+			/* Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ModContent.ItemType<KnightLance>(), 1);
 			recipe.AddRecipeGroup(nameof(ItemID.AdamantiteBar), 12);
 			recipe.AddIngredient(ItemID.HallowedBar, 12);
@@ -94,7 +94,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			recipe.AddIngredient(ItemID.Cog, 100);
 			recipe.AddIngredient(ItemID.HallowedBar, 20);
 			recipe.AddTile(TileID.MythrilAnvil);
-			recipe.Register();
+			recipe.Register(); */
 		}
 	}
 }
