@@ -17,9 +17,9 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 			Projectile.width = 30;
 			Projectile.height = 30;
 			Projectile.usesLocalNPCImmunity = true;
-			Projectile.localNPCHitCooldown = 60;
+			Projectile.localNPCHitCooldown = 750;
 			Projectile.tileCollide = true;
-			Projectile.penetrate = 2;
+			Projectile.penetrate = 2000;
 			Projectile.friendly = true;
 			Projectile.DamageType = DamageClass.Melee;
 			Projectile.extraUpdates = 0;
@@ -55,10 +55,11 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 
 		public override void ModifyHitNPC(NPC target, ref NPC.HitModifiers modifiers)
 		{
-        if (Projectile.damage > 1)
+        /* if (Projectile.damage > 1)
         {
             Projectile.damage = 0;
-        }
+        } */
+			Projectile.damage /= 2;
 			IsStickingToTarget = true; 
 			TargetWhoAmI = target.whoAmI; 
 			Projectile.velocity =
@@ -130,7 +131,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 			Projectile.ignoreWater = true; 
             Projectile.alpha += 1;
 			Projectile.tileCollide = false; 
-			const int aiFactor = 3; 
+			const int aiFactor = 5; 
 			Projectile.localAI[0] += 1f;
 			bool hitEffect = Projectile.localAI[0] % 30f == 0f;
 			int projTargetIndex = (int)TargetWhoAmI;
