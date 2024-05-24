@@ -225,6 +225,7 @@ namespace NimblesThrowingStuff.Items
             #endregion
             recipe = Recipe.Create(ItemID.MusketBall, 50);
             recipe.AddRecipeGroup("IronBar");
+            recipe.AddIngredient(ModContent.ItemType<HerbalGunpowder>(), 1);
             recipe.AddTile(TileID.Anvils);
             recipe.Register();
             recipe = Recipe.Create(ItemID.DepthMeter, 1);

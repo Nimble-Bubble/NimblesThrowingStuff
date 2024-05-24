@@ -744,6 +744,15 @@ Mods: {
 				Tooltip: These brilliant feathers freeze and get wet easily, but they are surprisingly fire-resistant.
 			}
 
+			HerbalGunpowder: {
+				DisplayName: Gunpowder
+				Tooltip:
+					'''
+					This dangerous chemical explodes when struck or heated.
+					Of course, this makes it very useful for creating weaponry.
+					'''
+			}
+
 			HermitaurShell: {
 				DisplayName: Hermitaur Shell
 				Tooltip:
