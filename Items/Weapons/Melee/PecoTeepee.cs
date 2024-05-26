@@ -43,6 +43,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 		{
 			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ModContent.ItemType<GreenQurupecoFeather>(), 6);
+			recipe.AddIngredient(ModContent.ItemType<HerbalGunpowder>(), 3);
 			recipe.AddRecipeGroup(nameof(ItemID.GoldBar), 12);
 			recipe.AddIngredient(ModContent.ItemType<Feathersting>());
 			recipe.AddTile(TileID.Anvils);
@@ -50,6 +51,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.Stinger, 6);
 			recipe.AddRecipeGroup(nameof(ItemID.DemoniteBar), 12);
+			recipe.AddIngredient(ModContent.ItemType<HerbalGunpowder>(), 6);
 			recipe.AddIngredient(ModContent.ItemType<GreenQurupecoFeather>(), 12);
 			recipe.AddTile(TileID.Anvils);
 			recipe.Register();
