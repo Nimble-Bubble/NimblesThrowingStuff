@@ -2,6 +2,7 @@ using System;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
+using Terraria.Audio;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
 using NimblesThrowingStuff.Items.Materials;
@@ -12,6 +13,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 {
 	public class StanDartNailgun : ModItem
 	{
+		SoundStyle UKNailgunFire = new SoundStyle("NimblesThrowingStuff/Sounds/Item/UKNailgunFire");
 		public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
@@ -28,7 +30,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 			Item.rare = ItemRarityID.Green;
 			Item.noMelee = true;
 			Item.useAmmo = AmmoID.Dart;
-			Item.UseSound = SoundID.Item98;
+			Item.UseSound = UKNailgunFire;
 			Item.shoot = ProjectileID.NailFriendly;
             Item.knockBack = 3f;
 			Item.shootSpeed = 11f;
@@ -38,6 +40,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 		public override void AddRecipes()
 		{
 			Recipe recipe = CreateRecipe();
+			recipe.AddIngredient(ItemID.AshBlock, 100);
 			recipe.AddIngredient(ItemID.AshBlock, 100);
 			recipe.AddIngredient(ItemID.IllegalGunParts);
 			recipe.AddTile(TileID.Anvils);
