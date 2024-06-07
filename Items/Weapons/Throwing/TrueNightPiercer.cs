@@ -31,7 +31,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 			Item.UseSound = SoundID.Item1;
 			Item.shoot = Mod.Find<ModProjectile>("TrueNightPiercerProj").Type;
 			Item.shootSpeed = 20f;
-            Item.mana = 50;
+            Item.mana = 20;
             Item.channel = true;
 		}
 
