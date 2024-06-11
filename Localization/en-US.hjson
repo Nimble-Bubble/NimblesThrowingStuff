@@ -2457,6 +2457,7 @@ Mods: {
 			MeteorRocketProj.DisplayName: Meteor Rocket
 			SeaDartProj.DisplayName: Sea Dart
 			CogSpearProj.DisplayName: Cog Spear Proj
+			EmptyFlaskProj.DisplayName: Empty Flask Proj
 		}
 
 		Keybinds.Guard.DisplayName: Guard
