@@ -867,6 +867,7 @@ Mods: {
 				Tooltip:
 					'''
 					A fairly sturdy material for frames
+					Resistant to lava
 					Does not count as a column
 					'''
 			}

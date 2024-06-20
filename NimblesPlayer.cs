@@ -79,8 +79,8 @@ namespace NimblesThrowingStuff
         guardState = false;
         guardBonus = 0;
         drownDebuff = false;
-            //currentShells = 0;
-            bonusShells = 0;
+        //currentShells = 0;
+        bonusShells = 0;
         railcannonCooldown = false;
         }
         public override void UpdateDead()
@@ -265,6 +265,7 @@ namespace NimblesThrowingStuff
         }
         public override void UpdateBadLifeRegen()
 		{
+            //don't question why guardState is being handled in UpdateBadLifeRegen()
     if (guardState)
     {
           switch (whichShield)

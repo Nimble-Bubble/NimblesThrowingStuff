@@ -12,7 +12,7 @@ namespace NimblesThrowingStuff.Tiles.Blocks
         {
             Main.tileMergeDirt[Type] = true;
             Main.tileSolid[Type] = true;
-            Main.tileLavaDeath[Type] = true;
+            Main.tileLavaDeath[Type] = false;
             Main.tileBlockLight[Type] = true;
             Main.tileMergeDirt[Type] = true;
 
@@ -20,7 +20,7 @@ namespace NimblesThrowingStuff.Tiles.Blocks
             LocalizedText name = CreateMapEntryName();
             // name.SetDefault("Steel Beam");
             AddMapEntry(new Color(122, 122, 142), name);
-            MineResist = 2f;
+            MineResist = 3f;
             DustType = 11;
             HitSound = SoundID.Tink;
         }
