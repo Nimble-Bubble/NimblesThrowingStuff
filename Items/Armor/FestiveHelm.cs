@@ -35,7 +35,7 @@ namespace NimblesThrowingStuff.Items.Armor
         }
         public override void UpdateArmorSet(Player player)
         {
-            player.setBonus = "You drop spike balls when hit, and your throwing damage is increased by 20%";
+            player.setBonus = "You drop festive spikeballs when hit, and your throwing damage is increased by 20%";
             var modPlayer = player.GetModPlayer<NimblesPlayer>();
             modPlayer.canSanta = true;
             player.GetDamage(DamageClass.Throwing) += 0.2f;

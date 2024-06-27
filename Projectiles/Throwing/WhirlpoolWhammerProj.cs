@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
+using Terraria.Audio;
 using Terraria.Enums;
 
 namespace NimblesThrowingStuff.Projectiles.Throwing
@@ -29,12 +30,21 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
         }
         public override void AI()
         {
-                Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width * 2, Projectile.height * 2, 226, 0f, 0f, 100, default(Color), 0.5f);
+                Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width / 2, Projectile.height / 2, 226, 0f, 0f, 100, default(Color), 0.5f);
         }
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
+            for (int il = 0; il < 10; il++)
+            {
+                Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, 226, 0f, 0f, 100, default(Color), 0.5f);
+            }
             if (Main.rand.NextBool(3))
             {
+                for (int il = 0; il < 15; il++)
+            {
+                Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width * 2, Projectile.height * 2, 226, 0f, 0f, 100, default(Color), 1f);
+            }
+                SoundEngine.PlaySound(SoundID.DD2_LightningBugZap);
                 target.AddBuff(BuffID.Electrified, 150);
             }
         }

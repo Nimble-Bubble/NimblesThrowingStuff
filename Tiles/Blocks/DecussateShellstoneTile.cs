@@ -18,7 +18,7 @@ namespace NimblesThrowingStuff.Tiles.Blocks
 
             RegisterItemDrop(ModContent.ItemType<DecussateShellstone>());
             LocalizedText name = CreateMapEntryName();
-            // name.SetDefault("Deep Shellstone");
+            // name.SetDefault("Decussate Shellstone");
             AddMapEntry(new Color(8, 72, 107), name);
             MineResist = 5.5f;
             MinPick = 180;
