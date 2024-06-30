@@ -35,6 +35,14 @@ namespace NimblesThrowingStuff.Items
                 item.defense = 20;
                 item.vanity = false;
             }
+            if (item.type == ItemID.Nail)
+            {
+                item.ammo = AmmoID.Dart;
+            }
+            if (item.type == ItemID.NailGun)
+            {
+                item.useAmmo = AmmoID.Dart;
+            }
         }
         public override bool CanRightClick(Item item)
         {
