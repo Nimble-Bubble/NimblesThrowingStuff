@@ -1850,7 +1850,11 @@ Mods: {
 
 			CrystalFan: {
 				DisplayName: Crystal Fan
-				Tooltip: ""
+				Tooltip:
+					'''
+					Contains several crystal knives
+					These crystal knives ignore enemy defense
+					'''
 			}
 
 			CumulusCrasher: {
@@ -2459,6 +2463,7 @@ Mods: {
 			SeaDartProj.DisplayName: Sea Dart
 			CogSpearProj.DisplayName: Cog Spear Proj
 			EmptyFlaskProj.DisplayName: Empty Flask Proj
+			CrystalBladeProj.DisplayName: Crystal Blade Proj
 		}
 
 		Keybinds.Guard.DisplayName: Guard

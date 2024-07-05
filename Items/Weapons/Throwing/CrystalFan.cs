@@ -14,12 +14,12 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 		}
 		public override void SetDefaults() 
 		{
-			Item.damage = 27;
+			Item.damage = 21;
 			Item.DamageType = DamageClass.Throwing;
 			Item.width = 36;
 			Item.height = 36;
-			Item.useTime = 16;
-			Item.useAnimation = 16;
+			Item.useTime = 12;
+			Item.useAnimation = 12;
 			Item.useStyle = 1;
 			Item.knockBack = 4f;
             Item.noMelee = true;
@@ -30,11 +30,10 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 			Item.autoReuse = true;
 			Item.shoot = Mod.Find<ModProjectile>("CrystalKnifeProj").Type;
 			Item.shootSpeed = 11f;
-            Item.mana = 10;
+            Item.mana = 7;
 		}
         public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
 		{
-
 				Vector2 perturbedSpeed = velocity.RotatedByRandom(MathHelper.ToRadians(20));
 			velocity = perturbedSpeed;
         }
