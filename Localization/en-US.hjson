@@ -1835,7 +1835,7 @@ Mods: {
 
 			CoralKnife: {
 				DisplayName: Coral Knife
-				Tooltip: These knives stick to enemies
+				Tooltip: Thrown knives stick to enemies
 			}
 
 			CosmosCrasher: {
