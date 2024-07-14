@@ -3,6 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
+using System.ComponentModel.DataAnnotations;
 
 namespace NimblesThrowingStuff.Items.Weapons.Throwing
 {
@@ -36,6 +37,11 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 		{
 				Vector2 perturbedSpeed = velocity.RotatedByRandom(MathHelper.ToRadians(20));
 			velocity = perturbedSpeed;
+			if (Main.rand.Next(100) <= player.GetCritChance<ThrowingDamageClass>())
+			{
+				type = Mod.Find<ModProjectile>("CrystalBladeProj").Type;
+				damage += damage / 2;
+            }
         }
         public override void AddRecipes()
         {

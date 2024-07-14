@@ -15,7 +15,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			// Tooltip.SetDefault("A fearsome lance made from Lagiacrus materials. Jolts its prey with electricity.");
         }
         public override void SetDefaults() {
 			Item.damage = 26;
