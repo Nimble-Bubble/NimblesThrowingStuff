@@ -2194,6 +2194,11 @@ Mods: {
 					Penetration power is boosted for regular ammo
 					'''
 			}
+
+			MeteorCannon: {
+				Tooltip: ""
+				DisplayName: Meteor Cannon
+			}
 		}
 
 		NPCs: {
