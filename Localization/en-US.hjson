@@ -2199,6 +2199,11 @@ Mods: {
 				Tooltip: ""
 				DisplayName: Meteor Cannon
 			}
+
+			Lagieye: {
+				Tooltip: ""
+				DisplayName: Lagieye
+			}
 		}
 
 		NPCs: {
