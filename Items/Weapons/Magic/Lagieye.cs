@@ -15,7 +15,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Magic
         public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			// Tooltip.SetDefault("Fires a wheel of rainwater");
             Item.staff[Item.type] = true;
 		}
 		public override void SetDefaults() 

@@ -2196,12 +2196,20 @@ Mods: {
 			}
 
 			MeteorCannon: {
-				Tooltip: ""
+				Tooltip:
+					'''
+					A heavy gun made from rare metals.
+					It is simple, but it displays immense power.
+					'''
 				DisplayName: Meteor Cannon
 			}
 
 			Lagieye: {
-				Tooltip: ""
+				Tooltip:
+					'''
+					This staff is designed to invoke the crimson stare of a Lagiacrus.
+					With that stare comes high-velocity bolts of electricity.
+					'''
 				DisplayName: Lagieye
 			}
 		}
