@@ -13,12 +13,12 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 		}
 		public override void SetDefaults() 
 		{
-			Item.damage = 60;
+			Item.damage = 72;
 			Item.DamageType = DamageClass.Throwing;
 			Item.width = 62;
 			Item.height = 62;
-			Item.useTime = 23;
-			Item.useAnimation = 23;
+			Item.useTime = 18;
+			Item.useAnimation = 18;
 			Item.useStyle = 1;
 			Item.knockBack = 8f;
             Item.noMelee = true;

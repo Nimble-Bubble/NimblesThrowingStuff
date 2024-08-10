@@ -27,7 +27,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
             Projectile.DamageType = DamageClass.Throwing;
             Projectile.aiStyle = 3;
             Projectile.penetrate = -1;
-            Projectile.extraUpdates = 3;
+            Projectile.extraUpdates = 2;
         }
         public override void AI() 
         {

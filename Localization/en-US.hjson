@@ -1038,6 +1038,15 @@ Mods: {
 					'''
 			}
 
+			Lagieye: {
+				Tooltip:
+					'''
+					This staff is designed to invoke the crimson stare of a Lagiacrus.
+					With that stare comes high-velocity bolts of electricity.
+					'''
+				DisplayName: Lagieye
+			}
+
 			ProcellariteStaff: {
 				DisplayName: Procellarite Staff
 				Tooltip:
@@ -1643,6 +1652,15 @@ Mods: {
 					'''
 			}
 
+			MeteorCannon: {
+				Tooltip:
+					'''
+					A heavy (dart)gun made from rare metals.
+					It is simple, but it displays immense power.
+					'''
+				DisplayName: Meteor Cannon
+			}
+
 			NecroRepeater: {
 				DisplayName: Necro Repeater
 				Tooltip: A rapidly-firing crossbow
@@ -1717,6 +1735,15 @@ Mods: {
 					'''
 					Uses darts and seeds instead of nails
 					Fires nails (or darts) rapidly
+					'''
+			}
+
+			ThousandLands: {
+				DisplayName: Thousand Lands
+				Tooltip:
+					'''
+					Fires bullets at incredible speeds
+					Penetration power is boosted for regular ammo
 					'''
 			}
 
@@ -1933,7 +1960,11 @@ Mods: {
 
 			HallowedWaraxe: {
 				DisplayName: Hallowed Waraxe
-				Tooltip: A hatchet of myth
+				Tooltip: 
+				'''
+				A hatchet of myth
+				Passes through tiles
+				'''
 			}
 
 			HellBonesAxe: {
@@ -2136,7 +2167,11 @@ Mods: {
 
 			TrueHallowedWaraxe: {
 				DisplayName: True Hallowed Waraxe
-				Tooltip: A refined hatchet of myth
+				Tooltip: 
+				'''
+				A refined hatchet of myth
+				Passes through tiles
+				'''
 			}
 
 			TrueNightPiercer: {
@@ -2184,33 +2219,6 @@ Mods: {
 					Designed to mimic the whirlpools that lagiacri use to hunt their prey
 					Has a chance to electrify targets
 					'''
-			}
-
-			ThousandLands: {
-				DisplayName: Thousand Lands
-				Tooltip:
-					'''
-					Fires bullets at incredible speeds
-					Penetration power is boosted for regular ammo
-					'''
-			}
-
-			MeteorCannon: {
-				Tooltip:
-					'''
-					A heavy gun made from rare metals.
-					It is simple, but it displays immense power.
-					'''
-				DisplayName: Meteor Cannon
-			}
-
-			Lagieye: {
-				Tooltip:
-					'''
-					This staff is designed to invoke the crimson stare of a Lagiacrus.
-					With that stare comes high-velocity bolts of electricity.
-					'''
-				DisplayName: Lagieye
 			}
 		}
 
