@@ -1935,7 +1935,11 @@ Mods: {
 
 			FireballBrew: {
 				DisplayName: Fireball Brew
-				Tooltip: When it breaks, it bursts into brilliant flames
+				Tooltip:
+					'''
+					A bottle themed after a flying wyvern of fire
+					When it breaks, it bursts into brilliant flames
+					'''
 			}
 
 			ForbiddenSmokeBomb: {
@@ -1960,11 +1964,11 @@ Mods: {
 
 			HallowedWaraxe: {
 				DisplayName: Hallowed Waraxe
-				Tooltip: 
-				'''
-				A hatchet of myth
-				Passes through tiles
-				'''
+				Tooltip:
+					'''
+					A hatchet of myth
+					Passes through tiles
+					'''
 			}
 
 			HellBonesAxe: {
@@ -2167,11 +2171,11 @@ Mods: {
 
 			TrueHallowedWaraxe: {
 				DisplayName: True Hallowed Waraxe
-				Tooltip: 
-				'''
-				A refined hatchet of myth
-				Passes through tiles
-				'''
+				Tooltip:
+					'''
+					A refined hatchet of myth
+					Passes through tiles
+					'''
 			}
 
 			TrueNightPiercer: {
@@ -2198,18 +2202,26 @@ Mods: {
 				Tooltip:
 					'''
 					This knife sticks to enemies
-					Additionally, it envenoms those same enemies
+					Its targets suffer from venom
 					'''
 			}
 
 			ViciousHarvest: {
 				DisplayName: Vicious Harvest
-				Tooltip: ""
+				Tooltip:
+					'''
+					This strange boomerang does not need to be in one's possession to be thrown
+					As a trade-off, it consumes mana
+					'''
 			}
 
 			VileHarvest: {
 				DisplayName: Vile Harvest
-				Tooltip: ""
+				Tooltip:
+					'''
+					This strange boomerang does not need to be in one's possession to be thrown
+					As a trade-off, it consumes mana
+					'''
 			}
 
 			WhirlpoolWhammer: {
@@ -2219,6 +2231,16 @@ Mods: {
 					Designed to mimic the whirlpools that lagiacri use to hunt their prey
 					Has a chance to electrify targets
 					'''
+			}
+
+			QueenBlaster: {
+				DisplayName: Queen Blaster
+				Tooltip: ""
+			}
+
+			GreenRathScale: {
+				Tooltip: ""
+				DisplayName: Green Rath Scale
 			}
 		}
 
@@ -2490,6 +2512,7 @@ Mods: {
 			CogSpearProj.DisplayName: Cog Spear Proj
 			EmptyFlaskProj.DisplayName: Empty Flask Proj
 			CrystalBladeProj.DisplayName: Crystal Blade Proj
+			PoisonArrowProj.DisplayName: Poison Arrow Proj
 		}
 
 		Keybinds.Guard.DisplayName: Guard
