@@ -14,8 +14,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 		public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			/* Tooltip.SetDefault("This marvel of technology can slice through shell and tear through flesh"
-				+ "\nCombustible rathwyvern powder gives regular arrows fiery power"); */
 		}
 
 		public override void SetDefaults()
@@ -39,11 +37,10 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 		}
         public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
 		{
-			if (type == 1)
+			if (type == ProjectileID.WoodenArrowFriendly)
 			{
 				type = ModContent.ProjectileType<PoisonArrowProj>();
 			}
-			//This is a horrendous-looking way of doing it
 		}
 		public override void AddRecipes()
 		{

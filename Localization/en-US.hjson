@@ -744,6 +744,15 @@ Mods: {
 				Tooltip: These brilliant feathers freeze and get wet easily, but they are surprisingly fire-resistant.
 			}
 
+			GreenRathScale: {
+				Tooltip:
+					'''
+					These scales, while heat-resistant, have a sting to them.
+					Could be used to give equipment a poisonous kick.
+					'''
+				DisplayName: Verdant Scale
+			}
+
 			HerbalGunpowder: {
 				DisplayName: Gunpowder
 				Tooltip:
@@ -784,7 +793,11 @@ Mods: {
 
 			RedRathScale: {
 				DisplayName: Vermilion Scale
-				Tooltip: The heat-related properties of this scale make it a must-have for equipment crafting.
+				Tooltip:
+					'''
+					The heat-related properties of this scale make it a must-have for equipment crafting.
+					It could be heat-resistant or it could be hot to the touch.
+					'''
 			}
 
 			RoyalFin: {
@@ -1690,6 +1703,15 @@ Mods: {
 					'''
 			}
 
+			QueenBlaster: {
+				DisplayName: Queen Blaster
+				Tooltip:
+					'''
+					This marvel of technology can slice through shell and tear through flesh
+					Rathwyvern thorns give wooden arrows a poisonous tip
+					'''
+			}
+
 			SeaDart: {
 				DisplayName: Sea Dart
 				Tooltip:
@@ -2231,16 +2253,6 @@ Mods: {
 					Designed to mimic the whirlpools that lagiacri use to hunt their prey
 					Has a chance to electrify targets
 					'''
-			}
-
-			QueenBlaster: {
-				DisplayName: Queen Blaster
-				Tooltip: ""
-			}
-
-			GreenRathScale: {
-				Tooltip: ""
-				DisplayName: Green Rath Scale
 			}
 		}
 
