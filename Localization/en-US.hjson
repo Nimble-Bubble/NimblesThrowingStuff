@@ -2254,6 +2254,16 @@ Mods: {
 					Has a chance to electrify targets
 					'''
 			}
+
+			WyvernBladeFall: {
+				DisplayName: Wyvern Blade Fall
+				Tooltip: ""
+			}
+
+			WyvernBladeLeaf: {
+				DisplayName: Wyvern Blade Leaf
+				Tooltip: ""
+			}
 		}
 
 		NPCs: {
