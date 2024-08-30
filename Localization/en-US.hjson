@@ -2264,6 +2264,11 @@ Mods: {
 				DisplayName: Wyvern Blade Leaf
 				Tooltip: ""
 			}
+
+			WyvernBladeSky: {
+				DisplayName: Wyvern Blade Sky
+				Tooltip: ""
+			}
 		}
 
 		NPCs: {

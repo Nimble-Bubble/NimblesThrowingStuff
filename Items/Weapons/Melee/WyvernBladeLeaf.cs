@@ -31,7 +31,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			Item.value = Item.buyPrice(0, 8, 0, 0);
             Item.DamageType = DamageClass.Melee;
 			Item.UseSound = SoundID.Item1;
-		}
+            Item.autoReuse = true;
+        }
         public override void MeleeEffects(Player player, Rectangle hitbox) 
         {
 			if (Main.rand.NextBool(5)) 
