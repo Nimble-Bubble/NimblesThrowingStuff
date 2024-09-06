@@ -32,6 +32,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
             Item.DamageType = DamageClass.Melee;
 			Item.UseSound = SoundID.Item1;
             Item.autoReuse = true;
+			Item.crit = 14;
         }
         public override void MeleeEffects(Player player, Rectangle hitbox) 
         {
