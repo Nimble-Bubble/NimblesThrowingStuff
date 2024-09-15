@@ -21,18 +21,18 @@ Mods: {
 			Lotteryboy: {
 				Content: All systems in check.
 				NoHome: No available housing detected nearby.
-				LoveSpace: This open space is quite nice.
+				LoveSpace: This open space is sufficiently nice.
 				FarFromHome: I am not meant to be here.
 				DislikeCrowded: Being around this many people is rather bothersome.
 				HateCrowded: Being around this many people is a pain.
 				LikeBiome: Thanks for putting me in such ideal conditions.
 				LoveBiome: I love it out here!
 				DislikeBiome: These aren't ideal conditions for a machine such as myself to be running in.
-				HateBiome: Why here of all places?
+				HateBiome: I hate it out here!
 				LikeNPC: "{NPCName} is a good user."
 				LoveNPC: As a machine meant for trade and quest-giving, I am not designed to love. {NPCName} has managed to overcome this barrier.
 				DislikeNPC: "{NPCName} doesn't seem to be much of a fair user."
-				HateNPC: "{NPCName} stole one of my capacitors. It's enough to make me blow a fuse."
+				HateNPC: "{NPCName} stole one of my capacitors. It's enough to make me blow a fuse. Rimshot."
 			}
 		}
 
@@ -1598,6 +1598,42 @@ Mods: {
 					'''
 			}
 
+			WyvernBladeAzure: {
+				DisplayName: Wyvern Blade (Azure)
+				Tooltip:
+					'''
+					This upgraded Rathalos longsword burns hotter than ever before.
+					Ignites enemies with azure flames on contact.
+					'''
+			}
+
+			WyvernBladeFall: {
+				DisplayName: Wyvern Blade (Fall)
+				Tooltip:
+					'''
+					A fiery longsword made from Rathalos materials.
+					Ignites enemies on contact.
+					'''
+			}
+
+			WyvernBladeLeaf: {
+				DisplayName: Wyvern Blade (Leaf)
+				Tooltip:
+					'''
+					A verdant longsword made from Rathian materials.
+					Poisons targets on contact.
+					'''
+			}
+
+			WyvernBladeSky: {
+				DisplayName: Wyvern Blade (Sky)
+				Tooltip:
+					'''
+					This Wyvern-scaled longsword hits with the force of its inspiration.
+					It can't fly on its own, but it still weaves through the air.
+					'''
+			}
+
 			Autolantis: {
 				DisplayName: Autolantis
 				Tooltip:
@@ -2253,26 +2289,6 @@ Mods: {
 					Designed to mimic the whirlpools that lagiacri use to hunt their prey
 					Has a chance to electrify targets
 					'''
-			}
-
-			WyvernBladeFall: {
-				DisplayName: Wyvern Blade Fall
-				Tooltip: ""
-			}
-
-			WyvernBladeLeaf: {
-				DisplayName: Wyvern Blade Leaf
-				Tooltip: ""
-			}
-
-			WyvernBladeSky: {
-				DisplayName: Wyvern Blade Sky
-				Tooltip: ""
-			}
-
-			WyvernBladeAzure: {
-				DisplayName: Wyvern Blade Azure
-				Tooltip: ""
 			}
 		}
 

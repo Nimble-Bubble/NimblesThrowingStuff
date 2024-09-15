@@ -19,10 +19,10 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
         public override void SetDefaults() {
-			Item.damage = 47;
+			Item.damage = 40;
 			Item.useStyle = ItemUseStyleID.Swing;
-			Item.useAnimation = 20;
-			Item.useTime = 20;
+			Item.useAnimation = 10;
+			Item.useTime = 10;
 			Item.knockBack = 5f;
 			Item.width = 64;
 			Item.height = 64;
