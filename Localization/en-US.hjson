@@ -1517,6 +1517,15 @@ Mods: {
 				Tooltip: Spreads spore clouds on use
 			}
 
+			ShroomitePartisan: {
+				DisplayName: Shroomite Partisan
+				Tooltip:
+					'''
+					An improved Chlorophyte Partisan
+					Fires a spore cloud on use
+					'''
+			}
+
 			SkyseaSpinner: {
 				DisplayName: Sky-Sea Spinner
 				Tooltip: A very agile yoyo that rains spikes upon its targets
@@ -2561,6 +2570,7 @@ Mods: {
 			EmptyFlaskProj.DisplayName: Empty Flask Proj
 			CrystalBladeProj.DisplayName: Crystal Blade Proj
 			PoisonArrowProj.DisplayName: Poison Arrow Proj
+			ShroomitePartisanProj.DisplayName: Shroomite Partisan Proj
 		}
 
 		Keybinds.Guard.DisplayName: Guard
