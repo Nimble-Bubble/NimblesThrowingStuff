@@ -31,8 +31,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			Item.value = Item.buyPrice(0, 16, 0, 0);
             Item.DamageType = DamageClass.Melee;
 			Item.UseSound = SoundID.Item1;
-			Item.shoot = ProjectileID.Muramasa;
-			Item.shootSpeed = 16f;
+			//Item.shoot = ProjectileID.Muramasa;
+			//Item.shootSpeed = 16f;
 			Item.autoReuse = true;
 		}
         public override void MeleeEffects(Player player, Rectangle hitbox) 

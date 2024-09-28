@@ -1608,7 +1608,7 @@ Mods: {
 			}
 
 			WyvernBladeAzure: {
-				DisplayName: Wyvern Blade (Azure)
+				DisplayName: Wyvern Blade "Azure"
 				Tooltip:
 					'''
 					This upgraded Rathalos longsword burns hotter than ever before.
@@ -1617,7 +1617,7 @@ Mods: {
 			}
 
 			WyvernBladeFall: {
-				DisplayName: Wyvern Blade (Fall)
+				DisplayName: Wyvern Blade "Fall"
 				Tooltip:
 					'''
 					A fiery longsword made from Rathalos materials.
@@ -1626,7 +1626,7 @@ Mods: {
 			}
 
 			WyvernBladeLeaf: {
-				DisplayName: Wyvern Blade (Leaf)
+				DisplayName: Wyvern Blade "Leaf"
 				Tooltip:
 					'''
 					A verdant longsword made from Rathian materials.
@@ -1635,7 +1635,7 @@ Mods: {
 			}
 
 			WyvernBladeSky: {
-				DisplayName: Wyvern Blade (Sky)
+				DisplayName: Wyvern Blade "Sky"
 				Tooltip:
 					'''
 					This Wyvern-scaled longsword hits with the force of its inspiration.

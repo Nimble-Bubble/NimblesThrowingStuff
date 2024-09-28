@@ -43,7 +43,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 		}
 		public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
 		{
-			if (!target.buffImmune[BuffID.OnFire])
+			if (!target.buffImmune[BuffID.Frostburn2])
 			{
 				for (int f = 0; f < 9; f++)
 				{
