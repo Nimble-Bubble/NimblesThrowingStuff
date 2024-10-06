@@ -727,7 +727,11 @@ Mods: {
 
 			FestiveCloth: {
 				DisplayName: Festive Cloth
-				Tooltip: A magical fabric taken from the jolly invaders
+				Tooltip:
+					'''
+					A magical fabric taken from the jolly invaders
+					Can be used to make festive equipment
+					'''
 			}
 
 			GrandBone: {
@@ -836,7 +840,7 @@ Mods: {
 
 			SmallRathBannerItem: {
 				DisplayName: Small Rathwyvern Banner
-				Tooltip: Weakens small rathwyverns (but not large ones) in the vicinity
+				Tooltip: Weakens small Rathwyverns (but not large ones) in the vicinity
 			}
 
 			DecussateShellstone: {
@@ -887,7 +891,11 @@ Mods: {
 
 			MorilusTrophy: {
 				DisplayName: Morilus Trophy
-				Tooltip: A chip of such power could only be encased in the finest of its own flesh.
+				Tooltip:
+					'''
+					A chip of such power could only be encased in the finest of its own flesh.
+					It may seem strange to call it flesh, but procellarite is believed to have a kind of life to it.
+					'''
 			}
 
 			ProcellaritePress: {
@@ -1421,7 +1429,7 @@ Mods: {
 					'''
 					From an abyss so old that most would call it a niwelnysse, this beast awakens
 					Right click while holding the gunlance out to fire a shell
-					Shells do 5/4 of the weapon's base damage
+					Shells do 125% (or 5/4) of the weapon's base damage
 					The maximum amount of shells for this weapon is 6 
 					Each reload gives you 2 shells
 					'''
