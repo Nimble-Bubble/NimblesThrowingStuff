@@ -2307,6 +2307,11 @@ Mods: {
 					Has a chance to electrify targets
 					'''
 			}
+
+			Morilance: {
+				Tooltip: ""
+				DisplayName: Morilance
+			}
 		}
 
 		NPCs: {
@@ -2579,6 +2584,7 @@ Mods: {
 			CrystalBladeProj.DisplayName: Crystal Blade Proj
 			PoisonArrowProj.DisplayName: Poison Arrow Proj
 			ShroomitePartisanProj.DisplayName: Shroomite Partisan Proj
+			MorilanceProj.DisplayName: Morilance Proj
 		}
 
 		Keybinds.Guard.DisplayName: Guard
