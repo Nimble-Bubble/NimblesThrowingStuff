@@ -34,6 +34,10 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged.Ammo
 			recipe.AddIngredient(40, 5);
             recipe.AddIngredient(1330);
 			recipe.Register();
+			recipe = CreateRecipe(5);
+			recipe.AddIngredient(40, 5);
+            recipe.AddIngredient(68);
+			recipe.Register();
 		}
 	}
 }

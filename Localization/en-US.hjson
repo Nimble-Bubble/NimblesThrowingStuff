@@ -1418,6 +1418,15 @@ Mods: {
 				DisplayName: Meteor Rocket
 			}
 
+			Morilance: {
+				Tooltip:
+					'''
+					A lance in the visage of a great guardian
+					Right click while attacking to fire a bolt of lightning
+					'''
+				DisplayName: Morilance
+			}
+
 			PaladinLance: {
 				DisplayName: Paladin Lance
 				Tooltip: A powerful and heavy lance known for its presence on the battlefield.
@@ -2306,11 +2315,6 @@ Mods: {
 					Designed to mimic the whirlpools that lagiacri use to hunt their prey
 					Has a chance to electrify targets
 					'''
-			}
-
-			Morilance: {
-				Tooltip: ""
-				DisplayName: Morilance
 			}
 		}
 
