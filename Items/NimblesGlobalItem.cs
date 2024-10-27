@@ -6,6 +6,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.Audio;
 using static Terraria.ModLoader.ModContent;
 using NimblesThrowingStuff.Items.Materials;
 using NimblesThrowingStuff.Items.Weapons.Ranged.Ammo;
@@ -63,6 +64,7 @@ namespace NimblesThrowingStuff.Items
         }
         else
         {
+            SoundEngine.PlaySound(SoundID.Item150);
             Gore.NewGore(player.GetSource_FromThis(), position, velocity, Main.rand.Next(11, 14), 1f);
         }
             return false;

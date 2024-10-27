@@ -417,6 +417,7 @@ namespace NimblesThrowingStuff
                 Player.lifeRegenTime = 0;
                 Player.lifeRegen -= 14;
             }
+            //guardBonus effects for buffs and debuffs
     if (Player.HasBuff(BuffID.BeetleEndurance1))
             {
                 guardBonus += 15;
@@ -452,6 +453,18 @@ namespace NimblesThrowingStuff
             if (Player.HasBuff(BuffID.DryadsWard))
             {
                 guardBonus += 8;
+            }
+            if (Player.HasBuff(BuffID.Tipsy))
+            {
+                guardBonus += 8;
+            }
+            if (Player.HasBuff(BuffID.BrokenArmor))
+            {
+                guardBonus /= 2;
+            }
+            if (Player.HasBuff(BuffID.WitheredArmor))
+            {
+                guardBonus /= 2;
             }
         }
     }
