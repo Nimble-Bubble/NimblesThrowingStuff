@@ -1896,7 +1896,7 @@ Mods: {
 
 			AdamantiteMallet: {
 				DisplayName: Adamantite Mallet
-				Tooltip: ""
+				Tooltip: Has a chance to drop as an item
 			}
 
 			Arachknife: {
@@ -1936,12 +1936,12 @@ Mods: {
 
 			CobaltShortspear: {
 				DisplayName: Cobalt Shortspear
-				Tooltip: ""
+				Tooltip: Has a chance to drop as an item
 			}
 
 			CopperKnife: {
 				DisplayName: Copper Knife
-				Tooltip: ""
+				Tooltip: Has a chance to drop as an item
 			}
 
 			CoralKnife: {
@@ -1951,12 +1951,16 @@ Mods: {
 
 			CosmosCrasher: {
 				DisplayName: Cosmos Crasher
-				Tooltip: ""
+				Tooltip:
+					'''
+					A cosmic enchanted blade
+					Swords will fly down from space towards the target
+					'''
 			}
 
 			CrimtaneKnife: {
 				DisplayName: Crimtane Knife
-				Tooltip: ""
+				Tooltip: Has a chance to drop as an item
 			}
 
 			CrystalFan: {
@@ -1970,12 +1974,16 @@ Mods: {
 
 			CumulusCrasher: {
 				DisplayName: Cumulus Crasher
-				Tooltip: ""
+				Tooltip:
+					'''
+					A vibrant enchanted dagger
+					Crashers will drop down from the sky towards the target
+					'''
 			}
 
 			DemoniteKnife: {
 				DisplayName: Demonite Knife
-				Tooltip: ""
+				Tooltip: Has a chance to drop as an item
 			}
 
 			DoradoBomb: {
@@ -2038,7 +2046,7 @@ Mods: {
 
 			GoldKnife: {
 				DisplayName: Gold Knife
-				Tooltip: ""
+				Tooltip: Has a chance to drop as an item
 			}
 
 			GolemGlove: {
@@ -2067,7 +2075,7 @@ Mods: {
 
 			IronKnife: {
 				DisplayName: Iron Knife
-				Tooltip: ""
+				Tooltip: Has a chance to drop as an item
 			}
 
 			LacusDecapitator: {
@@ -2081,7 +2089,7 @@ Mods: {
 
 			LeadKnife: {
 				DisplayName: Lead Knife
-				Tooltip: ""
+				Tooltip: Has a chance to drop as an item
 			}
 
 			LihzahrdSpikeKnife: {
@@ -2106,12 +2114,12 @@ Mods: {
 
 			MoltenKnife: {
 				DisplayName: Molten Knife
-				Tooltip: ""
+				Tooltip: Has a chance to drop as an item
 			}
 
 			MythrilHatchet: {
 				DisplayName: Mythril Hatchet
-				Tooltip: ""
+				Tooltip: Has a chance to drop as an item
 			}
 
 			NanoMissile: {
@@ -2126,21 +2134,17 @@ Mods: {
 
 			OrichalcumHatchet: {
 				DisplayName: Orichalcum Hatchet
-				Tooltip:
-					'''
-					Obsidian makes for a very fine blade
-					May inflict bleeding on targets
-					'''
+				Tooltip: Has a chance to drop as an item
 			}
 
 			PalladiumShortspear: {
 				DisplayName: Palladium Shortspear
-				Tooltip: ""
+				Tooltip: Has a chance to drop as an item
 			}
 
 			PlatinumKnife: {
 				DisplayName: Platinum Knife
-				Tooltip: ""
+				Tooltip: Has a chance to drop as an item
 			}
 
 			PoseironTrident: {
@@ -2192,7 +2196,7 @@ Mods: {
 
 			SilverKnife: {
 				DisplayName: Silver Knife
-				Tooltip: ""
+				Tooltip: Has a chance to drop as an item
 			}
 
 			Skelespear: {
@@ -2245,12 +2249,12 @@ Mods: {
 
 			TinKnife: {
 				DisplayName: Tin Knife
-				Tooltip: ""
+				Tooltip: Has a chance to drop as an item
 			}
 
 			TitaniumMallet: {
 				DisplayName: Titanium Mallet
-				Tooltip: ""
+				Tooltip: Has a chance to drop as an item
 			}
 
 			TrueHallowedWaraxe: {
@@ -2273,7 +2277,7 @@ Mods: {
 
 			TungstenKnife: {
 				DisplayName: Tungsten Knife
-				Tooltip: ""
+				Tooltip: Has a chance to drop as an item
 			}
 
 			UnholyHandGrenade: {
