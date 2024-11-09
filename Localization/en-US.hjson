@@ -1314,7 +1314,11 @@ Mods: {
 
 			GrandHalberd: {
 				DisplayName: Grand Halberd
-				Tooltip: Powerful enough to pierce steel.
+				Tooltip:
+					'''
+					Made of rare bones
+					Powerful enough to pierce steel
+					'''
 			}
 
 			GrowlingWyvern: {
@@ -1362,7 +1366,7 @@ Mods: {
 				Tooltip:
 					'''
 					A basic, but effective lance design.
-					Its weight is balanced by its power.
+					Its weight is justified by its power.
 					'''
 			}
 
@@ -1371,6 +1375,7 @@ Mods: {
 				Tooltip:
 					'''
 					Made with valuable ores, this lance can slice and thrust
+					Left click to thrust like a lance (as usual)
 					Right click to swing like a sword
 					'''
 			}
@@ -1890,7 +1895,7 @@ Mods: {
 			}
 
 			AccursedFlask: {
-				DisplayName: Cursed Flame-filled Throwing Flask
+				DisplayName: Accursed Throwing Flask
 				Tooltip: Explodes into clouds of cursed fire
 			}
 
@@ -2069,7 +2074,7 @@ Mods: {
 			}
 
 			IchoredFlask: {
-				DisplayName: Ichor-filled Throwing Flask
+				DisplayName: Ichorous Throwing Flask
 				Tooltip: Explodes into clouds of weakening ichor
 			}
 
@@ -2176,6 +2181,7 @@ Mods: {
 					'''
 					The power of a satellite condensed into a relatively portable weapon
 					Explodes on impact
+					Can't be used as a spear
 					'''
 			}
 

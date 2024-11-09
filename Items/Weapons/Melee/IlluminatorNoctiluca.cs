@@ -15,10 +15,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 		public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			// DisplayName.SetDefault("\"Noctiluca\" the Illuminator");
-			/* Tooltip.SetDefault("In the darkness of the night, \"Noctiluca\" gave them light."
-				+"\nCritical strikes and reloads build up energy"
-				+"\nRight click to fire an illuminous blast if accumulated energy is high enough"); */
 		}
 		public override void SetDefaults()
 		{
@@ -34,7 +30,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			Item.rare = ItemRarityID.Red;
 			Item.value = Item.buyPrice(0, 50, 0, 0);
 			Item.DamageType = DamageClass.Melee;
-			//Item.channel = true;
 			Item.shoot = ModContent.ProjectileType<IlluminatorNoctilucaProj>();
 			Item.shootSpeed = 14f;
 			Item.autoReuse = true;
