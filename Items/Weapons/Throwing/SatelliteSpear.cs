@@ -20,7 +20,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 			Item.height = 64;
 			Item.useTime = 25;
 			Item.useAnimation = 25;
-			Item.useStyle = 1;
+			Item.useStyle = ItemUseStyleID.Swing;
 			Item.value = Item.buyPrice(1, 25, 0, 0);
 			Item.rare = ItemRarityID.Red;
 			Item.noMelee = true;

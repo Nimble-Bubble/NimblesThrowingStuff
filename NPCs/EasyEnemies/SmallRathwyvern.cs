@@ -48,7 +48,7 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
             NPC.HitSound = SmallRathHurtNoise;
             NPC.DeathSound = SmallRathKillNoise;
             NPC.buffImmune[31] = true;
-            NPC.scale = 1.1f;
+            NPC.scale = 1f;
             Banner = NPC.type;
             BannerItem = Mod.Find<ModItem>("SmallRathBannerItem").Type;
         }
@@ -97,7 +97,7 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
         }
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            return SpawnCondition.Underworld.Chance * 0.375f;
+            return SpawnCondition.Underworld.Chance * 0.5f;
         }
         private void Target()
         {
@@ -213,14 +213,10 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
                 }
             }
         }
-        /* public override void OnKill()
-        {
-            
-            Item.NewItem(NPC.GetSource_FromThis(), (int)NPC.position.X, (int)NPC.position.Y, NPC.width, NPC.height, Mod.Find<ModItem>("RedRathScale").Type, Main.rand.Next(1, 3));
-        } */
         public override void ModifyNPCLoot(NPCLoot npcLoot)
         {
             npcLoot.Add(ItemDropRule.Common(Mod.Find<ModItem>("RedRathScale").Type, 1, 1, 2));
+            npcLoot.Add(ItemDropRule.Common(Mod.Find<ModItem>("BeastBone").Type, 2));
         }
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
         {

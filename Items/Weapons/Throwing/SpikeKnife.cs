@@ -19,7 +19,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 			Item.height = 20;
 			Item.useTime = 15;
 			Item.useAnimation = 15;
-			Item.useStyle = 1;
+			Item.useStyle = ItemUseStyleID.Swing;
 			Item.knockBack = 4.5f;
             Item.noMelee = true;
             Item.noUseGraphic = true;
