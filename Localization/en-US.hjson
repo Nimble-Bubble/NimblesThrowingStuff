@@ -1327,6 +1327,7 @@ Mods: {
 					'''
 					A drill-like lance that pierces into the veins of fiends.
 					May cause bleeding.
+					Defense is increased by 12 while in use
 					'''
 			}
 
@@ -1367,6 +1368,7 @@ Mods: {
 					'''
 					A basic, but effective lance design.
 					Its weight is justified by its power.
+					Defense is increased by 3 while in use
 					'''
 			}
 
@@ -1433,8 +1435,12 @@ Mods: {
 			}
 
 			PaladinLance: {
-				DisplayName: Paladin Lance
-				Tooltip: A powerful and heavy lance known for its presence on the battlefield.
+				DisplayName: Rampart
+				Tooltip:
+					'''
+					A powerful and heavy lance known for its great presence on the battlefield.
+					Boosts defense by 8 while in use
+					'''
 			}
 
 			PanthalassicGunlance: {
