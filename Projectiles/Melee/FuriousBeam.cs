@@ -41,7 +41,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
 		}
         public override void OnHitNPC (NPC target, NPC.HitInfo hit, int damageDone)
         {
-			target.AddBuff(189, 750);
+			target.AddBuff(BuffID.Daybreak, 750);
             int splode = Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, 0, 0,
             612, Projectile.damage, 6f, Projectile.owner, 0, (float) Main.rand.Next(-1, 1));
             Main.projectile[splode].usesLocalNPCImmunity = true;

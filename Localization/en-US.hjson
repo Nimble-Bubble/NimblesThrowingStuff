@@ -1309,7 +1309,12 @@ Mods: {
 
 			FuriousFalchion: {
 				DisplayName: Furious Falchion
-				Tooltip: ""
+				Tooltip:
+					'''
+					A greatsword imbued with the power of the sun
+					Fires multiple sword-shaped beams
+					Targets are set ablaze with stellar flames
+					'''
 			}
 
 			GrandHalberd: {
@@ -1357,8 +1362,9 @@ Mods: {
 				Tooltip:
 					'''
 					In the darkness of the night, "Noctiluca" gave them light.
-					Critical strikes and reloads build up energy
-					Right click to fire an illuminous blast if accumulated energy is high enough
+					This lance can store up to 25 shell-like units of energy
+					Reloading builds 1 unit of energy, while critical strikes grant 2 units
+					Right click to fire an illuminous blast if accumulated energy is more than 20
 					'''
 			}
 
@@ -1379,6 +1385,7 @@ Mods: {
 					Made with valuable ores, this lance can slice and thrust
 					Left click to thrust like a lance (as usual)
 					Right click to swing like a sword
+					Defense is increased by 20 while in use as a lance
 					'''
 			}
 
