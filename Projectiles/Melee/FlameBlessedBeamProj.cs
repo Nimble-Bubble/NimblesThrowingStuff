@@ -37,7 +37,7 @@ namespace NimblesThrowingStuff.Projectiles.Melee
         }
         public override void OnHitNPC (NPC target, NPC.HitInfo hit, int damageDone)
         {
-			target.AddBuff(24, 300);
+			target.AddBuff(BuffID.OnFire, 300);
         }
     }
 }

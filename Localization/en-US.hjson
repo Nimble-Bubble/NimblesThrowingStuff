@@ -1244,7 +1244,11 @@ Mods: {
 
 			DemonLance: {
 				DisplayName: Demonite Lance
-				Tooltip: Cthulhu's hardened flesh brings out the best in shortswords.
+				Tooltip:
+					'''
+					This hardened flesh brings out the best in metalwork
+					Curiously light, but still powerful
+					'''
 			}
 
 			Estoc: {
@@ -1277,7 +1281,12 @@ Mods: {
 
 			FlameBlessedBroadsword: {
 				DisplayName: Flame-Blessed Broadsword
-				Tooltip: ""
+				Tooltip:
+					'''
+					Enhanced with Hellstone, this Enchanted Sword has gained a new power
+					Fires a red-hot sword beam
+					Both the sword and the beam will catch targets on fire
+					'''
 			}
 
 			FortressBreaker: {
@@ -1294,7 +1303,8 @@ Mods: {
 				Tooltip:
 					'''
 					A lance modeled after a flower bud. It matches its cute exterior with a pleasant odor.
-					...Pleasant enough to you, at least. Right click while attacking to fire a damaging spore cloud.
+					...Pleasant enough to you, at least. 
+					Right click while attacking to fire a damaging spore cloud.
 					'''
 			}
 
