@@ -1122,7 +1122,11 @@ Mods: {
 
 			AquarianWatercutter: {
 				DisplayName: Aquarian Watercutter
-				Tooltip: Fires a jet of water upon hitting a target
+				Tooltip:
+					'''
+					An impressive sword with strong elemental properties
+					Fires a jet of water upon hitting a target
+					'''
 			}
 
 			Ascalon: {
@@ -1139,7 +1143,7 @@ Mods: {
 				DisplayName: Atlantis Gunlance
 				Tooltip:
 					'''
-					From the depths of the abyss comes this feared beast...
+					From the depths of the abyss comes this feared beast
 					Right click while holding the gunlance out to fire a shell. Shells do 5/4 of the weapon's base damage.
 					This gunlance holds up to 3 shells. Each reload gives you 1 shell.
 					'''
@@ -1149,7 +1153,9 @@ Mods: {
 				DisplayName: Bloody Syringe
 				Tooltip:
 					'''
-					AB is a universal recipient. O is a universal donor. This is a universal source of pain.
+					AB is a universal recipient. 
+					O is a universal donor. 
+					This is a universal source of pain.
 					Right click while holding the lance out to fire a stream of blood.
 					'''
 			}
@@ -1158,7 +1164,7 @@ Mods: {
 				DisplayName: Blue Tail
 				Tooltip:
 					'''
-					A jeweled Lance at the forefront of fire weapon manufacturing technology.
+					A jeweled lance at the forefront of fire weapon manufacturing technology.
 					Right click to spew azure flames from the tip of the lance.
 					'''
 			}
