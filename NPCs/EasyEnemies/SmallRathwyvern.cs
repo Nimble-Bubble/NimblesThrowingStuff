@@ -34,13 +34,13 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
 
         public override void SetDefaults()
         {
-            NPC.lifeMax = 120;
+            NPC.lifeMax = 80;
             NPC.damage = 30;
             NPC.defense = 7;
-            NPC.knockBackResist = 0.7f;
+            NPC.knockBackResist = 0.5f;
             NPC.width = 40;
             NPC.height = 40;
-            NPC.value = 1200f;
+            NPC.value = 800f;
             NPC.lavaImmune = true;
             NPC.onFire = false;
             NPC.noGravity = true;
@@ -164,7 +164,7 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
         }
         public override void ApplyDifficultyAndPlayerScaling(int numPlayers, float balance, float bossAdjustment)/* tModPorter Note: bossLifeScale -> balance (bossAdjustment is different, see the docs for details) */
         {
-            NPC.lifeMax = 200;
+            NPC.lifeMax = 120;
             NPC.damage = 50;
         }
         public override void FindFrame(int frameHeight)
