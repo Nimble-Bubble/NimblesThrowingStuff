@@ -19,7 +19,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 
 		public override void SetDefaults()
 		{
-			Item.damage = 96;
+			Item.damage = 126;
 			Item.width = 68;
 			Item.height = 24;
 			Item.useTime = 8;
