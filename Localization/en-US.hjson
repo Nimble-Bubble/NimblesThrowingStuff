@@ -44,7 +44,7 @@ Mods: {
 
 			CompromisedStructure: {
 				DisplayName: Compromised Structure
-				Description: If it can't fly, now it can.
+				Description: Knockback resistance reduced
 			}
 
 			GreekFire: {
@@ -54,7 +54,7 @@ Mods: {
 
 			GuardHorrorshow: {
 				DisplayName: Guard?
-				Description: Nothing can hit you. You can hit nothing. Is all well? All is well.
+				Description: Defense boosted?
 			}
 
 			GuardIron: {
@@ -111,7 +111,7 @@ Mods: {
 
 			GuardianPotionBuff: {
 				DisplayName: Guardian
-				Description: Guard power boosted by 25
+				Description: Guard power (bonus guard defense) boosted by 25
 			}
 
 			GuardShorebrass: {
