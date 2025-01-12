@@ -74,13 +74,13 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
 
                 if (NPC.velocity.X > 0)
                 {
-                    bararata = 18;
-                    int num54 = Projectile.NewProjectile(NPC.GetSource_FromThis(), vector8.X + bararata, vector8.Y, (float)((Math.Cos(rotation) * Speed) * -1), (float)((Math.Sin(rotation) * Speed) * -1), type, damage, 0f, 0);
+                    //bararata = 18;
+                    int num54 = Projectile.NewProjectile(NPC.GetSource_FromThis(), vector8.X + 18, vector8.Y, (float)((Math.Cos(rotation) * Speed) * -1), (float)((Math.Sin(rotation) * Speed) * -1), type, damage, 0f, 0);
                 }
                 else
                 {
-                    bararata = -18;
-                    int num54 = Projectile.NewProjectile(NPC.GetSource_FromThis(), vector8.X + bararata, vector8.Y, (float)((Math.Cos(rotation) * Speed) * -1), (float)((Math.Sin(rotation) * Speed) * -1), type, damage, 0f, 0);
+                    //bararata = -18;
+                    int num54 = Projectile.NewProjectile(NPC.GetSource_FromThis(), vector8.X - 18, vector8.Y, (float)((Math.Cos(rotation) * Speed) * -1), (float)((Math.Sin(rotation) * Speed) * -1), type, damage, 0f, 0);
                 }
                 }
             if (NPC.ai[1] >= 240)
