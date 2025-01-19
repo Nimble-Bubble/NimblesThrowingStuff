@@ -22,13 +22,11 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
     {
         private Player player;
         private float speed;
-        private int bararata;
         SoundStyle SmallRathHurtNoise = new SoundStyle("NimblesThrowingStuff/Sounds/NPCHit/SmallRathHurt");
         SoundStyle SmallRathKillNoise = new SoundStyle("NimblesThrowingStuff/Sounds/NPCKilled/SmallRathKill");
         SoundStyle SmallRathFireNoise = new SoundStyle("NimblesThrowingStuff/Sounds/Item/SmallRathFire");
         public override void SetStaticDefaults()
         {
-            // DisplayName.SetDefault("Small Rathwyvern");
             Main.npcFrameCount[NPC.type] = 10;
         }
 
@@ -74,12 +72,10 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
 
                 if (NPC.velocity.X > 0)
                 {
-                    //bararata = 18;
                     int num54 = Projectile.NewProjectile(NPC.GetSource_FromThis(), vector8.X + 18, vector8.Y, (float)((Math.Cos(rotation) * Speed) * -1), (float)((Math.Sin(rotation) * Speed) * -1), type, damage, 0f, 0);
                 }
                 else
                 {
-                    //bararata = -18;
                     int num54 = Projectile.NewProjectile(NPC.GetSource_FromThis(), vector8.X - 18, vector8.Y, (float)((Math.Cos(rotation) * Speed) * -1), (float)((Math.Sin(rotation) * Speed) * -1), type, damage, 0f, 0);
                 }
                 }
@@ -92,7 +88,6 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
         }
         public override bool PreDraw(SpriteBatch spriteBatch, Vector2 screenPos, Color drawColor)
         {
-            //SpriteEffects effects = npc.spriteDirection > 0 ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
             return true;
         }
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
