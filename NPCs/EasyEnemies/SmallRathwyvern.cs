@@ -218,7 +218,7 @@ namespace NimblesThrowingStuff.NPCs.EasyEnemies
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheUnderworld,
-                new FlavorTextBestiaryInfoElement("These small flying wyverns will one day grow up to be fierce apex predators.")
+                new FlavorTextBestiaryInfoElement("These small flying wyverns will one day grow up to be fierce apex predators, but they are minor threats in this stage of life.")
             });
         }
     }
