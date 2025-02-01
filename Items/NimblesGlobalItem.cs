@@ -280,6 +280,12 @@ namespace NimblesThrowingStuff.Items
             recipe.AddIngredient(ItemID.StoneBlock, 50);
             recipe.AddTile(TileID.HeavyWorkBench);
             recipe.Register();
+            recipe = Recipe.Create(ItemID.Code2, 1);
+            recipe.AddIngredient(ItemID.Code1);
+            recipe.AddRecipeGroup(nameof(ItemID.AdamantiteBar), 18);
+            recipe.AddIngredient(ItemID.CompanionCube);
+            recipe.AddTile(TileID.MythrilAnvil);
+            recipe.Register();
         }
     }
 }

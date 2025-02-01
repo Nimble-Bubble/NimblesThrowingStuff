@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NimblesThrowingStuff")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3542ff0c658e497e231418ba3f7e8553b2a260a9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4fb7d615020c08f0b792f24ad36074384a107498")]
 [assembly: System.Reflection.AssemblyProductAttribute("NimblesThrowingStuff")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NimblesThrowingStuff")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
