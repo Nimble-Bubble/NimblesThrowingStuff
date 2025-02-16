@@ -41,7 +41,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 		{
 			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.AshBlock, 100);
-			recipe.AddIngredient(ItemID.AshBlock, 100);
+			recipe.AddIngredient(ItemID.NaturesGift);
+			recipe.AddIngredient(ItemID.JungleRose);
 			recipe.AddIngredient(ItemID.IllegalGunParts);
 			recipe.AddTile(TileID.Anvils);
 			recipe.Register();

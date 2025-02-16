@@ -36,7 +36,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
         }
         public override void MeleeEffects(Player player, Rectangle hitbox) 
         {
-			if (Main.rand.NextBool(6)) 
+			if (Main.rand.NextBool(2)) 
             {
 				int dust = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, 6);
 			}
@@ -45,7 +45,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 		{
 			if (!target.buffImmune[BuffID.OnFire])
 			{
-				for (int f = 0; f < 9; f++)
+				for (int f = 0; f < 15; f++)
 				{
 					int fireIndex2 = Dust.NewDust(new Vector2(target.position.X, target.position.Y), target.width, target.height, 6, 0f, 0f, 100, default(Color), 3f);
 					Main.dust[fireIndex2].velocity *= 6f;
