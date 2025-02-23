@@ -293,6 +293,18 @@ namespace NimblesThrowingStuff.Items
             recipe.AddIngredient(ItemID.AngelHalo);
             recipe.AddTile(TileID.MythrilAnvil);
             recipe.Register();
+            recipe = Recipe.Create(ItemID.EnchantedSword, 1);
+            recipe.AddIngredient(ItemID.WoodenSword);
+            recipe.AddIngredient(ItemID.FallenStar, 5);
+            recipe.AddIngredient(ItemID.Diamond);
+            recipe.AddTile(TileID.Anvils);
+            recipe.Register();
+            recipe = Recipe.Create(ItemID.BeamSword, 1);
+            recipe.AddIngredient(ItemID.EnchantedSword);
+            recipe.AddIngredient(ItemID.PixieDust, 20);
+            recipe.AddIngredient(ItemID.Bone, 10);
+            recipe.AddTile(TileID.Anvils);
+            recipe.Register();
         }
     }
 }
