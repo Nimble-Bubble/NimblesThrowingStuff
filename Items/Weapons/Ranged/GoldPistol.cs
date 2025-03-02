@@ -34,7 +34,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 		public override void AddRecipes()
 		{
 			Recipe recipe = CreateRecipe();
-			recipe.AddIngredient(ItemID.GoldBar, 8);
+			recipe.AddIngredient(ItemID.GoldBar, 10);
 			recipe.AddIngredient(ItemID.Ruby, 8);
 			recipe.AddTile(TileID.Anvils);
 			recipe.Register();

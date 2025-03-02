@@ -303,7 +303,7 @@ namespace NimblesThrowingStuff.Items
             recipe.AddIngredient(ItemID.EnchantedSword);
             recipe.AddIngredient(ItemID.PixieDust, 20);
             recipe.AddIngredient(ItemID.Bone, 10);
-            recipe.AddTile(TileID.Anvils);
+            recipe.AddTile(TileID.MythrilAnvil);
             recipe.Register();
         }
     }
