@@ -305,6 +305,40 @@ namespace NimblesThrowingStuff.Items
             recipe.AddIngredient(ItemID.Bone, 10);
             recipe.AddTile(TileID.MythrilAnvil);
             recipe.Register();
+            recipe = Recipe.Create(ItemID.VenusMagnum, 1);
+            recipe.AddIngredient(ItemID.Revolver);
+            recipe.AddIngredient(ItemID.ChlorophyteBar, 12);
+            recipe.AddIngredient(ItemID.Ectoplasm, 5);
+            recipe.AddTile(TileID.MythrilAnvil);
+            recipe.Register();
+            recipe = Recipe.Create(ItemID.NettleBurst, 1);
+            recipe.AddIngredient(ItemID.Vilethorn);
+            recipe.AddIngredient(ItemID.RubyStaff);
+            recipe.AddIngredient(ItemID.ChlorophyteBar, 12);
+            recipe.AddIngredient(ItemID.Ectoplasm, 5);
+            recipe.AddTile(TileID.MythrilAnvil);
+            recipe.Register();
+            recipe = Recipe.Create(ItemID.NettleBurst, 1);
+            recipe.AddIngredient(ItemID.Vilethorn);
+            recipe.AddIngredient(ItemID.DiamondStaff);
+            recipe.AddIngredient(ItemID.ChlorophyteBar, 12);
+            recipe.AddIngredient(ItemID.Ectoplasm, 5);
+            recipe.AddTile(TileID.MythrilAnvil);
+            recipe.Register();
+            recipe = Recipe.Create(ItemID.NettleBurst, 1);
+            recipe.AddIngredient(ItemID.CrimsonRod);
+            recipe.AddIngredient(ItemID.RubyStaff);
+            recipe.AddIngredient(ItemID.ChlorophyteBar, 12);
+            recipe.AddIngredient(ItemID.Ectoplasm, 5);
+            recipe.AddTile(TileID.MythrilAnvil);
+            recipe.Register();
+            recipe = Recipe.Create(ItemID.NettleBurst, 1);
+            recipe.AddIngredient(ItemID.CrimsonRod);
+            recipe.AddIngredient(ItemID.DiamondStaff);
+            recipe.AddIngredient(ItemID.ChlorophyteBar, 12);
+            recipe.AddIngredient(ItemID.Ectoplasm, 5);
+            recipe.AddTile(TileID.MythrilAnvil);
+            recipe.Register();
         }
     }
 }
