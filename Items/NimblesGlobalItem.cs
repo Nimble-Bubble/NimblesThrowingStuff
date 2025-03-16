@@ -164,6 +164,7 @@ namespace NimblesThrowingStuff.Items
             }
             if (item.type == ItemID.PlanteraBossBag)
             {
+                itemLoot.Add(ItemDropRule.Common(ItemType<EnchantedPetal>(), 1, 4, 6));
                 itemLoot.Add(ItemDropRule.Common(ItemType<ThornyGlove>(), 3));
             }
             if (item.type == ItemID.GolemBossBag)

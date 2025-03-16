@@ -242,6 +242,7 @@ namespace NimblesThrowingStuff.NPCs
             if (npc.type == NPCID.Plantera)
             {
                 notExpertRule.OnSuccess(ItemDropRule.Common(ItemType<ThornyGlove>(), 4));
+                notExpertRule.OnSuccess(ItemDropRule.Common(ItemType<EnchantedPetal>(), 1, 3, 5));
                 npcLoot.Add(notExpertRule);
             }
             if (npc.type == NPCID.Golem)

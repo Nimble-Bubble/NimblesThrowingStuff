@@ -716,6 +716,15 @@ Mods: {
 					'''
 			}
 
+			EnchantedPetal: {
+				DisplayName: Enchanted Petal
+				Tooltip:
+					'''
+					A curious petal from a vicious plant
+					Could be used to enhance plant-related equipment
+					'''
+			}
+
 			EssenceOfBalance: {
 				DisplayName: Essence Of Balance
 				Tooltip:
