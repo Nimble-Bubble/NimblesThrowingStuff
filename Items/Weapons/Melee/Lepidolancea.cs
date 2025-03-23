@@ -51,6 +51,12 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			recipe.AddIngredient(ItemID.TatteredBeeWing, 1);
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.Register();
+			recipe = CreateRecipe();
+			recipe.AddIngredient(ModContent.ItemType<EnchantedPetal>());
+			recipe.AddIngredient(ItemID.ButterflyDust, 3);
+			recipe.AddIngredient(ItemID.TatteredBeeWing, 1);
+			recipe.AddTile(TileID.MythrilAnvil);
+			recipe.Register();
 		}
 	}
 }
