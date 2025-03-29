@@ -14,9 +14,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Summoning
         public override void SetStaticDefaults() 
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			// DisplayName.SetDefault("Sporeball Staff"); 
-			/* Tooltip.SetDefault("Summons small, but poisonous living spore balls"
-				+"\nThe spore balls will sometimes leave small spores in their path"); */
             Item.staff[Item.type] = true;
             ItemID.Sets.GamepadWholeScreenUseRange[Item.type] = true; 
 			ItemID.Sets.LockOnIgnoresCollision[Item.type] = true;
@@ -31,7 +28,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Summoning
 			Item.useAnimation = 30;
 			Item.useStyle = 1;
 			Item.value = Item.buyPrice(0, 2, 70, 0);
-			Item.rare = ItemRarityID.Green;
+			Item.rare = ItemRarityID.Orange;
 			Item.UseSound = SoundID.Item8;
 			Item.noMelee = true;
 			Item.DamageType = DamageClass.Summon;;

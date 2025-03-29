@@ -14,8 +14,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Summoning
         public override void SetStaticDefaults() 
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			// DisplayName.SetDefault("Mossy Hornet Staff"); 
-			// Tooltip.SetDefault("Summons miniature moss hornets that fire stingers");
             Item.staff[Item.type] = true;
             ItemID.Sets.GamepadWholeScreenUseRange[Item.type] = true; 
 			ItemID.Sets.LockOnIgnoresCollision[Item.type] = true;
@@ -26,8 +24,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Summoning
 			Item.mana = 10;
 			Item.width = 38;
 			Item.height = 38;
-			Item.useTime = 30;
-			Item.useAnimation = 30;
+			Item.useTime = 21;
+			Item.useAnimation = 21;
 			Item.useStyle = 1;
 			Item.value = Item.buyPrice(0, 27, 50, 0);
 			Item.rare = ItemRarityID.Lime;

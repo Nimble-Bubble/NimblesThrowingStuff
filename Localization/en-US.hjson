@@ -221,7 +221,7 @@ Mods: {
 			}
 
 			FishrontoothNecklace: {
-				DisplayName: Fishron-tooth Necklace
+				DisplayName: Fishron-Tooth Necklace
 				Tooltip: Increases armor penetration by 30
 			}
 
@@ -235,7 +235,7 @@ Mods: {
 			}
 
 			ProcellariteScope: {
-				DisplayName: Procellarite Scope
+				DisplayName: Eye of the Storm
 				Tooltip:
 					'''
 					Allows you to move the camera regardless of what you are holding
