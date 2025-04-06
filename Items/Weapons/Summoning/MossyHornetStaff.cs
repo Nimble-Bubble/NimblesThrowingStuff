@@ -5,6 +5,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using NimblesThrowingStuff.Buffs;
 using NimblesThrowingStuff.Projectiles.Summoning;
+using NimblesThrowingStuff.Items.Materials;
 using Terraria.GameContent.Creative;
 
 namespace NimblesThrowingStuff.Items.Weapons.Summoning
@@ -46,6 +47,12 @@ namespace NimblesThrowingStuff.Items.Weapons.Summoning
 			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(1006, 12);
 			recipe.AddIngredient(2364, 1);
+			recipe.AddTile(TileID.MythrilAnvil);
+			recipe.Register();
+			recipe = CreateRecipe();
+			recipe.AddIngredient(1006, 16);
+			recipe.AddIngredient(ModContent.ItemType<EnchantedPetal>());
+			recipe.AddIngredient(ItemID.BeeWax, 12);
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.Register();
 		}

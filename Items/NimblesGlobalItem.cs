@@ -281,6 +281,22 @@ namespace NimblesThrowingStuff.Items
             recipe.AddIngredient(ItemID.StoneBlock, 50);
             recipe.AddTile(TileID.HeavyWorkBench);
             recipe.Register();
+            recipe = Recipe.Create(ItemID.SwordStatue, 1);
+            recipe.AddIngredient(ItemID.StoneBlock, 50);
+            recipe.AddIngredient(ItemID.WoodenSword, 1);
+            recipe.AddTile(TileID.HeavyWorkBench);
+            recipe.Register();
+            recipe = Recipe.Create(ItemID.HornetStatue, 1);
+            recipe.AddIngredient(ItemID.StoneBlock, 50);
+            recipe.AddIngredient(ItemID.BeeWax, 8);
+            recipe.AddTile(TileID.HeavyWorkBench);
+            recipe.Register();
+            recipe = Recipe.Create(ItemID.EyeballStatue, 1);
+            recipe.AddIngredient(ItemID.StoneBlock, 50);
+            recipe.AddIngredient(ItemID.BlackLens, 1);
+            recipe.AddIngredient(ItemID.Lens, 6);
+            recipe.AddTile(TileID.HeavyWorkBench);
+            recipe.Register();
             recipe = Recipe.Create(ItemID.SlimeStatue, 1);
             recipe.AddIngredient(ItemID.StoneBlock, 50);
             recipe.AddIngredient(ItemID.Gel, 50);
@@ -306,6 +322,7 @@ namespace NimblesThrowingStuff.Items
             recipe.AddIngredient(ItemID.Bone, 10);
             recipe.AddTile(TileID.MythrilAnvil);
             recipe.Register();
+            #region Enchanted Petal
             recipe = Recipe.Create(ItemID.VenusMagnum, 1);
             recipe.AddIngredient(ItemID.Revolver);
             recipe.AddIngredient(ModContent.ItemType<EnchantedPetal>());
@@ -335,6 +352,7 @@ namespace NimblesThrowingStuff.Items
             recipe.AddIngredient(ModContent.ItemType<EnchantedPetal>());
             recipe.AddTile(TileID.MythrilAnvil);
             recipe.Register();
+            #endregion
         }
     }
 }
