@@ -936,7 +936,7 @@ Mods: {
 				Tooltip:
 					'''
 					While it's not the most appetizing bait out there, it sure is reliable.
-					Not consumed upon use
+					Will not be consumed when in use
 					'''
 			}
 
@@ -945,7 +945,7 @@ Mods: {
 				Tooltip:
 					'''
 					While it's not the most appetizing bait out there, it sure is reliable.
-					Not consumed upon use
+					Will not be consumed when in use
 					'''
 			}
 
@@ -998,7 +998,7 @@ Mods: {
 				Tooltip:
 					'''
 					No, wait--It's at least a C+!
-					Not consumed upon use
+					Will not be consumed when in use
 					'''
 			}
 
@@ -1074,7 +1074,7 @@ Mods: {
 					This staff is designed to invoke the crimson stare of a Lagiacrus.
 					With that stare comes high-velocity bolts of electricity.
 					'''
-				DisplayName: Lagieye
+				DisplayName: Static Stare
 			}
 
 			ProcellariteStaff: {

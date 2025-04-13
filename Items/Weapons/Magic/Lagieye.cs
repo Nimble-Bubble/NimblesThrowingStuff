@@ -45,6 +45,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Magic
             Recipe recipe = CreateRecipe();
             recipe.AddIngredient(ModContent.ItemType<LagiacrusShell>(), 12);
             recipe.AddIngredient(ItemID.BlackLens);
+			recipe.AddIngredient(ItemID.Lens, 3);
             recipe.AddTile(TileID.Anvils);
             recipe.Register();
         }

@@ -12,7 +12,6 @@ namespace NimblesThrowingStuff.Items.Tools
 		public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			// Tooltip.SetDefault("While it's not the most appetizing bait out there, it sure is reliable.");
 		}
 		public override void SetDefaults() 
 		{
