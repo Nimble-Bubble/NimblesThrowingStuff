@@ -856,8 +856,10 @@ Mods: {
 				DisplayName: Decussate Shellstone
 				Tooltip:
 					'''
-					Formed from a mixture of minerals and remains, this material has a remarkable deep tone to it.
-					It is named for the X-like pattern it commonly forms.
+					Formed from a mixture of minerals and remains, this material has a remarkable deep tone to it
+					It is named for the X-like pattern it commonly forms
+					You need at least an Adamantite or Titanium tool to mine this
+					Can be blown up upon beating a mechanical boss
 					'''
 			}
 
@@ -867,6 +869,7 @@ Mods: {
 					'''
 					Formed from a mixture of minerals and remains, this material has a remarkable deep tone to it.
 					Though it is unrelated to the underworld, it is still called 'hadal' by some for the depth at which it arises.
+					A Gold or Platinum tool should suffice to mine this
 					'''
 			}
 
@@ -885,6 +888,8 @@ Mods: {
 					'''
 					The alloy of procellarite is believed to have a kind of life to it
 					It is found in this alloy-like form naturally
+					A Luminite tool should suffice for this
+					If you have the Laser Drill, that might also work
 					'''
 			}
 
@@ -894,7 +899,7 @@ Mods: {
 					'''
 					A fairly sturdy material for frames
 					Resistant to lava
-					Does not count as a column
+					Does not count as a column for torch support
 					'''
 			}
 
@@ -914,6 +919,7 @@ Mods: {
 					To these lands, the summit of metallurgy
 					To those beyond, the start of the trail
 					Serves as an advanced forge and anvil
+					Can craft items using Procellarite and similarly esoteric materials
 					'''
 			}
 
@@ -928,7 +934,11 @@ Mods: {
 
 			ClawspikePickaxe: {
 				DisplayName: Clawspike Pickaxe
-				Tooltip: Made from Hermitaur materials, this pickaxe is a powerful tool for rapid mining.
+				Tooltip:
+					'''
+					Made from Hermitaur materials, this pickaxe is a powerful tool for rapid mining
+					Can mine meteorite, obsidian, and darkly-energized ore
+					'''
 			}
 
 			Crimtroll: {

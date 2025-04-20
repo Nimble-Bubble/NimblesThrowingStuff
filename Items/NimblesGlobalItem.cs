@@ -12,6 +12,7 @@ using NimblesThrowingStuff.Items.Materials;
 using NimblesThrowingStuff.Items.Weapons.Ranged.Ammo;
 using Terraria.DataStructures;
 using Terraria.GameContent.ItemDropRules;
+using System.Collections.Generic;
 
 namespace NimblesThrowingStuff.Items
 {
@@ -25,8 +26,19 @@ namespace NimblesThrowingStuff.Items
             }
         }
         public int maxShells;
+        /* public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
+        {
+            if (item.type == ItemID.AdamantitePickaxe || item.type == ItemID.AdamantiteDrill || item.type == ItemID.TitaniumPickaxe || item.type == ItemID.TitaniumDrill)
+            {
+                tooltips.Add(new(Mod, ""))
+            }
+        } */
         public override void SetDefaults(Item item) //no longer virtual
         {
+            //if (item.type == ItemID.AdamantitePickaxe || item.type == ItemID.AdamantiteDrill || item.type == ItemID.TitaniumPickaxe || item.type == ItemID.TitaniumDrill)
+            //{
+                //item.ToolTip = "Can mine Decussate Shellstone";
+            //}
             if (item.type == ItemID.ReaverShark)
             {
                 item.pick = 65;
