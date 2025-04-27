@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
+using Terraria.ID;
 using Terraria.Enums;
 using NimblesThrowingStuff.Items.Weapons.Ranged.Ammo;
 
