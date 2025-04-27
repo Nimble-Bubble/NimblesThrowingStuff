@@ -1794,6 +1794,16 @@ Mods: {
 				Tooltip: A rapidly-firing crossbow
 			}
 
+			ObsidianArrow: {
+				DisplayName: Obsidian Arrow
+				Tooltip:
+					'''
+					A pure obsidian arrow for consistent performance
+					Breaks on impact, can not be recovered
+					Makes targets bleed
+					'''
+			}
+
 			PlatinumPistol: {
 				DisplayName: Platinum Pistol
 				Tooltip: ""
@@ -2647,6 +2657,7 @@ Mods: {
 			PoisonArrowProj.DisplayName: Poison Arrow Proj
 			ShroomitePartisanProj.DisplayName: Shroomite Partisan Proj
 			MorilanceProj.DisplayName: Morilance Proj
+			ObsidianArrowProj.DisplayName: Obsidian Arrow Proj
 		}
 
 		Keybinds.Guard.DisplayName: Guard
