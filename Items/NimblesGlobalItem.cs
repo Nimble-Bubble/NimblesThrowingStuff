@@ -43,6 +43,7 @@ namespace NimblesThrowingStuff.Items
             {
                 item.pick = 65;
             }
+            //The added defense for the SWAT Helmet was determined by removing the default Skeleton's defense from the Tactical Skeleton's defense
             if (item.type == ItemID.SWATHelmet)
             {
                 item.defense = 20;
@@ -289,32 +290,55 @@ namespace NimblesThrowingStuff.Items
             recipe.AddIngredient(ItemID.Hook, 1);
             recipe.AddTile(TileID.Hellforge);
             recipe.Register();
+            //Use of 12 for ingredients is reference to SPAS-12, which the Tactical Skeleton appears to hold
+            recipe = Recipe.Create(ItemID.TacticalShotgun, 1);
+            recipe.AddIngredient(ItemID.Shotgun);
+            recipe.AddIngredient(ItemID.BlackLens);
+            recipe.AddIngredient(ItemID.SoulofSight, 12);
+            recipe.AddIngredient(ItemID.Ectoplasm, 12);
+            recipe.AddTile(TileID.MythrilAnvil);
+            recipe.Register();
+            #region Statues
+            //These Statue recipes are meant to reflect some of the pre-existing statue recipes and make some potentially useful statues craftable
             recipe = Recipe.Create(ItemID.AngelStatue, 1);
             recipe.AddIngredient(ItemID.StoneBlock, 50);
             recipe.AddTile(TileID.HeavyWorkBench);
             recipe.Register();
-            recipe = Recipe.Create(ItemID.SwordStatue, 1);
+            //This is to make Crab Engines more feasible
+            recipe = Recipe.Create(ItemID.CrabStatue, 1);
             recipe.AddIngredient(ItemID.StoneBlock, 50);
-            recipe.AddIngredient(ItemID.WoodenSword, 1);
+            recipe.AddIngredient(ModContent.ItemType<HermitaurShell>());
             recipe.AddTile(TileID.HeavyWorkBench);
             recipe.Register();
+            //Craftable post-Queen Bee
             recipe = Recipe.Create(ItemID.HornetStatue, 1);
             recipe.AddIngredient(ItemID.StoneBlock, 50);
             recipe.AddIngredient(ItemID.BeeWax, 8);
             recipe.AddTile(TileID.HeavyWorkBench);
             recipe.Register();
+            //Craftable at any time with a rare material
             recipe = Recipe.Create(ItemID.EyeballStatue, 1);
             recipe.AddIngredient(ItemID.StoneBlock, 50);
             recipe.AddIngredient(ItemID.BlackLens, 1);
             recipe.AddIngredient(ItemID.Lens, 6);
             recipe.AddTile(TileID.HeavyWorkBench);
             recipe.Register();
+            //Kind of post-Eater of Worlds, but not necessarily
+            //Also, where is the Crimera statue?
+            recipe = Recipe.Create(ItemID.CorruptStatue, 1);
+            recipe.AddIngredient(ItemID.StoneBlock, 50);
+            recipe.AddIngredient(ItemID.ShadowScale, 1);
+            recipe.AddTile(TileID.HeavyWorkBench);
+            recipe.Register();
+            //Craftable post-King Slime
+            //I know it's unusual to put the two required tiles together, but it presumably doesn't take much and some might already be playing with Magic Storage (simplifying the process)
             recipe = Recipe.Create(ItemID.SlimeStatue, 1);
             recipe.AddIngredient(ItemID.StoneBlock, 50);
             recipe.AddIngredient(ItemID.Gel, 50);
             recipe.AddTile(TileID.HeavyWorkBench);
             recipe.AddTile(TileID.Solidifier);
             recipe.Register();
+            #endregion
             recipe = Recipe.Create(ItemID.Code2, 1);
             recipe.AddIngredient(ItemID.Code1);
             recipe.AddRecipeGroup(nameof(ItemID.AdamantiteBar), 18);
