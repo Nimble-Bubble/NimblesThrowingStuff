@@ -1789,6 +1789,16 @@ Mods: {
 				DisplayName: Meteor Cannon
 			}
 
+			OtisChoice: {
+				DisplayName: Otis' Choice
+				Tooltip:
+					'''
+					"Hey, uh, you wouldn't have a quarter I can borrow, would ya?"
+					It's a pseudo-authentic Dougal.
+					Laser sight does not affect rocket-propelled grenades.
+					'''
+			}
+
 			NecroRepeater: {
 				DisplayName: Necro Repeater
 				Tooltip: A rapidly-firing crossbow
