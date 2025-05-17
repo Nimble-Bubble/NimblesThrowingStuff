@@ -27,7 +27,7 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
             Projectile.penetrate = 3;
             Projectile.friendly = true;
             Projectile.DamageType = DamageClass.Throwing;
-            Projectile.aiStyle = 2;
+            Projectile.aiStyle = 1;
         }
         public override void OnKill(int timeLeft) 
         {

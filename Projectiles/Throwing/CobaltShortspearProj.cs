@@ -29,6 +29,10 @@ namespace NimblesThrowingStuff.Projectiles.Throwing
             Projectile.DamageType = DamageClass.Throwing;
             Projectile.aiStyle = 2;
         }
+        /* public override void AI()
+		{
+			Projectile.rotation += 20f;
+		} */
         public override void OnKill(int timeLeft) 
         {
             SoundEngine.PlaySound(SoundID.Dig, Projectile.position);
