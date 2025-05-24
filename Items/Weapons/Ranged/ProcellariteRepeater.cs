@@ -21,7 +21,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 			Item.width = 60;
 			Item.height = 30;
 			Item.useTime = 5;
-			Item.useAnimation = 6;
+			Item.useAnimation = 5;
 			Item.useStyle = 5;
 			Item.value = Item.buyPrice(1, 0, 0, 0);
 			Item.rare = ItemRarityID.Purple;

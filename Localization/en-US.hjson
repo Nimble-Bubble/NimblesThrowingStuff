@@ -1783,7 +1783,7 @@ Mods: {
 			MeteorCannon: {
 				Tooltip:
 					'''
-					A heavy (dart)gun made from rare metals.
+					A heavy (dart)gun made from extraterrestrial metals.
 					It is simple, but it displays immense power.
 					'''
 				DisplayName: Meteor Cannon
@@ -1795,7 +1795,6 @@ Mods: {
 					'''
 					"Hey, uh, you wouldn't have a quarter I can borrow, would ya?"
 					It's a pseudo-authentic Dougal.
-					Laser sight does not affect rocket-propelled grenades.
 					'''
 			}
 
@@ -1820,13 +1819,21 @@ Mods: {
 			}
 
 			ProcellariteLongbow: {
-				DisplayName: Pain Rain
-				Tooltip: Rains several arrows down from the heavens
+				DisplayName: Procellarite Stormbow
+				Tooltip:
+					'''
+					Rains several arrows down from the heavens
+					Number of arrows fired per use is random
+					'''
 			}
 
 			ProcellariteRepeater: {
 				DisplayName: Procellarite Repeater
-				Tooltip: ""
+				Tooltip:
+					'''
+					The alloy of Procellarite is believed to have a kind of life to it
+					Velocity is consistent in spite of its incredible firing rate
+					'''
 			}
 
 			ProminenceBow: {
