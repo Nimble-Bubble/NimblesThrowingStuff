@@ -1880,7 +1880,11 @@ Mods: {
 
 			ShroomiteShot: {
 				DisplayName: Shroomite Shot
-				Tooltip: ""
+				Tooltip:
+					'''
+					Fires four bullets in rapid succession per use
+					Regular bullets (Musket Ball and Silver/Tungsten Bullet) turn into Shroomite Bullets
+					'''
 			}
 
 			SilverPistol: {
@@ -1907,7 +1911,7 @@ Mods: {
 				Tooltip:
 					'''
 					Fires bullets at incredible speeds
-					Penetration power is boosted for regular ammo
+					Penetration power is boosted for regular bullets (Musket Ball and Silver/Tungsten Bullet)
 					'''
 			}
 

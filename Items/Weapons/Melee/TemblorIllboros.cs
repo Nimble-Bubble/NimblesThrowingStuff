@@ -19,11 +19,11 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 		}
 		public override void SetDefaults()
 		{
-			Item.damage = 120;
+			Item.damage = 150;
 			Item.useStyle = ItemUseStyleID.Shoot;
-			Item.useAnimation = 42;
-			Item.useTime = 42;
-			Item.knockBack = 11f;
+			Item.useAnimation = 45;
+			Item.useTime = 45;
+			Item.knockBack = 12f;
 			Item.width = 128;
 			Item.height = 128;
 			Item.noUseGraphic = true;
@@ -36,7 +36,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			Item.shootSpeed = 12f;
 			Item.autoReuse = true;
 			Item.UseSound = SoundID.Item1;
-			Item.crit = 20;
+			Item.crit = 0;
 		}
 		//You might notice that the swinging animation looks weird
 		//That's due to how big the sprite is

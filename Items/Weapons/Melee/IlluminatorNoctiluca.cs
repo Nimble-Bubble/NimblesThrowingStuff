@@ -18,7 +18,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 		}
 		public override void SetDefaults()
 		{
-			Item.damage = 140;
+			Item.damage = 180;
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.useAnimation = 24;
 			Item.useTime = 24;

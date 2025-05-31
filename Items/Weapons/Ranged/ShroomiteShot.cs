@@ -5,6 +5,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
 using Terraria.Audio;
+using NimblesThrowingStuff.Projectiles.Ranged;
 
 namespace NimblesThrowingStuff.Items.Weapons.Ranged
 {
@@ -14,7 +15,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 			/* Tooltip.SetDefault("Fires four bullets at a time"
-				+"\nRegular bullets are turned to chlorophyte bullets"); */
+				+"\nRegular bullets are turned to shroomite bullets"); */
 		}
 		public override void SetDefaults()
 		{
@@ -32,7 +33,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 			Item.UseSound = SoundID.Item91;
 			Item.shoot = ProjectileID.Bullet;
             Item.knockBack = 4f;
-			Item.shootSpeed = 14f;
+			Item.shootSpeed = 16f;
 			Item.DamageType = DamageClass.Ranged;
 			Item.autoReuse = true;
 		}
@@ -40,7 +41,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 		{
 			if (type == ProjectileID.Bullet)
             {
-				type = ProjectileID.ChlorophyteBullet;
+				type = ModContent.ProjectileType<ShroomiteBulletProj>();
             }
 			SoundEngine.PlaySound(SoundID.Item41);
 		}
