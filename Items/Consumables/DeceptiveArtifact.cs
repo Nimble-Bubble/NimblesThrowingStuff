@@ -55,6 +55,7 @@ namespace NimblesThrowingStuff.Items.Consumables
 			recipe.AddIngredient(ModContent.ItemType<SoulOfTrite>(), 6);
 			recipe.AddIngredient(ItemID.SoulofFlight, 6);
             recipe.AddIngredient(ItemID.SunplateBlock, 250);
+			recipe.AddIngredient(2015, 10);
 			recipe.AddTile(TileID.LunarCraftingStation);
 			recipe.Register();
 		}

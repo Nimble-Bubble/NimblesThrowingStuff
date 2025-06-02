@@ -31,14 +31,14 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 			Item.shootSpeed = 7f;
 			Item.DamageType = DamageClass.Ranged;
 		}
-		public override void AddRecipes()
+		/* public override void AddRecipes()
 		{
 			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.SilverBar, 10);
 			recipe.AddIngredient(ItemID.Sapphire, 8);
 			recipe.AddTile(TileID.Anvils);
 			recipe.Register();
-		}
+		} */
         public override Vector2? HoldoutOffset()
 		{
 			return new Vector2(0, 4);

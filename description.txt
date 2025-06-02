@@ -3,7 +3,7 @@ Welcome to the Magnumiactus mod!
 This mod is a general content mod, with added content all throughout progression (including post-Moon Lord content) and an expansion to the Throwing class.
 Now, you might be asking yourself: What makes this mod unique? While one could argue that no other mod is exactly like this, but that's not really what we're looking for here.
 A notable feature of this mod that you might not see too often is tree-based crafting, in which a piece of equipment can have various routes to take for crafting. 
-Instead of three small weapons slamming into each other to make one big and powerful weapon, one small weapon can be turned into one of three different big and powerful weapons with different materials.
+Instead of three weak or small weapons slamming into each other to make one big and powerful weapon, one weak or small weapon can be turned into one of three different big and powerful weapons with different materials. Collecting all of them might not have a special reward tied to it, but it may fill out equipment niches that you're looking for.
 This form of crafting is inspired by the Monster Hunter series, and something else that may seem familiar is the Lance weapon type. A lot of lances have their own special effects, so it may be worth it to try and get each and every one of them.
 
 Additionally, the Throwing class is given a new form of weapon: Non-consumable Throwing weapons. Instead of consuming items from the inventory, non-consumable throwing weapons take mana to use.
@@ -11,9 +11,7 @@ While this rather unusually allocates a normally class-specific resource towards
 To add onto that, a new NPC dedicated to the Throwing class has been added. A "living relic" of a species thought extinct, this NPC will help out quite a lot with its items through progression.
 With the new items added to the Throwing class, you will most likely be able to get from the start of the game to the end much like any other class, though balance might become an issue.
 
-0.3.2 expands a bit further on the new content of 0.3.1, with a few additions here and there.
-For now, we will call the post-Moon Lord phase "Extra-Hardmode" or "Extramode", though this may change.
-Also, we've made it over to 1.4.4! That's worth something, right?
+Notes on 0.3.3 from Nimble: 0.3.3 is kind of general in nature, with quite a few items added and tweaked. I think I just forgot to release an update last year. Whoops. In case you're wondering where I've been, I've been working on another personal project that's been a bit more involved. You might see some references between the mod and the personal project. Also, some things have been disabled (or made a bit harder to access) for the time being, since I'm a little unsure of them in their current state.
 
 
 Credits:
