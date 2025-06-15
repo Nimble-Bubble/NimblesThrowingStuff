@@ -815,15 +815,20 @@ Mods: {
 
 			RoyalFin: {
 				DisplayName: Royal Fin
-				Tooltip: The hide of the sea's live plague is unsurprisingly powerful when it comes to weaponsmithery.
+				Tooltip:
+					'''
+					The hide of the sea's live plague is unsurprisingly powerful when it comes to weaponsmithery.
+					This hide can be used to (re)create Aquarian equipment.
+					'''
 			}
 
 			ShorebrassBar: {
 				DisplayName: Shorebrass Bar
 				Tooltip:
 					'''
-					This unusual brass-steel-coral hybrid makes for a surprisingly good alloy
-					Said to have been used by marine warriors who now reside in the dungeon
+					This unusual brass-steel-coral hybrid makes for a surprisingly good alloy.
+					It is said to have been used by marine warriors who now reside in the dungeon.
+					As such, you can replicate the weapons of these old warriors.
 					'''
 			}
 
@@ -859,7 +864,7 @@ Mods: {
 					Formed from a mixture of minerals and remains, this material has a remarkable deep tone to it
 					It is named for the X-like pattern it commonly forms
 					You need at least an Adamantite or Titanium tool to mine this
-					Can be blown up upon beating a mechanical boss
+					Can be blown up after beating a mechanical boss
 					'''
 			}
 
@@ -877,7 +882,7 @@ Mods: {
 				DisplayName: Procellarite Block
 				Tooltip:
 					'''
-					The alloy of procellarite is believed to have a kind of life to it
+					The alloy of Procellarite is believed to have a kind of life to it
 					This life makes itself clear through the bright design of this building material
 					'''
 			}
@@ -889,7 +894,7 @@ Mods: {
 					The alloy of procellarite is believed to have a kind of life to it
 					It is found in this alloy-like form naturally
 					A Luminite tool should suffice for this
-					If you have the Laser Drill, that might also work
+					However, the Laser Drill can still mine this ore
 					'''
 			}
 
@@ -899,7 +904,7 @@ Mods: {
 					'''
 					A fairly sturdy material for frames
 					Resistant to lava
-					Does not count as a column for torch support
+					Does not count as a column for torch support, like the Palladium Column
 					'''
 			}
 

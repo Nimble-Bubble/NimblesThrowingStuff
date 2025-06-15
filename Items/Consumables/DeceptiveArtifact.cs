@@ -27,7 +27,7 @@ namespace NimblesThrowingStuff.Items.Consumables
 		{
 			Item.width = 48;
 			Item.height = 48;
-			Item.maxStack = 99;
+			Item.maxStack = 9999;
 			Item.value = Item.buyPrice(0, 25, 0, 0);
 			Item.rare = ItemRarityID.Red;
 			Item.useStyle = ItemUseStyleID.HoldUp;
