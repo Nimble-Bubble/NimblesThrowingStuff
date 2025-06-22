@@ -2,6 +2,8 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
+using NimblesThrowingStuff.Items.Materials;
+using NimblesThrowingStuff.Items.Accessories;
 
 namespace NimblesThrowingStuff.Items.Weapons.Throwing
 {
@@ -9,9 +11,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 	{
         public override void SetStaticDefaults()
         {
-			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			// DisplayName.SetDefault("Poseiron's Trident");
-         // Tooltip.SetDefault("A sea god's three-pronged spear that oils and frostburns foes");   
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1; 
         }
 
 		public override void SetDefaults() 
@@ -33,6 +33,16 @@ namespace NimblesThrowingStuff.Items.Weapons.Throwing
 			Item.shoot = Mod.Find<ModProjectile>("PoseironTridentProj").Type;
 			Item.shootSpeed = 10f;
             Item.mana = 20;
+		}
+		public override void AddRecipes()
+		{
+			//In case you don't get it as a drop or whatever
+			Recipe recipe = CreateRecipe();
+			recipe.AddIngredient(ModContent.ItemType<RoyalFin>(), 12);
+			recipe.AddIngredient(ModContent.ItemType<ThrowerEmblem>());
+			recipe.AddIngredient(ItemID.Trident);
+			recipe.AddTile(TileID.MythrilAnvil);
+			recipe.Register();
 		}
 	}
 }
