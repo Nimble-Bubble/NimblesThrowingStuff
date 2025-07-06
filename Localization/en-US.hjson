@@ -43,7 +43,7 @@ Mods: {
 			}
 
 			CompromisedStructure: {
-				DisplayName: Compromised Structure
+				DisplayName: Compromised Integrity
 				Description: Knockback resistance reduced
 			}
 
@@ -54,7 +54,11 @@ Mods: {
 
 			GuardHorrorshow: {
 				DisplayName: Guard?
-				Description: Defense boosted?
+				Description:
+					'''
+					Defense boosted?
+					You are made intangible, preventing some forms of damage
+					'''
 			}
 
 			GuardIron: {
@@ -71,7 +75,8 @@ Mods: {
 				Description:
 					'''
 					Put a thorn in your enemy's foot
-					Defense boosted by guard bonus
+					1x thorns effect; damage from enemies will be dealt back
+					Guard bonus added to defense
 					'''
 			}
 
@@ -80,6 +85,7 @@ Mods: {
 				Description:
 					'''
 					Protected by the spirit of the sky's sea
+					Perhaps you are the new great guardian
 					Defense boosted by 50 + twice your guard bonus
 					'''
 			}
@@ -290,6 +296,7 @@ Mods: {
 					'''
 					While not a strong shield, it is still valuable for its protection
 					Hold the Guard button to see traps and treasure
+					Overlaps with similar potion effects
 					'''
 			}
 
