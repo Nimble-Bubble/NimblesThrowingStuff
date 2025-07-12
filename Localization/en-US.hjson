@@ -1090,6 +1090,15 @@ Mods: {
 					'''
 			}
 
+			IronStaff: {
+				DisplayName: Iron Staff
+				Tooltip:
+					'''
+					Fires a magic bolt that can hit one enemy
+					The bolt has some inaccuracy, but is not affected by gravity
+					'''
+			}
+
 			Lagieye: {
 				Tooltip:
 					'''
