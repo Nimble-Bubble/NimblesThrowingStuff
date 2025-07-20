@@ -1764,10 +1764,11 @@ Mods: {
 			}
 
 			ElectricRailcannon: {
-				DisplayName: Electric Railcannon
+				DisplayName: Electrified Railgun
 				Tooltip:
 					'''
-					Fires a high-damage electric beam
+					Fires an electric beam with high penetration power
+					If enemies survive the initial hit, they will be electrified
 					After use, it takes quite a bit of time to cool down
 					The cooldown time is 16 seconds by default and is affected by ranged and universal attack speed
 					'''
@@ -1816,6 +1817,7 @@ Mods: {
 					'''
 					"Hey, uh, you wouldn't have a quarter I can borrow, would ya?"
 					It's a pseudo-authentic Dougal.
+					The laser sight seems a bit shoddy.
 					'''
 			}
 

@@ -86,7 +86,7 @@ namespace NimblesThrowingStuff.NPCs
 				}
 				if (npc.velocity.X != 0)
                 {
-					npc.lifeRegen -= 24;
+					npc.lifeRegen -= 32;
 				}
 				npc.lifeRegen -= 8;
 			}

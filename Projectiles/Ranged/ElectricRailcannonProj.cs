@@ -13,10 +13,6 @@ namespace NimblesThrowingStuff.Projectiles.Ranged
 {
 	public class ElectricRailcannonProj: ModProjectile
     {
-        public override void SetStaticDefaults()
-        {
-            // DisplayName.SetDefault("Railcannonshot");
-        }
         public override void SetDefaults()
         {
             Projectile.width = 32;
@@ -51,6 +47,7 @@ namespace NimblesThrowingStuff.Projectiles.Ranged
         }
         public override void OnHitNPC (NPC target, NPC.HitInfo hit, int damageDone)
         {
+            target.AddBuff(BuffID.Electrified, 600);
             for (int i = 0; i < 10; i++)
             {
                 Dust.NewDust(new Vector2(Projectile.position.X, Projectile.position.Y), Projectile.width, Projectile.height, DustID.WhiteTorch,
