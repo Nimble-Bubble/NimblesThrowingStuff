@@ -1941,10 +1941,10 @@ Mods: {
 			TheFame: {
 				DisplayName: The Fame
 				Tooltip:
-				'''
-				Three round burst
-				No delay between uses, though bursts have to be initiated manually
-				'''
+					'''
+					Three round burst
+					No delay between uses, though bursts have to be initiated manually
+					'''
 			}
 
 			ThousandLands: {
