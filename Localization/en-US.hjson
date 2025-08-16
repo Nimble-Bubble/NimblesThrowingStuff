@@ -2446,6 +2446,16 @@ Mods: {
 					Has a chance to electrify targets
 					'''
 			}
+
+			Quaxe: {
+				DisplayName: Quaxe
+				Tooltip: ""
+			}
+
+			SacredGlider: {
+				DisplayName: Sacred Glider
+				Tooltip: ""
+			}
 		}
 
 		NPCs: {
