@@ -2456,6 +2456,11 @@ Mods: {
 				DisplayName: Sacred Glider
 				Tooltip: ""
 			}
+
+			Snakeshot: {
+				DisplayName: Snakeshot
+				Tooltip: ""
+			}
 		}
 
 		NPCs: {
