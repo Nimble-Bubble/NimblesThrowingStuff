@@ -1806,7 +1806,9 @@ Mods: {
 				DisplayName: DBSA/PA 12G
 				Tooltip:
 					'''
+					Double-barrel semi-automatic/pump-action 12-gauge shotgun
 					Several projectiles are fired in a spread
+					One bullet is used for each firing
 					The second barrel resembles a magazine tube
 					'''
 			}

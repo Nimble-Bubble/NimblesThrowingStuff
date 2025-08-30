@@ -20,9 +20,9 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 			Item.damage = 8;
 			Item.width = 64;
 			Item.height = 32;
-			Item.useTime = 1;
-			Item.useAnimation = 7;
-			Item.reuseDelay = 28;
+			Item.useTime = 35;
+			Item.useAnimation = 35;
+			//Item.reuseDelay = 28;
 			Item.useStyle = 5;
 			Item.value = Item.buyPrice(0, 5, 0, 0);
 			Item.rare = ItemRarityID.Green;
@@ -35,8 +35,17 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 			Item.DamageType = DamageClass.Ranged;
 			Item.autoReuse = true;
 		}
+        public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockBack)
+        {
+            //int halfDamage = damage / 2;
+            Vector2 newVelocity = velocity.RotatedByRandom(MathHelper.ToRadians(15));
+            for (int i = 0; i < 7; i++)
+            {
+                Projectile.NewProjectile(Item.GetSource_FromThis(), position, newVelocity, type, damage, knockBack, Main.myPlayer);
+            }
+        }
 
-		public override void AddRecipes()
+        public override void AddRecipes()
 		{
 			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.IllegalGunParts, 2);
