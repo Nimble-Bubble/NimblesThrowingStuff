@@ -53,6 +53,11 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 			recipe.AddTile(247);
 			recipe.Register();
 			recipe = CreateRecipe();
+			recipe.AddIngredient(ItemID.ShroomiteBar, 12);
+			recipe.AddIngredient(ItemID.VenusMagnum);
+			recipe.AddTile(ItemID.MythrilAnvil);
+			recipe.Register();
+			recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.ShroomiteBar, 20);
 			recipe.AddTile(ItemID.MythrilAnvil);
 			recipe.Register();
