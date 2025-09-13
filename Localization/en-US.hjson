@@ -1987,6 +1987,15 @@ Mods: {
 					'''
 			}
 
+			WyvernwingCrossbow: {
+				DisplayName: Wyvern-wing Crossbow
+				Tooltip:
+					'''
+					A winged crossbow made from flying wyvern parts
+					Basic wooden arrows are converted to Jester's Arrows, which are unaffected by gravity and have high piercing power
+					'''
+			}
+
 			AquaBlastCore: {
 				DisplayName: Aqua Blaster Core
 				Tooltip: Summons an Aqua Blaster
