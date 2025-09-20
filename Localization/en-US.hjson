@@ -1604,8 +1604,12 @@ Mods: {
 			}
 
 			ShroomiteBroadsword: {
-				DisplayName: Shroomite Broadsword
-				Tooltip: Spreads spore clouds on use
+				DisplayName: Shroomite Saber
+				Tooltip: 
+					'''
+					An improved Chlorophyte Saber
+					Shoots multiple spore clouds on use
+					'''
 			}
 
 			ShroomitePartisan: {

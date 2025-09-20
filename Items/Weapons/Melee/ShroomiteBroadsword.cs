@@ -56,6 +56,11 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			recipe.AddIngredient(ItemID.ShroomiteBar, 12);
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.Register();
+			recipe = CreateRecipe();
+			recipe.AddIngredient(ItemID.ChlorophyteSaber);
+			recipe.AddIngredient(ItemID.ShroomiteBar, 8);
+			recipe.AddTile(TileID.MythrilAnvil);
+			recipe.Register();
 		}
 	}
 }
