@@ -1605,7 +1605,7 @@ Mods: {
 
 			ShroomiteBroadsword: {
 				DisplayName: Shroomite Saber
-				Tooltip: 
+				Tooltip:
 					'''
 					An improved Chlorophyte Saber
 					Shoots multiple spore clouds on use
@@ -2474,6 +2474,11 @@ Mods: {
 
 			Snakeshot: {
 				DisplayName: Snakeshot
+				Tooltip: ""
+			}
+
+			BarbarianShield: {
+				DisplayName: Barbarian Shield
 				Tooltip: ""
 			}
 		}
