@@ -30,7 +30,7 @@ namespace NimblesThrowingStuff
 
         public static ModKeybind MIGuardKey;
         
-        
+        public bool youCanEnchant;
 
         public NimblesThrowingStuff()
         {
@@ -56,6 +56,11 @@ namespace NimblesThrowingStuff
         {
             ModLoader.TryGetMod("Census", out Mod censusMod);
             ModLoader.TryGetMod("BossChecklist", out Mod bossChecklist);
+            ModLoader.TryGetMod("FargosSoulsMod", out Mod FargosSouls);
+            if (FargosSouls != null)
+            {
+                youCanEnchant = true;
+            }
             if (censusMod != null)
                 {
                     censusMod.Call("TownNPCCondition", Find<ModNPC>("LivingRelic").Type, "Defeat the Eye of Cthulhu"); 

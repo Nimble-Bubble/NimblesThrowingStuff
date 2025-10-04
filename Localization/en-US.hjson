@@ -2481,6 +2481,11 @@ Mods: {
 				DisplayName: Barbarian Shield
 				Tooltip: ""
 			}
+
+			BatEnchantment: {
+				DisplayName: Bat Enchantment
+				Tooltip: ""
+			}
 		}
 
 		NPCs: {
