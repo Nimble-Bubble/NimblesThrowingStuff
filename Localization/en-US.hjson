@@ -2486,6 +2486,11 @@ Mods: {
 				DisplayName: Bat Enchantment
 				Tooltip: ""
 			}
+
+			FortressEnchantment: {
+				DisplayName: Fortress Enchantment
+				Tooltip: ""
+			}
 		}
 
 		NPCs: {
