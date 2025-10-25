@@ -968,7 +968,7 @@ Mods: {
 				Tooltip:
 					'''
 					Made from Hermitaur materials, this pickaxe is a powerful tool for rapid mining
-					Can mine meteorite, obsidian, and darkly-energized ore
+					Can mine meteorite, obsidian, and darkly-energized (or evil) ore
 					'''
 			}
 
@@ -1053,7 +1053,7 @@ Mods: {
 				Tooltip:
 					'''
 					A mask resembling a corvid
-					Called toures, turreys, tori, or scavengers
+					It seems to be the head of a toure, an anthropomorphic bird species from a far-away island
 					Perfect for cosplay?		
 					'''
 			}
@@ -1532,6 +1532,7 @@ Mods: {
 					From an abyss so old that most would call it a niwelnysse, this beast awakens
 					Right click while holding the gunlance out to fire a shell
 					Shells do 125% (or 5/4) of the weapon's base damage
+					Guard and right click to reload
 					The maximum amount of shells for this weapon is 6 
 					Each reload gives you 2 shells
 					'''
@@ -1543,6 +1544,8 @@ Mods: {
 					'''
 					Made with vibrant feathers, this gunlance gives its shells a fierier flair
 					Right click while using to fire a shell
+					Shells do 33% (or 1/3) of the weapon's base damage
+					The maximum amount of shells for this weapon is 5
 					Guard and right click to reload
 					'''
 			}
@@ -1813,6 +1816,7 @@ Mods: {
 					'''
 					Heals you by a small amount depending on the damage dealt
 					You can't heal more than 5 HP with one arrow
+					Healing effect is unrelated to lifesteal cooldown
 					'''
 			}
 
