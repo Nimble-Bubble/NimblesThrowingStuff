@@ -172,25 +172,25 @@ Mods: {
 		}
 
 		Items: {
-			BatEnchantment:
-			{
+			BatEnchantment: {
 				DisplayName: Bat Enchantment
-				Tooltip:
+				Tooltip: 
 					'''
 					It really makes you feel like a bat
 					Throwing weapon use speed boosted by 20%
 					Velocity of thrown projectiles boosted by 20%
 					'''
 			}
-			FortressEnchantment:
-			{
+
+			FortressEnchantment: {
 				DisplayName: Fortress Enchantment
-				Tooltip:
+				Tooltip: 
 					'''
 					Now you will stand strong and fortified
 					Bonus defense from guarding is boosted by regular defense
 					'''
 			}
+
 			AvengerWristband: {
 				DisplayName: Avenger Wristband
 				Tooltip:
@@ -2502,16 +2502,6 @@ Mods: {
 
 			BarbarianShield: {
 				DisplayName: Barbarian Shield
-				Tooltip: ""
-			}
-
-			BatEnchantment: {
-				DisplayName: Bat Enchantment
-				Tooltip: ""
-			}
-
-			FortressEnchantment: {
-				DisplayName: Fortress Enchantment
 				Tooltip: ""
 			}
 		}

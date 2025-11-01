@@ -11,10 +11,6 @@ namespace NimblesThrowingStuff.Items.Materials
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 25;
-			/* Tooltip.SetDefault("When the moon had fallen through" +
-							"\nThe dueling plagues put down their malice"+
-							"\nAnd thus, spirits were born anew:" +
-							"\nThe essence of conflict and balance"); */
 			Main.RegisterItemAnimation(Item.type, new DrawAnimationVertical(5, 8));
 			ItemID.Sets.AnimatesAsSoul[Item.type] = true;
 			ItemID.Sets.ItemIconPulse[Item.type] = true;

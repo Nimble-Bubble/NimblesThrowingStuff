@@ -132,6 +132,7 @@ namespace NimblesThrowingStuff.NPCs
 						break;
 				}
 		}
+        //This isn't loot because it's more general, but it still drops from NPCs
 		public override void OnKill(NPC npc)
 		{
 			if (NPC.downedMoonlord && !npc.boss && npc.lifeMax > 5 && npc.damage > 0 && !npc.friendly && npc.value > 0f && Main.rand.NextBool(Main.expertMode ? 2 : 1, 5))
@@ -151,16 +152,21 @@ namespace NimblesThrowingStuff.NPCs
 			LeadingConditionRule notExpertRule = new LeadingConditionRule(new Conditions.NotExpert());
             LeadingConditionRule CrimsonRule = new LeadingConditionRule(new Conditions.IsCrimsonAndNotExpert());
             //Now, a lot of this could theoretically be done through switch instead, but I'll settle with this for now
-            if (npc.type == NPCID.Crab)
+            switch (npc.type)
             {
-                npcLoot.Add(ItemDropRule.Common(ItemType<HermitaurShell>(), 2));
+                case 67:
+                    npcLoot.Add(ItemDropRule.Common(ItemType<HermitaurShell>(), 2));
+                    break;
+                case 471:
+                    npcLoot.Add(ItemDropRule.Common(ItemType<ShadowflameSpikeBall>(), 1, 125, 250));
+                    break;
+                case 475:
+                    npcLoot.Add(ItemDropRule.Common(ItemType<SacredWristband>(), 4));
+                    break;
             }
             if (npc.type == NPCID.Demon || npc.type == NPCID.VoodooDemon)
             {
-				if (NPC.downedBoss3)
-				{
-					npcLoot.Add(ItemDropRule.Common(ItemType<ShadowJavelin>(), 3, 20, 30));
-				}
+				npcLoot.Add(ItemDropRule.Common(ItemType<ShadowJavelin>(), 3, 20, 30));
                 npcLoot.Add(ItemDropRule.Common(ItemType<DemonClaw>(), 25));
             }
             if (npc.type == NPCID.Harpy && NPC.downedBoss3 || npc.type == NPCID.WyvernBody)
@@ -191,14 +197,6 @@ namespace NimblesThrowingStuff.NPCs
             {
                 npcLoot.Add(ItemDropRule.Common(ItemType<FestiveCloth>(), 3));
             }
-            if (npc.type == NPCID.GoblinSummoner)
-            {
-                npcLoot.Add(ItemDropRule.Common(ItemType<ShadowflameSpikeBall>(), 1, 125, 250));
-            }
-            if (npc.type == NPCID.BigMimicHallow)
-			{
-				npcLoot.Add(ItemDropRule.Common(ItemType<SacredWristband>(), 4));
-			}
             if (npc.type == NPCID.MourningWood)
             {
                 npcLoot.Add(ItemDropRule.Common(ItemType<SpookySpines>(), 10));
