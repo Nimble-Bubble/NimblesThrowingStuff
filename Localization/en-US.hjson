@@ -23,16 +23,16 @@ Mods: {
 				NoHome: No available housing detected nearby.
 				LoveSpace: This open space is sufficiently nice.
 				FarFromHome: I am not meant to be here.
-				DislikeCrowded: Being around this many people is rather bothersome.
-				HateCrowded: Being around this many people is a pain.
+				DislikeCrowded: Being around this noisy flesh tapestry is rather bothersome.
+				HateCrowded: This place is a train wreck of chaos. Please relocate something.
 				LikeBiome: Thanks for putting me in such ideal conditions.
-				LoveBiome: I love it out here!
+				LoveBiome: "Love it! E>"
 				DislikeBiome: These aren't ideal conditions for a machine such as myself to be running in.
 				HateBiome: I hate it out here!
 				LikeNPC: "{NPCName} is a good user."
 				LoveNPC: As a machine meant for trade and quest-giving, I am not designed to love. {NPCName} has managed to overcome this barrier.
-				DislikeNPC: "{NPCName} doesn't seem to be much of a fair user."
-				HateNPC: "{NPCName} stole one of my capacitors. It's enough to make me blow a fuse. Rimshot."
+				DislikeNPC: "{NPCName} stole one of my capacitors. It's enough to make me blow a fuse. Rimshot."
+				HateNPC: "I LOVE charging higher prices + I SELL BETTER ITEMS THAN {NPCName}"
 			}
 		}
 
