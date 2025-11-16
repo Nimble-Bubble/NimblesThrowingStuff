@@ -94,9 +94,9 @@ Mods: {
 				DisplayName: Guard
 				Description:
 					'''
-					Like the apex of the valleys
+					Like the apex monster of the valleys
 					Defense boosted by 4 + twice your guard bonus
-					You are immune to standard fire
+					You are immune to On Fire!
 					'''
 			}
 
@@ -109,9 +109,9 @@ Mods: {
 				DisplayName: Guard
 				Description:
 					'''
-					Like the apex of the seas
+					Like the apex monster of the seas
 					Defense boosted by 4 + your guard bonus
-					You are immune to electrification
+					You are immune to Electrified
 					'''
 			}
 
