@@ -147,7 +147,7 @@ Mods: {
 
 			MossHornetBuff: {
 				DisplayName: Mini-Moss Hornet
-				Description: The collaborations of flora and fauna will fight for you
+				Description: The moss-empowered hornets will fight for you
 			}
 
 			NoFallDamageNonPotion: {
@@ -1469,7 +1469,8 @@ Mods: {
 				Tooltip:
 					'''
 					A greatsword made using Lagiacrus materials
-					Danger: High voltage! Electricity still flows through Lagiacrus shell when separated from its source.
+					Danger: High voltage! 
+					Electricity still flows through Lagiacrus shell when separated from its source.
 					'''
 			}
 
@@ -1565,7 +1566,7 @@ Mods: {
 					'''
 					The alloy of Procellarite is believed to have a kind of life to it
 					Polearms are quite common in the Sky-Sea, serving as personal and professional weapons
-					This model of trident used to see lots of use before projectile-firing hybrids came in
+					This model of trident used to see lots of use before newer projectile-firing hybrids came in
 					'''
 			}
 
@@ -1601,7 +1602,8 @@ Mods: {
 				Tooltip:
 					'''
 					Made from improved Hermitaur parts, this gunlance is admirable for its versatility.
-					Guard and right click while attacking to load shells. These shells can be fired if you right click while attacking.
+					Guard and right click while attacking to load shells. 
+					These shells can be fired if you right click while attacking.
 					Critical strikes from shells give you increased endurance for a short period of time.
 					'''
 			}
