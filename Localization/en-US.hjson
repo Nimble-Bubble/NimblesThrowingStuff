@@ -1999,7 +1999,7 @@ Mods: {
 
 			VoidNuke: {
 				DisplayName: Nuclear Void
-				Tooltip: Fires powerful rockets
+				Tooltip: Fires powerful Vortex rockets
 			}
 
 			VoltArrow: {
@@ -2020,7 +2020,7 @@ Mods: {
 				DisplayName: Wyvern-wing Crossbow
 				Tooltip:
 					'''
-					A winged crossbow made from flying wyvern parts
+					A winged crossbow made from wyvern parts
 					Basic wooden arrows are converted to Jester's Arrows, which are unaffected by gravity and have high piercing power
 					'''
 			}

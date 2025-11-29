@@ -29,7 +29,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 			Item.rare = ItemRarityID.Pink;
 			Item.noMelee = true;
 			Item.useAmmo = AmmoID.Bullet;
-			Item.UseSound = SoundID.Item41;
+			Item.UseSound = SoundID.Item31;
 			Item.shoot = ProjectileID.Bullet;
             Item.knockBack = 4.5f;
 			Item.shootSpeed = 5.56f;
