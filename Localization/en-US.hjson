@@ -1857,7 +1857,7 @@ Mods: {
 					'''
 					"Hey, uh, you wouldn't have a quarter I can borrow, would ya?"
 					It's a pseudo-authentic Dougal.
-					The laser sight seems a bit shoddy.
+					The laser sight seems busted.
 					'''
 			}
 
@@ -1928,7 +1928,11 @@ Mods: {
 
 			Seastring: {
 				DisplayName: Seastring
-				Tooltip: Fires a high-velocity watery arrow
+				Tooltip: 
+				'''
+				Fires a high-velocity watery arrow
+				This watery arrow replaces any type of arrow, though ammunition stats are unaffected
+				'''
 			}
 
 			ShroomiteBullet: {
