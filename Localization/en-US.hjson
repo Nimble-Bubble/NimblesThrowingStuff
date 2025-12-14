@@ -1574,7 +1574,8 @@ Mods: {
 				DisplayName: Red Tail
 				Tooltip:
 					'''
-					Made to resemble a Rathalos' tail. It's a bit small, but it spits flames.
+					Made to resemble a Rathalos' tail. 
+					It's not especially big, but it spits flames.
 					Right click to spew flames from the tip of the lance.
 					'''
 			}
@@ -1622,8 +1623,8 @@ Mods: {
 				DisplayName: Shock Lance
 				Tooltip:
 					'''
-					High voltage gives this blade an electric touch.
-					Right click to fire an electric beam.
+					High voltage gives this blade an electric touch
+					Right click to fire an electric beam
 					'''
 			}
 
@@ -1696,7 +1697,7 @@ Mods: {
 				DisplayName: Terrific Bloody Syringe
 				Tooltip:
 					'''
-					Right click to fire a stream of ichor
+					Right click to fire a stream of defense-reducing ichor
 					Guard and right click to reload
 					Up to five shots can be held at a time
 					'''
