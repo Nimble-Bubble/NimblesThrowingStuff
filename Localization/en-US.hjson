@@ -1779,12 +1779,16 @@ Mods: {
 
 			BlazeBullet: {
 				DisplayName: Blaze Bullet
-				Tooltip: Sets enemies on fire
+				Tooltip: Sets enemies on fire for a second
 			}
 
 			BlazeDart: {
 				DisplayName: Blaze Dart
-				Tooltip: Sets enemies on fire
+				Tooltip: 
+				'''
+				Sets enemies on fire for a second
+				Can hit up to three targets
+				'''
 			}
 
 			CopperPistol: {
