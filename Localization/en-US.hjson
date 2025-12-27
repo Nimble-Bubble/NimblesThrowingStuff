@@ -26,13 +26,13 @@ Mods: {
 				DislikeCrowded: Being around this noisy flesh tapestry is rather bothersome.
 				HateCrowded: This place is a train wreck of chaos. Please relocate something.
 				LikeBiome: Thanks for putting me in such ideal conditions.
-				LoveBiome: "Love it! E>"
+				LoveBiome: Love it! E>
 				DislikeBiome: These aren't ideal conditions for a machine such as myself to be running in.
 				HateBiome: I hate it out here!
 				LikeNPC: "{NPCName} is a good user."
 				LoveNPC: As a machine meant for trade and quest-giving, I am not designed to love. {NPCName} has managed to overcome this barrier.
 				DislikeNPC: "{NPCName} stole one of my capacitors. It's enough to make me blow a fuse. Rimshot."
-				HateNPC: "I LOVE charging higher prices + I SELL BETTER ITEMS THAN {NPCName}"
+				HateNPC: I LOVE charging higher prices + I SELL BETTER ITEMS THAN {NPCName}
 			}
 		}
 
@@ -174,7 +174,7 @@ Mods: {
 		Items: {
 			BatEnchantment: {
 				DisplayName: Bat Enchantment
-				Tooltip: 
+				Tooltip:
 					'''
 					It really makes you feel like a bat
 					Throwing weapon use speed boosted by 20%
@@ -184,7 +184,7 @@ Mods: {
 
 			FortressEnchantment: {
 				DisplayName: Fortress Enchantment
-				Tooltip: 
+				Tooltip:
 					'''
 					Now you will stand strong and fortified
 					Bonus defense from guarding is boosted by regular defense
@@ -1784,11 +1784,11 @@ Mods: {
 
 			BlazeDart: {
 				DisplayName: Blaze Dart
-				Tooltip: 
-				'''
-				Sets enemies on fire for a second
-				Can hit up to three targets
-				'''
+				Tooltip:
+					'''
+					Sets enemies on fire for a second
+					Can hit up to three targets
+					'''
 			}
 
 			CopperPistol: {
@@ -1933,11 +1933,11 @@ Mods: {
 
 			Seastring: {
 				DisplayName: Seastring
-				Tooltip: 
-				'''
-				Fires a high-velocity watery arrow
-				This watery arrow replaces any type of arrow, though ammunition stats are unaffected
-				'''
+				Tooltip:
+					'''
+					Fires a high-velocity watery arrow
+					This watery arrow replaces any type of arrow, though ammunition stats are unaffected
+					'''
 			}
 
 			ShroomiteBullet: {

@@ -17,7 +17,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 		}
 		public override void SetDefaults()
 		{
-			Item.damage = 8;
+			Item.damage = 56;
 			Item.width = 64;
 			Item.height = 32;
 			Item.useTime = 35;
@@ -41,7 +41,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
             Vector2 newVelocity = velocity.RotatedByRandom(MathHelper.ToRadians(15));
             for (int i = 0; i < 7; i++)
             {
-                Projectile.NewProjectile(Item.GetSource_FromThis(), position, newVelocity, type, damage, knockBack, Main.myPlayer);
+                Projectile.NewProjectile(Item.GetSource_FromThis(), position, newVelocity, type, damage / 5, knockBack, Main.myPlayer);
             }
         }
 

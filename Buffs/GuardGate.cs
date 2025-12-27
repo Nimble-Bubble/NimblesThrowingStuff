@@ -12,8 +12,6 @@ namespace NimblesThrowingStuff.Buffs
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("Guard");
-			// Description.SetDefault("Defense boosted at the cost of reduced mobility");
 			Main.buffNoSave[Type] = true;
 			Main.buffNoTimeDisplay[Type] = true;
 		}
