@@ -1740,8 +1740,8 @@ Mods: {
 				DisplayName: Wyvern Blade "Fall"
 				Tooltip:
 					'''
-					A fiery longsword made from Rathalos materials.
-					Ignites enemies on contact.
+					A fiery longsword made from Rathalos materials
+					Ignites enemies on contact
 					'''
 			}
 
@@ -1749,8 +1749,8 @@ Mods: {
 				DisplayName: Wyvern Blade "Leaf"
 				Tooltip:
 					'''
-					A verdant longsword made from Rathian materials.
-					Poisons targets on contact.
+					A verdant longsword made from Rathian materials
+					Poisons targets on contact
 					'''
 			}
 
@@ -1800,10 +1800,10 @@ Mods: {
 				DisplayName: Electrified Railgun
 				Tooltip:
 					'''
-					Fires an electric beam with high penetration power
-					If enemies survive the initial hit, they will be electrified
+					Fires an electric beam with very high damage and penetration power
+					Enemies will be electrified 
 					After use, it takes quite a bit of time to cool down
-					The cooldown time is 16 seconds by default and is affected by ranged and universal attack speed
+					The cooldown time is 16 seconds by default and is affected by both ranged and universal attack speed
 					'''
 			}
 
