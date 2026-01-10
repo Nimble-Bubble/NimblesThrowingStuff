@@ -233,7 +233,11 @@ Mods: {
 
 			DemonClaw: {
 				DisplayName: Demon Claw
-				Tooltip: A strange demonic appendage that increases your throwing speed and velocity by 15%
+				Tooltip: 
+				'''
+				A strange demonic appendage
+				Increases your throwing speed and velocity by 15%
+				'''
 			}
 
 			DraconicRelic: {
