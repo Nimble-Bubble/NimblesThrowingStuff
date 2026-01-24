@@ -1197,6 +1197,7 @@ Mods: {
 				Tooltip:
 					'''
 					A masterwork of metalsmithing and machinery.
+					Said to be the blade of Saint George himself.
 					Right click to fire a holy laser beam that does 150% base damage. Guard and right click to charge the laser beams.
 					A single reload gives 1 charge, and you can have up to 5 charges. A single instance of laserfire takes up 2 charges.
 					'''
@@ -1206,7 +1207,7 @@ Mods: {
 				DisplayName: Atlantis Gunlance
 				Tooltip:
 					'''
-					From the depths of the abyss comes this feared beast
+					From the depths of the abyss comes a great beast
 					Right click while holding the gunlance out to fire a shell. Shells do 5/4 of the weapon's base damage.
 					This gunlance holds up to 3 shells. Each reload gives you 1 shell.
 					'''
@@ -1216,8 +1217,7 @@ Mods: {
 				DisplayName: Bloody Syringe
 				Tooltip:
 					'''
-					AB is a universal recipient. 
-					O is a universal donor. 
+					AB is a universal recipient. O is a universal donor. 
 					This is a universal source of pain.
 					Right click while holding the lance out to fire a stream of blood.
 					'''
