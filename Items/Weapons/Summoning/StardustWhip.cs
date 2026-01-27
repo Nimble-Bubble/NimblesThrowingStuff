@@ -21,7 +21,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Summoning
 			ItemID.Sets.LockOnIgnoresCollision[Item.type] = true;
 		}
 		public override void SetDefaults() {
-			Item.damage = 225;
+			Item.damage = 250;
 			Item.knockBack = 6f;
 			Item.width = 62;
 			Item.height = 56;

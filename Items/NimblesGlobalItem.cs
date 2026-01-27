@@ -57,6 +57,24 @@ namespace NimblesThrowingStuff.Items
             {
                 item.useAmmo = AmmoID.Dart;
             }
+            //Reversed some of the 1.4.5 nerfs
+            if (item.type == ItemID.MaceWhip)
+            {
+                item.damage = 180;
+                item.crit = 15;
+            }
+            if (item.type == ItemID.ScytheWhip)
+            {
+                item.damage = 120;
+            }
+            if (item.type == ItemID.BoneWhip)
+            {
+                item.damage = 35;
+            }
+            if (item.type == ItemID.RainbowWhip)
+            {
+                item.damage = 225;
+            }
         }
         public override bool CanRightClick(Item item)
         {
