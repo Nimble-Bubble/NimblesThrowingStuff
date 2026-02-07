@@ -265,6 +265,7 @@ namespace NimblesThrowingStuff.Items
             recipe.AddTile(TileID.Anvils);
             recipe.Register();
             #endregion
+            #region Mostly Iron/Lead stuff
             recipe = Recipe.Create(ItemID.MusketBall, 50);
             recipe.AddRecipeGroup("IronBar");
             recipe.AddIngredient(ModContent.ItemType<HerbalGunpowder>(), 1);
@@ -308,6 +309,7 @@ namespace NimblesThrowingStuff.Items
             recipe.AddIngredient(ItemID.Hook, 1);
             recipe.AddTile(TileID.Hellforge);
             recipe.Register();
+            #endregion
             //Use of 12 for ingredients is reference to SPAS-12, which the Tactical Skeleton appears to hold
             recipe = Recipe.Create(ItemID.TacticalShotgun, 1);
             recipe.AddIngredient(ItemID.Shotgun);
@@ -341,7 +343,7 @@ namespace NimblesThrowingStuff.Items
             recipe.AddIngredient(ItemID.Lens, 6);
             recipe.AddTile(TileID.HeavyWorkBench);
             recipe.Register();
-            //Kind of post-Eater of Worlds, but not necessarily
+            //Kind of post-Eater of Worlds, but not necessarily (since you can get Shadow Scales from parts of the EoW)
             //Also, where is the Crimera statue?
             recipe = Recipe.Create(ItemID.CorruptStatue, 1);
             recipe.AddIngredient(ItemID.StoneBlock, 50);
@@ -368,6 +370,13 @@ namespace NimblesThrowingStuff.Items
             recipe.AddIngredient(ItemID.WoodenSword);
             recipe.AddIngredient(ItemID.FallenStar, 5);
             recipe.AddIngredient(ItemID.Diamond);
+            recipe.AddTile(TileID.Anvils);
+            recipe.Register();
+            //Luck is important in getting a Terragrim and the Counterweights are dice
+            //This might be obtained later than a Terragrim would be by usual chance because you need a Tinkerer's Workshop to get the kind of counterweight this uses
+            recipe = Recipe.Create(ItemID.Terragrim, 1);
+            recipe.AddIngredient(ItemID.EnchantedSword);
+            recipe.AddIngredient(5547);
             recipe.AddTile(TileID.Anvils);
             recipe.Register();
             recipe = Recipe.Create(ItemID.BeamSword, 1);
