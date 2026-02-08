@@ -2062,11 +2062,6 @@ Mods: {
 					'''
 			}
 
-			StardustWhip: {
-				DisplayName: Milkyway Cleaver
-				Tooltip: Born from stardust, this whip can tear through voids and worlds alike
-			}
-
 			AccursedFlask: {
 				DisplayName: Accursed Throwing Flask
 				Tooltip: Explodes into clouds of cursed fire
@@ -2685,7 +2680,6 @@ Mods: {
 			SkySeaGuardianProj.DisplayName: Sharp Sky-Sea Guardian
 			SporeballProj.DisplayName: Sporeball
 			SporeballSpore.DisplayName: Sporeball Spore
-			StardustWhipProj.DisplayName: Stardust Whip
 			ViolentClusterProj.DisplayName: Violent Chopper
 			AccursedFlaskProj.DisplayName: Cursed Flame-filled Throwing Flask
 			AdamantiteMalletProj.DisplayName: Adamantite Mallet
