@@ -39,6 +39,22 @@ namespace NimblesThrowingStuff.Items
             //{
                 //item.ToolTip = "Can mine Decussate Shellstone";
             //}
+            if (item.type == ItemID.DartPistol)
+            {
+                item.damage = 38;
+            }
+            if (item.type == ItemID.DartRifle)
+            {
+                item.damage = 72;
+            }
+            if (item.type == ItemID.CrystalDart)
+            {
+                item.damage = 24;
+            }
+            if (item.type == ItemID.CursedDart)
+            {
+                item.damage = 24;
+            }
             if (item.type == ItemID.ReaverShark)
             {
                 item.pick = 65;
