@@ -39,6 +39,7 @@ namespace NimblesThrowingStuff.Items
             //{
                 //item.ToolTip = "Can mine Decussate Shellstone";
             //}
+            //Buffing dart damage numbers. Because it's funny.
             if (item.type == ItemID.DartPistol)
             {
                 item.damage = 38;
