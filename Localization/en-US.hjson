@@ -258,8 +258,8 @@ Mods: {
 				DisplayName: Guardian Emblem
 				Tooltip:
 					'''
-					When you stare into it, it stares back.
-					15% increased damage for all classes and 15% increased critical strike chance
+					When you stare into the eye of the Guardian, the Guardian stares back.
+					15% increased damage and 15% increased critical strike chance
 					'''
 			}
 
