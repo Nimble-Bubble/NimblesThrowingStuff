@@ -195,8 +195,9 @@ Mods: {
 				DisplayName: Avenger Wristband
 				Tooltip:
 					'''
-					Thrown critical strikes cause holy stars to fall down
-					25% increased throwing velocity and 12% increased thrown damage
+					Thrown critical strikes cause hallow stars to fall down
+					25% increased throwing velocity
+					12% increased thrown damage
 					'''
 			}
 
@@ -276,7 +277,7 @@ Mods: {
 				DisplayName: Sacred Wristband
 				Tooltip:
 					'''
-					Thrown critical strikes cause holy stars to fall down
+					Thrown critical strikes cause hallow stars to fall down
 					25% increased throwing velocity
 					'''
 			}
@@ -300,11 +301,12 @@ Mods: {
 			}
 
 			HorrorshowShield: {
-				DisplayName: Horrorshow Shield
+				DisplayName: Phantom Shield
 				Tooltip:
 					'''
 					Makes you invisible when guarding
-					In this invisible state, you are invincible, but your weapons become much less useful
+					In this invisible state, you can't take any damage
+					However, your weapons become less useful
 					'''
 			}
 
