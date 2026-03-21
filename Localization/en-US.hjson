@@ -44,7 +44,11 @@ Mods: {
 
 			CompromisedStructure: {
 				DisplayName: Compromised Integrity
-				Description: Knockback resistance reduced
+				Description: 
+				'''
+				If you thought it couldn't fly before, wait 'til you see this
+				Knockback resistance reduced
+				'''
 			}
 
 			GreekFire: {
