@@ -12,7 +12,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 {
 	public class ThousandLands : ModItem
 	{
-		private bool penAdd;
+		private bool penAdd; //this stands for additional penetration
 		public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
@@ -42,7 +42,8 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 			int warpWarp = Projectile.NewProjectile(Item.GetSource_FromThis(), position, velocity, type, damage, knockback, Main.myPlayer);
 			if (!penAdd && Main.projectile[warpWarp].penetrate >= 1)
 			{
-			Main.projectile[warpWarp].penetrate += 10;
+			Main.projectile[warpWarp].penetrate += 10; //This shouldn't apply to projectiles that already have infinite or -1 penetration, but we add 10
+			//Great for ammo with low penetration like Meteor Shot
 			}
 			Main.projectile[warpWarp].extraUpdates += 1;
 			Main.projectile[warpWarp].usesLocalNPCImmunity = true;
