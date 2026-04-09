@@ -8,8 +8,6 @@ namespace NimblesThrowingStuff.Buffs
 	public class NoFallDamageNonPotion : ModBuff
 	{
 		public override void SetStaticDefaults() {
-			// DisplayName.SetDefault("Fearless Fall");
-			// Description.SetDefault("Fall without fear, for you will not be hurt");
 			Main.pvpBuff[Type] = true;
 			Main.buffNoSave[Type] = true;
 		}

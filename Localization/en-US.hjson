@@ -1801,6 +1801,17 @@ Mods: {
 					'''
 			}
 
+			CavalrymansSecondBestFriend: {
+				DisplayName: Cavalryman
+				Tooltip:
+				'''
+				In earlier times of war, guns like these were the cavalryman's second best friend.
+				They might not have been the fastest to load, but they could serve a cavalryman well enough.
+				We all know now that John Moses Browning felt we could do better.
+				'''
+			
+			}
+
 			CopperPistol: {
 				DisplayName: Copper Pistol
 				Tooltip: ""
