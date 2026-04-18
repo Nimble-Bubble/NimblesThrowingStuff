@@ -21,11 +21,11 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 
 		public override void SetDefaults()
 		{
-			Item.damage = 73;
+			Item.damage = 76;
 			Item.width = 38;
 			Item.height = 86;
-			Item.useTime = 20;
-			Item.useAnimation = 20;
+			Item.useTime = 18;
+			Item.useAnimation = 18;
 			Item.useStyle = ItemUseStyleID.Shoot;
 			Item.value = Item.buyPrice(1, 25, 0, 0);
 			Item.rare = ItemRarityID.Red;

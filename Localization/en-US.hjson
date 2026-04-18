@@ -1808,8 +1808,7 @@ Mods: {
 				In earlier times of war, guns like these were the cavalryman's second best friend.
 				They might not have been the fastest to load, but they could serve a cavalryman well enough.
 				We all know now that John Moses Browning felt we could do better.
-				'''
-			
+				'''		
 			}
 
 			CopperPistol: {
@@ -1830,7 +1829,11 @@ Mods: {
 
 			EltanineWave: {
 				DisplayName: Eltanine Wave
-				Tooltip: Fires a spread of high-velocity arrows
+				Tooltip: 
+					'''
+					An improvement on the Tsunami
+					Shoots 7 arrows at a time
+					'''
 			}
 
 			GoldPistol: {
