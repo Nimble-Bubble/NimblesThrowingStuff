@@ -38,6 +38,11 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(154, 20);
 			recipe.AddIngredient(150, 15);
+			recipe.AddTile(TileID.Anvils);
+			recipe.Register();
+			recipe = CreateRecipe();
+			recipe.AddIngredient(154, 20);
+			recipe.AddIngredient(150, 15);
 			recipe.AddTile(TileID.WorkBenches);
 			recipe.Register();
 		}
