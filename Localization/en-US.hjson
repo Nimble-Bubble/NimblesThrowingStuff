@@ -1784,7 +1784,7 @@ Mods: {
 
 			Autoquarian: {
 				DisplayName: Autoquarian
-				Tooltip: Sometimes fires a high-velocity watery arrow
+				Tooltip: Has a 1 in 4 chance to fire a high-velocity watery arrow
 			}
 
 			BlazeBullet: {
