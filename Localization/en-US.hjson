@@ -1778,7 +1778,7 @@ Mods: {
 				Tooltip:
 					'''
 					Fires an additional high-velocity watery arrow
-					Has a chance to fire yet another high-velocity watery arrow
+					Has a 1 in 3 to fire yet another high-velocity watery arrow, with extra power
 					'''
 			}
 
