@@ -1751,7 +1751,7 @@ Mods: {
 				Tooltip:
 					'''
 					A fiery longsword made from Rathalos materials
-					Ignites enemies on contact
+					Ignites enemies for 5 seconds on contact
 					'''
 			}
 
@@ -1760,7 +1760,7 @@ Mods: {
 				Tooltip:
 					'''
 					A verdant longsword made from Rathian materials
-					Poisons targets on contact
+					Poisons targets for 6 seconds on contact
 					'''
 			}
 
@@ -1779,6 +1779,7 @@ Mods: {
 					'''
 					Fires an additional high-velocity watery arrow
 					Has a 1 in 3 to fire yet another high-velocity watery arrow, with extra power
+					Both watery arrows have additional penetration compared to the Autoquarian
 					'''
 			}
 
