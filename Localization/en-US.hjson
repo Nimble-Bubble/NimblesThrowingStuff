@@ -1670,8 +1670,8 @@ Mods: {
 				DisplayName: Spectre Piercer
 				Tooltip:
 					'''
-					This spectral lance is mysterious, yet strong all the same.
-					Critical strikes make you invincible and invisible for a short period of time
+					This spectral lance is mysterious, yet strong all the same
+					Critical strikes make you invincible and invisible for 2.5 seconds
 					'''
 			}
 
@@ -1679,14 +1679,14 @@ Mods: {
 				DisplayName: Spiked Javelin
 				Tooltip:
 					'''
-					This lance is lightweight and easy to craft, which makes it popular among hunters.
+					This lance is lightweight and easy to craft, which makes it popular among hunters
 					Right click to throw the lance like a javelin
 					'''
 			}
 
 			StingerSpear: {
 				DisplayName: Stinger Spear
-				Tooltip: Has a chance to poison enemies
+				Tooltip: Has a 1 in 3 chance to poison enemies for 2.5 seconds
 			}
 
 			Superfast: {
