@@ -16,8 +16,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 		public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			/* Tooltip.SetDefault("Mightiest Battle Spear in the East Blue"
-				+"\nDon Krieg Pirates Guild ON TOP"); */
 		}
 		public override void SetDefaults()
 		{
@@ -40,6 +38,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			Item.UseSound = SoundID.Item1;
 			Item.scale = 1f;
 		}
+		//Works like the Knight Lance?
         public override bool AltFunctionUse(Player player)
         {
             return true;
