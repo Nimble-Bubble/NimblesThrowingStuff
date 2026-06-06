@@ -38,7 +38,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			Item.shootSpeed = 14f;
 			Item.autoReuse = true;
 			Item.UseSound = SoundID.Item1;
-			Item.scale = 1.15f;
 		}
 		public override bool AltFunctionUse(Player player)
 		{
@@ -51,6 +50,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 			recipe.AddIngredient(ItemID.HallowedBar, 12);
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.Register();
+			//It might be more convenient to make an "Any Mech Soul" recipe group
 			recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.SoulofFright, 10);
 			recipe.AddIngredient(ItemID.HallowedBar, 18);
