@@ -19,8 +19,6 @@ namespace NimblesThrowingStuff.Items.Accessories.Shields
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-            /* Tooltip.SetDefault("The stinger stabs enemies on contact when guarding"
-                +"\nSting damage is equal to damage taken by the user"); */
         }
         public override void SetDefaults()
         {
@@ -53,7 +51,7 @@ namespace NimblesThrowingStuff.Items.Accessories.Shields
             Recipe recipe = CreateRecipe();
             recipe.AddIngredient(ModContent.ItemType<RedRathScale>(), 12);
             recipe.AddIngredient(ModContent.ItemType<BeastBone>(), 8);
-            recipe.AddIngredient(ItemID.HellstoneBar, 10);
+            recipe.AddIngredient(ItemID.BeeWax, 12);
             recipe.AddTile(TileID.Anvils);
             recipe.Register();
         }
