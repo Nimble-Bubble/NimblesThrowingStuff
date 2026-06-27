@@ -44,11 +44,11 @@ Mods: {
 
 			CompromisedStructure: {
 				DisplayName: Compromised Integrity
-				Description: 
-				'''
-				If you thought it couldn't fly before, wait 'til you see this
-				Knockback resistance reduced
-				'''
+				Description:
+					'''
+					If you thought it couldn't fly before, wait 'til you see this
+					Knockback resistance reduced
+					'''
 			}
 
 			GreekFire: {
@@ -1805,11 +1805,11 @@ Mods: {
 			CavalrymansSecondBestFriend: {
 				DisplayName: Cavalryman
 				Tooltip:
-				'''
-				In earlier times of war, guns like these were the cavalryman's second best friend.
-				They might not have been the fastest to load, but they could serve a cavalryman well enough.
-				We all know now that John Moses Browning felt we could do better.
-				'''		
+					'''
+					In earlier times of war, guns like these were the cavalryman's second best friend.
+					They might not have been the fastest to load, but they could serve a cavalryman well enough.
+					We all know now that John Moses Browning felt we could do better.
+					'''
 			}
 
 			CopperPistol: {
@@ -1830,7 +1830,7 @@ Mods: {
 
 			EltanineWave: {
 				DisplayName: Eltanine Wave
-				Tooltip: 
+				Tooltip:
 					'''
 					An improvement on the Tsunami
 					Shoots 7 arrows at a time

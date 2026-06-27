@@ -17,8 +17,6 @@ namespace NimblesThrowingStuff.Items.Accessories.Shields
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-            /* Tooltip.SetDefault("Makes you invisible when guarding"
-                +"\nIn this invisible state, you are invincible, but your weapons become much less useful"); */
         }
         public override void SetDefaults()
         {
@@ -26,7 +24,7 @@ namespace NimblesThrowingStuff.Items.Accessories.Shields
             Item.width = 46;
             Item.height = 40;
             Item.value = Item.value = Item.buyPrice(0, 50, 0, 0);
-            Item.rare = ItemRarityID.Lime;
+            Item.rare = ItemRarityID.Yellow;
             Item.defense = 6;
         }
         public override bool CanEquipAccessory(Player player, int slot, bool modded)
@@ -50,7 +48,7 @@ namespace NimblesThrowingStuff.Items.Accessories.Shields
         {
             Recipe recipe = CreateRecipe();
             recipe.AddIngredient(ItemID.SpectreBar, 20);
-            recipe.AddTile(TileID.Mythril);
+            recipe.AddTile(TileID.MythrilAnvil);
             recipe.Register();
         }
     }
