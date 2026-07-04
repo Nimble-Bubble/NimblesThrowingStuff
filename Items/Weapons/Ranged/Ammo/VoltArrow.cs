@@ -12,7 +12,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged.Ammo
 		public override void SetStaticDefaults() 
 		{ 
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 99;
-			// Tooltip.SetDefault("Has a chance to electrify a target");
 		}
 		public override void SetDefaults() {
 			Item.damage = 12;
@@ -33,8 +32,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged.Ammo
 			Recipe recipe = CreateRecipe(50);
 			recipe.AddIngredient(40, 50);
             recipe.AddIngredient(ModContent.ItemType<LagiacrusShell>(), 1);
-			//recipe.AddTile(TileID.Anvils);
-			//Ammo usually isn't crafted at a station
+			recipe.AddTile(TileID.Anvils);
 			recipe.Register();
 		}
 	}

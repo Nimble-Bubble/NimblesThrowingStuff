@@ -31,6 +31,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged.Ammo
 		{
 			Recipe recipe = CreateRecipe(100);
 			recipe.AddIngredient(ModContent.ItemType<ShorebrassBar>(), 1);
+			recipe.AddTile(TileID.Anvils);
 			recipe.Register();
 		}
 	}
