@@ -30,7 +30,7 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged.Ammo
         public override void AddRecipes() 
 		{
 			Recipe recipe = CreateRecipe(50);
-			recipe.AddIngredient(40, 50);
+			recipe.AddIngredient(ItemID.WoodenArrow, 50);
             recipe.AddIngredient(ModContent.ItemType<LagiacrusShell>(), 1);
 			recipe.AddTile(TileID.Anvils);
 			recipe.Register();

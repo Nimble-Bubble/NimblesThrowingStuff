@@ -37,13 +37,13 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged
 		public override void AddRecipes()
 		{
 			Recipe recipe = CreateRecipe();
-			recipe.AddIngredient(154, 20);
-			recipe.AddIngredient(150, 15);
+			recipe.AddIngredient(ItemID.Bone, 20);
+			recipe.AddIngredient(ItemID.Cobweb, 15);
 			recipe.AddTile(TileID.Anvils);
 			recipe.Register();
 			recipe = CreateRecipe();
-			recipe.AddIngredient(154, 20);
-			recipe.AddIngredient(150, 15);
+			recipe.AddIngredient(ItemID.Bone, 20);
+			recipe.AddIngredient(ItemID.Cobweb, 15);
 			recipe.AddTile(TileID.WorkBenches);
 			recipe.Register();
 		}

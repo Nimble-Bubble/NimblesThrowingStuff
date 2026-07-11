@@ -12,7 +12,6 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged.Ammo
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 99;
-			// Tooltip.SetDefault("Sets enemies on fire");
         }
         public override void SetDefaults() {
 			Item.damage = 10;
