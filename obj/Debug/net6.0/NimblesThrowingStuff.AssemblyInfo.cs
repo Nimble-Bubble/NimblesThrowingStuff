@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NimblesThrowingStuff")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+614d71eb8ce954de2f29843634e754c36af033c8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b787ca245cfebef4614a1d6e51e96447a1076357")]
 [assembly: System.Reflection.AssemblyProductAttribute("NimblesThrowingStuff")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NimblesThrowingStuff")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
