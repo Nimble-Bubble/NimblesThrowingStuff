@@ -216,14 +216,15 @@ Mods: {
 			}
 
 			ChlorophyteTreaders: {
-				DisplayName: Chlorophyte Treaders
+				DisplayName: Verdant Boots
 				Tooltip:
 					'''
 					Allows super fast running and extra mobility on ice
 					20% increased movement speed
 					Provides the ability to walk on water, honey & lava
 					Grants immunity to fire blocks and 7 seconds of immunity to lava
-					Improved, environment-friendly soles allow for mid-air hops and softer landings
+					Allows the holder to quadruple jump
+					Increases jump height and negates fall damage
 					'''
 			}
 
@@ -233,6 +234,7 @@ Mods: {
 					'''
 					Right clicking with a ranged weapon makes an explosive misfire
 					This misfire does not directly harm you, but instead sends you flying opposite the direction you point your weapon
+					Immunity to fall damage is not included
 					'''
 			}
 
