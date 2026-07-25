@@ -17,15 +17,16 @@ namespace NimblesThrowingStuff.Items.Accessories
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-            /* Tooltip.SetDefault("When you stare into it, it stares back."
-                              +"\n15% increased damage for all classes and 15% increased critical strike chance"); */
         }
         public override void SetDefaults()
         {
             Item.accessory = true;
             Item.width = 28;
             Item.height = 28;
-            Item.value = Item.sellPrice(0, 39, 39, 39);
+			//This was originally 39G, 39S, 39C as a SELL price, but I recently figured that was absurd compared to the Destroyer Emblem's 6G
+            //Accessory reforging usually isn't as bad as weapon reforging since there are no negative effects and the prices usually don't go that much higher than base
+			//But I figured it still made sense to make things cheaper
+			Item.value = Item.sellPrice(0, 8, 0, 0);
             Item.rare = ItemRarityID.Red;
             Item.expert = false;
         }
