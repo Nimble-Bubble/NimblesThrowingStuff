@@ -66,14 +66,15 @@ namespace NimblesThrowingStuff.NPCs
 				}
 				npc.lifeRegen -= 100; //That's even worse!
 			}
-			if (npc.HasBuff(BuffID.Bleeding))
+			//Bleeding now works as a debuff on enemies in vanilla
+			/* if (npc.HasBuff(BuffID.Bleeding))
 			{
 				if (npc.lifeRegen > 0)
 				{
 					npc.lifeRegen = 0;
 				}
 				npc.lifeRegen -= 10;
-			}
+			} */
 			if (npc.HasBuff(BuffID.Electrified))
             {
 				if (npc.HasBuff(BuffID.Wet))
