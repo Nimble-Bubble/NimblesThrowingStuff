@@ -30,13 +30,13 @@ namespace NimblesThrowingStuff.Items.Weapons.Ranged.Ammo
 		}
         public override void AddRecipes() 
 		{
-			Recipe recipe = CreateRecipe(5);
-			recipe.AddIngredient(40, 5);
+			Recipe recipe = CreateRecipe(10);
+			recipe.AddIngredient(40, 10);
             recipe.AddIngredient(1330);
 			recipe.Register();
-			recipe = CreateRecipe(5);
-			recipe.AddIngredient(40, 5);
-            recipe.AddIngredient(68);
+			recipe = CreateRecipe(20);
+			recipe.AddIngredient(40, 20);
+            recipe.AddIngredient(69);
 			recipe.Register();
 		}
 	}

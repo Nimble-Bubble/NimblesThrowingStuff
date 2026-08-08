@@ -66,15 +66,6 @@ namespace NimblesThrowingStuff.NPCs
 				}
 				npc.lifeRegen -= 100; //That's even worse!
 			}
-			//Bleeding now works as a debuff on enemies in vanilla
-			/* if (npc.HasBuff(BuffID.Bleeding))
-			{
-				if (npc.lifeRegen > 0)
-				{
-					npc.lifeRegen = 0;
-				}
-				npc.lifeRegen -= 10;
-			} */
 			if (npc.HasBuff(BuffID.Electrified))
             {
 				if (npc.HasBuff(BuffID.Wet))
@@ -117,10 +108,7 @@ namespace NimblesThrowingStuff.NPCs
 						shop.Add<HealingArrow>(Condition.PreHardmode, Condition.DownedEowOrBoc, Condition.TimeNight);
                         shop.Add<HealingArrow>(Condition.Hardmode);
                         break;
-                    //In earlier versions of Terraria, the Explosive Bunny was sold by the Pirate
-                    //In fact, in earlier builds, the Explosive Bunny was given back to the Pirate
-                    //However, I have decided to give the Explosive Bunny to the Demolitionist instead
-                    //This is mostly to make that shop seem less empty
+					//Originally done for Pirate, later changed to Demolitonist
                     case 38:
                         shop.Add(new Item(ItemID.ExplosiveBunny));
                         shop.Add(new Item(ItemID.Detonator));
