@@ -91,26 +91,28 @@ namespace NimblesThrowingStuff
 				}
 			}
 		}
-        public override void AddRecipeGroups()
-        {
-            RecipeGroup Coppergroup = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.CopperBar)}", ItemID.CopperBar, ItemID.TinBar);
-            RecipeGroup.RegisterGroup(nameof(ItemID.CopperBar), Coppergroup);
-            RecipeGroup Silvergroup = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.SilverBar)}", ItemID.SilverBar, ItemID.TungstenBar);
-            RecipeGroup.RegisterGroup(nameof(ItemID.SilverBar), Silvergroup);
-            RecipeGroup Goldgroup = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.GoldBar)}", ItemID.GoldBar, ItemID.PlatinumBar);
-            RecipeGroup.RegisterGroup(nameof(ItemID.GoldBar), Goldgroup);
-            RecipeGroup Demonitegroup = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.DemoniteBar)}", ItemID.DemoniteBar, ItemID.CrimtaneBar);
-            RecipeGroup.RegisterGroup(nameof(ItemID.DemoniteBar), Demonitegroup);
-            RecipeGroup Cobaltgroup = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.CobaltBar)}", ItemID.CobaltBar, ItemID.PalladiumBar);
-            RecipeGroup.RegisterGroup(nameof(ItemID.CobaltBar), Cobaltgroup);
-            RecipeGroup Mythgroup = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.MythrilBar)}", ItemID.MythrilBar, ItemID.OrichalcumBar);
-            RecipeGroup.RegisterGroup(nameof(ItemID.MythrilBar), Mythgroup);
-            RecipeGroup Adamantgroup = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.AdamantiteBar)}", ItemID.AdamantiteBar, ItemID.TitaniumBar);
-            RecipeGroup.RegisterGroup(nameof(ItemID.AdamantiteBar), Adamantgroup);
-            RecipeGroup EvilTomeIngredients = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Debuff-causing substance that can be obtained from an Evil Biome in Hardmode", ItemID.CursedFlames, ItemID.Ichor);
-            RecipeGroup.RegisterGroup(nameof(ItemID.CursedFlames), EvilTomeIngredients);
-            RecipeGroup AnyStringAccessory = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.RainbowString)}", ItemID.WhiteString, ItemID.RedString, ItemID.OrangeString, ItemID.YellowString, ItemID.LimeString, ItemID.GreenString, ItemID.TealString, ItemID.CyanString, ItemID.SkyBlueString, ItemID.BlueString, ItemID.PurpleString, ItemID.VioletString, ItemID.PinkString, ItemID.BrownString, ItemID.BlackString, ItemID.RainbowString);
-            RecipeGroup.RegisterGroup(nameof(ItemID.RainbowString), AnyStringAccessory);
-        }
+		public override void AddRecipeGroups()
+		{
+			RecipeGroup Coppergroup = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.CopperBar)}", ItemID.CopperBar, ItemID.TinBar);
+			RecipeGroup.RegisterGroup(nameof(ItemID.CopperBar), Coppergroup);
+			RecipeGroup Silvergroup = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.SilverBar)}", ItemID.SilverBar, ItemID.TungstenBar);
+			RecipeGroup.RegisterGroup(nameof(ItemID.SilverBar), Silvergroup);
+			RecipeGroup Goldgroup = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.GoldBar)}", ItemID.GoldBar, ItemID.PlatinumBar);
+			RecipeGroup.RegisterGroup(nameof(ItemID.GoldBar), Goldgroup);
+			RecipeGroup Demonitegroup = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.DemoniteBar)}", ItemID.DemoniteBar, ItemID.CrimtaneBar);
+			RecipeGroup.RegisterGroup(nameof(ItemID.DemoniteBar), Demonitegroup);
+			RecipeGroup Cobaltgroup = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.CobaltBar)}", ItemID.CobaltBar, ItemID.PalladiumBar);
+			RecipeGroup.RegisterGroup(nameof(ItemID.CobaltBar), Cobaltgroup);
+			RecipeGroup Mythgroup = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.MythrilBar)}", ItemID.MythrilBar, ItemID.OrichalcumBar);
+			RecipeGroup.RegisterGroup(nameof(ItemID.MythrilBar), Mythgroup);
+			RecipeGroup Adamantgroup = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.AdamantiteBar)}", ItemID.AdamantiteBar, ItemID.TitaniumBar);
+			RecipeGroup.RegisterGroup(nameof(ItemID.AdamantiteBar), Adamantgroup);
+			RecipeGroup EvilTomeIngredients = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Debuff-causing substance that can be obtained from an Evil Biome in Hardmode", ItemID.CursedFlames, ItemID.Ichor);
+			RecipeGroup.RegisterGroup(nameof(ItemID.CursedFlames), EvilTomeIngredients);
+			RecipeGroup AnyStringAccessory = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.RainbowString)}", ItemID.WhiteString, ItemID.RedString, ItemID.OrangeString, ItemID.YellowString, ItemID.LimeString, ItemID.GreenString, ItemID.TealString, ItemID.CyanString, ItemID.SkyBlueString, ItemID.BlueString, ItemID.PurpleString, ItemID.VioletString, ItemID.PinkString, ItemID.BrownString, ItemID.BlackString, ItemID.RainbowString);
+			RecipeGroup.RegisterGroup(nameof(ItemID.RainbowString), AnyStringAccessory);
+			RecipeGroup AnyCounterweight = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.e7")} {Lang.GetItemNameValue(ItemID.BlackCounterweight)}", ItemID.RedCounterweight, ItemID.YellowCounterweight, ItemID.GreenCounterweight, ItemID.BlueCounterweight, ItemID.PurpleCounterweight, ItemID.BlackCounterweight);
+			RecipeGroup.RegisterGrouo(nameof(ItemID.BlackCounterweight), AnyCounterweight);
+		}
 	}
 }
