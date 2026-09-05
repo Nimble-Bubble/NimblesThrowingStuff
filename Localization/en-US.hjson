@@ -10,7 +10,7 @@ Mods: {
 				HateCrowded: It's awfully crowded here...
 				LikeBiome: I love the outside, but I now have to choose between the outside and the inside.
 				LoveBiome: I think I've made my choice between the inside and the outside...
-				DislikeBiome: Normally, I love the outside, but now, I'm not too sure.
+				DislikeBiome: There's something off about this place... Surely there's somewhere that fits me better?
 				HateBiome: What have I done to deserve this?
 				LikeNPC: I think {NPCName} is neat.
 				LoveNPC: Are these kinds of feelings between {NPCName} and I normal?
@@ -156,7 +156,11 @@ Mods: {
 
 			NoFallDamageNonPotion: {
 				DisplayName: From Any Height
-				Description: You can fall without fear
+				Description: 
+				'''
+				You can fall without fear
+				Speed of descent is unaffected
+				'''
 			}
 
 			RailcannonCooldown: {
