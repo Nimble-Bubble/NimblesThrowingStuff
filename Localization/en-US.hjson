@@ -60,8 +60,8 @@ Mods: {
 				DisplayName: Guard?
 				Description:
 					'''
-					Defense boosted?
-					You are made intangible, preventing some forms of damage
+					You are now intangible, making you immune to some forms of damage
+					Defense only boosted by your guard bonus
 					'''
 			}
 
@@ -146,7 +146,11 @@ Mods: {
 
 			MiniSkyseaGuardianBuff: {
 				DisplayName: Your Sky-Sea Guardian
-				Description: It's rather self-explanatory
+				Description: 
+				'''
+				It's rather self-explanatory
+				Still, the miniature guardian will fight for you
+				'''
 			}
 
 			MossHornetBuff: {
@@ -158,7 +162,7 @@ Mods: {
 				DisplayName: From Any Height
 				Description: 
 				'''
-				You can fall without fear
+				You can fall without fear (immunity to fall damage)
 				Speed of descent is unaffected
 				'''
 			}
