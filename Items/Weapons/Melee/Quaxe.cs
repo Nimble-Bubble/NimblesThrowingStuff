@@ -22,13 +22,14 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
         public override void SetDefaults() {
 			Item.damage = 40;
 			Item.useStyle = 1;
+			//Roughly equivalent to use speed in Quake
 			Item.useAnimation = 30;
 			Item.useTime = 30;
-			Item.knockBack = 8f;
+			Item.knockBack = 6f;
 			Item.width = 64;
 			Item.height = 64;
 			Item.rare = ItemRarityID.Green;
-			Item.value = Item.buyPrice(0, 0, 29, 99);
+			Item.value = Item.sellPrice(0, 0, 19, 96);
             Item.DamageType = DamageClass.Melee;
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
