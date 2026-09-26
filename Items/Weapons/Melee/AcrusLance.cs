@@ -39,6 +39,13 @@ namespace NimblesThrowingStuff.Items.Weapons.Melee
 		{
 			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ModContent.ItemType<LagiacrusShell>(), 12);
+			recipe.AddIngredient(ItemID.DemoniteBar, 8);
+			recipe.AddIngredient(ModContent.ItemType<PaladinLance>());
+			recipe.AddTile(TileID.Anvils);
+			recipe.Register();
+			recipe = CreateRecipe();
+			recipe.AddIngredient(ModContent.ItemType<LagiacrusShell>(), 12);
+			recipe.AddIngredient(ItemID.CrimtaneBar, 8);
 			recipe.AddIngredient(ModContent.ItemType<PaladinLance>());
 			recipe.AddTile(TileID.Anvils);
 			recipe.Register();

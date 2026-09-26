@@ -79,7 +79,6 @@ namespace NimblesThrowingStuff
         guardState = false;
         guardBonus = 0;
         drownDebuff = false;
-        //currentShells = 0;
         bonusShells = 0;
         railcannonCooldown = false;
         }
@@ -95,15 +94,11 @@ namespace NimblesThrowingStuff
         {
             if (NimblesThrowingStuff.MIGuardKey.Current)
             {
-                /* if (whichShield >= 1)
-                {
-                    Dust.NewDust(Player.position, Player.width, Player.height, 43, Main.rand.Next(-3, 2), Main.rand.Next(-3, 2), 0, default, 1);
-                } */
                 switch (whichShield)
                 {
                     case 1:
                         Player.AddBuff(Mod.Find<ModBuff>("GuardIron").Type, 2);
-                    break;
+						break;
                     case 2:
                         Player.AddBuff(Mod.Find<ModBuff>("GuardHorrorshow").Type, 2);
                         break;
@@ -268,6 +263,7 @@ namespace NimblesThrowingStuff
             //don't question why guardState is being handled in UpdateBadLifeRegen()
     if (guardState)
     {
+				//There is essentially one main guard buff with several different icons
           switch (whichShield)
                 {
                     case 1:
