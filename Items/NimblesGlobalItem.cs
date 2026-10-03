@@ -35,10 +35,6 @@ namespace NimblesThrowingStuff.Items
         } */
         public override void SetDefaults(Item item) //no longer virtual
         {
-            //if (item.type == ItemID.AdamantitePickaxe || item.type == ItemID.AdamantiteDrill || item.type == ItemID.TitaniumPickaxe || item.type == ItemID.TitaniumDrill)
-            //{
-                //item.ToolTip = "Can mine Decussate Shellstone";
-            //}
             //Buffing dart damage numbers to counteract 1.4.x nerfs. Because it's funny.
             if (item.type == ItemID.DartPistol)
             {
@@ -88,6 +84,10 @@ namespace NimblesThrowingStuff.Items
             {
                 item.damage = 35;
             }
+			if (item.type == ItemID.FlowerWhip)
+			{
+				item.damage = 80;
+			}
             if (item.type == ItemID.RainbowWhip)
             {
                 item.damage = 225;
@@ -388,7 +388,8 @@ namespace NimblesThrowingStuff.Items
             recipe.AddIngredient(ItemID.AngelHalo);
             recipe.AddTile(TileID.MythrilAnvil);
             recipe.Register();
-            recipe = Recipe.Create(ItemID.EnchantedSword, 1);
+			#region Enchanted, but not Petal
+			recipe = Recipe.Create(ItemID.EnchantedSword, 1);
             recipe.AddIngredient(ItemID.WoodenSword);
             recipe.AddIngredient(ItemID.FallenStar, 5);
             recipe.AddIngredient(ItemID.Diamond);
@@ -407,8 +408,9 @@ namespace NimblesThrowingStuff.Items
             recipe.AddIngredient(ItemID.Bone, 10);
             recipe.AddTile(TileID.MythrilAnvil);
             recipe.Register();
-            #region Enchanted Petal
-            recipe = Recipe.Create(ItemID.VenusMagnum, 1);
+			#endregion
+			#region Enchanted Petal
+			recipe = Recipe.Create(ItemID.VenusMagnum, 1);
             recipe.AddIngredient(ItemID.Revolver);
             recipe.AddIngredient(ModContent.ItemType<EnchantedPetal>());
             recipe.AddTile(TileID.MythrilAnvil);
