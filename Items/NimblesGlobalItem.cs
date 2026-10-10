@@ -388,6 +388,10 @@ namespace NimblesThrowingStuff.Items
             recipe.AddIngredient(ItemID.AngelHalo);
             recipe.AddTile(TileID.MythrilAnvil);
             recipe.Register();
+			recipe = Recipe.Create(ItemID.PulseBow, 1);
+			recipe.AddIngredient(ItemID.ShroomiteBar, 12);
+			recipe.AddTile(TileID.MythrilAnvil);
+			recipe.Register();
 			#region Enchanted, but not Petal
 			recipe = Recipe.Create(ItemID.EnchantedSword, 1);
             recipe.AddIngredient(ItemID.WoodenSword);

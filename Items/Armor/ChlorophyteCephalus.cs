@@ -13,6 +13,7 @@ namespace NimblesThrowingStuff.Items.Armor
     [AutoloadEquip(EquipType.Head)]
     public class ChlorophyteCephalus : ModItem
     {
+		//This item is redundant now due to the existence of the Chlorophyte Visor
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
@@ -49,10 +50,10 @@ namespace NimblesThrowingStuff.Items.Armor
 
         public override void AddRecipes()
         {
-            Recipe recipe = CreateRecipe();
+            /* Recipe recipe = CreateRecipe();
             recipe.AddIngredient(1006, 12);
             recipe.AddTile(134);
-            recipe.Register();
+            recipe.Register(); */
         }
     }
 }
