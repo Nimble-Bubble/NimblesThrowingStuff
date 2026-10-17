@@ -47,6 +47,7 @@ namespace NimblesThrowingStuff.Items.Armor
             player.maxMinions += 1;
         }
         //unfortunately, minions can't crit
+		//I guess sentries can, though?
 
 
         public override void AddRecipes()
