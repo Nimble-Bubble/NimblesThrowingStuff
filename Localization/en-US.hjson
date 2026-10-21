@@ -544,7 +544,11 @@ Mods: {
 
 			MythrilHornedHat: {
 				DisplayName: Mythril Horned Hat
-				Tooltip: Increases minion damage by 7% and minion slots by 1
+				Tooltip: 
+				'''
+				Increases minion damage by 7%
+				Increases minion slots by 1
+				'''
 			}
 
 			OrichalcumHat: {
@@ -554,7 +558,11 @@ Mods: {
 
 			OrichalcumHornedHat: {
 				DisplayName: Orichalcum Horned Hat
-				Tooltip: Increases minion damage by 8% and minion slots by 1
+				Tooltip: 
+				'''
+				Minion damage increased by 8%
+				Minion slots increased by 1
+				'''
 			}
 
 			PalladiumCrown: {

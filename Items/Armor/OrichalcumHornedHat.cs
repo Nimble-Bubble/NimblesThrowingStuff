@@ -35,7 +35,7 @@ namespace NimblesThrowingStuff.Items.Armor
         }
         public override void UpdateArmorSet(Player player)
         {
-            player.setBonus = "Increased minion damage and slots, plus some petals";
+            player.setBonus = "Summon damage increased by 18%\nMinion slots increased by 1\nAttacks spawn petals from the sides of the screen";
             player.maxMinions += 1;
             player.GetDamage(DamageClass.Summon) += 0.18f;
             player.onHitPetal = true;
@@ -46,9 +46,6 @@ namespace NimblesThrowingStuff.Items.Armor
             player.GetDamage(DamageClass.Summon) += 0.08f;
             player.maxMinions += 1;
         }
-        //unfortunately, minions can't crit
-		//I guess sentries can, though?
-
 
         public override void AddRecipes()
         {
