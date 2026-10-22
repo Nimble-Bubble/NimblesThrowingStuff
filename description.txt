@@ -11,6 +11,8 @@ While this rather unusually allocates a normally class-specific resource towards
 To add onto that, a new NPC dedicated to the Throwing class has been added. A "living relic" of a species thought extinct, this NPC will help out quite a lot with its items through progression.
 With the new items added to the Throwing class, you will most likely be able to get from the start of the game to the end much like any other class, though balance might become an issue.
 
+No AI was used in the making of this mod. Generative AI has no place in a creative space such as this.
+
 Notes on 0.3.3 from Nimble: 0.3.3 is kind of general in nature, with quite a few items added and tweaked. I think I just forgot to release an update last year. Whoops. In case you're wondering where I've been, I've been working on another personal project that's been a bit more involved. You might see some references between the mod and the personal project. Also, some things have been disabled (or made a bit harder to access) for the time being, since I'm a little unsure of them in their current state.
 
 
