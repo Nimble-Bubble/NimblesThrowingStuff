@@ -520,15 +520,20 @@ Mods: {
 
 			MathrusGreaves: {
 				DisplayName: Draconic Greaves
-				Tooltip: Increases movement speed and throwing damage by 40%
+				Tooltip: 
+				'''
+				Increases movement speed by 40% 
+				Increases throwing damage by 40%
+				'''
 			}
 
 			MathrusHelmet: {
 				DisplayName: Draconic Helmet
 				Tooltip:
 					'''
-					Forged in honor of a legendary dragon whose strength could not be matched
-					Increases mana by 120 and throwing velocity by 60%
+					Forged in honor of a legendary dragon whose strength could not be surpassed
+					Increases mana by 120
+					Increases throwing velocity by 60%
 					'''
 			}
 
