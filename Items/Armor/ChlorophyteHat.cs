@@ -32,7 +32,7 @@ namespace NimblesThrowingStuff.Items.Armor
 
         public override bool IsArmorSet(Item head, Item body, Item legs)
         {
-            return body.type == 1004 && legs.type == 1005;
+            return body.type == ItemID.ChlorophytePlateMail && legs.type == ItemID.ChlorophyteGreaves;
         }
         public override void UpdateArmorSet(Player player)
         {
