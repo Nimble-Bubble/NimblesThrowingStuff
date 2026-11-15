@@ -349,13 +349,21 @@ Mods: {
 			}
 
 			WandsworthWhirlpool: {
-				DisplayName: Wandsworth Whirlpool
-				Tooltip: Made from Lagiacrus shell, this shield ensures oceanic protection
+				DisplayName: Leviathan Shield
+				Tooltip: 
+				'''
+				Made from Lagiacrus shell, this shield ensures oceanic protection
+				Grants immunity to being electrified while guarding
+				'''
 			}
 
 			WyvernshellShield: {
-				DisplayName: Caudal Clipeus
-				Tooltip: Made from a Rathalos tail, this shield keeps the heat easy
+				DisplayName: Rathwyvern Shield
+				Tooltip: 
+				'''
+				Made from a Rathalos tail, this shield keeps the heat easy
+				Grants immunity to being on fire while guarding
+				'''
 			}
 
 			ThrowerEmblem: {
