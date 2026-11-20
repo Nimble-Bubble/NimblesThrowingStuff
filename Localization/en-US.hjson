@@ -121,7 +121,7 @@ Mods: {
 
 			GuardianPotionBuff: {
 				DisplayName: Guardian
-				Description: Guard power (bonus guard defense) boosted by 25
+				Description: Guard power (bonus defense while guarding) increased by 25
 			}
 
 			GuardShorebrass: {

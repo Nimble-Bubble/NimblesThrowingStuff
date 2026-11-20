@@ -16,6 +16,7 @@ namespace NimblesThrowingStuff.Buffs
 
 		public override void Update(Player player, ref int buffIndex) {
 			player.GetModPlayer<NimblesPlayer>().compromise = true;
+			player.noKnockback = false;
 		}
 
 		public override void Update(NPC npc, ref int buffIndex) {

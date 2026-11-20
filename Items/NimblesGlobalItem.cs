@@ -26,13 +26,6 @@ namespace NimblesThrowingStuff.Items
             }
         }
         public int maxShells;
-        /* public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
-        {
-            if (item.type == ItemID.AdamantitePickaxe || item.type == ItemID.AdamantiteDrill || item.type == ItemID.TitaniumPickaxe || item.type == ItemID.TitaniumDrill)
-            {
-                tooltips.Add(new(Mod, ""))
-            }
-        } */
         public override void SetDefaults(Item item) //no longer virtual
         {
             //Buffing dart damage numbers to counteract 1.4.x nerfs. Because it's funny.
