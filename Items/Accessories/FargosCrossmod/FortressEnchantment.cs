@@ -42,7 +42,7 @@ namespace NimblesThrowingStuff.Items.Accessories.FargosCrossmod
                 recipe.AddIngredient(ModContent.ItemType<FortressHelmet>());
                 recipe.AddIngredient(ModContent.ItemType<FortressPlate>());
                 recipe.AddIngredient(ModContent.ItemType<FortressBrickboots>());
-                recipe.AddIngredient(3000, 1); //I know it's better to just use the name, but Alchemy Table's number might look neat
+                recipe.AddIngredient(ItemID.AlchemyTable, 1); 
                 recipe.AddTile(TileID.DemonAltar);
                 recipe.Register();
             }
